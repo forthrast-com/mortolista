@@ -137,6 +137,10 @@ function hnThreadsHTML(d) {
 }
 
 function usableLink(ok, url) {
+  return ok !== false && !!url;
+}
+
+function checkedLink(ok, url) {
   return ok === true && !!url;
 }
 
@@ -168,17 +172,22 @@ function rowHTML(d) {
   const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
   const gameLine = d.game && d.game !== d.title ? `<span class="game">${esc(d.game)}</span>` : "";
   const fullText = printArchiveUrl(d);
-  const primary = fullText || (usableLink(d.wayback_ok, d.wayback) ? d.wayback : "");
+  const primary = fullText
+    || (usableLink(d.wayback_ok, d.wayback) ? d.wayback : "")
+    || (usableLink(d.original_ok, d.original_url) ? d.original_url : "")
+    || (usableLink(d.live_ok, d.live_url) ? d.live_url : "")
+    || (usableLink(d.archive_today_print_ok, d.archive_today_print) ? d.archive_today_print : "")
+    || (usableLink(d.archive_today_ok, d.archive_today) ? d.archive_today : "");
   const fullTitle = d.pages > 1
     ? `Full article on one page (${d.pages} pages)`
     : "Archived print view / full text";
   const mirrorLinks = [
     { ok: !!fullText, url: fullText, label: "full text", title: fullTitle },
-    { ok: usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
-    { ok: usableLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
-    { ok: usableLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
-    { ok: usableLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.today full", title: "archive.today print/full-text mirror" },
-    { ok: usableLink(d.archive_today_ok, d.archive_today), url: d.archive_today, label: "archive.today", title: "archive.today mirror (fallback)" },
+    { ok: !fullText && usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
+    { ok: checkedLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
+    { ok: checkedLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
+    { ok: checkedLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.today full", title: "archive.today print/full-text mirror" },
+    { ok: checkedLink(d.archive_today_ok, d.archive_today), url: d.archive_today, label: "archive.today", title: "archive.today mirror (fallback)" },
   ].filter(link => link.ok && link.url);
   const seenMirrorUrls = new Set();
   const mirrorParts = mirrorLinks.flatMap(link => {
