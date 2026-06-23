@@ -19,6 +19,7 @@ Usage:
 import argparse, html as htmllib, json, re, sys, time, urllib.parse, unicodedata
 from pathlib import Path
 from datetime import datetime, timezone
+from difflib import SequenceMatcher
 import requests
 import tomli_w
 
@@ -31,6 +32,7 @@ CACHE.mkdir(exist_ok=True)
 
 UA = "Mozilla/5.0 (compatible; GamasutraPostmortemArchive/0.1; +https://github.com/forthrast-com)"
 HEAD = {"User-Agent": UA}
+CHECK_HEAD = {**HEAD, "Accept": "text/html,application/xhtml+xml"}
 MONTHS = "January February March April May June July August September October November December"
 _MONTH_ALT = MONTHS.replace(" ", "|")
 # old-layout pages put the real publish date in an <i> just under the byline,
@@ -376,6 +378,113 @@ def clean(s):
     return "".join(c for c in s if c.isprintable())
 
 
+# --------------------------------------------------------------- link checks
+def http_exists(url, *, allow_redirect=True, timeout=20):
+    if not url:
+        return False, ""
+    try:
+        r = SESSION.get(url, headers=CHECK_HEAD, timeout=timeout,
+                        allow_redirects=allow_redirect, stream=True)
+        final = r.url
+        ok = 200 <= r.status_code < 400
+        r.close()
+        return ok, final
+    except requests.RequestException:
+        return False, ""
+
+
+def wayback_available(url):
+    ok, final = http_exists(url, allow_redirect=True)
+    if not ok:
+        return False
+    return "/web/" in urllib.parse.urlparse(final).path
+
+
+def archive_today_url(original_url):
+    return f"https://archive.ph/newest/{urllib.parse.quote(original_url, safe='')}"
+
+
+def archive_today_available(url):
+    ok, final = http_exists(url, allow_redirect=True, timeout=25)
+    if not ok:
+        return False
+    host = urllib.parse.urlparse(final).netloc.lower()
+    return any(h in host for h in ("archive.ph", "archive.today", "archive.is", "archive.vn"))
+
+
+def original_available(url):
+    ok, final = http_exists(url, allow_redirect=True, timeout=20)
+    if not ok:
+        return False
+    parsed = urllib.parse.urlparse(final)
+    if "gamedeveloper.com" in parsed.netloc.lower() and parsed.path.rstrip("/") in ("", "/", "/latest-news"):
+        return False
+    return True
+
+
+def gamedev_live_candidates(article):
+    query = article.get("title", "") or article.get("game", "") or canonical_slug(article)
+    if not query:
+        return []
+    try:
+        r = SESSION.get("https://www.gamedeveloper.com/search", params={"q": query},
+                        headers=CHECK_HEAD, timeout=25)
+        if r.status_code != 200:
+            return []
+    except requests.RequestException:
+        return []
+    candidates = []
+    for href, body in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', r.text, re.I | re.S):
+        href = htmllib.unescape(href)
+        if href.startswith("/"):
+            href = "https://www.gamedeveloper.com" + href
+        if "gamedeveloper.com" not in href:
+            continue
+        text = clean(re.sub(r"<[^>]+>", " ", htmllib.unescape(body)))
+        if text:
+            candidates.append((href, text))
+    return candidates
+
+
+def find_live_gamedeveloper_url(article):
+    title = canonical_title(article)
+    slug = canonical_slug(article)
+    best = (0.0, "")
+    seen = set()
+    for href, text in gamedev_live_candidates(article):
+        if href in seen or "/keyword/" in href or "/search" in href:
+            continue
+        seen.add(href)
+        text_key = re.sub(r"\W+", " ", ascii_fold(text).lower()).strip()
+        score = SequenceMatcher(None, title, text_key).ratio() if title else 0
+        if slug:
+            score = max(score, SequenceMatcher(None, slug, text_key).ratio())
+        if score > best[0]:
+            best = (score, href)
+    if best[0] < 0.62:
+        return ""
+    ok, final = http_exists(best[1], allow_redirect=True, timeout=20)
+    if not ok:
+        return ""
+    path = urllib.parse.urlparse(final).path.rstrip("/")
+    if path in ("", "/", "/business", "/design", "/programming", "/latest-news"):
+        return ""
+    return final
+
+
+def check_article_links(article):
+    article["wayback_ok"] = wayback_available(article.get("wayback", ""))
+    article["wayback_print_ok"] = wayback_available(article.get("wayback_print", ""))
+    article["original_ok"] = original_available(article.get("original_url", ""))
+    at = archive_today_url(article.get("original_url", ""))
+    article["archive_today"] = at
+    article["archive_today_ok"] = archive_today_available(at)
+    live = find_live_gamedeveloper_url(article)
+    article["live_url"] = live
+    article["live_ok"] = bool(live)
+    return article
+
+
 # ------------------------------------------------------------------- HN enrich
 HN_API = "https://hn.algolia.com/api/v1/search_by_date"
 HN_PAGE_SIZE = 100
@@ -709,7 +818,8 @@ def merge_article_group(group):
             if aid != best["id"]:
                 alt_ids.append(aid)
         # fill sparse fields from alternates
-        for k in ("summary", "thumbnail", "date", "original_url", "wayback", "wayback_print"):
+        for k in ("summary", "thumbnail", "date", "original_url", "wayback", "wayback_print",
+                  "archive_today", "live_url"):
             if not best.get(k) and art.get(k):
                 best[k] = art[k]
         best["hn_points"] = max(best.get("hn_points", 0) or 0, art.get("hn_points", 0) or 0)
@@ -797,6 +907,7 @@ def main():
         for i, art in enumerate(out, 1):
             art["hn_points"], art["hn_comments"] = hn_stats(art, hn_posts)
             art["author_notable"] = any(author_notable(a) for a in art["authors"])
+            check_article_links(art)
             if i % 25 == 0:
                 log(f"[*] enriched {i}/{len(out)} deduped articles")
             time.sleep(0.3)
