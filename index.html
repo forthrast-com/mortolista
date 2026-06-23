@@ -5,11 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gamasutra Postmortem Archive</title>
 <meta name="description" content="A sortable index of classic Gamasutra postmortem features, preserved via the Wayback Machine.">
+<meta name="theme-color" content="#1f6e3b">
+<meta property="og:title" content="Gamasutra Postmortem Archive">
+<meta property="og:description" content="A sortable index of classic Gamasutra postmortem features, preserved via the Wayback Machine.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f6e3b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-weight='bold' text-anchor='middle' fill='%23eaf3ec'%3EG%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
+<script>
+  /* Set the theme before first paint to avoid a flash of the wrong palette. */
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t !== "light" && t !== "dark")
+        t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    } catch (e) { document.documentElement.dataset.theme = "light"; }
+  })();
+</script>
 </head>
 <body>
 <header id="masthead">
   <div class="wrap">
+    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
     <h1><span class="gama">Gamasutra</span> <span class="sub">Postmortem Archive</span></h1>
     <p class="tagline">The art &amp; business of making games, preserved through the Wayback Machine.</p>
   </div>

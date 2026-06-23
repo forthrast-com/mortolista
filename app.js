@@ -273,4 +273,42 @@ searchEl.addEventListener("input", render);
 catEl.addEventListener("change", render);
 notableEl.addEventListener("change", render);
 
+// ---- Theme toggle (light / dark), persisted in localStorage ----
+const themeToggle = document.getElementById("themeToggle");
+const root = document.documentElement;
+
+function syncThemeButton() {
+  const dark = root.dataset.theme === "dark";
+  const label = dark ? "Switch to light mode" : "Switch to dark mode";
+  themeToggle.textContent = dark ? "☀" : "☾";
+  themeToggle.setAttribute("aria-pressed", String(dark));
+  themeToggle.setAttribute("aria-label", label);
+  themeToggle.title = label;
+}
+
+themeToggle.addEventListener("click", () => {
+  const next = root.dataset.theme === "dark" ? "light" : "dark";
+  root.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) { /* ignore */ }
+  syncThemeButton();
+});
+
+// Follow the OS theme until the user makes an explicit choice.
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+  try { if (localStorage.getItem("theme")) return; } catch (_) { /* ignore */ }
+  root.dataset.theme = e.matches ? "dark" : "light";
+  syncThemeButton();
+});
+
+syncThemeButton();
+
+// Press "/" to jump to the search box (unless already typing somewhere).
+document.addEventListener("keydown", e => {
+  if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) return;
+  e.preventDefault();
+  searchEl.focus();
+  searchEl.select();
+});
+
 load();

@@ -31,4 +31,5 @@ postmortem features, linking out via the Wayback Machine.
 - [ ] Pick the *best-rendered* snapshot per article for the Wayback link
       (some early captures are partial).
 - [ ] Periodic refresh via GitHub Action (like the reference project).
-- [ ] Thumbnails (archived og:image) + night mode toggle.
+- [x] Thumbnails (archived og:image).
+- [x] Night mode toggle (persisted, defaults to OS preference).
