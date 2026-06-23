@@ -3,3 +3,5 @@ scraper/.cache/
 __pycache__/
 *.pyc
 data/sample.toml
+
+scraper/run.log
