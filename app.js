@@ -142,9 +142,28 @@ function metricValue(d, k) {
   return (v ?? "—").toString();
 }
 
-function sortMetricHTML(d) {
-  const label = SORT_LABELS[sortKey] || sortKey;
-  return `<span class="m-sort" title="Current sort metric">${esc(label)}: ${esc(metricValue(d, sortKey))}</span>`;
+// Sort keys whose value is already visible elsewhere on the card (date line,
+// type badge, byline). Showing a sort chip for these just duplicates info.
+const SHOWN_SORTS = new Set(["title", "date", "category", "authors", "author_notable"]);
+// Compact labels for the metrics that aren't otherwise on the card.
+const SORT_SIGNAL_LABELS = {
+  hn_points: "HN pts (top thread)",
+  hn_comments: "HN comments (top thread)",
+  hn_points_sum: "HN points",
+  hn_comments_sum: "HN comments",
+  hn_submissions: "HN submissions",
+  wayback_captures: "Wayback captures",
+};
+
+// A small chip naming why this entry sorted where it did — only when the
+// active sort isn't already shown on the card and the value is meaningful.
+function sortSignalHTML(d) {
+  if (SHOWN_SORTS.has(sortKey)) return "";
+  const v = d[sortKey];
+  if (!v) return "";
+  const label = SORT_SIGNAL_LABELS[sortKey] || SORT_LABELS[sortKey] || sortKey;
+  const val = typeof v === "number" ? v.toLocaleString() : esc(String(v));
+  return ` <span class="m-sort" title="Current sort metric">${val} ${esc(label)}</span>`;
 }
 
 function hnThreadsHTML(d) {
@@ -228,29 +247,34 @@ function rowHTML(d) {
   const mirrors = mirrorLine || discussions
     ? `<span class="mirrors">${mirrorLine}${discussions}</span>`
     : "";
-  // vintage dateline: metadata line shown ABOVE the headline (esp. on mobile)
+  // vintage dateline + byline: shown above the headline on the mobile card
+  // (hidden on desktop, where the columns carry this metadata instead)
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
     + ` <span class="cat ${catClass(d.category)}">${esc(d.category)}</span>`
-    + (d.authors && d.authors.length
-        ? ` <span class="m-auth">by ${esc(d.authors.join(", "))}${d.author_notable ? " ★" : ""}</span>`
-        : "")
-    + ` ${sortMetricHTML(d)}`
+    + sortSignalHTML(d)
     + `</span>`;
+  const byline = d.authors && d.authors.length
+    ? `<span class="byline">by ${esc(d.authors.join(", "))}${d.author_notable
+        ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : ""}</span>`
+    : "";
   const title = primary
     ? `<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(d.title)}</a>`
     : `<span class="title-cell">${esc(d.title)}</span>`;
   const thumb = d.thumbnail && primary
     ? `<a href="${esc(primary)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
     : "";
-  return `<tr>
-    <td class="thumb-cell${thumb ? "" : " no-thumb"}">${thumb}</td>
-    <td class="main-cell">${metaTop}${title}${gameLine}${summary}${mirrors}</td>
+  // Each entry is two rows: a compact headline row (metadata in columns on
+  // desktop) and a wide detail row that spans the text columns underneath.
+  return `<tr class="r-main">
+    <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
+    <td class="main-cell">${metaTop}${title}${gameLine}${byline}</td>
     <td>${authors}${star}</td>
     <td><span class="cat ${catClass(d.category)}">${esc(d.category)}</span></td>
     <td class="num">${date}</td>
     ${hnMetricHTML(d)}${num(d.wayback_captures)}
-  </tr>`;
+  </tr>
+  <tr class="r-detail"><td class="detail-cell" colspan="6">${summary}${mirrors}</td></tr>`;
 }
 
 document.querySelectorAll("th.sortable").forEach(th => {

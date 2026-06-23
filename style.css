@@ -115,19 +115,30 @@ thead th.num{text-align:right}
 th.sorted-asc::after{content:" ▲"; font-size:9px}
 th.sorted-desc::after{content:" ▼"; font-size:9px}
 
-tbody td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top}
-.thumb-col{width:60px}
-.thumb-cell{padding:5px 0 5px 8px; width:60px}
+tbody td{padding:7px 9px 2px; border-bottom:none; vertical-align:top}
+/* full-height thumbnail: the cell is rowspan'd over both rows of the entry,
+   and the image fills it via an absolutely-positioned layer */
+.thumb-col{width:74px}
+.thumb-cell{width:74px; padding:0; position:relative; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule)}
+.thumb-cell a{position:absolute; inset:0; display:block}
+img.thumb{width:100%; height:100%; min-height:64px; object-fit:cover; display:block; background:var(--thumb-bg)}
 .thumb-cell.no-thumb{background:repeating-linear-gradient(45deg,var(--hatch-a),var(--hatch-a) 4px,var(--hatch-b) 4px,var(--hatch-b) 8px)}
-img.thumb{display:block; width:52px; height:52px; object-fit:cover; border:1px solid var(--rule); background:var(--thumb-bg)}
+
+/* an entry spans two rows: a headline row + a wide detail row beneath it */
+.main-cell{padding-right:16px}
+.detail-cell{padding:0 9px 9px; border-bottom:1px solid var(--rule)}
 tbody tr{transition:background-color .12s ease}
-tbody tr:nth-child(even){background:var(--row-alt)}
-tbody tr:hover{background:var(--row-hover)}
+tbody tr:nth-child(4n+3),tbody tr:nth-child(4n+4){background:var(--row-alt)}
+tbody tr.r-main:hover,
+tbody tr.r-main:hover + tr.r-detail,
+tbody tr.r-detail:hover,
+tbody tr.r-main:has(+ tr.r-detail:hover){background:var(--row-hover)}
 td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong)}
 .hn-metric span{white-space:nowrap}
 .hn-metric span + span{margin-left:6px; color:var(--muted)}
 .title-cell{font-weight:bold; font-family:Georgia,serif; font-size:15px; line-height:1.25}
-.summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:11.5px; color:var(--muted); margin-top:2px; max-width:52ch}
+.byline{display:none}
+.summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:90ch}
 .game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
 .mirror-links,.discussions{display:block}
@@ -156,9 +167,10 @@ footer .wrap{line-height:1.6}
 @media(max-width:720px){
   .wrap{padding:0 12px}
   #masthead{padding:18px 0 20px}
-  #masthead h1{font-size:34px; line-height:1.05}
-  #masthead .sub{display:block; margin-top:4px; font-size:.72em; letter-spacing:3px}
-  .tagline{font-size:13px; line-height:1.45; max-width:28em}
+  /* keep the title clear of the toggle, and the kicker on its own tidy line */
+  #masthead h1{font-size:32px; line-height:1.08; padding-right:44px; text-wrap:balance}
+  #masthead .sub{display:block; margin-top:6px; font-size:.5em; letter-spacing:2.5px; white-space:nowrap}
+  .tagline{font-size:13px; line-height:1.45; max-width:34em; text-wrap:pretty}
   .theme-toggle{top:2px; right:12px}
 
   /* sort via dropdown instead of column headers */
@@ -172,36 +184,43 @@ footer .wrap{line-height:1.6}
   .count{margin-left:0; margin-inline-start:auto; font-size:13px; white-space:nowrap}
 
   thead{display:none}
-  table,tbody,tr,td{display:block; width:auto}
+  table,tbody,tbody tr{display:block}
   table{border:none; background:transparent}
-  tbody tr{
-    display:block; overflow:hidden;
-    background:var(--card) !important; border:1px solid var(--rule);
-    margin-bottom:12px; padding:11px 12px;
-  }
-  .thumb-cell{float:right; width:60px; padding:0; margin:0 0 8px 12px}
-  .thumb-cell.no-thumb{display:none}
-  img.thumb{width:60px; height:60px}
-  .main-cell{min-width:0; padding:0}
+  tbody td{display:block; padding:0; border:none}
 
-  /* metadata dateline ABOVE the headline */
+  /* the entry's two rows fuse into one card: headline half + detail half */
+  tbody tr.r-main,tbody tr.r-detail{
+    display:block; background:var(--card) !important;
+    border-left:1px solid var(--rule); border-right:1px solid var(--rule);
+  }
+  tbody tr.r-main{border-top:1px solid var(--rule); margin-top:12px; padding:11px 12px 0; overflow:hidden}
+  tbody tr.r-detail{border-bottom:1px solid var(--rule); padding:2px 12px 12px}
+  .detail-cell{border:none}
+
+  /* drop the desktop metadata columns; the meta line + byline carry them */
+  tbody tr.r-main td:nth-child(n+3){display:none}
+
+  .thumb-cell{
+    position:static; float:right; width:64px; height:64px; overflow:hidden;
+    padding:0; margin:2px 0 8px 12px; border:1px solid var(--rule);
+  }
+  .thumb-cell.no-thumb{display:none}
+  .thumb-cell a{position:static; width:64px; height:64px}
+  img.thumb{width:64px; height:64px; min-height:0}
+  .main-cell{padding:0}
+
+  /* one clean meta line: date · type · (sort signal only when it adds info) */
   .meta-top{
-    display:flex; flex-wrap:wrap; align-items:center; gap:3px 6px;
-    font-size:11px; color:var(--muted); text-transform:uppercase;
-    letter-spacing:.4px; margin-bottom:5px;
+    display:flex; flex-wrap:wrap; align-items:center; gap:5px 9px;
+    margin-bottom:7px; font-size:12px; color:var(--muted);
   }
   .meta-top .m-date{font-weight:bold; color:var(--strong)}
-  .meta-top .cat{vertical-align:baseline}
-  .meta-top .m-auth{min-width:0; text-transform:none; letter-spacing:0; font-style:italic}
-  .meta-top .m-hn{color:var(--gama-leaf); font-weight:bold}
-  .meta-top .m-sort{flex-basis:100%; color:var(--gama-leaf); font-weight:bold; text-transform:none; letter-spacing:0}
-  .title-cell{display:block; font-size:20px; line-height:1.15; margin-top:2px}
-  .game{margin-top:2px}
-  .summary{display:block; max-width:none; margin-top:7px; font-size:13px; line-height:1.4}
-  .mirrors{margin-top:7px; padding-top:6px; border-top:1px solid var(--rule); font-size:12px; line-height:1.45}
-  /* the desktop column cells are redundant on mobile */
-  tbody td:nth-child(3),tbody td:nth-child(4),tbody td:nth-child(5),
-  tbody td:nth-child(6),tbody td:nth-child(7){display:none}
+  .m-sort{font-size:11.5px; font-weight:bold; color:var(--gama-leaf)}
+  .title-cell{display:block; font-size:20px; line-height:1.18}
+  .game{margin-top:3px}
+  .byline{display:block; margin-top:5px; font-size:13px; font-style:italic; color:var(--muted)}
+  .summary{display:block; max-width:none; margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--ink)}
+  .mirrors{margin-top:10px; padding-top:8px; border-top:1px solid var(--rule); font-size:12px; line-height:1.5}
 }
 
 /* Respect users who ask for less motion */
@@ -217,8 +236,8 @@ footer .wrap{line-height:1.6}
   #masthead .sub,.tagline{color:#333}
   table,thead th{border-color:#999}
   thead th{position:static; background:none; color:#000; border-bottom:1px solid #000}
-  tbody tr,tbody tr:nth-child(even){background:none !important}
-  tbody tr{break-inside:avoid}
+  tbody tr{background:none !important; break-inside:avoid}
+  tbody tr.r-main{break-after:avoid}  /* keep a headline with its detail row */
   a{color:#000; text-decoration:none}
   footer{border-top:1px solid #999; color:#333}
 }
