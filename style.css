@@ -75,34 +75,50 @@ footer{margin-top:24px; padding:16px 0 40px; border-top:1px solid var(--rule); c
 footer .wrap{line-height:1.6}
 
 @media(max-width:720px){
+  .wrap{padding:0 12px}
+  #masthead{padding:18px 0 20px}
+  #masthead h1{font-size:34px; line-height:1.05}
+  #masthead .sub{display:block; margin-top:4px; font-size:.72em; letter-spacing:3px}
+  .tagline{font-size:13px; line-height:1.45; max-width:28em}
+
   /* sort via dropdown instead of column headers */
-  #sortSel{display:inline-block; flex:1 1 140px}
+  #toolbar{gap:9px; margin:14px 0 12px}
+  #search,#category,#sortSel{width:100%; min-width:0; font-size:16px; min-height:40px}
+  #sortSel{display:block; flex:1 1 100%}
   #search{flex:1 1 100%}
+  #category{flex:1 1 100%}
+  .chk{font-size:14px}
+  .chk input{width:18px; height:18px}
+  .count{margin-left:0; margin-inline-start:auto; font-size:13px; white-space:nowrap}
+
   thead{display:none}
   table,tbody,tr,td{display:block; width:auto}
   table{border:none; background:transparent}
   tbody tr{
+    display:block; overflow:hidden;
     background:#fff !important; border:1px solid var(--rule);
-    margin-bottom:10px; padding:10px 12px; position:relative;
+    margin-bottom:12px; padding:11px 12px;
   }
-  /* thumbnail floats top-right of the card */
-  .thumb-cell{position:absolute; top:10px; right:12px; width:56px; padding:0}
+  .thumb-cell{float:right; width:60px; padding:0; margin:0 0 8px 12px}
   .thumb-cell.no-thumb{display:none}
-  img.thumb{width:56px; height:56px}
-  .main-cell{padding:0}
+  img.thumb{width:60px; height:60px}
+  .main-cell{min-width:0; padding:0}
+
   /* metadata dateline ABOVE the headline */
   .meta-top{
-    display:block; font-size:11px; color:var(--muted);
-    text-transform:uppercase; letter-spacing:.4px; margin-bottom:3px;
-    padding-right:64px;
+    display:flex; flex-wrap:wrap; align-items:center; gap:3px 6px;
+    font-size:11px; color:var(--muted); text-transform:uppercase;
+    letter-spacing:.4px; margin-bottom:5px;
   }
   .meta-top .m-date{font-weight:bold; color:#445}
   .meta-top .cat{vertical-align:baseline}
-  .meta-top .m-auth{text-transform:none; letter-spacing:0; font-style:italic}
+  .meta-top .m-auth{min-width:0; text-transform:none; letter-spacing:0; font-style:italic}
   .meta-top .m-hn{color:var(--gama-green); font-weight:bold}
-  .meta-top .m-sort{display:block; margin-top:2px; color:var(--gama-green); font-weight:bold; text-transform:none; letter-spacing:0}
-  .title-cell{font-size:17px; padding-right:64px}
-  .summary{display:block; max-width:none; margin-top:5px}
+  .meta-top .m-sort{flex-basis:100%; color:var(--gama-green); font-weight:bold; text-transform:none; letter-spacing:0}
+  .title-cell{display:block; font-size:20px; line-height:1.15; margin-top:2px}
+  .game{margin-top:2px}
+  .summary{display:block; max-width:none; margin-top:7px; font-size:13px; line-height:1.4}
+  .mirrors{margin-top:7px; padding-top:6px; border-top:1px solid var(--rule); font-size:12px; line-height:1.45}
   /* the desktop column cells are redundant on mobile */
   tbody td:nth-child(3),tbody td:nth-child(4),tbody td:nth-child(5),
   tbody td:nth-child(6),tbody td:nth-child(7),tbody td:nth-child(8){display:none}
