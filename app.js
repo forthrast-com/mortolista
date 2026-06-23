@@ -183,7 +183,7 @@ function rowHTML(d) {
     : "Archived print view / full text";
   const mirrorLinks = [
     { ok: !!fullText, url: fullText, label: "full text", title: fullTitle },
-    { ok: !fullText && usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
+    { ok: usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
     { ok: checkedLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
     { ok: checkedLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
     { ok: checkedLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.today full", title: "archive.today print/full-text mirror" },
