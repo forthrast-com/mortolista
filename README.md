@@ -25,12 +25,27 @@ index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
 ```
 
-## Running the scraper
+## Development
+This repo is Nix-first. With direnv/nix-direnv installed:
+
 ```bash
-python3 -m venv .venv && . .venv/bin/activate
-pip install requests beautifulsoup4 lxml tomli-w
-python scraper/scrape.py --sample 20      # quick sample
-python scraper/scrape.py                  # full run -> data/postmortems.toml
+direnv allow
+just
+```
+
+Or enter manually:
+
+```bash
+nix develop
+```
+
+Useful commands:
+
+```bash
+just serve    # static site at http://localhost:8000
+just sample   # quick scraper run
+just scrape   # full run -> data/postmortems.toml
+just check    # flake checks
 ```
 
 Data source: Internet Archive CDX API + archived gamasutra.com pages.

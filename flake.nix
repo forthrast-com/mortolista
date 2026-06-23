@@ -1,5 +1,5 @@
 {
-  description = "Gamasutra postmortem archive dev shell";
+  description = "Gamasutra postmortem archive";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -20,23 +20,41 @@
         let
           pkgs = import nixpkgs { inherit system; };
           python = pkgs.python312.withPackages (ps: with ps; [
-            beautifulsoup4
-            lxml
             requests
             tomli-w
           ]);
         in
         {
           default = pkgs.mkShell {
-            packages = with pkgs; [
+            packages = [
               python
-              just
+              pkgs.just
             ];
 
             shellHook = ''
-              echo "dev shell: python scraper/scrape.py --sample 20"
+              echo "mortolista dev shell — try: just"
             '';
           };
+        });
+
+      checks = forEachSystem (system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+          python = pkgs.python312.withPackages (ps: with ps; [
+            requests
+            tomli-w
+          ]);
+        in
+        {
+          scraper-imports = pkgs.runCommand "scraper-imports" { } ''
+            ${python}/bin/python - <<'PY'
+            import py_compile
+            import requests
+            import tomli_w
+            py_compile.compile("${self}/scraper/scrape.py", cfile="/tmp/scrape.pyc", doraise=True)
+            PY
+            touch $out
+          '';
         });
     };
 }
