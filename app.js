@@ -9,7 +9,7 @@ const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
 
 let DATA = [];
-let sortKey = "date";
+let sortKey = "hn_points";
 let sortDir = -1; // -1 desc, 1 asc
 
 const esc = (s) => (s ?? "").replace(/[&<>"]/g, c => (
