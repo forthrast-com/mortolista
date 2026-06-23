@@ -11,8 +11,8 @@ postmortem features, linking out via the Wayback Machine.
 - [x] HN points + comments via Algolia API
 - [x] Wikipedia "notable author?" flag
 - [x] Wayback capture count (backlinks proxy)
-- [ ] Full scrape run -> data/postmortems.toml
-- [ ] Static site (00s Gamasutra / Longreads aesthetic, dynamic sort/filter)
+- [x] Full scrape run -> data/postmortems.toml
+- [x] Static site (00s Gamasutra / Longreads aesthetic, dynamic sort/filter)
 - [ ] Push to github.com/forthrast-com, enable GitHub Pages
 
 ## Phase 2 — curated / manual (deferred, columns present but empty)

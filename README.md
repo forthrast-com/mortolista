@@ -21,7 +21,7 @@ good Internet Archive snapshot.
 ```
 scraper/scrape.py      # Wayback CDX + per-article parse + HN/Wikipedia enrich
 data/postmortems.toml  # the dataset (hand-editable TOML)
-site/                  # static page (HTML/CSS/JS), loads the TOML
+index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
 ```
 

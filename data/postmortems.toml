@@ -1,28 +1,4 @@
 [[postmortem]]
-id = "3225"
-title = "Synchronizing Threads in Java-Based Games"
-game = "Synchronizing Threads in Java-Based Games"
-authors = [
-    "Paul Tyma",
-]
-date = "1997-09-12"
-date_estimated = false
-category = "Indie Postmortem"
-summary = ""
-thumbnail = ""
-original_url = "http://www.gamasutra.com/view/feature/3225/indie_postmortem_armadillo_run.php"
-wayback = "https://web.archive.org/web/20090912115606/http://www.gamasutra.com/view/feature/3225/indie_postmortem_armadillo_run.php"
-wayback_print = "https://web.archive.org/web/20090912115606/http://www.gamasutra.com/view/feature/3225/indie_postmortem_armadillo_run.php?print=1"
-pages = 1
-wayback_captures = 1
-hn_points = 0
-hn_comments = 0
-author_notable = false
-reddit_points = 0
-copies_sold = ""
-alt_ids = []
-
-[[postmortem]]
 id = "131643"
 title = "Postmortem: SSI's Dark Sun Online: Crimson Sands"
 game = "SSI's Dark Sun Online: Crimson Sands"
@@ -101,32 +77,6 @@ alt_ids = [
 ]
 
 [[postmortem]]
-id = "131727"
-title = "Postmortem: Ritual Entertainment's Sin"
-game = "Ritual Entertainment's Sin"
-authors = [
-    "Scott Alden",
-]
-date = "1999-03-05"
-date_estimated = false
-category = "Postmortem"
-summary = "Can you imagine a first-person shooter with a compelling story and realistic characters? Ritual Entertainment toook a heavily enhanced version of the Quake engine a built a new world."
-thumbnail = "https://web.archive.org/web/20120510051851im_/http://www.gamasutra.com/features/19990305/03sin01.jpg"
-original_url = "http://www.gamasutra.com/view/feature/131727/postmortem_ritual_entertainments_.php"
-wayback = "https://web.archive.org/web/20120510051851/http://www.gamasutra.com/view/feature/131727/postmortem_ritual_entertainments_.php"
-wayback_print = "https://web.archive.org/web/20120510051851/http://www.gamasutra.com/view/feature/131727/postmortem_ritual_entertainments_.php?print=1"
-pages = 3
-wayback_captures = 6
-hn_points = 0
-hn_comments = 0
-author_notable = false
-reddit_points = 0
-copies_sold = ""
-alt_ids = [
-    "3320",
-]
-
-[[postmortem]]
 id = "131746"
 title = "Postmortem: DreamWorks Interactive's Trespasser"
 game = "DreamWorks Interactive's Trespasser"
@@ -150,32 +100,6 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3339",
-]
-
-[[postmortem]]
-id = "131748"
-title = "Postmortem: Raven Software's Heretic II"
-game = "Raven Software's Heretic II"
-authors = [
-    "Jake Simpson",
-]
-date = "1999-05-21"
-date_estimated = false
-category = "Postmortem"
-summary = "Wonder what it's like to develop a game using someone else's engine? Jake Simpson tells Gamasutra about his experiences on the Heretic II team, and how things go when you're using a modified version of the Quake II system. Here he relates how too many cooks can spoil the stew, what it feels like to actually ship a game on time, and how you can effectively make use of your game's fan base for suggestions, feedback, and a"
-thumbnail = "https://web.archive.org/web/20120301193552im_/http://www.gamasutra.com/db_area/images/features/19990521/ss3_small.jpg"
-original_url = "http://www.gamasutra.com/view/feature/131748/postmortem_raven_softwares_.php"
-wayback = "https://web.archive.org/web/20120301193552/http://www.gamasutra.com/view/feature/131748/postmortem_raven_softwares_.php"
-wayback_print = "https://web.archive.org/web/20120301193552/http://www.gamasutra.com/view/feature/131748/postmortem_raven_softwares_.php?print=1"
-pages = 4
-wayback_captures = 6
-hn_points = 0
-hn_comments = 0
-author_notable = false
-reddit_points = 0
-copies_sold = ""
-alt_ids = [
-    "3341",
 ]
 
 [[postmortem]]
@@ -691,7 +615,7 @@ original_url = "http://www.gamasutra.com/view/feature/131541/postmortem_raven_so
 wayback = "https://web.archive.org/web/20120510051511/http://www.gamasutra.com/view/feature/131541/postmortem_raven_softwares_.php"
 wayback_print = "https://web.archive.org/web/20120510051511/http://www.gamasutra.com/view/feature/131541/postmortem_raven_softwares_.php?print=1"
 pages = 4
-wayback_captures = 6
+wayback_captures = 12
 hn_points = 0
 hn_comments = 0
 author_notable = false
@@ -699,6 +623,8 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3132",
+    "3341",
+    "131748",
 ]
 
 [[postmortem]]
@@ -795,7 +721,7 @@ original_url = "http://www.gamasutra.com/view/feature/131520/postmortem_ritual_e
 wayback = "https://web.archive.org/web/20120510051434/http://www.gamasutra.com/view/feature/131520/postmortem_ritual_entertainments_.php"
 wayback_print = "https://web.archive.org/web/20120510051434/http://www.gamasutra.com/view/feature/131520/postmortem_ritual_entertainments_.php?print=1"
 pages = 4
-wayback_captures = 6
+wayback_captures = 12
 hn_points = 0
 hn_comments = 0
 author_notable = false
@@ -803,6 +729,8 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3111",
+    "3320",
+    "131727",
 ]
 
 [[postmortem]]
@@ -1589,32 +1517,6 @@ alt_ids = [
 ]
 
 [[postmortem]]
-id = "131271"
-title = "Postmortem: Stardock's Galactic Civilizations"
-game = "Stardock's Galactic Civilizations"
-authors = [
-    "Brad Wardell",
-]
-date = "2003-05-07"
-date_estimated = false
-category = "Postmortem"
-summary = "Galactic Civilizations was up against one of the best-known space-based strategy franchises when it came out this Spring. Yet despite a smaller budget and development team, it has outshined Masters Of Orion 3 in most game reviews. Here's its story."
-thumbnail = "https://web.archive.org/web/20120510042752im_/http://www.gamasutra.com/features/20030507/alex2.jpg"
-original_url = "http://www.gamasutra.com/view/feature/131271/postmortem_stardocks_galactic_.php"
-wayback = "https://web.archive.org/web/20120510042752/http://www.gamasutra.com/view/feature/131271/postmortem_stardocks_galactic_.php"
-wayback_print = "https://web.archive.org/web/20120510042752/http://www.gamasutra.com/view/feature/131271/postmortem_stardocks_galactic_.php?print=1"
-pages = 3
-wayback_captures = 7
-hn_points = 0
-hn_comments = 0
-author_notable = true
-reddit_points = 0
-copies_sold = ""
-alt_ids = [
-    "2862",
-]
-
-[[postmortem]]
 id = "131251"
 title = "Postmortem: Insomniac Games' Ratchet & Clank"
 game = "Insomniac Games' Ratchet & Clank"
@@ -2230,7 +2132,7 @@ original_url = "http://www.gamasutra.com/view/feature/131062/postmortem_stardock
 wayback = "https://web.archive.org/web/20120509055802/http://www.gamasutra.com/view/feature/131062/postmortem_stardocks_galactic_.php"
 wayback_print = "https://web.archive.org/web/20120509055802/http://www.gamasutra.com/view/feature/131062/postmortem_stardocks_galactic_.php?print=1"
 pages = 3
-wayback_captures = 6
+wayback_captures = 13
 hn_points = 0
 hn_comments = 0
 author_notable = true
@@ -2238,6 +2140,8 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2653",
+    "2862",
+    "131271",
 ]
 
 [[postmortem]]
@@ -2329,12 +2233,12 @@ date = "2006-06-19"
 date_estimated = false
 category = "Indie Postmortem"
 summary = "In today's exclusive Gamasutra feature, author Peter Stock provides a detailed postmortem of Armadillo Run, the physics-based puzzle game he independently designed, programmed, produced and published in a nine month span."
-thumbnail = "https://web.archive.org/web/20120509061000im_/http://gamasutra.com/features/20060619/sitelogo.jpg"
+thumbnail = "https://web.archive.org/web/20120509061000im_/http://gamasutra.com/features/20060619/screenshot.jpg"
 original_url = "http://www.gamasutra.com/view/feature/131137/indie_postmortem_armadillo_run.php"
 wayback = "https://web.archive.org/web/20120509061000/http://www.gamasutra.com/view/feature/131137/indie_postmortem_armadillo_run.php"
 wayback_print = "https://web.archive.org/web/20120509061000/http://www.gamasutra.com/view/feature/131137/indie_postmortem_armadillo_run.php?print=1"
 pages = 1
-wayback_captures = 2
+wayback_captures = 3
 hn_points = 0
 hn_comments = 0
 author_notable = false
@@ -2342,6 +2246,7 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2728",
+    "3225",
 ]
 
 [[postmortem]]
@@ -2360,13 +2265,15 @@ original_url = "http://www.gamasutra.com/view/feature/131140/postmortem_indigo_p
 wayback = "https://web.archive.org/web/20120509060954/http://www.gamasutra.com/view/feature/131140/postmortem_indigo_prophecy.php"
 wayback_print = "https://web.archive.org/web/20120509060954/http://www.gamasutra.com/view/feature/131140/postmortem_indigo_prophecy.php?print=1"
 pages = 4
-wayback_captures = 11
+wayback_captures = 13
 hn_points = 0
 hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
+    "1997",
+    "2558",
     "2731",
 ]
 
@@ -2789,30 +2696,6 @@ alt_ids = [
 ]
 
 [[postmortem]]
-id = "1997"
-title = "Postmortem indigo prophecy"
-game = "indigo prophecy"
-authors = []
-date = "2007-11-14"
-date_estimated = true
-category = "Postmortem"
-summary = ""
-thumbnail = ""
-original_url = "http://www.gamasutra.com/view/feature/1997/postmortem_indigo_prophecy.php"
-wayback = "https://web.archive.org/web/20071114092122/http://www.gamasutra.com/view/feature/1997/postmortem_indigo_prophecy.php"
-wayback_print = "https://web.archive.org/web/20071114092122/http://www.gamasutra.com/view/feature/1997/postmortem_indigo_prophecy.php?print=1"
-pages = 1
-wayback_captures = 2
-hn_points = 0
-hn_comments = 0
-author_notable = false
-reddit_points = 0
-copies_sold = ""
-alt_ids = [
-    "2558",
-]
-
-[[postmortem]]
 id = "130732"
 title = "Postmortem: Freeverse's Marathon 2: Durandal"
 game = "Freeverse's Marathon 2: Durandal"
@@ -3177,32 +3060,6 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3889",
-]
-
-[[postmortem]]
-id = "132292"
-title = "Postmortem: Mommy's Best Games' Weapon of Choice"
-game = "Mommy's Best Games' Weapon of Choice"
-authors = [
-    "Nathan Fouts",
-]
-date = "2009-01-08"
-date_estimated = false
-category = "Postmortem"
-summary = "Ex-Insomniac programmer Nathan Fouts created one of the standout Xbox Live Community Games in 2D side-scrolling shooter Weapon Of Choice, and explains how in this Gamasutra postmortem."
-thumbnail = "https://web.archive.org/web/20120509035759im_/http://www.gamasutra.com/db_area/images/feature/3899/pic1.jpg"
-original_url = "http://www.gamasutra.com/view/feature/132292/postmortem_mommys_best_games_.php"
-wayback = "https://web.archive.org/web/20120509035759/http://www.gamasutra.com/view/feature/132292/postmortem_mommys_best_games_.php"
-wayback_print = "https://web.archive.org/web/20120509035759/http://www.gamasutra.com/view/feature/132292/postmortem_mommys_best_games_.php?print=1"
-pages = 5
-wayback_captures = 6
-hn_points = 0
-hn_comments = 0
-author_notable = false
-reddit_points = 0
-copies_sold = ""
-alt_ids = [
-    "3899",
 ]
 
 [[postmortem]]
@@ -4041,13 +3898,15 @@ original_url = "http://www.gamasutra.com/view/feature/6250/postmortem_mommys_bes
 wayback = "https://web.archive.org/web/20110106165028/http://www.gamasutra.com/view/feature/6250/postmortem_mommys_best_games_.php"
 wayback_print = "https://web.archive.org/web/20110106165028/http://www.gamasutra.com/view/feature/6250/postmortem_mommys_best_games_.php?print=1"
 pages = 3
-wayback_captures = 6
+wayback_captures = 12
 hn_points = 0
 hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
+    "3899",
+    "132292",
     "134621",
 ]
 
@@ -4409,7 +4268,7 @@ original_url = "http://www.gamasutra.com/view/feature/6680/postmortem_appy_enter
 wayback = "https://web.archive.org/web/20120203055405/http://www.gamasutra.com/view/feature/6680/postmortem_appy_entertainments_.php"
 wayback_print = "https://web.archive.org/web/20120203055405/http://www.gamasutra.com/view/feature/6680/postmortem_appy_entertainments_.php?print=1"
 pages = 3
-wayback_captures = 5
+wayback_captures = 11
 hn_points = 0
 hn_comments = 0
 author_notable = false
@@ -4417,6 +4276,7 @@ reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "135047",
+    "191525",
 ]
 
 [[postmortem]]
@@ -4931,30 +4791,6 @@ wayback_print = "https://web.archive.org/web/20130501123517/http://www.gamasutra
 pages = 8
 wayback_captures = 5
 hn_points = 1
-hn_comments = 0
-author_notable = false
-reddit_points = 0
-copies_sold = ""
-alt_ids = []
-
-[[postmortem]]
-id = "191525"
-title = "Postmortem: Appy Entertainment's Animal Legends"
-game = "Appy Entertainment's Animal Legends"
-authors = [
-    "Rory McGuire",
-]
-date = "2013-05-06"
-date_estimated = false
-category = "Postmortem"
-summary = "From building a flexible, low-cost server back-end to launching big in China, Animal Legends offered the team at Appy Entertainment a huge number of challenges -- which are fully outlined in this candid postmortem."
-thumbnail = "https://web.archive.org/web/20130509012300im_/http://www.gamasutra.com/db_area/images/feature/191525/thankshanks.jpg"
-original_url = "http://www.gamasutra.com/view/feature/191525/postmortem_appy_entertainments_.php"
-wayback = "https://web.archive.org/web/20130509012300/http://www.gamasutra.com/view/feature/191525/postmortem_appy_entertainments_.php"
-wayback_print = "https://web.archive.org/web/20130509012300/http://www.gamasutra.com/view/feature/191525/postmortem_appy_entertainments_.php?print=1"
-pages = 5
-wayback_captures = 6
-hn_points = 0
 hn_comments = 0
 author_notable = false
 reddit_points = 0

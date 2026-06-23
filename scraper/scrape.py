@@ -51,7 +51,10 @@ GENERIC_TITLES = {"news", "gamasutra", "features",
 IMG_RE = re.compile(
     r'src="([^"]*?(?:/db_area/images/feature/\d+/|/features/\d{6,8}/)'
     r'[^"]+?\.(?:jpe?g|png|gif))"', re.I)
-IMG_CHROME = re.compile(r'(arrowright|spacer|btn_|icon_|header\.gif|_off\.|_on\.)', re.I)
+IMG_CHROME = re.compile(
+    r'(arrowright|spacer|btn_|icon_|header\.gif|_off\.|_on\.|sitelogo|logo|masthead|nav_)',
+    re.I,
+)
 
 SESSION = requests.Session()
 SESSION.headers.update(HEAD)
@@ -397,17 +400,44 @@ def canonical_authors(article):
     return "|".join(sorted(set(names)))
 
 
+def canonical_slug(article):
+    """URL-slug key, used as a fallback for bad migrated captures.
+
+    The CDX listing contains occasional old-ID URLs whose archived content is a
+    completely different article. Those records do not title-match their newer
+    migrated duplicate, but the slug still identifies the intended article.
+    """
+    url = article.get("original_url", "")
+    m = re.search(r"/view/feature/\d+/([^/?#]+)\.php", url, re.I)
+    if not m:
+        return ""
+    slug = m.group(1).lower()
+    slug = re.sub(r"^(audio_|indie_|middleware_)?postmortem_", "", slug)
+    slug = re.sub(r"[^a-z0-9]+", " ", slug).strip()
+    return slug
+
+
 def canonical_key(article):
     """Stable-ish content key for old/new-ID duplicates.
 
     Gamasutra migrated many `/view/feature/<old_id>/...` pages to newer 13xxxx
     IDs. Title is the anchor; normalized authors improve safety but are allowed
-    to be empty because no-author migrated duplicates exist too.
+    to be empty because no-author migrated duplicates exist too.  If a sparse or
+    bad old-ID capture has no useful metadata, fall back to the URL slug so it
+    can merge into the richer migrated record instead of polluting the dataset.
     """
+    slug = canonical_slug(article)
     title = canonical_title(article)
     authors = canonical_authors(article)
     if title:
+        slug_words = [w for w in slug.split() if len(w) > 3]
+        title_words = set(title.split())
+        overlap = sum(1 for w in slug_words[:4] if w in title_words)
+        if slug_words and overlap == 0:
+            return "slug::" + slug
         return title + "::" + authors
+    if slug:
+        return "slug::" + slug
     return "id::" + article.get("id", "")
 
 
@@ -448,11 +478,20 @@ def merge_article_group(group):
     return best
 
 
-def dedupe_articles(articles):
+def _merge_once(articles, keyfunc):
     groups = {}
     for art in articles:
-        groups.setdefault(canonical_key(art), []).append(art)
+        groups.setdefault(keyfunc(art), []).append(art)
     return [merge_article_group(g) for g in groups.values()]
+
+
+def dedupe_articles(articles):
+    # First merge obvious title+author duplicates (or slug fallback for bad
+    # captures), then merge any remaining old/new-ID pairs that share a slug.
+    # The second pass fixes cases where one duplicate parsed as a different
+    # article but its URL slug still points at the intended postmortem.
+    first = _merge_once(articles, canonical_key)
+    return _merge_once(first, lambda art: "slug::" + canonical_slug(art) if canonical_slug(art) else canonical_key(art))
 
 
 # -------------------------------------------------------------------- main
