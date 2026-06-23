@@ -13,6 +13,12 @@ hn:
 hn-audit:
     python scraper/scrape.py --hn-audit
 
+hn-metrics:
+    python scraper/scrape.py --refresh-hn-metrics
+
+check-links:
+    python scraper/scrape.py --no-enrich --check-links
+
 sample:
     python scraper/scrape.py --sample 20
 

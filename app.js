@@ -9,8 +9,22 @@ const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
 
 let DATA = [];
-let sortKey = "hn_points";
+let sortKey = "hn_points_sum";
 let sortDir = -1; // -1 desc, 1 asc
+
+const SORT_LABELS = {
+  title: "Title",
+  authors: "Author",
+  category: "Type",
+  date: "Date",
+  hn_points: "Best HN points",
+  hn_comments: "Best HN comments",
+  hn_points_sum: "Total HN points",
+  hn_comments_sum: "Total HN comments",
+  hn_submissions: "HN submissions",
+  wayback_captures: "Wayback captures",
+  author_notable: "Notable author",
+};
 
 const esc = (s) => (s ?? "").replace(/[&<>"]/g, c => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -88,14 +102,43 @@ function num(v) {
   return v ? `<td class="num">${v}</td>` : `<td class="num zero">–</td>`;
 }
 
+function metricValue(d, k) {
+  const v = d[k];
+  if (k === "date") return d.date ? (d.date_estimated ? `~${d.date}` : d.date) : "—";
+  if (k === "authors") return (d.authors || []).join(", ") || "—";
+  if (k === "author_notable") return d.author_notable ? "yes" : "no";
+  if (typeof v === "number") return v ? v.toLocaleString() : "0";
+  if (typeof v === "boolean") return v ? "yes" : "no";
+  return (v ?? "—").toString();
+}
+
+function sortMetricHTML(d) {
+  const label = SORT_LABELS[sortKey] || sortKey;
+  return `<span class="m-sort" title="Current sort metric">${esc(label)}: ${esc(metricValue(d, sortKey))}</span>`;
+}
+
+function hnThreadsHTML(d) {
+  const threads = d.hn_threads || [];
+  if (!threads.length) return "";
+  const shown = threads.slice(0, 3).map((t, i) => {
+    const label = threads.length === 1 ? "HN discussion" : `HN #${i + 1}`;
+    const detail = `${t.points || 0} pts/${t.comments || 0} c`;
+    return `<a href="${esc(t.url)}" target="_blank" rel="noopener" title="${esc(t.title || 'Hacker News discussion')}">${label} (${detail})</a>`;
+  });
+  if (threads.length > shown.length) shown.push(`<span title="${threads.length} matching HN submissions total">+${threads.length - shown.length} more HN</span>`);
+  return ` · ${shown.join(" · ")}`;
+}
+
 function linkHTML(ok, url, label, title) {
   if (ok === false || !url) return `<span class="dead-link" title="Checked: unavailable">${esc(label)}</span>`;
   return `<a href="${esc(url)}" target="_blank" rel="noopener" title="${esc(title)}">${esc(label)}</a>`;
 }
 
 function printArchiveUrl(d) {
-  const url = d.wayback_print || "";
-  return d.wayback_print_ok !== false && /[?&]print=1(?:[#&]|$)/.test(url) ? url : "";
+  const wayback = d.wayback_print || "";
+  if (d.wayback_print_ok !== false && /[?&]print=1(?:[#&]|$)/.test(wayback)) return wayback;
+  const archiveToday = d.archive_today_print || "";
+  return d.archive_today_print_ok === true ? archiveToday : "";
 }
 
 function rowHTML(d) {
@@ -118,8 +161,11 @@ function rowHTML(d) {
   mirrorParts.push(linkHTML(d.wayback_ok, d.wayback, "wayback", "Internet Archive snapshot of the original page"));
   mirrorParts.push(linkHTML(d.original_ok, d.original_url, "original", "Original Gamasutra URL"));
   if (live) mirrorParts.push(linkHTML(d.live_ok, live, "live", "Verified live Game Developer URL (may have broken formatting)"));
+  if (d.archive_today_print || d.archive_today_print_ok === false) {
+    mirrorParts.push(linkHTML(d.archive_today_print_ok, d.archive_today_print, "archive.today full", "archive.today print/full-text mirror"));
+  }
   mirrorParts.push(linkHTML(d.archive_today_ok, at, "archive.today", "archive.today mirror (fallback)"));
-  const mirrors = `<span class="mirrors">${mirrorParts.join(" · ")}</span>`;
+  const mirrors = `<span class="mirrors">${mirrorParts.join(" · ")}${hnThreadsHTML(d)}</span>`;
   // vintage dateline: metadata line shown ABOVE the headline (esp. on mobile)
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
@@ -127,6 +173,7 @@ function rowHTML(d) {
     + (d.authors && d.authors.length
         ? ` <span class="m-auth">by ${esc(d.authors.join(", "))}${d.author_notable ? " ★" : ""}</span>`
         : "")
+    + ` ${sortMetricHTML(d)}`
     + `</span>`;
   const thumb = d.thumbnail
     ? `<a href="${esc(primary)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
@@ -137,7 +184,7 @@ function rowHTML(d) {
     <td>${authors}${star}</td>
     <td><span class="cat ${catClass(d.category)}">${esc(d.category)}</span></td>
     <td class="num">${date}</td>
-    ${num(d.hn_points)}${num(d.hn_comments)}${num(d.wayback_captures)}
+    ${num(d.hn_points_sum)}${num(d.hn_comments_sum)}${num(d.wayback_captures)}
   </tr>`;
 }
 

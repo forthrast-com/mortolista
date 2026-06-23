@@ -100,6 +100,7 @@ footer .wrap{line-height:1.6}
   .meta-top .cat{vertical-align:baseline}
   .meta-top .m-auth{text-transform:none; letter-spacing:0; font-style:italic}
   .meta-top .m-hn{color:var(--gama-green); font-weight:bold}
+  .meta-top .m-sort{display:block; margin-top:2px; color:var(--gama-green); font-weight:bold; text-transform:none; letter-spacing:0}
   .title-cell{font-size:17px; padding-right:64px}
   .summary{display:block; max-width:none; margin-top:5px}
   /* the desktop column cells are redundant on mobile */

@@ -46,11 +46,13 @@ Useful commands:
 
 ```bash
 just serve    # static site at http://localhost:8000
-just hn       # refresh data/hn_gamasutra_posts.toml
-just hn-audit # local audit of HN links vs known postmortem URLs
-just sample   # quick scraper run
-just scrape   # full run -> data/postmortems.toml
-just check    # flake checks
+just hn         # refresh data/hn_gamasutra_posts.toml
+just hn-audit   # local audit of HN links vs known postmortem URLs
+just hn-metrics # local-only recompute of HN sums/thread links in data/postmortems.toml
+just check-links # slow network pass for link availability fields
+just sample     # quick scraper run
+just scrape     # full Wayback scrape -> data/postmortems.toml
+just check      # flake checks
 ```
 
 Data source: Internet Archive CDX API + archived gamasutra.com pages + cached Hacker News submissions in `data/hn_gamasutra_posts.toml`.

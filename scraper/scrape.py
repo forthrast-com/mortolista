@@ -404,6 +404,13 @@ def archive_today_url(original_url):
     return f"https://archive.ph/newest/{urllib.parse.quote(original_url, safe='')}"
 
 
+def print_url(original_url):
+    if not original_url:
+        return ""
+    sep = "&" if "?" in original_url else "?"
+    return original_url if re.search(r"[?&]print=1(?:[#&]|$)", original_url) else original_url + sep + "print=1"
+
+
 def archive_today_available(url):
     ok, final = http_exists(url, allow_redirect=True, timeout=25)
     if not ok:
@@ -476,9 +483,13 @@ def check_article_links(article):
     article["wayback_ok"] = wayback_available(article.get("wayback", ""))
     article["wayback_print_ok"] = wayback_available(article.get("wayback_print", ""))
     article["original_ok"] = original_available(article.get("original_url", ""))
-    at = archive_today_url(article.get("original_url", ""))
+    original = article.get("original_url", "")
+    at = archive_today_url(original)
+    at_print = archive_today_url(print_url(original))
     article["archive_today"] = at
     article["archive_today_ok"] = archive_today_available(at)
+    article["archive_today_print"] = at_print
+    article["archive_today_print_ok"] = archive_today_available(at_print)
     live = find_live_gamedeveloper_url(article)
     article["live_url"] = live
     article["live_ok"] = bool(live)
@@ -602,17 +613,71 @@ def hn_feature_ids(url):
 
 
 def hn_stats(article, hn_posts):
-    """Best points/comments across cached HN submissions matching this article."""
+    """HN attention across cached submissions matching this article.
+
+    `hn_points`/`hn_comments` are the peak individual thread, useful for
+    finding the best discussion.  The *_sum fields capture total attention
+    across duplicate submissions, because HN often resurfaces old Gamasutra
+    URLs under migrated ids, print views, or Wayback links.
+    """
     ids, paths = article_hn_keys(article)
-    pts = cmts = 0
+    pts = cmts = total_pts = total_cmts = submissions = 0
+    seen = set()
     for post in hn_posts:
         url = (post.get("url") or "").lower()
         id_match = bool(ids & hn_feature_ids(url))
         path_match = any(path in url for path in paths)
-        if id_match or path_match:
-            pts = max(pts, int(post.get("points") or 0))
-            cmts = max(cmts, int(post.get("num_comments") or 0))
-    return pts, cmts
+        if not (id_match or path_match):
+            continue
+        key = post.get("object_id") or url
+        if key in seen:
+            continue
+        seen.add(key)
+        p = int(post.get("points") or 0)
+        c = int(post.get("num_comments") or 0)
+        pts = max(pts, p)
+        cmts = max(cmts, c)
+        total_pts += p
+        total_cmts += c
+        submissions += 1
+    threads = []
+    for key in seen:
+        # second pass below keeps output stable and sorted by thread weight.
+        pass
+    matched_threads = []
+    for post in hn_posts:
+        url = (post.get("url") or "").lower()
+        id_match = bool(ids & hn_feature_ids(url))
+        path_match = any(path in url for path in paths)
+        if not (id_match or path_match):
+            continue
+        key = post.get("object_id") or url
+        if key not in seen:
+            continue
+        matched_threads.append({
+            "object_id": str(post.get("object_id") or ""),
+            "title": post.get("title") or "",
+            "url": f"https://news.ycombinator.com/item?id={post.get('object_id')}",
+            "points": int(post.get("points") or 0),
+            "comments": int(post.get("num_comments") or 0),
+            "submitted_url": post.get("url") or "",
+        })
+    # Deduplicate while preserving the strongest copy if Algolia returned dupes.
+    by_id = {}
+    for thread in matched_threads:
+        key = thread["object_id"] or thread["submitted_url"]
+        old = by_id.get(key)
+        if not old or (thread["points"], thread["comments"]) > (old["points"], old["comments"]):
+            by_id[key] = thread
+    threads = sorted(by_id.values(), key=lambda t: (t["points"], t["comments"]), reverse=True)
+    return {
+        "hn_points": pts,
+        "hn_comments": cmts,
+        "hn_points_sum": total_pts,
+        "hn_comments_sum": total_cmts,
+        "hn_submissions": submissions,
+        "hn_threads": threads,
+    }
 
 
 
@@ -819,17 +884,29 @@ def merge_article_group(group):
                 alt_ids.append(aid)
         # fill sparse fields from alternates
         for k in ("summary", "thumbnail", "date", "original_url", "wayback", "wayback_print",
-                  "archive_today", "live_url"):
+                  "archive_today", "archive_today_print", "live_url"):
             if not best.get(k) and art.get(k):
                 best[k] = art[k]
         best["hn_points"] = max(best.get("hn_points", 0) or 0, art.get("hn_points", 0) or 0)
         best["hn_comments"] = max(best.get("hn_comments", 0) or 0, art.get("hn_comments", 0) or 0)
+        best["hn_points_sum"] = (best.get("hn_points_sum", 0) or 0) + (art.get("hn_points_sum", 0) or 0)
+        best["hn_comments_sum"] = (best.get("hn_comments_sum", 0) or 0) + (art.get("hn_comments_sum", 0) or 0)
+        best["hn_submissions"] = (best.get("hn_submissions", 0) or 0) + (art.get("hn_submissions", 0) or 0)
+        best.setdefault("hn_threads", [])
+        best["hn_threads"].extend(art.get("hn_threads", []) or [])
         if not best.get("authors") and art.get("authors"):
             best["authors"] = art["authors"]
         if best.get("date_estimated") and art.get("date") and not art.get("date_estimated"):
             best["date"] = art["date"]
             best["date_estimated"] = False
     best["alt_ids"] = sorted(set(alt_ids), key=lambda x: int(x) if x.isdigit() else x)
+    by_thread = {}
+    for thread in best.get("hn_threads", []) or []:
+        key = thread.get("object_id") or thread.get("url") or thread.get("submitted_url")
+        old = by_thread.get(key)
+        if not old or (thread.get("points", 0), thread.get("comments", 0)) > (old.get("points", 0), old.get("comments", 0)):
+            by_thread[key] = thread
+    best["hn_threads"] = sorted(by_thread.values(), key=lambda t: (t.get("points", 0), t.get("comments", 0)), reverse=True)
     best["wayback_captures"] = captures or best.get("wayback_captures", 0)
     return best
 
@@ -850,6 +927,32 @@ def dedupe_articles(articles):
     return _merge_once(first, lambda art: "slug::" + canonical_slug(art) if canonical_slug(art) else canonical_key(art))
 
 
+# ---------------------------------------------------------- local data refresh
+def refresh_hn_metrics(data_path, hn_posts_path=HN_POSTS):
+    """Recompute HN metrics for an existing dataset from local HN cache only."""
+    data_path = Path(data_path)
+    payload = load_toml(data_path)
+    hn_posts = load_hn_posts(hn_posts_path)
+    articles = payload.get("postmortem", [])
+    for article in articles:
+        article.update(hn_stats(article, hn_posts))
+    data_path.write_bytes(tomli_w.dumps(payload).encode())
+    return len(articles)
+
+
+def refresh_link_checks(data_path):
+    """Refresh slow link availability fields for an existing dataset."""
+    data_path = Path(data_path)
+    payload = load_toml(data_path)
+    articles = payload.get("postmortem", [])
+    for i, article in enumerate(articles, 1):
+        check_article_links(article)
+        if i % 25 == 0:
+            log(f"[*] checked links {i}/{len(articles)}")
+    data_path.write_bytes(tomli_w.dumps(payload).encode())
+    return len(articles)
+
+
 # -------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
@@ -857,6 +960,8 @@ def main():
     ap.add_argument("--list-only", action="store_true")
     ap.add_argument("--hn-only", action="store_true", help="refresh data/hn_gamasutra_posts.toml and exit")
     ap.add_argument("--hn-audit", action="store_true", help="audit cached HN posts against local postmortem URL cache and exit")
+    ap.add_argument("--refresh-hn-metrics", action="store_true", help="recompute HN fields in --out from local cache and exit")
+    ap.add_argument("--check-links", action="store_true", help="slow: refresh link availability fields")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
     ap.add_argument("--no-enrich", action="store_true", help="skip HN+Wikipedia")
     ap.add_argument("--out", default=str(DATA / "postmortems.toml"))
@@ -870,6 +975,14 @@ def main():
         out, summary = audit_hn_posts(args.hn_posts)
         log(f"[*] wrote HN audit -> {out}")
         log(f"[*] {summary}")
+        return
+    if args.refresh_hn_metrics:
+        n = refresh_hn_metrics(args.out, args.hn_posts)
+        log(f"[*] refreshed HN metrics for {n} entries -> {args.out}")
+        return
+    if args.check_links and args.no_enrich:
+        n = refresh_link_checks(args.out)
+        log(f"[*] refreshed link checks for {n} entries -> {args.out}")
         return
 
     arts = fetch_article_list()
@@ -895,6 +1008,8 @@ def main():
         if not art:
             continue
         art["hn_points"] = art["hn_comments"] = 0
+        art["hn_points_sum"] = art["hn_comments_sum"] = art["hn_submissions"] = 0
+        art["hn_threads"] = []
         art["author_notable"] = False
         # phase-2 placeholders
         art["reddit_points"] = 0
@@ -905,9 +1020,10 @@ def main():
     out = dedupe_articles(out)
     if not args.no_enrich:
         for i, art in enumerate(out, 1):
-            art["hn_points"], art["hn_comments"] = hn_stats(art, hn_posts)
+            art.update(hn_stats(art, hn_posts))
             art["author_notable"] = any(author_notable(a) for a in art["authors"])
-            check_article_links(art)
+            if args.check_links:
+                check_article_links(art)
             if i % 25 == 0:
                 log(f"[*] enriched {i}/{len(out)} deduped articles")
             time.sleep(0.3)

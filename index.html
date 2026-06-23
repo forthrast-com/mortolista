@@ -20,14 +20,17 @@
     <input id="search" type="search" placeholder="Search title, game, or author…" autocomplete="off">
     <select id="category"><option value="">All categories</option></select>
     <select id="sortSel" aria-label="Sort by">
-      <option value="hn_points:-1">Most HN points</option>
+      <option value="hn_points_sum:-1">Most total HN points</option>
+      <option value="hn_points:-1">Best HN thread</option>
       <option value="date:-1">Newest first</option>
       <option value="date:1">Oldest first</option>
       <option value="title:1">Title A–Z</option>
       <option value="authors:1">Author A–Z</option>
       <option value="author_notable:-1">Notable authors first</option>
       <option value="category:1">Type</option>
-      <option value="hn_comments:-1">Most HN comments</option>
+      <option value="hn_comments_sum:-1">Most total HN comments</option>
+      <option value="hn_comments:-1">Best HN comments</option>
+      <option value="hn_submissions:-1">Most HN submissions</option>
       <option value="wayback_captures:-1">Most captures</option>
     </select>
     <label class="chk"><input type="checkbox" id="notableOnly"> Notable authors only</label>
@@ -42,8 +45,8 @@
         <th data-key="authors" class="sortable">Author(s)</th>
         <th data-key="category" class="sortable">Type</th>
         <th data-key="date" class="sortable num">Date</th>
-        <th data-key="hn_points" class="sortable num" title="Hacker News points">HN ▲</th>
-        <th data-key="hn_comments" class="sortable num" title="Hacker News comments">HN ｜</th>
+        <th data-key="hn_points_sum" class="sortable num" title="Total Hacker News points across matching submissions">HN Σ▲</th>
+        <th data-key="hn_comments_sum" class="sortable num" title="Total Hacker News comments across matching submissions">HN Σ｜</th>
         <th data-key="wayback_captures" class="sortable num" title="Wayback capture count (backlink proxy)">Caps</th>
       </tr>
     </thead>
