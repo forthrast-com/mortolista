@@ -20,7 +20,8 @@ good Internet Archive snapshot.
 ## Layout
 ```
 scraper/scrape.py      # Wayback CDX + per-article parse + HN/Wikipedia enrich
-data/postmortems.toml  # the dataset (hand-editable TOML)
+data/postmortems.toml          # the dataset (hand-editable TOML)
+data/hn_gamasutra_posts.toml   # cached HN stories whose URLs mention gamasutra.com
 index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
 ```
@@ -43,10 +44,11 @@ Useful commands:
 
 ```bash
 just serve    # static site at http://localhost:8000
+just hn       # refresh data/hn_gamasutra_posts.toml
 just sample   # quick scraper run
 just scrape   # full run -> data/postmortems.toml
 just check    # flake checks
 ```
 
-Data source: Internet Archive CDX API + archived gamasutra.com pages.
+Data source: Internet Archive CDX API + archived gamasutra.com pages + cached Hacker News submissions in `data/hn_gamasutra_posts.toml`.
 Inspired by [Rich0664/Gamasutra-Archive](https://github.com/Rich0664/Gamasutra-Archive).

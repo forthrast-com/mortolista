@@ -670,8 +670,8 @@ wayback = "https://web.archive.org/web/20120407073514/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120407073514/http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php?print=1"
 pages = 3
 wayback_captures = 12
-hn_points = 3
-hn_comments = 0
+hn_points = 14
+hn_comments = 1
 author_notable = false
 reddit_points = 0
 copies_sold = ""
@@ -804,7 +804,7 @@ wayback = "https://web.archive.org/web/20120510051336/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051336/http://www.gamasutra.com/view/feature/131497/postmortem_micro_forte_s_fallout_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
+hn_points = 1
 hn_comments = 0
 author_notable = false
 reddit_points = 0
@@ -1769,7 +1769,7 @@ wayback = "https://web.archive.org/web/20120227213150/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120227213150/http://www.gamasutra.com/view/feature/130550/middleware_postmortem_idv_incs_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
+hn_points = 2
 hn_comments = 0
 author_notable = false
 reddit_points = 0
@@ -2712,7 +2712,7 @@ wayback = "https://web.archive.org/web/20120509060655/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060655/http://www.gamasutra.com/view/feature/130732/postmortem_freeverses_marathon_.php?print=1"
 pages = 7
 wayback_captures = 6
-hn_points = 0
+hn_points = 2
 hn_comments = 0
 author_notable = false
 reddit_points = 0
@@ -3239,7 +3239,7 @@ wayback = "https://web.archive.org/web/20120509052756/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509052756/http://www.gamasutra.com/view/feature/132401/postmortem_square_enixs_the_.php?print=1"
 pages = 3
 wayback_captures = 7
-hn_points = 0
+hn_points = 4
 hn_comments = 0
 author_notable = false
 reddit_points = 0
@@ -3899,7 +3899,7 @@ wayback = "https://web.archive.org/web/20110106165028/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110106165028/http://www.gamasutra.com/view/feature/6250/postmortem_mommys_best_games_.php?print=1"
 pages = 3
 wayback_captures = 12
-hn_points = 0
+hn_points = 1
 hn_comments = 0
 author_notable = false
 reddit_points = 0
@@ -4320,7 +4320,7 @@ wayback = "https://web.archive.org/web/20120224164145/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120224164145/http://www.gamasutra.com/view/feature/6742/postmortem_days_of_wonders_.php?print=1"
 pages = 5
 wayback_captures = 4
-hn_points = 0
+hn_points = 1
 hn_comments = 0
 author_notable = false
 reddit_points = 0

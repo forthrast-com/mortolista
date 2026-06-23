@@ -18,12 +18,13 @@ Usage:
 """
 import argparse, html as htmllib, json, re, sys, time, urllib.parse, unicodedata
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 import requests
 import tomli_w
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+HN_POSTS = DATA / "hn_gamasutra_posts.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
 
@@ -323,26 +324,120 @@ def clean(s):
 
 
 # ------------------------------------------------------------------- HN enrich
-def hn_stats(original_url):
-    """Best points/comments across HN submissions matching this article URL."""
-    # match on the stable path /view/feature/<id>/<slug>
-    m = re.search(r"(/view/feature/\d+/[a-z0-9_]+\.php)", original_url, re.I)
-    if not m:
-        return 0, 0
-    q = "gamasutra.com" + m.group(1)
+HN_API = "https://hn.algolia.com/api/v1/search_by_date"
+HN_PAGE_SIZE = 100
+# Algolia only exposes the first ~1000 hits for a query/page window.  Split any
+# too-large date range until every leaf is safely pageable.
+HN_SAFE_HIT_LIMIT = 900
+HN_EARLIEST = int(datetime(2006, 10, 1, tzinfo=timezone.utc).timestamp())
+
+
+def hn_search(params):
+    r = SESSION.get(HN_API, params=params, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def hn_query_params(start, end, page=0):
+    return {
+        "query": "gamasutra.com",
+        "restrictSearchableAttributes": "url",
+        "tags": "story",
+        "hitsPerPage": HN_PAGE_SIZE,
+        "page": page,
+        "numericFilters": f"created_at_i>={start},created_at_i<{end}",
+    }
+
+
+def fetch_hn_gamasutra_posts(start=HN_EARLIEST, end=None):
+    """Return all HN stories whose URL matches gamasutra.com.
+
+    A plain Algolia search silently tops out around the first 1000 hits, which
+    made per-article enrichment miss most older/low-ranked submissions.  This
+    harvests the whole corpus by recursively partitioning on created_at_i.
+    """
+    end = end or int(time.time()) + 1
+    first = hn_search(hn_query_params(start, end, 0))
+    total = first.get("nbHits", 0) or 0
+    if total > HN_SAFE_HIT_LIMIT and end - start > 1:
+        mid = start + ((end - start) // 2)
+        return fetch_hn_gamasutra_posts(start, mid) + fetch_hn_gamasutra_posts(mid, end)
+
+    posts = []
+    pages = min(first.get("nbPages", 0) or 0, 10)
+    for page in range(pages):
+        data = first if page == 0 else hn_search(hn_query_params(start, end, page))
+        for hit in data.get("hits", []):
+            url = hit.get("url") or ""
+            if "gamasutra.com" not in url.lower():
+                continue
+            posts.append({
+                "object_id": str(hit.get("objectID") or ""),
+                "title": clean(hit.get("title") or hit.get("story_title") or ""),
+                "url": url,
+                "created_at": hit.get("created_at") or "",
+                "created_at_i": int(hit.get("created_at_i") or 0),
+                "points": int(hit.get("points") or 0),
+                "num_comments": int(hit.get("num_comments") or 0),
+            })
+        if page + 1 < pages:
+            time.sleep(0.05)
+    return posts
+
+
+def write_hn_posts(path=HN_POSTS):
+    posts = fetch_hn_gamasutra_posts()
+    by_id = {}
+    for post in posts:
+        key = post["object_id"] or post["url"]
+        old = by_id.get(key)
+        if not old or (post["points"], post["num_comments"]) > (old["points"], old["num_comments"]):
+            by_id[key] = post
+    out = sorted(by_id.values(), key=lambda p: (p["created_at_i"], p["object_id"]))
+    payload = {"hn_post": out}
+    path = Path(path)
+    path.parent.mkdir(exist_ok=True)
+    path.write_bytes(tomli_w.dumps(payload).encode())
+    return out
+
+
+def load_hn_posts(path=HN_POSTS):
+    path = Path(path)
+    if not path.exists():
+        log(f"[*] {path} missing; harvesting HN gamasutra posts")
+        return write_hn_posts(path)
     try:
-        r = SESSION.get("https://hn.algolia.com/api/v1/search",
-                        params={"query": q, "restrictSearchableAttributes": "url",
-                                "hitsPerPage": 20}, timeout=20)
-        hits = r.json().get("hits", [])
-    except Exception:
+        import tomllib
+    except ModuleNotFoundError:
+        import tomli as tomllib
+    return tomllib.loads(path.read_text()).get("hn_post", [])
+
+
+def hn_paths_for_article(article):
+    urls = [article.get("original_url", "")]
+    for aid in article.get("alt_ids", []) or []:
+        url = article.get("original_url", "")
+        if url:
+            urls.append(re.sub(r"/view/feature/\d+/", f"/view/feature/{aid}/", url))
+    paths = set()
+    for url in urls:
+        m = re.search(r"(/view/feature/\d+/[a-z0-9_]+\.php)", url, re.I)
+        if m:
+            paths.add(m.group(1).lower())
+    return paths
+
+
+def hn_stats(article, hn_posts):
+    """Best points/comments across cached HN submissions matching this article."""
+    paths = hn_paths_for_article(article)
+    if not paths:
         return 0, 0
-    path = m.group(1).lower()
     pts = cmts = 0
-    for h in hits:
-        if path in (h.get("url") or "").lower():
-            pts = max(pts, h.get("points") or 0)
-            cmts = max(cmts, h.get("num_comments") or 0)
+    for post in hn_posts:
+        url = (post.get("url") or "").lower()
+        if any(path in url for path in paths):
+            pts = max(pts, int(post.get("points") or 0))
+            cmts = max(cmts, int(post.get("num_comments") or 0))
     return pts, cmts
 
 
@@ -468,6 +563,8 @@ def merge_article_group(group):
         for k in ("summary", "thumbnail", "date", "original_url", "wayback", "wayback_print"):
             if not best.get(k) and art.get(k):
                 best[k] = art[k]
+        best["hn_points"] = max(best.get("hn_points", 0) or 0, art.get("hn_points", 0) or 0)
+        best["hn_comments"] = max(best.get("hn_comments", 0) or 0, art.get("hn_comments", 0) or 0)
         if not best.get("authors") and art.get("authors"):
             best["authors"] = art["authors"]
         if best.get("date_estimated") and art.get("date") and not art.get("date_estimated"):
@@ -499,14 +596,25 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sample", type=int, default=0, help="only process N articles")
     ap.add_argument("--list-only", action="store_true")
+    ap.add_argument("--hn-only", action="store_true", help="refresh data/hn_gamasutra_posts.toml and exit")
+    ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
     ap.add_argument("--no-enrich", action="store_true", help="skip HN+Wikipedia")
     ap.add_argument("--out", default=str(DATA / "postmortems.toml"))
     args = ap.parse_args()
+
+    if args.hn_only:
+        posts = write_hn_posts(args.hn_posts)
+        log(f"[*] wrote {len(posts)} HN gamasutra posts -> {args.hn_posts}")
+        return
 
     arts = fetch_article_list()
     log(f"[*] {len(arts)} distinct postmortem articles found")
     if args.list_only:
         return
+
+    hn_posts = [] if args.no_enrich else load_hn_posts(args.hn_posts)
+    if hn_posts:
+        log(f"[*] loaded {len(hn_posts)} HN gamasutra posts")
 
     ids = sorted(arts, key=int)
     if args.sample:
@@ -521,13 +629,8 @@ def main():
         art = parse_article(aid, rec)
         if not art:
             continue
-        if not args.no_enrich:
-            art["hn_points"], art["hn_comments"] = hn_stats(art["original_url"])
-            art["author_notable"] = any(author_notable(a) for a in art["authors"])
-            time.sleep(0.3)
-        else:
-            art["hn_points"] = art["hn_comments"] = 0
-            art["author_notable"] = False
+        art["hn_points"] = art["hn_comments"] = 0
+        art["author_notable"] = False
         # phase-2 placeholders
         art["reddit_points"] = 0
         art["copies_sold"] = ""
@@ -535,6 +638,14 @@ def main():
         time.sleep(0.2)
 
     out = dedupe_articles(out)
+    if not args.no_enrich:
+        for i, art in enumerate(out, 1):
+            art["hn_points"], art["hn_comments"] = hn_stats(art, hn_posts)
+            art["author_notable"] = any(author_notable(a) for a in art["authors"])
+            if i % 25 == 0:
+                log(f"[*] enriched {i}/{len(out)} deduped articles")
+            time.sleep(0.3)
+
     out.sort(key=lambda a: (a["date"] or "0000", a["title"]))
     payload = {"postmortem": out}
     Path(args.out).write_bytes(tomli_w.dumps(payload).encode())
