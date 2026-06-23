@@ -97,11 +97,16 @@ function render() {
   });
 
   countEl.textContent = `${list.length} of ${DATA.length} postmortems`;
-  rowsEl.innerHTML = list.map(rowHTML).join("");
+  rowsEl.innerHTML = list.length
+    ? list.map(rowHTML).join("")
+    : `<tr><td colspan="7" class="empty">No postmortems match your filters.</td></tr>`;
   document.querySelectorAll("th.sortable").forEach(th => {
     th.classList.remove("sorted-asc", "sorted-desc");
-    if (th.dataset.key === sortKey)
+    th.removeAttribute("aria-sort");
+    if (th.dataset.key === sortKey) {
       th.classList.add(sortDir === 1 ? "sorted-asc" : "sorted-desc");
+      th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
+    }
   });
   // keep the mobile sort dropdown in sync (only if it has a matching option)
   const val = `${sortKey}:${sortDir}`;
@@ -254,6 +259,9 @@ document.querySelectorAll("th.sortable").forEach(th => {
     if (sortKey === k) sortDir *= -1;
     else { sortKey = k; sortDir = (k === "title" || k === "authors" || k === "category") ? 1 : -1; }
     render();
+  });
+  th.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
   });
 });
 sortSel.addEventListener("change", () => {

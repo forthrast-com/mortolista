@@ -10,9 +10,11 @@ body{
   margin:0; background:var(--paper); color:var(--ink);
   font:14px/1.5 "Lucida Grande","Segoe UI",Verdana,sans-serif;
 }
+::selection{background:#bfe6cf; color:var(--ink)}
 .wrap{max-width:1040px; margin:0 auto; padding:0 16px}
 a{color:var(--link); text-decoration:none}
 a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-radius:1px}
 
 #masthead{
   background:linear-gradient(#258050,var(--gama-green-dk));
@@ -26,7 +28,12 @@ a:hover{text-decoration:underline}
 #toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:16px 0 10px}
 #search{flex:1 1 260px; min-width:200px; padding:6px 9px; border:1px solid var(--rule); background:#fff}
 #category{padding:6px; border:1px solid var(--rule); background:#fff}
+#search:focus,#category:focus,#sortSel:focus{
+  outline:none; border-color:var(--gama-leaf);
+  box-shadow:0 0 0 3px rgba(42,138,77,.22);
+}
 .chk{font-size:12px; color:#444; display:flex; gap:5px; align-items:center; white-space:nowrap}
+.chk input{accent-color:var(--gama-green)}
 .count{margin-left:auto; color:var(--muted); font-size:12px}
 
 table{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--rule)}
@@ -38,6 +45,10 @@ thead th{
 }
 thead th.sortable{cursor:pointer}
 thead th.sortable:hover{background:linear-gradient(#358a58,#247044)}
+thead th.sortable:focus-visible{
+  outline:2px solid #cdebd8; outline-offset:-3px;
+  background:linear-gradient(#358a58,#247044);
+}
 thead th.num{text-align:right}
 th.sorted-asc::after{content:" ▲"; font-size:9px}
 th.sorted-desc::after{content:" ▼"; font-size:9px}
@@ -47,6 +58,7 @@ tbody td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:to
 .thumb-cell{padding:5px 0 5px 8px; width:60px}
 .thumb-cell.no-thumb{background:repeating-linear-gradient(45deg,#eef2ee,#eef2ee 4px,#e6ece6 4px,#e6ece6 8px)}
 img.thumb{display:block; width:52px; height:52px; object-fit:cover; border:1px solid var(--rule); background:#fff}
+tbody tr{transition:background-color .12s ease}
 tbody tr:nth-child(even){background:var(--row-alt)}
 tbody tr:hover{background:#fbf7e3}
 td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
@@ -74,6 +86,7 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
 .meta-top{display:none}
 #sortSel{display:none}
 
+.empty{padding:30px 12px; text-align:center; color:var(--muted); font-style:italic}
 .status{color:var(--muted); padding:14px 0; font-style:italic}
 footer{margin-top:24px; padding:16px 0 40px; border-top:1px solid var(--rule); color:var(--muted); font-size:11px}
 footer .wrap{line-height:1.6}
@@ -126,4 +139,18 @@ footer .wrap{line-height:1.6}
   /* the desktop column cells are redundant on mobile */
   tbody td:nth-child(3),tbody td:nth-child(4),tbody td:nth-child(5),
   tbody td:nth-child(6),tbody td:nth-child(7){display:none}
+}
+
+/* ---- Print: a clean, ink-friendly reading list ---- */
+@media print{
+  body{background:#fff; color:#000; font-size:11px}
+  #toolbar,.thumb-col,.thumb-cell,#status{display:none}
+  #masthead{background:none; color:#000; border-bottom:2px solid #000; padding:0 0 8px}
+  #masthead .sub,.tagline{color:#333}
+  table,thead th{border-color:#999}
+  thead th{position:static; background:none; color:#000; border-bottom:1px solid #000}
+  tbody tr,tbody tr:nth-child(even){background:none !important}
+  tbody tr{break-inside:avoid}
+  a{color:#000; text-decoration:none}
+  footer{border-top:1px solid #999; color:#333}
 }

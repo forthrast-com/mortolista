@@ -34,19 +34,19 @@
       <option value="wayback_captures:-1">Most captures</option>
     </select>
     <label class="chk"><input type="checkbox" id="notableOnly"> Notable authors only</label>
-    <span id="count" class="count"></span>
+    <span id="count" class="count" aria-live="polite"></span>
   </div>
 
   <table id="grid">
     <thead>
       <tr>
-        <th class="thumb-col"></th>
-        <th data-key="title" class="sortable">Postmortem</th>
-        <th data-key="authors" class="sortable">Author(s)</th>
-        <th data-key="category" class="sortable">Type</th>
-        <th data-key="date" class="sortable num">Date</th>
-        <th data-key="hn_points_sum" class="sortable num" title="Total Hacker News points/comments across matching submissions">HN</th>
-        <th data-key="wayback_captures" class="sortable num" title="Wayback capture count (backlink proxy)">Caps</th>
+        <th class="thumb-col" aria-hidden="true"></th>
+        <th scope="col" tabindex="0" data-key="title" class="sortable">Postmortem</th>
+        <th scope="col" tabindex="0" data-key="authors" class="sortable">Author(s)</th>
+        <th scope="col" tabindex="0" data-key="category" class="sortable">Type</th>
+        <th scope="col" tabindex="0" data-key="date" class="sortable num">Date</th>
+        <th scope="col" tabindex="0" data-key="hn_points_sum" class="sortable num" title="Total Hacker News points/comments across matching submissions">HN</th>
+        <th scope="col" tabindex="0" data-key="wayback_captures" class="sortable num" title="Wayback capture count (backlink proxy)">Caps</th>
       </tr>
     </thead>
     <tbody id="rows"></tbody>
