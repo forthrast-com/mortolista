@@ -287,6 +287,32 @@ alt_ids = [
 ]
 
 [[postmortem]]
+id = "131815"
+title = "The Cabal: Valves Design Process For Creating Half-Life"
+game = "The Cabal: Valves Design Process For Creating Half-Life"
+authors = [
+    "ken birdwell",
+]
+date = "1999-12-10"
+date_estimated = false
+category = "Postmortem"
+summary = "While Half-Life has seen resounding critical and financial success (winning over 50"
+thumbnail = "https://web.archive.org/web/20120424031214im_/http://www.gamasutra.com/features/19991210/half.gif"
+original_url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+wayback = "https://web.archive.org/web/20120424031214/http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+wayback_print = "https://web.archive.org/web/20120424031214/http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php?print=1"
+pages = 4
+wayback_captures = 0
+hn_points = 188
+hn_comments = 84
+author_notable = false
+reddit_points = 0
+copies_sold = ""
+alt_ids = [
+    "3408",
+]
+
+[[postmortem]]
 id = "131823"
 title = "Postmortem: Multitude's Fireteam"
 game = "Multitude's Fireteam"
@@ -493,6 +519,30 @@ copies_sold = ""
 alt_ids = [
     "3178",
 ]
+
+[[postmortem]]
+id = "131577"
+title = "Half-Life and Team Fortress Networking: Closing the Loop on Scalable Network Gaming Backend Services"
+game = "Half-Life and Team Fortress Networking: Closing the Loop on Scalable Network Gaming Backend Services"
+authors = [
+    "yahn bernier",
+]
+date = "2000-05-11"
+date_estimated = false
+category = "Postmortem"
+summary = "More and more, having an on-line component to gaming is essential to the success of a title. In addition, as games become more of a consumer entertainment experience, making things easier on gamers becomes essential. Yahn W. Bernier examines how to provision a variety of backend services to provide a seamless user experience for gamers as they go on-line."
+thumbnail = ""
+original_url = "http://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php"
+wayback = "https://web.archive.org/web/20120512222407/http://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php"
+wayback_print = "https://web.archive.org/web/20120512222407/http://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?print=1"
+pages = 3
+wayback_captures = 0
+hn_points = 226
+hn_comments = 54
+author_notable = false
+reddit_points = 0
+copies_sold = ""
+alt_ids = []
 
 [[postmortem]]
 id = "131569"
@@ -2826,6 +2876,30 @@ copies_sold = ""
 alt_ids = [
     "3638",
 ]
+
+[[postmortem]]
+id = "3744"
+title = "Dreaming of a New Day: Heavy Rain's David Cage"
+game = "Dreaming of a New Day: Heavy Rain's David Cage"
+authors = [
+    "Brandon Sheffield",
+]
+date = "2008-07-25"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20080726214443im_/http://www.gamasutra.com/db_area/images/feature/3744/cage_heavyrain3.jpg"
+original_url = "http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php"
+wayback = "https://web.archive.org/web/20080726214443/http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php"
+wayback_print = "https://web.archive.org/web/20080726214443/http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php?print=1"
+pages = 1
+wayback_captures = 4
+hn_points = 0
+hn_comments = 0
+author_notable = true
+reddit_points = 0
+copies_sold = ""
+alt_ids = []
 
 [[postmortem]]
 id = "132168"

@@ -21,7 +21,9 @@ good Internet Archive snapshot.
 ```
 scraper/scrape.py      # Wayback CDX + per-article parse + HN/Wikipedia enrich
 data/postmortems.toml          # the dataset (hand-editable TOML)
+data/postmortem_url_includes.toml  # curated postmortem-canon URLs missed by slug search
 data/hn_gamasutra_posts.toml   # cached HN stories whose URLs mention gamasutra.com
+data/hn_postmortem_audit.toml  # local HN/postmortem URL audit + review candidates
 index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
 ```
@@ -45,6 +47,7 @@ Useful commands:
 ```bash
 just serve    # static site at http://localhost:8000
 just hn       # refresh data/hn_gamasutra_posts.toml
+just hn-audit # local audit of HN links vs known postmortem URLs
 just sample   # quick scraper run
 just scrape   # full run -> data/postmortems.toml
 just check    # flake checks

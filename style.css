@@ -56,6 +56,8 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
 .mirrors a{color:var(--muted); text-decoration:none}
 .mirrors a:hover{color:var(--link); text-decoration:underline}
+.primary-link{font-weight:bold; color:#445}
+.dead-link{color:#aaa; text-decoration:line-through; cursor:not-allowed}
 .cat{display:inline-block; font-size:10px; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--gama-green); padding:1px 6px; border-radius:2px; white-space:nowrap}
 .cat.indie{background:#2a8a4d}
 .cat.audio{background:#7a5a2a}

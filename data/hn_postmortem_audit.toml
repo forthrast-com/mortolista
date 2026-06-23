@@ -4,6 +4,132 @@ postmortem_feature_ids = 379
 matched_feature_posts = 37
 unmatched_feature_posts = 422
 postmortemish_no_feature_posts = 45
+review_candidates = 13
+
+[[review_candidate]]
+object_id = "15777592"
+title = "Half-Life and Team Fortress Networking"
+url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
+feature_ids = [
+    "131577",
+]
+points = 226
+num_comments = 54
+suggested_include = false
+
+[[review_candidate]]
+object_id = "25804194"
+title = "The Cabal: Valve’s Design Process for Creating Half-Life (1999)"
+url = "https://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "131815",
+]
+points = 188
+num_comments = 84
+suggested_include = false
+
+[[review_candidate]]
+object_id = "7761030"
+title = "Valve’s Design Process For Creating Half-Life (1999)"
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "3408",
+]
+points = 152
+num_comments = 25
+suggested_include = false
+
+[[review_candidate]]
+object_id = "3029687"
+title = "The Valve Way: Gabe Newell And Erik Johnson Speak"
+url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php"
+feature_ids = [
+    "6471",
+]
+points = 62
+num_comments = 9
+suggested_include = true
+
+[[review_candidate]]
+object_id = "15763013"
+title = "“I thought I could ship at least 700 units to stay in business”"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+feature_ids = []
+points = 585
+num_comments = 335
+suggested_include = false
+
+[[review_candidate]]
+object_id = "15884051"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+feature_ids = []
+points = 496
+num_comments = 65
+suggested_include = false
+
+[[review_candidate]]
+object_id = "20001151"
+title = "Making a Game Boy Game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+feature_ids = []
+points = 366
+num_comments = 82
+suggested_include = false
+
+[[review_candidate]]
+object_id = "9244034"
+title = "Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+feature_ids = []
+points = 304
+num_comments = 85
+suggested_include = false
+
+[[review_candidate]]
+object_id = "15961317"
+title = "The Death of Flash and Rewriting 1.4M Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+feature_ids = []
+points = 291
+num_comments = 198
+suggested_include = false
+
+[[review_candidate]]
+object_id = "10285612"
+title = "The 10 year journey of a solo game developer"
+url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+feature_ids = []
+points = 47
+num_comments = 8
+suggested_include = false
+
+[[review_candidate]]
+object_id = "8890692"
+title = "Postmortem: Launching the War Z"
+url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+feature_ids = []
+points = 34
+num_comments = 12
+suggested_include = false
+
+[[review_candidate]]
+object_id = "9595561"
+title = "Postmortem: Pac-Man, Iwatani's Rhapsody in Yellow (2005)"
+url = "http://www.gamasutra.com/view/news/244181/Postmortem_PacMan_Iwatanis_rhapsody_in_yellow.php"
+feature_ids = []
+points = 23
+num_comments = 5
+suggested_include = false
+
+[[review_candidate]]
+object_id = "136331"
+title = "It's tradition in the Game industry to write a \"Postmortem\" after launch, telling your launch story."
+url = "http://www.gamasutra.com/php-bin/article_display.php?category=5"
+feature_ids = []
+points = 10
+num_comments = 10
+suggested_include = false
 
 [[matched_feature_post]]
 object_id = "22771419"

@@ -1,0 +1,18 @@
+# Curated Gamasutra/Game Developer postmortem-canon URLs whose slugs do not
+# contain "postmortem", so the CDX postmortem-url sweep will never find them.
+# Keep this small and reviewable; candidates live in hn_postmortem_audit.toml.
+
+[[include]]
+id = "131815"
+url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+reason = "Half-Life postmortem canon; high-HN migrated feature URL without postmortem slug."
+
+[[include]]
+id = "3408"
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+reason = "Old id for The Cabal / Half-Life postmortem canon."
+
+[[include]]
+id = "131577"
+url = "http://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php"
+reason = "Half-Life and Team Fortress networking postmortem-canon technical article."

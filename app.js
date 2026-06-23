@@ -88,21 +88,14 @@ function num(v) {
   return v ? `<td class="num">${v}</td>` : `<td class="num zero">–</td>`;
 }
 
-function gamedeveloperUrl(originalUrl) {
-  if (!originalUrl) return "";
-  try {
-    const u = new URL(originalUrl);
-    u.protocol = "https:";
-    u.hostname = "www.gamedeveloper.com";
-    return u.toString();
-  } catch {
-    return originalUrl.replace(/^https?:\/\/(?:www\.)?gamasutra\.com/i, "https://www.gamedeveloper.com");
-  }
+function linkHTML(ok, url, label, title) {
+  if (ok === false || !url) return `<span class="dead-link" title="Checked: unavailable">${esc(label)}</span>`;
+  return `<a href="${esc(url)}" target="_blank" rel="noopener" title="${esc(title)}">${esc(label)}</a>`;
 }
 
 function printArchiveUrl(d) {
   const url = d.wayback_print || "";
-  return /[?&]print=1(?:[#&]|$)/.test(url) ? url : "";
+  return d.wayback_print_ok !== false && /[?&]print=1(?:[#&]|$)/.test(url) ? url : "";
 }
 
 function rowHTML(d) {
@@ -115,19 +108,18 @@ function rowHTML(d) {
   const gameLine = d.game && d.game !== d.title ? `<span class="game">${esc(d.game)}</span>` : "";
   const fullText = printArchiveUrl(d);
   const primary = fullText || d.wayback;
-  // archive.today fallback — derived from the original URL, newest snapshot
-  const at = `https://archive.ph/newest/${encodeURIComponent(d.original_url)}`;
-  const live = d.live_url || gamedeveloperUrl(d.original_url);
+  const at = d.archive_today || `https://archive.ph/newest/${encodeURIComponent(d.original_url)}`;
+  const live = d.live_ok === false ? "" : (d.live_url || "");
   const fullTitle = d.pages > 1
     ? `Full article on one page (${d.pages} pages)`
     : "Archived print view / full text";
-  const mirrors = `<span class="mirrors">`
-    + (fullText ? `<span title="${esc(fullTitle)}">primary: full text</span> · ` : "")
-    + `<a href="${esc(d.wayback)}" target="_blank" rel="noopener" title="Internet Archive snapshot of the original page">wayback</a>`
-    + ` · <a href="${esc(d.original_url)}" target="_blank" rel="noopener" title="Original Gamasutra URL (often dead)">original</a>`
-    + ` · <a href="${esc(live)}" target="_blank" rel="noopener" title="Live Game Developer URL (may have broken formatting)">live</a>`
-    + ` · <a href="${esc(at)}" target="_blank" rel="noopener" title="archive.today mirror (fallback)">archive.today</a>`
-    + `</span>`;
+  const mirrorParts = [];
+  if (fullText) mirrorParts.push(`<strong class="primary-link" title="${esc(fullTitle)}">primary: full text</strong>`);
+  mirrorParts.push(linkHTML(d.wayback_ok, d.wayback, "wayback", "Internet Archive snapshot of the original page"));
+  mirrorParts.push(linkHTML(d.original_ok, d.original_url, "original", "Original Gamasutra URL"));
+  if (live) mirrorParts.push(linkHTML(d.live_ok, live, "live", "Verified live Game Developer URL (may have broken formatting)"));
+  mirrorParts.push(linkHTML(d.archive_today_ok, at, "archive.today", "archive.today mirror (fallback)"));
+  const mirrors = `<span class="mirrors">${mirrorParts.join(" · ")}</span>`;
   // vintage dateline: metadata line shown ABOVE the headline (esp. on mobile)
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`

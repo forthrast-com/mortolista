@@ -25,6 +25,7 @@ import tomli_w
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 HN_POSTS = DATA / "hn_gamasutra_posts.toml"
+CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
 
@@ -65,7 +66,51 @@ def log(*a):
     print(*a, file=sys.stderr, flush=True)
 
 
+def load_toml(path):
+    try:
+        import tomllib
+    except ModuleNotFoundError:
+        import tomli as tomllib
+    return tomllib.loads(Path(path).read_text())
+
+
 # ---------------------------------------------------------------- CDX listing
+def article_record(aid, slug, original, ts=None, status=None, first_ts=None, captures=0):
+    return {
+        "slug": slug,
+        "original": original,
+        "captures": captures,
+        "ts": ts,
+        "status": status,
+        "first_ts": first_ts or ts,
+    }
+
+
+def parse_feature_url(url):
+    m = re.match(r"https?://[^/]+(/view/feature/(\d+)/([^/?#]+?)(?:\.php)?)(?:[?#].*)?$", url, re.I)
+    if not m:
+        return None
+    path, aid, slug = m.group(1), m.group(2), m.group(3)
+    if not path.endswith(".php"):
+        path += ".php"
+    return aid, slug, "http://www.gamasutra.com" + path
+
+
+def load_curated_postmortems(path=CURATED_POSTMORTEMS):
+    path = Path(path)
+    if not path.exists():
+        return {}
+    out = {}
+    for item in load_toml(path).get("include", []):
+        parsed = parse_feature_url(item.get("url", ""))
+        if not parsed:
+            log(f"  [!] invalid curated postmortem URL: {item.get('url', '')}")
+            continue
+        aid, slug, original = parsed
+        out[aid] = article_record(aid, slug, original)
+    return out
+
+
 def fetch_article_list():
     """Return {article_id: {'slug','original'}} for all postmortem features."""
     cache = CACHE / "cdx_postmortems.txt"
@@ -97,9 +142,7 @@ def fetch_article_list():
         if mp and mp.group(1) != "1":
             continue
         canonical = "http://www.gamasutra.com" + path
-        rec = arts.setdefault(aid, {"slug": slug, "original": canonical,
-                                     "captures": 0, "ts": None, "status": None,
-                                     "first_ts": ts})
+        rec = arts.setdefault(aid, article_record(aid, slug, canonical, first_ts=ts))
         rec["captures"] += 1
         if ts < rec["first_ts"]:
             rec["first_ts"] = ts
@@ -111,6 +154,12 @@ def fetch_article_list():
         )
         if better:
             rec["ts"], rec["status"] = ts, status
+
+    curated = load_curated_postmortems()
+    for aid, rec in curated.items():
+        arts.setdefault(aid, rec)
+    if curated:
+        log(f"[*] loaded {len(curated)} curated postmortem URL includes")
     return arts
 
 
@@ -165,8 +214,12 @@ def earliest_good_ts(url):
 
 
 def parse_article(aid, rec):
-    ts = rec["ts"]
-    html = fetch_snapshot(ts, rec["original"])
+    ts = rec.get("ts")
+    if not ts:
+        ts = earliest_good_ts(rec["original"])
+        rec["ts"] = ts
+        rec["first_ts"] = rec.get("first_ts") or ts
+    html = fetch_snapshot(ts, rec["original"]) if ts else None
     # If the chosen capture is missing or a dead post-shutdown landing page,
     # fall back to the earliest real 200 capture for this exact URL.
     if html is None or is_dead_page(html):
@@ -406,11 +459,7 @@ def load_hn_posts(path=HN_POSTS):
     if not path.exists():
         log(f"[*] {path} missing; harvesting HN gamasutra posts")
         return write_hn_posts(path)
-    try:
-        import tomllib
-    except ModuleNotFoundError:
-        import tomli as tomllib
-    return tomllib.loads(path.read_text()).get("hn_post", [])
+    return load_toml(path).get("hn_post", [])
 
 
 def article_hn_keys(article):
@@ -502,6 +551,26 @@ def audit_hn_posts(path=HN_POSTS):
     def by_points(rows):
         return sorted(rows, key=lambda r: (r["points"], r["num_comments"]), reverse=True)
 
+    candidates = []
+    curated_ids = set(load_curated_postmortems().keys())
+    for rec in by_points(unmatched_feature):
+        title = rec["title"].lower()
+        if rec["points"] >= 50 and (
+            "postmortem" in title
+            or "post-mortem" in title
+            or "post mortem" in title
+            or "half-life" in title
+            or "valve" in title
+        ):
+            rec = rec.copy()
+            rec["suggested_include"] = not bool(set(rec["feature_ids"]) & curated_ids)
+            candidates.append(rec)
+    for rec in by_points(postmortemish_no_feature):
+        if rec["points"] >= 10:
+            rec = rec.copy()
+            rec["suggested_include"] = False
+            candidates.append(rec)
+
     audit = {
         "summary": {
             "hn_posts": len(hn_posts),
@@ -509,7 +578,9 @@ def audit_hn_posts(path=HN_POSTS):
             "matched_feature_posts": len(matched),
             "unmatched_feature_posts": len(unmatched_feature),
             "postmortemish_no_feature_posts": len(postmortemish_no_feature),
+            "review_candidates": len(candidates),
         },
+        "review_candidate": candidates,
         "matched_feature_post": by_points(matched),
         "unmatched_feature_post": by_points(unmatched_feature),
         "postmortemish_no_feature_post": by_points(postmortemish_no_feature),
