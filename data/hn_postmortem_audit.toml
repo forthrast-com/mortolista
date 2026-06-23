@@ -1,0 +1,4956 @@
+[summary]
+hn_posts = 1821
+postmortem_feature_ids = 379
+matched_feature_posts = 37
+unmatched_feature_posts = 422
+postmortemish_no_feature_posts = 45
+
+[[matched_feature_post]]
+object_id = "22771419"
+title = "Postmortem: DreamWorks Interactive's Trespasser (1999)"
+url = "https://www.gamasutra.com/view/feature/131746/postmortem_dreamworks_.php"
+feature_ids = [
+    "131746",
+]
+points = 51
+num_comments = 19
+
+[[matched_feature_post]]
+object_id = "4605780"
+title = "Postmortem: Team Meat's Super Meat Boy"
+url = "http://www.gamasutra.com/view/feature/134717/postmortem_team_meats_super_meat_.php?page=1"
+feature_ids = [
+    "134717",
+]
+points = 49
+num_comments = 14
+
+[[matched_feature_post]]
+object_id = "5179150"
+title = "Postmortem: Intelligence Engine Design Systems' “City Conquest”"
+url = "http://gamasutra.com/view/feature/186088/postmortem_intelligence_engine_.php"
+feature_ids = [
+    "186088",
+]
+points = 17
+num_comments = 6
+
+[[matched_feature_post]]
+object_id = "3468835"
+title = "Diablo II postmortem by one of the creators"
+url = "http://www.gamasutra.com/view/feature/3124/postmortem_blizzards_diablo_ii.php"
+feature_ids = [
+    "3124",
+]
+points = 14
+num_comments = 1
+
+[[matched_feature_post]]
+object_id = "2448505"
+title = "Postmortem: Team Meat's Super Meat Boy"
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php?print=1"
+feature_ids = [
+    "6348",
+]
+points = 6
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "587162"
+title = "Project Postmortem: Square Enix's The World Ends With You"
+url = "http://www.gamasutra.com/view/feature/4010/postmortem_square_enixs_the_.php?print=1S"
+feature_ids = [
+    "4010",
+]
+points = 4
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "5307300"
+title = "Natural Selection 2 Postmortem"
+url = "http://www.gamasutra.com/view/feature/187299/"
+feature_ids = [
+    "187299",
+]
+points = 3
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "9255874"
+title = "Postmortem: Blizzard's Diablo II (2000)"
+url = "http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php?print=1"
+feature_ids = [
+    "131533",
+]
+points = 3
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "1855978"
+title = "Postmortem: Vector Unit's Hydro Thunder Hurricane"
+url = "http://www.gamasutra.com/view/feature/6184/postmortem_vector_units_hydro_.php?print=1"
+feature_ids = [
+    "6184",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "2947121"
+title = "Development Postmortem: Arrowhead Game Studios' Magicka"
+url = "http://www.gamasutra.com/view/feature/6472/postmortem_arrowhead_game_.php?print=1"
+feature_ids = [
+    "6472",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "3469435"
+title = "Selling foilage to game devs [post-mortem]"
+url = "http://www.gamasutra.com/view/feature/2137/middleware_postmortem_idv_incs_.php"
+feature_ids = [
+    "2137",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "3540145"
+title = "Postmortem: Mode 7 Games' Frozen Synapse"
+url = "http://www.gamasutra.com/view/feature/6617/postmortem_mode_7_games_frozen_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6617",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "3980928"
+title = "Postmortem: Blizzard's Diablo II"
+url = "http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php"
+feature_ids = [
+    "131533",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "4585180"
+title = "Postmortem: Ion Storm's Deus Ex"
+url = "http://www.gamasutra.com/view/feature/131523/postmortem_ion_storms_deus_ex.php?print=1"
+feature_ids = [
+    "131523",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "7362469"
+title = "Guacamelee Post Mortem"
+url = "http://www.gamasutra.com/view/feature/200658/postmortem_drinkbox_studios_.php"
+feature_ids = [
+    "200658",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "20897466"
+title = "Postmortem: Epic Games' Unreal Tournament"
+url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php?print=1"
+feature_ids = [
+    "131569",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "25624359"
+title = "Postmortem: Frog City's Trade Empires (2002)"
+url = "https://www.gamasutra.com/view/feature/131422/postmortem_frog_citys_trade_.php?print=1"
+feature_ids = [
+    "131422",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "30591053"
+title = "Postmortem: Freeverse's Marathon 2: Durandal for XBLA (2007)"
+url = "https://www.gamasutra.com/view/feature/2320/postmortem_freeverses_marathon_.php?print=1"
+feature_ids = [
+    "2320",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "43200135"
+title = "Postmortem: Big Games' Rise of Nations"
+url = "https://web.archive.org/web/20120511073512/http://www.gamasutra.com/view/feature/131242/postmortem_big_huge_games_rise_.php?print=1"
+feature_ids = [
+    "131242",
+]
+points = 2
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "430457"
+title = "Gamasutra - Postmortem: Mommy's Best Games' Weapon of Choice"
+url = "http://www.gamasutra.com/view/feature/3899/postmortem_mommys_best_games_.php"
+feature_ids = [
+    "3899",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "2447525"
+title = "PostMortem of the Making of SuperMeat Boy"
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
+feature_ids = [
+    "6348",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "2942123"
+title = "Postmortem: Magicka, what went right, and what went wrong"
+url = "http://www.gamasutra.com/view/feature/6472/postmortem_arrowhead_game_.php"
+feature_ids = [
+    "6472",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "2962005"
+title = "Postmortem: Radiangames' Monthly Xbox Indie Games Series"
+url = "http://www.gamasutra.com/view/feature/6407/postmortem_radiangames_monthly_.php"
+feature_ids = [
+    "6407",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "3647396"
+title = "How web games help selling boardgames"
+url = "http://www.gamasutra.com/view/feature/135109/postmortem_days_of_wonders_.php"
+feature_ids = [
+    "135109",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "3975047"
+title = "Postmortem: Big Huge Games' Rise of Nations"
+url = "http://www.gamasutra.com/view/feature/131242/postmortem_big_huge_games_rise_.php?print=1"
+feature_ids = [
+    "131242",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "4109326"
+title = "Postmortem: Zachtronics Industries' SpaceChem"
+url = "http://www.gamasutra.com/view/feature/172250/Postmortem_Zachtronics_Industries_SpaceChem.php"
+feature_ids = [
+    "172250",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "5553890"
+title = "Developer Postmortem: Overhaul Games' \"Baldur's Gate: Enhanced Edition\""
+url = "http://www.gamasutra.com/view/feature/190432/postmortem_overhaul_games_.php?print=1"
+feature_ids = [
+    "190432",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "5556660"
+title = "Postmortem: Overhaul Games' Baldur's Gate: Enhanced Edition"
+url = "http://www.gamasutra.com/view/feature/190432/Postmortem_Overhaul_Games_Baldurs_Gate_Enhanced_Edition.php"
+feature_ids = [
+    "190432",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "5626341"
+title = "A Mini-Postmortem Roundup"
+url = "http://www.gamasutra.com/view/feature/191265/A_MiniPostmortem_Roundup.php"
+feature_ids = [
+    "191265",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "5666019"
+title = "Postmortem: Appy Entertainment's Animal Legends"
+url = "http://www.gamasutra.com/view/feature/191525/Postmortem_Appy_Entertainments_Animal_Legends.php"
+feature_ids = [
+    "191525",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "5909369"
+title = "Postmortem - Sony Santa Monica's God of War: Ascension"
+url = "http://www.gamasutra.com/view/feature/193695/Postmortem__Sony_Santa_Monicas_God_of_War_Ascension.php"
+feature_ids = [
+    "193695",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "6899249"
+title = "Postmortem: Micro Forte' s Fallout Tactics"
+url = "http://www.gamasutra.com/view/feature/3088/postmortem_micro_forte_s_fallout_.php"
+feature_ids = [
+    "3088",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "12454256"
+title = "Postmortem: Angel Studios' Resident Evil 2 (N64 Version)"
+url = "http://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php"
+feature_ids = [
+    "131556",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "20894227"
+title = "Postmortem: Epic Games' Unreal Tournament"
+url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php"
+feature_ids = [
+    "131569",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "22940898"
+title = "Postmortem: Gas Powered Games' Dungeon Siege"
+url = "https://www.gamasutra.com/view/feature/131321/postmortem_gas_powered_games_.php"
+feature_ids = [
+    "131321",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "24069060"
+title = "Postmortem: Treyarch's 2002 hit, Spider-Man (2013)"
+url = "https://www.gamasutra.com/view/feature/194852/postmortem_treyarchs_2002_hit_.php"
+feature_ids = [
+    "194852",
+]
+points = 1
+num_comments = 0
+
+[[matched_feature_post]]
+object_id = "27532694"
+title = "Postmortem: Ensemble Studio's Age of Empires II: Age of Kings (2000)"
+url = "https://www.gamasutra.com/view/feature/131844/postmortem_ensemble_studios_age_.php"
+feature_ids = [
+    "131844",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "17568149"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond (2001)"
+url = "https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php?print=1"
+feature_ids = [
+    "131503",
+]
+points = 343
+num_comments = 95
+
+[[unmatched_feature_post]]
+object_id = "776296"
+title = "Dirty Coding tricks used in Production Video Games"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php?print=1"
+feature_ids = [
+    "4111",
+]
+points = 330
+num_comments = 45
+
+[[unmatched_feature_post]]
+object_id = "8857998"
+title = "Dirty Coding Tricks"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php?print=1"
+feature_ids = [
+    "4111",
+]
+points = 304
+num_comments = 88
+
+[[unmatched_feature_post]]
+object_id = "8047406"
+title = "The History of Civilization"
+url = "http://www.gamasutra.com/view/feature/129947/the_history_of_civilization.php?print=1"
+feature_ids = [
+    "129947",
+]
+points = 228
+num_comments = 100
+
+[[unmatched_feature_post]]
+object_id = "15777592"
+title = "Half-Life and Team Fortress Networking"
+url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
+feature_ids = [
+    "131577",
+]
+points = 226
+num_comments = 54
+
+[[unmatched_feature_post]]
+object_id = "5933211"
+title = "Dirty Game Development Tricks"
+url = "http://www.gamasutra.com/view/feature/194772/dirty_game_development_tricks.php"
+feature_ids = [
+    "194772",
+]
+points = 196
+num_comments = 39
+
+[[unmatched_feature_post]]
+object_id = "25804194"
+title = "The Cabal: Valve’s Design Process for Creating Half-Life (1999)"
+url = "https://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "131815",
+]
+points = 188
+num_comments = 84
+
+[[unmatched_feature_post]]
+object_id = "13274819"
+title = "What I Learned Coding X-Wing vs TIE Fighter (1999)"
+url = "http://www.gamasutra.com/view/feature/131781/the_internet_sucks_or_what_i_.php?print=1"
+feature_ids = [
+    "131781",
+]
+points = 166
+num_comments = 24
+
+[[unmatched_feature_post]]
+object_id = "7761030"
+title = "Valve’s Design Process For Creating Half-Life (1999)"
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "3408",
+]
+points = 152
+num_comments = 25
+
+[[unmatched_feature_post]]
+object_id = "7289224"
+title = "The Internet Sucks: Or, What I Learned Coding X-Wing vs. TIE Fighter (1999)"
+url = "http://www.gamasutra.com/view/feature/131781/the_internet_sucks_or_what_i_.php"
+feature_ids = [
+    "131781",
+]
+points = 150
+num_comments = 107
+
+[[unmatched_feature_post]]
+object_id = "6301050"
+title = "The SCUMM Diary: Stories behind one of the greatest game engines ever made"
+url = "http://www.gamasutra.com/view/feature/196009/the_scumm_diary_stories_behind_.php?page=1"
+feature_ids = [
+    "196009",
+]
+points = 141
+num_comments = 14
+
+[[unmatched_feature_post]]
+object_id = "12271047"
+title = "How to Prototype a Game in Under 7 Days (2005)"
+url = "http://www.gamasutra.com/view/feature/130848/how_to_prototype_a_game_in_under_7_.php"
+feature_ids = [
+    "130848",
+]
+points = 135
+num_comments = 48
+
+[[unmatched_feature_post]]
+object_id = "3434807"
+title = "Learning From The Masters: Level Design In The Legend Of Zelda"
+url = "http://www.gamasutra.com/view/feature/6582/learning_from_the_masters_level_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "6582",
+]
+points = 129
+num_comments = 15
+
+[[unmatched_feature_post]]
+object_id = "5982459"
+title = "Dwarf Fortress in 2013"
+url = "http://www.gamasutra.com/view/feature/195148/dwarf_fortress_in_2013.php?print=1"
+feature_ids = [
+    "195148",
+]
+points = 126
+num_comments = 83
+
+[[unmatched_feature_post]]
+object_id = "6149703"
+title = "Dwarf Fortress in 2013"
+url = "http://gamasutra.com/view/feature/195148/dwarf_fortress_in_2013.php"
+feature_ids = [
+    "195148",
+]
+points = 117
+num_comments = 77
+
+[[unmatched_feature_post]]
+object_id = "4660072"
+title = "The Next Twenty Years: What Windows 8's Closed Distribution Means for Developers"
+url = "http://www.gamasutra.com/view/feature/179420/"
+feature_ids = [
+    "179420",
+]
+points = 114
+num_comments = 100
+
+[[unmatched_feature_post]]
+object_id = "5501425"
+title = "Why are We Still Talking about LucasArts' Old Adventure Games?"
+url = "http://www.gamasutra.com/view/feature/189899/why_are_we_still_talking_about_.php"
+feature_ids = [
+    "189899",
+]
+points = 110
+num_comments = 71
+
+[[unmatched_feature_post]]
+object_id = "522135"
+title = "How to Incorporate Stupidity Into Your AI Code"
+url = "http://www.gamasutra.com/view/feature/3947/intelligent_mistakes_how_to_.php"
+feature_ids = [
+    "3947",
+]
+points = 109
+num_comments = 18
+
+[[unmatched_feature_post]]
+object_id = "12374258"
+title = "Programmer, interrupted (2013)"
+url = "http://www.gamasutra.com/view/feature/190891/programmer_interrupted.php"
+feature_ids = [
+    "190891",
+]
+points = 106
+num_comments = 44
+
+[[unmatched_feature_post]]
+object_id = "5960360"
+title = "The Making of Dwarf Fortress (2012)"
+url = "http://www.gamasutra.com/view/feature/131954/interview_the_making_of_dwarf_.php?print=1"
+feature_ids = [
+    "131954",
+]
+points = 103
+num_comments = 22
+
+[[unmatched_feature_post]]
+object_id = "3158318"
+title = "Passion vs. Professionalism"
+url = "http://www.gamasutra.com/view/feature/6523/the_designers_notebook_passion_.php?print=1"
+feature_ids = [
+    "6523",
+]
+points = 95
+num_comments = 29
+
+[[unmatched_feature_post]]
+object_id = "2890930"
+title = "The Making Of Dwarf Fortress (2008)"
+url = "http://www.gamasutra.com/view/feature/3549/interview_the_making_of_dwarf_.php?print=1"
+feature_ids = [
+    "3549",
+]
+points = 95
+num_comments = 7
+
+[[unmatched_feature_post]]
+object_id = "13768084"
+title = "Where Games Go to Sleep: The Game Preservation Crisis (2011)"
+url = "http://www.gamasutra.com/view/feature/134641/where_games_go_to_sleep_the_game_.php"
+feature_ids = [
+    "134641",
+]
+points = 92
+num_comments = 59
+
+[[unmatched_feature_post]]
+object_id = "12879398"
+title = "The Pac-Man Dossier"
+url = "http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1"
+feature_ids = [
+    "3938",
+]
+points = 80
+num_comments = 11
+
+[[unmatched_feature_post]]
+object_id = "5543010"
+title = "Microsoft Excel: Revolutionary 3D Game Engine?"
+url = "http://www.gamasutra.com/view/feature/131968/microsoft_excel_revolutionary_3d_.php?print=1"
+feature_ids = [
+    "131968",
+]
+points = 74
+num_comments = 23
+
+[[unmatched_feature_post]]
+object_id = "130685"
+title = "Using Microsoft Excel as a 3D Game Engine"
+url = "http://www.gamasutra.com/view/feature/3563/microsoft_excel_revolutionary_3d_.php?print=1"
+feature_ids = [
+    "3563",
+]
+points = 68
+num_comments = 8
+
+[[unmatched_feature_post]]
+object_id = "4459018"
+title = "Predicting Churn: When Do Veterans Quit?"
+url = "http://www.gamasutra.com/view/feature/176747/predicting_churn_when_do_veterans_.php?print=1&utm_source=buffer&buffer_share=cb737"
+feature_ids = [
+    "176747",
+]
+points = 67
+num_comments = 32
+
+[[unmatched_feature_post]]
+object_id = "9540065"
+title = "The Secrets of Cloth Simulation in Alan Wake"
+url = "http://www.gamasutra.com/view/feature/132771/the_secrets_of_cloth_simulation_in_.php"
+feature_ids = [
+    "132771",
+]
+points = 66
+num_comments = 11
+
+[[unmatched_feature_post]]
+object_id = "20843406"
+title = "Chasing the Whale: Examining the ethics of free-to-play games"
+url = "https://www.gamasutra.com/view/feature/195806/chasing_the_whale_examining_the_.php?print=1"
+feature_ids = [
+    "195806",
+]
+points = 63
+num_comments = 49
+
+[[unmatched_feature_post]]
+object_id = "3029687"
+title = "The Valve Way: Gabe Newell And Erik Johnson Speak"
+url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php"
+feature_ids = [
+    "6471",
+]
+points = 62
+num_comments = 9
+
+[[unmatched_feature_post]]
+object_id = "8316665"
+title = "The Rise and Fall of the Dreamcast (2009)"
+url = "http://www.gamasutra.com/view/feature/132517/the_rise_and_fall_of_the_dreamcast.php"
+feature_ids = [
+    "132517",
+]
+points = 60
+num_comments = 26
+
+[[unmatched_feature_post]]
+object_id = "26134332"
+title = "The Pac-Man Dossier"
+url = "http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1"
+feature_ids = [
+    "3938",
+]
+points = 58
+num_comments = 10
+
+[[unmatched_feature_post]]
+object_id = "499081"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
+url = "http://www.gamasutra.com/view/feature/3094/1500_archers_on_a_288_network_.php"
+feature_ids = [
+    "3094",
+]
+points = 54
+num_comments = 5
+
+[[unmatched_feature_post]]
+object_id = "496095"
+title = "Building Quake Live : John Carmack"
+url = "http://www.gamasutra.com/view/feature/3946/building_quake_live_carmack_speaks.php?print=1"
+feature_ids = [
+    "3946",
+]
+points = 53
+num_comments = 5
+
+[[unmatched_feature_post]]
+object_id = "8856371"
+title = "Keeping the Pirates at Bay – Copy and Crack Protection (2001)"
+url = "http://www.gamasutra.com/view/feature/131439/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "131439",
+]
+points = 49
+num_comments = 58
+
+[[unmatched_feature_post]]
+object_id = "1156481"
+title = "Keeping the Pirates at Bay"
+url = "http://www.gamasutra.com/view/feature/3030/keeping_the_pirates_at_bay.php?print=1"
+feature_ids = [
+    "3030",
+]
+points = 44
+num_comments = 48
+
+[[unmatched_feature_post]]
+object_id = "3771781"
+title = "When was Super Mario Bros. released? No one knows"
+url = "http://www.gamasutra.com/view/feature/167392/sad_but_true_we_cant_prove_when_.php"
+feature_ids = [
+    "167392",
+]
+points = 44
+num_comments = 8
+
+[[unmatched_feature_post]]
+object_id = "3589653"
+title = "Designer's Notebook: The End Of Copyright [2005]"
+url = "http://www.gamasutra.com/view/feature/2470/designers_notebook_the_end_of_.php"
+feature_ids = [
+    "2470",
+]
+points = 38
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "7734806"
+title = "The ups and downs of doing online multiplayer as an indie"
+url = "http://www.gamasutra.com/view/feature/217434/the_ups_and_downs_of_doing_online_.php?print=1"
+feature_ids = [
+    "217434",
+]
+points = 37
+num_comments = 17
+
+[[unmatched_feature_post]]
+object_id = "4407255"
+title = "Cliff Bleszinski's Game Developer Flashcards"
+url = "http://www.gamasutra.com/view/feature/175586/cliff_bleszinskis_game_developer_.php"
+feature_ids = [
+    "175586",
+]
+points = 35
+num_comments = 4
+
+[[unmatched_feature_post]]
+object_id = "9617708"
+title = "The History of the TRS-80 (2012)"
+url = "http://www.gamasutra.com/view/feature/182224/games_from_the_trash_the_history_.php"
+feature_ids = [
+    "182224",
+]
+points = 25
+num_comments = 6
+
+[[unmatched_feature_post]]
+object_id = "8807135"
+title = "Keeping the Pirates at Bay (2001)"
+url = "http://www.gamasutra.com/view/feature/131439/keeping_the_pirates_at_bay.php?page=1"
+feature_ids = [
+    "131439",
+]
+points = 24
+num_comments = 10
+
+[[unmatched_feature_post]]
+object_id = "274908"
+title = "The Art Of Braid: Creating A Visual Identity For An Unusual Game"
+url = "http://www.gamasutra.com/view/feature/3753/the_art_of_braid_creating_a_.php"
+feature_ids = [
+    "3753",
+]
+points = 24
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "3853432"
+title = "Making Lean Startup Tactics Work for Games"
+url = "http://gamasutra.com/view/feature/168647/making_lean_startup_tactics_work_.php"
+feature_ids = [
+    "168647",
+]
+points = 19
+num_comments = 8
+
+[[unmatched_feature_post]]
+object_id = "575784"
+title = "What Went Wrong? Learning From Past Game Development Postmortems"
+url = "http://www.gamasutra.com/view/feature/4001/what_went_wrong_learning_from_.php"
+feature_ids = [
+    "4001",
+]
+points = 16
+num_comments = 5
+
+[[unmatched_feature_post]]
+object_id = "9477374"
+title = "Keeping the Pirates at Bay (2001)"
+url = "http://www.gamasutra.com/view/feature/131439/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "131439",
+]
+points = 16
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "1126359"
+title = "Microsoft Excel: Revolutionary 3D Game Engine?"
+url = "http://www.gamasutra.com/view/feature/3563/microsoft_excel_revolutionary_3d_.php"
+feature_ids = [
+    "3563",
+]
+points = 15
+num_comments = 6
+
+[[unmatched_feature_post]]
+object_id = "3955686"
+title = "Level 9999, how to teach an AI to design awesome platform levels"
+url = "http://www.gamasutra.com/view/feature/170049/how_to_make_insane_procedural_.php"
+feature_ids = [
+    "170049",
+]
+points = 15
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4384288"
+title = "The Real Story of Developing for Nintendo's Download Platforms"
+url = "http://www.gamasutra.com/view/feature/175869/The_Real_Story_of_Developing_for_Nintendos_Download_Platforms.php"
+feature_ids = [
+    "175869",
+]
+points = 14
+num_comments = 4
+
+[[unmatched_feature_post]]
+object_id = "401082"
+title = "Video Game Industry Trends of 2008"
+url = "http://www.gamasutra.com/view/feature/3884/gamasutras_top_20_trends_of_2008.php?print=1"
+feature_ids = [
+    "3884",
+]
+points = 13
+num_comments = 9
+
+[[unmatched_feature_post]]
+object_id = "443666"
+title = "A fatal problem with the \"games as art\" conversation"
+url = "http://www.gamasutra.com/view/feature/3909/persuasive_games_the_.php?print=1"
+feature_ids = [
+    "3909",
+]
+points = 12
+num_comments = 7
+
+[[unmatched_feature_post]]
+object_id = "6305224"
+title = "The SCUMM Diary: Stories behind one of the greatest game engines ever made"
+url = "http://www.gamasutra.com/view/feature/196009/the_scumm_diary_stories_behind_.php"
+feature_ids = [
+    "196009",
+]
+points = 12
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "470200"
+title = "The History of the Pinball Construction Set: Launching Millions of Creative Possibilities"
+url = "http://www.gamasutra.com/view/feature/3923/the_history_of_the_pinball_.php?print=1"
+feature_ids = [
+    "3923",
+]
+points = 11
+num_comments = 4
+
+[[unmatched_feature_post]]
+object_id = "9556665"
+title = "The Intricate Platforming of Tomb Raider (2013)"
+url = "http://www.gamasutra.com/view/feature/187601/"
+feature_ids = [
+    "187601",
+]
+points = 10
+num_comments = 5
+
+[[unmatched_feature_post]]
+object_id = "2516025"
+title = "An Introduction to Cellular Automation in Games"
+url = "http://www.gamasutra.com/view/feature/6367/an_intro_to_cellular_automation.php"
+feature_ids = [
+    "6367",
+]
+points = 10
+num_comments = 4
+
+[[unmatched_feature_post]]
+object_id = "1892737"
+title = "The Cabal: Valve’s Design Process For Creating Half-Life [1999]"
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php?print=1"
+feature_ids = [
+    "3408",
+]
+points = 10
+num_comments = 3
+
+[[unmatched_feature_post]]
+object_id = "775338"
+title = "Dirty Coding Tricks"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php"
+feature_ids = [
+    "4111",
+]
+points = 9
+num_comments = 4
+
+[[unmatched_feature_post]]
+object_id = "3572770"
+title = "Principles Of An Indie Game Bottom Feeder"
+url = "http://www.gamasutra.com/view/feature/6698/principles_of_an_indie_game_bottom_.php"
+feature_ids = [
+    "6698",
+]
+points = 9
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "4552614"
+title = "Can Film-Inspired Project Financing Work for Games?"
+url = "http://www.gamasutra.com/view/feature/177981/Can_FilmInspired_Project_Financing_Work_for_Games.php"
+feature_ids = [
+    "177981",
+]
+points = 9
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "16029264"
+title = "The History of Rogue: Have at You, You Deadly Zs (2009)"
+url = "https://www.gamasutra.com/view/feature/4013/the_history_of_rogue_have__you_.php"
+feature_ids = [
+    "4013",
+]
+points = 9
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "250568"
+title = "Practical Fluid Dynamics"
+url = "http://www.gamasutra.com/view/feature/1549/practical_fluid_dynamics_part_1.php?print=1"
+feature_ids = [
+    "1549",
+]
+points = 9
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3759831"
+title = "Interview: The Making Of Dwarf Fortress"
+url = "http://www.gamasutra.com/view/feature/131954/interview_the_making_of_dwarf_.php?print=1"
+feature_ids = [
+    "131954",
+]
+points = 8
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "6868200"
+title = "With the luster of social games gone, what now?"
+url = "http://www.gamasutra.com/view/feature/203912/"
+feature_ids = [
+    "203912",
+]
+points = 8
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4884425"
+title = "What Do Investors Look for in a Game Developer?"
+url = "http://gamasutra.com/view/feature/182962/what_do_investors_look_for_in_a_.php"
+feature_ids = [
+    "182962",
+]
+points = 7
+num_comments = 3
+
+[[unmatched_feature_post]]
+object_id = "834627"
+title = "Gaming the System: How to Really Get Ahead in the Game Industry"
+url = "http://www.gamasutra.com/view/feature/4133/gaming_the_system_how_to_really_.php"
+feature_ids = [
+    "4133",
+]
+points = 7
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "466253"
+title = "Creating All Humans: A Data-Driven AI Framework for Open Game Worlds"
+url = "http://www.gamasutra.com/view/feature/1862/creating_all_humans_a_datadriven_.php?print=1"
+feature_ids = [
+    "1862",
+]
+points = 7
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "4647702"
+title = "Tiny MMOs, Massive Opportunities?"
+url = "http://www.gamasutra.com/view/feature/179175/Tiny_MMOs_Massive_Opportunities.php"
+feature_ids = [
+    "179175",
+]
+points = 6
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "4321820"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
+url = "http://www.gamasutra.com/view/feature/3094/1500_archers_on_a_288_network_.php/"
+feature_ids = [
+    "3094",
+]
+points = 6
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "483985"
+title = "Quake Wars Gets Ray Traced"
+url = "http://www.gamasutra.com/view/feature/3928/sponsored_feature_light_it_up_.php?print=1"
+feature_ids = [
+    "3928",
+]
+points = 6
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6268176"
+title = "Monsters from the Id: The Making of Doom"
+url = "http://www.gamasutra.com/view/feature/198783/"
+feature_ids = [
+    "198783",
+]
+points = 6
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2512159"
+title = "Gamification? More like Exploitationware"
+url = "http://www.gamasutra.com/view/feature/6366/persuasive_games_exploitationware.php?print=1"
+feature_ids = [
+    "6366",
+]
+points = 5
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "521784"
+title = "Intelligent Mistakes: How to Incorporate Stupidity Into Your AI Code"
+url = "http://www.gamasutra.com/view/feature/3947/intelligent_mistakes_how_to_.php?print=1"
+feature_ids = [
+    "3947",
+]
+points = 5
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1992532"
+title = "\"it's actually about designing something that's a negative experience\""
+url = "http://www.gamasutra.com/view/feature/6224/catching_up_with_jonathan_blow.php?print=1"
+feature_ids = [
+    "6224",
+]
+points = 5
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8882053"
+title = "The Secret History of Donkey Kong"
+url = "http://www.gamasutra.com/view/feature/134790/the_secret_history_of_donkey_kong.php?print=1"
+feature_ids = [
+    "134790",
+]
+points = 5
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "626255"
+title = "From The Past To The Future: Tim Sweeney Talks"
+url = "http://www.gamasutra.com/view/feature/4035/from_the_past_to_the_future_tim_.php"
+feature_ids = [
+    "4035",
+]
+points = 4
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "4232749"
+title = "The Erosion of Creative Freedom? The Battle over Publicity Rights"
+url = "http://www.gamasutra.com/view/feature/173890/The_Erosion_of_Creative_Freedom_The_Battle_over_Publicity_Rights.php"
+feature_ids = [
+    "173890",
+]
+points = 4
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "282866"
+title = "Atari: The Golden Years (Atari Retrospective Pt 2)"
+url = "http://www.gamasutra.com/view/feature/3766/atari_the_golden_years__a_.php"
+feature_ids = [
+    "3766",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "650505"
+title = "What Are The Rewards Of 'Free-To-Play' MMOs?"
+url = "http://www.gamasutra.com/view/feature/4046/what_are_the_rewards_of_.php"
+feature_ids = [
+    "4046",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "777887"
+title = "20 Years Of Evolution: Scott Miller And 3D Realms"
+url = "http://www.gamasutra.com/view/feature/4112/20_years_of_evolution_scott_.php"
+feature_ids = [
+    "4112",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "799231"
+title = "Microsoft Excel: Revolutionary 3D Game Engine?"
+url = "http://www.gamasutra.com/view/feature/3563/microsoft_excel_revolutionary_3d_.php"
+feature_ids = [
+    "3563",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3683511"
+title = "Selecting Save on the Games We Make, Part 1"
+url = "http://www.gamasutra.com/view/feature/135112/Selecting_Save_on_the_Games_We_Make_Part_1.php"
+feature_ids = [
+    "135112",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4803007"
+title = "When Players Make the Rules: On Memes and the Meta-Game"
+url = "http://www.gamasutra.com/view/feature/181598/When_Players_Make_the_Rules_On_Memes_and_the_MetaGame.php"
+feature_ids = [
+    "181598",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "17159320"
+title = "Age of Empires: 1500 Archers on a 28.8"
+url = "https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php"
+feature_ids = [
+    "131503",
+]
+points = 4
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2710577"
+title = "Designing Better Levels Through Human Survival Instincts"
+url = "http://www.gamasutra.com/view/feature/6411/designing_better_levels_through_.php?page=1"
+feature_ids = [
+    "6411",
+]
+points = 3
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "8821005"
+title = "The Cabal: Valve’s Design Process For Creating Half-Life (1999)"
+url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "131815",
+]
+points = 3
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "305265"
+title = "Jonathan Blow: The (3 year development) Path to Braid (XBox 360 Indy Game)"
+url = "http://www.gamasutra.com/view/feature/3786/jonathan_blow_the_path_to_braid.php"
+feature_ids = [
+    "3786",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "473586"
+title = "Where's The Cash For Flash?"
+url = "http://www.gamasutra.com/view/feature/3924/wheres_the_cash_for_flash.php"
+feature_ids = [
+    "3924",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "476751"
+title = "Legitimacy For Game Developers"
+url = "http://www.gamasutra.com/view/feature/3925/legitimacy_for_game_developers.php"
+feature_ids = [
+    "3925",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "627008"
+title = "From The Past To The Future: Tim Sweeney Talks (EPIC: Unreal, Gears of War)"
+url = "http://www.gamasutra.com/view/feature/4035/from_the_past_to_the_future_tim_.php?print=1"
+feature_ids = [
+    "4035",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "776770"
+title = "The History of Atari: 1971-1977"
+url = "http://www.gamasutra.com/view/feature/2000/the_history_of_atari_19711977.php"
+feature_ids = [
+    "2000",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1362234"
+title = "The Icelandic Model of MMO Development"
+url = "http://www.gamasutra.com/view/feature/4489/the_icelandic_model_of_mmo_.php"
+feature_ids = [
+    "4489",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1591578"
+title = "Infinite Space: An Argument For Single Sharding in MMOs"
+url = "http://www.gamasutra.com/view/feature/4175/infinite_space_an_argument_for_.php"
+feature_ids = [
+    "4175",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1635615"
+title = "Sandbox Storytelling - How to mix open-worlds and storytelling"
+url = "http://www.gamasutra.com/view/feature/6039/the_designers_notebook_sandbox_.php"
+feature_ids = [
+    "6039",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1844277"
+title = "The State of Social in Social Games"
+url = "http://www.gamasutra.com/view/feature/6177/the_state_of_social_in_social_games.php"
+feature_ids = [
+    "6177",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2100692"
+title = "Patents And The Video Game Industry: What You Don't Know Could Hurt You"
+url = "http://www.gamasutra.com/view/feature/6255/patents_and_the_video_game_.php?print=1"
+feature_ids = [
+    "6255",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2200489"
+title = "Where Games Go To Sleep: The Game Preservation Crisis, Part 1"
+url = "http://www.gamasutra.com/view/feature/6271/where_games_go_to_sleep_the_game_.php?print=1"
+feature_ids = [
+    "6271",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2642540"
+title = "What it takes to become a Nintendo studio"
+url = "http://www.gamasutra.com/view/feature/6392/turning_nintendo_the_donkey_kong_.php?print=1"
+feature_ids = [
+    "6392",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2744975"
+title = "How Sid Meier Civilized Social Gaming"
+url = "http://www.gamasutra.com/view/feature/6423/how_sid_meier_civilized_social_.php"
+feature_ids = [
+    "6423",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2938046"
+title = "The Valve Way: Gabe Newell And Erik Johnson Speak"
+url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php?print=1"
+feature_ids = [
+    "6471",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3451885"
+title = "Things To Know About HTML5"
+url = "http://www.gamasutra.com/view/feature/6587/7_things_to_know_about_html5.php"
+feature_ids = [
+    "6587",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3515335"
+title = "Building HTML5 Games that Run on Poor Mobile Connections"
+url = "http://www.gamasutra.com/view/feature/6621/building_games_that_run_on_poor_.php"
+feature_ids = [
+    "6621",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3766522"
+title = "Sad But True: We Can't Prove When Super Mario Bros. Came Out"
+url = "http://www.gamasutra.com/view/feature/167392/Sad_But_True_We_Cant_Prove_When_Super_Mario_Bros_Came_Out.php"
+feature_ids = [
+    "167392",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3983232"
+title = "The Cabal: Valve’s Design Process For Creating Half-Life"
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "3408",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4621613"
+title = "3D Subdivision Surface Theory"
+url = "http://www.gamasutra.com/view/feature/131585/subdivision_surface_theory.php?page=2"
+feature_ids = [
+    "131585",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4821150"
+title = "Waterfall Game Development Done Right"
+url = "http://www.gamasutra.com/view/feature/181992/Waterfall_Game_Development_Done_Right.php"
+feature_ids = [
+    "181992",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4832661"
+title = "Games from the Trash: The History of the TRS-80"
+url = "http://www.gamasutra.com/view/feature/182224/games_from_the_trash_the_history_.php"
+feature_ids = [
+    "182224",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5527419"
+title = "Why are We Still Talking about LucasArts' Old Adventure Games?"
+url = "http://gamasutra.com/view/feature/189899/why_are_we_still_talking_about_.php"
+feature_ids = [
+    "189899",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5642124"
+title = "Nintendo's Difficult Path Forward"
+url = "http://www.gamasutra.com/view/feature/191441/Nintendos_Difficult_Path_Forward.php"
+feature_ids = [
+    "191441",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5643506"
+title = "Programmer, Interrupted"
+url = "http://www.gamasutra.com/view/feature/190891/programmer_interrupted.php"
+feature_ids = [
+    "190891",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6011996"
+title = "Chasing the Whale: Examining the ethics of free-to-play games"
+url = "http://www.gamasutra.com/view/feature/195806/chasing_the_whale_examining_the_.php"
+feature_ids = [
+    "195806",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6042157"
+title = "Chasing the Whale: Examining the ethics of free-to-play games"
+url = "http://www.gamasutra.com/view/feature/195806/chasing_the_whale_examining_the_.php?print=1"
+feature_ids = [
+    "195806",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6668244"
+title = "With the luster of social games gone, what now?"
+url = "http://www.gamasutra.com/view/feature/203912/with_the_luster_of_social_games_.php"
+feature_ids = [
+    "203912",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8942115"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
+url = "http://www.gamasutra.com/view/feature/3094/1500_archers_on_a_288_network_.php?print=1"
+feature_ids = [
+    "3094",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "9085214"
+title = "The History of Civilization (2007)"
+url = "http://www.gamasutra.com/view/feature/129947/the_history_of_civilization.php"
+feature_ids = [
+    "129947",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "9629943"
+title = "Dirty Coding Tricks"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php"
+feature_ids = [
+    "4111",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "12154049"
+title = "Chrono Trigger's Design Secrets"
+url = "http://www.gamasutra.com/view/feature/172993/chrono_triggers_design_secrets.php"
+feature_ids = [
+    "172993",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "12283085"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond (2001)"
+url = "http://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php"
+feature_ids = [
+    "131503",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "23086088"
+title = "The Internet Sucks: Or, What I Learned Coding X-Wing vs. Tie Fighter"
+url = "https://www.gamasutra.com/view/feature/131781/the_internet_sucks_or_what_i_.php?print=1"
+feature_ids = [
+    "131781",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "23537242"
+title = "Dirty Game Development Tricks"
+url = "https://www.gamasutra.com/view/feature/194772/dirty_game_development_tricks.php"
+feature_ids = [
+    "194772",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "24882065"
+title = "Dirty Coding Tricks (2009)"
+url = "https://www.gamasutra.com/view/feature/132500/dirty_coding_tricks"
+feature_ids = [
+    "132500",
+]
+points = 3
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1868979"
+title = "Going Free In The App Store - Game Dev Success Stories"
+url = "http://www.gamasutra.com/view/feature/6196/going_free_in_the_app_store__.php"
+feature_ids = [
+    "6196",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "3596708"
+title = "Tearing Down Barriers: How to Bring MMO Players Together"
+url = "http://www.gamasutra.com/view/feature/6710/tearing_down_barriers_how_to_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "6710",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "4452981"
+title = "Will HTML5 Change the Way Games are Made?"
+url = "http://www.gamasutra.com/view/feature/176674/Will_HTML5_Change_the_Way_Games_are_Made.php"
+feature_ids = [
+    "176674",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "5784994"
+title = "Revisiting Android"
+url = "http://www.gamasutra.com/view/feature/192935/Revisiting_Android.php"
+feature_ids = [
+    "192935",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "6943603"
+title = "Why Super Metroid's Hacking Community is Still Going Strong"
+url = "http://www.gamasutra.com/view/feature/196769/why_super_metroids_hacking_.php"
+feature_ids = [
+    "196769",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "8406626"
+title = "The Story Behind the Making of Prince of Persia (2011)"
+url = "http://www.gamasutra.com/view/feature/134900/the_story_behind_the_making_of_.php"
+feature_ids = [
+    "134900",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "9354432"
+title = "The Chemistry of Game Design (2007)"
+url = "http://www.gamasutra.com/view/feature/1524/the_chemistry_of_game_design.php"
+feature_ids = [
+    "1524",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "19220397"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond (2001)"
+url = "https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php"
+feature_ids = [
+    "131503",
+]
+points = 2
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "85632"
+title = "Constructing Artificial Emotions: A Design Experiment"
+url = "http://www.gamasutra.com/view/feature/1992/constructing_artificial_emotions_.php"
+feature_ids = [
+    "1992",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "272982"
+title = "The Evolution Of Sega: A Conversation With Sega America's CEO"
+url = "http://www.gamasutra.com/view/feature/3756/the_evolution_of_sega_a_.php"
+feature_ids = [
+    "3756",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "414609"
+title = "A Comprehensive Overview of the Video Game Industry in 2008"
+url = "http://www.gamasutra.com/view/feature/3893/gamasutras_best_of_2008.php?print=1"
+feature_ids = [
+    "3893",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "430690"
+title = "Game Developer Layoffs: The Real Story"
+url = "http://www.gamasutra.com/view/feature/3901/game_developer_layoffs_the_real_.php?print=1"
+feature_ids = [
+    "3901",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "533674"
+title = "Cash For Flash"
+url = "http://www.gamasutra.com/view/feature/3924/wheres_the_cash_for_flash.php"
+feature_ids = [
+    "3924",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "875945"
+title = "Behind the Scenes: Creating a visual identity for the game Braid"
+url = "http://www.gamasutra.com/view/feature/3753/the_art_of_braid_creating_a_.php"
+feature_ids = [
+    "3753",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1428972"
+title = "Behavioral Game Design"
+url = "http://www.gamasutra.com/view/feature/3085/behavioral_game_design.php"
+feature_ids = [
+    "3085",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1538510"
+title = "Evaluating Game Mechanics For Depth"
+url = "http://www.gamasutra.com/view/feature/5901/evaluating_game_mechanics_for_depth.php?print=1"
+feature_ids = [
+    "5901",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1636953"
+title = "Agile Game Development with Scrum: Teams"
+url = "http://www.gamasutra.com/view/feature/6040/agile_game_development_with_scrum_.php?page=1"
+feature_ids = [
+    "6040",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1735312"
+title = "The Realities Of A LEGO MMO"
+url = "http://www.gamasutra.com/view/feature/6148/the_realities_of_a_lego_mmo.php"
+feature_ids = [
+    "6148",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1969246"
+title = "The future of games: Jesse Schell interview"
+url = "http://www.gamasutra.com/view/feature/6223/peering_at_the_future_jesse_.php?print=1"
+feature_ids = [
+    "6223",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2114293"
+title = "Keeping the pirates at bay (for as long as possible)"
+url = "http://www.gamasutra.com/view/feature/3030/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "3030",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2709058"
+title = "How to Prototype a Game in Under 7 Days"
+url = "http://www.gamasutra.com/view/feature/2438/how_to_prototype_a_game_in_under_7_.php"
+feature_ids = [
+    "2438",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2909319"
+title = "Dirty Coding Tricks (page 4)"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php?page=4"
+feature_ids = [
+    "4111",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2993133"
+title = "The Changing Indie Game Landscape: Steam Beats Xbox?"
+url = "http://www.gamasutra.com/view/feature/6484/the_changing_indie_landscape_.php?print=1"
+feature_ids = [
+    "6484",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3081723"
+title = "A Game Studio Cultural Dictionary"
+url = "http://www.gamasutra.com/view/feature/6504/a_game_studio_culture_dictionary.php"
+feature_ids = [
+    "6504",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3587841"
+title = "The Language of Interactivity"
+url = "http://www.gamasutra.com/view/feature/6704/david_jaffe_and_the_language_of_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "6704",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3724169"
+title = "The Future of Games with David Braben"
+url = "http://www.gamasutra.com/view/feature/135104/the_future_of_games_with_david_.php"
+feature_ids = [
+    "135104",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3739801"
+title = "The Psychology of Great Game Design"
+url = "http://www.gamasutra.com/view/feature/166972/Cognitive_Flow_The_Psychology_of_Great_Game_Design.php"
+feature_ids = [
+    "166972",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3766650"
+title = "Apparently we have no idea when Super Mario Bros actually launched in the US"
+url = "http://gamasutra.com/view/feature/167392/sad_but_true_we_cant_prove_when_.php"
+feature_ids = [
+    "167392",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3887366"
+title = "Finding Out What They Think: A Rough Primer To User Research, Part 1"
+url = "http://www.gamasutra.com/view/feature/169069/Finding_Out_What_They_Think_A_Rough_Primer_To_User_Research_Part_1.php"
+feature_ids = [
+    "169069",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3894009"
+title = "How Sony's Net Yaroze Kickstarted Indie Console Development"
+url = "http://www.gamasutra.com/view/feature/169245/15_years_later_how_sonys_net_.php"
+feature_ids = [
+    "169245",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3916349"
+title = "The Top Things The Game Industry Can Learn from Film Production"
+url = "http://www.gamasutra.com/view/feature/169502/The_Top_10_Things_The_Game_Industry_Can_Learn_from_Film_Production.php"
+feature_ids = [
+    "169502",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3972654"
+title = "Diablo 3 director on the game's development"
+url = "http://www.gamasutra.com/view/feature/170258/Candid_Words_from_Diablo_IIIs_director.php"
+feature_ids = [
+    "170258",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4174113"
+title = "Congratulations, Your First Indie Game is a Flop"
+url = "http://www.gamasutra.com/view/feature/173068/congratulations_your_first_indie_.php"
+feature_ids = [
+    "173068",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4178120"
+title = "Congratulations, Your First Indie Game is a Flop"
+url = "http://www.gamasutra.com/view/feature/173068/"
+feature_ids = [
+    "173068",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4305967"
+title = "Procedural Content Generation: Thinking With Modules"
+url = "http://www.gamasutra.com/view/feature/174311/procedural_content_generation_.php"
+feature_ids = [
+    "174311",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4348409"
+title = "The Ins and Outs of Native Client"
+url = "http://www.gamasutra.com/view/feature/175210/The_Ins_and_Outs_of_Native_Client.php"
+feature_ids = [
+    "175210",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4353780"
+title = "Comics vs. Games: Thinking Outside the Panel"
+url = "http://www.gamasutra.com/view/feature/175314/Comics_vs_Games_Thinking_Outside_the_Panel.php"
+feature_ids = [
+    "175314",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4365893"
+title = "Trusting Your Gut: The Story of a Successful Side Project"
+url = "http://www.gamasutra.com/view/feature/175500/Trusting_Your_Gut_The_Story_of_a_Successful_Side_Project.php"
+feature_ids = [
+    "175500",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4428493"
+title = "Best Tips for Building a Freelance Career"
+url = "http://www.gamasutra.com/view/feature/176317/best_tips_for_building_a_freelance_.php"
+feature_ids = [
+    "176317",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4437178"
+title = "Effective Co-Op Design"
+url = "http://www.gamasutra.com/view/feature/176453/Effective_CoOp_Design.php"
+feature_ids = [
+    "176453",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4487499"
+title = "Next Generation Monetization: Supremacy Goods"
+url = "http://www.gamasutra.com/view/feature/177190/Next_Generation_Monetization_Supremacy_Goods.php"
+feature_ids = [
+    "177190",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4503419"
+title = "How DICE Does It"
+url = "http://www.gamasutra.com/view/feature/177366/How_DICE_Does_It.php"
+feature_ids = [
+    "177366",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4569633"
+title = "Game Developer Flashcards: The Gamasutra Community Edition"
+url = "http://www.gamasutra.com/view/feature/178133/Game_Developer_Flashcards_The_Gamasutra_Community_Edition.php"
+feature_ids = [
+    "178133",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4588576"
+title = "Peter Molyneux: Everything's Changing"
+url = "http://www.gamasutra.com/view/feature/178436/Peter_Molyneux_Everythings_Changing.php"
+feature_ids = [
+    "178436",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4756401"
+title = "Is Game Music All It Can Be?"
+url = "http://www.gamasutra.com/view/feature/181003/Is_Game_Music_All_It_Can_Be.php"
+feature_ids = [
+    "181003",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4877925"
+title = "Suck at Coding, But Make Games Anyway"
+url = "http://www.gamasutra.com/view/feature/182860/suck_at_coding_but_make_games_.php"
+feature_ids = [
+    "182860",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4881136"
+title = "Suck at Coding, But Make Games Anyway"
+url = "http://www.gamasutra.com/view/feature/182860/Suck_at_Coding_But_Make_Games_Anyway.php"
+feature_ids = [
+    "182860",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4882786"
+title = "What Do Investors Look for in a Game Developer?"
+url = "http://gamasutra.com/view/feature/182962/what_do_investors_look_for_in_a_.php?page=2"
+feature_ids = [
+    "182962",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4921073"
+title = "Art of War: Animating Realistic Sword Combat"
+url = "http://www.gamasutra.com/view/feature/183412/Art_of_War_Animating_Realistic_Sword_Combat.php"
+feature_ids = [
+    "183412",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4956551"
+title = "The Designer's Notebook: Bad Game Designer, No Twinkie XIII"
+url = "http://www.gamasutra.com/view/feature/183979/The_Designers_Notebook_Bad_Game_Designer_No_Twinkie_XIII.php"
+feature_ids = [
+    "183979",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5006124"
+title = "Congratulations, Your First Indie Game is a Flop"
+url = "http://gamasutra.com/view/feature/173068/congratulations_your_first_indie_.php"
+feature_ids = [
+    "173068",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5124229"
+title = "An Alternative to Achievements"
+url = "http://www.gamasutra.com/view/feature/185436/An_Alternative_to_Achievements.php"
+feature_ids = [
+    "185436",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5252822"
+title = "Dirty Coding Tricks"
+url = "http://www.gamasutra.com/view/feature/132500/dirty_coding_tricks"
+feature_ids = [
+    "132500",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5262379"
+title = "Defender's Quest: By the Numbers, Part 2"
+url = "http://www.gamasutra.com/view/feature/186940/Defenders_Quest_By_the_Numbers_Part_2.php"
+feature_ids = [
+    "186940",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5269419"
+title = "Let's Talk About Touching: Making Great Touchscreen Controls"
+url = "http://www.gamasutra.com/view/feature/187126/Lets_Talk_About_Touching_Making_Great_Touchscreen_Controls.php"
+feature_ids = [
+    "187126",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5269428"
+title = "Making the Move to HTML5, Part 2"
+url = "http://www.gamasutra.com/view/feature/187014/Making_the_Move_to_HTML5_Part_2.php"
+feature_ids = [
+    "187014",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5309165"
+title = "Clone Wars: The Five Most Important Cases Every Game Developer Should Know"
+url = "http://www.gamasutra.com/view/feature/187385/Clone_Wars_The_Five_Most_Important_Cases_Every_Game_Developer_Should_Know.php"
+feature_ids = [
+    "187385",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5330002"
+title = "Game Design Tools for Collaboration"
+url = "http://www.gamasutra.com/view/feature/187777/Game_Design_Tools_for_Collaboration.php"
+feature_ids = [
+    "187777",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5401448"
+title = "Level Design in a Day: Your Questions, Answered"
+url = "http://www.gamasutra.com/view/feature/188740/Level_Design_in_a_Day_Your_Questions_Answered.php"
+feature_ids = [
+    "188740",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5415832"
+title = "Developing Meaningful Player Character Arcs in Branching Narrative"
+url = "http://www.gamasutra.com/view/feature/188950/Developing_Meaningful_Player_Character_Arcs_in_Branching_Narrative.php"
+feature_ids = [
+    "188950",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5505590"
+title = "Why are We Still Talking about LucasArts' Old Adventure Games?"
+url = "http://www.gamasutra.com/view/feature/189899/Why_are_We_Still_Talking_about_LucasArts_Old_Adventure_Games.php"
+feature_ids = [
+    "189899",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5521787"
+title = "System And Level Design For Breakout-style Games"
+url = "http://www.gamasutra.com/view/feature/130053/breaking_down_breakout_system_and_.php?print=1"
+feature_ids = [
+    "130053",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5529584"
+title = "Behind the Scenes of the Paragon Studios Shutdown"
+url = "http://www.gamasutra.com/view/feature/189896/Behind_the_Scenes_of_the_Paragon_Studios_Shutdown.php"
+feature_ids = [
+    "189896",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5587702"
+title = "How to Prototype a Game in Under 7 Days"
+url = "http://www.gamasutra.com/view/feature/130848/how_to_prototype_a_game_in_under_7_.php?page=1"
+feature_ids = [
+    "130848",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5605296"
+title = "Inside the PlayStation 4 With Mark Cerny"
+url = "http://www.gamasutra.com/view/feature/191007/Inside_the_PlayStation_4_With_Mark_Cerny.php"
+feature_ids = [
+    "191007",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5698693"
+title = "Pursuing a Video Game Masterpiece"
+url = "http://www.gamasutra.com/view/feature/191995/Pursuing_a_Video_Game_Masterpiece.php"
+feature_ids = [
+    "191995",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5724575"
+title = "World of Just Cause 2 - Using Creative Technology to Build Huge Open Landscapes"
+url = "http://www.gamasutra.com/view/feature/192007/sponsored_the_world_of_just_cause_.php?page=1"
+feature_ids = [
+    "192007",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5810966"
+title = "Characters and Worldbuilding: Analyzing the Strength of Japanese Games"
+url = "http://www.gamasutra.com/view/feature/193315/Characters_and_Worldbuilding_Analyzing_the_Strength_of_Japanese_Games.php"
+feature_ids = [
+    "193315",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5903292"
+title = "Building the Ship as it Sails: The Creation of Ubisoft Singapore"
+url = "http://www.gamasutra.com/view/feature/194430/Building_the_Ship_as_it_Sails_The_Creation_of_Ubisoft_Singapore_.php"
+feature_ids = [
+    "194430",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6033148"
+title = "Stories behind one of the greatest game engines ever made"
+url = "http://www.gamasutra.com/view/feature/196009/the_scumm_diary_stories_behind_.php"
+feature_ids = [
+    "196009",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6087339"
+title = "The Ouya Experience: What game developers think so far"
+url = "http://www.gamasutra.com/view/feature/196691/the_ouya_experience_what_game_.php?page=1"
+feature_ids = [
+    "196691",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6359769"
+title = "Why Super Metroid's Hacking Community is Still Going Strong"
+url = "http://www.gamasutra.com/view/feature/196769/why_super_metroids_hacking_.php"
+feature_ids = [
+    "196769",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8251652"
+title = "Valve’s Design Process for Creating Half-Life"
+url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php?page=1"
+feature_ids = [
+    "131815",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8310544"
+title = "The TurboGrafx-16 turns 25"
+url = "http://www.gamasutra.com/view/feature/225466/stalled_engine_the_turbografx16_.php"
+feature_ids = [
+    "225466",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8426721"
+title = "The Top Myths of Video Game Optimization"
+url = "http://www.gamasutra.com/view/feature/130296/the_top_10_myths_of_video_game_.php?print=1"
+feature_ids = [
+    "130296",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8882206"
+title = "Dirty Coding Tricks (2009)"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php"
+feature_ids = [
+    "4111",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "9465765"
+title = "The Burger Speaks: An Interview With An Archmage"
+url = "http://www.gamasutra.com/view/feature/134614/the_burger_speaks_an_interview_.php?print=1"
+feature_ids = [
+    "134614",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "12509582"
+title = "Porting Indiana Jones and the Infernal Machine from PC to N64 (2001)"
+url = "http://www.gamasutra.com/view/feature/131449/bringing_dr_jones_to_the_infernal_.php"
+feature_ids = [
+    "131449",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "22425987"
+title = "Keeping the Pirates at Bay (2001)"
+url = "https://www.gamasutra.com/view/feature/131439/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "131439",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "36031311"
+title = "Dirty Coding Tricks Used in Production Video Games"
+url = "https://web.archive.org/web/20210509233559/https://www.gamasutra.com/view/feature/132500/dirty_coding_tricks.php"
+feature_ids = [
+    "132500",
+]
+points = 2
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "773582"
+title = "Increasing usuabily in your game's design"
+url = "http://www.gamasutra.com/view/feature/4110/upping_your_games_usability.php"
+feature_ids = [
+    "4110",
+]
+points = 1
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "5956635"
+title = "Inside the PlayStation 4 With Mark Cerny"
+url = "http://www.gamasutra.com/view/feature/191007/inside_the_playstation_4_with_mark_.php"
+feature_ids = [
+    "191007",
+]
+points = 1
+num_comments = 2
+
+[[unmatched_feature_post]]
+object_id = "606203"
+title = "PC Game Piracy: Why Bother With DRM?"
+url = "http://www.gamasutra.com/view/feature/4020/pc_game_piracy_why_bother_with_.php?print=1"
+feature_ids = [
+    "4020",
+]
+points = 1
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "2808626"
+title = "Smartphone and Tablet Rundown: What Developers Need to Know"
+url = "http://www.gamasutra.com/view/feature/6440/smartphone_and_tablet_rundown_.php?page=1"
+feature_ids = [
+    "6440",
+]
+points = 1
+num_comments = 1
+
+[[unmatched_feature_post]]
+object_id = "82943"
+title = "Can Games Fly on Google Earth? including source code"
+url = "http://www.gamasutra.com/view/feature/1750/mars_sucks__can_games_fly_on_.php"
+feature_ids = [
+    "1750",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "98348"
+title = "Game Design Essentials: 20 Mysterious Games"
+url = "http://www.gamasutra.com/view/feature/3485/game_design_essentials_20_.php?print=1"
+feature_ids = [
+    "3485",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "154532"
+title = "Fixing Online Gaming Idiocy: A Psychological Approach"
+url = "http://www.gamasutra.com/view/feature/3604/fixing_online_gaming_idiocy_a_.php"
+feature_ids = [
+    "3604",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "182789"
+title = "Carry Small, Game Large: Big Shared Screen Multiplayer Gaming"
+url = "http://www.gamasutra.com/view/feature/3649/carry_small_game_large_big_.php"
+feature_ids = [
+    "3649",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "307865"
+title = "Monitoring Your PC's Memory Usage For Game Development"
+url = "http://www.gamasutra.com/view/feature/1430/monitoring_your_pcs_memory_usage_.php?print=1"
+feature_ids = [
+    "1430",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "469566"
+title = "Creating All Humans: A Data-Driven AI Framework for Open Game Worlds"
+url = "http://www.gamasutra.com/view/feature/1862/creating_all_humans_a_datadriven_.php"
+feature_ids = [
+    "1862",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "478283"
+title = "Emerging Issues in In-Game Advertising"
+url = "http://www.gamasutra.com/view/feature/3927/emerging_issues_in_ingame_.php"
+feature_ids = [
+    "3927",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "544858"
+title = "Data Alignment, Part 1: It's All About Performance"
+url = "http://www.gamasutra.com/view/feature/3942/data_alignment_part_1.php"
+feature_ids = [
+    "3942",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "606423"
+title = "The Social Network Game Boom"
+url = "http://www.gamasutra.com/view/feature/4009/the_social_network_game_boom.php"
+feature_ids = [
+    "4009",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "631299"
+title = "Persuasive Games: I Want My 99¢ Back"
+url = "http://www.gamasutra.com/view/feature/4038/persuasive_games_i_want_my_99_.php?print=1"
+feature_ids = [
+    "4038",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "739180"
+title = "Graphs in Design"
+url = "http://www.gamasutra.com/view/feature/4091/anatomy_of_a_game_mechanic.php?print=1"
+feature_ids = [
+    "4091",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "920590"
+title = "Developing Games for Android"
+url = "http://www.gamasutra.com/view/feature/4160/developing_games_for_android.php"
+feature_ids = [
+    "4160",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "980060"
+title = "What Gamers Think About Microtransactions"
+url = "http://www.gamasutra.com/view/feature/4207/what_gamers_think_about_.php"
+feature_ids = [
+    "4207",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1084201"
+title = "The next big steps in game sound design"
+url = "http://www.gamasutra.com/view/feature/4257/the_best_of_technical_sound_.php"
+feature_ids = [
+    "4257",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1114882"
+title = "Things Foursquare and Gowalla can learn from frequent-flyer programs"
+url = "http://www.gamasutra.com/view/feature/4269/persuasive_games_checkins_check_.php"
+feature_ids = [
+    "4269",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1129087"
+title = "Unlocking Achievements: Rewarding Skill With Player Incentives"
+url = "http://www.gamasutra.com/view/feature/3976/unlocking_achievements_rewarding_.php"
+feature_ids = [
+    "3976",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1511540"
+title = "The Theology Of Tetris"
+url = "http://www.gamasutra.com/view/feature/5885/no_truth_in_game_design_an_.php?print=1"
+feature_ids = [
+    "5885",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1513731"
+title = "Dirty coding tricks: getting the code out at the last minute"
+url = "http://www.gamasutra.com/view/feature/4111/dirty_coding_tricks.php"
+feature_ids = [
+    "4111",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1598197"
+title = "What's your platform strategy for social games?"
+url = "http://www.gamasutra.com/view/feature/5962/whered_your_social_games_go.php?print=1"
+feature_ids = [
+    "5962",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1777992"
+title = "The Contradiction Of Linearity"
+url = "http://www.gamasutra.com/view/feature/6161/the_contradiction_of_linearity.php"
+feature_ids = [
+    "6161",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "1811230"
+title = "Art For Art's Sake: Why Your Studio Needs An R&D Team"
+url = "http://www.gamasutra.com/view/feature/6178/art_for_arts_sake_why_your_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "6178",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2012728"
+title = "Optimizing for Intel Atom Processor-Based Devices"
+url = "http://www.gamasutra.com/view/feature/6229/sponsored_feature_optimizing_for_.php"
+feature_ids = [
+    "6229",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2207255"
+title = "The console world now has dedicated servers"
+url = "http://www.gamasutra.com/view/feature/6140/creating_dedicated_pc_servers_for_.php"
+feature_ids = [
+    "6140",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2385359"
+title = "Where Games Go To Sleep: The Game Preservation Crisis"
+url = "http://www.gamasutra.com/view/feature/6271/where_games_go_to_sleep_the_game_.php"
+feature_ids = [
+    "6271",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2390304"
+title = "A Guide To iOS Twin Stick Shooter Usability"
+url = "http://www.gamasutra.com/view/feature/6323/a_guide_to_ios_twin_stick_shooter_.php"
+feature_ids = [
+    "6323",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2427830"
+title = "Hot Failure: Tuning Gameplay with Simple Metrics"
+url = "http://www.gamasutra.com/view/feature/6155/hot_failure_tuning_gameplay_with_.php"
+feature_ids = [
+    "6155",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2539377"
+title = "Keeping the Pirates at Bay [2001]"
+url = "http://www.gamasutra.com/view/feature/3030/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "3030",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2816082"
+title = "Programming Sins - Common Errors From Down In The Trenches"
+url = "http://www.gamasutra.com/view/feature/6426/sponsored_feature_programming_.php"
+feature_ids = [
+    "6426",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "2929197"
+title = "Weird Children Of Video Games and Neuroscience"
+url = "http://www.gamasutra.com/view/feature/6466/the_top_10_weird_children_of_video_.php"
+feature_ids = [
+    "6466",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3196144"
+title = "The Story Behind The Making Of Prince Of Persia"
+url = "http://www.gamasutra.com/view/feature/6532/the_story_behind_the_making_of_.php"
+feature_ids = [
+    "6532",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3288527"
+title = "Building A Fantasy World - The Art Direction Of Kingdoms of Amalur: Reckoning"
+url = "http://www.gamasutra.com/view/feature/6557/building_a_fantasy_world__the_art_.php"
+feature_ids = [
+    "6557",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3355319"
+title = "Kicking Butt by the Numbers: Lanchester's Laws"
+url = "http://www.gamasutra.com/view/feature/2123/the_designers_notebook_kicking_.php"
+feature_ids = [
+    "2123",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3373520"
+title = "The Making of Star Wars: The Old Republic"
+url = "http://www.gamasutra.com/view/feature/6573/the_making_of_star_wars_the_old_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "6573",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3397396"
+title = "All That Glitters: An Interview With Bungie's Senior Graphics Engineer"
+url = "http://www.gamasutra.com/view/feature/6579/all_that_glitters_an_interview_.php"
+feature_ids = [
+    "6579",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3434778"
+title = "What the Copycat Saw: Creative Theft in Mobile and Social Games"
+url = "http://www.gamasutra.com/view/feature/6584/what_the_copycat_saw_creative_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "6584",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3475262"
+title = "Gamasutra - Minecraft, Intellectual Property, and the Future of Copyright"
+url = "http://www.gamasutra.com/view/feature/6591/minecraft_intellectual_property_.php"
+feature_ids = [
+    "6591",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3491791"
+title = "Tension Maps: A Process for Identifying Low-Risk Design Opportunities"
+url = "http://www.gamasutra.com/view/feature/6436/tension_maps_a_process_for_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6436",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3491801"
+title = "Why Are Racing Developers Heading to the PC?"
+url = "http://www.gamasutra.com/view/feature/6588/why_are_racing_developers_heading_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6588",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3491816"
+title = "The Design of Free-to-Play Games, Part 2"
+url = "http://www.gamasutra.com/view/feature/6592/the_design_of_freetoplay_games_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6592",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3540116"
+title = "Games That Can't Be Duplicated: Arc System Works' Ishiwatari Speaks"
+url = "http://www.gamasutra.com/view/feature/6606/games_that_cant_be_duplicated_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6606",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3540135"
+title = "Playing to Win? Measuring Social Interaction in Games"
+url = "http://www.gamasutra.com/view/feature/6615/playing_to_win_measuring_social_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6615",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3540185"
+title = "Are Game Development Funds Doing Developers More Harm than Good?"
+url = "http://www.gamasutra.com/view/feature/6666/sponsored_feature_are_game_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6666",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3547133"
+title = "Building an iOS Hit: Phase 1"
+url = "http://www.gamasutra.com/view/feature/6688/building_an_ios_hit_phase_1.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6688",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3570906"
+title = "Building the World of Reckoning"
+url = "http://www.gamasutra.com/view/feature/6692/building_the_world_of_reckoning.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6692",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3578292"
+title = "From the Past to the Future (of Epic Games)"
+url = "http://www.gamasutra.com/view/feature/4035/from_the_past_to_the_future_tim_.php"
+feature_ids = [
+    "4035",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3581866"
+title = "An Excerpt from Social Game Design: Monetization Methods and Mechanics"
+url = "http://www.gamasutra.com/view/feature/6700/virtual_goods__an_excerpt_from_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
+feature_ids = [
+    "6700",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3627231"
+title = "Selecting Save on the Games We Make, Part 1"
+url = "http://www.gamasutra.com/view/feature/6745/selecting_save_on_the_games_we_.php"
+feature_ids = [
+    "6745",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3706168"
+title = "Creating a Winning Game Industry Art Portfolio"
+url = "http://www.gamasutra.com/view/feature/165645/Creating_a_Winning_Game_Industry_Art_Portfolio.php"
+feature_ids = [
+    "165645",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3715865"
+title = "Selecting Save On The Games We Make, Part 2"
+url = "http://www.gamasutra.com/view/feature/166015/Selecting_Save_On_The_Games_We_Make_Part_2.php"
+feature_ids = [
+    "166015",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3734346"
+title = "The Future of Games"
+url = "http://www.gamasutra.com/view/feature/135104/The_Future_of_Games_with_David_Braben.php"
+feature_ids = [
+    "135104",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3770990"
+title = "What makes a game?"
+url = "http://www.gamasutra.com/view/feature/167418/what_makes_a_game.php"
+feature_ids = [
+    "167418",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3773598"
+title = "What Makes a Game?"
+url = "http://www.gamasutra.com/view/feature/167418/What_Makes_a_Game.php"
+feature_ids = [
+    "167418",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3776217"
+title = "What Game Devs Want From Next-Gen Consoles"
+url = "http://www.gamasutra.com/view/feature/167557/What_Game_Devs_Want_From_NextGen_Consoles.php"
+feature_ids = [
+    "167557",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3795343"
+title = "A Producer's 10 Lessons Learned the Hard Way"
+url = "http://www.gamasutra.com/view/feature/167831/A_Producers_10_Lessons_Learned_the_Hard_Way.php"
+feature_ids = [
+    "167831",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3800465"
+title = "Learning from Psychology to Build Better Game Interfaces"
+url = "http://www.gamasutra.com/view/feature/134989/Intuition_Expectations_and_Culture_Learning_from_Psychology_to_Build_Better_Game_Interfaces.php"
+feature_ids = [
+    "134989",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3827341"
+title = "Gamification Dynamics: Flow and Art"
+url = "http://www.gamasutra.com/view/feature/168230/Gamification_Dynamics_Flow_and_Art.php"
+feature_ids = [
+    "168230",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3849768"
+title = "Following Your Instincts: Developing Darksiders II"
+url = "http://www.gamasutra.com/view/feature/168568/Following_Your_Instincts_Developing_Darksiders_II.php"
+feature_ids = [
+    "168568",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3852752"
+title = "Making lean startup tactics work for games"
+url = "http://www.gamasutra.com/view/feature/168647/making_lean_startup_tactics_work_.php"
+feature_ids = [
+    "168647",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3856349"
+title = "Making Lean Startup Tactics Work for Games"
+url = "http://www.gamasutra.com/view/feature/168647/Making_Lean_Startup_Tactics_Work_for_Games.php"
+feature_ids = [
+    "168647",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3863342"
+title = "A Theory of Game Appeals"
+url = "http://www.gamasutra.com/view/feature/168807/A_Theory_of_Game_Appeals.php"
+feature_ids = [
+    "168807",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3863346"
+title = "How Does In-Game Audio Affect Players?"
+url = "http://www.gamasutra.com/view/feature/168731/How_Does_InGame_Audio_Affect_Players.php"
+feature_ids = [
+    "168731",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3880458"
+title = "The Structure of Fun: Learning from Super Mario 3D Land's Director"
+url = "http://www.gamasutra.com/view/feature/168460/the_structure_of_fun_learning_.php"
+feature_ids = [
+    "168460",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3891068"
+title = "The Origins of Night Trap: An Excerpt from Generation Xbox"
+url = "http://www.gamasutra.com/view/feature/169159/The_Origins_of_Night_Trap_An_Excerpt_from_Generation_Xbox.php"
+feature_ids = [
+    "169159",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3914016"
+title = "How Creative Assembly's Process Breeds Quality"
+url = "http://www.gamasutra.com/view/feature/169354/How_Creative_Assemblys_Process_Breeds_Quality.php"
+feature_ids = [
+    "169354",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3926284"
+title = "Animating Four-Legged Beasts"
+url = "http://www.gamasutra.com/view/feature/169673/Animating_FourLegged_Beasts.php"
+feature_ids = [
+    "169673",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3926304"
+title = "Seven Steps to Improved Security"
+url = "http://www.gamasutra.com/view/feature/169583/Seven_Steps_to_Improved_Security.php"
+feature_ids = [
+    "169583",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3946207"
+title = "Understanding the Legal Impact of Publishing Your Game"
+url = "http://www.gamasutra.com/view/feature/169901/Understanding_the_Legal_Impact_of_Publishing_Your_Game.php"
+feature_ids = [
+    "169901",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3957227"
+title = "How to Make Insane, Procedural Platformer Levels"
+url = "http://www.gamasutra.com/view/feature/170049/How_to_Make_Insane_Procedural_Platformer_Levels_.php"
+feature_ids = [
+    "170049",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3979200"
+title = "Finding Out What They Think: A Rough Primer To User Research, Part 2"
+url = "http://www.gamasutra.com/view/feature/170332/Finding_Out_What_They_Think_A_Rough_Primer_To_User_Research_Part_2.php"
+feature_ids = [
+    "170332",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "3990106"
+title = "Predicting Churn: Data-Mining Your Game"
+url = "http://www.gamasutra.com/view/feature/170472/Predicting_Churn_DataMining_Your_Game.php"
+feature_ids = [
+    "170472",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4094701"
+title = "The Secrets of Brutality: God of War's Combat Design"
+url = "http://www.gamasutra.com/view/feature/171970/The_Secrets_of_Brutality_God_of_Wars_Combat_Design.php"
+feature_ids = [
+    "171970",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4103579"
+title = "Fight or Flight: The Neuroscience of Survival Horror"
+url = "http://www.gamasutra.com/view/feature/172168/Fight_or_Flight_The_Neuroscience_of_Survival_Horror.php"
+feature_ids = [
+    "172168",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4130571"
+title = "EA's Core Strategy: Tech, Teams, Brands"
+url = "http://www.gamasutra.com/view/feature/172497/EAs_Core_Strategy_Tech_Teams_Creativity.php"
+feature_ids = [
+    "172497",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4131718"
+title = "Sponsored Feature: The Cost of Ignorance"
+url = "http://www.gamasutra.com/view/feature/172251/Sponsored_Feature_The_Cost_of_Ignorance.php"
+feature_ids = [
+    "172251",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4131758"
+title = "A Way to Better Games: Establishing Functional Theory"
+url = "http://www.gamasutra.com/view/feature/172587/A_Way_to_Better_Games_Establishing_Functional_Theory.php"
+feature_ids = [
+    "172587",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4142144"
+title = "When Violence Meets Honor in History and Games"
+url = "http://www.gamasutra.com/view/feature/172737/When_Violence_Meets_Honor_in_History_and_Games.php"
+feature_ids = [
+    "172737",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4159031"
+title = "Charging at the Challenges of Kinect"
+url = "http://www.gamasutra.com/view/feature/172917/Charging_at_the_Challenges_of_Kinect.php"
+feature_ids = [
+    "172917",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4167000"
+title = "Chrono Trigger's Design Secrets"
+url = "http://www.gamasutra.com/view/feature/172993/Chrono_Triggers_Design_Secrets.php"
+feature_ids = [
+    "172993",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4171079"
+title = "Congratulations, Your First Indie Game is a Flop"
+url = "http://www.gamasutra.com/view/feature/173068/Congratulations_Your_First_Indie_Game_is_a_Flop.php"
+feature_ids = [
+    "173068",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4180042"
+title = "How Sleeping Dogs Tackles Open World Design"
+url = "http://www.gamasutra.com/view/feature/173237/How_Sleeping_Dogs_Tackles_Open_World_Design.php"
+feature_ids = [
+    "173237",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4199341"
+title = "Getting the Most from Motion and Performance Capture"
+url = "http://www.gamasutra.com/view/feature/173542/10_Tips_Getting_the_Most_from_Motion_and_Performance_Capture.php"
+feature_ids = [
+    "173542",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4206387"
+title = "Fun is Boring"
+url = "http://www.gamasutra.com/view/feature/173545/"
+feature_ids = [
+    "173545",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4208229"
+title = "How Homefront's Developer Met its End"
+url = "http://www.gamasutra.com/view/feature/173660/kaos_descends_how_homefronts_.php"
+feature_ids = [
+    "173660",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4250827"
+title = "Principles of an Indie Game Bottom Feeder"
+url = "http://www.gamasutra.com/view/feature/135065/principles_of_an_indie_game_bottom_.php"
+feature_ids = [
+    "135065",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4260152"
+title = "Creating Audio That Matters"
+url = "http://www.gamasutra.com/view/feature/174227/Creating_Audio_That_Matters.php"
+feature_ids = [
+    "174227",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4269854"
+title = "Procedural Content Generation: Thinking With Modules"
+url = "http://www.gamasutra.com/view/feature/174311/Procedural_Content_Generation_Thinking_With_Modules.php"
+feature_ids = [
+    "174311",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4269875"
+title = "The Great Catch: Becoming the Artist You Should Be"
+url = "http://www.gamasutra.com/view/feature/174375/The_Great_Catch_Becoming_the_Artist_You_Should_Be.php"
+feature_ids = [
+    "174375",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4284007"
+title = "Our Top 30 Developers"
+url = "http://www.gamasutra.com/view/feature/174451/Our_Top_30_Developers.php"
+feature_ids = [
+    "174451",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4289369"
+title = "Game Research, and What it Means to You"
+url = "http://www.gamasutra.com/view/feature/174597/Game_Research_and_What_it_Means_to_You.php"
+feature_ids = [
+    "174597",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4305170"
+title = "The More You Know: Making Decisions Interesting in Games"
+url = "http://www.gamasutra.com/view/feature/174832/The_More_You_Know_Making_Decisions_Interesting_in_Games.php"
+feature_ids = [
+    "174832",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4316061"
+title = "Lumines Electronic Symphony: The Untold Story"
+url = "http://www.gamasutra.com/view/feature/174913/Lumines_Electronic_Symphony_The_Untold_Story.php"
+feature_ids = [
+    "174913",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4320718"
+title = "The Value of Repetition"
+url = "http://www.gamasutra.com/view/feature/174974/The_Value_of_Repetition.php"
+feature_ids = [
+    "174974",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4353708"
+title = "Getting the Most from Your Sound Designer"
+url = "http://www.gamasutra.com/view/feature/175427/Getting_the_Most_from_Your_Sound_Designer.php"
+feature_ids = [
+    "175427",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4353790"
+title = "10 Tips: Localization"
+url = "http://www.gamasutra.com/view/feature/175367/10_Tips_Localization.php"
+feature_ids = [
+    "175367",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4410283"
+title = "The Fundamental Pillars of a Combat System"
+url = "http://www.gamasutra.com/view/feature/175950/The_Fundamental_Pillars_of_a_Combat_System.php"
+feature_ids = [
+    "175950",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4420876"
+title = "Want to be Surrounded By a Thriving Local Games Industry? Grow Yours"
+url = "http://www.gamasutra.com/view/feature/176253/Want_to_be_Surrounded_By_a_Thriving_Local_Games_Industry_Grow_Yours.php"
+feature_ids = [
+    "176253",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4430285"
+title = "Best Tips for Building a Freelance Career"
+url = "http://www.gamasutra.com/view/feature/176317/Best_Tips_for_Building_a_Freelance_Career.php"
+feature_ids = [
+    "176317",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4446810"
+title = "Big Ideas: Video Games According to David Cage"
+url = "http://www.gamasutra.com/view/feature/176557/Big_Ideas_Video_Games_According_to_David_Cage.php"
+feature_ids = [
+    "176557",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4478478"
+title = "The Metrics of Space: Tactical Level Design"
+url = "http://www.gamasutra.com/view/feature/176933/The_Metrics_of_Space_Tactical_Level_Design.php"
+feature_ids = [
+    "176933",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4482654"
+title = "Steam Greenlight: Developers Speak Out"
+url = "http://www.gamasutra.com/view/feature/177100/Steam_Greenlight_Developers_Speak_Out.php"
+feature_ids = [
+    "177100",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4498095"
+title = "Devil May Cry: Born Again"
+url = "http://www.gamasutra.com/view/feature/177267/Devil_May_Cry_Born_Again.php"
+feature_ids = [
+    "177267",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4508812"
+title = "What Publishers Want: Tips for Getting Your Game Funded"
+url = "http://www.gamasutra.com/view/feature/177435/What_Publishers_Want_10_Tips_for_Getting_Your_Game_Funded.php"
+feature_ids = [
+    "177435",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4519797"
+title = "Guerrilla Multiplayer Development"
+url = "http://www.gamasutra.com/view/feature/177579/Guerrilla_Multiplayer_Development.php"
+feature_ids = [
+    "177579",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4527826"
+title = "The Media Molecule Identity"
+url = "http://www.gamasutra.com/view/feature/177676/The_Media_Molecule_Identity.php"
+feature_ids = [
+    "177676",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4542905"
+title = "Sponsored Feature: Digital Chocolate Success Story"
+url = "http://www.gamasutra.com/view/feature/177428/Sponsored_Feature_Digital_Chocolate_Success_Story.php"
+feature_ids = [
+    "177428",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4547038"
+title = "Making a Prototype of the Future: The Development of Immercenary"
+url = "http://www.gamasutra.com/view/feature/177905/Making_a_Prototype_of_the_Future_The_Development_of_Immercenary.php"
+feature_ids = [
+    "177905",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4564698"
+title = "Persuasive Games: From Aberrance to Aesthetics"
+url = "http://www.gamasutra.com/view/feature/6446/persuasive_games_from_aberrance_.php"
+feature_ids = [
+    "6446",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4573803"
+title = "Memorial: Composer Ryu Umemoto"
+url = "http://www.gamasutra.com/view/feature/178187/Memorial_Composer_Ryu_Umemoto.php"
+feature_ids = [
+    "178187",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4586709"
+title = "10 Tips: Increasing the Effectiveness of Producers"
+url = "http://www.gamasutra.com/view/feature/178356/10_Tips_Increasing_the_Effectiveness_of_Producers.php"
+feature_ids = [
+    "178356",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4611584"
+title = "Solving Smartphone Performance Problems"
+url = "http://www.gamasutra.com/view/feature/178738/Solving_Smartphone_Performance_Problems.php"
+feature_ids = [
+    "178738",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4664679"
+title = "Rapid Prototyping: Tips for Running an Effective R&D Process"
+url = "http://www.gamasutra.com/view/feature/179501/Rapid_Prototyping_Tips_for_Running_an_Effective_Ramp_D_Process.php"
+feature_ids = [
+    "179501",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4673297"
+title = "Adding Asynchronicity"
+url = "http://www.gamasutra.com/view/feature/179586/Adding_Asynchronicity.php"
+feature_ids = [
+    "179586",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4676737"
+title = "A Game Studio in the Clouds"
+url = "http://www.gamasutra.com/view/feature/179712/A_Game_Studio_in_the_Clouds.php"
+feature_ids = [
+    "179712",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4688474"
+title = "There's Something About SWERY"
+url = "http://www.gamasutra.com/view/feature/179851/Theres_Something_About_SWERY.php"
+feature_ids = [
+    "179851",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4696749"
+title = "From DICE to Danger Close: The Man Who Changed Medal of Honor"
+url = "http://www.gamasutra.com/view/feature/180009/From_DICE_to_Danger_Close_The_Man_Who_Changed_Medal_of_Honor.php"
+feature_ids = [
+    "180009",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4723813"
+title = "The Next Twenty Years: What Windows 8's Closed Distribution Means for Developers"
+url = "http://gamasutra.com/view/feature/179420/the_next_twenty_years_what_.php"
+feature_ids = [
+    "179420",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4750706"
+title = "The End of the Journey: One Indie Studio's Tale"
+url = "http://gamasutra.com/view/feature/180933/the_end_of_the_journey_one_indie_.php"
+feature_ids = [
+    "180933",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4751331"
+title = "The Tip of the Iceberg: Storytelling and Reactive Design in.."
+url = "http://www.gamasutra.com/view/feature/180850/The_Tip_of_the_Iceberg_Storytelling_and_Reactive_Design_in_Canabalt_and_Capsule.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "180850",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4781900"
+title = "7 Ways to Fail at Free-to-Play"
+url = "http://www.gamasutra.com/view/feature/181419/7_Ways_to_Fail_at_FreetoPlay.php"
+feature_ids = [
+    "181419",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4803021"
+title = "Third Party Developers Take on the Wii U"
+url = "http://www.gamasutra.com/view/feature/181710/Third_Party_Developers_Take_on_the_Wii_U.php"
+feature_ids = [
+    "181710",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4813138"
+title = "How Can Gameplay Allow Players to Get Creative?"
+url = "http://www.gamasutra.com/view/feature/181915/How_Can_Gameplay_Allow_Players_to_Get_Creative.php"
+feature_ids = [
+    "181915",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4815246"
+title = "Waterfall Game Development Done Right"
+url = "http://www.gamasutra.com/view/feature/181992/waterfall_game_development_done_.php"
+feature_ids = [
+    "181992",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4835903"
+title = "Games from the Trash: The History of the TRS-80"
+url = "http://www.gamasutra.com/view/feature/182224/Games_from_the_Trash_The_History_of_the_TRS80.php"
+feature_ids = [
+    "182224",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4837947"
+title = "Wii Can't Go On, Wii'll Go On"
+url = "http://www.gamasutra.com/view/feature/182294/persuasive_games_wii_cant_go_on_.php"
+feature_ids = [
+    "182294",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4841678"
+title = "Persuasive Games: Wii Can't Go On, Wii'll Go On"
+url = "http://www.gamasutra.com/view/feature/182294/Persuasive_Games_Wii_Cant_Go_On_Wiill_Go_On.php"
+feature_ids = [
+    "182294",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4852772"
+title = "Endless Space: When Triple-A Developers Go Indie"
+url = "http://www.gamasutra.com/view/feature/182470/Endless_Space_When_TripleA_Developers_Go_Indie.php"
+feature_ids = [
+    "182470",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4869142"
+title = "The Mobile Transition: Why Facebook Developers Are Making the Shift"
+url = "http://www.gamasutra.com/view/feature/182711/The_Mobile_Transition_Why_Facebook_Developers_Are_Making_the_Shift.php"
+feature_ids = [
+    "182711",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4879270"
+title = "Suck at Coding, But Make Games Anyway"
+url = "http://www.gamasutra.com/view/feature/182860/"
+feature_ids = [
+    "182860",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4893377"
+title = "Supercell's Secret Sauce"
+url = "http://www.gamasutra.com/view/feature/183064/Supercells_Secret_Sauce.php"
+feature_ids = [
+    "183064",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4909386"
+title = "Power: Remembering America's Longest-Lasting Game Magazine"
+url = "http://www.gamasutra.com/view/feature/183233/Nintendo_Power_Remembering_Americas_LongestLasting_Game_Magazine.php"
+feature_ids = [
+    "183233",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4913535"
+title = "Designing Freemium Titles for Hardcore Gamers"
+url = "http://www.gamasutra.com/view/feature/183307/Designing_Freemium_Titles_for_Hardcore_Gamers.php"
+feature_ids = [
+    "183307",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4940363"
+title = "What Magic: The Gathering Can Teach Us"
+url = "http://www.gamasutra.com/view/feature/183623/What_Magic_The_Gathering_Can_Teach_Us.php"
+feature_ids = [
+    "183623",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4947353"
+title = "Is It Too Late for Smaller Developers on Facebook?"
+url = "http://www.gamasutra.com/view/feature/183786/Is_It_Too_Late_for_Smaller_Developers_on_Facebook.php"
+feature_ids = [
+    "183786",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4952297"
+title = "The Case for Casual Biometrics"
+url = "http://www.gamasutra.com/view/feature/183887/The_Case_for_Casual_Biometrics.php"
+feature_ids = [
+    "183887",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4965598"
+title = "Gamasutra's Best of 2012"
+url = "http://www.gamasutra.com/view/feature/183892/Gamasutras_Best_of_2012.php"
+feature_ids = [
+    "183892",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4973177"
+title = "The 50 Games That Defined 2012"
+url = "http://www.gamasutra.com/view/feature/183891/The_50_Games_That_Defined_2012.php"
+feature_ids = [
+    "183891",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "4979672"
+title = "The Cabal: Valve’s Design Process For Creating Half-Life (1999)"
+url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
+feature_ids = [
+    "131815",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5006521"
+title = "The Secrets of Promotion for Indies"
+url = "http://www.gamasutra.com/view/feature/184229/The_Secrets_of_Promotion_for_Indies.php"
+feature_ids = [
+    "184229",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5030001"
+title = "Understanding Challenge"
+url = "http://www.gamasutra.com/view/feature/184425/Understanding_Challenge.php"
+feature_ids = [
+    "184425",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5041588"
+title = "Are Game Developers Standing Up for Their Rights?"
+url = "http://www.gamasutra.com/view/feature/184504/Are_Game_Developers_Standing_Up_for_Their_Rights.php"
+feature_ids = [
+    "184504",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5066083"
+title = "The Metrics of Space: Molecule Design"
+url = "http://www.gamasutra.com/view/feature/184783/The_Metrics_of_Space_Molecule_Design.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29"
+feature_ids = [
+    "184783",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5096450"
+title = "POMMS: A Way to Get Your Players to Test Your Game"
+url = "http://www.gamasutra.com/view/feature/184703/POMMS_A_Way_to_Get_Your_Players_to_Test_Your_Game.php"
+feature_ids = [
+    "184703",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5115021"
+title = "Focusing Creativity: RPG Genres"
+url = "http://www.gamasutra.com/view/feature/185353/Focusing_Creativity_RPG_Genres.php"
+feature_ids = [
+    "185353",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5115027"
+title = "Best Practices: Five Tips for Better Playtesting"
+url = "http://www.gamasutra.com/view/feature/185258/Best_Practices_Five_Tips_for_Better_Playtesting.php"
+feature_ids = [
+    "185258",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5138919"
+title = "How to be a Better Game Designer"
+url = "http://www.gamasutra.com/view/feature/185588/How_to_be_a_Better_Game_Designer.php"
+feature_ids = [
+    "185588",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5148211"
+title = "The Top Mistakes Tool Developers Make"
+url = "http://www.gamasutra.com/view/feature/185773/The_Top_10_Mistakes_Tool_Developers_Make.php"
+feature_ids = [
+    "185773",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5171364"
+title = "Reflections on XNA"
+url = "http://www.gamasutra.com/view/feature/186001/reflections_on_xna.php"
+feature_ids = [
+    "186001",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5185749"
+title = "Making the Move to HTML5, Part 1"
+url = "http://www.gamasutra.com/view/feature/186171/making_the_move_to_html5_part_1.php"
+feature_ids = [
+    "186171",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5219190"
+title = "The Writer's Job: If Breaking Bad Became a Game..."
+url = "http://www.gamasutra.com/view/feature/186432/The_Writers_Job_If_Breaking_Bad_Became_a_Game.php"
+feature_ids = [
+    "186432",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5225968"
+title = "Storyboarding for Games User Research"
+url = "http://www.gamasutra.com/view/feature/186514/Storyboarding_for_Games_User_Research.php"
+feature_ids = [
+    "186514",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5249950"
+title = "Drafting a Social Media Handbook Policy for Developers"
+url = "http://www.gamasutra.com/view/feature/186806/Drafting_a_Social_Media_Handbook_Policy_for_Developers.php"
+feature_ids = [
+    "186806",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5255396"
+title = "Defender's Quest: By The Numbers"
+url = "http://www.gamasutra.com/view/feature/186940/defenders_quest_by_the_numbers_.php"
+feature_ids = [
+    "186940",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5274195"
+title = "Making the Move to HTML5, Part 2"
+url = "http://www.gamasutra.com/view/feature/187014/making_the_move_to_html5_part_2.php"
+feature_ids = [
+    "187014",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5290405"
+title = "Finding and Keeping Your Perfect Investment Partner"
+url = "http://www.gamasutra.com/view/feature/187219/Finding_and_Keeping_Your_Perfect_Investment_Partner.php"
+feature_ids = [
+    "187219",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5294855"
+title = "The Psychology Behind Games"
+url = "http://www.gamasutra.com/view/feature/2289/the_psychology_behind_games.php"
+feature_ids = [
+    "2289",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5327901"
+title = "Game Design Tools for Collaboration"
+url = "http://www.gamasutra.com/view/feature/187777/game_design_tools_for_collaboration.php"
+feature_ids = [
+    "187777",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5343359"
+title = "Making the Move to HTML5, Part 3"
+url = "http://www.gamasutra.com/view/feature/188000/Making_the_Move_to_HTML5_Part_3.php"
+feature_ids = [
+    "188000",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5348228"
+title = "Ridiculous Fishing: The Game that Nearly Ended Vlambeer"
+url = "http://www.gamasutra.com/view/feature/188097/Ridiculous_Fishing_The_Game_that_Nearly_Ended_Vlambeer.php"
+feature_ids = [
+    "188097",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5360763"
+title = "The Metrics Aren't the Message"
+url = "http://www.gamasutra.com/view/feature/188197/The_Metrics_Arent_the_Message.php"
+feature_ids = [
+    "188197",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5361959"
+title = "How a battle with cancer showed that Metrics aren't the message"
+url = "http://gamasutra.com/view/feature/188197/the_metrics_arent_the_message.php"
+feature_ids = [
+    "188197",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5368841"
+title = "The Language of Monetization Design"
+url = "http://www.gamasutra.com/view/feature/188359/The_Language_of_Monetization_Design.php"
+feature_ids = [
+    "188359",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5368923"
+title = "Are Game(r)s Art(ists)?"
+url = "http://www.gamasutra.com/view/feature/188265/Are_Gamers_Artists.php"
+feature_ids = [
+    "188265",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5379016"
+title = "Roundtable: The Interactive Fiction Renaissance"
+url = "http://www.gamasutra.com/view/feature/188458/Roundtable_The_Interactive_Fiction_Renaissance.php"
+feature_ids = [
+    "188458",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5394378"
+title = "Game Developer Quality-of-Life Survey"
+url = "http://www.gamasutra.com/view/feature/188671/Game_Developer_QualityofLife_Survey.php"
+feature_ids = [
+    "188671",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5400519"
+title = "Untold Riches: The Intricate Platforming of Tomb Raider"
+url = "http://www.gamasutra.com/view/feature/187601/untold_riches_the_intricate_.php"
+feature_ids = [
+    "187601",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5478634"
+title = "ANGELINA: The Computer Program that Designs Games"
+url = "http://www.gamasutra.com/view/feature/189354/ANGELINA_The_Computer_Program_that_Designs_Games.php"
+feature_ids = [
+    "189354",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5516253"
+title = "Three Problems for Interactive Storytellers, Resolved"
+url = "http://www.gamasutra.com/view/feature/189364/The_Designers_Notebook_Three_Problems_for_Interactive_Storytellers_Resolved.php"
+feature_ids = [
+    "189364",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5590584"
+title = "Programmer, Interrupted"
+url = "http://www.gamasutra.com/view/feature/190891/Programmer_Interrupted.php"
+feature_ids = [
+    "190891",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5597227"
+title = "Devil in the Blue Faceted Dress: Real Time Cloth Animation"
+url = "http://www.gamasutra.com/view/feature/131851/devil_in_the_blue_faceted_dress_.php"
+feature_ids = [
+    "131851",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5597259"
+title = "The Secrets Of Cloth Simulation In Alan Wake"
+url = "http://www.gamasutra.com/view/feature/132771/the_secrets_of_cloth_simulation_in_.php?print=1"
+feature_ids = [
+    "132771",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5654830"
+title = "Managing Risk in Video Game Development"
+url = "http://www.gamasutra.com/view/feature/191523/Managing_risk_in_video_game_development.php"
+feature_ids = [
+    "191523",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5683895"
+title = "PlayStation Plus: Good for Players, But is it Good for Developers?"
+url = "http://www.gamasutra.com/view/feature/191966/PlayStation_Plus_Good_for_Players_But_is_it_Good_for_Developers.php"
+feature_ids = [
+    "191966",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5701925"
+title = "Programmer, Interrupted"
+url = "http://gamasutra.com/view/feature/190891/programmer_interrupted.php"
+feature_ids = [
+    "190891",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5703541"
+title = "Secrets of Quick Iteration in the Core Social Space"
+url = "http://www.gamasutra.com/view/feature/192001/Secrets_of_Quick_Iteration_in_the_MidCore_Social_Space.php"
+feature_ids = [
+    "192001",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5703557"
+title = "Secrets of Quick Iteration in the Core Social Space"
+url = "http://www.gamasutra.com/view/feature/192001/Secrets_of_Quick_Iteration_in_the_Core_Social_Space.php"
+feature_ids = [
+    "192001",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5710754"
+title = "Yesterday's Minimum Spec is Today's Mass Market - Quality Game"
+url = "http://www.gamasutra.com/view/feature/192010/Sponsored_Feature_Yesterdays_Minimum_Spec_is_Todays_Mass_Market__Quality_Game_Performance_Made_Simple.php"
+feature_ids = [
+    "192010",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5717021"
+title = "From XNA to MonoGame"
+url = "http://www.gamasutra.com/view/feature/192209/From_XNA_to_MonoGame.php"
+feature_ids = [
+    "192209",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5723315"
+title = "Using Creative Technology to Build Huge Open Landscapes"
+url = "http://www.gamasutra.com/view/feature/192007/Sponsored_The_World_of_Just_Cause_2__Using_Creative_Technology_to_Build_Huge_Open_Landscapes_.php"
+feature_ids = [
+    "192007",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5742695"
+title = "Tutorial: Simple, High-Performance Particles for Mobile"
+url = "http://www.gamasutra.com/view/feature/192210/Tutorial_Simple_HighPerformance_Particles_for_Mobile.php"
+feature_ids = [
+    "192210",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5751212"
+title = "Learning to Love Handicaps in Competitive Games"
+url = "http://www.gamasutra.com/view/feature/192211/Learning_to_Love_Handicaps_in_Competitive_Games.php"
+feature_ids = [
+    "192211",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5762920"
+title = "Creating Virtual Reality Games: The Fundamentals"
+url = "http://www.gamasutra.com/view/feature/192810/Creating_Virtual_Reality_Games_The_Fundamentals.php"
+feature_ids = [
+    "192810",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5763014"
+title = "Dean Hall Discusses DayZ's Development Process"
+url = "http://www.gamasutra.com/view/feature/192941/Dean_Hall_Discusses_DayZs_Development_Process_.php"
+feature_ids = [
+    "192941",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5790626"
+title = "Internal Indies"
+url = "http://www.gamasutra.com/view/feature/193163/Internal_Indies.php"
+feature_ids = [
+    "193163",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5796153"
+title = "Intro to User Analytics"
+url = "http://www.gamasutra.com/view/feature/193241/Intro_to_User_Analytics.php"
+feature_ids = [
+    "193241",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5829867"
+title = "Not Puzzles, but Scenes: Cinematic Gameplay Interactions"
+url = "http://www.gamasutra.com/view/feature/193612/Not_Puzzles_but_Scenes_Cinematic_Gameplay_Interactions.php"
+feature_ids = [
+    "193612",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5836440"
+title = "Advanced Audio Streaming in Unity"
+url = "http://www.gamasutra.com/view/feature/193616/Advanced_Audio_Streaming_in_Unity.php"
+feature_ids = [
+    "193616",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5843567"
+title = "Video Games Under Fire"
+url = "http://www.gamasutra.com/view/feature/193613/Video_Games_Under_Fire.php"
+feature_ids = [
+    "193613",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5859532"
+title = "What Lies Beyond: Doorways in Gaming"
+url = "http://www.gamasutra.com/view/feature/193943/What_Lies_Beyond_Doorways_in_Gaming.php"
+feature_ids = [
+    "193943",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5872139"
+title = "Variants: The Challenge of Changeable Design"
+url = "http://www.gamasutra.com/view/feature/194125/Variants_The_Challenge_of_Changeable_Design.php"
+feature_ids = [
+    "194125",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5915940"
+title = "An Inviting Mini-World: How Nintendo Made Animal Crossing"
+url = "http://www.gamasutra.com/view/feature/194661/An_Inviting_MiniWorld_How_Nintendo_Made_Animal_Crossing.php"
+feature_ids = [
+    "194661",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "5988861"
+title = "Envisioning Our Interactive Audio Future"
+url = "http://www.gamasutra.com/view/feature/195324/Envisioning_Our_Interactive_Audio_Future.php"
+feature_ids = [
+    "195324",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6017629"
+title = "Chasing the Whale: Examining the ethics of free-to-play games"
+url = "http://www.gamasutra.com/view/feature/195806/Chasing_the_Whale_Examining_the_ethics_of_freetoplay_games.php"
+feature_ids = [
+    "195806",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6322789"
+title = "A Conversation with Oculus VR Founder Palmer Luckey"
+url = "http://www.gamasutra.com/view/feature/199361/a_conversation_with_oculus_vr_.php"
+feature_ids = [
+    "199361",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "6876458"
+title = "Keeping the pirates at bay [2001]"
+url = "http://www.gamasutra.com/view/feature/3030/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "3030",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "7038769"
+title = "What every game developer needs to know about Story (2005)"
+url = "http://www.gamasutra.com/view/feature/2359/what_every_game_developer_needs_to_.php"
+feature_ids = [
+    "2359",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "7045557"
+title = "The SCUMM Diary: Stories behind one of the greatest game engines ever made"
+url = "http://www.gamasutra.com/view/feature/196009/the_scumm_diary_stories_behind_.php"
+feature_ids = [
+    "196009",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "7074418"
+title = "How today's game developers come to grips with self-promotion"
+url = "http://www.gamasutra.com/view/feature/208489/how_todays_game_developers_come_.php"
+feature_ids = [
+    "208489",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "7216425"
+title = "Stop Calling Games 'Addictive'"
+url = "http://www.gamasutra.com/view/feature/2973/designers_notebook_stop_calling_.php"
+feature_ids = [
+    "2973",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "7259960"
+title = "The challenges of being a mom in game development"
+url = "http://www.gamasutra.com/view/feature/209100/taking_on_the_challenges_of_being_.php"
+feature_ids = [
+    "209100",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "7293788"
+title = "The Internet Sucks: Lessons learned coding X-Wing vs. TIE Fighter"
+url = "http://www.gamasutra.com/view/feature/131781/the_internet_sucks_or_what_i_.php?print=1"
+feature_ids = [
+    "131781",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8814836"
+title = "Congratulations, Your First Indie Game Is a Flop"
+url = "http://www.gamasutra.com/view/feature/173068/congratulations_your_first_indie_.php"
+feature_ids = [
+    "173068",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "8953070"
+title = "Persuasive Games: Exploitationware"
+url = "http://www.gamasutra.com/view/feature/134735/persuasive_games_exploitationware.php"
+feature_ids = [
+    "134735",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "10118903"
+title = "Boss Battle Design and Structure"
+url = "http://www.gamasutra.com/view/feature/134503/boss_battle_design_and_structure.php?print=1"
+feature_ids = [
+    "134503",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "11125313"
+title = "How Sony's Net Yaroze Kickstarted Indie Console Development (2012)"
+url = "http://www.gamasutra.com/view/feature/169245/15_years_later_how_sonys_net_.php"
+feature_ids = [
+    "169245",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "12403130"
+title = "A Developer's Guide to Stereoscopic 3D in Games"
+url = "http://www.gamasutra.com/view/feature/134827/a_developers_guide_to_.php"
+feature_ids = [
+    "134827",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "12481402"
+title = "The Rise and Fall of the Dreamcast(2009)"
+url = "http://www.gamasutra.com/view/feature/132517/the_rise_and_fall_of_the_dreamcast.php"
+feature_ids = [
+    "132517",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "12849017"
+title = "The Pac-Man Dossier"
+url = "http://www.gamasutra.com/view/feature/3938/the_pacman_dossier.php?print=1"
+feature_ids = [
+    "3938",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "14371776"
+title = "Reflections on Building Three Scripting Languages (2007)"
+url = "http://www.gamasutra.com/view/feature/129993/reflections_on_building_three_.php"
+feature_ids = [
+    "129993",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "17146170"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
+url = "https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php"
+feature_ids = [
+    "131503",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "17162024"
+title = "The SCUMM Diary: Stories behind one of the greatest game engines ever made"
+url = "https://www.gamasutra.com/view/feature/196009/the_scumm_diary_stories_behind_.php"
+feature_ids = [
+    "196009",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "17807165"
+title = "MS Excel:Revolutionary 3D Game Engine? (2008)"
+url = "http://www.gamasutra.com/view/feature/3563/microsoft_excel_revolutionary_3d_.php"
+feature_ids = [
+    "3563",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "18436361"
+title = "Breaking Down Breakout: System and Level Design for Breakout-Style Games (2007)"
+url = "https://www.gamasutra.com/view/feature/1630/breaking_down_breakout_system_and_.php"
+feature_ids = [
+    "1630",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "20445988"
+title = "Putting Madden in “Madden”: Memoirs of an EA Sports Video Producer"
+url = "https://www.gamasutra.com/view/feature/131403/putting_madden_in_madden_memoirs_.php"
+feature_ids = [
+    "131403",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "22697858"
+title = "Keeping the Pirates at Bay"
+url = "https://www.gamasutra.com/view/feature/131439/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "131439",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "24114966"
+title = "Game Feel: The Secret Ingredient to Magical Video Games (2007)"
+url = "https://www.gamasutra.com/view/feature/130734/game_feel_the_secret_ingredient.php"
+feature_ids = [
+    "130734",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "24236948"
+title = "1500 Archers on a 28.8: Age of Empires network programming (2001)"
+url = "https://www.gamasutra.com/view/feature/131503/1500_archers_on_a_288_network_.php"
+feature_ids = [
+    "131503",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "26541228"
+title = "Dirty Coding Tricks (2009)"
+url = "https://www.gamasutra.com/view/feature/132500/dirty_coding_tricks.php"
+feature_ids = [
+    "132500",
+]
+points = 1
+num_comments = 0
+
+[[unmatched_feature_post]]
+object_id = "27366768"
+title = "Keeping the Pirates at Bay (2001)"
+url = "https://www.gamasutra.com/view/feature/131439/keeping_the_pirates_at_bay.php"
+feature_ids = [
+    "131439",
+]
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "15763013"
+title = "“I thought I could ship at least 700 units to stay in business”"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+feature_ids = []
+points = 585
+num_comments = 335
+
+[[postmortemish_no_feature_post]]
+object_id = "15884051"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+feature_ids = []
+points = 496
+num_comments = 65
+
+[[postmortemish_no_feature_post]]
+object_id = "20001151"
+title = "Making a Game Boy Game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+feature_ids = []
+points = 366
+num_comments = 82
+
+[[postmortemish_no_feature_post]]
+object_id = "9244034"
+title = "Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+feature_ids = []
+points = 304
+num_comments = 85
+
+[[postmortemish_no_feature_post]]
+object_id = "15961317"
+title = "The Death of Flash and Rewriting 1.4M Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+feature_ids = []
+points = 291
+num_comments = 198
+
+[[postmortemish_no_feature_post]]
+object_id = "10285612"
+title = "The 10 year journey of a solo game developer"
+url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+feature_ids = []
+points = 47
+num_comments = 8
+
+[[postmortemish_no_feature_post]]
+object_id = "8890692"
+title = "Postmortem: Launching the War Z"
+url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+feature_ids = []
+points = 34
+num_comments = 12
+
+[[postmortemish_no_feature_post]]
+object_id = "9595561"
+title = "Postmortem: Pac-Man, Iwatani's Rhapsody in Yellow (2005)"
+url = "http://www.gamasutra.com/view/news/244181/Postmortem_PacMan_Iwatanis_rhapsody_in_yellow.php"
+feature_ids = []
+points = 23
+num_comments = 5
+
+[[postmortemish_no_feature_post]]
+object_id = "136331"
+title = "It's tradition in the Game industry to write a \"Postmortem\" after launch, telling your launch story."
+url = "http://www.gamasutra.com/php-bin/article_display.php?category=5"
+feature_ids = []
+points = 10
+num_comments = 10
+
+[[postmortemish_no_feature_post]]
+object_id = "15752743"
+title = "Indie Game Development: I only had to sell 700 copies to stay in business"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+feature_ids = []
+points = 8
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "4365418"
+title = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+feature_ids = []
+points = 6
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "18439679"
+title = "[Post Mortem – 1 year later]: I managed to ship 6000 copies to stay in business"
+url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+feature_ids = []
+points = 4
+num_comments = 1
+
+[[postmortemish_no_feature_post]]
+object_id = "16382942"
+title = "Making a Game Boy Game in 2017: A “Sheep It Up” Post-Mortem - Part II"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraNews+%28Gamasutra+News%29"
+feature_ids = []
+points = 4
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "5845448"
+title = "Post Mortem: Minecraft Oakland"
+url = "http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php"
+feature_ids = []
+points = 3
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "13931494"
+title = "Post-Mortem: Gorescript Classic, a JS/WebGL 3D Webgame"
+url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+feature_ids = []
+points = 3
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "27532687"
+title = "Postmortem: Ensemble's Age of Empires (1998)"
+url = "https://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+feature_ids = []
+points = 3
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "4250069"
+title = "Cubes all the way down: Fez technical postmortem"
+url = "http://gamasutra.com/view/news/173725/Video_Cubes_all_the_way_down_Fez_technical_postmortem.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "5490140"
+title = "Classic Game Postmortem: Maniac Mansion (by Ron Gilbert)"
+url = "http://gamasutra.com/view/news/189815/Video_Remembering_LucasArts_groundbreaking_Maniac_Mansion.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "5553078"
+title = "Cubes all the way down: Fez technical postmortem"
+url = "http://www.gamasutra.com/view/news/173725/Video_Cubes_all_the_way_down_Fez_technical_postmortem.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "6384602"
+title = "DwarfCorp's Kickstarter Postmortem"
+url = "http://gamasutra.com/blogs/MatthewKlingensmith/20130912/199358/DwarfCorps_Kickstarter_Postmortem.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "7000098"
+title = "A painful postmortem: How Indoor Sports World drove its devs to the edge"
+url = "http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "8874412"
+title = "Aegis Defenders Crowdfunding Post-Mortem, Pt. 1: So, You Wanna Crowdfund?"
+url = "http://gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "14640358"
+title = "Tumble Seed Postmortem"
+url = "http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "15583816"
+title = "Classic Postmortem: Ensemble Studio's Classic RTS Age of Mythology"
+url = "https://www.gamasutra.com/view/news/308555/Classic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php"
+feature_ids = []
+points = 2
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "3833632"
+title = "Sales post-mortem for an indie game"
+url = "http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "5596944"
+title = "Mech Force (HTML5 Game) Post Mortem"
+url = "http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "6882498"
+title = "Video: Hall and Romero's Doom postmortem"
+url = "http://www.gamasutra.com/view/news/188208/Video_Hall_and_Romeros_Doom_postmortem.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "7704054"
+title = "Post-mortem on 9.03m – from University project to Steam-released game"
+url = "http://www.gamasutra.com/blogs/KarlInglott/20140506/216965/903m__From_University_project_to_Steam_released_game.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "8293309"
+title = "Post-Kickstarter Finance by the Numbers; a One-Man Studio Postmortem"
+url = "http://gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "8860798"
+title = "Atari 2600 \"Adventure\" in GDC 2015 Classic Game Postmortem"
+url = "http://www.gamasutra.com/view/news/233666/Warren_Robinett_talks_Adventure_in_GDC_2015_Classic_Game_Postmortem.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "9023076"
+title = "A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "9216837"
+title = "10 seminal game postmortems every developer should read"
+url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "9336690"
+title = "The game is the boss: A Resogun postmortem"
+url = "http://www.gamasutra.com/view/news/240548/The_game_is_the_boss_A_Resogun_postmortem.php#tophead"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "9339490"
+title = "The game is the boss: A Resogun postmortem"
+url = "http://gamasutra.com/view/news/240548/The_game_is_the_boss_A_Resogun_postmortem.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "10284528"
+title = "The 10 year journey of a solo game developer"
+url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "10638908"
+title = "Solo iOS game dev by a AAA vet: Lessons learned along the way"
+url = "http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "10788746"
+title = "Postmortem: Porting Bastion to PSVita"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "11581829"
+title = "Postmortem: Stardock and Oxide Games' Ashes of the Singularity"
+url = "http://www.gamasutra.com/view/news/270965/Postmortem_Stardock_and_Oxide_Games_Ashes_of_the_Singularity.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "11855222"
+title = "Postmortem: Offworld Trading Company's Early Access Campaign"
+url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "15329930"
+title = "Postmortem: Greater accessibility through audio in Killer Instinct"
+url = "https://www.gamasutra.com/view/news/305735/Postmortem_Greater_accessibility_through_audio_in_Killer_Instinct.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "15668759"
+title = "Postmortem: The totalitarian puzzle-platformer Black the Fall"
+url = "https://www.gamasutra.com/view/news/307674/Postmortem_The_totalitarian_puzzleplatformer_Black_The_Fall.php#.WgPmrlocKPU.twitter"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "15859862"
+title = "Postmortem: Mimimi's Shadow Tactics: Blades of the Shogun"
+url = "https://www.gamasutra.com/view/news/310894/Postmortem_Mimimis_Shadow_Tactics_Blades_of_the_Shogun.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "16376199"
+title = "An Organiser’s Postmortem: Malta Global Game Jam"
+url = "https://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "25014221"
+title = "Postmortem: Children of Morta"
+url = "https://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php"
+feature_ids = []
+points = 1
+num_comments = 0
+
+[[postmortemish_no_feature_post]]
+object_id = "25240853"
+title = "A Pre-Post-Mortem About Marketing (5 Lessons Learned)"
+url = "https://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php"
+feature_ids = []
+points = 1
+num_comments = 0

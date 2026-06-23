@@ -2828,30 +2828,6 @@ alt_ids = [
 ]
 
 [[postmortem]]
-id = "3744"
-title = "Dreaming of a New Day: Heavy Rain's David Cage"
-game = "Dreaming of a New Day: Heavy Rain's David Cage"
-authors = [
-    "Brandon Sheffield",
-]
-date = "2008-07-25"
-date_estimated = false
-category = "Postmortem"
-summary = ""
-thumbnail = "https://web.archive.org/web/20080726214443im_/http://www.gamasutra.com/db_area/images/feature/3744/cage_heavyrain3.jpg"
-original_url = "http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php"
-wayback = "https://web.archive.org/web/20080726214443/http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php"
-wayback_print = "https://web.archive.org/web/20080726214443/http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php?print=1"
-pages = 1
-wayback_captures = 4
-hn_points = 0
-hn_comments = 0
-author_notable = true
-reddit_points = 0
-copies_sold = ""
-alt_ids = []
-
-[[postmortem]]
 id = "132168"
 title = "Postmortem: 2K Boston/2K Australia's BioShock"
 game = "2K Boston/2K Australia's BioShock"
@@ -4269,7 +4245,7 @@ wayback = "https://web.archive.org/web/20120203055405/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120203055405/http://www.gamasutra.com/view/feature/6680/postmortem_appy_entertainments_.php?print=1"
 pages = 3
 wayback_captures = 11
-hn_points = 0
+hn_points = 1
 hn_comments = 0
 author_notable = false
 reddit_points = 0
@@ -4444,7 +4420,7 @@ wayback = "https://web.archive.org/web/20120616013736/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120616013736/http://www.gamasutra.com/view/feature/172250/postmortem_zachtronics_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
+hn_points = 1
 hn_comments = 0
 author_notable = true
 reddit_points = 0
@@ -4718,7 +4694,7 @@ wayback = "https://web.archive.org/web/20130228050530/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130228050530/http://www.gamasutra.com/view/feature/187299/postmortem_unknown_worlds_.php?print=1"
 pages = 4
 wayback_captures = 5
-hn_points = 0
+hn_points = 3
 hn_comments = 0
 author_notable = true
 reddit_points = 0
@@ -4815,7 +4791,7 @@ wayback = "https://web.archive.org/web/20130622021310/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130622021310/http://www.gamasutra.com/view/feature/193695/postmortem__sony_santa_monicas_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
+hn_points = 1
 hn_comments = 0
 author_notable = false
 reddit_points = 0

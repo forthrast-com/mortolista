@@ -413,32 +413,110 @@ def load_hn_posts(path=HN_POSTS):
     return tomllib.loads(path.read_text()).get("hn_post", [])
 
 
-def hn_paths_for_article(article):
+def article_hn_keys(article):
+    ids = {str(article.get("id", ""))}
+    ids.update(str(aid) for aid in article.get("alt_ids", []) or [])
+    ids.discard("")
+
     urls = [article.get("original_url", "")]
-    for aid in article.get("alt_ids", []) or []:
+    for aid in ids:
         url = article.get("original_url", "")
         if url:
             urls.append(re.sub(r"/view/feature/\d+/", f"/view/feature/{aid}/", url))
+
     paths = set()
     for url in urls:
         m = re.search(r"(/view/feature/\d+/[a-z0-9_]+\.php)", url, re.I)
         if m:
             paths.add(m.group(1).lower())
-    return paths
+    return ids, paths
+
+
+def hn_feature_ids(url):
+    """Feature ids in an HN URL, including bare /view/feature/<id>/ links.
+
+    Some submissions link to Gamasutra's router form with no slug, or to a
+    Wayback URL wrapping the original.  The feature id is safer than the slug:
+    slugs are often truncated during site migrations, but ids and our alt_ids
+    capture the old/new mapping.
+    """
+    return set(re.findall(r"/view/feature/(\d+)(?:/|$)", url, re.I))
 
 
 def hn_stats(article, hn_posts):
     """Best points/comments across cached HN submissions matching this article."""
-    paths = hn_paths_for_article(article)
-    if not paths:
-        return 0, 0
+    ids, paths = article_hn_keys(article)
     pts = cmts = 0
     for post in hn_posts:
         url = (post.get("url") or "").lower()
-        if any(path in url for path in paths):
+        id_match = bool(ids & hn_feature_ids(url))
+        path_match = any(path in url for path in paths)
+        if id_match or path_match:
             pts = max(pts, int(post.get("points") or 0))
             cmts = max(cmts, int(post.get("num_comments") or 0))
     return pts, cmts
+
+
+
+
+# --------------------------------------------------------------- local HN audit
+def postmortem_ids_from_cdx_cache():
+    """Feature ids from the local CDX postmortem URL cache. No network."""
+    cache = CACHE / "cdx_postmortems.txt"
+    ids = set()
+    if not cache.exists():
+        return ids
+    for line in cache.read_text().splitlines():
+        original = line.split(" ", 1)[0] if line.strip() else ""
+        m = re.search(r"/view/feature/(\d+)/", original, re.I)
+        if m:
+            ids.add(m.group(1))
+    return ids
+
+
+def audit_hn_posts(path=HN_POSTS):
+    """Write a local audit of cached HN Gamasutra posts vs postmortem URL ids."""
+    hn_posts = load_hn_posts(path)
+    postmortem_ids = postmortem_ids_from_cdx_cache()
+
+    matched, unmatched_feature, postmortemish_no_feature = [], [], []
+    for post in hn_posts:
+        ids = hn_feature_ids(post.get("url", ""))
+        rec = {
+            "object_id": post.get("object_id", ""),
+            "title": post.get("title", ""),
+            "url": post.get("url", ""),
+            "feature_ids": sorted(ids, key=lambda x: int(x) if x.isdigit() else x),
+            "points": int(post.get("points") or 0),
+            "num_comments": int(post.get("num_comments") or 0),
+        }
+        if ids & postmortem_ids:
+            matched.append(rec)
+        elif ids:
+            unmatched_feature.append(rec)
+        else:
+            hay = (post.get("title", "") + " " + post.get("url", "")).lower()
+            if any(needle in hay for needle in ("postmortem", "post_mortem", "post-mortem", "post mortem")):
+                postmortemish_no_feature.append(rec)
+
+    def by_points(rows):
+        return sorted(rows, key=lambda r: (r["points"], r["num_comments"]), reverse=True)
+
+    audit = {
+        "summary": {
+            "hn_posts": len(hn_posts),
+            "postmortem_feature_ids": len(postmortem_ids),
+            "matched_feature_posts": len(matched),
+            "unmatched_feature_posts": len(unmatched_feature),
+            "postmortemish_no_feature_posts": len(postmortemish_no_feature),
+        },
+        "matched_feature_post": by_points(matched),
+        "unmatched_feature_post": by_points(unmatched_feature),
+        "postmortemish_no_feature_post": by_points(postmortemish_no_feature),
+    }
+    out = DATA / "hn_postmortem_audit.toml"
+    out.write_bytes(tomli_w.dumps(audit).encode())
+    return out, audit["summary"]
 
 
 # ------------------------------------------------------------ Wikipedia enrich
@@ -597,6 +675,7 @@ def main():
     ap.add_argument("--sample", type=int, default=0, help="only process N articles")
     ap.add_argument("--list-only", action="store_true")
     ap.add_argument("--hn-only", action="store_true", help="refresh data/hn_gamasutra_posts.toml and exit")
+    ap.add_argument("--hn-audit", action="store_true", help="audit cached HN posts against local postmortem URL cache and exit")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
     ap.add_argument("--no-enrich", action="store_true", help="skip HN+Wikipedia")
     ap.add_argument("--out", default=str(DATA / "postmortems.toml"))
@@ -605,6 +684,11 @@ def main():
     if args.hn_only:
         posts = write_hn_posts(args.hn_posts)
         log(f"[*] wrote {len(posts)} HN gamasutra posts -> {args.hn_posts}")
+        return
+    if args.hn_audit:
+        out, summary = audit_hn_posts(args.hn_posts)
+        log(f"[*] wrote HN audit -> {out}")
+        log(f"[*] {summary}")
         return
 
     arts = fetch_article_list()

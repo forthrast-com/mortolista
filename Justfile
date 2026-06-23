@@ -10,6 +10,9 @@ serve:
 hn:
     python scraper/scrape.py --hn-only
 
+hn-audit:
+    python scraper/scrape.py --hn-audit
+
 sample:
     python scraper/scrape.py --sample 20
 
