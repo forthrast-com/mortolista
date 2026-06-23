@@ -88,6 +88,23 @@ function num(v) {
   return v ? `<td class="num">${v}</td>` : `<td class="num zero">–</td>`;
 }
 
+function gamedeveloperUrl(originalUrl) {
+  if (!originalUrl) return "";
+  try {
+    const u = new URL(originalUrl);
+    u.protocol = "https:";
+    u.hostname = "www.gamedeveloper.com";
+    return u.toString();
+  } catch {
+    return originalUrl.replace(/^https?:\/\/(?:www\.)?gamasutra\.com/i, "https://www.gamedeveloper.com");
+  }
+}
+
+function printArchiveUrl(d) {
+  const url = d.wayback_print || "";
+  return /[?&]print=1(?:[#&]|$)/.test(url) ? url : "";
+}
+
 function rowHTML(d) {
   const authors = (d.authors || []).map(esc).join(", ") || "<span class=zero>—</span>";
   const star = d.author_notable ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : "";
@@ -96,15 +113,20 @@ function rowHTML(d) {
     : '<span class=zero>—</span>';
   const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
   const gameLine = d.game && d.game !== d.title ? `<span class="game">${esc(d.game)}</span>` : "";
+  const fullText = printArchiveUrl(d);
+  const primary = fullText || d.wayback;
   // archive.today fallback — derived from the original URL, newest snapshot
   const at = `https://archive.ph/newest/${encodeURIComponent(d.original_url)}`;
-  const full = (d.pages > 1 && d.wayback_print)
-    ? ` · <a href="${esc(d.wayback_print)}" target="_blank" rel="noopener" title="Full article on one page (${d.pages} pages)">full text</a>`
-    : "";
+  const live = d.live_url || gamedeveloperUrl(d.original_url);
+  const fullTitle = d.pages > 1
+    ? `Full article on one page (${d.pages} pages)`
+    : "Archived print view / full text";
   const mirrors = `<span class="mirrors">`
-    + `<a href="${esc(d.wayback)}" target="_blank" rel="noopener" title="Internet Archive snapshot">wayback</a>`
+    + (fullText ? `<span title="${esc(fullTitle)}">primary: full text</span> · ` : "")
+    + `<a href="${esc(d.wayback)}" target="_blank" rel="noopener" title="Internet Archive snapshot of the original page">wayback</a>`
+    + ` · <a href="${esc(d.original_url)}" target="_blank" rel="noopener" title="Original Gamasutra URL (often dead)">original</a>`
+    + ` · <a href="${esc(live)}" target="_blank" rel="noopener" title="Live Game Developer URL (may have broken formatting)">live</a>`
     + ` · <a href="${esc(at)}" target="_blank" rel="noopener" title="archive.today mirror (fallback)">archive.today</a>`
-    + full
     + `</span>`;
   // vintage dateline: metadata line shown ABOVE the headline (esp. on mobile)
   const metaTop = `<span class="meta-top">`
@@ -115,11 +137,11 @@ function rowHTML(d) {
         : "")
     + `</span>`;
   const thumb = d.thumbnail
-    ? `<a href="${esc(d.wayback)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
+    ? `<a href="${esc(primary)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
     : "";
   return `<tr>
     <td class="thumb-cell${d.thumbnail ? "" : " no-thumb"}">${thumb}</td>
-    <td class="main-cell">${metaTop}<a class="title-cell" href="${esc(d.wayback)}" target="_blank" rel="noopener">${esc(d.title)}</a>${gameLine}${summary}${mirrors}</td>
+    <td class="main-cell">${metaTop}<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(d.title)}</a>${gameLine}${summary}${mirrors}</td>
     <td>${authors}${star}</td>
     <td><span class="cat ${catClass(d.category)}">${esc(d.category)}</span></td>
     <td class="num">${date}</td>
