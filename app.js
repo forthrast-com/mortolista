@@ -215,6 +215,19 @@ function printArchiveUrl(d) {
   return usableLink(d.archive_today_print_ok, archiveToday) ? archiveToday : "";
 }
 
+function displayGame(d) {
+  const game = (d.game || "").trim();
+  if (!game) return "";
+  const title = (d.title || "").trim();
+  if (!title) return game;
+  const canonical = s => s
+    .toLowerCase()
+    .replace(/^(?:indie |audio |middleware )?postmortem\s*[:–—-]?\s*/, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return canonical(game) === canonical(title) ? "" : game;
+}
+
 function rowHTML(d) {
   const authors = (d.authors || []).map(esc).join(", ") || "<span class=zero>—</span>";
   const star = d.author_notable ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : "";
@@ -222,7 +235,8 @@ function rowHTML(d) {
     ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
     : '<span class=zero>—</span>';
   const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
-  const gameLine = d.game && d.game !== d.title ? `<span class="game">${esc(d.game)}</span>` : "";
+  const game = displayGame(d);
+  const gameLine = game ? `<span class="game">${esc(game)}</span>` : "";
   const fullText = printArchiveUrl(d);
   const primary = fullText
     || (usableLink(d.wayback_ok, d.wayback) ? d.wayback : "")
