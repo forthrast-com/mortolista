@@ -258,10 +258,7 @@ def parse_article(aid, rec):
         title = slug_title(rec["slug"])
 
     # description
-    desc = ""
-    m = re.search(r'<meta[^>]+name="description"[^>]+content="([^"]*)"', html, re.I)
-    if m:
-        desc = clean(m.group(1))
+    desc = extract_meta_content(html, name="description") or extract_meta_content(html, prop="og:description")
 
     # authors: only from the byline span (avoids sidebar contributor lists)
     byline = BYLINE_RE.search(html)
@@ -297,6 +294,27 @@ def parse_article(aid, rec):
         "pages": pages,
         "wayback_captures": rec["captures"],
     }
+
+
+def extract_meta_content(html, *, name=None, prop=None):
+    """Extract a meta content value, tolerating old Gamasutra's unescaped quotes.
+
+    Some archived descriptions contain literal `"Game of the Year"`-style quotes
+    inside the content attribute. A normal `[^"]*` regex truncates those; taking
+    the last quote before the tag close recovers the whole legacy value.
+    """
+    wanted = ("name", name.lower()) if name else ("property", prop.lower())
+    for tag in re.findall(r"<meta\b[^>]*>", html, re.I | re.S):
+        attr_re = r"\b" + re.escape(wanted[0]) + r"\s*=\s*['\"]" + re.escape(wanted[1]) + r"['\"]"
+        if not re.search(attr_re, tag, re.I):
+            continue
+        m = re.search(r'\bcontent\s*=\s*"(.*)"\s*/?\s*>$', tag, re.I | re.S)
+        if m:
+            return clean(m.group(1))
+        m = re.search(r"\bcontent\s*=\s*'([^']*)'", tag, re.I | re.S)
+        if m:
+            return clean(m.group(1))
+    return ""
 
 
 def slug_title(slug):
