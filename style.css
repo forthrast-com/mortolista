@@ -50,6 +50,8 @@ img.thumb{display:block; width:52px; height:52px; object-fit:cover; border:1px s
 tbody tr:nth-child(even){background:var(--row-alt)}
 tbody tr:hover{background:#fbf7e3}
 td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
+.hn-metric span{white-space:nowrap}
+.hn-metric span + span{margin-left:6px; color:var(--muted)}
 .title-cell{font-weight:bold; font-family:Georgia,serif; font-size:15px; line-height:1.25}
 .summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:11.5px; color:var(--muted); margin-top:2px; max-width:52ch}
 .game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
@@ -57,7 +59,6 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
 .mirrors a{color:var(--muted); text-decoration:none}
 .mirrors a:hover{color:var(--link); text-decoration:underline}
 .primary-link{font-weight:bold; color:#445}
-.dead-link{color:#aaa; text-decoration:line-through; cursor:not-allowed}
 .cat{display:inline-block; font-size:10px; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--gama-green); padding:1px 6px; border-radius:2px; white-space:nowrap}
 .cat.indie{background:#2a8a4d}
 .cat.audio{background:#7a5a2a}
@@ -121,5 +122,5 @@ footer .wrap{line-height:1.6}
   .mirrors{margin-top:7px; padding-top:6px; border-top:1px solid var(--rule); font-size:12px; line-height:1.45}
   /* the desktop column cells are redundant on mobile */
   tbody td:nth-child(3),tbody td:nth-child(4),tbody td:nth-child(5),
-  tbody td:nth-child(6),tbody td:nth-child(7),tbody td:nth-child(8){display:none}
+  tbody td:nth-child(6),tbody td:nth-child(7){display:none}
 }

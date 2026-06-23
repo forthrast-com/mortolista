@@ -102,6 +102,13 @@ function num(v) {
   return v ? `<td class="num">${v}</td>` : `<td class="num zero">–</td>`;
 }
 
+function hnMetricHTML(d) {
+  const points = d.hn_points_sum || 0;
+  const comments = d.hn_comments_sum || 0;
+  if (!points && !comments) return `<td class="num hn-metric zero">–</td>`;
+  return `<td class="num hn-metric"><span>${points.toLocaleString()}▲</span><span>${comments.toLocaleString()}｜</span></td>`;
+}
+
 function metricValue(d, k) {
   const v = d[k];
   if (k === "date") return d.date ? (d.date_estimated ? `~${d.date}` : d.date) : "—";
@@ -129,16 +136,27 @@ function hnThreadsHTML(d) {
   return ` · ${shown.join(" · ")}`;
 }
 
-function linkHTML(ok, url, label, title) {
-  if (ok === false || !url) return `<span class="dead-link" title="Checked: unavailable">${esc(label)}</span>`;
-  return `<a href="${esc(url)}" target="_blank" rel="noopener" title="${esc(title)}">${esc(label)}</a>`;
+function usableLink(ok, url) {
+  return ok === true && !!url;
+}
+
+function sameUrl(a, b) {
+  return a && b && a === b;
+}
+
+function linkHTML(url, label, title, primary) {
+  const body = esc(label);
+  const attrs = `href="${esc(url)}" target="_blank" rel="noopener" title="${esc(title)}"`;
+  return primary
+    ? `<a class="primary-link" ${attrs}><strong>${body}</strong></a>`
+    : `<a ${attrs}>${body}</a>`;
 }
 
 function printArchiveUrl(d) {
   const wayback = d.wayback_print || "";
-  if (d.wayback_print_ok !== false && /[?&]print=1(?:[#&]|$)/.test(wayback)) return wayback;
+  if (usableLink(d.wayback_print_ok, wayback) && /[?&]print=1(?:[#&]|$)/.test(wayback)) return wayback;
   const archiveToday = d.archive_today_print || "";
-  return d.archive_today_print_ok === true ? archiveToday : "";
+  return usableLink(d.archive_today_print_ok, archiveToday) ? archiveToday : "";
 }
 
 function rowHTML(d) {
@@ -150,22 +168,27 @@ function rowHTML(d) {
   const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
   const gameLine = d.game && d.game !== d.title ? `<span class="game">${esc(d.game)}</span>` : "";
   const fullText = printArchiveUrl(d);
-  const primary = fullText || d.wayback;
-  const at = d.archive_today || `https://archive.ph/newest/${encodeURIComponent(d.original_url)}`;
-  const live = d.live_ok === false ? "" : (d.live_url || "");
+  const primary = fullText || (usableLink(d.wayback_ok, d.wayback) ? d.wayback : "");
   const fullTitle = d.pages > 1
     ? `Full article on one page (${d.pages} pages)`
     : "Archived print view / full text";
-  const mirrorParts = [];
-  if (fullText) mirrorParts.push(`<strong class="primary-link" title="${esc(fullTitle)}">primary: full text</strong>`);
-  mirrorParts.push(linkHTML(d.wayback_ok, d.wayback, "wayback", "Internet Archive snapshot of the original page"));
-  mirrorParts.push(linkHTML(d.original_ok, d.original_url, "original", "Original Gamasutra URL"));
-  if (live) mirrorParts.push(linkHTML(d.live_ok, live, "live", "Verified live Game Developer URL (may have broken formatting)"));
-  if (d.archive_today_print || d.archive_today_print_ok === false) {
-    mirrorParts.push(linkHTML(d.archive_today_print_ok, d.archive_today_print, "archive.today full", "archive.today print/full-text mirror"));
-  }
-  mirrorParts.push(linkHTML(d.archive_today_ok, at, "archive.today", "archive.today mirror (fallback)"));
-  const mirrors = `<span class="mirrors">${mirrorParts.join(" · ")}${hnThreadsHTML(d)}</span>`;
+  const mirrorLinks = [
+    { ok: !!fullText, url: fullText, label: "full text", title: fullTitle },
+    { ok: usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
+    { ok: usableLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
+    { ok: usableLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
+    { ok: usableLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.today full", title: "archive.today print/full-text mirror" },
+    { ok: usableLink(d.archive_today_ok, d.archive_today), url: d.archive_today, label: "archive.today", title: "archive.today mirror (fallback)" },
+  ].filter(link => link.ok && link.url);
+  const seenMirrorUrls = new Set();
+  const mirrorParts = mirrorLinks.flatMap(link => {
+    if (seenMirrorUrls.has(link.url)) return [];
+    seenMirrorUrls.add(link.url);
+    return [linkHTML(link.url, link.label, link.title, sameUrl(link.url, primary))];
+  });
+  const mirrors = mirrorParts.length || (d.hn_threads || []).length
+    ? `<span class="mirrors">${mirrorParts.join(" · ")}${hnThreadsHTML(d)}</span>`
+    : "";
   // vintage dateline: metadata line shown ABOVE the headline (esp. on mobile)
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
@@ -175,16 +198,19 @@ function rowHTML(d) {
         : "")
     + ` ${sortMetricHTML(d)}`
     + `</span>`;
-  const thumb = d.thumbnail
+  const title = primary
+    ? `<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(d.title)}</a>`
+    : `<span class="title-cell">${esc(d.title)}</span>`;
+  const thumb = d.thumbnail && primary
     ? `<a href="${esc(primary)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
     : "";
   return `<tr>
-    <td class="thumb-cell${d.thumbnail ? "" : " no-thumb"}">${thumb}</td>
-    <td class="main-cell">${metaTop}<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(d.title)}</a>${gameLine}${summary}${mirrors}</td>
+    <td class="thumb-cell${thumb ? "" : " no-thumb"}">${thumb}</td>
+    <td class="main-cell">${metaTop}${title}${gameLine}${summary}${mirrors}</td>
     <td>${authors}${star}</td>
     <td><span class="cat ${catClass(d.category)}">${esc(d.category)}</span></td>
     <td class="num">${date}</td>
-    ${num(d.hn_points_sum)}${num(d.hn_comments_sum)}${num(d.wayback_captures)}
+    ${hnMetricHTML(d)}${num(d.wayback_captures)}
   </tr>`;
 }
 
