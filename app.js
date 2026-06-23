@@ -38,12 +38,21 @@ const BLANK_HN = {
   hn_threads: [],
 };
 
-async function loadHnMetrics() {
-  const res = await fetch("data/hn_postmortem_threads.toml", { cache: "no-cache" });
-  if (!res.ok) throw new Error(`HN metrics ${res.status}`);
-  const rows = parse(await res.text()).hn_postmortem || [];
+async function loadSidecar(path, table, defaults = {}) {
+  const res = await fetch(path, { cache: "no-cache" });
+  if (!res.ok) throw new Error(`${path} ${res.status}`);
+  const rows = parse(await res.text())[table] || [];
   const byId = new Map(rows.map(row => [row.id, row]));
-  DATA = DATA.map(d => ({ ...BLANK_HN, ...d, ...(byId.get(d.id) || {}) }));
+  DATA = DATA.map(d => ({ ...defaults, ...d, ...(byId.get(d.id) || {}) }));
+}
+
+async function loadHnMetrics() {
+  await loadSidecar("data/hn_postmortem_threads.toml", "hn_postmortem", BLANK_HN);
+}
+
+async function loadMirrorSidecars() {
+  await loadSidecar("data/archive_is_mirrors.toml", "archive_mirror");
+  await loadSidecar("data/gamedeveloper_live_urls.toml", "gamedeveloper_live");
 }
 
 async function load() {
@@ -52,6 +61,7 @@ async function load() {
     if (!res.ok) throw new Error(res.status);
     DATA = (parse(await res.text()).postmortem) || [];
     await loadHnMetrics();
+    await loadMirrorSidecars();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
@@ -223,16 +233,16 @@ function rowHTML(d) {
   const fullTitle = d.pages > 1
     ? `Full article on one page (${d.pages} pages)`
     : "Archived print view / full text";
-  const archiveToday = d.archive_today || (d.archive_today_ok === true && d.original_url
-    ? `https://archive.ph/newest/${encodeURIComponent(d.original_url)}`
+  const archiveToday = d.archive_today || (d.original_url
+    ? `https://archive.is/newest/${encodeURIComponent(d.original_url)}`
     : "");
   const mirrorLinks = [
     { ok: !!fullText, url: fullText, label: "full text", title: fullTitle },
     { ok: usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
     { ok: checkedLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
     { ok: checkedLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
-    { ok: checkedLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.today full", title: "archive.today print/full-text mirror" },
-    { ok: checkedLink(d.archive_today_ok, archiveToday), url: archiveToday, label: "archive.today", title: "archive.today mirror (fallback)" },
+    { ok: usableLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.is full", title: "archive.is print/full-text mirror" },
+    { ok: usableLink(d.archive_today_ok, archiveToday), url: archiveToday, label: "archive.is", title: "archive.is mirror (fallback)" },
   ].filter(link => link.ok && link.url);
   const seenMirrorUrls = new Set();
   const mirrorParts = mirrorLinks.flatMap(link => {

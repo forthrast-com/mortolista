@@ -16,7 +16,7 @@ Usage:
   python scrape.py                   # full run
   python scrape.py --list-only       # just refresh the CDX url list cache
 """
-import argparse, html as htmllib, json, re, sys, time, urllib.parse, unicodedata
+import argparse, calendar, html as htmllib, json, re, sys, time, urllib.parse, unicodedata
 from pathlib import Path
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
@@ -27,6 +27,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 HN_POSTS = DATA / "hn_gamasutra_posts.toml"
 HN_METRICS = DATA / "hn_postmortem_threads.toml"
+ARCHIVE_MIRRORS = DATA / "archive_is_mirrors.toml"
+GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
@@ -401,8 +403,8 @@ def wayback_available(url):
     return "/web/" in urllib.parse.urlparse(final).path
 
 
-def archive_today_url(original_url):
-    return f"https://archive.ph/newest/{urllib.parse.quote(original_url, safe='')}"
+def archive_today_url(original_url, host="archive.is"):
+    return f"https://{host}/newest/{urllib.parse.quote(original_url, safe='')}"
 
 
 def print_url(original_url):
@@ -430,26 +432,33 @@ def original_available(url):
     return True
 
 
+_gamedev_sitemap_cache = {}
+
+
+def gamedev_archive_sitemap_urls(article):
+    date = article.get("date", "")
+    if not re.match(r"\d{4}-\d{2}-\d{2}$", date):
+        return []
+    year = int(date[:4])
+    month = calendar.month_name[int(date[5:7])].lower()
+    return [f"https://www.gamedeveloper.com/article/archive/{year}/{month}.xml"]
+
+
 def gamedev_live_candidates(article):
-    query = article.get("title", "") or article.get("game", "") or canonical_slug(article)
-    if not query:
-        return []
-    try:
-        r = SESSION.get("https://www.gamedeveloper.com/search", params={"q": query},
-                        headers=CHECK_HEAD, timeout=25)
-        if r.status_code != 200:
-            return []
-    except requests.RequestException:
-        return []
     candidates = []
-    for href, body in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', r.text, re.I | re.S):
-        href = htmllib.unescape(href)
-        if href.startswith("/"):
-            href = "https://www.gamedeveloper.com" + href
-        if "gamedeveloper.com" not in href:
-            continue
-        text = clean(re.sub(r"<[^>]+>", " ", htmllib.unescape(body)))
-        if text:
+    for sitemap_url in gamedev_archive_sitemap_urls(article):
+        if sitemap_url not in _gamedev_sitemap_cache:
+            try:
+                r = SESSION.get(sitemap_url, headers=CHECK_HEAD, timeout=30)
+                _gamedev_sitemap_cache[sitemap_url] = r.text if r.status_code == 200 else ""
+            except requests.RequestException:
+                _gamedev_sitemap_cache[sitemap_url] = ""
+        for href in re.findall(r"<loc>(.*?)</loc>", _gamedev_sitemap_cache[sitemap_url], re.I):
+            href = htmllib.unescape(href).strip()
+            if "gamedeveloper.com" not in href:
+                continue
+            text = urllib.parse.unquote(urllib.parse.urlparse(href).path.rsplit("/", 1)[-1])
+            text = re.sub(r"[-_]+", " ", text)
             candidates.append((href, text))
     return candidates
 
@@ -471,30 +480,41 @@ def find_live_gamedeveloper_url(article):
             best = (score, href)
     if best[0] < 0.62:
         return ""
-    ok, final = http_exists(best[1], allow_redirect=True, timeout=20)
+    # GameDeveloper redirects missing articles to section indexes with HTTP 200.
+    # Sitemap URLs are the canonical source here; do a cheap sanity check without
+    # following those soft-404 redirects away from the candidate path.
+    ok, final = http_exists(best[1], allow_redirect=False, timeout=20)
     if not ok:
         return ""
-    path = urllib.parse.urlparse(final).path.rstrip("/")
+    path = urllib.parse.urlparse(best[1]).path.rstrip("/")
     if path in ("", "/", "/business", "/design", "/programming", "/latest-news"):
         return ""
-    return final
+    return best[1]
 
 
 def check_article_links(article):
     article["wayback_ok"] = wayback_available(article.get("wayback", ""))
     article["wayback_print_ok"] = wayback_available(article.get("wayback_print", ""))
     article["original_ok"] = original_available(article.get("original_url", ""))
-    original = article.get("original_url", "")
-    at = archive_today_url(original)
-    at_print = archive_today_url(print_url(original))
-    article["archive_today"] = at
-    article["archive_today_ok"] = archive_today_available(at)
-    article["archive_today_print"] = at_print
-    article["archive_today_print_ok"] = archive_today_available(at_print)
-    live = find_live_gamedeveloper_url(article)
-    article["live_url"] = live
-    article["live_ok"] = bool(live)
     return article
+
+
+def archive_mirror_row(article):
+    original = article.get("original_url", "")
+    return {
+        "id": article["id"],
+        "archive_today": archive_today_url(original),
+        # archive.is aggressively rate-limits automated checks; /newest/ remains
+        # a valid human-facing fallback even when this VM gets a 429.
+        "archive_today_ok": True,
+        "archive_today_print": archive_today_url(print_url(original)),
+        "archive_today_print_ok": True,
+    }
+
+
+def gamedev_live_row(article):
+    live = find_live_gamedeveloper_url(article)
+    return {"id": article["id"], "live_url": live, "live_ok": bool(live)}
 
 
 # ------------------------------------------------------------------- HN enrich
@@ -884,8 +904,7 @@ def merge_article_group(group):
             if aid != best["id"]:
                 alt_ids.append(aid)
         # fill sparse fields from alternates
-        for k in ("summary", "thumbnail", "date", "original_url", "wayback", "wayback_print",
-                  "archive_today", "archive_today_print", "live_url"):
+        for k in ("summary", "thumbnail", "date", "original_url", "wayback", "wayback_print"):
             if not best.get(k) and art.get(k):
                 best[k] = art[k]
         best["hn_points"] = max(best.get("hn_points", 0) or 0, art.get("hn_points", 0) or 0)
@@ -977,7 +996,7 @@ def assert_hn_not_blank(rows):
 
 
 def refresh_link_checks(data_path):
-    """Refresh slow link availability fields without touching HN sidecar data."""
+    """Refresh core Wayback/original link availability fields only."""
     data_path = Path(data_path)
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
@@ -990,6 +1009,25 @@ def refresh_link_checks(data_path):
     return len(articles)
 
 
+def refresh_archive_mirrors(data_path, out_path=ARCHIVE_MIRRORS):
+    payload = load_toml(data_path)
+    rows = [archive_mirror_row(article) for article in payload.get("postmortem", [])]
+    Path(out_path).write_bytes(tomli_w.dumps({"archive_mirror": rows}).encode())
+    return len(rows)
+
+
+def refresh_gamedev_live(data_path, out_path=GAMEDEV_LIVE):
+    payload = load_toml(data_path)
+    articles = payload.get("postmortem", [])
+    rows = []
+    for i, article in enumerate(articles, 1):
+        rows.append(gamedev_live_row(article))
+        if i % 25 == 0:
+            log(f"[*] found live URLs {i}/{len(articles)}")
+    Path(out_path).write_bytes(tomli_w.dumps({"gamedeveloper_live": rows}).encode())
+    return len(rows)
+
+
 # -------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
@@ -998,7 +1036,9 @@ def main():
     ap.add_argument("--hn-only", action="store_true", help="refresh data/hn_gamasutra_posts.toml and exit")
     ap.add_argument("--hn-audit", action="store_true", help="audit cached HN posts against local postmortem URL cache and exit")
     ap.add_argument("--refresh-hn-metrics", action="store_true", help="recompute HN fields in --out from local cache and exit")
-    ap.add_argument("--check-links", action="store_true", help="slow: refresh link availability fields")
+    ap.add_argument("--check-links", action="store_true", help="slow: refresh core Wayback/original link availability fields")
+    ap.add_argument("--archive-mirrors-only", action="store_true", help="write archive.is mirror sidecar and exit")
+    ap.add_argument("--gamedev-live-only", action="store_true", help="slow: discover live gamedeveloper.com URLs sidecar and exit")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
     ap.add_argument("--hn-metrics", default=str(HN_METRICS), help="article HN metrics sidecar TOML")
     ap.add_argument("--no-enrich", action="store_true", help="skip HN+Wikipedia")
@@ -1017,6 +1057,14 @@ def main():
     if args.refresh_hn_metrics:
         n = refresh_hn_metrics(args.out, args.hn_posts, args.hn_metrics)
         log(f"[*] refreshed HN metrics for {n} entries -> {args.hn_metrics}")
+        return
+    if args.archive_mirrors_only:
+        n = refresh_archive_mirrors(args.out)
+        log(f"[*] refreshed archive.is mirrors for {n} entries -> {ARCHIVE_MIRRORS}")
+        return
+    if args.gamedev_live_only:
+        n = refresh_gamedev_live(args.out)
+        log(f"[*] refreshed GameDeveloper live URLs for {n} entries -> {GAMEDEV_LIVE}")
         return
     if args.check_links and args.no_enrich:
         n = refresh_link_checks(args.out)
