@@ -16,3 +16,8 @@ reason = "Old id for The Cabal / Half-Life postmortem canon."
 id = "131577"
 url = "http://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php"
 reason = "Half-Life and Team Fortress networking postmortem-canon technical article."
+
+[[include]]
+id = "6471"
+url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php"
+reason = "Valve interview/postmortem-adjacent process piece; surfaced by high-HN audit and missed by postmortem slug sweep."

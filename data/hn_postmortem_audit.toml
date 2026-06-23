@@ -48,7 +48,7 @@ feature_ids = [
 ]
 points = 62
 num_comments = 9
-suggested_include = true
+suggested_include = false
 
 [[review_candidate]]
 object_id = "15763013"

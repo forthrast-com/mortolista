@@ -1668,6 +1668,30 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "6471"
+hn_points = 62
+hn_comments = 9
+hn_points_sum = 65
+hn_comments_sum = 9
+hn_submissions = 2
+
+[[hn_postmortem.hn_threads]]
+object_id = "3029687"
+title = "The Valve Way: Gabe Newell And Erik Johnson Speak"
+url = "https://news.ycombinator.com/item?id=3029687"
+points = 62
+comments = 9
+submitted_url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php"
+
+[[hn_postmortem.hn_threads]]
+object_id = "2938046"
+title = "The Valve Way: Gabe Newell And Erik Johnson Speak"
+url = "https://news.ycombinator.com/item?id=2938046"
+points = 3
+comments = 0
+submitted_url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php?print=1"
+
+[[hn_postmortem]]
 id = "6472"
 hn_points = 2
 hn_comments = 0
