@@ -1,0 +1,106 @@
+/* ---- Rich emerald palette, rooted in the classic Gamasutra gear green ---- */
+:root{
+  --ink:#222; --paper:#f2f5f1; --rule:#cbd6cc;
+  --gama-green:#1f6e3b; --gama-green-dk:#0f4d28; --gama-leaf:#2a8a4d; --accent:#b14a32;
+  --row:#fff; --row-alt:#e8efe9; --link:#1c6b3a; --muted:#6c7c70;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:14px/1.5 "Lucida Grande","Segoe UI",Verdana,sans-serif;
+}
+.wrap{max-width:1040px; margin:0 auto; padding:0 16px}
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+
+#masthead{
+  background:linear-gradient(#258050,var(--gama-green-dk));
+  color:#fff; border-bottom:3px solid #0a3a1d; padding:14px 0 16px;
+}
+#masthead h1{margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:normal}
+#masthead .gama{font-weight:bold; letter-spacing:-.5px}
+#masthead .sub{color:#bfe6cf; font-size:.62em; text-transform:uppercase; letter-spacing:2px; vertical-align:middle}
+.tagline{margin:.3em 0 0; color:#aadcc0; font-size:12px; font-style:italic}
+
+#toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:16px 0 10px}
+#search{flex:1 1 260px; min-width:200px; padding:6px 9px; border:1px solid var(--rule); background:#fff}
+#category{padding:6px; border:1px solid var(--rule); background:#fff}
+.chk{font-size:12px; color:#444; display:flex; gap:5px; align-items:center; white-space:nowrap}
+.count{margin-left:auto; color:var(--muted); font-size:12px}
+
+table{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--rule)}
+thead th{
+  position:sticky; top:0; z-index:2;
+  background:linear-gradient(#2c7d4c,#1f6e3b); color:#fff; text-align:left;
+  font-size:11px; text-transform:uppercase; letter-spacing:.5px; font-weight:bold;
+  padding:7px 9px; border-right:1px solid #3d8a5a; white-space:nowrap;
+}
+thead th.sortable{cursor:pointer}
+thead th.sortable:hover{background:linear-gradient(#358a58,#247044)}
+thead th.num{text-align:right}
+th.sorted-asc::after{content:" ▲"; font-size:9px}
+th.sorted-desc::after{content:" ▼"; font-size:9px}
+
+tbody td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top}
+.thumb-col{width:60px}
+.thumb-cell{padding:5px 0 5px 8px; width:60px}
+.thumb-cell.no-thumb{background:repeating-linear-gradient(45deg,#eef2ee,#eef2ee 4px,#e6ece6 4px,#e6ece6 8px)}
+img.thumb{display:block; width:52px; height:52px; object-fit:cover; border:1px solid var(--rule); background:#fff}
+tbody tr:nth-child(even){background:var(--row-alt)}
+tbody tr:hover{background:#fbf7e3}
+td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
+.title-cell{font-weight:bold; font-family:Georgia,serif; font-size:15px; line-height:1.25}
+.summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:11.5px; color:var(--muted); margin-top:2px; max-width:52ch}
+.game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
+.mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
+.mirrors a{color:var(--muted); text-decoration:none}
+.mirrors a:hover{color:var(--link); text-decoration:underline}
+.cat{display:inline-block; font-size:10px; text-transform:uppercase; letter-spacing:.5px; color:#fff; background:var(--gama-green); padding:1px 6px; border-radius:2px; white-space:nowrap}
+.cat.indie{background:#2a8a4d}
+.cat.audio{background:#7a5a2a}
+.cat.middleware{background:#2f5f6e}
+.notable{color:var(--accent); font-weight:bold; cursor:help}
+.est{color:var(--muted); cursor:help}
+.zero{color:#bbb}
+/* vintage dateline above the headline — desktop uses the table columns,
+   so it's hidden there and revealed in the mobile card layout */
+.meta-top{display:none}
+#sortSel{display:none}
+
+.status{color:var(--muted); padding:14px 0; font-style:italic}
+footer{margin-top:24px; padding:16px 0 40px; border-top:1px solid var(--rule); color:var(--muted); font-size:11px}
+footer .wrap{line-height:1.6}
+
+@media(max-width:720px){
+  /* sort via dropdown instead of column headers */
+  #sortSel{display:inline-block; flex:1 1 140px}
+  #search{flex:1 1 100%}
+  thead{display:none}
+  table,tbody,tr,td{display:block; width:auto}
+  table{border:none; background:transparent}
+  tbody tr{
+    background:#fff !important; border:1px solid var(--rule);
+    margin-bottom:10px; padding:10px 12px; position:relative;
+  }
+  /* thumbnail floats top-right of the card */
+  .thumb-cell{position:absolute; top:10px; right:12px; width:56px; padding:0}
+  .thumb-cell.no-thumb{display:none}
+  img.thumb{width:56px; height:56px}
+  .main-cell{padding:0}
+  /* metadata dateline ABOVE the headline */
+  .meta-top{
+    display:block; font-size:11px; color:var(--muted);
+    text-transform:uppercase; letter-spacing:.4px; margin-bottom:3px;
+    padding-right:64px;
+  }
+  .meta-top .m-date{font-weight:bold; color:#445}
+  .meta-top .cat{vertical-align:baseline}
+  .meta-top .m-auth{text-transform:none; letter-spacing:0; font-style:italic}
+  .meta-top .m-hn{color:var(--gama-green); font-weight:bold}
+  .title-cell{font-size:17px; padding-right:64px}
+  .summary{display:block; max-width:none; margin-top:5px}
+  /* the desktop column cells are redundant on mobile */
+  tbody td:nth-child(3),tbody td:nth-child(4),tbody td:nth-child(5),
+  tbody td:nth-child(6),tbody td:nth-child(7),tbody td:nth-child(8){display:none}
+}
