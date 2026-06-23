@@ -26,6 +26,7 @@ import tomli_w
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 HN_POSTS = DATA / "hn_gamasutra_posts.toml"
+HN_METRICS = DATA / "hn_postmortem_threads.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
@@ -928,24 +929,60 @@ def dedupe_articles(articles):
 
 
 # ---------------------------------------------------------- local data refresh
-def refresh_hn_metrics(data_path, hn_posts_path=HN_POSTS):
-    """Recompute HN metrics for an existing dataset from local HN cache only."""
-    data_path = Path(data_path)
-    payload = load_toml(data_path)
-    hn_posts = load_hn_posts(hn_posts_path)
-    articles = payload.get("postmortem", [])
+HN_KEYS = ("hn_points", "hn_comments", "hn_points_sum", "hn_comments_sum", "hn_submissions", "hn_threads")
+
+
+def hn_metric_rows(articles, hn_posts):
+    rows = []
     for article in articles:
-        article.update(hn_stats(article, hn_posts))
-    data_path.write_bytes(tomli_w.dumps(payload).encode())
-    return len(articles)
+        row = {"id": article["id"]}
+        row.update(hn_stats(article, hn_posts))
+        rows.append(row)
+    return rows
+
+
+def write_hn_metrics(articles, hn_posts_path=HN_POSTS, metrics_path=HN_METRICS):
+    """Write article-scoped HN metrics to a sidecar TOML.
+
+    HN data is derived from `hn_gamasutra_posts.toml`; keeping it out of
+    `postmortems.toml` prevents no-enrich or link-check refreshes from silently
+    blanking discussion counts in the primary catalogue.
+    """
+    hn_posts = load_hn_posts(hn_posts_path)
+    rows = hn_metric_rows(articles, hn_posts)
+    assert_hn_not_blank(rows)
+    Path(metrics_path).write_bytes(tomli_w.dumps({"hn_postmortem": rows}).encode())
+    return len(rows)
+
+
+def strip_hn_fields(article):
+    for key in HN_KEYS:
+        article.pop(key, None)
+    return article
+
+
+def refresh_hn_metrics(data_path, hn_posts_path=HN_POSTS, metrics_path=HN_METRICS):
+    """Recompute sidecar HN metrics for an existing dataset from local cache."""
+    payload = load_toml(data_path)
+    return write_hn_metrics(payload.get("postmortem", []), hn_posts_path, metrics_path)
+
+
+def assert_hn_not_blank(rows):
+    """Catch accidental writes of a fully blank HN metric set."""
+    if not rows:
+        return
+    if any((r.get("hn_points_sum") or r.get("hn_comments_sum") or r.get("hn_threads")) for r in rows):
+        return
+    raise RuntimeError("refusing to write fully blank HN metrics; refresh data/hn_gamasutra_posts.toml first")
 
 
 def refresh_link_checks(data_path):
-    """Refresh slow link availability fields for an existing dataset."""
+    """Refresh slow link availability fields without touching HN sidecar data."""
     data_path = Path(data_path)
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
     for i, article in enumerate(articles, 1):
+        strip_hn_fields(article)
         check_article_links(article)
         if i % 25 == 0:
             log(f"[*] checked links {i}/{len(articles)}")
@@ -963,6 +1000,7 @@ def main():
     ap.add_argument("--refresh-hn-metrics", action="store_true", help="recompute HN fields in --out from local cache and exit")
     ap.add_argument("--check-links", action="store_true", help="slow: refresh link availability fields")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
+    ap.add_argument("--hn-metrics", default=str(HN_METRICS), help="article HN metrics sidecar TOML")
     ap.add_argument("--no-enrich", action="store_true", help="skip HN+Wikipedia")
     ap.add_argument("--out", default=str(DATA / "postmortems.toml"))
     args = ap.parse_args()
@@ -977,8 +1015,8 @@ def main():
         log(f"[*] {summary}")
         return
     if args.refresh_hn_metrics:
-        n = refresh_hn_metrics(args.out, args.hn_posts)
-        log(f"[*] refreshed HN metrics for {n} entries -> {args.out}")
+        n = refresh_hn_metrics(args.out, args.hn_posts, args.hn_metrics)
+        log(f"[*] refreshed HN metrics for {n} entries -> {args.hn_metrics}")
         return
     if args.check_links and args.no_enrich:
         n = refresh_link_checks(args.out)
@@ -1007,9 +1045,6 @@ def main():
         art = parse_article(aid, rec)
         if not art:
             continue
-        art["hn_points"] = art["hn_comments"] = 0
-        art["hn_points_sum"] = art["hn_comments_sum"] = art["hn_submissions"] = 0
-        art["hn_threads"] = []
         art["author_notable"] = False
         # phase-2 placeholders
         art["reddit_points"] = 0
@@ -1020,7 +1055,6 @@ def main():
     out = dedupe_articles(out)
     if not args.no_enrich:
         for i, art in enumerate(out, 1):
-            art.update(hn_stats(art, hn_posts))
             art["author_notable"] = any(author_notable(a) for a in art["authors"])
             if args.check_links:
                 check_article_links(art)
@@ -1029,9 +1063,12 @@ def main():
             time.sleep(0.3)
 
     out.sort(key=lambda a: (a["date"] or "0000", a["title"]))
-    payload = {"postmortem": out}
+    payload = {"postmortem": [strip_hn_fields(art) for art in out]}
     Path(args.out).write_bytes(tomli_w.dumps(payload).encode())
     log(f"[*] wrote {len(out)} entries -> {args.out}")
+    if not args.no_enrich:
+        n = write_hn_metrics(out, args.hn_posts, args.hn_metrics)
+        log(f"[*] wrote HN metrics for {n} entries -> {args.hn_metrics}")
 
 
 if __name__ == "__main__":

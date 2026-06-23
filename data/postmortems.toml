@@ -15,18 +15,12 @@ wayback = "https://web.archive.org/web/20120401225703/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120401225703/http://www.gamasutra.com/view/feature/131643/postmortem_ssis_dark_sun_online_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3235",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131691"
@@ -45,18 +39,12 @@ wayback = "https://web.archive.org/web/20120510051918/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051918/http://www.gamasutra.com/view/feature/131691/postmortem_bungies_myth_the_.php?print=1"
 pages = 2
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3283",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131706"
@@ -75,18 +63,12 @@ wayback = "https://web.archive.org/web/20120510051855/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051855/http://www.gamasutra.com/view/feature/131706/postmortem_dreamforges_sanitarium.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3299",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131746"
@@ -105,25 +87,12 @@ wayback = "https://web.archive.org/web/20120510051840/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051840/http://www.gamasutra.com/view/feature/131746/postmortem_dreamworks_.php?print=1"
 pages = 4
 wayback_captures = 10
-hn_points = 51
-hn_comments = 19
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3339",
 ]
-hn_points_sum = 51
-hn_comments_sum = 19
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "22771419"
-title = "Postmortem: DreamWorks Interactive's Trespasser (1999)"
-url = "https://news.ycombinator.com/item?id=22771419"
-points = 51
-comments = 19
-submitted_url = "https://www.gamasutra.com/view/feature/131746/postmortem_dreamworks_.php"
 
 [[postmortem]]
 id = "131762"
@@ -142,18 +111,12 @@ wayback = "https://web.archive.org/web/20120330000324/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120330000324/http://www.gamasutra.com/view/feature/131762/postmortem_thief_the_dark_project.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3355",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131775"
@@ -173,18 +136,12 @@ wayback = "https://web.archive.org/web/20120510051812/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051812/http://www.gamasutra.com/view/feature/131775/postmortem_lucaslearnings_star_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3368",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131788"
@@ -204,18 +161,12 @@ wayback = "https://web.archive.org/web/20120510051749/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051749/http://www.gamasutra.com/view/feature/131788/postmortem_outrages_descent_3.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3381",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131809"
@@ -234,18 +185,12 @@ wayback = "https://web.archive.org/web/20120510051744/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051744/http://www.gamasutra.com/view/feature/131809/postmortem_presto_studios_star_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3402",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131811"
@@ -264,18 +209,12 @@ wayback = "https://web.archive.org/web/20120301193558/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120301193558/http://www.gamasutra.com/view/feature/131811/postmortem_hyperbole_studios_the_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3404",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131813"
@@ -294,18 +233,12 @@ wayback = "https://web.archive.org/web/20120510051728/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051728/http://www.gamasutra.com/view/feature/131813/postmortem_irrational_games_.php?print=1"
 pages = 3
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3406",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131814"
@@ -324,18 +257,12 @@ wayback = "https://web.archive.org/web/20120510051720/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051720/http://www.gamasutra.com/view/feature/131814/postmortem_activisions_heavy_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3407",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131815"
@@ -354,73 +281,12 @@ wayback = "https://web.archive.org/web/20120424031214/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120424031214/http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php?print=1"
 pages = 4
 wayback_captures = 0
-hn_points = 188
-hn_comments = 84
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3408",
 ]
-hn_points_sum = 359
-hn_comments_sum = 113
-hn_submissions = 7
-
-[[postmortem.hn_threads]]
-object_id = "25804194"
-title = "The Cabal: Valve’s Design Process for Creating Half-Life (1999)"
-url = "https://news.ycombinator.com/item?id=25804194"
-points = 188
-comments = 84
-submitted_url = "https://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
-
-[[postmortem.hn_threads]]
-object_id = "7761030"
-title = "Valve’s Design Process For Creating Half-Life (1999)"
-url = "https://news.ycombinator.com/item?id=7761030"
-points = 152
-comments = 25
-submitted_url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
-
-[[postmortem.hn_threads]]
-object_id = "1892737"
-title = "The Cabal: Valve’s Design Process For Creating Half-Life [1999]"
-url = "https://news.ycombinator.com/item?id=1892737"
-points = 10
-comments = 3
-submitted_url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "8821005"
-title = "The Cabal: Valve’s Design Process For Creating Half-Life (1999)"
-url = "https://news.ycombinator.com/item?id=8821005"
-points = 3
-comments = 1
-submitted_url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
-
-[[postmortem.hn_threads]]
-object_id = "3983232"
-title = "The Cabal: Valve’s Design Process For Creating Half-Life"
-url = "https://news.ycombinator.com/item?id=3983232"
-points = 3
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
-
-[[postmortem.hn_threads]]
-object_id = "8251652"
-title = "Valve’s Design Process for Creating Half-Life"
-url = "https://news.ycombinator.com/item?id=8251652"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php?page=1"
-
-[[postmortem.hn_threads]]
-object_id = "4979672"
-title = "The Cabal: Valve’s Design Process For Creating Half-Life (1999)"
-url = "https://news.ycombinator.com/item?id=4979672"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php"
 
 [[postmortem]]
 id = "131823"
@@ -439,18 +305,12 @@ wayback = "https://web.archive.org/web/20120510051708/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051708/http://www.gamasutra.com/view/feature/131823/postmortem_multitudes_fireteam.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3416",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131824"
@@ -469,18 +329,12 @@ wayback = "https://web.archive.org/web/20120510051659/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051659/http://www.gamasutra.com/view/feature/131824/postmortem_shiny_entertainments_.php?print=1"
 pages = 5
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3417",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131829"
@@ -499,18 +353,12 @@ wayback = "https://web.archive.org/web/20120510051653/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051653/http://www.gamasutra.com/view/feature/131829/postmortem_redstorms_rainbow_six.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3422",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131832"
@@ -529,18 +377,12 @@ wayback = "https://web.archive.org/web/20120510051645/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051645/http://www.gamasutra.com/view/feature/131832/postmortem_zombies_specops_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3425",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131843"
@@ -559,18 +401,12 @@ wayback = "https://web.archive.org/web/20120510051637/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051637/http://www.gamasutra.com/view/feature/131843/postmortem_sierras_swat3_close_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3436",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131844"
@@ -589,25 +425,12 @@ wayback = "https://web.archive.org/web/20120510051630/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051630/http://www.gamasutra.com/view/feature/131844/postmortem_ensemble_studios_age_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3437",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "27532694"
-title = "Postmortem: Ensemble Studio's Age of Empires II: Age of Kings (2000)"
-url = "https://news.ycombinator.com/item?id=27532694"
-points = 1
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/131844/postmortem_ensemble_studios_age_.php"
 
 [[postmortem]]
 id = "131595"
@@ -626,18 +449,12 @@ wayback = "https://web.archive.org/web/20120510051622/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051622/http://www.gamasutra.com/view/feature/131595/postmortem_westwood_studios_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3187",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131586"
@@ -656,18 +473,12 @@ wayback = "https://web.archive.org/web/20120510051605/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051605/http://www.gamasutra.com/view/feature/131586/postmortem_surreal_softwares_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3178",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131577"
@@ -686,23 +497,10 @@ wayback = "https://web.archive.org/web/20120512222407/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120512222407/http://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?print=1"
 pages = 3
 wayback_captures = 0
-hn_points = 226
-hn_comments = 54
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 226
-hn_comments_sum = 54
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "15777592"
-title = "Half-Life and Team Fortress Networking"
-url = "https://news.ycombinator.com/item?id=15777592"
-points = 226
-comments = 54
-submitted_url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
 
 [[postmortem]]
 id = "131569"
@@ -721,33 +519,12 @@ wayback = "https://web.archive.org/web/20120510051555/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051555/http://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php?print=1"
 pages = 4
 wayback_captures = 8
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3161",
 ]
-hn_points_sum = 3
-hn_comments_sum = 0
-hn_submissions = 2
-
-[[postmortem.hn_threads]]
-object_id = "20897466"
-title = "Postmortem: Epic Games' Unreal Tournament"
-url = "https://news.ycombinator.com/item?id=20897466"
-points = 2
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "20894227"
-title = "Postmortem: Epic Games' Unreal Tournament"
-url = "https://news.ycombinator.com/item?id=20894227"
-points = 1
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php"
 
 [[postmortem]]
 id = "131563"
@@ -766,18 +543,12 @@ wayback = "https://web.archive.org/web/20120510045543/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510045543/http://www.gamasutra.com/view/feature/131563/postmortem_treyarchs_tony_hawks_.php?print=1"
 pages = 3
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3155",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131556"
@@ -796,25 +567,12 @@ wayback = "https://web.archive.org/web/20120510051540/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051540/http://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php?print=1"
 pages = 3
 wayback_captures = 8
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3148",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "12454256"
-title = "Postmortem: Angel Studios' Resident Evil 2 (N64 Version)"
-url = "https://news.ycombinator.com/item?id=12454256"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php"
 
 [[postmortem]]
 id = "131547"
@@ -833,18 +591,12 @@ wayback = "https://web.archive.org/web/20120510045538/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510045538/http://www.gamasutra.com/view/feature/131547/postmortem_treyarchs_draconus.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3138",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131541"
@@ -864,8 +616,6 @@ wayback = "https://web.archive.org/web/20120510051511/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051511/http://www.gamasutra.com/view/feature/131541/postmortem_raven_softwares_.php?print=1"
 pages = 4
 wayback_captures = 12
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
@@ -874,10 +624,6 @@ alt_ids = [
     "3341",
     "131748",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131536"
@@ -896,18 +642,12 @@ wayback = "https://web.archive.org/web/20120429054901/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120429054901/http://www.gamasutra.com/view/feature/131536/postmortem_sierra_studios_.php?print=1"
 pages = 3
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3127",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131533"
@@ -926,41 +666,12 @@ wayback = "https://web.archive.org/web/20120407073514/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120407073514/http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php?print=1"
 pages = 3
 wayback_captures = 12
-hn_points = 14
-hn_comments = 1
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3124",
 ]
-hn_points_sum = 19
-hn_comments_sum = 1
-hn_submissions = 3
-
-[[postmortem.hn_threads]]
-object_id = "3468835"
-title = "Diablo II postmortem by one of the creators"
-url = "https://news.ycombinator.com/item?id=3468835"
-points = 14
-comments = 1
-submitted_url = "http://www.gamasutra.com/view/feature/3124/postmortem_blizzards_diablo_ii.php"
-
-[[postmortem.hn_threads]]
-object_id = "9255874"
-title = "Postmortem: Blizzard's Diablo II (2000)"
-url = "https://news.ycombinator.com/item?id=9255874"
-points = 3
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "3980928"
-title = "Postmortem: Blizzard's Diablo II"
-url = "https://news.ycombinator.com/item?id=3980928"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php"
 
 [[postmortem]]
 id = "131523"
@@ -979,25 +690,12 @@ wayback = "https://web.archive.org/web/20120510051442/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051442/http://www.gamasutra.com/view/feature/131523/postmortem_ion_storms_deus_ex.php?print=1"
 pages = 5
 wayback_captures = 9
-hn_points = 2
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3114",
 ]
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "4585180"
-title = "Postmortem: Ion Storm's Deus Ex"
-url = "https://news.ycombinator.com/item?id=4585180"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131523/postmortem_ion_storms_deus_ex.php?print=1"
 
 [[postmortem]]
 id = "131520"
@@ -1016,8 +714,6 @@ wayback = "https://web.archive.org/web/20120510051434/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051434/http://www.gamasutra.com/view/feature/131520/postmortem_ritual_entertainments_.php?print=1"
 pages = 4
 wayback_captures = 12
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
@@ -1026,10 +722,6 @@ alt_ids = [
     "3320",
     "131727",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131512"
@@ -1050,18 +742,12 @@ wayback = "https://web.archive.org/web/20120510051411/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051411/http://www.gamasutra.com/view/feature/131512/postmortem_raven_softwares_star_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3103",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131500"
@@ -1080,18 +766,12 @@ wayback = "https://web.archive.org/web/20120510051345/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051345/http://www.gamasutra.com/view/feature/131500/postmortem_minds_eyes_sheep.php?print=1"
 pages = 1
 wayback_captures = 2
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3091",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131497"
@@ -1110,25 +790,12 @@ wayback = "https://web.archive.org/web/20120510051336/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051336/http://www.gamasutra.com/view/feature/131497/postmortem_micro_forte_s_fallout_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3088",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "6899249"
-title = "Postmortem: Micro Forte' s Fallout Tactics"
-url = "https://news.ycombinator.com/item?id=6899249"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/3088/postmortem_micro_forte_s_fallout_.php"
 
 [[postmortem]]
 id = "131490"
@@ -1147,18 +814,12 @@ wayback = "https://web.archive.org/web/20120510051320/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051320/http://www.gamasutra.com/view/feature/131490/postmortem_cutler_creatives_last_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3081",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131478"
@@ -1177,18 +838,12 @@ wayback = "https://web.archive.org/web/20120510051314/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051314/http://www.gamasutra.com/view/feature/131478/postmortem_monoliths_no_one_.php?print=1"
 pages = 3
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3069",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131476"
@@ -1207,18 +862,12 @@ wayback = "https://web.archive.org/web/20120510051305/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051305/http://www.gamasutra.com/view/feature/131476/postmortem_lionhead_studios_.php?print=1"
 pages = 3
 wayback_captures = 10
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3067",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131474"
@@ -1237,18 +886,12 @@ wayback = "https://web.archive.org/web/20120511062531/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120511062531/http://www.gamasutra.com/view/feature/131474/tool_postmortem_ubi_soft_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3065",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131470"
@@ -1267,18 +910,12 @@ wayback = "https://web.archive.org/web/20120510042631/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510042631/http://www.gamasutra.com/view/feature/131470/audio_postmortem_modern_groove__.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3061",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131456"
@@ -1297,18 +934,12 @@ wayback = "https://web.archive.org/web/20120510051257/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051257/http://www.gamasutra.com/view/feature/131456/postmortem_lucas_arts_star_wars_.php?print=1"
 pages = 3
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3047",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131881"
@@ -1327,18 +958,12 @@ wayback = "https://web.archive.org/web/20120510051251/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051251/http://www.gamasutra.com/view/feature/131881/mobile_game_postmortem_ngames_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3474",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131440"
@@ -1357,18 +982,12 @@ wayback = "https://web.archive.org/web/20120510051245/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051245/http://www.gamasutra.com/view/feature/131440/postmortem_poptop_softwares_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3031",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131436"
@@ -1387,18 +1006,12 @@ wayback = "https://web.archive.org/web/20120510051237/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051237/http://www.gamasutra.com/view/feature/131436/postmortem_startopia.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3027",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131435"
@@ -1417,18 +1030,12 @@ wayback = "https://web.archive.org/web/20120511072145/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120511072145/http://www.gamasutra.com/view/feature/131435/postmortem_beam_runner_hyper_cross.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3026",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131427"
@@ -1448,18 +1055,12 @@ wayback = "https://web.archive.org/web/20120510051227/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051227/http://www.gamasutra.com/view/feature/131427/postmortem_bohemia_interactive_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3018",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131422"
@@ -1478,25 +1079,12 @@ wayback = "https://web.archive.org/web/20120510051220/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051220/http://www.gamasutra.com/view/feature/131422/postmortem_frog_citys_trade_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3013",
 ]
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "25624359"
-title = "Postmortem: Frog City's Trade Empires (2002)"
-url = "https://news.ycombinator.com/item?id=25624359"
-points = 2
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/131422/postmortem_frog_citys_trade_.php?print=1"
 
 [[postmortem]]
 id = "131418"
@@ -1515,18 +1103,12 @@ wayback = "https://web.archive.org/web/20120510051213/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051213/http://www.gamasutra.com/view/feature/131418/postmortem_mythic_entertainments_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3009",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131416"
@@ -1545,18 +1127,12 @@ wayback = "https://web.archive.org/web/20120510051207/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051207/http://www.gamasutra.com/view/feature/131416/postmortem_pseudo_interactives_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3007",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131402"
@@ -1575,18 +1151,12 @@ wayback = "https://web.archive.org/web/20120510051159/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051159/http://www.gamasutra.com/view/feature/131402/postmortem_factor_5s_star_wars_.php?print=1"
 pages = 4
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2993",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131396"
@@ -1605,18 +1175,12 @@ wayback = "https://web.archive.org/web/20120510051149/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051149/http://www.gamasutra.com/view/feature/131396/tool_postmortem_climax_brightons_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2987",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131394"
@@ -1635,18 +1199,12 @@ wayback = "https://web.archive.org/web/20120510051143/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051143/http://www.gamasutra.com/view/feature/131394/postmortem_naughty_dogs_jak_and_.php?print=1"
 pages = 3
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2985",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131384"
@@ -1665,18 +1223,12 @@ wayback = "https://web.archive.org/web/20120511072139/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120511072139/http://www.gamasutra.com/view/feature/131384/student_game_postmortem_space_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2975",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131376"
@@ -1695,18 +1247,12 @@ wayback = "https://web.archive.org/web/20120510051134/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051134/http://www.gamasutra.com/view/feature/131376/postmortem_pixelogics_the_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2967",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131370"
@@ -1725,18 +1271,12 @@ wayback = "https://web.archive.org/web/20120510051127/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051127/http://www.gamasutra.com/view/feature/131370/postmortem_ubi_soft_chinas_music_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2961",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131355"
@@ -1755,18 +1295,12 @@ wayback = "https://web.archive.org/web/20120511072132/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120511072132/http://www.gamasutra.com/view/feature/131355/student_game_postmortem_fairly_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2946",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131337"
@@ -1785,18 +1319,12 @@ wayback = "https://web.archive.org/web/20120510051122/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051122/http://www.gamasutra.com/view/feature/131337/postmortem_prestos_whacked.php?print=1"
 pages = 3
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2928",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131333"
@@ -1815,18 +1343,12 @@ wayback = "https://web.archive.org/web/20120510051103/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051103/http://www.gamasutra.com/view/feature/131333/postmortem_games_kitchens_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2924",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131327"
@@ -1845,18 +1367,12 @@ wayback = "https://web.archive.org/web/20120510051058/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051058/http://www.gamasutra.com/view/feature/131327/postmortem_biowares_neverwinter_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2918",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131321"
@@ -1875,25 +1391,12 @@ wayback = "https://web.archive.org/web/20120510051052/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051052/http://www.gamasutra.com/view/feature/131321/postmortem_gas_powered_games_.php?print=1"
 pages = 4
 wayback_captures = 8
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2912",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "22940898"
-title = "Postmortem: Gas Powered Games' Dungeon Siege"
-url = "https://news.ycombinator.com/item?id=22940898"
-points = 1
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/131321/postmortem_gas_powered_games_.php"
 
 [[postmortem]]
 id = "131302"
@@ -1912,18 +1415,12 @@ wayback = "https://web.archive.org/web/20120510051032/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051032/http://www.gamasutra.com/view/feature/131302/postmortem_pixels_pasts_scsicide.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2893",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131287"
@@ -1942,18 +1439,12 @@ wayback = "https://web.archive.org/web/20120510051017/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510051017/http://www.gamasutra.com/view/feature/131287/postmortem_blue_tongue_softwares_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2878",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131251"
@@ -1972,18 +1463,12 @@ wayback = "https://web.archive.org/web/20120410231356/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120410231356/http://www.gamasutra.com/view/feature/131251/postmortem_insomniac_games_.php?print=1"
 pages = 3
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2842",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131242"
@@ -2003,33 +1488,12 @@ wayback = "https://web.archive.org/web/20120510050956/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050956/http://www.gamasutra.com/view/feature/131242/postmortem_big_huge_games_rise_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 2
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2833",
 ]
-hn_points_sum = 3
-hn_comments_sum = 0
-hn_submissions = 2
-
-[[postmortem.hn_threads]]
-object_id = "43200135"
-title = "Postmortem: Big Games' Rise of Nations"
-url = "https://news.ycombinator.com/item?id=43200135"
-points = 2
-comments = 0
-submitted_url = "https://web.archive.org/web/20120511073512/http://www.gamasutra.com/view/feature/131242/postmortem_big_huge_games_rise_.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "3975047"
-title = "Postmortem: Big Huge Games' Rise of Nations"
-url = "https://news.ycombinator.com/item?id=3975047"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/131242/postmortem_big_huge_games_rise_.php?print=1"
 
 [[postmortem]]
 id = "131239"
@@ -2048,18 +1512,12 @@ wayback = "https://web.archive.org/web/20120510050939/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050939/http://www.gamasutra.com/view/feature/131239/postmortem_tom_clancys_splinter_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2830",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131235"
@@ -2078,18 +1536,12 @@ wayback = "https://web.archive.org/web/20120508195354/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120508195354/http://www.gamasutra.com/view/feature/131235/goodbye_postmortems_hello_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2826",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131219"
@@ -2108,18 +1560,12 @@ wayback = "https://web.archive.org/web/20120510050917/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050917/http://www.gamasutra.com/view/feature/131219/postmortem_monoliths_tron_20.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2810",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131217"
@@ -2139,18 +1585,12 @@ wayback = "https://web.archive.org/web/20120510050906/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050906/http://www.gamasutra.com/view/feature/131217/postmortem_oceanus_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2808",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131177"
@@ -2169,18 +1609,12 @@ wayback = "https://web.archive.org/web/20120510050855/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050855/http://www.gamasutra.com/view/feature/131177/postmortem_eutechnyx_big_mutha_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2768",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130440"
@@ -2199,18 +1633,12 @@ wayback = "https://web.archive.org/web/20120510050846/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050846/http://www.gamasutra.com/view/feature/130440/postmortem_disney_onlines_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2027",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130523"
@@ -2229,18 +1657,12 @@ wayback = "https://web.archive.org/web/20120510050840/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050840/http://www.gamasutra.com/view/feature/130523/postmortem_the_game_design_of_.php?print=1"
 pages = 3
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2110",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130550"
@@ -2259,25 +1681,12 @@ wayback = "https://web.archive.org/web/20120227213150/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120227213150/http://www.gamasutra.com/view/feature/130550/middleware_postmortem_idv_incs_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2137",
 ]
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "3469435"
-title = "Selling foilage to game devs [post-mortem]"
-url = "https://news.ycombinator.com/item?id=3469435"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/2137/middleware_postmortem_idv_incs_.php"
 
 [[postmortem]]
 id = "130560"
@@ -2296,18 +1705,12 @@ wayback = "https://web.archive.org/web/20120509061318/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061318/http://www.gamasutra.com/view/feature/130560/postmortem_stardocks_the_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2147",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130567"
@@ -2326,18 +1729,12 @@ wayback = "https://web.archive.org/web/20120509061311/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061311/http://www.gamasutra.com/view/feature/130567/indie_postmortem_nayantaras_star_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2154",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130572"
@@ -2356,18 +1753,12 @@ wayback = "https://web.archive.org/web/20120511062516/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120511062516/http://www.gamasutra.com/view/feature/130572/middleware_postmortem_quazal_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2159",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130589"
@@ -2386,18 +1777,12 @@ wayback = "https://web.archive.org/web/20120509061259/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061259/http://www.gamasutra.com/view/feature/130589/indie_postmortem_chronic_logics_.php?print=1"
 pages = 1
 wayback_captures = 2
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2176",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130607"
@@ -2416,18 +1801,12 @@ wayback = "https://web.archive.org/web/20120509061214/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061214/http://www.gamasutra.com/view/feature/130607/student_postmortem_6msofts_romeo_.php?print=1"
 pages = 1
 wayback_captures = 2
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2194",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130612"
@@ -2446,18 +1825,12 @@ wayback = "https://web.archive.org/web/20120509061205/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061205/http://www.gamasutra.com/view/feature/130612/indie_postmortem_reflexives_wik_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2199",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130699"
@@ -2476,18 +1849,12 @@ wayback = "https://web.archive.org/web/20120511171834/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120511171834/http://www.gamasutra.com/view/feature/130699/postmortem_myst_iv__revelation.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2286",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "2299"
@@ -2506,18 +1873,12 @@ wayback = "https://web.archive.org/web/20071201133241/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20071201133241/http://www.gamasutra.com/view/feature/2299/mobile_postmortem_bill__teds_.php?print=1"
 pages = 1
 wayback_captures = 5
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "130711",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130737"
@@ -2536,18 +1897,12 @@ wayback = "https://web.archive.org/web/20120509061150/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061150/http://www.gamasutra.com/view/feature/130737/indie_postmortem_mind_controls_.php?print=1"
 pages = 3
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2325",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130746"
@@ -2566,18 +1921,12 @@ wayback = "https://web.archive.org/web/20120509061137/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061137/http://www.gamasutra.com/view/feature/130746/indie_postmortem_large_animals_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2334",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130791"
@@ -2596,18 +1945,12 @@ wayback = "https://web.archive.org/web/20120509061127/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061127/http://www.gamasutra.com/view/feature/130791/postmortem_project_magmas_myth_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2380",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "2550"
@@ -2626,18 +1969,12 @@ wayback = "https://web.archive.org/web/20080227084315/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20080227084315/http://www.gamasutra.com/view/feature/2550/student_postmortem.php?print=1"
 pages = 2
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "130960",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131012"
@@ -2656,18 +1993,12 @@ wayback = "https://web.archive.org/web/20120510050404/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510050404/http://www.gamasutra.com/view/feature/131012/schadenfreudian_slips_postmortem_.php?print=1"
 pages = 1
 wayback_captures = 2
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2603",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131062"
@@ -2686,8 +2017,6 @@ wayback = "https://web.archive.org/web/20120509055802/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509055802/http://www.gamasutra.com/view/feature/131062/postmortem_stardocks_galactic_.php?print=1"
 pages = 3
 wayback_captures = 13
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
@@ -2696,10 +2025,6 @@ alt_ids = [
     "2862",
     "131271",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131096"
@@ -2718,18 +2043,12 @@ wayback = "https://web.archive.org/web/20120415002152/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120415002152/http://www.gamasutra.com/view/feature/131096/postmortem_klei_entertainments_.php?print=1"
 pages = 2
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2687",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131107"
@@ -2748,18 +2067,12 @@ wayback = "https://web.archive.org/web/20120509061029/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061029/http://www.gamasutra.com/view/feature/131107/student_postmortem_digipen_.php?print=1"
 pages = 1
 wayback_captures = 2
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2698",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131112"
@@ -2778,18 +2091,12 @@ wayback = "https://web.archive.org/web/20120509061019/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061019/http://www.gamasutra.com/view/feature/131112/indie_postmortem_gibbage.php?print=1"
 pages = 1
 wayback_captures = 2
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2703",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131137"
@@ -2808,8 +2115,6 @@ wayback = "https://web.archive.org/web/20120509061000/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509061000/http://www.gamasutra.com/view/feature/131137/indie_postmortem_armadillo_run.php?print=1"
 pages = 1
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
@@ -2817,10 +2122,6 @@ alt_ids = [
     "2728",
     "3225",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131140"
@@ -2839,8 +2140,6 @@ wayback = "https://web.archive.org/web/20120509060954/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060954/http://www.gamasutra.com/view/feature/131140/postmortem_indigo_prophecy.php?print=1"
 pages = 4
 wayback_captures = 13
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
@@ -2849,10 +2148,6 @@ alt_ids = [
     "2558",
     "2731",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131162"
@@ -2872,16 +2167,10 @@ wayback = "https://web.archive.org/web/20120509060921/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060921/http://www.gamasutra.com/view/feature/131162/postmortem_digital_chocolates_.php?print=1"
 pages = 4
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "131169"
@@ -2900,18 +2189,12 @@ wayback = "https://web.archive.org/web/20120510042914/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510042914/http://www.gamasutra.com/view/feature/131169/faculty_postmortem_cal_poly_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2760",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130266"
@@ -2930,18 +2213,12 @@ wayback = "https://web.archive.org/web/20120509060911/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060911/http://www.gamasutra.com/view/feature/130266/postmortem_motogp_06.php?print=1"
 pages = 7
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1849",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130263"
@@ -2960,18 +2237,12 @@ wayback = "https://web.archive.org/web/20120509060903/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060903/http://www.gamasutra.com/view/feature/130263/postmortem_wideload_games_stubbs_.php?print=1"
 pages = 7
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1846",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130245"
@@ -2990,18 +2261,12 @@ wayback = "https://web.archive.org/web/20120509060852/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060852/http://www.gamasutra.com/view/feature/130245/postmortem_gamevils_nom_2.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1828",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130238"
@@ -3020,18 +2285,12 @@ wayback = "https://web.archive.org/web/20120509060846/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060846/http://www.gamasutra.com/view/feature/130238/indie_postmortem_fished.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1821",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130165"
@@ -3050,18 +2309,12 @@ wayback = "https://web.archive.org/web/20120509060829/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060829/http://www.gamasutra.com/view/feature/130165/postmortem_blue_fangs_zoo_tycoon_.php?print=1"
 pages = 6
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1748",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130160"
@@ -3080,18 +2333,12 @@ wayback = "https://web.archive.org/web/20120509060826/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060826/http://www.gamasutra.com/view/feature/130160/postmortem_intergalactic_crime_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1743",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130154"
@@ -3110,18 +2357,12 @@ wayback = "https://web.archive.org/web/20120430054312/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120430054312/http://www.gamasutra.com/view/feature/130154/postmortem_naked_sky_.php?print=1"
 pages = 6
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1737",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130109"
@@ -3140,18 +2381,12 @@ wayback = "https://web.archive.org/web/20120509054944/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509054944/http://www.gamasutra.com/view/feature/130109/audio_postmortem_scarface_the_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1691",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "129981"
@@ -3170,18 +2405,12 @@ wayback = "https://web.archive.org/web/20120509060805/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060805/http://www.gamasutra.com/view/feature/129981/postmortem__gangs_of_gdc_rumble_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1558",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "129929"
@@ -3200,18 +2429,12 @@ wayback = "https://web.archive.org/web/20120509060755/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060755/http://www.gamasutra.com/view/feature/129929/postmortem_deadine_games_chili_.php?print=1"
 pages = 2
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1504",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "129951"
@@ -3230,18 +2453,12 @@ wayback = "https://web.archive.org/web/20120509060740/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060740/http://www.gamasutra.com/view/feature/129951/indie_postmortem_wolverine_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1527",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130342"
@@ -3260,18 +2477,12 @@ wayback = "https://web.archive.org/web/20120509060732/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060732/http://www.gamasutra.com/view/feature/130342/postmortem_sniper_studios_crazy_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1925",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130388"
@@ -3290,18 +2501,12 @@ wayback = "https://web.archive.org/web/20120509060726/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060726/http://www.gamasutra.com/view/feature/130388/postmortem_black_rock_studios_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "1971",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130422"
@@ -3323,18 +2528,12 @@ wayback = "https://web.archive.org/web/20120509060711/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060711/http://www.gamasutra.com/view/feature/130422/postmortem_vicious_cycle_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2008",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "130732"
@@ -3353,25 +2552,12 @@ wayback = "https://web.archive.org/web/20120509060655/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060655/http://www.gamasutra.com/view/feature/130732/postmortem_freeverses_marathon_.php?print=1"
 pages = 7
 wayback_captures = 6
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "2320",
 ]
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "30591053"
-title = "Postmortem: Freeverse's Marathon 2: Durandal for XBLA (2007)"
-url = "https://news.ycombinator.com/item?id=30591053"
-points = 2
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/2320/postmortem_freeverses_marathon_.php?print=1"
 
 [[postmortem]]
 id = "131987"
@@ -3390,18 +2576,12 @@ wayback = "https://web.archive.org/web/20120509032824/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509032824/http://www.gamasutra.com/view/feature/131987/n_beyond_the_postmortem.php?print=1"
 pages = 5
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3583",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132007"
@@ -3421,18 +2601,12 @@ wayback = "https://web.archive.org/web/20120509060643/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060643/http://www.gamasutra.com/view/feature/132007/postmortem_saber_interactives_.php?print=1"
 pages = 8
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3606",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132031"
@@ -3451,18 +2625,12 @@ wayback = "https://web.archive.org/web/20120509060629/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060629/http://www.gamasutra.com/view/feature/132031/postmortem_kat_games_dream_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3630",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132039"
@@ -3482,18 +2650,12 @@ wayback = "https://web.archive.org/web/20120509060621/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060621/http://www.gamasutra.com/view/feature/132039/postmortem_ironcladstardocks_.php?print=1"
 pages = 6
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3638",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "3744"
@@ -3512,16 +2674,10 @@ wayback = "https://web.archive.org/web/20080726214443/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20080726214443/http://www.gamasutra.com/view/feature/3744/dreaming_of_a_new_day_heavy_.php?print=1"
 pages = 1
 wayback_captures = 4
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132168"
@@ -3540,18 +2696,12 @@ wayback = "https://web.archive.org/web/20120410231345/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120410231345/http://www.gamasutra.com/view/feature/132168/postmortem_2k_boston2k_.php?print=1"
 pages = 4
 wayback_captures = 10
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3774",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132183"
@@ -3570,18 +2720,12 @@ wayback = "https://web.archive.org/web/20120509060543/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060543/http://www.gamasutra.com/view/feature/132183/postmortem_little_boy_games_go_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3789",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132190"
@@ -3600,18 +2744,12 @@ wayback = "https://web.archive.org/web/20120509060533/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060533/http://www.gamasutra.com/view/feature/132190/postmortem_torpex_games_schizoid.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3796",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132198"
@@ -3631,18 +2769,12 @@ wayback = "https://web.archive.org/web/20120509060522/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060522/http://www.gamasutra.com/view/feature/132198/postmortem_brothers_in_arms_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3804",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132203"
@@ -3662,18 +2794,12 @@ wayback = "https://web.archive.org/web/20120509060511/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060511/http://www.gamasutra.com/view/feature/132203/postmortem_naughty_dogs_.php?print=1"
 pages = 4
 wayback_captures = 11
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3809",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132227"
@@ -3693,18 +2819,12 @@ wayback = "https://web.archive.org/web/20120509060501/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060501/http://www.gamasutra.com/view/feature/132227/postmortem_fizz_factors_the_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3833",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132258"
@@ -3723,18 +2843,12 @@ wayback = "https://web.archive.org/web/20120509060437/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060437/http://www.gamasutra.com/view/feature/132258/postmortem_tale_of_tales_the_.php?print=1"
 pages = 10
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3865",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132282"
@@ -3753,18 +2867,12 @@ wayback = "https://web.archive.org/web/20120509060405/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060405/http://www.gamasutra.com/view/feature/132282/postmortem_insomniacs_ratchet__.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3889",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132296"
@@ -3783,18 +2891,12 @@ wayback = "https://web.archive.org/web/20120509035749/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509035749/http://www.gamasutra.com/view/feature/132296/postmortem_riverman_medias_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3903",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132303"
@@ -3813,18 +2915,12 @@ wayback = "https://web.archive.org/web/20120509035735/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509035735/http://www.gamasutra.com/view/feature/132303/postmortem_american_mcgees_grimm.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3910",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132305"
@@ -3843,18 +2939,12 @@ wayback = "https://web.archive.org/web/20120509060356/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060356/http://www.gamasutra.com/view/feature/132305/postmortem_capcomgrins_bionic_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3912",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132314"
@@ -3873,18 +2963,12 @@ wayback = "https://web.archive.org/web/20120509055511/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509055511/http://www.gamasutra.com/view/feature/132314/postmortem_ninjabees_a_kingdom_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3921",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132331"
@@ -3904,18 +2988,12 @@ wayback = "https://web.archive.org/web/20120509052857/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509052857/http://www.gamasutra.com/view/feature/132331/postmortem_singaporemit_gambits_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "3939",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "3966"
@@ -3935,18 +3013,12 @@ wayback = "https://web.archive.org/web/20090321085638/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20090321085638/http://www.gamasutra.com/view/feature/3966/postmortem_defedef_of_the_ancients.php?print=1"
 pages = 5
 wayback_captures = 15
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "132358",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132401"
@@ -3967,25 +3039,12 @@ wayback = "https://web.archive.org/web/20120509052756/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509052756/http://www.gamasutra.com/view/feature/132401/postmortem_square_enixs_the_.php?print=1"
 pages = 3
 wayback_captures = 7
-hn_points = 4
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4010",
 ]
-hn_points_sum = 4
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "587162"
-title = "Project Postmortem: Square Enix's The World Ends With You"
-url = "https://news.ycombinator.com/item?id=587162"
-points = 4
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/4010/postmortem_square_enixs_the_.php?print=1S"
 
 [[postmortem]]
 id = "132432"
@@ -4004,18 +3063,12 @@ wayback = "https://web.archive.org/web/20120509060345/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060345/http://www.gamasutra.com/view/feature/132432/postmortem_gaijin_games_bittrip_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4041",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132490"
@@ -4036,18 +3089,12 @@ wayback = "https://web.archive.org/web/20120509060333/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060333/http://www.gamasutra.com/view/feature/132490/postmortem_ngmocodemiurge_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4101",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132511"
@@ -4066,18 +3113,12 @@ wayback = "https://web.archive.org/web/20120509060324/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509060324/http://www.gamasutra.com/view/feature/132511/postmortem_crystal_dynamics_tomb_.php?print=1"
 pages = 4
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4122",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132515"
@@ -4096,18 +3137,12 @@ wayback = "https://web.archive.org/web/20120509052655/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509052655/http://www.gamasutra.com/view/feature/132515/postmortem_realtime_worlds_.php?print=1"
 pages = 6
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4126",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132544"
@@ -4126,18 +3161,12 @@ wayback = "https://web.archive.org/web/20120508234108/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120508234108/http://www.gamasutra.com/view/feature/132544/postmortem_ace_teams_zeno_clash.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4156",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132576"
@@ -4156,18 +3185,12 @@ wayback = "https://web.archive.org/web/20120509054357/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509054357/http://www.gamasutra.com/view/feature/132576/postmortem_wadjet_eyes_the_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4188",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132589"
@@ -4186,18 +3209,12 @@ wayback = "https://web.archive.org/web/20120509035140/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509035140/http://www.gamasutra.com/view/feature/132589/postmortem_8monkeys_darkest_of_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4201",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132593"
@@ -4217,18 +3234,12 @@ wayback = "https://web.archive.org/web/20120509052643/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509052643/http://www.gamasutra.com/view/feature/132593/postmortem_twisted_pixels_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4205",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132604"
@@ -4247,18 +3258,12 @@ wayback = "https://web.archive.org/web/20120509035109/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509035109/http://www.gamasutra.com/view/feature/132604/postmortem_freeverses_top_gun_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4216",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "4230"
@@ -4278,18 +3283,12 @@ wayback = "https://web.archive.org/web/20100102231700/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100102231700/http://www.gamasutra.com/view/feature/4230/postmortem_ronimo_games_swords__.php?print=1"
 pages = 3
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "132618",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132623"
@@ -4308,18 +3307,12 @@ wayback = "https://web.archive.org/web/20120509034957/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509034957/http://www.gamasutra.com/view/feature/132623/postmortem_blitz_games_droplitz.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4235",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132630"
@@ -4338,18 +3331,12 @@ wayback = "https://web.archive.org/web/20120509034942/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509034942/http://www.gamasutra.com/view/feature/132630/postmortem_torus_games_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4242",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132642"
@@ -4368,18 +3355,12 @@ wayback = "https://web.archive.org/web/20120509054347/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509054347/http://www.gamasutra.com/view/feature/132642/postmortem_over_the_top_games_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4254",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "132650"
@@ -4398,18 +3379,12 @@ wayback = "https://web.archive.org/web/20120509054339/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120509054339/http://www.gamasutra.com/view/feature/132650/postmortem_vicious_cycles_matt_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "4262",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "4271"
@@ -4428,18 +3403,12 @@ wayback = "https://web.archive.org/web/20100212233307/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100212233307/http://www.gamasutra.com/view/feature/4271/postmortem_wayforwards_a_boy_and_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "132659",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "4288"
@@ -4458,18 +3427,12 @@ wayback = "https://web.archive.org/web/20100227045436/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100227045436/http://www.gamasutra.com/view/feature/4288/postmortem_segaother_oceans_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "132676",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "4308"
@@ -4488,18 +3451,12 @@ wayback = "https://web.archive.org/web/20100328122431/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100328122431/http://www.gamasutra.com/view/feature/4308/postmortem_double_fines_brutal_.php?print=1"
 pages = 6
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "132696",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "4336"
@@ -4519,18 +3476,12 @@ wayback = "https://web.archive.org/web/20100429170227/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100429170227/http://www.gamasutra.com/view/feature/4336/postmortem_magnin__associates_.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "132724",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "5826"
@@ -4550,18 +3501,12 @@ wayback = "https://web.archive.org/web/20100605035210/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100605035210/http://www.gamasutra.com/view/feature/5826/postmortem_frozenbytes_trine.php?print=1"
 pages = 6
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134198",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "5831"
@@ -4580,18 +3525,12 @@ wayback = "https://web.archive.org/web/20100609222848/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100609222848/http://www.gamasutra.com/view/feature/5831/postmortem_sarbakans_lazy_raiders.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134203",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "5902"
@@ -4611,18 +3550,12 @@ wayback = "https://web.archive.org/web/20100725064048/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100725064048/http://www.gamasutra.com/view/feature/5902/postmortem_tale_of_tales_the_path.php?print=1"
 pages = 8
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134274",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6144"
@@ -4643,18 +3576,12 @@ wayback = "https://web.archive.org/web/20100924035044/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20100924035044/http://www.gamasutra.com/view/feature/6144/postmortem_dejobaan_games_aaaaa_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134515",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6184"
@@ -4673,25 +3600,12 @@ wayback = "https://web.archive.org/web/20101030124338/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20101030124338/http://www.gamasutra.com/view/feature/6184/postmortem_vector_units_hydro_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134555",
 ]
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "1855978"
-title = "Postmortem: Vector Unit's Hydro Thunder Hurricane"
-url = "https://news.ycombinator.com/item?id=1855978"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6184/postmortem_vector_units_hydro_.php?print=1"
 
 [[postmortem]]
 id = "6202"
@@ -4711,18 +3625,12 @@ wayback = "https://web.archive.org/web/20101111150153/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20101111150153/http://www.gamasutra.com/view/feature/6202/postmortem_pipeworks_softwares_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134573",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6250"
@@ -4741,8 +3649,6 @@ wayback = "https://web.archive.org/web/20110106165028/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110106165028/http://www.gamasutra.com/view/feature/6250/postmortem_mommys_best_games_.php?print=1"
 pages = 3
 wayback_captures = 12
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
@@ -4751,17 +3657,6 @@ alt_ids = [
     "132292",
     "134621",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "430457"
-title = "Gamasutra - Postmortem: Mommy's Best Games' Weapon of Choice"
-url = "https://news.ycombinator.com/item?id=430457"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/3899/postmortem_mommys_best_games_.php"
 
 [[postmortem]]
 id = "6300"
@@ -4780,18 +3675,12 @@ wayback = "https://web.archive.org/web/20110311083815/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110311083815/http://www.gamasutra.com/view/feature/6300/postmortem_bane_games_flick_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134670",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6310"
@@ -4811,18 +3700,12 @@ wayback = "https://web.archive.org/web/20110319084927/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110319084927/http://www.gamasutra.com/view/feature/6310/postmortem_mediatonics_monsters_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134680",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6315"
@@ -4842,18 +3725,12 @@ wayback = "https://web.archive.org/web/20110406171834/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110406171834/http://www.gamasutra.com/view/feature/6315/postmortem_capcoms_okamiden.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134685",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "134717"
@@ -4873,41 +3750,12 @@ wayback = "https://web.archive.org/web/20120508213206/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120508213206/http://www.gamasutra.com/view/feature/134717/postmortem_team_meats_super_meat_.php?print=1"
 pages = 4
 wayback_captures = 14
-hn_points = 49
-hn_comments = 14
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "6348",
 ]
-hn_points_sum = 56
-hn_comments_sum = 14
-hn_submissions = 3
-
-[[postmortem.hn_threads]]
-object_id = "4605780"
-title = "Postmortem: Team Meat's Super Meat Boy"
-url = "https://news.ycombinator.com/item?id=4605780"
-points = 49
-comments = 14
-submitted_url = "http://www.gamasutra.com/view/feature/134717/postmortem_team_meats_super_meat_.php?page=1"
-
-[[postmortem.hn_threads]]
-object_id = "2448505"
-title = "Postmortem: Team Meat's Super Meat Boy"
-url = "https://news.ycombinator.com/item?id=2448505"
-points = 6
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "2447525"
-title = "PostMortem of the Making of SuperMeat Boy"
-url = "https://news.ycombinator.com/item?id=2447525"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
 
 [[postmortem]]
 id = "6407"
@@ -4926,25 +3774,12 @@ wayback = "https://web.archive.org/web/20110617223720/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110617223720/http://www.gamasutra.com/view/feature/6407/postmortem_radiangames_monthly_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134775",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "2962005"
-title = "Postmortem: Radiangames' Monthly Xbox Indie Games Series"
-url = "https://news.ycombinator.com/item?id=2962005"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6407/postmortem_radiangames_monthly_.php"
 
 [[postmortem]]
 id = "6412"
@@ -4964,18 +3799,12 @@ wayback = "https://web.archive.org/web/20110625134137/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110625134137/http://www.gamasutra.com/view/feature/6412/postmortem_llopis_and_friginals_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134780",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6418"
@@ -4994,18 +3823,12 @@ wayback = "https://web.archive.org/web/20110701165132/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110701165132/http://www.gamasutra.com/view/feature/6418/postmortem_high_voltage_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134786",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6309"
@@ -5024,18 +3847,12 @@ wayback = "https://web.archive.org/web/20110711122329/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110711122329/http://www.gamasutra.com/view/feature/6309/dissecting_the_postmortem_lessons_.php?print=1"
 pages = 4
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134679",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6469"
@@ -5054,18 +3871,12 @@ wayback = "https://web.archive.org/web/20111020170124/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20111020170124/http://www.gamasutra.com/view/feature/6469/postmortem_zen_studios_pinball_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134837",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6472"
@@ -5084,33 +3895,12 @@ wayback = "https://web.archive.org/web/20111008205111/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20111008205111/http://www.gamasutra.com/view/feature/6472/postmortem_arrowhead_game_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134840",
 ]
-hn_points_sum = 3
-hn_comments_sum = 0
-hn_submissions = 2
-
-[[postmortem.hn_threads]]
-object_id = "2947121"
-title = "Development Postmortem: Arrowhead Game Studios' Magicka"
-url = "https://news.ycombinator.com/item?id=2947121"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6472/postmortem_arrowhead_game_.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "2942123"
-title = "Postmortem: Magicka, what went right, and what went wrong"
-url = "https://news.ycombinator.com/item?id=2942123"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6472/postmortem_arrowhead_game_.php"
 
 [[postmortem]]
 id = "6481"
@@ -5129,18 +3919,12 @@ wayback = "https://web.archive.org/web/20110925085639/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110925085639/http://www.gamasutra.com/view/feature/6481/postmortem_vector_units_riptide_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134849",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6498"
@@ -5159,18 +3943,12 @@ wayback = "https://web.archive.org/web/20110929235034/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20110929235034/http://www.gamasutra.com/view/feature/6498/postmortem_smudged_cat_games_the_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134866",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6617"
@@ -5189,25 +3967,12 @@ wayback = "https://web.archive.org/web/20120127184757/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120127184757/http://www.gamasutra.com/view/feature/6617/postmortem_mode_7_games_frozen_.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "134984",
 ]
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "3540145"
-title = "Postmortem: Mode 7 Games' Frozen Synapse"
-url = "https://news.ycombinator.com/item?id=3540145"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/6617/postmortem_mode_7_games_frozen_.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraFeatureArticles+%28Gamasutra+Feature+Articles%29&utm_content=Google+Reader"
 
 [[postmortem]]
 id = "6680"
@@ -5226,8 +3991,6 @@ wayback = "https://web.archive.org/web/20120203055405/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120203055405/http://www.gamasutra.com/view/feature/6680/postmortem_appy_entertainments_.php?print=1"
 pages = 3
 wayback_captures = 11
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
@@ -5235,17 +3998,6 @@ alt_ids = [
     "135047",
     "191525",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "5666019"
-title = "Postmortem: Appy Entertainment's Animal Legends"
-url = "https://news.ycombinator.com/item?id=5666019"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/191525/Postmortem_Appy_Entertainments_Animal_Legends.php"
 
 [[postmortem]]
 id = "6697"
@@ -5264,18 +4016,12 @@ wayback = "https://web.archive.org/web/20120210051112/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120210051112/http://www.gamasutra.com/view/feature/6697/postmortem_cyberconnect_2s_.php?print=1"
 pages = 3
 wayback_captures = 5
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "135064",
 ]
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "6742"
@@ -5292,25 +4038,12 @@ wayback = "https://web.archive.org/web/20120224164145/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120224164145/http://www.gamasutra.com/view/feature/6742/postmortem_days_of_wonders_.php?print=1"
 pages = 5
 wayback_captures = 4
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = [
     "135109",
 ]
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "3647396"
-title = "How web games help selling boardgames"
-url = "https://news.ycombinator.com/item?id=3647396"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/135109/postmortem_days_of_wonders_.php"
 
 [[postmortem]]
 id = "168921"
@@ -5329,16 +4062,10 @@ wayback = "https://web.archive.org/web/20120421233730/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120421233730/http://www.gamasutra.com/view/feature/168921/postmortem_handcircus_okabu.php?print=1"
 pages = 4
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "169282"
@@ -5358,16 +4085,10 @@ wayback = "https://web.archive.org/web/20120430031827/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120430031827/http://www.gamasutra.com/view/feature/169282/postmortem_housemarques_outland.php?print=1"
 pages = 4
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "169969"
@@ -5387,16 +4108,10 @@ wayback = "https://web.archive.org/web/20120510165930/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120510165930/http://www.gamasutra.com/view/feature/169969/postmortem_vlambeers_gun_godz.php?print=1"
 pages = 3
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "171897"
@@ -5415,16 +4130,10 @@ wayback = "https://web.archive.org/web/20120610043530/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120610043530/http://www.gamasutra.com/view/feature/171897/postmortem_avalanche_studios_.php?print=1"
 pages = 4
 wayback_captures = 4
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "172250"
@@ -5443,23 +4152,10 @@ wayback = "https://web.archive.org/web/20120616013736/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120616013736/http://www.gamasutra.com/view/feature/172250/postmortem_zachtronics_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 1
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "4109326"
-title = "Postmortem: Zachtronics Industries' SpaceChem"
-url = "https://news.ycombinator.com/item?id=4109326"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/172250/Postmortem_Zachtronics_Industries_SpaceChem.php"
 
 [[postmortem]]
 id = "173453"
@@ -5479,16 +4175,10 @@ wayback = "https://web.archive.org/web/20120706042226/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20120706042226/http://www.gamasutra.com/view/feature/173453/postmortem_crocodile_.php?print=1"
 pages = 4
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "179030"
@@ -5508,16 +4198,10 @@ wayback = "https://web.archive.org/web/20121010220911/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20121010220911/http://www.gamasutra.com/view/feature/179030/postmortem_stardock_entertainment_.php?print=1"
 pages = 3
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "180520"
@@ -5537,16 +4221,10 @@ wayback = "https://web.archive.org/web/20121101231338/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20121101231338/http://www.gamasutra.com/view/feature/180520/postmortem_humble_hearts_dust_.php?print=1"
 pages = 4
 wayback_captures = 4
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "181082"
@@ -5568,16 +4246,10 @@ wayback = "https://web.archive.org/web/20121108190433/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20121108190433/http://www.gamasutra.com/view/feature/181082/postmortem_sony_bend_studios_.php?print=1"
 pages = 4
 wayback_captures = 4
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "181503"
@@ -5596,16 +4268,10 @@ wayback = "https://web.archive.org/web/20121116001956/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20121116001956/http://www.gamasutra.com/view/feature/181503/postmortem_state_of_plays_lume.php?print=1"
 pages = 4
 wayback_captures = 3
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "182380"
@@ -5624,16 +4290,10 @@ wayback = "https://web.archive.org/web/20121130220633/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20121130220633/http://www.gamasutra.com/view/feature/182380/postmortem_mcmillen_and_himsls_.php?print=1"
 pages = 4
 wayback_captures = 9
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "185085"
@@ -5654,16 +4314,10 @@ wayback = "https://web.archive.org/web/20130124040957/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130124040957/http://www.gamasutra.com/view/feature/185085/postmortem_vivid_games_real_.php?print=1"
 pages = 4
 wayback_captures = 4
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "185535"
@@ -5682,16 +4336,10 @@ wayback = "https://web.archive.org/web/20130131172413/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130131172413/http://www.gamasutra.com/view/feature/185535/postmortem_11_bit_studios_.php?print=1"
 pages = 4
 wayback_captures = 4
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "186088"
@@ -5710,23 +4358,10 @@ wayback = "https://web.archive.org/web/20130209194740/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130209194740/http://www.gamasutra.com/view/feature/186088/postmortem_intelligence_engine_.php?print=1"
 pages = 4
 wayback_captures = 4
-hn_points = 17
-hn_comments = 6
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 17
-hn_comments_sum = 6
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "5179150"
-title = "Postmortem: Intelligence Engine Design Systems' “City Conquest”"
-url = "https://news.ycombinator.com/item?id=5179150"
-points = 17
-comments = 6
-submitted_url = "http://gamasutra.com/view/feature/186088/postmortem_intelligence_engine_.php"
 
 [[postmortem]]
 id = "186358"
@@ -5747,16 +4382,10 @@ wayback = "https://web.archive.org/web/20130214012941/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130214012941/http://www.gamasutra.com/view/feature/186358/postmortem_zgames_pong_world.php?print=1"
 pages = 3
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "187299"
@@ -5775,23 +4404,10 @@ wayback = "https://web.archive.org/web/20130228050530/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130228050530/http://www.gamasutra.com/view/feature/187299/postmortem_unknown_worlds_.php?print=1"
 pages = 4
 wayback_captures = 5
-hn_points = 3
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 3
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "5307300"
-title = "Natural Selection 2 Postmortem"
-url = "https://news.ycombinator.com/item?id=5307300"
-points = 3
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/187299/"
 
 [[postmortem]]
 id = "189359"
@@ -5810,16 +4426,10 @@ wayback = "https://web.archive.org/web/20130405073306/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130405073306/http://www.gamasutra.com/view/feature/189359/postmortem_qgames_pixeljunk_4am.php?print=1"
 pages = 4
 wayback_captures = 5
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "190432"
@@ -5838,31 +4448,10 @@ wayback = "https://web.archive.org/web/20130418111504/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130418111504/http://www.gamasutra.com/view/feature/190432/postmortem_overhaul_games_.php?print=1"
 pages = 5
 wayback_captures = 7
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 2
-
-[[postmortem.hn_threads]]
-object_id = "5553890"
-title = "Developer Postmortem: Overhaul Games' \"Baldur's Gate: Enhanced Edition\""
-url = "https://news.ycombinator.com/item?id=5553890"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/190432/postmortem_overhaul_games_.php?print=1"
-
-[[postmortem.hn_threads]]
-object_id = "5556660"
-title = "Postmortem: Overhaul Games' Baldur's Gate: Enhanced Edition"
-url = "https://news.ycombinator.com/item?id=5556660"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/190432/Postmortem_Overhaul_Games_Baldurs_Gate_Enhanced_Edition.php"
 
 [[postmortem]]
 id = "191265"
@@ -5881,23 +4470,10 @@ wayback = "https://web.archive.org/web/20130501123517/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130501123517/http://www.gamasutra.com/view/feature/191265/a_minipostmortem_roundup.php?print=1"
 pages = 8
 wayback_captures = 5
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "5626341"
-title = "A Mini-Postmortem Roundup"
-url = "https://news.ycombinator.com/item?id=5626341"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/191265/A_MiniPostmortem_Roundup.php"
 
 [[postmortem]]
 id = "193695"
@@ -5917,23 +4493,10 @@ wayback = "https://web.archive.org/web/20130622021310/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130622021310/http://www.gamasutra.com/view/feature/193695/postmortem__sony_santa_monicas_.php?print=1"
 pages = 4
 wayback_captures = 6
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "5909369"
-title = "Postmortem - Sony Santa Monica's God of War: Ascension"
-url = "https://news.ycombinator.com/item?id=5909369"
-points = 1
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/193695/Postmortem__Sony_Santa_Monicas_God_of_War_Ascension.php"
 
 [[postmortem]]
 id = "194432"
@@ -5952,16 +4515,10 @@ wayback = "https://web.archive.org/web/20130624103728/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130624103728/http://www.gamasutra.com/view/feature/194432/postmortem_pangalores_knightly_.php?print=1"
 pages = 6
 wayback_captures = 5
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "194852"
@@ -5980,23 +4537,10 @@ wayback = "https://web.archive.org/web/20130624130140/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130624130140/http://www.gamasutra.com/view/feature/194852/postmortem_treyarchs_2002_hit_.php?print=1"
 pages = 4
 wayback_captures = 8
-hn_points = 1
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 1
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "24069060"
-title = "Postmortem: Treyarch's 2002 hit, Spider-Man (2013)"
-url = "https://news.ycombinator.com/item?id=24069060"
-points = 1
-comments = 0
-submitted_url = "https://www.gamasutra.com/view/feature/194852/postmortem_treyarchs_2002_hit_.php"
 
 [[postmortem]]
 id = "195143"
@@ -6015,16 +4559,10 @@ wayback = "https://web.archive.org/web/20130630221525/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130630221525/http://www.gamasutra.com/view/feature/195143/postmortem_resident_evil_4.php?print=1"
 pages = 4
 wayback_captures = 7
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "194857"
@@ -6043,16 +4581,10 @@ wayback = "https://web.archive.org/web/20130707111841/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130707111841/http://www.gamasutra.com/view/feature/194857/postmortem_game_developer_magazine.php?print=1"
 pages = 3
 wayback_captures = 5
-hn_points = 0
-hn_comments = 0
 author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "197269"
@@ -6071,16 +4603,10 @@ wayback = "https://web.archive.org/web/20130803023831/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130803023831/http://www.gamasutra.com/view/feature/197269/postmortem_kingdoms_of_amalur_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "200658"
@@ -6099,23 +4625,10 @@ wayback = "https://web.archive.org/web/20130925215740/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20130925215740/http://www.gamasutra.com/view/feature/200658/postmortem_drinkbox_studios_.php?print=1"
 pages = 5
 wayback_captures = 6
-hn_points = 2
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 2
-hn_comments_sum = 0
-hn_submissions = 1
-
-[[postmortem.hn_threads]]
-object_id = "7362469"
-title = "Guacamelee Post Mortem"
-url = "https://news.ycombinator.com/item?id=7362469"
-points = 2
-comments = 0
-submitted_url = "http://www.gamasutra.com/view/feature/200658/postmortem_drinkbox_studios_.php"
 
 [[postmortem]]
 id = "218372"
@@ -6134,16 +4647,10 @@ wayback = "https://web.archive.org/web/20140524024812/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20140524024812/http://www.gamasutra.com/view/feature/218372/postmortem_the_chinese_rooms_.php?print=1"
 pages = 7
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "233340"
@@ -6165,16 +4672,10 @@ wayback = "https://web.archive.org/web/20150101124036/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20150101124036/http://www.gamasutra.com/view/feature/233340/postmortem_pinballrpg_hybrid_.php?print=1"
 pages = 2
 wayback_captures = 8
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []
 
 [[postmortem]]
 id = "176187"
@@ -6193,13 +4694,7 @@ wayback = "https://web.archive.org/web/20160419050908/http://www.gamasutra.com/v
 wayback_print = "https://web.archive.org/web/20160419050908/http://www.gamasutra.com/view/feature/176187/how_camouflaj_saved_rpubliques_.php?print=1"
 pages = 5
 wayback_captures = 1
-hn_points = 0
-hn_comments = 0
 author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
-hn_points_sum = 0
-hn_comments_sum = 0
-hn_submissions = 0
-hn_threads = []

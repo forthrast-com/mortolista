@@ -29,11 +29,29 @@ const SORT_LABELS = {
 const esc = (s) => (s ?? "").replace(/[&<>"]/g, c => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+const BLANK_HN = {
+  hn_points: 0,
+  hn_comments: 0,
+  hn_points_sum: 0,
+  hn_comments_sum: 0,
+  hn_submissions: 0,
+  hn_threads: [],
+};
+
+async function loadHnMetrics() {
+  const res = await fetch("data/hn_postmortem_threads.toml", { cache: "no-cache" });
+  if (!res.ok) throw new Error(`HN metrics ${res.status}`);
+  const rows = parse(await res.text()).hn_postmortem || [];
+  const byId = new Map(rows.map(row => [row.id, row]));
+  DATA = DATA.map(d => ({ ...BLANK_HN, ...d, ...(byId.get(d.id) || {}) }));
+}
+
 async function load() {
   try {
     const res = await fetch("data/postmortems.toml", { cache: "no-cache" });
     if (!res.ok) throw new Error(res.status);
     DATA = (parse(await res.text()).postmortem) || [];
+    await loadHnMetrics();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
@@ -128,12 +146,12 @@ function hnThreadsHTML(d) {
   const threads = d.hn_threads || [];
   if (!threads.length) return "";
   const shown = threads.slice(0, 3).map((t, i) => {
-    const label = threads.length === 1 ? "HN discussion" : `HN #${i + 1}`;
+    const label = threads.length === 1 ? "discussion" : `#${i + 1}`;
     const detail = `${t.points || 0} pts/${t.comments || 0} c`;
     return `<a href="${esc(t.url)}" target="_blank" rel="noopener" title="${esc(t.title || 'Hacker News discussion')}">${label} (${detail})</a>`;
   });
-  if (threads.length > shown.length) shown.push(`<span title="${threads.length} matching HN submissions total">+${threads.length - shown.length} more HN</span>`);
-  return ` · ${shown.join(" · ")}`;
+  if (threads.length > shown.length) shown.push(`<span title="${threads.length} matching HN submissions total">+${threads.length - shown.length} more</span>`);
+  return `<span class="discussions"><span class="line-label">HN:</span> ${shown.join(" · ")}</span>`;
 }
 
 function usableLink(ok, url) {
@@ -181,13 +199,16 @@ function rowHTML(d) {
   const fullTitle = d.pages > 1
     ? `Full article on one page (${d.pages} pages)`
     : "Archived print view / full text";
+  const archiveToday = d.archive_today || (d.archive_today_ok === true && d.original_url
+    ? `https://archive.ph/newest/${encodeURIComponent(d.original_url)}`
+    : "");
   const mirrorLinks = [
     { ok: !!fullText, url: fullText, label: "full text", title: fullTitle },
     { ok: usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
     { ok: checkedLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
     { ok: checkedLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
     { ok: checkedLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.today full", title: "archive.today print/full-text mirror" },
-    { ok: checkedLink(d.archive_today_ok, d.archive_today), url: d.archive_today, label: "archive.today", title: "archive.today mirror (fallback)" },
+    { ok: checkedLink(d.archive_today_ok, archiveToday), url: archiveToday, label: "archive.today", title: "archive.today mirror (fallback)" },
   ].filter(link => link.ok && link.url);
   const seenMirrorUrls = new Set();
   const mirrorParts = mirrorLinks.flatMap(link => {
@@ -195,8 +216,12 @@ function rowHTML(d) {
     seenMirrorUrls.add(link.url);
     return [linkHTML(link.url, link.label, link.title, sameUrl(link.url, primary))];
   });
-  const mirrors = mirrorParts.length || (d.hn_threads || []).length
-    ? `<span class="mirrors">${mirrorParts.join(" · ")}${hnThreadsHTML(d)}</span>`
+  const mirrorLine = mirrorParts.length
+    ? `<span class="mirror-links"><span class="line-label">links:</span> ${mirrorParts.join(" · ")}</span>`
+    : "";
+  const discussions = hnThreadsHTML(d);
+  const mirrors = mirrorLine || discussions
+    ? `<span class="mirrors">${mirrorLine}${discussions}</span>`
     : "";
   // vintage dateline: metadata line shown ABOVE the headline (esp. on mobile)
   const metaTop = `<span class="meta-top">`

@@ -56,6 +56,9 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:#445}
 .summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:11.5px; color:var(--muted); margin-top:2px; max-width:52ch}
 .game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
+.mirror-links,.discussions{display:block}
+.discussions{margin-top:1px}
+.line-label{color:#88958b; font-size:10px; text-transform:uppercase; letter-spacing:.4px}
 .mirrors a{color:var(--muted); text-decoration:none}
 .mirrors a:hover{color:var(--link); text-decoration:underline}
 .primary-link{font-weight:bold; color:#445}
