@@ -329,6 +329,16 @@ created_utc = 1582138413
 url = "https://www.gamasutra.com/blogs/BenjaminDeJager/20200219/358297/Our_indie_game_KUNAI_got_review_bombed_to_a_17.php"
 
 [[reddit_post]]
+id = "1ggl2z7"
+subreddit = "nintendo"
+author = "Turbostrider27"
+title = "Nintendo doesn't credit composers on new Nintendo Music app"
+score = 1871
+num_comments = 181
+created_utc = 1730398389
+url = "https://www.gamedeveloper.com/audio/why-doesn-t-nintendo-music-credit-composers-"
+
+[[reddit_post]]
 id = "1ggritt"
 subreddit = "Games"
 author = "Turbostrider27"
@@ -1077,6 +1087,16 @@ score = 577
 num_comments = 78
 created_utc = 1745512403
 url = "https://www.gamedeveloper.com/business/paradox-interactive-s-return-to-office-policy-is-driving-dissent-at-the-studio"
+
+[[reddit_post]]
+id = "1gcrqqu"
+subreddit = "gamernews"
+author = "Simple_Key_5112"
+title = "U.S. Copyright Office rejects DMCA exemption to support game preservation in libraries and archives"
+score = 569
+num_comments = 18
+created_utc = 1729967830
+url = "https://www.gamedeveloper.com/business/u-s-copyright-office-rejects-dmca-exemption-to-support-game-preservation"
 
 [[reddit_post]]
 id = "1re5awd"
@@ -1879,6 +1899,16 @@ created_utc = 1734615424
 url = "https://www.gamedeveloper.com/audio/black-ops-6-zombies-characters-recast-after-original-actors-withdrew-during-strike"
 
 [[reddit_post]]
+id = "1g9z4h1"
+subreddit = "gamedev"
+author = "S48GS"
+title = "Ubisoft's Prince of Persia: Lost Crown team reportedly disbanded after disappointing sales"
+score = 322
+num_comments = 159
+created_utc = 1729648087
+url = "https://www.gamedeveloper.com/business/ubisoft-s-prince-of-persia-lost-crown-team-reportedly-disbanded-after-disappointing-sales"
+
+[[reddit_post]]
 id = "1o92xjp"
 subreddit = "nintendo"
 author = "MaintenanceFar4207"
@@ -2219,6 +2249,16 @@ created_utc = 1537559022
 url = "http://gamasutra.com/view/news/327085/Report_The_Walking_Dead_developer_Telltale_Games_closing_down.php"
 
 [[reddit_post]]
+id = "gpwfd"
+subreddit = "gaming"
+author = "jgram"
+title = "Postmortem: Team Meat's Super Meat Boy | Gamasutra"
+score = 246
+num_comments = 130
+created_utc = 1302789129
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
+
+[[reddit_post]]
 id = "1ldavyq"
 subreddit = "KotakuInAction"
 author = "andthenjakewasanalt"
@@ -2427,6 +2467,16 @@ score = 215
 num_comments = 86
 created_utc = 1734591773
 url = "https://www.gamedeveloper.com/business/crush-40-singer-sues-sega-over-sonic-adventure-2-s-live-and-learn-theme-song"
+
+[[reddit_post]]
+id = "8grzq"
+subreddit = "programming"
+author = "electric_mouse"
+title = "Square/Enix Developers: What We Learned From Building DS Title: \"The World Ends With You\""
+score = 215
+num_comments = 113
+created_utc = 1241104411
+url = "http://www.gamasutra.com/view/feature/4010/postmortem_square_enixs_the_.php?print=1S"
 
 [[reddit_post]]
 id = "1reovoh"
@@ -3029,6 +3079,16 @@ created_utc = 1746198785
 url = "https://www.gamedeveloper.com/production/compulsion-games-boss-says-internal-xbox-studios-aren-t-facing-generative-ai-mandate"
 
 [[reddit_post]]
+id = "1ga4dv5"
+subreddit = "gamernews"
+author = "AliTVBG"
+title = "Survey says half of developers consider VR market on decline or stagnation"
+score = 139
+num_comments = 108
+created_utc = 1729666999
+url = "https://www.gamedeveloper.com/business/survey-says-half-of-developers-consider-vr-market-on-decline-or-stagnation"
+
+[[reddit_post]]
 id = "ivblcn"
 subreddit = "news"
 author = "FacelessOnes"
@@ -3349,6 +3409,26 @@ created_utc = 1731850133
 url = "https://www.gamedeveloper.com/design/why-animal-well-s-home-brewed-engine-was-key-to-its-success"
 
 [[reddit_post]]
+id = "1gfwjg2"
+subreddit = "Games"
+author = "SkullThug"
+title = "Probably Monsters cancels third project, lays off Battle Barge staff"
+score = 109
+num_comments = 9
+created_utc = 1730320385
+url = "https://www.gamedeveloper.com/business/developer-probablymonsters-lays-off-battle-barge-staff-after-project-cancellation"
+
+[[reddit_post]]
+id = "1gb72t7"
+subreddit = "Games"
+author = "Turbostrider27"
+title = "Avowed director Carrie Patel explains how Obsidian pushes boundaries in the fantasy genre"
+score = 109
+num_comments = 40
+created_utc = 1729788014
+url = "https://www.gamedeveloper.com/design/avowed-director-carrie-patel-explains-how-obsidian-pushes-boundaries-in-the-fantasy-genre"
+
+[[reddit_post]]
 id = "eo8sjc"
 subreddit = "Games"
 author = "CaptRobau"
@@ -3567,6 +3647,16 @@ score = 99
 num_comments = 29
 created_utc = 1770668478
 url = "https://www.gamedeveloper.com/business/riot-games-lays-off-roughly-80-employees-from-2xko-team"
+
+[[reddit_post]]
+id = "1g9vdqf"
+subreddit = "Games"
+author = "Forestl"
+title = "What happens when a secretive blockchain company buys your game studio - Story about Phoenix Labs and Rumble Games"
+score = 99
+num_comments = 3
+created_utc = 1729637213
+url = "https://www.gamedeveloper.com/business/what-happens-when-a-secretive-blockchain-company-buys-your-game-studio?utm_source=dlvr.it&utm_medium=twitter&utm_campaign=gamedevdotcom"
 
 [[reddit_post]]
 id = "jgxr1k"
@@ -3989,6 +4079,16 @@ created_utc = 1741460987
 url = "https://www.gamedeveloper.com/business/obituary-legacy-of-kain-writer-jim-curry-has-died"
 
 [[reddit_post]]
+id = "1gb72o4"
+subreddit = "xbox"
+author = "Turbostrider27"
+title = "Avowed director Carrie Patel explains how Obsidian pushes boundaries in the fantasy genre"
+score = 83
+num_comments = 40
+created_utc = 1729788005
+url = "https://www.gamedeveloper.com/design/avowed-director-carrie-patel-explains-how-obsidian-pushes-boundaries-in-the-fantasy-genre"
+
+[[reddit_post]]
 id = "1gs6a15"
 subreddit = "Games"
 author = "Trojanbp"
@@ -4077,6 +4177,16 @@ score = 79
 num_comments = 21
 created_utc = 1460649566
 url = "http://gamasutra.com/blogs/DavidDAngelo/20160414/270282/Feat_Unlocked_One_Million_Copies_of_Shovel_Knight_Sold.php"
+
+[[reddit_post]]
+id = "ew428g"
+subreddit = "Games"
+author = "NYstate"
+title = "Crunch and 'extended hours' both down in latest IGDA (International Game Developers Association) dev satisfaction survey"
+score = 78
+num_comments = 9
+created_utc = 1580384104
+url = "https://www.gamasutra.com/view/news/357336/Crunch_and_extended_hours_both_down_in_latest_IGDA_dev_satisfaction_survey.php"
 
 [[reddit_post]]
 id = "1ndhgeu"
@@ -4657,6 +4767,26 @@ score = 59
 num_comments = 13
 created_utc = 1740336529
 url = "https://www.gamedeveloper.com/business/vainglory-developer-super-evil-megacorp-appoints-new-ceo"
+
+[[reddit_post]]
+id = "1gc4an9"
+subreddit = "GamePreservationists"
+author = "Simple_Key_5112"
+title = "U.S. Copyright Office rejects DMCA exemption to support game preservation"
+score = 59
+num_comments = 18
+created_utc = 1729889108
+url = "https://www.gamedeveloper.com/business/u-s-copyright-office-rejects-dmca-exemption-to-support-game-preservation"
+
+[[reddit_post]]
+id = "1ga4dqx"
+subreddit = "gamingnews"
+author = "AliTVBG"
+title = "Survey says half of developers consider VR market on decline or stagnation"
+score = 59
+num_comments = 70
+created_utc = 1729666983
+url = "https://www.gamedeveloper.com/business/survey-says-half-of-developers-consider-vr-market-on-decline-or-stagnation"
 
 [[reddit_post]]
 id = "e3i184"
@@ -5609,6 +5739,16 @@ created_utc = 1501609222
 url = "http://gamasutra.com/view/news/302870/Sales_up_by_54_percent_in_Sonys_games_division.php"
 
 [[reddit_post]]
+id = "1ga72y8"
+subreddit = "Buttcoin"
+author = "Tristanus"
+title = "What happens when a secretive blockchain company buys your game studio"
+score = 40
+num_comments = 3
+created_utc = 1729678763
+url = "https://www.gamedeveloper.com/business/what-happens-when-a-secretive-blockchain-company-buys-your-game-studio"
+
+[[reddit_post]]
 id = "10mb2l"
 subreddit = "ludology"
 author = "shenglong"
@@ -6109,6 +6249,16 @@ created_utc = 1739292692
 url = "https://www.gamedeveloper.com/business/report-unity-continues-layoffs-with-abrupt-communications-and-5am-emails"
 
 [[reddit_post]]
+id = "gpycc"
+subreddit = "gamedev"
+author = "sfx"
+title = "Postmortem: Team Meat's Super Meat Boy"
+score = 32
+num_comments = 3
+created_utc = 1302793782
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
+
+[[reddit_post]]
 id = "2kw24f"
 subreddit = "bindingofisaac"
 author = "FlotillaFlotsam"
@@ -6507,6 +6657,36 @@ score = 28
 num_comments = 11
 created_utc = 1734583938
 url = "https://www.gamedeveloper.com/business/crush-40-singer-sues-sega-over-sonic-adventure-2-s-live-and-learn-theme-song"
+
+[[reddit_post]]
+id = "1gahftd"
+subreddit = "gamernews"
+author = "YouAreNotMeLiar"
+title = "Arma dev Bohemia Interactive tops 40 million units in lifetime Steam sales"
+score = 28
+num_comments = 1
+created_utc = 1729707348
+url = "https://www.gamedeveloper.com/business/arma-dev-bohemia-interactive-tops-40-million-units-in-lifetime-steam-sales"
+
+[[reddit_post]]
+id = "almpt"
+subreddit = "gamedev"
+author = "panic"
+title = "The Cabal: Valve’s Design Process For Creating Half-Life"
+score = 28
+num_comments = 4
+created_utc = 1262664389
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+
+[[reddit_post]]
+id = "7oslt"
+subreddit = "programming"
+author = "noidi"
+title = "Postmortem: Mommy's Best Games' Weapon of Choice (XNA Game by one person)"
+score = 28
+num_comments = 4
+created_utc = 1231611007
+url = "http://www.gamasutra.com/view/feature/3899/postmortem_mommys_best_games_.php"
 
 [[reddit_post]]
 id = "oypwl6"
@@ -7249,6 +7429,16 @@ created_utc = 1733501165
 url = "https://www.gamedeveloper.com/business/bandai-namco-dissolving-online-studio-after-blue-protocol-s-collapse"
 
 [[reddit_post]]
+id = "1geuwyl"
+subreddit = "Games"
+author = "JamieReleases"
+title = "SAG-AFTRA signs agreement with AI-powered voice company Ethovox"
+score = 22
+num_comments = 8
+created_utc = 1730209323
+url = "https://www.gamedeveloper.com/production/sag-aftra-signs-agreement-with-ai-powered-voice-company-ethovox"
+
+[[reddit_post]]
 id = "26cyfv"
 subreddit = "TheMakingOfGames"
 author = "Idoiocracy"
@@ -7277,6 +7467,16 @@ score = 21
 num_comments = 0
 created_utc = 1605627135
 url = "https://www.gamasutra.com/view/news/329003/How_bad_crediting_hurts_the_game_industry_and_muddles_history.php"
+
+[[reddit_post]]
+id = "ezhxz1"
+subreddit = "controlgame"
+author = "guyfromouttaspace"
+title = "The buildings of Control vs their real world counterparts"
+score = 21
+num_comments = 2
+created_utc = 1580942354
+url = "https://www.gamasutra.com/view/news/352097/The_real_buildings_that_inspired_Controls_Oldest_House.php"
 
 [[reddit_post]]
 id = "b3r6oh"
@@ -7657,6 +7857,16 @@ score = 19
 num_comments = 5
 created_utc = 1747927411
 url = "https://www.gamedeveloper.com/business/-deprofessionalization-is-bad-for-video-games"
+
+[[reddit_post]]
+id = "hnz8h"
+subreddit = "ludology"
+author = "voltagex"
+title = "Postmortem: Super Meat Boy"
+score = 19
+num_comments = 2
+created_utc = 1306815932
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
 
 [[reddit_post]]
 id = "onjmrj"
@@ -8059,6 +8269,16 @@ created_utc = 1749060890
 url = "https://www.gamedeveloper.com/business/gog-lays-out-the-business-case-for-robust-game-preservation"
 
 [[reddit_post]]
+id = "1gaup0u"
+subreddit = "xbox"
+author = "Remorse_123"
+title = "2K's mocap team files to unionize in 'necessary step' for the studio"
+score = 17
+num_comments = 1
+created_utc = 1729745187
+url = "https://www.gamedeveloper.com/business/2k-s-mocap-team-files-to-unionize-in-necessary-step-for-the-studio"
+
+[[reddit_post]]
 id = "mqjnou"
 subreddit = "aoe2"
 author = "dzamir"
@@ -8449,6 +8669,16 @@ created_utc = 1554908633
 url = "http://www.gamasutra.com/view/news/340040/Exploring_the_secret_depths_of_Bubble_Bobbles_design.php"
 
 [[reddit_post]]
+id = "axpoit"
+subreddit = "BethesdaSoftworks"
+author = "ChingShih"
+title = "Multiplayer Skyrim Mod \"SkyrimTogether\" Criticized for Lifting Code From Another Mod"
+score = 14
+num_comments = 5
+created_utc = 1551817089
+url = "http://www.gamasutra.com/view/news/338014/Multiplayer_Skyrim_mod_criticized_for_lifting_code_from_another_mod.php"
+
+[[reddit_post]]
 id = "f07uz0"
 subreddit = "gamedev"
 author = "Echo-Entertainment"
@@ -8509,6 +8739,16 @@ created_utc = 1460745143
 url = "http://gamasutra.com/blogs/DavidDAngelo/20160414/270282/Feat_Unlocked_One_Million_Copies_of_Shovel_Knight_Sold.php"
 
 [[reddit_post]]
+id = "476zte"
+subreddit = "vulkan"
+author = "omarator"
+title = "Gamasutra - GDC 2016: ARM sponsors expert talks on Vulkan and mobile VR design"
+score = 14
+num_comments = 0
+created_utc = 1456240257
+url = "http://gamasutra.com/view/news/266276/GDC_2016_ARM_sponsors_expert_talks_on_Vulkan_and_mobile_VR_design.php"
+
+[[reddit_post]]
 id = "1t6wuc0"
 subreddit = "gamingnews"
 author = "bwoah07_gp2"
@@ -8537,6 +8777,16 @@ score = 14
 num_comments = 3
 created_utc = 1744922624
 url = "https://www.gamedeveloper.com/business/former-arkane-austin-manager-announces-meta-backed-studio"
+
+[[reddit_post]]
+id = "25v2zy"
+subreddit = "TheMakingOfGames"
+author = "doubleColJustified"
+title = "Half-Life - Valve’s Design Process (1999)"
+score = 14
+num_comments = 2
+created_utc = 1400422906
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
 
 [[reddit_post]]
 id = "2289wo"
@@ -9049,6 +9299,16 @@ created_utc = 1731826062
 url = "https://www.gamedeveloper.com/design/why-animal-well-s-home-brewed-engine-was-key-to-its-success"
 
 [[reddit_post]]
+id = "1gacf04"
+subreddit = "CryptoReality"
+author = "AmericanScream"
+title = "What happens when a secretive blockchain company buys your game studio? Spoiler: Nothing good."
+score = 12
+num_comments = 0
+created_utc = 1729694997
+url = "https://www.gamedeveloper.com/business/what-happens-when-a-secretive-blockchain-company-buys-your-game-studio"
+
+[[reddit_post]]
 id = "4egpd2"
 subreddit = "PS4"
 author = "LMW-YBC"
@@ -9139,6 +9399,16 @@ created_utc = 1582067455
 url = "https://www.gamasutra.com/blogs/SimonCarless/20200217/358287/The_State_Of_Steam_Discoverability_February_2020.php"
 
 [[reddit_post]]
+id = "ewdvg0"
+subreddit = "dashpay"
+author = "circleio"
+title = "Property-trading game Upland to enable both fiat and crypto / dash payments"
+score = 11
+num_comments = 1
+created_utc = 1580424304
+url = "https://www.gamasutra.com/view/pressreleases/357322/PROPERTYTRADING_GAME_UPLAND_FIRST_TO_ENABLE_BOTH_FIAT_AND_CRYPTO_PAYMENTS.php"
+
+[[reddit_post]]
 id = "c4vbg3"
 subreddit = "Wolfenstein"
 author = "ChingShih"
@@ -9147,6 +9417,16 @@ score = 11
 num_comments = 0
 created_utc = 1561408916
 url = "http://www.gamasutra.com/view/news/344672/How_id_built_Wolfenstein_3D_using_Commander_Keen_tech.php"
+
+[[reddit_post]]
+id = "axn22d"
+subreddit = "gamedev"
+author = "GamedevPhilo"
+title = "Gamasutra: Move or Die and its 4 Year Journey to the PlayStation 4"
+score = 11
+num_comments = 3
+created_utc = 1551803486
+url = "http://www.gamasutra.com/blogs/NicolaeBerbece/20190305/337807/Move_or_Die_and_its_4_Year_Journey_to_the_PlayStation_4.php"
 
 [[reddit_post]]
 id = "iepqdi"
@@ -9709,6 +9989,26 @@ created_utc = 1589238549
 url = "https://www.gamasutra.com/blogs/RaminShokrizade/20130405/189984/How_I_Used_EVE_Online_to_Predict_the_Great_Recession.php"
 
 [[reddit_post]]
+id = "ez8fqz"
+subreddit = "DevUnion"
+author = "squirrelrampage"
+title = "Sony Interactive Entertainment's Manchester Studio to close down"
+score = 9
+num_comments = 0
+created_utc = 1580903525
+url = "https://www.gamasutra.com/view/news/357604/Sony_Interactive_Entertainments_VRfocused_Manchester_Studio_to_close_down.php"
+
+[[reddit_post]]
+id = "ewlcof"
+subreddit = "gamedev"
+author = "Echo-Entertainment"
+title = "Simon Carless - The State Of Game Discoverability January 2020"
+score = 9
+num_comments = 1
+created_utc = 1580459145
+url = "https://www.gamasutra.com/blogs/SimonCarless/20200127/357230/The_State_Of_Game_Discoverability_January_2020.php"
+
+[[reddit_post]]
 id = "c5bjby"
 subreddit = "BethesdaSoftworks"
 author = "ChingShih"
@@ -10259,6 +10559,16 @@ created_utc = 1554494431
 url = "http://www.gamasutra.com/view/news/340033/Epic_wants_to_leave_the_Epic_Games_Store_exclusivity_decision_up_to_devs.php?_mc=NL_GAMA_INSIDEGAMA_04042019&elq_mid=90339&elq_cid=27826849"
 
 [[reddit_post]]
+id = "axn3gj"
+subreddit = "gamedev"
+author = "GamedevPhilo"
+title = "Robothorium Post Mortem"
+score = 8
+num_comments = 0
+created_utc = 1551803682
+url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+
+[[reddit_post]]
 id = "mx8mcb"
 subreddit = "gamedev"
 author = "Sersch"
@@ -10439,6 +10749,36 @@ created_utc = 1737120255
 url = "https://www.gamedeveloper.com/business/meta-quest-3s-failed-to-boost-holiday-demand-for-vr-in-2024"
 
 [[reddit_post]]
+id = "1gevyx2"
+subreddit = "gamernews"
+author = "samiy2k"
+title = "SAG-AFTRA signs agreement with AI-powered voice company Ethovox"
+score = 8
+num_comments = 0
+created_utc = 1730212109
+url = "https://www.gamedeveloper.com/production/sag-aftra-signs-agreement-with-ai-powered-voice-company-ethovox"
+
+[[reddit_post]]
+id = "u3431"
+subreddit = "Thief"
+author = "DutchmanDavid"
+title = "Postmortem: Thief: The Dark Project"
+score = 8
+num_comments = 0
+created_utc = 1337883425
+url = "http://www.gamasutra.com/view/feature/3355/postmortem_thief_the_dark_project.php?print=1"
+
+[[reddit_post]]
+id = "20tnpk"
+subreddit = "TheMakingOfGames"
+author = "Idoiocracy"
+title = "Brutal Legend - postmortem article on Double Fine's 2009 action-adventure RTS hybrid"
+score = 8
+num_comments = 1
+created_utc = 1395247355
+url = "http://www.gamasutra.com/view/feature/132696/postmortem_double_fines_brutal_.php?print=1"
+
+[[reddit_post]]
 id = "nsaxc8"
 subreddit = "retrogamedev"
 author = "r_retrohacking_mod2"
@@ -10537,6 +10877,16 @@ score = 7
 num_comments = 1
 created_utc = 1584653125
 url = "https://www.gamasutra.com/view/news/359849/GameStop_rules_itself_essential_retail_and_therefore_immune_to_lockdown_closures.php?elq_mid=96375&elq_cid=13040973"
+
+[[reddit_post]]
+id = "ezairf"
+subreddit = "gamedev"
+author = "Echo-Entertainment"
+title = "Simon Carless - What 'Dragons Love Tacos' taught me about game discoverability"
+score = 7
+num_comments = 12
+created_utc = 1580913718
+url = "https://www.gamasutra.com/blogs/SimonCarless/20200203/357546/What_Dragons_Love_Tacos_taught_me_about_game_discoverability.php"
 
 [[reddit_post]]
 id = "md9t01"
@@ -11109,6 +11459,16 @@ created_utc = 1585053670
 url = "https://www.gamasutra.com/view/news/359909/Job_stability_quality_of_life_Windjammers_with_Dave_Lang__GDC_Podcast_ep_7.php"
 
 [[reddit_post]]
+id = "ew4t4n"
+subreddit = "technology"
+author = "[deleted]"
+title = "Blizzard automatically owns any and all Warcraft 3: Reforged custom games"
+score = 6
+num_comments = 7
+created_utc = 1580387908
+url = "https://www.gamasutra.com/view/news/357343/Blizzard_automatically_owns_any_and_all_Warcraft_3_Reforged_custom_games.php"
+
+[[reddit_post]]
 id = "n554n7"
 subreddit = "SubSimulatorGPT2"
 author = "pcgamingGPT2Bot"
@@ -11147,6 +11507,16 @@ score = 6
 num_comments = 10
 created_utc = 1552990942
 url = "http://www.gamasutra.com/view/news/338818/Epic_Games_Store_roadmap_outlines_cloud_saves_achievements_user_reviews.php"
+
+[[reddit_post]]
+id = "axjoiv"
+subreddit = "spacesimgames"
+author = "agreatbecoming"
+title = "The European Space Agency and Auroch Digital are working together on a space exploration game"
+score = 6
+num_comments = 6
+created_utc = 1551781589
+url = "http://www.gamasutra.com/view/pressreleases/337889/The_European_Space_Agency_and_Auroch_Digital_are_working_together_on_a_space_exploration_game.php"
 
 [[reddit_post]]
 id = "p67cxw"
@@ -11597,6 +11967,16 @@ score = 5
 num_comments = 0
 created_utc = 1582723857
 url = "https://www.gamasutra.com/view/feature/130848/how_to_prototype_a_game_in_under_7_.php"
+
+[[reddit_post]]
+id = "ezbjm1"
+subreddit = "Games"
+author = "DynamaxGarbodor"
+title = "Phil Spencer claims Amazon and Google are 'main competitors' to Xbox"
+score = 5
+num_comments = 2
+created_utc = 1580918018
+url = "https://www.gamasutra.com/view/news/357649/Phil_Spencer_claims_Amazon_and_Google_are_main_competitors_to_Xbox.php"
 
 [[reddit_post]]
 id = "ln59c6"
@@ -12839,6 +13219,16 @@ created_utc = 1397587791
 url = "http://www.gamasutra.com/view/feature/131815/the_cabal_valves_design_process_.php?print=1"
 
 [[reddit_post]]
+id = "sngvr"
+subreddit = "Games"
+author = "[deleted]"
+title = "The Cabal: Valve's Design Process [link found in the Valve Handbook pdf]"
+score = 4
+num_comments = 1
+created_utc = 1335145051
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+
+[[reddit_post]]
 id = "4nvhsj"
 subreddit = "pcmasterrace"
 author = "vocatus"
@@ -12847,6 +13237,16 @@ score = 4
 num_comments = 4
 created_utc = 1465822774
 url = "http://www.gamasutra.com/view/feature/131533/postmortem_blizzards_diablo_ii.php"
+
+[[reddit_post]]
+id = "fm7ky"
+subreddit = "gaming"
+author = "scumbag_steve"
+title = "Featured in many a game; we all know the SpeedTree middleware. The history of which is a surprisingly good read."
+score = 4
+num_comments = 0
+created_utc = 1297818714
+url = "http://www.gamasutra.com/view/feature/2137/middleware_postmortem_idv_incs_.php"
 
 [[reddit_post]]
 id = "fydi2"
@@ -13317,6 +13717,16 @@ score = 3
 num_comments = 0
 created_utc = 1581691476
 url = "https://www.gamasutra.com/blogs/OndrejTrhon/20200213/357817/When_history_gets_interactive_Attentat_1942_Svoboda_1945_and_historical_research.php"
+
+[[reddit_post]]
+id = "ew8fr8"
+subreddit = "gamernews"
+author = "LoadSaveWeekly"
+title = "Gamasutra - Crunch and 'extended hours' both down in latest IGDA dev satisfaction survey"
+score = 3
+num_comments = 0
+created_utc = 1580403382
+url = "https://www.gamasutra.com/view/news/357336/Crunch_and_extended_hours_both_down_in_latest_IGDA_dev_satisfaction_survey.php?elq_mid=95450&elq_cid=30832666"
 
 [[reddit_post]]
 id = "odhpyk"
@@ -13949,6 +14359,16 @@ created_utc = 1456927506
 url = "http://gamasutra.com/view/news/267022/How_Frozenbyte_let_players_slash_the_price_of_their_game_Shadwen.php"
 
 [[reddit_post]]
+id = "473sdg"
+subreddit = "Games"
+author = "[deleted]"
+title = "Warren Spector to be making games again, and his view on mainstream gaming - Gamasutra"
+score = 3
+num_comments = 0
+created_utc = 1456185039
+url = "http://gamasutra.com/view/news/266210/The_Comeback_Why_Warren_Spector_is_making_games_again.php"
+
+[[reddit_post]]
 id = "1u31gug"
 subreddit = "DecrepitGamers"
 author = "Camenwolf"
@@ -14269,6 +14689,16 @@ created_utc = 1409112881
 url = "http://www.gamasutra.com/view/feature/131813/postmortem_irrational_games_.php"
 
 [[reddit_post]]
+id = "alpib"
+subreddit = "reddit.com"
+author = "surajbarkale"
+title = "The Cabal - Valve design process (cross posted from gamedev)"
+score = 3
+num_comments = 0
+created_utc = 1262681106
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+
+[[reddit_post]]
 id = "2odc2l"
 subreddit = "TheMakingOfGames"
 author = "Idoiocracy"
@@ -14277,6 +14707,16 @@ score = 3
 num_comments = 0
 created_utc = 1417793618
 url = "http://www.gamasutra.com/view/feature/131824/postmortem_shiny_entertainments_.php?print=1"
+
+[[reddit_post]]
+id = "cmov0"
+subreddit = "gaming"
+author = "pirisca"
+title = "Postmortem: Ensemble Studio's Age of Empires II: Age of Kings"
+score = 3
+num_comments = 1
+created_utc = 1278464006
+url = "http://www.gamasutra.com/view/feature/3437/postmortem_ensemble_studios_age_.php"
 
 [[reddit_post]]
 id = "49nd32"
@@ -15259,6 +15699,16 @@ created_utc = 1581509516
 url = "https://www.gamasutra.com/view/news/357595/Android_app_developers_have_earned_over_80_billion_through_Google_Play.php"
 
 [[reddit_post]]
+id = "ew4wgn"
+subreddit = "AIandRobotics"
+author = "AIandRobotics_Bot"
+title = "Blizzard automatically owns any and all Warcraft 3: Reforged custom games"
+score = 2
+num_comments = 1
+created_utc = 1580388366
+url = "https://www.gamasutra.com/view/news/357343/Blizzard_automatically_owns_any_and_all_Warcraft_3_Reforged_custom_games.php"
+
+[[reddit_post]]
 id = "p9favi"
 subreddit = "rpggames"
 author = "Look-lucky-9"
@@ -15529,16 +15979,6 @@ created_utc = 1555087168
 url = "http://www.gamasutra.com/view/news/340735/In_lieu_of_Storehosted_forums_Epic_wants_devs_to_link_to_external_communities.php"
 
 [[reddit_post]]
-id = "bcebah"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Animoca Brands acquires majority stake in Trilliona dev Skytree for $850k"
-score = 2
-num_comments = 0
-created_utc = 1555079954
-url = "http://www.gamasutra.com/view/news/340718/Animoca_Brands_acquires_majority_stake_in_Trilliona_dev_Skytree_for_850k.php"
-
-[[reddit_post]]
 id = "bcebaw"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -15547,6 +15987,16 @@ score = 2
 num_comments = 0
 created_utc = 1555079954
 url = "http://www.gamasutra.com/blogs/JoshBycer/20190411/340557/How_Punishment_Systems_Hurt_Gameplay.php"
+
+[[reddit_post]]
+id = "bcebah"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Animoca Brands acquires majority stake in Trilliona dev Skytree for $850k"
+score = 2
+num_comments = 0
+created_utc = 1555079954
+url = "http://www.gamasutra.com/view/news/340718/Animoca_Brands_acquires_majority_stake_in_Trilliona_dev_Skytree_for_850k.php"
 
 [[reddit_post]]
 id = "bcd312"
@@ -16709,6 +17159,26 @@ created_utc = 1456855927
 url = "http://gamasutra.com/view/news/266891/Jake_Solomon_explains_the_careful_use_of_randomness_in_XCOM_2.php%20?elqTrackId=98a2a7b06be0486e95e8675e8877dff4&elq=e7ebd2aff74b4a26aba19ceb2afc59e2&elqaid=68031&elqat=1&elqCampaignId=19807"
 
 [[reddit_post]]
+id = "46g6l0"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "How we A/B test game art and icons"
+score = 2
+num_comments = 0
+created_utc = 1455820246
+url = "http://gamasutra.com/blogs/SimonNewstead/20160217/265851/How_we_AB_test_game_art_and_icons.php"
+
+[[reddit_post]]
+id = "1ucqgd0"
+subreddit = "DreamStationcc"
+author = "maxxrz31"
+title = "Godot Confirms It Tolerates ‘some AI assistance’ but Rejects ‘vibe coded’ Tag"
+score = 2
+num_comments = 0
+created_utc = 1782147972
+url = "https://www.gamedeveloper.com/business/godot-confirms-it-tolerates-some-ai-assistance-but-rejects-vibe-coded-accusations"
+
+[[reddit_post]]
 id = "1u8rzmi"
 subreddit = "gaming"
 author = "SilentNova300"
@@ -17089,6 +17559,36 @@ created_utc = 1734127755
 url = "https://www.gamedeveloper.com/programming/deep-dive-crafting-detailed-and-dynamic-water-in-planet-coaster-2"
 
 [[reddit_post]]
+id = "1ggixce"
+subreddit = "technology"
+author = "YouAreNotMeLiar"
+title = "Meta ponders whether Reality Labs could be more efficient after it loses another $4.4 billion"
+score = 2
+num_comments = 0
+created_utc = 1730392793
+url = "https://www.gamedeveloper.com/business/meta-ponders-whether-reality-labs-could-be-more-efficient-after-it-loses-another-4-4-billion"
+
+[[reddit_post]]
+id = "1gauore"
+subreddit = "PS5"
+author = "Remorse_123"
+title = "2K's mocap team files to unionize in 'necessary step' for the studio"
+score = 2
+num_comments = 0
+created_utc = 1729745159
+url = "https://www.gamedeveloper.com/business/2k-s-mocap-team-files-to-unionize-in-necessary-step-for-the-studio"
+
+[[reddit_post]]
+id = "1gahg18"
+subreddit = "pcmasterrace"
+author = "YouAreNotMeLiar"
+title = "Arma dev Bohemia Interactive tops 40 million units in lifetime Steam sales"
+score = 2
+num_comments = 0
+created_utc = 1729707362
+url = "https://www.gamedeveloper.com/business/arma-dev-bohemia-interactive-tops-40-million-units-in-lifetime-steam-sales"
+
+[[reddit_post]]
 id = "14zoajt"
 subreddit = "XboxSeriesX"
 author = "Ironmansbodygaurd"
@@ -17099,6 +17599,16 @@ created_utc = 1689359706
 url = "http://www.gamedeveloper.com/business/cma-delays-microsoft-activision-verdict-as-ftc-appeal-gets-denied"
 
 [[reddit_post]]
+id = "25tngc"
+subreddit = "hackernews"
+author = "qznc_bot"
+title = "Valve’s Design Process For Creating Half-Life (1999)"
+score = 2
+num_comments = 1
+created_utc = 1400367120
+url = "http://www.gamasutra.com/view/feature/3408/the_cabal_valves_design_process_.php"
+
+[[reddit_post]]
 id = "2ry2bk"
 subreddit = "gaming"
 author = "IAMhonka"
@@ -17107,6 +17617,16 @@ score = 2
 num_comments = 1
 created_utc = 1420875171
 url = "http://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php"
+
+[[reddit_post]]
+id = "9gm2k"
+subreddit = "gaming"
+author = "jgram"
+title = "Postmortem: Crystal Dynamics' Tomb Raider: Underworld | Gamasutra"
+score = 2
+num_comments = 0
+created_utc = 1251907704
+url = "http://www.gamasutra.com/view/feature/4122/postmortem_crystal_dynamics_tomb_.php"
 
 [[reddit_post]]
 id = "2289mk"
@@ -17137,6 +17657,16 @@ score = 2
 num_comments = 0
 created_utc = 1300395370
 url = "http://www.gamasutra.com/view/feature/6310/postmortem_mediatonics_monsters_.php?print=1"
+
+[[reddit_post]]
+id = "wrbsc"
+subreddit = "8bitgamedev"
+author = "Kanzlerforce"
+title = "Gamasutra - Features - Postmortem: Team Meat's Super Meat Boy"
+score = 2
+num_comments = 0
+created_utc = 1342619474
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
 
 [[reddit_post]]
 id = "jz8gx"
@@ -19069,16 +19599,6 @@ created_utc = 1594743087
 url = "https://www.gamasutra.com/view/pressreleases/366358/FORTNITE_CREATIVE_GAME_NATURE_CALLS_SENDS_PLAYERS_TO_SUMMER_CAMP_WITH_A_TWIST.php"
 
 [[reddit_post]]
-id = "hqxx47"
-subreddit = "GamesUR"
-author = "GamesUR"
-title = "RT @gamasutra: Blog: Balancing Tips - How we managed math on Idle Idol https://t.co/ecIsjuiJYX https://t.co/VNaZmXrmOI"
-score = 1
-num_comments = 0
-created_utc = 1594716133
-url = "https://www.gamasutra.com/blogs/GabrielPadinha/20200709/365988/Balancing_Tips_How_We_Managed_Math_on_Idle_Idol.php"
-
-[[reddit_post]]
 id = "hqxx4f"
 subreddit = "GamesUR"
 author = "GamesUR"
@@ -19087,6 +19607,16 @@ score = 1
 num_comments = 0
 created_utc = 1594716133
 url = "https://www.gamasutra.com/blogs/FrancescoGenerali/20200709/366071/Camera_Evolution_in_ThirdPerson_Games.php"
+
+[[reddit_post]]
+id = "hqxx47"
+subreddit = "GamesUR"
+author = "GamesUR"
+title = "RT @gamasutra: Blog: Balancing Tips - How we managed math on Idle Idol https://t.co/ecIsjuiJYX https://t.co/VNaZmXrmOI"
+score = 1
+num_comments = 0
+created_utc = 1594716133
+url = "https://www.gamasutra.com/blogs/GabrielPadinha/20200709/365988/Balancing_Tips_How_We_Managed_Math_on_Idle_Idol.php"
 
 [[reddit_post]]
 id = "hmqu5f"
@@ -19999,6 +20529,96 @@ created_utc = 1580993771
 url = "https://www.gamasutra.com/view/pressreleases/357710/Indepth_gameplay_video_released_for_Company_of_Heroes_on_iPad.php"
 
 [[reddit_post]]
+id = "ez80u1"
+subreddit = "u_TellurionMobile"
+author = "TellurionMobile"
+title = "Gamasutra - Report: TikTok owner ByteDance planning big push into mobile games"
+score = 1
+num_comments = 0
+created_utc = 1580901040
+url = "https://www.gamasutra.com/view/news/356908/Report_TikTok_owner_ByteDance_planning_big_push_into_mobile_games.php"
+
+[[reddit_post]]
+id = "ez7yos"
+subreddit = "GamesUR"
+author = "GamesUR"
+title = "RT @gamasutra: Blog: Pack-ratting in games - Do players need to have it all? https://t.co/t1RGY2i0lS https://t.co/T6oLPvs4cE"
+score = 1
+num_comments = 0
+created_utc = 1580900664
+url = "https://www.gamasutra.com/blogs/JeremyDandeneau/20200203/357495/PackRatting_in_Video_Games_Do_Players_Have_to_Have_It_All.php"
+
+[[reddit_post]]
+id = "eyrxxq"
+subreddit = "todayilearned"
+author = "[deleted]"
+title = "TIL Steve Jobs walked into the biggest gaming company at the time with no work or engineering experience and demanded a job after a firm handshake and got it. OK Boomer"
+score = 1
+num_comments = 0
+created_utc = 1580831234
+url = "https://www.gamasutra.com/view/news/127537/Steve_Jobs_Atari_Employee_Number_40.php"
+
+[[reddit_post]]
+id = "ey5slj"
+subreddit = "u_TellurionMobile"
+author = "TellurionMobile"
+title = "Gamasutra - Stillfront Group acquires Dragon Story dev Storm8 for as much as $400 million"
+score = 1
+num_comments = 0
+created_utc = 1580729253
+url = "https://www.gamasutra.com/view/news/357035/Stillfront_Group_acquires_Dragon_Story_dev_Storm8_for_as_much_as_400_million.php"
+
+[[reddit_post]]
+id = "ey1faj"
+subreddit = "gamedev"
+author = "SingularSchemes"
+title = "Utilizing 3D Cameras in 2D Games"
+score = 1
+num_comments = 0
+created_utc = 1580704273
+url = "https://www.gamasutra.com/blogs/GameMakerStudio/20200131/357447/Utilizing_3D_Cameras_in_2D_Games.php"
+
+[[reddit_post]]
+id = "exkmxb"
+subreddit = "gaming"
+author = "borkthafork"
+title = "While Bliz and Bethesda seem to not care about what gamers want anymore, it's nice to see this response from Ubisoft."
+score = 1
+num_comments = 0
+created_utc = 1580626750
+url = "https://www.gamasutra.com/view/news/334647/Ubisoft_issues_apology_for_controversial_Assassins_Creed_Odyssey_DLC.php"
+
+[[reddit_post]]
+id = "ewrjs9"
+subreddit = "pesmobile"
+author = "[deleted]"
+title = "Mobile Yu-Gi-Oh! and PES titles are Konami's top revenue earning games this year"
+score = 1
+num_comments = 0
+created_utc = 1580490880
+url = "https://www.gamasutra.com/view/news/357408/Mobile_YuGiOh_and_PES_titles_are_Konamis_top_revenue_earning_games_this_year.php"
+
+[[reddit_post]]
+id = "ew8vxw"
+subreddit = "VideoGameVanguards"
+author = "OverdoseDelusion"
+title = "Gamasutra - Crunch and 'extended hours' both down in latest IGDA dev satisfaction survey"
+score = 1
+num_comments = 0
+created_utc = 1580405061
+url = "https://www.gamasutra.com/view/news/357336/Crunch_and_extended_hours_both_down_in_latest_IGDA_dev_satisfaction_survey.php?elq_mid=95450&elq_cid=30832666"
+
+[[reddit_post]]
+id = "ew5oxj"
+subreddit = "WC3"
+author = "Backroll"
+title = "Gamasutra - Blizzard automatically owns any and all Warcraft 3: Reforged custom games - modders essentially screwed over"
+score = 1
+num_comments = 1
+created_utc = 1580392098
+url = "https://www.gamasutra.com/view/news/357343/Blizzard_automatically_owns_any_and_all_Warcraft_3_Reforged_custom_games.php"
+
+[[reddit_post]]
 id = "q8jxe3"
 subreddit = "u_ib80"
 author = "ib80"
@@ -20699,16 +21319,6 @@ created_utc = 1556960183
 url = "http://www.gamasutra.com/view/news/341962/Mortal_Kombat_Microsoft_Solitaire_and_more_join_World_Video_Game_Hall_of_Fame.php"
 
 [[reddit_post]]
-id = "bk09pe"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Don't Miss: Designing the people-programming puzzler Human Resource Machine"
-score = 1
-num_comments = 0
-created_utc = 1556831843
-url = "http://www.gamasutra.com/view/news/245946/Why_a_World_of_Goo_dev_made_a_puzzle_game_about_programming_humans.php"
-
-[[reddit_post]]
 id = "bk09pj"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -20717,6 +21327,16 @@ score = 1
 num_comments = 0
 created_utc = 1556831843
 url = "http://www.gamasutra.com/view/news/341962/Mortal_Kombat_Microsoft_Solitaire_and_more_join_World_Video_Game_Hall_of_Fame.php"
+
+[[reddit_post]]
+id = "bk09pe"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Don't Miss: Designing the people-programming puzzler Human Resource Machine"
+score = 1
+num_comments = 0
+created_utc = 1556831843
+url = "http://www.gamasutra.com/view/news/245946/Why_a_World_of_Goo_dev_made_a_puzzle_game_about_programming_humans.php"
 
 [[reddit_post]]
 id = "bjywiq"
@@ -20949,16 +21569,6 @@ created_utc = 1556576903
 url = "http://www.gamasutra.com/view/news/341699/Get_a_job_Dream_Harvest_is_hiring_a_Technical_Game_Designer.php"
 
 [[reddit_post]]
-id = "bivoax"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Report: Talks of developer walkouts prompt conversation inside Riot Games"
-score = 1
-num_comments = 0
-created_utc = 1556576902
-url = "http://www.gamasutra.com/view/news/341697/Report_Talks_of_developer_walkouts_prompt_conversation_inside_Riot_Games.php"
-
-[[reddit_post]]
 id = "bivob4"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -20967,6 +21577,16 @@ score = 1
 num_comments = 0
 created_utc = 1556576902
 url = "http://www.gamasutra.com/view/news/341698/Nintendo_pulls_A_Dark_Room_from_eShop_over_secret_code_editor.php"
+
+[[reddit_post]]
+id = "bivoax"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Report: Talks of developer walkouts prompt conversation inside Riot Games"
+score = 1
+num_comments = 0
+created_utc = 1556576902
+url = "http://www.gamasutra.com/view/news/341697/Report_Talks_of_developer_walkouts_prompt_conversation_inside_Riot_Games.php"
 
 [[reddit_post]]
 id = "biswow"
@@ -21069,16 +21689,6 @@ created_utc = 1556324656
 url = "http://www.gamasutra.com/view/news/341581/Get_a_job_Pixar_Animation_Studios_FoxNext_Games_are_more_are_hiring_now_.php"
 
 [[reddit_post]]
-id = "bhsa51"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Citing arbitration clauses, Riot Games moves to block employee lawsuits"
-score = 1
-num_comments = 0
-created_utc = 1556317477
-url = "http://www.gamasutra.com/view/news/341580/Citing_arbitration_clauses_Riot_Games_moves_to_block_employee_lawsuits.php"
-
-[[reddit_post]]
 id = "bhsa4z"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -21087,6 +21697,16 @@ score = 1
 num_comments = 0
 created_utc = 1556317477
 url = "http://www.gamasutra.com/view/news/341579/PlayStation_Now_has_700000_subscribers.php"
+
+[[reddit_post]]
+id = "bhsa51"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Citing arbitration clauses, Riot Games moves to block employee lawsuits"
+score = 1
+num_comments = 0
+created_utc = 1556317477
+url = "http://www.gamasutra.com/view/news/341580/Citing_arbitration_clauses_Riot_Games_moves_to_block_employee_lawsuits.php"
 
 [[reddit_post]]
 id = "bhr039"
@@ -21259,16 +21879,6 @@ created_utc = 1556209506
 url = "http://www.gamasutra.com/view/news/341469/Snapchat_is_launching_an_SDK_to_let_devs_use_Bitmoji_avatars_in_their_own_games.php"
 
 [[reddit_post]]
-id = "bhamg6"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Epic would back away from exclusives if Steam changed rev share, says CEO"
-score = 1
-num_comments = 0
-created_utc = 1556209505
-url = "http://www.gamasutra.com/view/news/341453/Epic_would_back_away_from_exclusives_if_Steam_changed_rev_share_says_CEO.php"
-
-[[reddit_post]]
 id = "bhamfx"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -21277,6 +21887,16 @@ score = 1
 num_comments = 0
 created_utc = 1556209505
 url = "http://www.gamasutra.com/view/news/341450/The_Switch_is_closing_in_on_35_million_lifetime_sales.php"
+
+[[reddit_post]]
+id = "bhamg6"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Epic would back away from exclusives if Steam changed rev share, says CEO"
+score = 1
+num_comments = 0
+created_utc = 1556209505
+url = "http://www.gamasutra.com/view/news/341453/Epic_would_back_away_from_exclusives_if_Steam_changed_rev_share_says_CEO.php"
 
 [[reddit_post]]
 id = "bh98x5"
@@ -21339,16 +21959,6 @@ created_utc = 1556144690
 url = "http://www.gamasutra.com/view/news/341373/Overwatch_lets_players_create_custom_modes_with_ingame_scripting_tools.php"
 
 [[reddit_post]]
-id = "bh0waa"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Ex-BioWare dev James Ohlen heading up new Wizards of the Coast studio"
-score = 1
-num_comments = 0
-created_utc = 1556144689
-url = "http://www.gamasutra.com/view/news/341366/ExBioWare_dev_James_Ohlen_heading_up_new_Wizards_of_the_Coast_studio.php"
-
-[[reddit_post]]
 id = "bh0wah"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -21359,14 +21969,14 @@ created_utc = 1556144689
 url = "http://www.gamasutra.com/view/news/341367/Get_a_job_Sony_PlayStation_is_hiring_a_Sr_Manager_Competitive_Gaming.php"
 
 [[reddit_post]]
-id = "bgy45y"
+id = "bh0waa"
 subreddit = "gamerlives"
 author = "texascowboy123"
-title = "Respawn CEO: Sticking to seasonal updates better for Apex Legends devs"
+title = "Ex-BioWare dev James Ohlen heading up new Wizards of the Coast studio"
 score = 1
 num_comments = 0
-created_utc = 1556130340
-url = "http://www.gamasutra.com/view/news/341360/Respawn_CEO_Sticking_to_seasonal_updates_better_for_Apex_Legends_devs.php"
+created_utc = 1556144689
+url = "http://www.gamasutra.com/view/news/341366/ExBioWare_dev_James_Ohlen_heading_up_new_Wizards_of_the_Coast_studio.php"
 
 [[reddit_post]]
 id = "bgy45s"
@@ -21377,6 +21987,16 @@ score = 1
 num_comments = 0
 created_utc = 1556130340
 url = "http://www.gamasutra.com/view/news/341359/Nepal_lifts_shortlived_ban_on_PlayerUnknown8364_s_Battlegrounds.php"
+
+[[reddit_post]]
+id = "bgy45y"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Respawn CEO: Sticking to seasonal updates better for Apex Legends devs"
+score = 1
+num_comments = 0
+created_utc = 1556130340
+url = "http://www.gamasutra.com/view/news/341360/Respawn_CEO_Sticking_to_seasonal_updates_better_for_Apex_Legends_devs.php"
 
 [[reddit_post]]
 id = "bgy45d"
@@ -21639,16 +22259,6 @@ created_utc = 1555717452
 url = "http://www.gamasutra.com/view/news/341140/Video_How_coop_VR_is_used_to_help_train_astronauts_for_space_.php"
 
 [[reddit_post]]
-id = "bf4qgh"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Contributing devs up in arms over Capcom's use of the FB Alpha emulator"
-score = 1
-num_comments = 0
-created_utc = 1555710256
-url = "http://www.gamasutra.com/view/news/341139/Contributing_devs_up_in_arms_over_Capcoms_use_of_the_FB_Alpha_emulator.php"
-
-[[reddit_post]]
 id = "bf4qg9"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -21657,6 +22267,16 @@ score = 1
 num_comments = 0
 created_utc = 1555710256
 url = "http://www.gamasutra.com/view/news/341138/Get_a_job_Insomniac_Games_Deep_Silver_Volition_and_more_are_hiring_now_.php"
+
+[[reddit_post]]
+id = "bf4qgh"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Contributing devs up in arms over Capcom's use of the FB Alpha emulator"
+score = 1
+num_comments = 0
+created_utc = 1555710256
+url = "http://www.gamasutra.com/view/news/341139/Contributing_devs_up_in_arms_over_Capcoms_use_of_the_FB_Alpha_emulator.php"
 
 [[reddit_post]]
 id = "bf3eqg"
@@ -21839,16 +22459,6 @@ created_utc = 1555538086
 url = "http://www.gamasutra.com/view/news/340979/Kickstarters_games_category_surpasses_1_billion_in_pledges.php"
 
 [[reddit_post]]
-id = "becf5c"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "AbleGamers opens Accessible.Games, a dev portal for accessibility info"
-score = 1
-num_comments = 0
-created_utc = 1555531793
-url = "http://www.gamasutra.com/view/news/340974/AbleGamers_opens_AccessibleGames_a_dev_portal_for_accessibility_info.php"
-
-[[reddit_post]]
 id = "becf5k"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -21857,6 +22467,16 @@ score = 1
 num_comments = 0
 created_utc = 1555531793
 url = "http://www.gamasutra.com/blogs/ThomasGrip/20141015/227733/Alien_Isolation_and_The_Evolution_of_Horror_Simulators.php"
+
+[[reddit_post]]
+id = "becf5c"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "AbleGamers opens Accessible.Games, a dev portal for accessibility info"
+score = 1
+num_comments = 0
+created_utc = 1555531793
+url = "http://www.gamasutra.com/view/news/340974/AbleGamers_opens_AccessibleGames_a_dev_portal_for_accessibility_info.php"
 
 [[reddit_post]]
 id = "beb16m"
@@ -21929,16 +22549,6 @@ created_utc = 1555459696
 url = "http://www.gamasutra.com/view/news/340918/Video_A_classic_game_postmortem_of_Panzer_Dragoon.php"
 
 [[reddit_post]]
-id = "bdzx2p"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Xbox merges Live Gold and Game Pass under Xbox Game Pass Ultimate"
-score = 1
-num_comments = 0
-created_utc = 1555452509
-url = "http://www.gamasutra.com/view/news/340916/Xbox_merges_Live_Gold_and_Game_Pass_under_Xbox_Game_Pass_Ultimate.php"
-
-[[reddit_post]]
 id = "bdzx2f"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -21947,6 +22557,16 @@ score = 1
 num_comments = 0
 created_utc = 1555452509
 url = "http://www.gamasutra.com/view/news/340915/Xbox_announces_the_cheaper_disc_drivefree_Xbox_One_S_All_Digital.php"
+
+[[reddit_post]]
+id = "bdzx2p"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Xbox merges Live Gold and Game Pass under Xbox Game Pass Ultimate"
+score = 1
+num_comments = 0
+created_utc = 1555452509
+url = "http://www.gamasutra.com/view/news/340916/Xbox_merges_Live_Gold_and_Game_Pass_under_Xbox_Game_Pass_Ultimate.php"
 
 [[reddit_post]]
 id = "bdzx21"
@@ -22069,16 +22689,6 @@ created_utc = 1555409300
 url = "http://www.gamasutra.com/view/news/340634/The_new_grammar_of_television_and_games_Lessons_from_an_avocado.php"
 
 [[reddit_post]]
-id = "bdlytf"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "OpenAI's machine learning bots defeat Dota 2 champion team"
-score = 1
-num_comments = 0
-created_utc = 1555366116
-url = "http://www.gamasutra.com/view/news/340816/OpenAIs_machine_learning_bots_defeat_Dota_2_champion_team.php"
-
-[[reddit_post]]
 id = "bdlytk"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -22087,6 +22697,16 @@ score = 1
 num_comments = 0
 created_utc = 1555366116
 url = "http://www.gamasutra.com/view/news/340817/Video_Creating_a_living_open_world_for_Assassins_Creed_Odyssey.php"
+
+[[reddit_post]]
+id = "bdlytf"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "OpenAI's machine learning bots defeat Dota 2 champion team"
+score = 1
+num_comments = 0
+created_utc = 1555366116
+url = "http://www.gamasutra.com/view/news/340816/OpenAIs_machine_learning_bots_defeat_Dota_2_champion_team.php"
 
 [[reddit_post]]
 id = "bdlyt9"
@@ -22199,16 +22819,6 @@ created_utc = 1555301303
 url = "http://www.gamasutra.com/blogs/SimonCarless/20190414/340758/Video_Game_Deep_Cuts_Falcon_Scores_Weed_Needs_Vacation.php"
 
 [[reddit_post]]
-id = "bcju14"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Video: Practical advice for saving video game history before it's too late"
-score = 1
-num_comments = 0
-created_utc = 1555108747
-url = "http://www.gamasutra.com/view/news/340743/Video_Practical_advice_for_saving_video_game_history_before_its_too_late.php"
-
-[[reddit_post]]
 id = "bcju12"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -22217,6 +22827,16 @@ score = 1
 num_comments = 0
 created_utc = 1555108747
 url = "http://www.gamasutra.com/view/news/340742/Xbox_exec_Game_streaming_competitors_like_Stadia_lack_content.php"
+
+[[reddit_post]]
+id = "bcju14"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Video: Practical advice for saving video game history before it's too late"
+score = 1
+num_comments = 0
+created_utc = 1555108747
+url = "http://www.gamasutra.com/view/news/340743/Video_Practical_advice_for_saving_video_game_history_before_its_too_late.php"
 
 [[reddit_post]]
 id = "bcijbc"
@@ -22229,16 +22849,6 @@ created_utc = 1555101555
 url = "http://www.gamasutra.com/view/news/340741/Get_a_job_Paradox_Tectonic_Sucker_Punch_Productions_and_more_are_hiring_now_.php"
 
 [[reddit_post]]
-id = "bcfoxy"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Report: Respawn and Infinity Ward co-founder Jason West has joined Epic Games"
-score = 1
-num_comments = 0
-created_utc = 1555087167
-url = "http://www.gamasutra.com/view/news/340731/Report_Respawn_and_Infinity_Ward_cofounder_Jason_West_has_joined_Epic_Games.php"
-
-[[reddit_post]]
 id = "bcfoxs"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -22247,6 +22857,16 @@ score = 1
 num_comments = 0
 created_utc = 1555087167
 url = "http://www.gamasutra.com/view/news/340729/Esports_teams_and_players_to_get_revenue_from_new_Rocket_League_Esports_Shop.php"
+
+[[reddit_post]]
+id = "bcfoxy"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Report: Respawn and Infinity Ward co-founder Jason West has joined Epic Games"
+score = 1
+num_comments = 0
+created_utc = 1555087167
+url = "http://www.gamasutra.com/view/news/340731/Report_Respawn_and_Infinity_Ward_cofounder_Jason_West_has_joined_Epic_Games.php"
 
 [[reddit_post]]
 id = "bcd82f"
@@ -22509,16 +23129,6 @@ created_utc = 1554895352
 url = "http://www.gamasutra.com/view/news/340190/How_to_effectively_use_procedural_generation_in_games.php"
 
 [[reddit_post]]
-id = "bbewm6"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Get a job: Digital Extremes is hiring a PR Manager for Warframe"
-score = 1
-num_comments = 0
-created_utc = 1554852159
-url = "http://www.gamasutra.com/view/news/340454/Get_a_job_Digital_Extremes_is_hiring_a_PR_Manager_for_Warframe.php"
-
-[[reddit_post]]
 id = "bbewmc"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -22527,6 +23137,16 @@ score = 1
 num_comments = 0
 created_utc = 1554852159
 url = "http://www.gamasutra.com/view/news/340455/Video_Creating_the_visceral_and_compelling_action_of_Devil_May_Cry_5.php"
+
+[[reddit_post]]
+id = "bbewm6"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Get a job: Digital Extremes is hiring a PR Manager for Warframe"
+score = 1
+num_comments = 0
+created_utc = 1554852159
+url = "http://www.gamasutra.com/view/news/340454/Get_a_job_Digital_Extremes_is_hiring_a_PR_Manager_for_Warframe.php"
 
 [[reddit_post]]
 id = "bbekok"
@@ -22609,16 +23229,6 @@ created_utc = 1554823379
 url = "http://www.gamasutra.com/blogs/JoshBycer/20190408/340198/The_Not_so_Simple_Secrets_to_Making_Good_Tutorials.php"
 
 [[reddit_post]]
-id = "bb97tr"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Video blog: Historians discuss Return of the Obra Dinn"
-score = 1
-num_comments = 0
-created_utc = 1554823378
-url = "http://www.gamasutra.com/blogs/BobWhitaker/20190408/340278/Historians_discuss_Return_of_the_Obra_Dinn.php"
-
-[[reddit_post]]
 id = "bb97ti"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -22627,6 +23237,16 @@ score = 1
 num_comments = 0
 created_utc = 1554823378
 url = "http://www.gamasutra.com/view/news/340413/Respawn_accidentally_turns_on_quitting_penalty_in_Apex_Legends.php"
+
+[[reddit_post]]
+id = "bb97tr"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Video blog: Historians discuss Return of the Obra Dinn"
+score = 1
+num_comments = 0
+created_utc = 1554823378
+url = "http://www.gamasutra.com/blogs/BobWhitaker/20190408/340278/Historians_discuss_Return_of_the_Obra_Dinn.php"
 
 [[reddit_post]]
 id = "bb6q1w"
@@ -22669,16 +23289,6 @@ created_utc = 1554762328
 url = "http://www.gamasutra.com/view/news/340383/God_of_War_director_argues_accessibility_isnt_at_odds_with_creative_vision.php"
 
 [[reddit_post]]
-id = "bazuyh"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Get a job: Sucker Punch Productions is hiring a Narrative Writer"
-score = 1
-num_comments = 0
-created_utc = 1554761290
-url = "http://www.gamasutra.com/view/news/340375/Get_a_job_Sucker_Punch_Productions_is_hiring_a_Narrative_Writer.php"
-
-[[reddit_post]]
 id = "bazuyc"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -22687,6 +23297,16 @@ score = 1
 num_comments = 0
 created_utc = 1554761290
 url = "http://www.gamasutra.com/view/news/340373/Google_Play_is_still_struggling_with_inappropriate_childrens_games.php"
+
+[[reddit_post]]
+id = "bazuyh"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Get a job: Sucker Punch Productions is hiring a Narrative Writer"
+score = 1
+num_comments = 0
+created_utc = 1554761290
+url = "http://www.gamasutra.com/view/news/340375/Get_a_job_Sucker_Punch_Productions_is_hiring_a_Narrative_Writer.php"
 
 [[reddit_post]]
 id = "baygtp"
@@ -23209,16 +23829,6 @@ created_utc = 1554236661
 url = "http://www.gamasutra.com/view/news/339952/Get_a_job_ZeniMax_Online_Studios_is_hiring_a_Senior_Combat_Designer.php"
 
 [[reddit_post]]
-id = "b8oet4"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Devs recall moments of instability, indecision, and crunch on Anthem"
-score = 1
-num_comments = 0
-created_utc = 1554236660
-url = "http://www.gamasutra.com/view/news/339951/Devs_recall_moments_of_instability_indecision_and_crunch_on_Anthem.php"
-
-[[reddit_post]]
 id = "b8oesz"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -23229,14 +23839,14 @@ created_utc = 1554236660
 url = "http://www.gamasutra.com/view/news/339868/These_are_Gamasutras_favorite_slides_from_GDC_2019.php"
 
 [[reddit_post]]
-id = "b8mxp1"
+id = "b8oet4"
 subreddit = "gamerlives"
 author = "texascowboy123"
-title = "Romero Games partners with Paradox Interactive for upcoming project"
+title = "Devs recall moments of instability, indecision, and crunch on Anthem"
 score = 1
 num_comments = 0
-created_utc = 1554229466
-url = "http://www.gamasutra.com/view/news/339948/Romero_Games_partners_with_Paradox_Interactive_for_upcoming_project.php"
+created_utc = 1554236660
+url = "http://www.gamasutra.com/view/news/339951/Devs_recall_moments_of_instability_indecision_and_crunch_on_Anthem.php"
 
 [[reddit_post]]
 id = "b8mxp4"
@@ -23247,6 +23857,16 @@ score = 1
 num_comments = 0
 created_utc = 1554229466
 url = "http://www.gamasutra.com/view/news/317863/QA_Building_and_balancing_Battletechs_procedural_missions.php"
+
+[[reddit_post]]
+id = "b8mxp1"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Romero Games partners with Paradox Interactive for upcoming project"
+score = 1
+num_comments = 0
+created_utc = 1554229466
+url = "http://www.gamasutra.com/view/news/339948/Romero_Games_partners_with_Paradox_Interactive_for_upcoming_project.php"
 
 [[reddit_post]]
 id = "b8lelk"
@@ -23759,16 +24379,6 @@ created_utc = 1553705766
 url = "http://www.gamasutra.com/view/news/339517/Cyberpunk_2077_developer_CD_Projekt_spent_heavily_on_Ramp_D_in_2018.php"
 
 [[reddit_post]]
-id = "b66n3u"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "'Buddy pass' will let Wolfenstein: Youngblood players share with friends"
-score = 1
-num_comments = 0
-created_utc = 1553705766
-url = "http://www.gamasutra.com/view/news/339525/Buddy_pass_will_let_Wolfenstein_Youngblood_players_share_with_friends.php"
-
-[[reddit_post]]
 id = "b66n3p"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -23777,6 +24387,16 @@ score = 1
 num_comments = 0
 created_utc = 1553705766
 url = "http://www.gamasutra.com/blogs/JoshBycer/20190326/339345/A_Design_Examination_on_Resident_Evil_2_Remastered.php"
+
+[[reddit_post]]
+id = "b66n3u"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "'Buddy pass' will let Wolfenstein: Youngblood players share with friends"
+score = 1
+num_comments = 0
+created_utc = 1553705766
+url = "http://www.gamasutra.com/view/news/339525/Buddy_pass_will_let_Wolfenstein_Youngblood_players_share_with_friends.php"
 
 [[reddit_post]]
 id = "b65f8b"
@@ -23819,16 +24439,6 @@ created_utc = 1553677045
 url = "http://www.gamasutra.com/view/news/339410/Opinion_A_closer_look_at_the_strategy_behind_Apple_Arcade.php"
 
 [[reddit_post]]
-id = "b5wlt3"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Video: Understanding player autonomy in game design"
-score = 1
-num_comments = 0
-created_utc = 1553640966
-url = "http://www.gamasutra.com/view/news/339447/Video_Understanding_player_autonomy_in_game_design.php"
-
-[[reddit_post]]
 id = "b5wlsz"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -23839,14 +24449,14 @@ created_utc = 1553640966
 url = "http://www.gamasutra.com/view/news/339439/Observation_will_be_an_Epic_Games_Store_exclusive_Steam_page_pulled.php"
 
 [[reddit_post]]
-id = "b5v5yq"
+id = "b5wlt3"
 subreddit = "gamerlives"
 author = "texascowboy123"
-title = "Get a job: Rocket League dev Psyonix is hiring an experienced UI Lead"
+title = "Video: Understanding player autonomy in game design"
 score = 1
 num_comments = 0
-created_utc = 1553633794
-url = "http://www.gamasutra.com/view/news/339434/Get_a_job_Rocket_League_dev_Psyonix_is_hiring_an_experienced_UI_Lead.php"
+created_utc = 1553640966
+url = "http://www.gamasutra.com/view/news/339447/Video_Understanding_player_autonomy_in_game_design.php"
 
 [[reddit_post]]
 id = "b5v5yt"
@@ -23857,6 +24467,16 @@ score = 1
 num_comments = 0
 created_utc = 1553633794
 url = "http://www.gamasutra.com/view/news/339435/Judgment_has_sold_through_97_of_stock_following_controversy.php"
+
+[[reddit_post]]
+id = "b5v5yq"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Get a job: Rocket League dev Psyonix is hiring an experienced UI Lead"
+score = 1
+num_comments = 0
+created_utc = 1553633794
+url = "http://www.gamasutra.com/view/news/339434/Get_a_job_Rocket_League_dev_Psyonix_is_hiring_an_experienced_UI_Lead.php"
 
 [[reddit_post]]
 id = "b5v5yf"
@@ -24009,16 +24629,6 @@ created_utc = 1553590988
 url = "http://www.gamasutra.com/view/news/339319/KOOP_ustwo_games_announce_Apple_Arcade_exclusives.php"
 
 [[reddit_post]]
-id = "b5hsee"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Video: Visual effects and the rise of realtime rendering"
-score = 1
-num_comments = 0
-created_utc = 1553554591
-url = "http://www.gamasutra.com/view/news/339323/Video_Visual_effects_and_the_rise_of_realtime_rendering.php"
-
-[[reddit_post]]
 id = "b5hsec"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24027,6 +24637,16 @@ score = 1
 num_comments = 0
 created_utc = 1553554591
 url = "http://www.gamasutra.com/view/news/339319/KO_OP_ustwo_games_announce_Apple_Arcade_exclusives.php"
+
+[[reddit_post]]
+id = "b5hsee"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Video: Visual effects and the rise of realtime rendering"
+score = 1
+num_comments = 0
+created_utc = 1553554591
+url = "http://www.gamasutra.com/view/news/339323/Video_Visual_effects_and_the_rise_of_realtime_rendering.php"
 
 [[reddit_post]]
 id = "b5hse5"
@@ -24099,16 +24719,6 @@ created_utc = 1553540244
 url = "http://www.gamasutra.com/blogs/SimonCarless/20190324/339241/Video_Game_Deep_Cuts_The_Game_Developers_Conference_Aftermath.php"
 
 [[reddit_post]]
-id = "b5eqdj"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Apple announces its own game subscription service, Apple Arcade"
-score = 1
-num_comments = 0
-created_utc = 1553540191
-url = "http://www.gamasutra.com/view/news/339308/Apple_announces_its_own_game_subscription_service_Apple_Arcade.php"
-
-[[reddit_post]]
 id = "b5eqdt"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24119,14 +24729,14 @@ created_utc = 1553540191
 url = "http://www.gamasutra.com/view/news/339309/6_years_in_Warframe_nears_50_million_lifetime_players.php"
 
 [[reddit_post]]
-id = "b5eqd9"
+id = "b5eqdj"
 subreddit = "gamerlives"
 author = "texascowboy123"
-title = "PUBG Corp and NetEase settle Battlegrounds lawsuit"
+title = "Apple announces its own game subscription service, Apple Arcade"
 score = 1
 num_comments = 0
-created_utc = 1553540190
-url = "http://www.gamasutra.com/view/news/339290/PUBG_Corp_and_NetEase_settle_Battlegrounds_lawsuit.php"
+created_utc = 1553540191
+url = "http://www.gamasutra.com/view/news/339308/Apple_announces_its_own_game_subscription_service_Apple_Arcade.php"
 
 [[reddit_post]]
 id = "b5eqdc"
@@ -24139,6 +24749,16 @@ created_utc = 1553540190
 url = "http://www.gamasutra.com/view/news/339292/GDC_celebrates_recordbreaking_attendance_and_locks_in_2020_dates.php"
 
 [[reddit_post]]
+id = "b5eqd9"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "PUBG Corp and NetEase settle Battlegrounds lawsuit"
+score = 1
+num_comments = 0
+created_utc = 1553540190
+url = "http://www.gamasutra.com/view/news/339290/PUBG_Corp_and_NetEase_settle_Battlegrounds_lawsuit.php"
+
+[[reddit_post]]
 id = "b5d6j3"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24147,16 +24767,6 @@ score = 1
 num_comments = 0
 created_utc = 1553532987
 url = "http://www.gamasutra.com/view/news/339289/Sony_is_pulling_digital_PS4_games_from_sale_at_GameStop_other_retailers.php"
-
-[[reddit_post]]
-id = "b5d6iy"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Blog: How games software and hardware could top $200 billion by 2023"
-score = 1
-num_comments = 0
-created_utc = 1553532986
-url = "http://www.gamasutra.com/blogs/TimMerel/20190322/339148/Games_softwarehardware_to_top_200_billion_by_2023_despite_shortterm_questions.php"
 
 [[reddit_post]]
 id = "b5d6it"
@@ -24169,14 +24779,14 @@ created_utc = 1553532986
 url = "http://www.gamasutra.com/view/news/339240/Knocking_down_design_pillars_was_key_to_making_Destiny_2s_Gambit_mode_really_shine.php"
 
 [[reddit_post]]
-id = "b5d6ij"
+id = "b5d6iy"
 subreddit = "gamerlives"
 author = "texascowboy123"
-title = "Report: Nintendo to release two new Switch models in 2019"
+title = "Blog: How games software and hardware could top $200 billion by 2023"
 score = 1
 num_comments = 0
-created_utc = 1553532985
-url = "http://www.gamasutra.com/view/news/339278/Report_Nintendo_to_release_two_new_Switch_models_in_2019.php"
+created_utc = 1553532986
+url = "http://www.gamasutra.com/blogs/TimMerel/20190322/339148/Games_softwarehardware_to_top_200_billion_by_2023_despite_shortterm_questions.php"
 
 [[reddit_post]]
 id = "b5d6iq"
@@ -24187,6 +24797,16 @@ score = 1
 num_comments = 0
 created_utc = 1553532985
 url = "http://www.gamasutra.com/view/news/339279/Dead_Cells_has_passed_1_million_sales_and_Switch_leads_the_way_on_consoles.php"
+
+[[reddit_post]]
+id = "b5d6ij"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Report: Nintendo to release two new Switch models in 2019"
+score = 1
+num_comments = 0
+created_utc = 1553532985
+url = "http://www.gamasutra.com/view/news/339278/Report_Nintendo_to_release_two_new_Switch_models_in_2019.php"
 
 [[reddit_post]]
 id = "b5boce"
@@ -24289,16 +24909,6 @@ created_utc = 1553269628
 url = "http://www.gamasutra.com/view/news/339188/Sega_removing_actor_from_Western_version_of_Judgment_after_drug_scandal.php"
 
 [[reddit_post]]
-id = "b3xuhs"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Boyfriend Dungeon dev examines why game fashion sucks, and what to do about it"
-score = 1
-num_comments = 0
-created_utc = 1553212029
-url = "http://www.gamasutra.com/view/news/339157/Boyfriend_Dungeon_dev_examines_why_game_fashion_sucks_and_what_to_do_about_it.php"
-
-[[reddit_post]]
 id = "b3xuhn"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24307,6 +24917,16 @@ score = 1
 num_comments = 0
 created_utc = 1553212029
 url = "http://www.gamasutra.com/view/news/339159/Overwatch_saw_40_less_disruptive_behavior_with_the_endorsement_system_.php"
+
+[[reddit_post]]
+id = "b3xuhs"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Boyfriend Dungeon dev examines why game fashion sucks, and what to do about it"
+score = 1
+num_comments = 0
+created_utc = 1553212029
+url = "http://www.gamasutra.com/view/news/339157/Boyfriend_Dungeon_dev_examines_why_game_fashion_sucks_and_what_to_do_about_it.php"
 
 [[reddit_post]]
 id = "b3xuhk"
@@ -24459,16 +25079,6 @@ created_utc = 1553103605
 url = "http://www.gamasutra.com/view/news/339043/Devs_can_now_sell_Epic_Game_Store_keys_on_the_Humble_Store.php"
 
 [[reddit_post]]
-id = "b3exzm"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Stadia's biz dev director talks challenges, opportunities in new age of cloud games"
-score = 1
-num_comments = 0
-created_utc = 1553103604
-url = "http://www.gamasutra.com/view/news/339048/Stadias_biz_dev_director_talks_challenges_opportunities_in_new_age_of_cloud_games.php"
-
-[[reddit_post]]
 id = "b3exzq"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24477,6 +25087,16 @@ score = 1
 num_comments = 0
 created_utc = 1553103604
 url = "http://www.gamasutra.com/view/news/339049/Epic_expands_its_dev_grants_program_with_100M_in_Epic_MegaGrants.php"
+
+[[reddit_post]]
+id = "b3exzm"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Stadia's biz dev director talks challenges, opportunities in new age of cloud games"
+score = 1
+num_comments = 0
+created_utc = 1553103604
+url = "http://www.gamasutra.com/view/news/339048/Stadias_biz_dev_director_talks_challenges_opportunities_in_new_age_of_cloud_games.php"
 
 [[reddit_post]]
 id = "b3exzh"
@@ -24529,16 +25149,6 @@ created_utc = 1553045956
 url = "http://www.gamasutra.com/view/news/338997/3_indie_leaders_share_tips_on_keeping_your_small_studio_afloat_without_a_hit.php"
 
 [[reddit_post]]
-id = "b33ac7"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "How indie devs can form their own worker cooperative"
-score = 1
-num_comments = 0
-created_utc = 1553031562
-url = "http://www.gamasutra.com/view/news/338987/How_indie_devs_can_form_their_own_worker_cooperative_.php"
-
-[[reddit_post]]
 id = "b33ace"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24547,6 +25157,16 @@ score = 1
 num_comments = 0
 created_utc = 1553031562
 url = "http://www.gamasutra.com/view/news/338988/You_need_to_care_more_about_your_streamers_advises_Magic_The_Gathering_Arena_dev.php"
+
+[[reddit_post]]
+id = "b33ac7"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "How indie devs can form their own worker cooperative"
+score = 1
+num_comments = 0
+created_utc = 1553031562
+url = "http://www.gamasutra.com/view/news/338987/How_indie_devs_can_form_their_own_worker_cooperative_.php"
 
 [[reddit_post]]
 id = "b31u43"
@@ -24579,16 +25199,6 @@ created_utc = 1553024383
 url = "http://www.gamasutra.com/view/news/338978/No_console_required_Google_unveils_streaming_game_platform_Stadia.php"
 
 [[reddit_post]]
-id = "b30der"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Games for Change debuts new accelerator program for 'social impact' games"
-score = 1
-num_comments = 0
-created_utc = 1553017162
-url = "http://www.gamasutra.com/view/news/338968/Games_for_Change_debuts_new_accelerator_program_for_social_impact_games.php"
-
-[[reddit_post]]
 id = "b30dey"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24597,6 +25207,16 @@ score = 1
 num_comments = 0
 created_utc = 1553017162
 url = "http://www.gamasutra.com/view/news/338969/Watch_Googles_highly_anticipated_GDC_2019_keynote_right_here.php"
+
+[[reddit_post]]
+id = "b30der"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Games for Change debuts new accelerator program for 'social impact' games"
+score = 1
+num_comments = 0
+created_utc = 1553017162
+url = "http://www.gamasutra.com/view/news/338968/Games_for_Change_debuts_new_accelerator_program_for_social_impact_games.php"
 
 [[reddit_post]]
 id = "b30deh"
@@ -24619,16 +25239,6 @@ created_utc = 1553009945
 url = "http://www.gamasutra.com/view/news/338955/The_Culling_Origins_servers_are_being_switched_off_in_May.php"
 
 [[reddit_post]]
-id = "b2r71j"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Rohrer: Make fewer consumable games, more 'unique situation generators'"
-score = 1
-num_comments = 0
-created_utc = 1552959568
-url = "http://www.gamasutra.com/view/news/338910/Rohrer_Make_fewer_consumable_games_more_unique_situation_generators.php"
-
-[[reddit_post]]
 id = "b2r71p"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24639,14 +25249,14 @@ created_utc = 1552959568
 url = "http://www.gamasutra.com/view/news/338719/Unity_partners_with_Havok_to_roll_out_new_physics_systems.php"
 
 [[reddit_post]]
-id = "b2r71a"
+id = "b2r71j"
 subreddit = "gamerlives"
 author = "texascowboy123"
-title = "A Dream Daddy dev's guide to survive being always online"
+title = "Rohrer: Make fewer consumable games, more 'unique situation generators'"
 score = 1
 num_comments = 0
-created_utc = 1552959567
-url = "http://www.gamasutra.com/view/news/338911/A_Dream_Daddy_devs_guide_to_survive_being_always_online.php"
+created_utc = 1552959568
+url = "http://www.gamasutra.com/view/news/338910/Rohrer_Make_fewer_consumable_games_more_unique_situation_generators.php"
 
 [[reddit_post]]
 id = "b2r71f"
@@ -24657,6 +25267,16 @@ score = 1
 num_comments = 0
 created_utc = 1552959567
 url = "http://www.gamasutra.com/view/news/338905/Designing_AI_to_do_anything_a_spider_can_in_Marvels_SpiderMan.php"
+
+[[reddit_post]]
+id = "b2r71a"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "A Dream Daddy dev's guide to survive being always online"
+score = 1
+num_comments = 0
+created_utc = 1552959567
+url = "http://www.gamasutra.com/view/news/338911/A_Dream_Daddy_devs_guide_to_survive_being_always_online.php"
 
 [[reddit_post]]
 id = "b2pvej"
@@ -24799,16 +25419,6 @@ created_utc = 1552688956
 url = "http://www.gamasutra.com/view/news/338815/Get_a_job_Psyonix_Adult_Swim_Games_and_more_are_hiring_now_.php"
 
 [[reddit_post]]
-id = "b1js9x"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "The Animation Exchange is hosting a day of dev talks on Twitch"
-score = 1
-num_comments = 0
-created_utc = 1552681748
-url = "http://www.gamasutra.com/view/news/337631/The_Animation_Exchange_is_hosting_a_day_of_dev_talks_on_Twitch.php"
-
-[[reddit_post]]
 id = "b1jsa2"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24817,6 +25427,16 @@ score = 1
 num_comments = 0
 created_utc = 1552681748
 url = "http://www.gamasutra.com/view/news/338814/Axiom_Verge_getting_its_physical_Wii_U_release_after_ongoing_legal_battle.php"
+
+[[reddit_post]]
+id = "b1js9x"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "The Animation Exchange is hosting a day of dev talks on Twitch"
+score = 1
+num_comments = 0
+created_utc = 1552681748
+url = "http://www.gamasutra.com/view/news/337631/The_Animation_Exchange_is_hosting_a_day_of_dev_talks_on_Twitch.php"
 
 [[reddit_post]]
 id = "b1js9v"
@@ -24859,16 +25479,6 @@ created_utc = 1552674573
 url = "http://www.gamasutra.com/view/news/338148/Road_to_the_IGF_Lucas_Popes_Return_of_the_Obra_Dinn.php"
 
 [[reddit_post]]
-id = "b1ie3c"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Bomber Crew dev Runner Deck acquired by Catalis"
-score = 1
-num_comments = 0
-created_utc = 1552674572
-url = "http://www.gamasutra.com/view/news/338807/Bomber_Crew_dev_Runner_Deck_acquired_by_Catalis.php"
-
-[[reddit_post]]
 id = "b1ie35"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24877,6 +25487,16 @@ score = 1
 num_comments = 0
 created_utc = 1552674572
 url = "http://www.gamasutra.com/view/news/338720/PSA_Know_and_abide_by_your_GDC_2019_Code_of_Conduct.php"
+
+[[reddit_post]]
+id = "b1ie3c"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Bomber Crew dev Runner Deck acquired by Catalis"
+score = 1
+num_comments = 0
+created_utc = 1552674572
+url = "http://www.gamasutra.com/view/news/338807/Bomber_Crew_dev_Runner_Deck_acquired_by_Catalis.php"
 
 [[reddit_post]]
 id = "b1gz2l"
@@ -24939,16 +25559,6 @@ created_utc = 1552609776
 url = "http://www.gamasutra.com/view/news/338731/Video_An_indepth_look_at_the_animation_of_Agents_of_Mayhem.php"
 
 [[reddit_post]]
-id = "b16t0v"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Blind Squirrel lands $5M in funding to self-publish its first game, Drifters"
-score = 1
-num_comments = 0
-created_utc = 1552602551
-url = "http://www.gamasutra.com/view/news/338721/Blind_Squirrel_lands_5M_in_funding_to_selfpublish_its_first_game_Drifters.php"
-
-[[reddit_post]]
 id = "b16t0z"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -24957,6 +25567,16 @@ score = 1
 num_comments = 0
 created_utc = 1552602551
 url = "http://www.gamasutra.com/view/news/338725/Wargroove_dev_demystifies_game_development_by_involving_its_community.php"
+
+[[reddit_post]]
+id = "b16t0v"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Blind Squirrel lands $5M in funding to self-publish its first game, Drifters"
+score = 1
+num_comments = 0
+created_utc = 1552602551
+url = "http://www.gamasutra.com/view/news/338721/Blind_Squirrel_lands_5M_in_funding_to_selfpublish_its_first_game_Drifters.php"
 
 [[reddit_post]]
 id = "b15lnt"
@@ -25029,16 +25649,6 @@ created_utc = 1552588176
 url = "http://www.gamasutra.com/view/news/338704/Minecraft_is_joining_Microsofts_Xbox_Game_Pass_lineup.php"
 
 [[reddit_post]]
-id = "b13vuw"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Follow Gamasutra's GDC 2019 coverage right here!"
-score = 1
-num_comments = 0
-created_utc = 1552588175
-url = "http://www.gamasutra.com/view/news/338605/Follow_Gamasutras_GDC_2019_coverage_right_here.php"
-
-[[reddit_post]]
 id = "b13vv0"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25047,6 +25657,16 @@ score = 1
 num_comments = 0
 created_utc = 1552588175
 url = "http://www.gamasutra.com/view/news/338697/Steam_Link_Anywhere_beta_drops_Steam_Links_localwifionly_restriction.php"
+
+[[reddit_post]]
+id = "b13vuw"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Follow Gamasutra's GDC 2019 coverage right here!"
+score = 1
+num_comments = 0
+created_utc = 1552588175
+url = "http://www.gamasutra.com/view/news/338605/Follow_Gamasutras_GDC_2019_coverage_right_here.php"
 
 [[reddit_post]]
 id = "b13vuq"
@@ -25149,16 +25769,6 @@ created_utc = 1552508956
 url = "http://www.gamasutra.com/view/news/338592/New_Microsoft_app_lets_users_stream_PC_games_to_an_Xbox_One_.php"
 
 [[reddit_post]]
-id = "b0qwpe"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Take a look at the making (and marketing) of Dawn of Man"
-score = 1
-num_comments = 0
-created_utc = 1552508955
-url = "http://www.gamasutra.com/view/news/338590/Take_a_look_at_the_making_and_marketing_of_Dawn_of_Man.php"
-
-[[reddit_post]]
 id = "b0qwp9"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25167,6 +25777,16 @@ score = 1
 num_comments = 0
 created_utc = 1552508955
 url = "http://www.gamasutra.com/view/news/338588/Get_a_job_Join_the_Deep_Silver_Volition_team_as_a_Sr_Project_Manager.php"
+
+[[reddit_post]]
+id = "b0qwpe"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Take a look at the making (and marketing) of Dawn of Man"
+score = 1
+num_comments = 0
+created_utc = 1552508955
+url = "http://www.gamasutra.com/view/news/338590/Take_a_look_at_the_making_and_marketing_of_Dawn_of_Man.php"
 
 [[reddit_post]]
 id = "b0qwp0"
@@ -25189,16 +25809,6 @@ created_utc = 1552501753
 url = "http://www.gamasutra.com/view/news/338584/Report_Sony_is_in_advanced_discussions_to_acquire_TakeTwo_Interactive.php"
 
 [[reddit_post]]
-id = "b0pfao"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Don't miss all these great Classic Game Postmortems at GDC 2019!"
-score = 1
-num_comments = 0
-created_utc = 1552501752
-url = "http://www.gamasutra.com/view/news/338578/Dont_miss_all_these_great_Classic_Game_Postmortems_at_GDC_2019.php"
-
-[[reddit_post]]
 id = "b0pfan"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25207,6 +25817,16 @@ score = 1
 num_comments = 0
 created_utc = 1552501752
 url = "http://www.gamasutra.com/view/news/338577/Dwarf_Fortress_is_headed_to_Steam_and_itchio_17_years_into_its_development.php"
+
+[[reddit_post]]
+id = "b0pfao"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Don't miss all these great Classic Game Postmortems at GDC 2019!"
+score = 1
+num_comments = 0
+created_utc = 1552501752
+url = "http://www.gamasutra.com/view/news/338578/Dont_miss_all_these_great_Classic_Game_Postmortems_at_GDC_2019.php"
 
 [[reddit_post]]
 id = "b0pfat"
@@ -25239,16 +25859,6 @@ created_utc = 1552494573
 url = "http://www.gamasutra.com/view/news/338487/Come_to_GDC_for_a_behindthescenes_look_at_Pokemon_GOs_PvP_combat_design.php"
 
 [[reddit_post]]
-id = "b0nzm0"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Chat with Dawn of Man lead dev Martino Figueroa at 1PM ET"
-score = 1
-num_comments = 1
-created_utc = 1552494572
-url = "http://www.gamasutra.com/view/news/338507/Chat_with_Dawn_of_Man_lead_dev_Martino_Figueroa_at_1PM_ET.php"
-
-[[reddit_post]]
 id = "b0nzm8"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25257,6 +25867,16 @@ score = 1
 num_comments = 0
 created_utc = 1552494572
 url = "http://www.gamasutra.com/view/news/338558/PUBG_creator_Brendan_Greene_is_stepping_away_from_development.php"
+
+[[reddit_post]]
+id = "b0nzm0"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Chat with Dawn of Man lead dev Martino Figueroa at 1PM ET"
+score = 1
+num_comments = 1
+created_utc = 1552494572
+url = "http://www.gamasutra.com/view/news/338507/Chat_with_Dawn_of_Man_lead_dev_Martino_Figueroa_at_1PM_ET.php"
 
 [[reddit_post]]
 id = "b0nzlv"
@@ -25289,16 +25909,6 @@ created_utc = 1552472956
 url = "http://www.gamasutra.com/blogs/JasonDellaRocca/20190312/338412/Game_Studio_Funding_The_Right_Investor_at_the_Right_Stage.php"
 
 [[reddit_post]]
-id = "b0ffm6"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Video: Creating the unique visuals of Homeworld: Deserts of Kharak"
-score = 1
-num_comments = 0
-created_utc = 1552436950
-url = "http://www.gamasutra.com/view/news/338508/Video_Creating_the_unique_visuals_of_Homeworld_Deserts_of_Kharak.php"
-
-[[reddit_post]]
 id = "b0ffmb"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25307,6 +25917,16 @@ score = 1
 num_comments = 0
 created_utc = 1552436950
 url = "http://www.gamasutra.com/view/news/338511/Game_industry_vet_Jade_Raymond_signs_on_as_a_Google_VP.php"
+
+[[reddit_post]]
+id = "b0ffm6"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Video: Creating the unique visuals of Homeworld: Deserts of Kharak"
+score = 1
+num_comments = 0
+created_utc = 1552436950
+url = "http://www.gamasutra.com/view/news/338508/Video_Creating_the_unique_visuals_of_Homeworld_Deserts_of_Kharak.php"
 
 [[reddit_post]]
 id = "b0ffly"
@@ -25319,16 +25939,6 @@ created_utc = 1552436949
 url = "http://www.gamasutra.com/view/news/338506/Phoenix_Point_will_be_an_Epic_Games_Store_exclusive_for_a_year.php"
 
 [[reddit_post]]
-id = "b0dr8x"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Devs share their own personal game design rules"
-score = 1
-num_comments = 0
-created_utc = 1552428161
-url = "http://www.gamasutra.com/view/news/338497/Devs_share_their_own_personal_game_design_rules.php"
-
-[[reddit_post]]
 id = "b0dr8u"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25337,6 +25947,16 @@ score = 1
 num_comments = 0
 created_utc = 1552428161
 url = "http://www.gamasutra.com/view/news/338496/Get_a_job_Disbelief_is_after_a_Junior_Programmer.php"
+
+[[reddit_post]]
+id = "b0dr8x"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Devs share their own personal game design rules"
+score = 1
+num_comments = 0
+created_utc = 1552428161
+url = "http://www.gamasutra.com/view/news/338497/Devs_share_their_own_personal_game_design_rules.php"
 
 [[reddit_post]]
 id = "b0dr8o"
@@ -25369,16 +25989,6 @@ created_utc = 1552420964
 url = "http://www.gamasutra.com/view/news/237528/Water_interaction_model_for_boats_in_video_games.php"
 
 [[reddit_post]]
-id = "b0cc44"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "War Child UK's Armistice fundraiser raised $380k in 2018"
-score = 1
-num_comments = 0
-created_utc = 1552420963
-url = "http://www.gamasutra.com/view/news/338490/War_Child_UKs_Armistice_fundraiser_raised_380k_in_2018.php"
-
-[[reddit_post]]
 id = "b0cc4e"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25387,6 +25997,16 @@ score = 1
 num_comments = 0
 created_utc = 1552420963
 url = "http://www.gamasutra.com/view/news/337942/AltCtrlGDC_Showcase_ReLeap.php"
+
+[[reddit_post]]
+id = "b0cc44"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "War Child UK's Armistice fundraiser raised $380k in 2018"
+score = 1
+num_comments = 0
+created_utc = 1552420963
+url = "http://www.gamasutra.com/view/news/338490/War_Child_UKs_Armistice_fundraiser_raised_380k_in_2018.php"
 
 [[reddit_post]]
 id = "b0cc3w"
@@ -25399,16 +26019,6 @@ created_utc = 1552420962
 url = "http://www.gamasutra.com/view/news/338484/See_more_GDC_2019_speakers_try_to_pitch_you_on_their_talks_in_a_minute_or_less.php"
 
 [[reddit_post]]
-id = "b0aw46"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "See how God of War's combat evolved to match its new camera system at GDC!"
-score = 1
-num_comments = 0
-created_utc = 1552413757
-url = "http://www.gamasutra.com/view/news/338418/See_how_God_of_Wars_combat_evolved_to_match_its_new_camera_system_at_GDC.php"
-
-[[reddit_post]]
 id = "b0aw4g"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25417,6 +26027,16 @@ score = 1
 num_comments = 1
 created_utc = 1552413757
 url = "http://www.gamasutra.com/view/news/338485/Epic_plans_to_add_an_undo_button_to_Fortnites_ingame_store.php"
+
+[[reddit_post]]
+id = "b0aw46"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "See how God of War's combat evolved to match its new camera system at GDC!"
+score = 1
+num_comments = 0
+created_utc = 1552413757
+url = "http://www.gamasutra.com/view/news/338418/See_how_God_of_Wars_combat_evolved_to_match_its_new_camera_system_at_GDC.php"
 
 [[reddit_post]]
 id = "b0aw3z"
@@ -25739,16 +26359,6 @@ created_utc = 1552059574
 url = "http://www.gamasutra.com/view/news/338313/Marvel_Strike_Force_firstyear_revenue_topped_150_million.php"
 
 [[reddit_post]]
-id = "ayrm6o"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Gris has sold 300,000 copies in under three months"
-score = 1
-num_comments = 0
-created_utc = 1552059573
-url = "http://www.gamasutra.com/view/news/338304/Gris_has_sold_300000_copies_in_under_three_months.php"
-
-[[reddit_post]]
 id = "ayrm6g"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25757,6 +26367,16 @@ score = 1
 num_comments = 0
 created_utc = 1552059573
 url = "http://www.gamasutra.com/view/news/338251/SpatialOS_dev_Improbable_is_setting_up_its_own_game_development_studios.php"
+
+[[reddit_post]]
+id = "ayrm6o"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Gris has sold 300,000 copies in under three months"
+score = 1
+num_comments = 0
+created_utc = 1552059573
+url = "http://www.gamasutra.com/view/news/338304/Gris_has_sold_300000_copies_in_under_three_months.php"
 
 [[reddit_post]]
 id = "aykklc"
@@ -25819,16 +26439,6 @@ created_utc = 1551987563
 url = "http://www.gamasutra.com/view/news/338153/Catch_up_on_these_insightful_interviews_with_IGF_2019_finalists.php"
 
 [[reddit_post]]
-id = "aygpna"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Bungie shares tips on designing levels for different player types at GDC 2019!"
-score = 1
-num_comments = 0
-created_utc = 1551987562
-url = "http://www.gamasutra.com/view/news/338136/Bungie_shares_tips_on_designing_levels_for_different_player_types_at_GDC_2019.php"
-
-[[reddit_post]]
 id = "aygpnf"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -25837,6 +26447,16 @@ score = 1
 num_comments = 0
 created_utc = 1551987562
 url = "http://www.gamasutra.com/view/news/338236/PS4_Remote_Play_is_now_possible_on_iPhones_and_iPads.php"
+
+[[reddit_post]]
+id = "aygpna"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Bungie shares tips on designing levels for different player types at GDC 2019!"
+score = 1
+num_comments = 0
+created_utc = 1551987562
+url = "http://www.gamasutra.com/view/news/338136/Bungie_shares_tips_on_designing_levels_for_different_player_types_at_GDC_2019.php"
 
 [[reddit_post]]
 id = "aygpn4"
@@ -26049,16 +26669,6 @@ created_utc = 1551898123
 url = "http://www.gamasutra.com/view/news/336239/GDC_2019_debuts_free_to_all_GDC__The_Gardens_space.php"
 
 [[reddit_post]]
-id = "ay0xhk"
-subreddit = "gamerlives"
-author = "texascowboy123"
-title = "Chat with the developers behind The Occupation at 1PM ET"
-score = 1
-num_comments = 1
-created_utc = 1551890894
-url = "http://www.gamasutra.com/view/news/338043/Chat_with_the_developers_behind_The_Occupation_at_1PM_ET.php"
-
-[[reddit_post]]
 id = "ay0xhm"
 subreddit = "gamerlives"
 author = "texascowboy123"
@@ -26067,6 +26677,16 @@ score = 1
 num_comments = 0
 created_utc = 1551890894
 url = "http://www.gamasutra.com/view/news/338110/Designing_Mortal_Kombats_famously_bloody_fatalities.php"
+
+[[reddit_post]]
+id = "ay0xhk"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Chat with the developers behind The Occupation at 1PM ET"
+score = 1
+num_comments = 1
+created_utc = 1551890894
+url = "http://www.gamasutra.com/view/news/338043/Chat_with_the_developers_behind_The_Occupation_at_1PM_ET.php"
 
 [[reddit_post]]
 id = "ay0xhe"
@@ -26157,6 +26777,106 @@ score = 1
 num_comments = 0
 created_utc = 1551818904
 url = "http://www.gamasutra.com/view/news/337506/Dont_miss_these_insightful_interviews_with_2019s_altctrlGDC_devs.php"
+
+[[reddit_post]]
+id = "axq0p3"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Alt.Ctrl.GDC Showcase: Roambot"
+score = 1
+num_comments = 0
+created_utc = 1551818903
+url = "http://www.gamasutra.com/view/news/337527/AltCtrlGDC_Showcase_Roambot.php"
+
+[[reddit_post]]
+id = "axq0pa"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Vivendi has sold off its final Ubisoft shares"
+score = 1
+num_comments = 0
+created_utc = 1551818903
+url = "http://www.gamasutra.com/view/news/338021/Vivendi_has_sold_off_its_final_Ubisoft_shares.php"
+
+[[reddit_post]]
+id = "axq0ot"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Get ready for GDC 2019 with help from the all-new Digital Tote Bag!"
+score = 1
+num_comments = 0
+created_utc = 1551818902
+url = "http://www.gamasutra.com/view/news/337932/Get_ready_for_GDC_2019_with_help_from_the_allnew_Digital_Tote_Bag.php"
+
+[[reddit_post]]
+id = "axond4"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Multiplayer Skyrim mod criticized for lifting code from another mod"
+score = 1
+num_comments = 0
+created_utc = 1551811704
+url = "http://www.gamasutra.com/view/news/338014/Multiplayer_Skyrim_mod_criticized_for_lifting_code_from_another_mod.php"
+
+[[reddit_post]]
+id = "axond1"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Get legal experts' perspective on how the law is impacting game dev at GDC!"
+score = 1
+num_comments = 0
+created_utc = 1551811704
+url = "http://www.gamasutra.com/view/news/337853/Get_legal_experts_perspective_on_how_the_law_is_impacting_game_dev_at_GDC.php"
+
+[[reddit_post]]
+id = "axn91n"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Devil May Cry 5 deluxe edition will let players experience the game like a low-budget movie"
+score = 1
+num_comments = 0
+created_utc = 1551804488
+url = "http://www.gamasutra.com/view/news/338000/Devil_May_Cry_5_deluxe_edition_will_let_players_experience_the_game_like_a_lowbudget_movie.php"
+
+[[reddit_post]]
+id = "axn91i"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Helsinki dev Reworks nets $1.5 million to corner customization game market"
+score = 1
+num_comments = 0
+created_utc = 1551804488
+url = "http://www.gamasutra.com/view/news/337977/Helsinki_dev_Reworks_nets_15_million_to_corner_customization_game_market.php"
+
+[[reddit_post]]
+id = "axn398"
+subreddit = "IndieDev"
+author = "[deleted]"
+title = "Robothorium Post Mortem"
+score = 1
+num_comments = 0
+created_utc = 1551803657
+url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+
+[[reddit_post]]
+id = "axn26k"
+subreddit = "IndieDev"
+author = "[deleted]"
+title = "Gamasutra: Nicolae Berbece's Blog - Move or Die and its 4 Year Journey to the PlayStation 4"
+score = 1
+num_comments = 0
+created_utc = 1551803501
+url = "http://www.gamasutra.com/blogs/NicolaeBerbece/20190305/337807/Move_or_Die_and_its_4_Year_Journey_to_the_PlayStation_4.php"
+
+[[reddit_post]]
+id = "axjtwk"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Mages of Mystralia dev dishes out spellcasting wisdom and game industry real talk"
+score = 1
+num_comments = 0
+created_utc = 1551782891
+url = "http://www.gamasutra.com/view/news/337143/Mages_of_Mystralia_dev_dishes_out_spellcasting_wisdom_and_game_industry_real_talk.php"
 
 [[reddit_post]]
 id = "p673pa"
@@ -30539,16 +31259,6 @@ created_utc = 1458318682
 url = "http://gamasutra.com/blogs/JakeParmley/20160317/268321/E3_Is_Still_Relevant__But_Its_Definitely_Changing.php"
 
 [[reddit_post]]
-id = "4ayrix"
-subreddit = "Newsbeard"
-author = "newsbeard"
-title = "[Gamer] 5 steps to a great game dev hiring process"
-score = 1
-num_comments = 0
-created_utc = 1458314725
-url = "http://gamasutra.com/blogs/DoruApreotesei/20160314/267949/5_Steps_to_a_Great_Game_Dev_Hiring_Process.php"
-
-[[reddit_post]]
 id = "4ayrj0"
 subreddit = "Newsbeard"
 author = "newsbeard"
@@ -30557,6 +31267,16 @@ score = 1
 num_comments = 0
 created_utc = 1458314725
 url = "http://gamasutra.com/blogs/NicholasLaborde/20160317/264278/What_I_Learned_From_Our_Game_Having_a_quotMostly_Negativequot_Rating_on_Steam.php"
+
+[[reddit_post]]
+id = "4ayrix"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] 5 steps to a great game dev hiring process"
+score = 1
+num_comments = 0
+created_utc = 1458314725
+url = "http://gamasutra.com/blogs/DoruApreotesei/20160314/267949/5_Steps_to_a_Great_Game_Dev_Hiring_Process.php"
 
 [[reddit_post]]
 id = "4ayorn"
@@ -30639,16 +31359,6 @@ created_utc = 1458200142
 url = "http://gamasutra.com/view/news/268279/Witcher_3_wins_Game_of_the_Year_at_16th_annual_Game_Developers_Choice_Awards.php"
 
 [[reddit_post]]
-id = "4aop35"
-subreddit = "Newsbeard"
-author = "newsbeard"
-title = "[Gamer] A guide to good quality mobile game animations"
-score = 1
-num_comments = 0
-created_utc = 1458147321
-url = "http://gamasutra.com/blogs/AnttiKananen/20160314/267983/Good_quality_mobile_game_animations__A_Koukoi_Games_guide.php"
-
-[[reddit_post]]
 id = "4aop32"
 subreddit = "Newsbeard"
 author = "newsbeard"
@@ -30659,14 +31369,14 @@ created_utc = 1458147321
 url = "http://gamasutra.com/blogs/JoshBycer/20160314/268023/When_not_to_go_to_Early_Access.php"
 
 [[reddit_post]]
-id = "4aoeao"
-subreddit = "Oculus_VR"
-author = "ilikadapie"
-title = "Devs - be realistic about the VR marketplace and its returns, says Palmer Luckey"
+id = "4aop35"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] A guide to good quality mobile game animations"
 score = 1
-num_comments = 1
-created_utc = 1458143305
-url = "http://gamasutra.com/view/news/268045/Nows_the_time_to_get_into_VR__but_be_realistic_about_its_returns_says_Palmer_Luckey.php"
+num_comments = 0
+created_utc = 1458147321
+url = "http://gamasutra.com/blogs/AnttiKananen/20160314/267983/Good_quality_mobile_game_animations__A_Koukoi_Games_guide.php"
 
 [[reddit_post]]
 id = "4aoeal"
@@ -30677,6 +31387,16 @@ score = 1
 num_comments = 0
 created_utc = 1458143305
 url = "http://gamasutra.com/view/news/268220/Oculus_confirms_launch_line_up_reveals_comfort_rating_system.php"
+
+[[reddit_post]]
+id = "4aoeao"
+subreddit = "Oculus_VR"
+author = "ilikadapie"
+title = "Devs - be realistic about the VR marketplace and its returns, says Palmer Luckey"
+score = 1
+num_comments = 1
+created_utc = 1458143305
+url = "http://gamasutra.com/view/news/268045/Nows_the_time_to_get_into_VR__but_be_realistic_about_its_returns_says_Palmer_Luckey.php"
 
 [[reddit_post]]
 id = "4ao8xo"
@@ -31469,6 +32189,266 @@ created_utc = 1456254997
 url = "http://gamasutra.com/blogs/MikeSouto/20160222/266322/Game_localization_on_a_tight_budget__tips_when_choosing_game_translation_languages.php"
 
 [[reddit_post]]
+id = "477ucj"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Are game demos worth making? Breaking down the numbers"
+score = 1
+num_comments = 0
+created_utc = 1456250435
+url = "http://gamasutra.com/blogs/JustinPopa/20160222/266317/The_value_generated_by_game_demos_in_2016__are_they_worth_making.php"
+
+[[reddit_post]]
+id = "477thj"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Are game demos worth making? Breaking down the numbers"
+score = 1
+num_comments = 0
+created_utc = 1456250168
+url = "http://gamasutra.com/blogs/JustinPopa/20160222/266317/The_value_generated_by_game_demos_in_2016__are_they_worth_making.php"
+
+[[reddit_post]]
+id = "472q10"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Lessons in iterative game development"
+score = 1
+num_comments = 0
+created_utc = 1456172076
+url = "http://gamasutra.com/blogs/PatrickMorgan/20160217/265915/Gurgamoth_Lessons_in_Iterative_Game_Development.php"
+
+[[reddit_post]]
+id = "472pb1"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Lessons in iterative game development"
+score = 1
+num_comments = 0
+created_utc = 1456171828
+url = "http://gamasutra.com/blogs/PatrickMorgan/20160217/265915/Gurgamoth_Lessons_in_Iterative_Game_Development.php"
+
+[[reddit_post]]
+id = "472k3b"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Getting the most out of Early Access"
+score = 1
+num_comments = 0
+created_utc = 1456170109
+url = "http://gamasutra.com/blogs/JoshBycer/20160217/265921/Getting_the_Most_out_of_Early_Access.php"
+
+[[reddit_post]]
+id = "472j28"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Getting the most out of Early Access"
+score = 1
+num_comments = 0
+created_utc = 1456169771
+url = "http://gamasutra.com/blogs/JoshBycer/20160217/265921/Getting_the_Most_out_of_Early_Access.php"
+
+[[reddit_post]]
+id = "472ark"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "A simple way to get great playtesting feedback"
+score = 1
+num_comments = 0
+created_utc = 1456167046
+url = "http://gamasutra.com/blogs/FilipWiltgren/20160217/265931/A_Simple_Way_to_get_Great_Playtesting_Feedback.php"
+
+[[reddit_post]]
+id = "4729tn"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] A simple way to get great playtesting feedback"
+score = 1
+num_comments = 0
+created_utc = 1456166724
+url = "http://gamasutra.com/blogs/FilipWiltgren/20160217/265931/A_Simple_Way_to_get_Great_Playtesting_Feedback.php"
+
+[[reddit_post]]
+id = "4724s2"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Blog: The importance of control over tactical outcomes in RTS design"
+score = 1
+num_comments = 0
+created_utc = 1456164983
+url = "http://gamasutra.com/blogs/BrandonCasteel/20160218/266101/The_Importance_of_Control_Over_Tactical_Outcomes_in_RTS_Design.php"
+
+[[reddit_post]]
+id = "4723xt"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Blog: The importance of control over tactical outcomes in RTS design"
+score = 1
+num_comments = 0
+created_utc = 1456164684
+url = "http://gamasutra.com/blogs/BrandonCasteel/20160218/266101/The_Importance_of_Control_Over_Tactical_Outcomes_in_RTS_Design.php"
+
+[[reddit_post]]
+id = "471ysw"
+subreddit = "CriticalHitLIVE"
+author = "Chisme"
+title = "Kojima comparte su visión sobre su nuevo equipo de trabajo."
+score = 1
+num_comments = 2
+created_utc = 1456163005
+url = "http://gamasutra.com/view/news/266274/Kojima_lays_out_his_vision_for_his_new_game_and_new_studio.php"
+
+[[reddit_post]]
+id = "46pyot"
+subreddit = "withoutthesarcasm"
+author = "EBongo"
+title = "Some interesting distribute() perspectives from a game dev"
+score = 1
+num_comments = 0
+created_utc = 1455972759
+url = "http://gamasutra.com/blogs/LenaLeRay/20160212/265767/6_Things_to_Note_About_distribute.php"
+
+[[reddit_post]]
+id = "46miv2"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] 5 monetization methods for indies with limited resources"
+score = 1
+num_comments = 0
+created_utc = 1455912475
+url = "http://gamasutra.com/blogs/DanielZacharias/20160218/266184/5_Monetization_Methods_for_Indies_with_Limited_Resources.php"
+
+[[reddit_post]]
+id = "46mgza"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "5 monetization methods for indies with limited resources"
+score = 1
+num_comments = 0
+created_utc = 1455911826
+url = "http://gamasutra.com/blogs/DanielZacharias/20160218/266184/5_Monetization_Methods_for_Indies_with_Limited_Resources.php"
+
+[[reddit_post]]
+id = "46mbdf"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Reading the end of Firewatch"
+score = 1
+num_comments = 0
+created_utc = 1455909992
+url = "http://gamasutra.com/blogs/EmilyShort/20160218/265846/Reading_the_end_of_Firewatch.php"
+
+[[reddit_post]]
+id = "46majv"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Reading the end of Firewatch"
+score = 1
+num_comments = 0
+created_utc = 1455909714
+url = "http://gamasutra.com/blogs/EmilyShort/20160218/265846/Reading_the_end_of_Firewatch.php"
+
+[[reddit_post]]
+id = "46les1"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Deconstructing Clash Royale"
+score = 1
+num_comments = 0
+created_utc = 1455899250
+url = "http://gamasutra.com/blogs/AdamTelfer/20160218/266159/Deconstructing_Clash_Royale.php"
+
+[[reddit_post]]
+id = "46ldil"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Deconstructing Clash Royale"
+score = 1
+num_comments = 0
+created_utc = 1455898808
+url = "http://gamasutra.com/blogs/AdamTelfer/20160218/266159/Deconstructing_Clash_Royale.php"
+
+[[reddit_post]]
+id = "46kynw"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "What an editor brings to a game's writing: Lessons learned"
+score = 1
+num_comments = 0
+created_utc = 1455893313
+url = "http://gamasutra.com/blogs/OliviaWood/20160217/265984/Five_Lessons_Learned_as_Editor_at_Failbetter_Games.php"
+
+[[reddit_post]]
+id = "46kyny"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Trying out skeletal animation for top-down characters"
+score = 1
+num_comments = 0
+created_utc = 1455893313
+url = "http://gamasutra.com/blogs/KollolDas/20160218/266078/Trying_out_Skeletal_Animation_for_Top_Down_Characters.php"
+
+[[reddit_post]]
+id = "46kx3h"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] What an editor brings to a game's writing: Lessons learned"
+score = 1
+num_comments = 0
+created_utc = 1455892739
+url = "http://gamasutra.com/blogs/OliviaWood/20160217/265984/Five_Lessons_Learned_as_Editor_at_Failbetter_Games.php"
+
+[[reddit_post]]
+id = "46kx3k"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Trying out skeletal animation for top-down characters"
+score = 1
+num_comments = 0
+created_utc = 1455892739
+url = "http://gamasutra.com/blogs/KollolDas/20160218/266078/Trying_out_Skeletal_Animation_for_Top_Down_Characters.php"
+
+[[reddit_post]]
+id = "46jtfr"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Our game is a stage, the enemies are actors, and here's how we code that"
+score = 1
+num_comments = 0
+created_utc = 1455874080
+url = "http://gamasutra.com/blogs/SarahHerzog/20160217/265840/Armoured_Engines_Dev_Blog__Level_System.php"
+
+[[reddit_post]]
+id = "46jsgn"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Our game is a stage, the enemies are actors, and here's how we code that"
+score = 1
+num_comments = 0
+created_utc = 1455873372
+url = "http://gamasutra.com/blogs/SarahHerzog/20160217/265840/Armoured_Engines_Dev_Blog__Level_System.php"
+
+[[reddit_post]]
+id = "1ue7n6h"
+subreddit = "GameDevelopment"
+author = "landocharisma"
+title = "Atari, MobyGames launch career platform called Moby Professional"
+score = 1
+num_comments = 0
+created_utc = 1782289555
+url = "https://www.gamedeveloper.com/business/atari-and-mobygames-launch-new-career-development-platform-called-moby-professional"
+
+[[reddit_post]]
+id = "1ue7ky1"
+subreddit = "atarigroup"
+author = "landocharisma"
+title = "Atari, MobyGames launch career platform called Moby Professional"
+score = 1
+num_comments = 0
+created_utc = 1782289342
+url = "https://www.gamedeveloper.com/business/atari-and-mobygames-launch-new-career-development-platform-called-moby-professional"
+
+[[reddit_post]]
 id = "1udir2d"
 subreddit = "DreamStationcc"
 author = "maxxrz31"
@@ -31477,16 +32457,6 @@ score = 1
 num_comments = 0
 created_utc = 1782225028
 url = "https://www.gamedeveloper.com/business/report-tencent-mulling-exits-from-multiple-japanese-studios"
-
-[[reddit_post]]
-id = "1ucqgd0"
-subreddit = "DreamStationcc"
-author = "maxxrz31"
-title = "Godot Confirms It Tolerates ‘some AI assistance’ but Rejects ‘vibe coded’ Tag"
-score = 1
-num_comments = 0
-created_utc = 1782147972
-url = "https://www.gamedeveloper.com/business/godot-confirms-it-tolerates-some-ai-assistance-but-rejects-vibe-coded-accusations"
 
 [[reddit_post]]
 id = "1ua608w"
@@ -33529,6 +34499,46 @@ created_utc = 1730986375
 url = "https://www.gamedeveloper.com/business/fromsoftware-parent-company-kadokawa-is-pushing-into-pc-and-console-publishing"
 
 [[reddit_post]]
+id = "1ggja5x"
+subreddit = "playstation"
+author = "Soplox"
+title = "CWA claims Sony looking to further 'monopoly position' with latest studio closures"
+score = 1
+num_comments = 6
+created_utc = 1730393727
+url = "https://www.gamedeveloper.com/production/cwa-claims-sony-looking-to-further-monopoly-position-with-latest-studio-closures"
+
+[[reddit_post]]
+id = "1ggixp0"
+subreddit = "technews"
+author = "YouAreNotMeLiar"
+title = "Meta ponders whether Reality Labs could be more efficient after it loses another $4.4 billion"
+score = 1
+num_comments = 0
+created_utc = 1730392816
+url = "https://www.gamedeveloper.com/business/meta-ponders-whether-reality-labs-could-be-more-efficient-after-it-loses-another-4-4-billion"
+
+[[reddit_post]]
+id = "1gahclg"
+subreddit = "gamingnews"
+author = "YouAreNotMeLiar"
+title = "What happens when a secretive blockchain company buys your game studio"
+score = 1
+num_comments = 1
+created_utc = 1729707132
+url = "https://www.gamedeveloper.com/business/what-happens-when-a-secretive-blockchain-company-buys-your-game-studio"
+
+[[reddit_post]]
+id = "1gabh3h"
+subreddit = "bestgamingsub"
+author = "linx757"
+title = "Survey says half of developers consider VR market on decline or stagnation"
+score = 1
+num_comments = 0
+created_utc = 1729692566
+url = "https://www.gamedeveloper.com/business/survey-says-half-of-developers-consider-vr-market-on-decline-or-stagnation"
+
+[[reddit_post]]
 id = "15s4x9z"
 subreddit = "VtubersReal"
 author = "Lion_sama"
@@ -33577,6 +34587,16 @@ score = 1
 num_comments = 0
 created_utc = 1446055908
 url = "http://www.gamasutra.com/view/feature/131746/postmortem_dreamworks_.php"
+
+[[reddit_post]]
+id = "meucj"
+subreddit = "gaming"
+author = "viishrugged"
+title = "Interesting Post-Mortem of DreamWorks Interactive's Trespasser."
+score = 1
+num_comments = 0
+created_utc = 1321478600
+url = "http://www.gamasutra.com/view/feature/3339/postmortem_dreamworks_.php"
 
 [[reddit_post]]
 id = "3rkrha"
@@ -33839,6 +34859,16 @@ created_utc = 1473967482
 url = "http://www.gamasutra.com/view/feature/132168/postmortem_2k_boston2k_.php"
 
 [[reddit_post]]
+id = "7020w"
+subreddit = "reddit.com"
+author = "joeenuk"
+title = "Gamasutra - Postmortem: 2K Boston/2K Australia's BioShock"
+score = 1
+num_comments = 1
+created_utc = 1220739235
+url = "http://www.gamasutra.com/view/feature/3774/postmortem_2k_boston2k_.php"
+
+[[reddit_post]]
 id = "5e68dq"
 subreddit = "news_etc"
 author = "[deleted]"
@@ -33857,6 +34887,16 @@ score = 1
 num_comments = 0
 created_utc = 1447962192
 url = "http://www.gamasutra.com/view/feature/132203/postmortem_naughty_dogs_.php"
+
+[[reddit_post]]
+id = "9xfhxc"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Don't Miss: A look back at the development of Choice Provisions' Bit. Trip Beat"
+score = 1
+num_comments = 0
+created_utc = 1542317391
+url = "http://www.gamasutra.com/view/feature/4041/postmortem_gaijin_games_bittrip_.php"
 
 [[reddit_post]]
 id = "3tc8h0"
@@ -33879,6 +34919,16 @@ created_utc = 1438807363
 url = "http://www.gamasutra.com/view/feature/132515/postmortem_realtime_worlds_.php"
 
 [[reddit_post]]
+id = "9sdj1"
+subreddit = "gaming"
+author = "HaekB"
+title = "Gamasutra - Features - Postmortem: ACE Team's Zeno Clash"
+score = 1
+num_comments = 0
+created_utc = 1255085759
+url = "http://www.gamasutra.com/view/feature/4156/postmortem_ace_teams_zeno_clash.php"
+
+[[reddit_post]]
 id = "bi9ws"
 subreddit = "gamedev"
 author = "ethicszen"
@@ -33889,6 +34939,16 @@ created_utc = 1269551370
 url = "http://www.gamasutra.com/view/feature/4308/postmortem_double_fines_brutal_.php?print=1"
 
 [[reddit_post]]
+id = "9orekh"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Don't Miss: Double Fine's postmortem of Brutal Legend"
+score = 1
+num_comments = 0
+created_utc = 1539721332
+url = "http://www.gamasutra.com/view/feature/132696/postmortem_double_fines_brutal_.php"
+
+[[reddit_post]]
 id = "ccg9j"
 subreddit = "gaming"
 author = "[deleted]"
@@ -33897,6 +34957,16 @@ score = 1
 num_comments = 0
 created_utc = 1275940625
 url = "http://www.gamasutra.com/view/feature/5826/postmortem_frozenbytes_trine.php?print=1"
+
+[[reddit_post]]
+id = "3hr3et"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Don't Miss: The all-or-nothing postmortem of Frozenbyte's Trine"
+score = 1
+num_comments = 0
+created_utc = 1440096769
+url = "http://www.gamasutra.com/view/feature/134198/postmortem_frozenbytes_trine.php"
 
 [[reddit_post]]
 id = "fogjt"
@@ -33927,6 +34997,16 @@ score = 1
 num_comments = 0
 created_utc = 1445349173
 url = "http://www.gamasutra.com/view/feature/134717/postmortem_team_meats_super_meat_.php"
+
+[[reddit_post]]
+id = "wyvvi"
+subreddit = "2dgamedev"
+author = "Kanzlerforce"
+title = "Gamasutra - Features - Postmortem: Team Meat's Super Meat Boy"
+score = 1
+num_comments = 0
+created_utc = 1342971165
+url = "http://www.gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
 
 [[reddit_post]]
 id = "1cy7l99"
@@ -34957,6 +36037,36 @@ score = 0
 num_comments = 1
 created_utc = 1581002743
 url = "https://www.gamasutra.com/view/news/357723/Switch_production_delayed_in_China_due_to_coronavirus_outbreak.php"
+
+[[reddit_post]]
+id = "ez4pys"
+subreddit = "gamedev"
+author = "SingularSchemes"
+title = "Checklist for a Top-Performing Game in 2020+"
+score = 0
+num_comments = 0
+created_utc = 1580881866
+url = "https://www.gamasutra.com/blogs/RubenTorresBonet/20200204/357539/Checklist_for_a_TopPerforming_Game_in_2020.php"
+
+[[reddit_post]]
+id = "eyt25x"
+subreddit = "Games"
+author = "speckz"
+title = "Pack-Ratting in Video Games: Do Players Have to Have It All?"
+score = 0
+num_comments = 9
+created_utc = 1580835513
+url = "https://www.gamasutra.com/blogs/JeremyDandeneau/20200203/357495/PackRatting_in_Video_Games_Do_Players_Have_to_Have_It_All.php"
+
+[[reddit_post]]
+id = "ewjdhw"
+subreddit = "gamedev"
+author = "SingularSchemes"
+title = "Discord no longer doubles as a game launcher as two non-core features get the axe"
+score = 0
+num_comments = 2
+created_utc = 1580447685
+url = "https://www.gamasutra.com/view/news/357433/Discord_no_longer_doubles_as_a_game_launcher_as_two_noncore_features_get_the_axe.php"
 
 [[reddit_post]]
 id = "mzg71v"
@@ -36009,6 +37119,16 @@ created_utc = 1457486138
 url = "http://gamasutra.com/view/news/267540/Faceware_rolls_out_free_noncommercial_tools_for_educational_use.php"
 
 [[reddit_post]]
+id = "475kqn"
+subreddit = "gaming"
+author = "PumpkinWithSoul"
+title = "The free-wheeling development of the disastrous E.T. for Atari 2600"
+score = 0
+num_comments = 0
+created_utc = 1456213015
+url = "http://gamasutra.com/view/news/266390/The_freewheeling_development_of_the_disastrous_ET_for_Atari_2600.php"
+
+[[reddit_post]]
 id = "1u8rzb5"
 subreddit = "PS5"
 author = "SilentNova300"
@@ -36699,6 +37819,56 @@ created_utc = 1730996196
 url = "https://www.gamedeveloper.com/business/dragon-age-the-veilguard-opens-as-bioware-s-best-steam-launch-with-70k-concurrent-players"
 
 [[reddit_post]]
+id = "1ggiyid"
+subreddit = "ConcordGame"
+author = "YouAreNotMeLiar"
+title = "CWA claims Sony looking to further 'monopoly position' with latest studio closures"
+score = 0
+num_comments = 0
+created_utc = 1730392875
+url = "https://www.gamedeveloper.com/production/cwa-claims-sony-looking-to-further-monopoly-position-with-latest-studio-closures"
+
+[[reddit_post]]
+id = "1ggixyz"
+subreddit = "PS5"
+author = "YouAreNotMeLiar"
+title = "CWA claims Sony looking to further 'monopoly position' with latest studio closures"
+score = 0
+num_comments = 9
+created_utc = 1730392836
+url = "https://www.gamedeveloper.com/production/cwa-claims-sony-looking-to-further-monopoly-position-with-latest-studio-closures"
+
+[[reddit_post]]
+id = "1ggh0c0"
+subreddit = "PS5"
+author = "Turbostrider27"
+title = "CWA claims Sony looking to further 'monopoly position' with latest studio closures"
+score = 0
+num_comments = 4
+created_utc = 1730387893
+url = "https://www.gamedeveloper.com/production/cwa-claims-sony-looking-to-further-monopoly-position-with-latest-studio-closures"
+
+[[reddit_post]]
+id = "1gevylc"
+subreddit = "gamingnews"
+author = "samiy2k"
+title = "SAG-AFTRA signs agreement with AI-powered voice company Ethovox"
+score = 0
+num_comments = 1
+created_utc = 1730212088
+url = "https://www.gamedeveloper.com/production/sag-aftra-signs-agreement-with-ai-powered-voice-company-ethovox"
+
+[[reddit_post]]
+id = "1ga7yvn"
+subreddit = "theprimeagen"
+author = "MornwindShoma"
+title = "What happens when a secretive blockchain company buys your game studio"
+score = 0
+num_comments = 1
+created_utc = 1729682139
+url = "https://www.gamedeveloper.com/business/what-happens-when-a-secretive-blockchain-company-buys-your-game-studio"
+
+[[reddit_post]]
 id = "1tuwup2"
 subreddit = "balatro"
 author = "UberDrive"
@@ -36727,6 +37897,16 @@ score = 0
 num_comments = 0
 created_utc = 1463511773
 url = "http://www.gamasutra.com/view/feature/131563/postmortem_treyarchs_tony_hawks_.php"
+
+[[reddit_post]]
+id = "8gwtg"
+subreddit = "gaming"
+author = "DrColin"
+title = "Postmortem: Square Enix's The World Ends With You"
+score = 0
+num_comments = 0
+created_utc = 1241138437
+url = "http://www.gamasutra.com/view/feature/4010/postmortem_square_enixs_the_.php?print=1S"
 
 [[reddit_post]]
 id = "csp4u"

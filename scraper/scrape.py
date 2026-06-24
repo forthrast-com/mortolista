@@ -869,11 +869,16 @@ def reddit_article_url_queries(article):
     urls = []
     original = article.get("original_url") or ""
     if original:
-        parsed = urllib.parse.urlparse(original)
-        host = parsed.netloc.lower()
-        path = parsed.path
-        base = urllib.parse.urlunparse((parsed.scheme or "http", host, path, "", "", ""))
-        urls.append(base)
+        ids = [str(article.get("id") or "")]
+        ids.extend(str(aid) for aid in article.get("alt_ids", []) or [])
+        ids = [aid for aid in dict.fromkeys(ids) if aid]
+        for aid in ids:
+            rewritten = re.sub(r"/view/feature/\d+/", f"/view/feature/{aid}/", original)
+            parsed = urllib.parse.urlparse(rewritten)
+            host = parsed.netloc.lower()
+            path = parsed.path
+            base = urllib.parse.urlunparse((parsed.scheme or "http", host, path, "", "", ""))
+            urls.append(base)
     live = article.get("live_url") or ""
     if live:
         urls.append(live)
