@@ -72,7 +72,7 @@ a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-r
 #masthead .wrap{position:relative}
 #masthead h1{margin:0; font-family:Georgia,"Times New Roman",serif; font-weight:normal}
 #masthead .gama{font-weight:bold; letter-spacing:-.5px}
-#masthead .sub{color:var(--masthead-sub); font-size:.62em; text-transform:uppercase; letter-spacing:2px; vertical-align:middle}
+#masthead .sub{font-weight:bold; letter-spacing:-.5px}
 .tagline{margin:.3em 0 0; color:var(--masthead-tagline); font-size:12px; font-style:italic}
 
 .theme-toggle{
@@ -189,7 +189,7 @@ footer .wrap{line-height:1.6}
   #masthead{padding:18px 0 20px}
   /* keep the title clear of the toggle, and the kicker on its own tidy line */
   #masthead h1{font-size:32px; line-height:1.08; padding-right:44px; text-wrap:balance}
-  #masthead .sub{display:block; margin-top:6px; font-size:.5em; letter-spacing:2.5px; white-space:nowrap}
+  #masthead .sub{display:block; margin-top:2px; letter-spacing:-.5px}
   .tagline{font-size:13px; line-height:1.45; max-width:34em; text-wrap:pretty}
   .theme-toggle{top:2px; right:12px}
 
