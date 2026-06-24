@@ -21,3 +21,57 @@ reason = "Half-Life and Team Fortress networking postmortem-canon technical arti
 id = "6471"
 url = "http://www.gamasutra.com/view/feature/6471/the_valve_way_gabe_newell_and_.php"
 reason = "Valve interview/postmortem-adjacent process piece; surfaced by high-HN audit and missed by postmortem slug sweep."
+
+# Octodad: Dadliest Catch — 3-part developer-blog postmortem (/blogs/ shape, not
+# /view/feature/, so the slug sweep never finds it). Each part is its own entry.
+[[include]]
+id = "235408"
+url = "https://www.gamasutra.com/blogs/PhilTibitoski/20150202/235408/Octodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php"
+reason = "Octodad: Dadliest Catch postmortem, part 1 of 3; developer-blog URL missed by the postmortem slug sweep."
+series = "Octodad: Dadliest Catch — Postmortem"
+series_id = "octodad-dadliest-catch"
+part_no = 1
+part_total = 3
+part_label = "Summary"
+
+[[include]]
+id = "235823"
+url = "https://www.gamasutra.com/blogs/KevinGeisler/20150205/235823/Octodad_Dadliest_Catch_PostMortem_Pt_2_Production.php"
+reason = "Octodad: Dadliest Catch postmortem, part 2 of 3; developer-blog URL missed by the postmortem slug sweep."
+series = "Octodad: Dadliest Catch — Postmortem"
+series_id = "octodad-dadliest-catch"
+part_no = 2
+part_total = 3
+part_label = "Production"
+
+[[include]]
+id = "235951"
+url = "https://www.gamasutra.com/blogs/KevinZuhn/20150210/235951/Octodad_Dadliest_Catch_PostMortem_Pt_3_Design.php"
+reason = "Octodad: Dadliest Catch postmortem, part 3 of 3; developer-blog URL missed by the postmortem slug sweep."
+series = "Octodad: Dadliest Catch — Postmortem"
+series_id = "octodad-dadliest-catch"
+part_no = 3
+part_total = 3
+part_label = "Design"
+
+# "How much do indie PC devs make anyways?" — long-running irregular series.
+# The 2018 entry is explicitly "Part 8" referencing the earlier instalments;
+# the 2010 original is treated as part 1. part_total = 8 (highest known part).
+[[include]]
+id = "87650"
+url = "https://gamasutra.com/blogs/DavidGalindo/20100724/87650/How_much_do_indie_PC_devs_make_anyways.php"
+reason = "Indie PC sales-data postmortem-style series opener; developer-blog URL missed by the postmortem slug sweep."
+series = "How much do indie PC devs make anyways?"
+series_id = "indie-pc-devs-make"
+part_no = 1
+part_total = 8
+
+[[include]]
+id = "326190"
+url = "https://gamasutra.com/blogs/DavidGalindo/20180912/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"
+reason = "Indie PC sales-data series, Part 8; developer-blog URL missed by the postmortem slug sweep."
+series = "How much do indie PC devs make anyways?"
+series_id = "indie-pc-devs-make"
+part_no = 8
+part_total = 8
+part_label = "Part 8"

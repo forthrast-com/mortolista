@@ -3558,6 +3558,30 @@ alt_ids = [
 ]
 
 [[postmortem]]
+id = "87650"
+title = "How much do indie PC devs make, anyways?"
+game = "How much do indie PC devs make, anyways?"
+authors = [
+    "David Galindo",
+]
+date = "2010-07-24"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20120511070007im_/http://www.vertigogaming.net/images/oilblueGSpic1.jpg"
+original_url = "http://www.gamasutra.com/blogs/DavidGalindo/20100724/87650/How_much_do_indie_PC_devs_make_anyways.php"
+wayback = "https://web.archive.org/web/20120511070007/http://www.gamasutra.com/blogs/DavidGalindo/20100724/87650/How_much_do_indie_PC_devs_make_anyways.php"
+wayback_print = "https://web.archive.org/web/20120511070007/http://www.gamasutra.com/blogs/DavidGalindo/20100724/87650/How_much_do_indie_PC_devs_make_anyways.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "How much do indie PC devs make anyways?"
+series_id = "indie-pc-devs-make"
+part_no = 1
+part_total = 8
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "6144"
 title = "Postmortem: Dejobaan Games' Aaaaa! -- A Reckless Disregard for Gravity"
 game = "Dejobaan Games' Aaaaa! -- A Reckless Disregard for Gravity"
@@ -4700,6 +4724,81 @@ copies_sold = ""
 alt_ids = []
 
 [[postmortem]]
+id = "235408"
+title = "Octodad: Dadliest Catch Post-Mortem Pt. 1: Summary"
+game = "Octodad: Dadliest Catch Post-Mortem Pt. 1: Summary"
+authors = [
+    "Phil Tibitoski",
+]
+date = "2015-02-02"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150203011652im_/http://octodadgame.com/press/octodad_dadliest_catch/images/octodad_12.png"
+original_url = "http://www.gamasutra.com/blogs/PhilTibitoski/20150202/235408/Octodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php"
+wayback = "https://web.archive.org/web/20150203011652/http://www.gamasutra.com/blogs/PhilTibitoski/20150202/235408/Octodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php"
+wayback_print = "https://web.archive.org/web/20150203011652/http://www.gamasutra.com/blogs/PhilTibitoski/20150202/235408/Octodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "Octodad: Dadliest Catch — Postmortem"
+series_id = "octodad-dadliest-catch"
+part_no = 1
+part_total = 3
+part_label = "Summary"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "235823"
+title = "Octodad: Dadliest Catch Post-Mortem Pt. 2: Production"
+game = "Octodad: Dadliest Catch Post-Mortem Pt. 2: Production"
+authors = [
+    "Kevin Geisler",
+]
+date = "2015-02-05"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150206084448im_/http://i.imgur.com/YKMkArG.jpg"
+original_url = "http://www.gamasutra.com/blogs/KevinGeisler/20150205/235823/Octodad_Dadliest_Catch_PostMortem_Pt_2_Production.php"
+wayback = "https://web.archive.org/web/20150206084448/http://www.gamasutra.com/blogs/KevinGeisler/20150205/235823/Octodad_Dadliest_Catch_PostMortem_Pt_2_Production.php"
+wayback_print = "https://web.archive.org/web/20150206084448/http://www.gamasutra.com/blogs/KevinGeisler/20150205/235823/Octodad_Dadliest_Catch_PostMortem_Pt_2_Production.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "Octodad: Dadliest Catch — Postmortem"
+series_id = "octodad-dadliest-catch"
+part_no = 2
+part_total = 3
+part_label = "Production"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "235951"
+title = "Octodad: Dadliest Catch Post-Mortem Pt. 3: Design"
+game = "Octodad: Dadliest Catch Post-Mortem Pt. 3: Design"
+authors = [
+    "Kevin Zuhn",
+]
+date = "2015-02-10"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150211034606im_/http://i.imgur.com/YrNoiu8.png"
+original_url = "http://www.gamasutra.com/blogs/KevinZuhn/20150210/235951/Octodad_Dadliest_Catch_PostMortem_Pt_3_Design.php"
+wayback = "https://web.archive.org/web/20150211034606/http://www.gamasutra.com/blogs/KevinZuhn/20150210/235951/Octodad_Dadliest_Catch_PostMortem_Pt_3_Design.php"
+wayback_print = "https://web.archive.org/web/20150211034606/http://www.gamasutra.com/blogs/KevinZuhn/20150210/235951/Octodad_Dadliest_Catch_PostMortem_Pt_3_Design.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "Octodad: Dadliest Catch — Postmortem"
+series_id = "octodad-dadliest-catch"
+part_no = 3
+part_total = 3
+part_label = "Design"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "176187"
 title = "How Camouflaj saved République 's Kickstarter"
 game = "How Camouflaj saved République 's Kickstarter"
@@ -4720,3 +4819,28 @@ author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
+
+[[postmortem]]
+id = "326190"
+title = "How much do indie PC devs make, anyways? (Part 8)"
+game = "How much do indie PC devs make, anyways? (Part 8)"
+authors = [
+    "David Galindo",
+]
+date = "2018-09-12"
+date_estimated = false
+category = "Postmortem"
+summary = "A look at the launch and year long sales and details of Cook, Serve, Delicious! 2!!"
+thumbnail = "https://web.archive.org/web/20180913004148im_/https://gamasutra.com/db_area/images/blog/326190/streamsplash.png"
+original_url = "http://www.gamasutra.com/blogs/DavidGalindo/20180912/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"
+wayback = "https://web.archive.org/web/20180913004148/http://www.gamasutra.com/blogs/DavidGalindo/20180912/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"
+wayback_print = "https://web.archive.org/web/20180913004148/http://www.gamasutra.com/blogs/DavidGalindo/20180912/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "How much do indie PC devs make anyways?"
+series_id = "indie-pc-devs-make"
+part_no = 8
+part_total = 8
+part_label = "Part 8"
+alt_ids = []
+author_notable = false

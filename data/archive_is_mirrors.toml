@@ -1028,6 +1028,13 @@ archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%
 archive_today_print_ok = true
 
 [[archive_mirror]]
+id = "87650"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FDavidGalindo%2F20100724%2F87650%2FHow_much_do_indie_PC_devs_make_anyways.php"
+archive_today_ok = true
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FDavidGalindo%2F20100724%2F87650%2FHow_much_do_indie_PC_devs_make_anyways.php%3Fprint%3D1"
+archive_today_print_ok = true
+
+[[archive_mirror]]
 id = "6144"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F6144%2Fpostmortem_dejobaan_games_aaaaa_.php"
 archive_today_ok = true
@@ -1116,6 +1123,13 @@ id = "6469"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F6469%2Fpostmortem_zen_studios_pinball_.php"
 archive_today_ok = true
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F6469%2Fpostmortem_zen_studios_pinball_.php%3Fprint%3D1"
+archive_today_print_ok = true
+
+[[archive_mirror]]
+id = "6471"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F6471%2Fthe_valve_way_gabe_newell_and_.php"
+archive_today_ok = true
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F6471%2Fthe_valve_way_gabe_newell_and_.php%3Fprint%3D1"
 archive_today_print_ok = true
 
 [[archive_mirror]]
@@ -1364,8 +1378,36 @@ archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%
 archive_today_print_ok = true
 
 [[archive_mirror]]
+id = "235408"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FPhilTibitoski%2F20150202%2F235408%2FOctodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php"
+archive_today_ok = true
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FPhilTibitoski%2F20150202%2F235408%2FOctodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php%3Fprint%3D1"
+archive_today_print_ok = true
+
+[[archive_mirror]]
+id = "235823"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FKevinGeisler%2F20150205%2F235823%2FOctodad_Dadliest_Catch_PostMortem_Pt_2_Production.php"
+archive_today_ok = true
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FKevinGeisler%2F20150205%2F235823%2FOctodad_Dadliest_Catch_PostMortem_Pt_2_Production.php%3Fprint%3D1"
+archive_today_print_ok = true
+
+[[archive_mirror]]
+id = "235951"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FKevinZuhn%2F20150210%2F235951%2FOctodad_Dadliest_Catch_PostMortem_Pt_3_Design.php"
+archive_today_ok = true
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FKevinZuhn%2F20150210%2F235951%2FOctodad_Dadliest_Catch_PostMortem_Pt_3_Design.php%3Fprint%3D1"
+archive_today_print_ok = true
+
+[[archive_mirror]]
 id = "176187"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F176187%2Fhow_camouflaj_saved_rpubliques_.php"
 archive_today_ok = true
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F176187%2Fhow_camouflaj_saved_rpubliques_.php%3Fprint%3D1"
+archive_today_print_ok = true
+
+[[archive_mirror]]
+id = "326190"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FDavidGalindo%2F20180912%2F326190%2FHow_much_do_indie_PC_devs_make_anyways_Part_8.php"
+archive_today_ok = true
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FDavidGalindo%2F20180912%2F326190%2FHow_much_do_indie_PC_devs_make_anyways_Part_8.php%3Fprint%3D1"
 archive_today_print_ok = true

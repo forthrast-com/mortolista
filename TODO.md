@@ -32,6 +32,13 @@ postmortem features, linking out via the Wayback Machine.
       presence. Could weight by article length / specific curated list.
 
 ## Ideas / niceties
+- [x] Intro "where to start" links: Game Developer's "10 seminal game
+      postmortems" + Microsoft Research's "What Went Right and What Went Wrong"
+      (an analysis of 155 Gamasutra postmortems — i.e. this very corpus).
+- [ ] Multi-part series: ingest /blogs/-shaped postmortems (Octodad Pt 1–3,
+      "How much do indie PC devs make" Pt 1/8) via curated includes; render
+      with series/part_no/part_total/part_label fields. Consider collapsing the
+      parts of one series into a single grouped card.
 - [ ] Widen beyond URL-slug "postmortem" to catch postmortems whose slug
       lacks the word (e.g. "behind the scenes of ...").
 - [ ] Pick the *best-rendered* snapshot per article for the Wayback link

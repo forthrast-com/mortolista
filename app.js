@@ -12,7 +12,6 @@ const tableWrap = document.querySelector(".table-wrap");
 
 let DATA = [];
 let NOTABLE_AUTHORS = new Map(); // author name -> Wikipedia URL
-let AUTHOR_BIOS = new Map(); // article id -> end-of-article author bio
 let sortKey = "agg_score";
 let sortDir = -1; // -1 desc, 1 asc
 
@@ -99,19 +98,6 @@ async function loadNotableAuthors() {
   }
 }
 
-async function loadAuthorBios() {
-  // Optional article-scoped bios pulled from the archived print pages. Kept as
-  // a sidecar so missing/partial extraction never blocks the archive itself.
-  try {
-    const res = await fetch("data/author_bios.toml", { cache: "no-cache" });
-    if (!res.ok) return;
-    const rows = parse(await res.text()).author_bio || [];
-    AUTHOR_BIOS = new Map(rows.filter(r => r.id && r.bio).map(r => [String(r.id), r.bio]));
-  } catch (e) {
-    // best-effort; author names just render as normal links/text.
-  }
-}
-
 async function loadPhaseTwoMetrics() {
   await loadOptionalSidecar("data/reddit_postmortem_threads.toml", "reddit_postmortem", BLANK_REDDIT);
   await loadOptionalSidecar("data/wikipedia_game_sales.toml", "wiki_game_sales", BLANK_SALES);
@@ -142,6 +128,11 @@ const AGG_AXES = [
   { key: "hn_comments_sum", weight: 0.5, label: "HN discussion" },
   { key: "reddit_score_sum", weight: 0.5, label: "Reddit score" },
   { key: "author_notable", weight: 0.5, label: "notable author", binary: true },
+  { key: "hn_points", weight: 0.35, label: "top HN thread" },
+  { key: "reddit_comments_sum", weight: 0.3, label: "Reddit discussion" },
+  { key: "hn_comments", weight: 0.2, label: "top HN thread" },
+  { key: "hn_submissions", weight: 0.15, label: "HN reach" },
+  { key: "reddit_submissions", weight: 0.15, label: "Reddit reach" },
 ];
 
 // Map each distinct value to its plotting-position percentile in (0,1), with
@@ -211,11 +202,13 @@ async function load() {
     await loadPhaseTwoMetrics();
     await loadMirrorSidecars();
     await loadNotableAuthors();
-    await loadAuthorBios();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
   }
+  // Collapse multi-part series into one card before ranking, so a series
+  // competes in the balanced sort as a single unit.
+  DATA = groupSeries(DATA);
   computeAggregate();
   const cats = [...new Set(DATA.map(d => d.category))].sort();
   for (const c of cats) {
@@ -253,7 +246,7 @@ function render() {
     if (cat && d.category !== cat) return false;
     if (notable && !d.author_notable) return false;
     if (q) {
-      const hay = (d.title + " " + d.game + " " + (d.authors || []).join(" ")).toLowerCase();
+      const hay = (d.title + " " + d.game + " " + (d.authors || []).join(" ") + " " + (d._search || "")).toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
@@ -269,7 +262,7 @@ function render() {
   countEl.textContent = `${list.length} of ${DATA.length} postmortems`;
   rowsEl.innerHTML = list.length
     ? list.map(rowHTML).join("")
-    : `<tr><td colspan="16" class="empty">No postmortems match your filters.</td></tr>`;
+    : `<tr><td colspan="8" class="empty">No postmortems match your filters.</td></tr>`;
   document.querySelectorAll("th.sortable").forEach(th => {
     th.classList.remove("sorted-asc", "sorted-desc");
     th.removeAttribute("aria-sort");
@@ -300,13 +293,6 @@ function catClass(c) {
 function catBadge(c) {
   if (!c || c.trim().toLowerCase() === "postmortem") return "";
   return `<span class="cat ${catClass(c)}">${esc(c)}</span>`;
-}
-
-function num(v, title = "") {
-  const titleAttr = title ? ` title="${esc(title)}"` : "";
-  return v
-    ? `<td class="num"${titleAttr}>${Number(v).toLocaleString()}</td>`
-    : `<td class="num zero"${titleAttr}>–</td>`;
 }
 
 function metricValue(d, k) {
@@ -392,10 +378,6 @@ function usableLink(ok, url) {
   return ok !== false && !!url;
 }
 
-function checkedLink(ok, url) {
-  return ok === true && !!url;
-}
-
 function sameUrl(a, b) {
   return a && b && a === b;
 }
@@ -408,13 +390,6 @@ function linkHTML(url, label, title, primary) {
     : `<a ${attrs}>${body}</a>`;
 }
 
-function printArchiveUrl(d) {
-  const wayback = d.wayback_print || "";
-  if (usableLink(d.wayback_print_ok, wayback) && /[?&]print=1(?:[#&]|$)/.test(wayback)) return wayback;
-  const archiveToday = d.archive_today_print || "";
-  return usableLink(d.archive_today_print_ok, archiveToday) ? archiveToday : "";
-}
-
 function cleanTitle(title) {
   return (title || "")
     .replace(/^\s*(?:(?:classic|indie|audio|faculty|game|game design|middleware|mobile|student|tool)\s+)*post\s*-?\s*mortem\s*(?::|[-–—])\s*/i, "")
@@ -423,60 +398,65 @@ function cleanTitle(title) {
     .trim();
 }
 
-function displayGame(d) {
-  const game = (d.game || "").trim();
-  if (!game) return "";
-  const title = cleanTitle(d.title);
-  if (!title) return game;
-  const canonical = s => cleanTitle(s).toLowerCase();
-  return canonical(game) === canonical(title) ? "" : game;
-}
-
-function articleBio(d) {
-  return AUTHOR_BIOS.get(String(d.id)) || "";
-}
-
-function authorHTML(name, bio = "") {
+function authorHTML(name) {
   const url = NOTABLE_AUTHORS.get(name);
-  const bioClass = bio ? " has-bio" : "";
-  const bioAttr = bio ? ` data-bio="${esc(bio)}"` : "";
   if (url) {
-    return `<a class="author-link wiki-link${bioClass}" href="${esc(url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}"${bioAttr}>${esc(name)}</a>`;
+    return `<a class="author-link wiki-link" href="${esc(url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}">${esc(name)}</a>`;
   }
-  const tabAttr = bio ? ` tabindex="0" role="button" aria-label="Author bio for ${esc(name)}"` : "";
-  return `<span class="author-name${bioClass} no-wiki"${bioAttr}${tabAttr}>${esc(name)}</span>`;
+  return `<span class="author-name no-wiki">${esc(name)}</span>`;
 }
 
-function rowHTML(d) {
-  const bio = articleBio(d);
-  const authors = (d.authors || []).map(name => authorHTML(name, bio)).join(", ") || "<span class=zero>—</span>";
-  const date = d.date
-    ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
-    : '<span class=zero>—</span>';
-  const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
-  const game = displayGame(d);
-  const gameLine = game ? `<span class="game">${esc(game)}</span>` : "";
-  const fullText = printArchiveUrl(d);
-  const primary = fullText
-    || (usableLink(d.wayback_ok, d.wayback) ? d.wayback : "")
-    || (usableLink(d.original_ok, d.original_url) ? d.original_url : "")
-    || (usableLink(d.live_ok, d.live_url) ? d.live_url : "")
-    || (usableLink(d.archive_today_print_ok, d.archive_today_print) ? d.archive_today_print : "")
-    || (usableLink(d.archive_today_ok, d.archive_today) ? d.archive_today : "");
-  const fullTitle = d.pages > 1
-    ? `Full article on one page (${d.pages} pages)`
-    : "Archived print view / full text";
-  const archiveToday = d.archive_today || (d.original_url
-    ? `https://archive.is/newest/${encodeURIComponent(d.original_url)}`
-    : "");
+function compactSold(v) {
+  v = Number(v) || 0;
+  if (!v) return "";
+  if (v >= 1e6) return (v / 1e6).toFixed(v >= 1e7 ? 0 : 1).replace(/\.0$/, "") + "M";
+  if (v >= 1e3) return Math.round(v / 1e3) + "k";
+  return v.toLocaleString();
+}
+
+// One compact, right-aligned metric cell: a bold primary number with an
+// optional muted second line (comments · submission count). Replaces the old
+// spread of five HN + three Reddit columns, which read as noise.
+function metricCell(primary, secondary, title) {
+  const titleAttr = title ? ` title="${esc(title)}"` : "";
+  if (!primary && !secondary) return `<td class="num metric zero"${titleAttr}>–</td>`;
+  const sub = secondary ? `<span class="m-sub">${secondary}</span>` : "";
+  return `<td class="num metric"${titleAttr}><span class="m-main">${primary || "–"}</span>${sub}</td>`;
+}
+
+function discussionSub(comments, subs) {
+  const parts = [];
+  if (comments) parts.push(`${Number(comments).toLocaleString()} c`);
+  if (subs) parts.push(`×${subs}`);
+  return parts.join(" · ");
+}
+
+// Resolve the best primary target plus the muted "links:" line for an entry,
+// in reading order (live / wayback / wayback-full / archive.is / original).
+// Shared by the card headline and by each part of a consolidated series.
+function resolveLinks(d) {
+  const wbFull = usableLink(d.wayback_print_ok, d.wayback_print)
+    && /[?&]print=1(?:[#&]|$)/.test(d.wayback_print || "") ? d.wayback_print : "";
+  const wbAny = usableLink(d.wayback_ok, d.wayback) ? d.wayback : "";
+  const azFull = usableLink(d.archive_today_print_ok, d.archive_today_print) ? d.archive_today_print : "";
+  const azAny = usableLink(d.archive_today_ok, d.archive_today) ? d.archive_today
+    : (d.original_url ? `https://archive.is/newest/${encodeURIComponent(d.original_url)}` : "");
+  const liveUrl = usableLink(d.live_ok, d.live_url) ? d.live_url : "";
+  const origUrl = d.original_url || "";
+  const archiveUrl = azFull || azAny;
+  const pagesNote = d.pages > 1 ? ` (one page; was ${d.pages})` : "";
+  // If a ?print=1 full-text capture exists, the headline/thumbnail use it.
+  const primary = wbFull || azFull || wbAny || liveUrl || origUrl || archiveUrl;
+  // Wayback's base snapshot and its ?print=1 one-page view are distinct
+  // captures, so surface both when we have them.
   const mirrorLinks = [
-    { ok: !!fullText, url: fullText, label: "full text", title: fullTitle },
-    { ok: usableLink(d.wayback_ok, d.wayback), url: d.wayback, label: "wayback", title: "Internet Archive snapshot of the original page" },
-    { ok: checkedLink(d.original_ok, d.original_url), url: d.original_url, label: "original", title: "Original Gamasutra URL" },
-    { ok: checkedLink(d.live_ok, d.live_url), url: d.live_url, label: "live", title: "Verified live Game Developer URL (may have broken formatting)" },
-    { ok: usableLink(d.archive_today_print_ok, d.archive_today_print), url: d.archive_today_print, label: "archive.is full", title: "archive.is print/full-text mirror" },
-    { ok: usableLink(d.archive_today_ok, archiveToday), url: archiveToday, label: "archive.is", title: "archive.is mirror (fallback)" },
-  ].filter(link => link.ok && link.url);
+    { url: liveUrl, label: "live", title: "Live on Game Developer today (migrated formatting may be rough)" },
+    { url: wbAny, label: "wayback", title: "Wayback Machine snapshot of the original page" },
+    { url: wbFull, label: "wayback (full page)", title: `Wayback Machine — full article on one page${pagesNote}` },
+    { url: archiveUrl, label: azFull ? "archive.is (full page)" : "archive.is",
+      title: azFull ? "archive.is — full-text mirror" : "archive.is mirror (fallback)" },
+    { url: origUrl, label: "original", title: "Original Gamasutra URL (likely dead)" },
+  ].filter(link => link.url);
   const seenMirrorUrls = new Set();
   const mirrorParts = mirrorLinks.flatMap(link => {
     if (seenMirrorUrls.has(link.url)) return [];
@@ -486,19 +466,152 @@ function rowHTML(d) {
   const mirrorLine = mirrorParts.length
     ? `<span class="mirror-links"><span class="line-label">links:</span> ${mirrorParts.join(" · ")}</span>`
     : "";
+  return { primary, mirrorLine };
+}
+
+// ---- Series consolidation ---------------------------------------------------
+// Multi-part developer-blog postmortems (Octodad Pt 1–3, "How much do indie PC
+// devs make" Pt 1/8) arrive as one entry per part, each carrying a shared
+// series_id. Collapse them into a single card so a 3-part series reads as one
+// work instead of three near-duplicate rows — competing in the balanced sort as
+// a unit, with the individual parts listed in the detail row.
+function groupSeries(entries) {
+  const groups = new Map();   // series_id -> member entries
+  const order = [];           // preserves first-appearance order, mixing both kinds
+  for (const d of entries) {
+    if (d.series_id) {
+      if (!groups.has(d.series_id)) { groups.set(d.series_id, []); order.push({ s: d.series_id }); }
+      groups.get(d.series_id).push(d);
+    } else {
+      order.push({ d });
+    }
+  }
+  // A series with only one curated part so far renders as a normal entry (it
+  // keeps its own "Pt 1/2" badge); only genuinely multi-part groups collapse.
+  return order.map(o => {
+    if (!o.s) return o.d;
+    const members = groups.get(o.s);
+    return members.length > 1 ? mergeSeries(members) : members[0];
+  });
+}
+
+function mergeSeries(parts) {
+  const sorted = [...parts].sort((a, b) => (a.part_no || 0) - (b.part_no || 0));
+  const first = sorted[0];
+  // Sums where the series-wide total is meaningful (discussion, archive
+  // footprint); max where parts share one value or only the strongest matters
+  // (copies sold for one game, the single best HN/Reddit thread).
+  const sum = k => sorted.reduce((s, p) => s + (Number(p[k]) || 0), 0);
+  const max = k => sorted.reduce((m, p) => Math.max(m, Number(p[k]) || 0), 0);
+  const dates = sorted.map(p => p.date).filter(Boolean).sort();
+  const startY = dates[0] ? String(dates[0]).slice(0, 4) : "";
+  const endY = dates.length ? String(dates[dates.length - 1]).slice(0, 4) : "";
+  const earliest = sorted.find(p => p.date === dates[0]) || first;
+  return {
+    ...first,
+    is_series: true,
+    parts: sorted,
+    id: first.series_id,
+    title: first.series || first.title,
+    _search: sorted.map(p => p.title).join(" "),  // keep part titles searchable
+    // The series card wears part 1's image; if part 1 has none, fall back to the
+    // first part that does, so a series is never needlessly thumbnail-less.
+    thumbnail: (sorted.find(p => p.thumbnail) || first).thumbnail || "",
+    authors: [...new Set(sorted.flatMap(p => p.authors || []))],
+    author_notable: sorted.some(p => p.author_notable),
+    date: dates[0] || first.date,                 // earliest, for sorting
+    date_estimated: earliest.date_estimated,
+    date_label: startY && endY && startY !== endY ? `${startY}–${endY}` : startY,
+    hn_points: max("hn_points"),
+    hn_comments: max("hn_comments"),
+    hn_points_sum: sum("hn_points_sum"),
+    hn_comments_sum: sum("hn_comments_sum"),
+    hn_submissions: sum("hn_submissions"),
+    reddit_score: max("reddit_score"),
+    reddit_comments: max("reddit_comments"),
+    reddit_score_sum: sum("reddit_score_sum"),
+    reddit_comments_sum: sum("reddit_comments_sum"),
+    reddit_submissions: sum("reddit_submissions"),
+    copies_sold: max("copies_sold"),
+    wayback_captures: sum("wayback_captures"),
+    hn_threads: sorted.flatMap(p => p.hn_threads || []),
+    reddit_threads: sorted.flatMap(p => p.reddit_threads || []),
+    // Clear the per-part fields so the card renders as a series, not a part.
+    part_no: undefined, part_total: undefined, part_label: undefined, series_id: undefined,
+  };
+}
+
+// Outlined "Series · N parts" marker for a consolidated multi-part card.
+function seriesBadge(d) {
+  if (!d.is_series) return "";
+  const n = d.parts.length;
+  return `<span class="series-badge" title="${esc(d.title)} — consolidated ${n}-part series">Series · ${n} parts</span>`;
+}
+
+// The ordered list of parts shown in a series card's detail row, each linking to
+// its own best mirror.
+function seriesPartsHTML(d) {
+  if (!d.is_series) return "";
+  const items = d.parts.map(p => {
+    const { primary } = resolveLinks(p);
+    const t = cleanTitle(p.title) || p.title;
+    const partNo = p.part_no ? `Pt ${p.part_no}${p.part_total ? `/${p.part_total}` : ""}` : "";
+    const lbl = p.part_label ? ` · ${esc(p.part_label)}` : "";
+    const tag = partNo ? `<span class="part-no">${partNo}${lbl}</span> ` : "";
+    const link = primary
+      ? `<a href="${esc(primary)}" target="_blank" rel="noopener">${esc(t)}</a>`
+      : esc(t);
+    return `<li>${tag}${link}</li>`;
+  });
+  return `<span class="series-parts"><span class="line-label">parts:</span><ol>${items.join("")}</ol></span>`;
+}
+
+// "Pt 2/3 · Production" badge for an entry that belongs to a multi-part series;
+// renders nothing for standalone postmortems.
+function partBadge(d) {
+  if (!d.part_no) return "";
+  const count = d.part_total ? `/${d.part_total}` : "";
+  const label = d.part_label ? ` · ${esc(d.part_label)}` : "";
+  const series = d.series ? esc(d.series) : "";
+  const title = series
+    ? `Part ${d.part_no}${d.part_total ? ` of ${d.part_total}` : ""} of “${series}”`
+    : "Part of a series";
+  return `<span class="part-badge" title="${title}">Pt ${d.part_no}${count}${label}</span>`;
+}
+
+function rowHTML(d) {
+  const date = d.is_series && d.date_label
+    ? `<span title="Series spans ${esc(d.date_label)}">${esc(d.date_label)}</span>`
+    : d.date
+      ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
+      : '<span class=zero>—</span>';
+  const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
+  // A series card's headline points at part 1 and lists every part in the detail
+  // row; a standalone entry shows its own "links:" line of mirrors.
+  const { primary, mirrorLine } = d.is_series
+    ? { primary: resolveLinks(d.parts[0]).primary, mirrorLine: "" }
+    : resolveLinks(d);
+  const seriesParts = seriesPartsHTML(d);
   const discussions = hnThreadsHTML(d) + redditThreadsHTML(d);
-  const mirrors = mirrorLine || discussions
-    ? `<span class="mirrors">${mirrorLine}${discussions}</span>`
+  const mirrors = seriesParts || mirrorLine || discussions
+    ? `<span class="mirrors">${seriesParts}${mirrorLine}${discussions}</span>`
     : "";
-  // vintage dateline + byline: shown above the headline on the mobile card
-  // (hidden on desktop, where the columns carry this metadata instead)
+  // Mobile-only meta line above the headline (desktop carries the date in its
+  // own column and the type/part badges sit above the title instead).
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
     + catBadge(d.category)
+    + partBadge(d)
+    + seriesBadge(d)
     + sortSignalHTML(d)
     + `</span>`;
+  // Type + series badges above the title; shown on desktop, hidden on mobile
+  // where the meta line carries the type.
+  const topBadges = (catBadge(d.category) || partBadge(d) || seriesBadge(d))
+    ? `<span class="top-badges">${catBadge(d.category)}${partBadge(d)}${seriesBadge(d)}</span>`
+    : "";
   const byline = d.authors && d.authors.length
-    ? `<span class="byline">by ${d.authors.map(name => authorHTML(name, bio)).join(", ")}</span>`
+    ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`
     : "";
   const shownTitle = cleanTitle(d.title) || d.title;
   const title = primary
@@ -507,27 +620,30 @@ function rowHTML(d) {
   const thumb = d.thumbnail && primary
     ? `<a href="${esc(primary)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
     : "";
+  const hnCell = metricCell(
+    d.hn_points_sum ? Number(d.hn_points_sum).toLocaleString() : "",
+    discussionSub(d.hn_comments_sum, d.hn_submissions),
+    "Hacker News — total points; comments and submission count below");
+  const redditCell = metricCell(
+    d.reddit_score_sum ? Number(d.reddit_score_sum).toLocaleString() : "",
+    discussionSub(d.reddit_comments_sum, d.reddit_submissions),
+    "Reddit — total score; comments and submission count below");
+  const salesCell = metricCell(compactSold(d.copies_sold), "", d.sales_note || "Copies sold (Wikipedia-derived)");
+  const capsCell = metricCell(
+    d.wayback_captures ? Number(d.wayback_captures).toLocaleString() : "", "", "Wayback capture count");
   // Each entry is two rows: a compact headline row (metadata in columns on
   // desktop) and a wide detail row that spans the text columns underneath.
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell">${metaTop}${title}${gameLine}${byline}</td>
-    <td class="author-cell">${authors}</td>
-    <td class="type-cell">${catBadge(d.category)}</td>
+    <td class="main-cell">${topBadges}${metaTop}${title}${byline}</td>
     <td class="num date-cell">${date}</td>
-    ${num(d.hn_points, "Best HN thread points")}
-    ${num(d.hn_comments, "Best HN thread comments")}
-    ${num(d.hn_points_sum, "Total HN points")}
-    ${num(d.hn_comments_sum, "Total HN comments")}
-    ${num(d.hn_submissions, "HN submissions")}
-    ${num(d.reddit_score_sum, "Total Reddit score")}
-    ${num(d.reddit_comments_sum, "Total Reddit comments")}
-    ${num(d.reddit_submissions, "Reddit submissions")}
-    ${num(d.copies_sold, "Copies sold")}
-    ${num(d.wayback_captures, "Wayback captures")}
+    ${hnCell}
+    ${redditCell}
+    ${salesCell}
+    ${capsCell}
   </tr>
-  <tr class="r-detail"><td class="detail-cell" colspan="14">${whyBalancedHTML(d)}${summary}${mirrors}</td></tr>`;
+  <tr class="r-detail"><td class="detail-cell" colspan="6">${whyBalancedHTML(d)}${summary}${mirrors}</td></tr>`;
 }
 
 document.querySelectorAll("th.sortable").forEach(th => {
@@ -578,71 +694,6 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
 });
 
 syncThemeButton();
-
-// Desktop-only author bio tooltip. It is viewport-positioned (not clipped by
-// table cells) and never handles pointer events, so Wikipedia links stay links.
-let bioTooltip = null;
-const canHoverAuthors = matchMedia("(hover: hover) and (pointer: fine)");
-
-function hideAuthorBio() {
-  bioTooltip?.remove();
-  bioTooltip = null;
-}
-
-function placeAuthorBioTooltip(anchor) {
-  if (!bioTooltip) return;
-  const gap = 8;
-  const pad = 12;
-  const r = anchor.getBoundingClientRect();
-  const tr = bioTooltip.getBoundingClientRect();
-  let left = Math.min(Math.max(r.left, pad), window.innerWidth - tr.width - pad);
-  let top = r.top - tr.height - gap;
-  if (top < pad) top = Math.min(r.bottom + gap, window.innerHeight - tr.height - pad);
-  bioTooltip.style.left = `${Math.max(pad, left)}px`;
-  bioTooltip.style.top = `${Math.max(pad, top)}px`;
-}
-
-function showAuthorBio(anchor, { force = false } = {}) {
-  if (!force && !canHoverAuthors.matches) return;
-  const bio = anchor.dataset.bio;
-  if (!bio) return;
-  hideAuthorBio();
-  bioTooltip = document.createElement("div");
-  bioTooltip.className = "bio-tooltip";
-  bioTooltip.textContent = bio;
-  document.body.appendChild(bioTooltip);
-  placeAuthorBioTooltip(anchor);
-}
-
-document.addEventListener("pointerover", e => {
-  const anchor = e.target.closest?.(".has-bio");
-  if (anchor) showAuthorBio(anchor);
-});
-document.addEventListener("pointerout", e => {
-  const anchor = e.target.closest?.(".has-bio");
-  if (anchor && !anchor.contains(e.relatedTarget)) hideAuthorBio();
-});
-document.addEventListener("focusin", e => {
-  if (e.target.matches?.(".has-bio")) showAuthorBio(e.target);
-});
-document.addEventListener("focusout", e => {
-  if (e.target.matches?.(".has-bio")) hideAuthorBio();
-});
-document.addEventListener("click", e => {
-  const author = e.target.closest?.(".author-name.has-bio.no-wiki");
-  if (!author || canHoverAuthors.matches) return;
-  e.preventDefault();
-  bioTooltip ? hideAuthorBio() : showAuthorBio(author, { force: true });
-});
-document.addEventListener("keydown", e => {
-  const author = e.target.closest?.(".author-name.has-bio.no-wiki");
-  if (!author || canHoverAuthors.matches || !["Enter", " "].includes(e.key)) return;
-  e.preventDefault();
-  bioTooltip ? hideAuthorBio() : showAuthorBio(author, { force: true });
-});
-document.addEventListener("scroll", hideAuthorBio, { passive: true });
-window.addEventListener("resize", hideAuthorBio);
-canHoverAuthors.addEventListener?.("change", hideAuthorBio);
 
 // Press "/" to jump to the search box (unless already typing somewhere).
 document.addEventListener("keydown", e => {

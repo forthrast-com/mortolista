@@ -57,7 +57,10 @@ AUTHOR_RE = re.compile(r'href="[^"]*?/view/authors/\d+/[^"]+?\.php"[^>]*>([^<]{2
 BYLINE_RE = re.compile(
     r'<span[^>]*class="(?:newsAuth|byline)"[^>]*>(.*?)</span>', re.I | re.S)
 GENERIC_TITLES = {"news", "gamasutra", "features",
-                  "the art & business of making games"}
+                  "the art & business of making games",
+                  # Wayback error/interstitial pages occasionally answer 200 with
+                  # this title; treat it as generic so we fall back to the slug.
+                  "wayback machine"}
 # article hero images: new layout /db_area/images/feature/<id>/x.jpg,
 # old layout /features/<yyyymmdd>/x.jpg
 IMG_RE = re.compile(
@@ -65,6 +68,18 @@ IMG_RE = re.compile(
     r'[^"]+?\.(?:jpe?g|png|gif))"', re.I)
 IMG_CHROME = re.compile(
     r'(arrowright|spacer|btn_|icon_|header\.gif|_off\.|_on\.|sitelogo|logo|masthead|nav_)',
+    re.I,
+)
+# Developer-blog (/blogs/) pages are schematically unlike the feature layout:
+# no og:image, and the real screenshots live in the post body on third-party
+# hosts (imgur, the studio's own site). So we scan *any* <img> in document order
+# and skip site chrome / ad / social furniture, taking the first content image.
+ANY_IMG_RE = re.compile(
+    r'<img\b[^>]*?\bsrc\s*=\s*["\']([^"\']+?\.(?:jpe?g|png|gif))(?:["\'?#]|$)', re.I)
+BLOG_IMG_CHROME = re.compile(
+    r'(button_|twimgs\.com|/blog/(?:gcgmini|indiemini)|gamasutra_logo|spacer|'
+    r'icon_|avatar|gravatar|/ads?/|doubleclick|adw|twitter\.gif|facebook|'
+    r'feedburner|/images/[a-z_]+\.gif)',
     re.I,
 )
 
@@ -85,7 +100,7 @@ def load_toml(path):
 
 
 # ---------------------------------------------------------------- CDX listing
-def article_record(aid, slug, original, ts=None, status=None, first_ts=None, captures=0):
+def article_record(aid, slug, original, ts=None, status=None, first_ts=None, captures=0, meta=None):
     return {
         "slug": slug,
         "original": original,
@@ -93,17 +108,37 @@ def article_record(aid, slug, original, ts=None, status=None, first_ts=None, cap
         "ts": ts,
         "status": status,
         "first_ts": first_ts or ts,
+        # Optional curated metadata (e.g. multi-part series fields) carried
+        # straight through to the emitted article record.
+        "meta": meta or {},
     }
+
+
+# Curated fields an include may carry: series metadata copied verbatim to the
+# frontend, plus an optional thumbnail pin (handled specially, with im_ wrapping).
+SERIES_META_KEYS = ("series", "series_id", "part_no", "part_total", "part_label")
+CURATED_META_KEYS = SERIES_META_KEYS + ("thumbnail",)
 
 
 def parse_feature_url(url):
     m = re.match(r"https?://[^/]+(/view/feature/(\d+)/([^/?#]+?)(?:\.php)?)(?:[?#].*)?$", url, re.I)
-    if not m:
-        return None
-    path, aid, slug = m.group(1), m.group(2), m.group(3)
-    if not path.endswith(".php"):
-        path += ".php"
-    return aid, slug, "http://www.gamasutra.com" + path
+    if m:
+        path, aid, slug = m.group(1), m.group(2), m.group(3)
+        if not path.endswith(".php"):
+            path += ".php"
+        return aid, slug, "http://www.gamasutra.com" + path
+    # /blogs/<AuthorCamel>/<YYYYMMDD>/<id>/<slug>.php — the numeric 4th segment
+    # is the feature id. Keep the full blog path as the canonical original; the
+    # site never migrated these to /view/feature/ form.
+    m = re.match(
+        r"https?://[^/]+(/blogs/[^/]+/\d{8}/(\d+)/([^/?#]+?)(?:\.php)?)(?:[?#].*)?$",
+        url, re.I)
+    if m:
+        path, aid, slug = m.group(1), m.group(2), m.group(3)
+        if not path.endswith(".php"):
+            path += ".php"
+        return aid, slug, "http://www.gamasutra.com" + path
+    return None
 
 
 def load_curated_postmortems(path=CURATED_POSTMORTEMS):
@@ -117,7 +152,8 @@ def load_curated_postmortems(path=CURATED_POSTMORTEMS):
             log(f"  [!] invalid curated postmortem URL: {item.get('url', '')}")
             continue
         aid, slug, original = parsed
-        out[aid] = article_record(aid, slug, original)
+        meta = {k: item[k] for k in CURATED_META_KEYS if k in item and item[k] != ""}
+        out[aid] = article_record(aid, slug, original, meta=meta)
     return out
 
 
@@ -223,13 +259,58 @@ def earliest_good_ts(url):
         return None
 
 
+def cdx_captures(url, limit=40):
+    """Distinct 200/text-html capture timestamps for an exact URL, oldest first."""
+    try:
+        q = ("http://web.archive.org/cdx/search/cdx?url="
+             + urllib.parse.quote(url, safe="")
+             + "&output=text&fl=timestamp&filter=statuscode:200"
+             + "&filter=mimetype:text/html&collapse=digest&limit=" + str(limit))
+        out = SESSION.get(q, timeout=60).text.strip()
+        return [ln.split()[0] for ln in out.splitlines() if ln.strip()]
+    except Exception:
+        return []
+
+
+def capture_renders(html, is_blog=False):
+    """A capture is usable only if it actually rendered the article, not merely
+    returned a CDX 200 (which also covers Wayback redirect stubs and soft-404s).
+    is_dead_page keys on the feature byline, which blogs lack, so for blogs we
+    lean on a real <title> plus enough body to be a genuine post."""
+    if not html or is_dead_page(html):
+        return False
+    if is_blog:
+        t = re.search(r"<title>(.*?)</title>", html, re.I | re.S)
+        title = clean(t.group(1)).lower() if t else ""
+        if not title or title in GENERIC_TITLES or "wayback machine" in title:
+            return False
+        return len(html) > 4000
+    return True
+
+
+def verified_good_ts(url, is_blog=False, max_fetches=6):
+    """Oldest capture that fetch-verifies as the real article. Walks the capture
+    list oldest→newest, fetching each until one renders; returns (ts, html) so
+    the caller can reuse the body. Falls back to the oldest 200 if none verify."""
+    tss = cdx_captures(url)
+    for ts in tss[:max_fetches]:
+        html = fetch_snapshot(ts, url)
+        if capture_renders(html, is_blog):
+            return ts, html
+    return (tss[0] if tss else None), None
+
+
 def parse_article(aid, rec):
+    is_blog = bool(blog_url_parts(rec["original"])[0])
     ts = rec.get("ts")
+    pre_html = None
     if not ts:
-        ts = earliest_good_ts(rec["original"])
+        # No preset timestamp (curated includes, incl. all /blogs/ entries): pick
+        # the oldest *verified* capture rather than trusting the first CDX 200.
+        ts, pre_html = verified_good_ts(rec["original"], is_blog)
         rec["ts"] = ts
         rec["first_ts"] = rec.get("first_ts") or ts
-    html = fetch_snapshot(ts, rec["original"]) if ts else None
+    html = pre_html if pre_html is not None else (fetch_snapshot(ts, rec["original"]) if ts else None)
     # If the chosen capture is missing or a dead post-shutdown landing page,
     # fall back to the earliest real 200 capture for this exact URL.
     if html is None or is_dead_page(html):
@@ -239,15 +320,17 @@ def parse_article(aid, rec):
             if alt_html and not is_dead_page(alt_html):
                 ts, html = alt, alt_html
                 rec["ts"] = alt
-            elif alt < rec["first_ts"]:
+            elif not rec.get("first_ts") or alt < rec["first_ts"]:
                 # even a stub earliest capture gives a better date proxy than
                 # a misleading recent one
                 rec["first_ts"] = alt
-            if alt < rec["first_ts"]:
+            if not rec.get("first_ts") or alt < rec["first_ts"]:
                 rec["first_ts"] = alt
     if html is None or is_dead_page(html):
         log(f"  [!] {aid} no usable article snapshot")
         return None
+
+    blog_author_camel, blog_date = blog_url_parts(rec["original"])  # is_blog set above
 
     # title via og:title or <title>
     title = None
@@ -258,6 +341,7 @@ def parse_article(aid, rec):
         m = re.search(r"<title>(.*?)</title>", html, re.I | re.S)
         if m:
             title = re.sub(r"^.*?-\s*Features\s*-\s*", "", m.group(1))
+    raw_title = title or ""
     title = strip_title(title) if title else ""
     if not title or title.lower() in GENERIC_TITLES:
         title = slug_title(rec["slug"])
@@ -274,16 +358,30 @@ def parse_article(aid, rec):
         if name and name.lower() not in seen and "gamasutra" not in name.lower():
             seen.add(name.lower()); authors.append(name)
 
+    # Developer-blog pages use a different byline layout the feature regexes miss.
+    # The blog owner is the author: prefer the "<Name>'s Blog" title segment,
+    # falling back to the CamelCase URL segment.
+    if is_blog and not authors:
+        owner = blog_owner_from_title(raw_title) or split_camel_name(blog_author_camel)
+        if owner and "gamasutra" not in owner.lower():
+            authors.append(owner)
+
     date = extract_date(html)
     date_estimated = False
+    if not date and is_blog and blog_date:
+        # The real publish date is encoded in the /blogs/.../<YYYYMMDD>/ segment.
+        date = ts_to_date(blog_date)
     if not date:
         date = ts_to_date(rec.get("first_ts", ts))
         date_estimated = bool(date)
 
-    thumb = extract_thumb(html, ts)
+    # A curated include may pin a thumbnail (bare image URL or a ready im_ link);
+    # bare URLs get wrapped to the capture's archived form. Otherwise auto-detect.
+    curated_thumb = (rec.get("meta") or {}).get("thumbnail", "")
+    thumb = wrap_im(curated_thumb, ts) if curated_thumb else extract_thumb(html, ts, is_blog=is_blog)
     pages = extract_pages(html)
     game = derive_game(title)
-    return {
+    article = {
         "id": aid,
         "title": title,
         "game": game,
@@ -299,6 +397,12 @@ def parse_article(aid, rec):
         "pages": pages,
         "wayback_captures": rec["captures"],
     }
+    # Carry curated series metadata (multi-part postmortems) onto the article.
+    # thumbnail is handled above (with im_ wrapping), so don't re-copy it raw.
+    for key, value in (rec.get("meta") or {}).items():
+        if key != "thumbnail" and value != "":
+            article[key] = value
+    return article
 
 
 def extract_meta_content(html, *, name=None, prop=None):
@@ -332,7 +436,30 @@ def strip_title(s):
     s = clean(s)
     # drop leading site/section breadcrumbs: "Gamasutra - Features - Foo" -> "Foo"
     s = re.sub(r"^\s*Gamasutra\s*-\s*(Features\s*-\s*)?", "", s, flags=re.I)
+    # developer-blog breadcrumb: "Gamasutra: Jane Doe's Blog - Real Title" -> "Real Title"
+    s = re.sub(r"^\s*Gamasutra:\s*.*?'s\s+Blog\s*-\s*", "", s, flags=re.I)
     return s.strip()
+
+
+def blog_url_parts(url):
+    """(author_camel, yyyymmdd) for a /blogs/ URL, else (None, None)."""
+    m = re.search(r"/blogs/([^/]+)/(\d{8})/\d+/", url or "", re.I)
+    return (m.group(1), m.group(2)) if m else (None, None)
+
+
+def split_camel_name(camel):
+    """'PhilTibitoski' -> 'Phil Tibitoski'. Best-effort; leaves odd casing alone."""
+    if not camel:
+        return ""
+    spaced = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", camel)
+    spaced = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", spaced)
+    return clean(spaced)
+
+
+def blog_owner_from_title(title):
+    """Author from a blog <title>: 'Gamasutra: Jane Doe's Blog - …' -> 'Jane Doe'."""
+    m = re.search(r"Gamasutra:\s*(.*?)'s\s+Blog\s*-", title or "", re.I)
+    return clean(m.group(1)) if m else ""
 
 
 def extract_date(html):
@@ -356,19 +483,73 @@ def extract_pages(html):
     return int(m.group(1)) if m else 1
 
 
-def extract_thumb(html, ts):
-    """First article hero image, rewritten to an archived `im_` Wayback URL.
-    Prefers a full-size image over an 's'-suffixed thumbnail when both exist."""
-    cands = [u for u in IMG_RE.findall(html) if not IMG_CHROME.search(u)]
-    if not cands:
+def wrap_im(url, ts):
+    """Rewrite a page-relative or absolute image URL to its archived `im_` form.
+    Passes through a URL that is already a Wayback link (avoids double-wrapping)."""
+    if not url:
         return ""
-    # prefer images whose filename does NOT end in 's' before extension
-    # (old layout uses e.g. 11post02s.jpg for small thumbs, 11post01.jpg full)
-    full = [u for u in cands if not re.search(r"s\.(?:jpe?g|png|gif)$", u, re.I)]
-    pick = (full or cands)[0]
-    if pick.startswith("/"):
-        pick = "http://www.gamasutra.com" + pick
-    return f"https://web.archive.org/web/{ts}im_/{pick}"
+    if "web.archive.org" in url:
+        return url
+    if url.startswith("//"):
+        url = "http:" + url
+    elif url.startswith("/"):
+        url = "http://www.gamasutra.com" + url
+    if not url.startswith(("http://", "https://")):
+        return ""
+    return f"https://web.archive.org/web/{ts}im_/{url}"
+
+
+def wayback_image_ok(url):
+    """True if an `im_` image URL actually resolves to archived image bytes —
+    blogs lean on third-party hosts (imgur, studio sites) that the Archive may
+    or may not have captured, so a body <img> is only usable once verified."""
+    try:
+        r = SESSION.get(url, timeout=25, stream=True)
+        ok = r.status_code == 200 and r.headers.get("content-type", "").lower().startswith("image")
+        r.close()
+        return ok
+    except Exception:
+        return False
+
+
+def first_blog_body_image(html, ts, verify=True):
+    """First content image in a blog post body, skipping site/ad/social chrome,
+    rewritten through `im_` and (by default) verified as archived."""
+    seen = set()
+    for src in ANY_IMG_RE.findall(html):
+        if src in seen:
+            continue
+        seen.add(src)
+        if BLOG_IMG_CHROME.search(src) or IMG_CHROME.search(src):
+            continue
+        cand = wrap_im(src, ts)
+        if cand and (not verify or wayback_image_ok(cand)):
+            return cand
+    return ""
+
+
+def extract_thumb(html, ts, is_blog=False):
+    """Article hero image, rewritten to an archived `im_` Wayback URL.
+
+    Order: og:image (modern feature layout) → for blogs, the first verified
+    content image in the post body (their screenshots live there, off-site) →
+    the in-body feature hero IMG_RE knows, preferring a full-size file over an
+    's'-suffixed thumbnail."""
+    pick = extract_meta_content(html, prop="og:image")
+    if pick and IMG_CHROME.search(pick):
+        pick = ""  # the default site/logo og:image is no better than nothing
+    if not pick and is_blog:
+        blog_img = first_blog_body_image(html, ts)
+        if blog_img:
+            return blog_img  # already wrapped + verified
+    if not pick:
+        cands = [u for u in IMG_RE.findall(html) if not IMG_CHROME.search(u)]
+        if cands:
+            # prefer images whose filename does NOT end in 's' before extension
+            # (old layout uses e.g. 11post02s.jpg for small thumbs, 11post01.jpg full)
+            full = [u for u in cands if not re.search(r"s\.(?:jpe?g|png|gif)$", u, re.I)]
+            pick = (full or cands)[0]
+    return wrap_im(pick, ts) if pick else ""
 
 
 def ts_to_date(ts):
@@ -723,6 +904,8 @@ def article_hn_keys(article):
     paths = set()
     for url in urls:
         m = re.search(r"(/view/feature/\d+/[a-z0-9_]+\.php)", url, re.I)
+        if not m:
+            m = re.search(r"(/blogs/[^/]+/\d{8}/\d+/[a-z0-9_]+\.php)", url, re.I)
         if m:
             paths.add(m.group(1).lower())
     return ids, paths
@@ -736,7 +919,10 @@ def hn_feature_ids(url):
     slugs are often truncated during site migrations, but ids and our alt_ids
     capture the old/new mapping.
     """
-    return set(re.findall(r"/view/feature/(\d+)(?:/|$)", url, re.I))
+    ids = set(re.findall(r"/view/feature/(\d+)(?:/|$)", url, re.I))
+    # /blogs/<author>/<YYYYMMDD>/<id>/... — the id is the segment after the date.
+    ids.update(re.findall(r"/blogs/[^/]+/\d{8}/(\d+)(?:/|$)", url, re.I))
+    return ids
 
 
 def hn_stats(article, hn_posts):
@@ -1068,6 +1254,103 @@ def postmortem_ids_from_cdx_cache():
     return ids
 
 
+BLOG_FEATURE_RE = re.compile(r"/blogs/[^/]+/\d{8}/(\d+)/([^/?#]+)", re.I)
+POSTMORTEM_HAY_RE = re.compile(r"post[\s_-]?mortem", re.I)
+ROMAN_PART = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6}
+
+
+def detect_blog_part(slug, title):
+    """Recognise one instalment of a multi-part blog series from its slug/title.
+
+    Returns (series_stem, part_no, part_total, part_label) or None. Handles
+    Gamasutra's compact 'PostMortem_part_12' / 'part_22' slug convention (= part
+    1 of 2, 2 of 2), plus 'Part N of M', 'Part N/M', 'Pt. N', and roman 'Part II'.
+    The stem (slug minus the part token) groups instalments of one series so the
+    surfacer can suggest them as parts rather than unrelated rows.
+    """
+    hay = f"{slug} {title}"
+    no = tot = None
+    m = re.search(r"\b(?:pt|part)\.?\s*(\d+)\s*(?:of|/)\s*(\d+)", hay, re.I)
+    if m:
+        no, tot = int(m.group(1)), int(m.group(2))
+    elif (m := re.search(r"part[\s._-]*([1-9])([2-9])\b", slug, re.I)) and int(m.group(1)) <= int(m.group(2)):
+        no, tot = int(m.group(1)), int(m.group(2))        # 'part_12' -> 1 of 2
+    elif m := re.search(r"\b(?:pt|part)\.?[\s._-]*(\d+)\b", hay, re.I):
+        no = int(m.group(1))
+    elif m := re.search(r"\b(?:pt|part)\.?[\s._-]*(i{1,3}|iv|vi?)\b", hay, re.I):
+        no = ROMAN_PART.get(m.group(1).lower())
+    if not no:
+        return None
+    # Trim from the part token to the end (note '_' is a \w char, so we can't lean
+    # on \b here — match the digits/roman run and swallow any trailing subtitle).
+    stem = re.sub(r"_?(?:post[\s_-]?mortem)?_?(?:pt|part)[\s._-]*[0-9ivx]+.*$", "", slug, flags=re.I)
+    stem = re.sub(r"[_\W]+$", "", stem).lower()
+    label = f"Part {no}" + (f"/{tot}" if tot else "")
+    return stem, no, tot, label
+
+
+def blog_postmortem_candidates(hn_posts, reddit_posts, known_ids):
+    """Surface /blogs/-shaped postmortem URLs from the HN+Reddit corpora.
+
+    Developer-blog postmortems never appear in the /view/feature/ CDX sweep, so
+    they're invisible to the catalogue until curated in by id. This flags the
+    confident-looking ones (slug/title says "postmortem") for human review; we
+    deliberately do not auto-add them.
+    """
+    cands = {}
+    sources = (("hn", hn_posts, "points", "num_comments"),
+               ("reddit", reddit_posts, "score", "num_comments"))
+    for kind, posts, score_key, comment_key in sources:
+        for post in posts:
+            url = post.get("url", "") or ""
+            m = BLOG_FEATURE_RE.search(url)
+            if not m:
+                continue
+            bid, slug = m.group(1), m.group(2)
+            title = clean(post.get("title", "") or "")
+            if not POSTMORTEM_HAY_RE.search(slug + " " + title):
+                continue
+            score = int(post.get(score_key) or 0)
+            comments = int(post.get(comment_key) or 0)
+            rec = cands.setdefault(bid, {
+                "feature_id": bid,
+                "slug": slug,
+                "title": title,
+                "url": url,
+                "in_dataset": bid in known_ids,
+                "hn_points": 0, "hn_comments": 0,
+                "reddit_score": 0, "reddit_comments": 0,
+            })
+            # keep the most descriptive title and the strongest per-source metrics
+            if len(title) > len(rec["title"]):
+                rec["title"], rec["url"], rec["slug"] = title, url, slug
+            if kind == "hn":
+                rec["hn_points"] = max(rec["hn_points"], score)
+                rec["hn_comments"] = max(rec["hn_comments"], comments)
+            else:
+                rec["reddit_score"] = max(rec["reddit_score"], score)
+                rec["reddit_comments"] = max(rec["reddit_comments"], comments)
+    rows = list(cands.values())
+    # Tag multi-part instalments so the surfacer suggests them as series parts.
+    for r in rows:
+        part = detect_blog_part(r["slug"], r["title"])
+        if part:
+            r["series_stem"], r["part_no"], r["part_total"], r["part_label"] = part
+
+    # Cluster instalments of one series together (parts in order), ranking each
+    # cluster by its strongest signal so a high-profile series stays near the top.
+    def group_key(r):
+        return r.get("series_stem") or r["feature_id"]
+
+    best = {}
+    for r in rows:
+        signal = max(r["hn_points"], r["reddit_score"])
+        best[group_key(r)] = max(best.get(group_key(r), 0), signal)
+    rows.sort(key=lambda r: (-best[group_key(r)], group_key(r), r.get("part_no") or 0,
+                             -(r["hn_comments"] + r["reddit_comments"])))
+    return rows
+
+
 def audit_hn_posts(path=HN_POSTS):
     """Write a local audit of cached HN Gamasutra posts vs postmortem URL ids."""
     hn_posts = load_hn_posts(path)
@@ -1116,6 +1399,18 @@ def audit_hn_posts(path=HN_POSTS):
             rec["suggested_include"] = False
             candidates.append(rec)
 
+    # Developer-blog (/blogs/) postmortems from both corpora: invisible to the
+    # /view/feature/ sweep, surfaced here for review (not auto-added).
+    known_ids = set(curated_ids) | postmortem_ids
+    pm_path = DATA / "postmortems.toml"
+    if pm_path.exists():
+        for art in load_toml(pm_path).get("postmortem", []):
+            known_ids.add(str(art.get("id", "")))
+            known_ids.update(str(x) for x in art.get("alt_ids", []) or [])
+    reddit_posts = load_toml(REDDIT_POSTS).get("reddit_post", []) if REDDIT_POSTS.exists() else []
+    blog_candidates = blog_postmortem_candidates(hn_posts, reddit_posts, known_ids)
+    blog_new = [c for c in blog_candidates if not c["in_dataset"]]
+
     audit = {
         "summary": {
             "hn_posts": len(hn_posts),
@@ -1124,8 +1419,11 @@ def audit_hn_posts(path=HN_POSTS):
             "unmatched_feature_posts": len(unmatched_feature),
             "postmortemish_no_feature_posts": len(postmortemish_no_feature),
             "review_candidates": len(candidates),
+            "blog_postmortem_candidates": len(blog_candidates),
+            "blog_postmortem_candidates_new": len(blog_new),
         },
         "review_candidate": candidates,
+        "blog_postmortem_candidate": blog_candidates,
         "matched_feature_post": by_points(matched),
         "unmatched_feature_post": by_points(unmatched_feature),
         "postmortemish_no_feature_post": by_points(postmortemish_no_feature),
@@ -1413,6 +1711,8 @@ def canonical_slug(article):
     """
     url = article.get("original_url", "")
     m = re.search(r"/view/feature/\d+/([^/?#]+)\.php", url, re.I)
+    if not m:
+        m = re.search(r"/blogs/[^/]+/\d{8}/\d+/([^/?#]+)\.php", url, re.I)
     if not m:
         return ""
     slug = m.group(1).lower()

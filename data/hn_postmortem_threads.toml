@@ -1507,6 +1507,15 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "87650"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "6144"
 hn_points = 0
 hn_comments = 0
@@ -2107,6 +2116,33 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "235408"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "235823"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "235951"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "176187"
 hn_points = 0
 hn_comments = 0
@@ -2114,3 +2150,19 @@ hn_points_sum = 0
 hn_comments_sum = 0
 hn_submissions = 0
 hn_threads = []
+
+[[hn_postmortem]]
+id = "326190"
+hn_points = 2
+hn_comments = 0
+hn_points_sum = 2
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "17997112"
+title = "How much do indie PC devs make, anyways? (Part 8)"
+url = "https://news.ycombinator.com/item?id=17997112"
+points = 2
+comments = 0
+submitted_url = "http://gamasutra.com/blogs/DavidGalindo/20180911/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"

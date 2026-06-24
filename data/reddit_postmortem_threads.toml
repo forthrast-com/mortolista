@@ -2403,6 +2403,15 @@ comments = 0
 created_utc = 1279849691
 
 [[reddit_postmortem]]
+id = "87650"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "6144"
 reddit_score = 15
 reddit_comments = 2
@@ -3458,6 +3467,33 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
+id = "235408"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "235823"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "235951"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "176187"
 reddit_score = 7
 reddit_comments = 0
@@ -3508,3 +3544,33 @@ permalink = "https://www.reddit.com/comments/yktgn/"
 score = 0
 comments = 0
 created_utc = 1345554145
+
+[[reddit_postmortem]]
+id = "326190"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "9fho5h"
+subreddit = "GhaziGamer"
+author = "squirrelrampage"
+title = "When success comes at a price: Launching \"Cook, Serve, Delicious! 2!!\""
+url = "http://gamasutra.com/blogs/DavidGalindo/20180912/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"
+permalink = "https://www.reddit.com/comments/9fho5h/"
+score = 1
+comments = 0
+created_utc = 1536842824
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "9flc19"
+subreddit = "Games"
+author = "NTR_JAV"
+title = "How much do indie PC devs make, anyways? (Part 8)"
+url = "http://gamasutra.com/blogs/DavidGalindo/20180911/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"
+permalink = "https://www.reddit.com/comments/9flc19/"
+score = 0
+comments = 0
+created_utc = 1536868978

@@ -33,7 +33,7 @@
 </header>
 
 <div class="wrap">
-  <p class="livenote">Gamasutra lives on as <a href="https://www.gamedeveloper.com/" target="_blank" rel="noopener">Game Developer</a> — still publishing today. If these postmortems are your thing, go read what they&rsquo;re putting out now.</p>
+  <p class="intro"><span class="ln">New here? This website collects hundreds of postmortems from twenty years of video games, originally published in <a class="ref" href="https://gdcvault.com/gdmag" target="_blank" rel="noopener" title="Game Developer magazine archive at the GDC Vault"><em>Game Developer</em> magazine</a> and later on <a class="ref" href="https://web.archive.org/web/20041116092750/http://www.gamasutra.com/" target="_blank" rel="noopener" title="gamasutra.com on 16 November 2004 — the day Half-Life 2 shipped">gamasutra.com</a>.</span><span class="ln">Each was written by the team behind the game itself, from struggling indie developers to genre-defining titans. Read together, they trace the medium through the decisions, compromises, accidents and convictions which made it possible.</span><span class="ln">Gamasutra&rsquo;s <a href="https://web.archive.org/web/20210825031727/https://gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php" target="_blank" rel="noopener">10 seminal game postmortems every developer should read</a> is a fine on-ramp. For the view from above, Microsoft Research analysed 155 of these very postmortems in <a href="https://www.microsoft.com/en-us/research/publication/what-went-right-and-what-went-wrong-an-analysis-of-155-postmortems-from-game-development/" target="_blank" rel="noopener">&ldquo;What Went Right and What Went Wrong&rdquo;</a>.</span></p>
   <div id="toolbar">
     <input id="search" type="search" placeholder="Search title, game, or author…" autocomplete="off">
     <select id="category"><option value="">All categories</option></select>
@@ -66,30 +66,20 @@
     <colgroup>
       <col class="rank-col">
       <col class="thumb-col">
-      <col class="postmortem-col">
-      <col class="authors-col">
-      <col class="type-col">
+      <col class="main-col">
       <col class="date-col">
-      <col class="metric-col" span="10">
+      <col class="metric-col" span="4">
     </colgroup>
     <thead>
       <tr>
-        <th class="rank-col" scope="col" title="Balanced rank — each entry's standing in the balanced sort, kept even when you re-sort or filter">#</th>
+        <th class="rank-col sortable num" scope="col" tabindex="0" data-key="agg_score" title="Balanced rank — click to sort by the balanced score (kept as a stable number when you sort or filter another way)">#</th>
         <th class="thumb-col" aria-hidden="true"></th>
         <th scope="col" tabindex="0" data-key="title" class="sortable">Postmortem</th>
-        <th scope="col" tabindex="0" data-key="authors" class="sortable">Author(s)</th>
-        <th scope="col" tabindex="0" data-key="category" class="sortable">Type</th>
         <th scope="col" tabindex="0" data-key="date" class="sortable num">Date</th>
-        <th scope="col" tabindex="0" data-key="hn_points" class="sortable num" title="Best single Hacker News thread points">HN best ▲</th>
-        <th scope="col" tabindex="0" data-key="hn_comments" class="sortable num" title="Best single Hacker News thread comments">HN best ｜</th>
-        <th scope="col" tabindex="0" data-key="hn_points_sum" class="sortable num" title="Total Hacker News points across matching submissions">HN ▲</th>
-        <th scope="col" tabindex="0" data-key="hn_comments_sum" class="sortable num" title="Total Hacker News comments across matching submissions">HN ｜</th>
-        <th scope="col" tabindex="0" data-key="hn_submissions" class="sortable num" title="Matching Hacker News submissions">HN #</th>
-        <th scope="col" tabindex="0" data-key="reddit_score_sum" class="sortable num" title="Total Reddit score across matching submissions">Reddit ▲</th>
-        <th scope="col" tabindex="0" data-key="reddit_comments_sum" class="sortable num" title="Total Reddit comments across matching submissions">Reddit ｜</th>
-        <th scope="col" tabindex="0" data-key="reddit_submissions" class="sortable num" title="Matching Reddit submissions">Reddit #</th>
-        <th scope="col" tabindex="0" data-key="copies_sold" class="sortable num" title="Wikipedia-derived copies sold signal">Sales</th>
-        <th scope="col" tabindex="0" data-key="wayback_captures" class="sortable num" title="Wayback capture count (backlink proxy)">Caps</th>
+        <th scope="col" tabindex="0" data-key="hn_points_sum" class="sortable num" title="Hacker News — total points, with comments and submission count below (best single thread is linked in the detail row)">HN</th>
+        <th scope="col" tabindex="0" data-key="reddit_score_sum" class="sortable num" title="Reddit — total score, with comments and submission count below">Reddit</th>
+        <th scope="col" tabindex="0" data-key="copies_sold" class="sortable num" title="Copies sold (Wikipedia-derived signal)">Sales</th>
+        <th scope="col" tabindex="0" data-key="wayback_captures" class="sortable num" title="Wayback capture count (a rough backlink proxy)">Caps</th>
       </tr>
     </thead>
     <tbody id="rows"></tbody>
@@ -97,6 +87,7 @@
    </div>
   </div>
   <p id="status" class="status">Loading archive…</p>
+  <p class="livenote">Gamasutra lives on as <a href="https://www.gamedeveloper.com/" target="_blank" rel="noopener">Game Developer</a>. If you like these, check out what&rsquo;s happening today.</p>
 </div>
 
 <footer><div class="wrap">

@@ -106,11 +106,25 @@ a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-r
 }
 .livenote a{color:var(--link); font-weight:bold}
 
+/* quieter "where to start" note beneath the masthead callout */
+/* tightened measure + one-sentence-per-line (via <br>) so the intro reads as
+   short stanzas rather than a grey brick */
+.intro{margin:12px 0 0; color:var(--muted); font-size:12.5px; line-height:1.55}
+/* each sentence-stanza is a block; the gap between them is paragraph spacing,
+   not line spacing within a stanza */
+.intro .ln{display:block}
+.intro .ln + .ln{margin-top:.7em}
+.intro a{color:var(--link); font-weight:bold}
+/* subtle inline reference link (Game Developer mag, the gamasutra.com easter
+   egg): reads as body text, just underlined */
+.intro a.ref{color:inherit; font-weight:normal; text-decoration:underline; text-underline-offset:2px}
+.intro a.ref:hover{color:var(--link)}
+
 /* desktop: rather than squeeze the columns, keep a comfortable min width and
    let the table scroll sideways, with edge fades hinting there's more. */
 .table-scroll{position:relative}
 .table-wrap{overflow-x:auto}
-#grid{min-width:1688px; table-layout:fixed}
+#grid{min-width:1280px; table-layout:fixed}
 .table-scroll::before,.table-scroll::after{
   content:""; position:absolute; top:0; bottom:0; width:48px; z-index:3;
   pointer-events:none; opacity:0; transition:opacity .15s ease;
@@ -139,25 +153,26 @@ th.sorted-desc::after{content:" ▼"; font-size:9px}
 tbody td{padding:7px 9px 2px; border-bottom:none; vertical-align:top}
 /* leftmost rank column: each entry's stable balanced rank (1..N), unchanged
    when the table is re-sorted or filtered */
-col.rank-col{width:44px}
-col.thumb-col{width:84px}
-col.postmortem-col{width:500px}
-col.authors-col{width:180px}
-col.type-col{width:92px}
-col.date-col{width:86px}
-col.metric-col{width:70px}
+col.rank-col{width:46px}
+col.thumb-col{width:112px}
+col.date-col{width:106px}
+col.metric-col{width:100px}
+/* the main column carries no fixed width: with table-layout:fixed it absorbs
+   whatever the other columns leave, so the headline/byline/summary get room
+   instead of being squeezed beside an authors column. */
 .rank-col{text-align:right}
 .rank-cell{
   text-align:right; padding-right:10px; padding-top:9px;
   font-variant-numeric:tabular-nums; font-size:12px; font-weight:bold;
   color:var(--muted); border-bottom:1px solid var(--rule);
 }
-/* full-height thumbnail: the cell is rowspan'd over both rows of the entry,
-   and the image fills it via an absolutely-positioned layer */
-.thumb-cell{padding:0; position:relative; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule)}
-.thumb-cell a{position:absolute; inset:0; display:block}
-img.thumb{width:100%; height:100%; min-height:64px; object-fit:cover; display:block; background:var(--thumb-bg)}
-.thumb-cell.no-thumb{background:repeating-linear-gradient(45deg,var(--hatch-a),var(--hatch-a) 4px,var(--hatch-b) 4px,var(--hatch-b) 8px)}
+/* a fixed thumbnail box pinned to the top of the (rowspan'd) cell, rather than
+   an image stretched to the full height of the entry — tall entries used to
+   render the thumbnail as an ugly vertical strip. */
+.thumb-cell{padding:9px 6px 0; vertical-align:top; text-align:center; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule)}
+.thumb-cell a{display:inline-block; width:96px; height:96px; overflow:hidden; border:1px solid var(--rule); background:var(--thumb-bg)}
+img.thumb{width:96px; height:96px; object-fit:cover; display:block; background:var(--thumb-bg)}
+.thumb-cell.no-thumb{background:none}
 
 /* an entry spans two rows: a headline row + a wide detail row beneath it */
 .main-cell{padding-right:16px}
@@ -168,14 +183,41 @@ tbody tr.r-main:hover,
 tbody tr.r-main:hover + tr.r-detail,
 tbody tr.r-detail:hover,
 tbody tr.r-main:has(+ tr.r-detail:hover){background:var(--row-hover)}
-td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong); white-space:nowrap}
-.author-cell{overflow-wrap:anywhere}
+td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong); white-space:nowrap; overflow:hidden}
 .detail-cell{width:auto}
 
+/* combined metric cell: bold primary number + a muted second line carrying
+   comments and the submission count, replacing the old five-HN/three-Reddit
+   column spread that read as noise. */
+td.metric{text-align:right; white-space:nowrap; line-height:1.2}
+.m-main{display:block; font-variant-numeric:tabular-nums; color:var(--strong); font-weight:bold; font-size:13px}
+.m-sub{display:block; margin-top:1px; font-size:10px; color:var(--muted); font-variant-numeric:tabular-nums}
+td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
+
+/* type + series badges above the headline (desktop); the mobile card carries
+   these in its meta line instead. */
+.top-badges{display:flex; flex-wrap:wrap; gap:5px; align-items:center; margin-bottom:5px}
+.part-badge{
+  display:inline-block; font-size:10px; text-transform:uppercase; letter-spacing:.4px;
+  color:var(--badge-ink); background:var(--gama-leaf); padding:1px 6px; border-radius:2px; white-space:nowrap;
+}
+/* consolidated multi-part series: outlined marker + the parts list in detail */
+.series-badge{
+  display:inline-block; font-size:10px; text-transform:uppercase; letter-spacing:.4px;
+  color:var(--accent); background:transparent; border:1px solid var(--accent);
+  padding:0 5px; border-radius:2px; white-space:nowrap;
+}
+.series-parts{display:block; margin-top:2px}
+.series-parts ol{margin:2px 0 0; padding-left:0; list-style:none}
+.series-parts li{display:block; line-height:1.5}
+.series-parts .part-no{color:var(--label); font-size:10px; text-transform:uppercase; letter-spacing:.3px; margin-right:4px}
+.series-parts a{color:var(--muted); text-decoration:none}
+.series-parts a:hover{color:var(--link); text-decoration:underline}
+
 .title-cell{font-weight:bold; font-family:Georgia,serif; font-size:15px; line-height:1.25}
-.byline{display:none}
-.summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:90ch}
-.game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
+.byline{display:block; margin-top:3px; font-size:12px; color:var(--muted); line-height:1.45; overflow-wrap:anywhere}
+.byline .author-name{color:var(--muted)}
+.summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:740px}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
 .mirror-links,.discussions{display:block}
 .discussions{margin-top:1px}
@@ -190,16 +232,6 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong);
 .notable{color:var(--accent); font-weight:bold; cursor:help}
 .author-link{color:var(--wiki-link); text-decoration:none}
 .author-link:hover{text-decoration:underline}
-.author-name.has-bio,.author-link.has-bio{cursor:help; text-decoration-line:underline; text-decoration-style:dotted; text-decoration-thickness:1px; text-underline-offset:2px}
-.author-name.has-bio{color:inherit; text-decoration-color:var(--gama-leaf)}
-.author-link.has-bio{color:var(--wiki-link); text-decoration-color:var(--wiki-link)}
-.author-name.has-bio:hover,.author-link.has-bio:hover{text-decoration-style:solid}
-.bio-tooltip{
-  position:fixed; z-index:1000; max-width:min(360px, calc(100vw - 24px)); padding:8px 10px;
-  border:1px solid var(--rule); border-radius:3px; background:var(--card); color:var(--ink);
-  box-shadow:0 3px 14px rgba(0,0,0,.22); font:12px/1.45 "Lucida Grande","Segoe UI",Verdana,sans-serif;
-  pointer-events:none;
-}
 .est{color:var(--muted); cursor:help}
 .zero{color:var(--zero)}
 /* vintage dateline above the headline — desktop uses the table columns,
@@ -284,9 +316,12 @@ footer .wrap{line-height:1.6}
     padding:0; margin:2px 0 8px 12px; border:1px solid var(--rule);
   }
   .thumb-cell.no-thumb{display:none}
-  .thumb-cell a{position:static; width:64px; height:64px}
+  .thumb-cell a{position:static; width:64px; height:64px; border:none}
   img.thumb{width:64px; height:64px; min-height:0}
   .main-cell{padding:0}
+  /* the desktop badge stack is redundant on the card — the meta line carries
+     type + part there */
+  .top-badges{display:none}
 
   /* one clean meta line: date · type · (sort signal only when it adds info) */
   .meta-top{
@@ -298,7 +333,6 @@ footer .wrap{line-height:1.6}
   .title-cell{display:block; font-size:20px; line-height:1.18}
   .game{margin-top:3px}
   .byline{display:block; margin-top:5px; font-size:13px; font-style:italic; color:var(--muted)}
-  .author-name.has-bio,.author-link.has-bio{cursor:inherit}
   .summary{display:block; max-width:none; margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--ink)}
   .mirrors{margin-top:10px; padding-top:8px; border-top:1px solid var(--rule); font-size:12px; line-height:1.5}
 }
