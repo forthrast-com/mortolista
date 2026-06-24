@@ -12,6 +12,7 @@ const tableWrap = document.querySelector(".table-wrap");
 
 let DATA = [];
 let NOTABLE_AUTHORS = new Map(); // author name -> Wikipedia URL
+let AUTHOR_BIOS = new Map(); // article id -> end-of-article author bio
 let sortKey = "agg_score";
 let sortDir = -1; // -1 desc, 1 asc
 
@@ -95,6 +96,19 @@ async function loadNotableAuthors() {
       rows.filter(r => r.name && r.wiki_url).map(r => [r.name, r.wiki_url]));
   } catch (e) {
     // best-effort; the catalogue works fine without author links.
+  }
+}
+
+async function loadAuthorBios() {
+  // Optional article-scoped bios pulled from the archived print pages. Kept as
+  // a sidecar so missing/partial extraction never blocks the archive itself.
+  try {
+    const res = await fetch("data/author_bios.toml", { cache: "no-cache" });
+    if (!res.ok) return;
+    const rows = parse(await res.text()).author_bio || [];
+    AUTHOR_BIOS = new Map(rows.filter(r => r.id && r.bio).map(r => [String(r.id), r.bio]));
+  } catch (e) {
+    // best-effort; author names just render as normal links/text.
   }
 }
 
@@ -197,6 +211,7 @@ async function load() {
     await loadPhaseTwoMetrics();
     await loadMirrorSidecars();
     await loadNotableAuthors();
+    await loadAuthorBios();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
@@ -421,15 +436,23 @@ function displayGame(d) {
   return canonical(game) === canonical(title) ? "" : game;
 }
 
-function authorHTML(name) {
+function articleBio(d) {
+  return AUTHOR_BIOS.get(String(d.id)) || "";
+}
+
+function authorHTML(name, bio = "") {
   const url = NOTABLE_AUTHORS.get(name);
+  const bioClass = bio ? " has-bio" : "";
+  const bioAttr = bio ? ` data-bio="${esc(bio)}" aria-label="${esc(`${name}: ${bio}`)}"` : "";
+  const titleAttr = !bio && url ? ` title="Wikipedia: ${esc(name)}"` : "";
   return url
-    ? `<a class="author-link" href="${esc(url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}">${esc(name)}</a>`
-    : esc(name);
+    ? `<a class="author-link${bioClass}" href="${esc(url)}" target="_blank" rel="noopener"${titleAttr}${bioAttr}>${esc(name)}</a>`
+    : `<span class="author-name${bioClass}"${bioAttr}>${esc(name)}</span>`;
 }
 
 function rowHTML(d) {
-  const authors = (d.authors || []).map(authorHTML).join(", ") || "<span class=zero>—</span>";
+  const bio = articleBio(d);
+  const authors = (d.authors || []).map(name => authorHTML(name, bio)).join(", ") || "<span class=zero>—</span>";
   const date = d.date
     ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
     : '<span class=zero>—</span>';
@@ -478,7 +501,7 @@ function rowHTML(d) {
     + sortSignalHTML(d)
     + `</span>`;
   const byline = d.authors && d.authors.length
-    ? `<span class="byline">by ${d.authors.map(authorHTML).join(", ")}</span>`
+    ? `<span class="byline">by ${d.authors.map(name => authorHTML(name, bio)).join(", ")}</span>`
     : "";
   const shownTitle = cleanTitle(d.title) || d.title;
   const title = primary

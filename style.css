@@ -183,6 +183,15 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong)}
 .notable{color:var(--accent); font-weight:bold; cursor:help}
 .author-link{color:inherit; text-decoration:none; border-bottom:1px dotted var(--rule)}
 .author-link:hover{color:var(--link); border-bottom-color:currentColor}
+.author-name.has-bio,.author-link.has-bio{position:relative; cursor:help; border-bottom:1px dotted var(--gama-leaf)}
+.author-name.has-bio:hover,.author-link.has-bio:hover{color:var(--link); border-bottom-color:currentColor}
+.author-name.has-bio:hover::after,.author-link.has-bio:hover::after,
+.author-name.has-bio:focus-visible::after,.author-link.has-bio:focus-visible::after{
+  content:attr(data-bio); position:absolute; left:0; bottom:calc(100% + 6px); z-index:5;
+  width:min(360px, 80vw); padding:8px 10px; border:1px solid var(--rule); border-radius:3px;
+  background:var(--card); color:var(--ink); box-shadow:0 3px 12px rgba(0,0,0,.18);
+  font:12px/1.45 "Lucida Grande","Segoe UI",Verdana,sans-serif; text-align:left; white-space:normal;
+}
 .est{color:var(--muted); cursor:help}
 .zero{color:var(--zero)}
 /* vintage dateline above the headline — desktop uses the table columns,

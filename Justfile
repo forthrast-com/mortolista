@@ -37,6 +37,12 @@ reddit-metrics:
 notable-authors:
     python scraper/scrape.py --notable-authors-only
 
+author-bios:
+    python scraper/scrape.py --author-bios-only
+
+author-bios-sample:
+    python scraper/scrape.py --author-bios-only --limit 10
+
 wiki-sales:
     python scraper/scrape.py --wiki-sales-only
 

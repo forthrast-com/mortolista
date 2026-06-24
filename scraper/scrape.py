@@ -33,6 +33,7 @@ WIKI_SALES = DATA / "wikipedia_game_sales.toml"
 NOTABLE_AUTHORS = DATA / "notable_authors.toml"
 ARCHIVE_MIRRORS = DATA / "archive_is_mirrors.toml"
 GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
+AUTHOR_BIOS = DATA / "author_bios.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
@@ -401,6 +402,89 @@ def clean(s):
     s = htmllib.unescape(s)            # &amp; -> &, &#039; -> '
     s = re.sub(r"\s+", " ", s).strip()
     return "".join(c for c in s if c.isprintable())
+
+
+BIO_VERBS_RE = re.compile(
+    r"\b(is|are|was|were|has|have|worked|works|founded|co-founded|serves|served|"
+    r"joined|created|designed|developed|produced|wrote|writes|currently|previously|"
+    r"can be reached|email|twitter)\b",
+    re.I,
+)
+ARTICLE_WORDS_RE = re.compile(r"\b(postmortem|development|publisher|platform|engine|gameplay|project|team)\b", re.I)
+RETURN_TO_FULL_RE = re.compile(r"(?is)<p[^>]*>\s*<a[^>]+>\s*Return to the full version.*")
+PARA_RE = re.compile(r"(?is)<p\b[^>]*>(.*?)</p>")
+TAG_RE = re.compile(r"(?is)<(script|style)\b.*?</\1>|<[^>]+>")
+
+
+def clean_html_text(s):
+    s = re.sub(r"(?i)<br\s*/?>", " ", s or "")
+    s = TAG_RE.sub(" ", s)
+    return clean(s)
+
+
+def article_paragraphs(html):
+    html = RETURN_TO_FULL_RE.split(html)[0]
+    return [clean_html_text(p) for p in PARA_RE.findall(html)]
+
+
+def author_tokens(name):
+    parts = [p for p in re.split(r"\s+", name.strip()) if p]
+    return [name.lower(), parts[-1].lower()] if parts else []
+
+
+def looks_like_author_bio(text, authors):
+    if not 45 <= len(text) <= 900:
+        return False
+    low = text.lower()
+    if not any(tok and tok in low for name in authors for tok in author_tokens(name)):
+        return False
+    if not BIO_VERBS_RE.search(text):
+        return False
+    # Avoid regular article paragraphs that only mention a developer in passing.
+    if len(text) > 360 and len(ARTICLE_WORDS_RE.findall(text)) > 4:
+        return False
+    return True
+
+
+def trim_author_bio(text):
+    text = clean(text)
+    if len(text) <= 520:
+        return text
+    cut = text[:520].rsplit(". ", 1)[0]
+    return (cut or text[:517].rstrip()) + "…"
+
+
+def tighten_author_bio(text, authors):
+    """Drop article-closing sentences that precede the actual bio."""
+    sentences = re.split(r"(?<=[.!?])\s+", clean(text))
+    tokens = [tok for name in authors for tok in author_tokens(name)]
+    for i, sentence in enumerate(sentences):
+        low = sentence.lower()
+        if any(tok and tok in low for tok in tokens) and BIO_VERBS_RE.search(sentence):
+            return " ".join(sentences[i:])
+    return text
+
+
+def extract_author_bio(article, html):
+    authors = article.get("authors") or []
+    if not authors:
+        return ""
+    candidates = []
+    for idx, para in enumerate(article_paragraphs(html)):
+        if looks_like_author_bio(para, authors):
+            candidates.append((idx, para))
+    if not candidates:
+        # Old print pages sometimes leave the final bio loose in the body rather
+        # than wrapping it in <p>. Mine only the end matter, not the full article.
+        tail = clean_html_text(RETURN_TO_FULL_RE.split(html)[0][-3500:])
+        sentences = re.split(r"(?<=[.!?])\s+", tail)
+        for i in range(len(sentences)):
+            chunk = " ".join(sentences[i:i + 4]).strip()
+            if looks_like_author_bio(chunk, authors):
+                candidates.append((10_000 + i, chunk))
+    if not candidates:
+        return ""
+    return trim_author_bio(tighten_author_bio(candidates[-1][1], authors))
 
 
 # --------------------------------------------------------------- link checks
@@ -1455,6 +1539,30 @@ def refresh_gamedev_live(data_path, out_path=GAMEDEV_LIVE):
     return len(rows)
 
 
+def refresh_author_bios(data_path, out_path=AUTHOR_BIOS, limit=0):
+    articles = load_toml(data_path).get("postmortem", [])
+    if limit:
+        articles = articles[:limit]
+    rows = []
+    for i, article in enumerate(articles, 1):
+        url = article.get("wayback_print") or article.get("wayback")
+        bio = ""
+        if url:
+            try:
+                r = SESSION.get(url, timeout=35)
+                r.raise_for_status()
+                bio = extract_author_bio(article, r.text)
+            except requests.RequestException as exc:
+                log(f"  [!] author bio fetch failed for {article.get('id')}: {exc}")
+        if bio:
+            rows.append({"id": str(article.get("id", "")), "bio": bio})
+        if i % 25 == 0 or i == len(articles):
+            log(f"[*] extracted author bios {i}/{len(articles)} ({len(rows)} found)")
+        time.sleep(0.15)
+    Path(out_path).write_bytes(tomli_w.dumps({"author_bio": rows}).encode())
+    return len(rows)
+
+
 # -------------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
@@ -1470,6 +1578,7 @@ def main():
     ap.add_argument("--reddit-recompute", action="store_true", help="re-match Reddit metrics from the cached posts without refetching, then exit")
     ap.add_argument("--notable-authors-only", action="store_true", help="resolve notable authors' Wikipedia pages sidecar and exit")
     ap.add_argument("--wiki-sales-only", action="store_true", help="slow/best-effort: refresh Wikipedia sales sidecar and exit")
+    ap.add_argument("--author-bios-only", action="store_true", help="slow/best-effort: extract article-scoped author bio sidecar and exit")
     ap.add_argument("--limit", type=int, default=0, help="limit sidecar refresh rows for smoke tests")
     ap.add_argument("--offset", type=int, default=0, help="start sidecar refresh at this row offset")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
@@ -1514,6 +1623,10 @@ def main():
     if args.wiki_sales_only:
         n = refresh_wiki_sales(args.out, WIKI_SALES, args.limit, args.offset)
         log(f"[*] refreshed Wikipedia sales signals for {n} entries -> {WIKI_SALES}")
+        return
+    if args.author_bios_only:
+        n = refresh_author_bios(args.out, AUTHOR_BIOS, args.limit)
+        log(f"[*] refreshed author bios for {n} entries -> {AUTHOR_BIOS}")
         return
     if args.check_links and args.no_enrich:
         n = refresh_link_checks(args.out)
