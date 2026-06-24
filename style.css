@@ -98,6 +98,27 @@ a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-r
 .chk input{accent-color:var(--gama-green)}
 .count{margin-left:auto; color:var(--muted); font-size:12px}
 
+/* editorial note: the publication is still going */
+.livenote{
+  margin:16px 0 0; padding:9px 13px; border-left:3px solid var(--gama-leaf);
+  background:var(--row-alt); color:var(--strong);
+  font-size:13px; line-height:1.5; border-radius:0 3px 3px 0;
+}
+.livenote a{color:var(--link); font-weight:bold}
+
+/* desktop: rather than squeeze the columns, keep a comfortable min width and
+   let the table scroll sideways, with edge fades hinting there's more. */
+.table-scroll{position:relative}
+.table-wrap{overflow-x:auto}
+#grid{min-width:1080px}
+.table-scroll::before,.table-scroll::after{
+  content:""; position:absolute; top:0; bottom:0; width:48px; z-index:3;
+  pointer-events:none; opacity:0; transition:opacity .15s ease;
+}
+.table-scroll::before{left:0; background:linear-gradient(to right, var(--paper), transparent)}
+.table-scroll::after{right:0; background:linear-gradient(to left, var(--paper), transparent)}
+.table-scroll.can-left::before{opacity:1}
+.table-scroll.can-right::after{opacity:1}
 table{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--rule)}
 thead th{
   position:sticky; top:0; z-index:2;
@@ -161,6 +182,8 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong)}
 .cat.audio{background:var(--cat-audio)}
 .cat.middleware{background:var(--cat-middleware)}
 .notable{color:var(--accent); font-weight:bold; cursor:help}
+.author-link{color:inherit; text-decoration:none; border-bottom:1px dotted var(--rule)}
+.author-link:hover{color:var(--link); border-bottom-color:currentColor}
 .est{color:var(--muted); cursor:help}
 .zero{color:var(--zero)}
 /* vintage dateline above the headline — desktop uses the table columns,
@@ -216,6 +239,10 @@ footer .wrap{line-height:1.6}
   .chk input{width:18px; height:18px}
   .count{margin-left:0; margin-inline-start:auto; font-size:13px; white-space:nowrap}
 
+  /* cards, not a wide grid: drop the horizontal scroll + fades */
+  .table-wrap{overflow-x:visible}
+  #grid{min-width:0}
+  .table-scroll::before,.table-scroll::after{display:none}
   thead{display:none}
   table,tbody,tbody tr{display:block}
   table{border:none; background:transparent}
@@ -267,7 +294,10 @@ footer .wrap{line-height:1.6}
 /* ---- Print: a clean, ink-friendly reading list (force light) ---- */
 @media print{
   body{background:#fff; color:#000; font-size:11px}
-  #toolbar,.rank-col,.rank-cell,.thumb-col,.thumb-cell,#status,.theme-toggle{display:none}
+  #toolbar,.rank-col,.rank-cell,.thumb-col,.thumb-cell,#status,.theme-toggle,.livenote{display:none}
+  .table-wrap{overflow:visible}
+  #grid{min-width:0}
+  .table-scroll::before,.table-scroll::after{display:none}
   #masthead{background:none; color:#000; border-bottom:2px solid #000; padding:0 0 8px}
   #masthead .sub,.tagline{color:#333}
   table,thead th{border-color:#999}

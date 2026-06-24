@@ -35,6 +35,7 @@ data/postmortem_url_includes.toml  # curated postmortem-canon URLs missed by slu
 data/hn_gamasutra_posts.toml   # cached HN stories whose URLs mention gamasutra.com
 data/reddit_gamasutra_posts.toml   # cached Reddit posts linking to gamasutra.com (Arctic Shift)
 data/reddit_postmortem_threads.toml # per-article Reddit score/comments sidecar
+data/notable_authors.toml      # author name -> Wikipedia URL (byline links)
 data/hn_postmortem_audit.toml  # local HN/postmortem URL audit + review candidates
 index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
@@ -60,6 +61,8 @@ Useful commands:
 just serve    # static site at http://localhost:8000
 just hn         # refresh data/hn_gamasutra_posts.toml
 just reddit     # harvest Reddit posts (Arctic Shift) -> reddit_postmortem_threads.toml
+just reddit-metrics  # re-match Reddit metrics from cached posts (no refetch)
+just notable-authors # resolve notable authors' Wikipedia pages -> notable_authors.toml
 just hn-audit   # local audit of HN links vs known postmortem URLs
 just hn-metrics # local-only recompute of HN sums/thread links in data/postmortems.toml
 just check-links # slow network pass for link availability fields

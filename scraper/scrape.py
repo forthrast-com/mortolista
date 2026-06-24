@@ -30,6 +30,7 @@ HN_METRICS = DATA / "hn_postmortem_threads.toml"
 REDDIT_METRICS = DATA / "reddit_postmortem_threads.toml"
 REDDIT_POSTS = DATA / "reddit_gamasutra_posts.toml"
 WIKI_SALES = DATA / "wikipedia_game_sales.toml"
+NOTABLE_AUTHORS = DATA / "notable_authors.toml"
 ARCHIVE_MIRRORS = DATA / "archive_is_mirrors.toml"
 GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
@@ -935,17 +936,24 @@ def audit_hn_posts(path=HN_POSTS):
 _wiki_cache = {}
 
 
-def author_notable(name):
+def author_wiki(name):
+    """Resolved Wikipedia page for a game-industry author, or None.
+
+    A name counts as "notable" when its Wikipedia article exists and reads like
+    a games-industry figure.  Returns the resolved title + canonical URL (after
+    redirects) so the catalogue can link the byline straight to the page.
+    """
     if not name:
-        return False
+        return None
     if name in _wiki_cache:
         return _wiki_cache[name]
-    notable = False
+    info = None
     try:
         r = SESSION.get("https://en.wikipedia.org/w/api.php",
                         params={"action": "query", "format": "json",
-                                "titles": name, "prop": "extracts|categories",
-                                "exintro": 1, "explaintext": 1, "redirects": 1},
+                                "titles": name, "prop": "extracts|info",
+                                "inprop": "url", "exintro": 1,
+                                "explaintext": 1, "redirects": 1},
                         timeout=20)
         pages = r.json().get("query", {}).get("pages", {})
         for _, p in pages.items():
@@ -954,11 +962,47 @@ def author_notable(name):
             extract = (p.get("extract") or "").lower()
             if any(k in extract for k in
                    ("game", "developer", "designer", "programmer", "studio")):
-                notable = True
+                title = p.get("title") or name
+                info = {
+                    "name": name,
+                    "wiki_title": title,
+                    "wiki_url": p.get("fullurl")
+                    or "https://en.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_")),
+                }
+                break
     except Exception:
         pass
-    _wiki_cache[name] = notable
-    return notable
+    _wiki_cache[name] = info
+    return info
+
+
+def author_notable(name):
+    return author_wiki(name) is not None
+
+
+def refresh_notable_authors(data_path, out_path=NOTABLE_AUTHORS, limit=0):
+    """Sidecar of distinct authors with a Wikipedia page, name -> wiki URL."""
+    payload = load_toml(data_path)
+    names, seen = [], set()
+    for article in payload.get("postmortem", []):
+        for name in article.get("authors", []) or []:
+            if name and name not in seen:
+                seen.add(name)
+                names.append(name)
+    if limit:
+        names = names[:limit]
+    rows = []
+    for i, name in enumerate(names, 1):
+        info = author_wiki(name)
+        log(f"[*] author {i}/{len(names)} {name}: {'wiki' if info else '—'}")
+        if info:
+            rows.append(info)
+        time.sleep(0.2)
+    if names and not rows:
+        raise RuntimeError("no authors resolved to Wikipedia pages; likely a network failure, not writing an empty sidecar")
+    rows.sort(key=lambda r: r["name"].lower())
+    Path(out_path).write_bytes(tomli_w.dumps({"notable_author": rows}).encode())
+    return len(rows)
 
 # --------------------------------------------------------- Wikipedia sales data
 SALES_PATTERNS = [
@@ -1358,7 +1402,9 @@ def main():
     ap.add_argument("--check-links", action="store_true", help="slow: refresh core Wayback/original link availability fields")
     ap.add_argument("--archive-mirrors-only", action="store_true", help="write archive.is mirror sidecar and exit")
     ap.add_argument("--gamedev-live-only", action="store_true", help="slow: discover live gamedeveloper.com URLs sidecar and exit")
-    ap.add_argument("--reddit-only", action="store_true", help="slow/best-effort: refresh Reddit submission metrics sidecar and exit")
+    ap.add_argument("--reddit-only", action="store_true", help="harvest Reddit posts (Arctic Shift) and refresh the metrics sidecar, then exit")
+    ap.add_argument("--reddit-recompute", action="store_true", help="re-match Reddit metrics from the cached posts without refetching, then exit")
+    ap.add_argument("--notable-authors-only", action="store_true", help="resolve notable authors' Wikipedia pages sidecar and exit")
     ap.add_argument("--wiki-sales-only", action="store_true", help="slow/best-effort: refresh Wikipedia sales sidecar and exit")
     ap.add_argument("--limit", type=int, default=0, help="limit sidecar refresh rows for smoke tests")
     ap.add_argument("--offset", type=int, default=0, help="start sidecar refresh at this row offset")
@@ -1392,6 +1438,14 @@ def main():
     if args.reddit_only:
         n = refresh_reddit_metrics(args.out, REDDIT_METRICS, args.limit)
         log(f"[*] refreshed Reddit metrics for {n} entries -> {REDDIT_METRICS}")
+        return
+    if args.reddit_recompute:
+        n = refresh_reddit_metrics(args.out, REDDIT_METRICS, args.limit, refresh_posts=False)
+        log(f"[*] recomputed Reddit metrics for {n} entries from cache -> {REDDIT_METRICS}")
+        return
+    if args.notable_authors_only:
+        n = refresh_notable_authors(args.out)
+        log(f"[*] resolved {n} notable authors -> {NOTABLE_AUTHORS}")
         return
     if args.wiki_sales_only:
         n = refresh_wiki_sales(args.out, WIKI_SALES, args.limit, args.offset)

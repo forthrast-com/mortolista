@@ -33,6 +33,7 @@
 </header>
 
 <div class="wrap">
+  <p class="livenote">Gamasutra lives on as <a href="https://www.gamedeveloper.com/" target="_blank" rel="noopener">Game Developer</a> — still publishing today. If these postmortems are your thing, go read what they&rsquo;re putting out now.</p>
   <div id="toolbar">
     <input id="search" type="search" placeholder="Search title, game, or author…" autocomplete="off">
     <select id="category"><option value="">All categories</option></select>
@@ -59,7 +60,9 @@
     <span id="count" class="count" aria-live="polite"></span>
   </div>
 
-  <table id="grid">
+  <div class="table-scroll">
+   <div class="table-wrap">
+    <table id="grid">
     <thead>
       <tr>
         <th class="rank-col" scope="col" title="Balanced rank — each entry's standing in the balanced sort, kept even when you re-sort or filter">#</th>
@@ -73,13 +76,15 @@
       </tr>
     </thead>
     <tbody id="rows"></tbody>
-  </table>
+    </table>
+   </div>
+  </div>
   <p id="status" class="status">Loading archive…</p>
 </div>
 
 <footer><div class="wrap">
   Data scraped from the <a href="https://web.archive.org/">Internet Archive</a>.
-  Sort signals: HN via Algolia, Reddit via the <a href="https://arctic-shift.photon-reddit.com/">Arctic Shift</a> archive, Wikipedia-derived sales snippets, capture counts as a backlink proxy, notable-author flag via Wikipedia.
+  Sort signals: HN via Algolia, Reddit via the <a href="https://arctic-shift.photon-reddit.com/">Arctic Shift</a> archive, Wikipedia-derived sales snippets, capture counts as a backlink proxy, notable authors linked to Wikipedia.
   &ldquo;~&rdquo; dates are estimated from the earliest Wayback capture.
   Each entry links to the <a href="https://web.archive.org/">Wayback Machine</a> with an
   <a href="https://archive.is/">archive.is</a> mirror as a fallback.

@@ -31,6 +31,12 @@ reddit:
 reddit-sample:
     python scraper/scrape.py --reddit-only --limit 5
 
+reddit-metrics:
+    python scraper/scrape.py --reddit-recompute
+
+notable-authors:
+    python scraper/scrape.py --notable-authors-only
+
 wiki-sales:
     python scraper/scrape.py --wiki-sales-only
 

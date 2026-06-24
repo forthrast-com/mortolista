@@ -7,8 +7,11 @@ const catEl = document.getElementById("category");
 const notableEl = document.getElementById("notableOnly");
 const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
+const tableScroll = document.querySelector(".table-scroll");
+const tableWrap = document.querySelector(".table-wrap");
 
 let DATA = [];
+let NOTABLE_AUTHORS = new Map(); // author name -> Wikipedia URL
 let sortKey = "agg_score";
 let sortDir = -1; // -1 desc, 1 asc
 
@@ -78,6 +81,20 @@ async function loadOptionalSidecar(path, table, defaults = {}) {
     // Optional, best-effort signals; absence should not brick the catalogue.
     DATA = DATA.map(d => ({ ...defaults, ...d }));
 
+  }
+}
+
+async function loadNotableAuthors() {
+  // Optional: maps a notable author's name to their Wikipedia page so the
+  // byline can link straight to it. Absence just leaves the ★ unlinked.
+  try {
+    const res = await fetch("data/notable_authors.toml", { cache: "no-cache" });
+    if (!res.ok) return;
+    const rows = parse(await res.text()).notable_author || [];
+    NOTABLE_AUTHORS = new Map(
+      rows.filter(r => r.name && r.wiki_url).map(r => [r.name, r.wiki_url]));
+  } catch (e) {
+    // best-effort; the catalogue works fine without author links.
   }
 }
 
@@ -179,6 +196,7 @@ async function load() {
     await loadHnMetrics();
     await loadPhaseTwoMetrics();
     await loadMirrorSidecars();
+    await loadNotableAuthors();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
@@ -200,6 +218,15 @@ function sortVal(d, k) {
   if (typeof v === "number") return v;
   if (typeof v === "boolean") return v ? 1 : 0;
   return (v ?? "").toString().toLowerCase();
+}
+
+// Show an edge fade on whichever side the table can still scroll toward.
+function updateScrollFades() {
+  if (!tableWrap || !tableScroll) return;
+  const max = tableWrap.scrollWidth - tableWrap.clientWidth;
+  const x = tableWrap.scrollLeft;
+  tableScroll.classList.toggle("can-left", x > 1);
+  tableScroll.classList.toggle("can-right", x < max - 1);
 }
 
 function render() {
@@ -239,7 +266,11 @@ function render() {
   // keep the mobile sort dropdown in sync (only if it has a matching option)
   const val = `${sortKey}:${sortDir}`;
   if ([...sortSel.options].some(o => o.value === val)) sortSel.value = val;
+  updateScrollFades();
 }
+
+if (tableWrap) tableWrap.addEventListener("scroll", updateScrollFades, { passive: true });
+window.addEventListener("resize", updateScrollFades);
 
 function catClass(c) {
   c = (c || "").toLowerCase();
@@ -247,6 +278,13 @@ function catClass(c) {
   if (c.includes("audio")) return "audio";
   if (c.includes("middleware")) return "middleware";
   return "";
+}
+
+// Only badge a distinct category; a plain "Postmortem" is the default and
+// labelling every entry with it just adds noise.
+function catBadge(c) {
+  if (!c || c.trim().toLowerCase() === "postmortem") return "";
+  return `<span class="cat ${catClass(c)}">${esc(c)}</span>`;
 }
 
 function num(v) {
@@ -293,7 +331,7 @@ function sortSignalHTML(d) {
   if (sortKey === "agg_score") {
     const top = d.agg_top || [];
     if (!top.length) return "";
-    return ` <span class="m-sort" title="Balanced rank — strongest signals for this entry">balanced: ${top.map(esc).join(" · ")}</span>`;
+    return ` <span class="m-sort" title="Balanced rank — strongest signals for this entry">ranked on: ${top.map(esc).join(" · ")}</span>`;
   }
   if (SHOWN_SORTS.has(sortKey)) return "";
   const v = d[sortKey];
@@ -311,7 +349,7 @@ function whyBalancedHTML(d) {
   if (sortKey !== "agg_score") return "";
   const top = d.agg_top || [];
   if (!top.length) return "";
-  return `<span class="why-balanced" title="Balanced rank — strongest signals for this entry">balanced: ${top.map(esc).join(" · ")}</span>`;
+  return `<span class="why-balanced" title="Balanced rank — strongest signals for this entry">ranked on: ${top.map(esc).join(" · ")}</span>`;
 }
 
 function hnThreadsHTML(d) {
@@ -391,8 +429,15 @@ function displayGame(d) {
   return canonical(game) === canonical(title) ? "" : game;
 }
 
+function authorHTML(name) {
+  const url = NOTABLE_AUTHORS.get(name);
+  return url
+    ? `<a class="author-link" href="${esc(url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}">${esc(name)}</a>`
+    : esc(name);
+}
+
 function rowHTML(d) {
-  const authors = (d.authors || []).map(esc).join(", ") || "<span class=zero>—</span>";
+  const authors = (d.authors || []).map(authorHTML).join(", ") || "<span class=zero>—</span>";
   const star = d.author_notable ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : "";
   const date = d.date
     ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
@@ -439,11 +484,11 @@ function rowHTML(d) {
   // (hidden on desktop, where the columns carry this metadata instead)
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
-    + ` <span class="cat ${catClass(d.category)}">${esc(d.category)}</span>`
+    + catBadge(d.category)
     + sortSignalHTML(d)
     + `</span>`;
   const byline = d.authors && d.authors.length
-    ? `<span class="byline">by ${esc(d.authors.join(", "))}${d.author_notable
+    ? `<span class="byline">by ${d.authors.map(authorHTML).join(", ")}${d.author_notable
         ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : ""}</span>`
     : "";
   const title = primary
@@ -459,7 +504,7 @@ function rowHTML(d) {
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
     <td class="main-cell">${metaTop}${title}${gameLine}${byline}</td>
     <td>${authors}${star}</td>
-    <td><span class="cat ${catClass(d.category)}">${esc(d.category)}</span></td>
+    <td>${catBadge(d.category)}</td>
     <td class="num">${date}</td>
     ${hnMetricHTML(d)}${num(d.wayback_captures)}
   </tr>
