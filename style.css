@@ -116,6 +116,14 @@ th.sorted-asc::after{content:" ▲"; font-size:9px}
 th.sorted-desc::after{content:" ▼"; font-size:9px}
 
 tbody td{padding:7px 9px 2px; border-bottom:none; vertical-align:top}
+/* leftmost rank column: each entry's stable balanced rank (1..N), unchanged
+   when the table is re-sorted or filtered */
+.rank-col{width:1%; text-align:right}
+.rank-cell{
+  text-align:right; padding-right:10px; padding-top:9px;
+  font-variant-numeric:tabular-nums; font-size:12px; font-weight:bold;
+  color:var(--muted); border-bottom:1px solid var(--rule);
+}
 /* full-height thumbnail: the cell is rowspan'd over both rows of the entry,
    and the image fills it via an absolutely-positioned layer */
 .thumb-col{width:74px}
@@ -212,8 +220,11 @@ footer .wrap{line-height:1.6}
   tbody tr.r-detail{border-bottom:1px solid var(--rule); padding:2px 12px 12px}
   .detail-cell{border:none}
 
-  /* drop the desktop metadata columns; the meta line + byline carry them */
-  tbody tr.r-main td:nth-child(n+3){display:none}
+  /* drop the rank + desktop metadata columns; the card keeps only the
+     thumbnail (2nd cell) and main cell (3rd), with the meta line + byline
+     carrying the rest */
+  tbody tr.r-main td:first-child{display:none}
+  tbody tr.r-main td:nth-child(n+4){display:none}
 
   .thumb-cell{
     position:static; float:right; width:64px; height:64px; overflow:hidden;
@@ -246,7 +257,7 @@ footer .wrap{line-height:1.6}
 /* ---- Print: a clean, ink-friendly reading list (force light) ---- */
 @media print{
   body{background:#fff; color:#000; font-size:11px}
-  #toolbar,.thumb-col,.thumb-cell,#status,.theme-toggle{display:none}
+  #toolbar,.rank-col,.rank-cell,.thumb-col,.thumb-cell,#status,.theme-toggle{display:none}
   #masthead{background:none; color:#000; border-bottom:2px solid #000; padding:0 0 8px}
   #masthead .sub,.tagline{color:#333}
   table,thead th{border-color:#999}

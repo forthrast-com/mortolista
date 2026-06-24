@@ -163,6 +163,12 @@ function computeAggregate() {
       ? contrib.filter(c => c === lead || c.show >= lead.show * 0.25).slice(0, 2).map(c => c.label)
       : [];
   }
+  // Assign each entry a stable balanced rank (1..N) that sticks to it no matter
+  // how the table is later sorted or filtered. Same tiebreak as render() so the
+  // numbers read 1, 2, 3… straight down under the default balanced sort.
+  const ranked = [...DATA].sort((a, b) =>
+    (b.agg_score - a.agg_score) || a.title.localeCompare(b.title));
+  ranked.forEach((d, i) => { d.balanced_rank = i + 1; });
 }
 
 async function load() {
@@ -221,7 +227,7 @@ function render() {
   countEl.textContent = `${list.length} of ${DATA.length} postmortems`;
   rowsEl.innerHTML = list.length
     ? list.map(rowHTML).join("")
-    : `<tr><td colspan="7" class="empty">No postmortems match your filters.</td></tr>`;
+    : `<tr><td colspan="8" class="empty">No postmortems match your filters.</td></tr>`;
   document.querySelectorAll("th.sortable").forEach(th => {
     th.classList.remove("sorted-asc", "sorted-desc");
     th.removeAttribute("aria-sort");
@@ -449,6 +455,7 @@ function rowHTML(d) {
   // Each entry is two rows: a compact headline row (metadata in columns on
   // desktop) and a wide detail row that spans the text columns underneath.
   return `<tr class="r-main">
+    <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
     <td class="main-cell">${metaTop}${title}${gameLine}${byline}</td>
     <td>${authors}${star}</td>
