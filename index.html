@@ -63,6 +63,15 @@
   <div class="table-scroll">
    <div class="table-wrap">
     <table id="grid">
+    <colgroup>
+      <col class="rank-col">
+      <col class="thumb-col">
+      <col class="postmortem-col">
+      <col class="authors-col">
+      <col class="type-col">
+      <col class="date-col">
+      <col class="metric-col" span="10">
+    </colgroup>
     <thead>
       <tr>
         <th class="rank-col" scope="col" title="Balanced rank — each entry's standing in the balanced sort, kept even when you re-sort or filter">#</th>
@@ -71,7 +80,15 @@
         <th scope="col" tabindex="0" data-key="authors" class="sortable">Author(s)</th>
         <th scope="col" tabindex="0" data-key="category" class="sortable">Type</th>
         <th scope="col" tabindex="0" data-key="date" class="sortable num">Date</th>
-        <th scope="col" tabindex="0" data-key="hn_points_sum" class="sortable num" title="Total Hacker News points/comments across matching submissions">HN</th>
+        <th scope="col" tabindex="0" data-key="hn_points" class="sortable num" title="Best single Hacker News thread points">HN best ▲</th>
+        <th scope="col" tabindex="0" data-key="hn_comments" class="sortable num" title="Best single Hacker News thread comments">HN best ｜</th>
+        <th scope="col" tabindex="0" data-key="hn_points_sum" class="sortable num" title="Total Hacker News points across matching submissions">HN ▲</th>
+        <th scope="col" tabindex="0" data-key="hn_comments_sum" class="sortable num" title="Total Hacker News comments across matching submissions">HN ｜</th>
+        <th scope="col" tabindex="0" data-key="hn_submissions" class="sortable num" title="Matching Hacker News submissions">HN #</th>
+        <th scope="col" tabindex="0" data-key="reddit_score_sum" class="sortable num" title="Total Reddit score across matching submissions">Reddit ▲</th>
+        <th scope="col" tabindex="0" data-key="reddit_comments_sum" class="sortable num" title="Total Reddit comments across matching submissions">Reddit ｜</th>
+        <th scope="col" tabindex="0" data-key="reddit_submissions" class="sortable num" title="Matching Reddit submissions">Reddit #</th>
+        <th scope="col" tabindex="0" data-key="copies_sold" class="sortable num" title="Wikipedia-derived copies sold signal">Sales</th>
         <th scope="col" tabindex="0" data-key="wayback_captures" class="sortable num" title="Wayback capture count (backlink proxy)">Caps</th>
       </tr>
     </thead>

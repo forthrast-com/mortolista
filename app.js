@@ -269,7 +269,7 @@ function render() {
   countEl.textContent = `${list.length} of ${DATA.length} postmortems`;
   rowsEl.innerHTML = list.length
     ? list.map(rowHTML).join("")
-    : `<tr><td colspan="8" class="empty">No postmortems match your filters.</td></tr>`;
+    : `<tr><td colspan="16" class="empty">No postmortems match your filters.</td></tr>`;
   document.querySelectorAll("th.sortable").forEach(th => {
     th.classList.remove("sorted-asc", "sorted-desc");
     th.removeAttribute("aria-sort");
@@ -302,15 +302,11 @@ function catBadge(c) {
   return `<span class="cat ${catClass(c)}">${esc(c)}</span>`;
 }
 
-function num(v) {
-  return v ? `<td class="num">${v}</td>` : `<td class="num zero">–</td>`;
-}
-
-function hnMetricHTML(d) {
-  const points = d.hn_points_sum || 0;
-  const comments = d.hn_comments_sum || 0;
-  if (!points && !comments) return `<td class="num hn-metric zero">–</td>`;
-  return `<td class="num hn-metric"><span>${points.toLocaleString()}▲</span><span>${comments.toLocaleString()}｜</span></td>`;
+function num(v, title = "") {
+  const titleAttr = title ? ` title="${esc(title)}"` : "";
+  return v
+    ? `<td class="num"${titleAttr}>${Number(v).toLocaleString()}</td>`
+    : `<td class="num zero"${titleAttr}>–</td>`;
 }
 
 function metricValue(d, k) {
@@ -443,11 +439,12 @@ function articleBio(d) {
 function authorHTML(name, bio = "") {
   const url = NOTABLE_AUTHORS.get(name);
   const bioClass = bio ? " has-bio" : "";
-  const bioAttr = bio ? ` data-bio="${esc(bio)}" aria-label="${esc(`${name}: ${bio}`)}"` : "";
-  const titleAttr = !bio && url ? ` title="Wikipedia: ${esc(name)}"` : "";
-  return url
-    ? `<a class="author-link${bioClass}" href="${esc(url)}" target="_blank" rel="noopener"${titleAttr}${bioAttr}>${esc(name)}</a>`
-    : `<span class="author-name${bioClass}"${bioAttr}>${esc(name)}</span>`;
+  const bioAttr = bio ? ` data-bio="${esc(bio)}"` : "";
+  if (url) {
+    return `<a class="author-link wiki-link${bioClass}" href="${esc(url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}"${bioAttr}>${esc(name)}</a>`;
+  }
+  const tabAttr = bio ? ` tabindex="0" role="button" aria-label="Author bio for ${esc(name)}"` : "";
+  return `<span class="author-name${bioClass} no-wiki"${bioAttr}${tabAttr}>${esc(name)}</span>`;
 }
 
 function rowHTML(d) {
@@ -516,12 +513,21 @@ function rowHTML(d) {
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
     <td class="main-cell">${metaTop}${title}${gameLine}${byline}</td>
-    <td>${authors}</td>
-    <td>${catBadge(d.category)}</td>
-    <td class="num">${date}</td>
-    ${hnMetricHTML(d)}${num(d.wayback_captures)}
+    <td class="author-cell">${authors}</td>
+    <td class="type-cell">${catBadge(d.category)}</td>
+    <td class="num date-cell">${date}</td>
+    ${num(d.hn_points, "Best HN thread points")}
+    ${num(d.hn_comments, "Best HN thread comments")}
+    ${num(d.hn_points_sum, "Total HN points")}
+    ${num(d.hn_comments_sum, "Total HN comments")}
+    ${num(d.hn_submissions, "HN submissions")}
+    ${num(d.reddit_score_sum, "Total Reddit score")}
+    ${num(d.reddit_comments_sum, "Total Reddit comments")}
+    ${num(d.reddit_submissions, "Reddit submissions")}
+    ${num(d.copies_sold, "Copies sold")}
+    ${num(d.wayback_captures, "Wayback captures")}
   </tr>
-  <tr class="r-detail"><td class="detail-cell" colspan="6">${whyBalancedHTML(d)}${summary}${mirrors}</td></tr>`;
+  <tr class="r-detail"><td class="detail-cell" colspan="14">${whyBalancedHTML(d)}${summary}${mirrors}</td></tr>`;
 }
 
 document.querySelectorAll("th.sortable").forEach(th => {
@@ -572,6 +578,71 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
 });
 
 syncThemeButton();
+
+// Desktop-only author bio tooltip. It is viewport-positioned (not clipped by
+// table cells) and never handles pointer events, so Wikipedia links stay links.
+let bioTooltip = null;
+const canHoverAuthors = matchMedia("(hover: hover) and (pointer: fine)");
+
+function hideAuthorBio() {
+  bioTooltip?.remove();
+  bioTooltip = null;
+}
+
+function placeAuthorBioTooltip(anchor) {
+  if (!bioTooltip) return;
+  const gap = 8;
+  const pad = 12;
+  const r = anchor.getBoundingClientRect();
+  const tr = bioTooltip.getBoundingClientRect();
+  let left = Math.min(Math.max(r.left, pad), window.innerWidth - tr.width - pad);
+  let top = r.top - tr.height - gap;
+  if (top < pad) top = Math.min(r.bottom + gap, window.innerHeight - tr.height - pad);
+  bioTooltip.style.left = `${Math.max(pad, left)}px`;
+  bioTooltip.style.top = `${Math.max(pad, top)}px`;
+}
+
+function showAuthorBio(anchor, { force = false } = {}) {
+  if (!force && !canHoverAuthors.matches) return;
+  const bio = anchor.dataset.bio;
+  if (!bio) return;
+  hideAuthorBio();
+  bioTooltip = document.createElement("div");
+  bioTooltip.className = "bio-tooltip";
+  bioTooltip.textContent = bio;
+  document.body.appendChild(bioTooltip);
+  placeAuthorBioTooltip(anchor);
+}
+
+document.addEventListener("pointerover", e => {
+  const anchor = e.target.closest?.(".has-bio");
+  if (anchor) showAuthorBio(anchor);
+});
+document.addEventListener("pointerout", e => {
+  const anchor = e.target.closest?.(".has-bio");
+  if (anchor && !anchor.contains(e.relatedTarget)) hideAuthorBio();
+});
+document.addEventListener("focusin", e => {
+  if (e.target.matches?.(".has-bio")) showAuthorBio(e.target);
+});
+document.addEventListener("focusout", e => {
+  if (e.target.matches?.(".has-bio")) hideAuthorBio();
+});
+document.addEventListener("click", e => {
+  const author = e.target.closest?.(".author-name.has-bio.no-wiki");
+  if (!author || canHoverAuthors.matches) return;
+  e.preventDefault();
+  bioTooltip ? hideAuthorBio() : showAuthorBio(author, { force: true });
+});
+document.addEventListener("keydown", e => {
+  const author = e.target.closest?.(".author-name.has-bio.no-wiki");
+  if (!author || canHoverAuthors.matches || !["Enter", " "].includes(e.key)) return;
+  e.preventDefault();
+  bioTooltip ? hideAuthorBio() : showAuthorBio(author, { force: true });
+});
+document.addEventListener("scroll", hideAuthorBio, { passive: true });
+window.addEventListener("resize", hideAuthorBio);
+canHoverAuthors.addEventListener?.("change", hideAuthorBio);
 
 // Press "/" to jump to the search box (unless already typing somewhere).
 document.addEventListener("keydown", e => {
