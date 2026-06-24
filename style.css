@@ -162,6 +162,14 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong)}
    visible too so the balanced default — and the metric sorts without their own
    column (Reddit, copies sold, submissions) — remain reachable. */
 #sortSel{flex:0 1 auto}
+.sort-label{font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:var(--label); align-self:center}
+
+/* Desktop echo of the balanced "why it ranked" hint (the meta line that hosts
+   the mobile version is hidden on desktop). */
+.why-balanced{
+  display:inline-block; margin-bottom:8px; font-size:11.5px; font-weight:bold;
+  color:var(--gama-leaf); cursor:help;
+}
 
 .empty{padding:30px 12px; text-align:center; color:var(--muted); font-style:italic}
 .status{color:var(--muted); padding:14px 0; font-style:italic}
@@ -179,6 +187,9 @@ footer .wrap{line-height:1.6}
 
   /* sort via dropdown instead of column headers */
   #toolbar{gap:9px; margin:14px 0 12px}
+  /* the meta-top chip carries the balanced hint here, and the dropdown goes
+     full-width, so the desktop label + detail-row echo are redundant */
+  .sort-label,.why-balanced{display:none}
   #search,#category,#sortSel{width:100%; min-width:0; font-size:16px; min-height:40px}
   #sortSel{display:block; flex:1 1 100%}
   #search{flex:1 1 100%}

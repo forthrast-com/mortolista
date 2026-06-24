@@ -131,12 +131,17 @@ function percentileMap(values) {
 
 function computeAggregate() {
   const maps = {};
+  const rarity = {};
   let totalWeight = 0;
   for (const ax of AGG_AXES) {
     totalWeight += ax.weight;
+    const have = DATA.filter(d => (ax.binary ? !!d[ax.key] : (Number(d[ax.key]) || 0) > 0));
+    // How distinctive a signal is: an axis almost everyone has (captures) tells
+    // you little about why a given entry ranked; a rare one (HN points) tells
+    // you a lot. Floor keeps a near-universal axis usable as a last resort.
+    rarity[ax.key] = Math.max(1 - have.length / (DATA.length || 1), 0.02);
     if (ax.binary) continue;
-    const nonzero = DATA.map(d => Number(d[ax.key]) || 0).filter(v => v > 0);
-    maps[ax.key] = percentileMap(nonzero);
+    maps[ax.key] = percentileMap(have.map(d => Number(d[ax.key]) || 0));
   }
   for (const d of DATA) {
     let score = 0;
@@ -146,13 +151,17 @@ function computeAggregate() {
       const norm = ax.binary ? (v ? 1 : 0) : (v > 0 ? (maps[ax.key].get(v) || 0) : 0);
       const part = norm * ax.weight;
       score += part;
-      if (part > 0) contrib.push({ label: ax.label, part });
+      if (part > 0) contrib.push({ label: ax.label, part, show: part * rarity[ax.key] });
     }
     d.agg_score = totalWeight ? score / totalWeight : 0;
-    // Remember the axes that pushed this entry up, strongest first, so the card
-    // can explain why it landed where it did under the balanced sort.
-    contrib.sort((a, b) => b.part - a.part);
-    d.agg_top = contrib.slice(0, 2).map(c => c.label);
+    // Explain why the entry ranked under the balanced sort: lead with its most
+    // distinctive signal, and only keep a second when it's genuinely meaningful
+    // (not a near-universal axis riding along behind the real one).
+    contrib.sort((a, b) => b.show - a.show);
+    const lead = contrib[0];
+    d.agg_top = lead
+      ? contrib.filter(c => c === lead || c.show >= lead.show * 0.25).slice(0, 2).map(c => c.label)
+      : [];
   }
 }
 
@@ -286,6 +295,17 @@ function sortSignalHTML(d) {
   const label = SORT_SIGNAL_LABELS[sortKey] || SORT_LABELS[sortKey] || sortKey;
   const val = typeof v === "number" ? v.toLocaleString() : esc(String(v));
   return ` <span class="m-sort" title="Current sort metric">${val} ${esc(label)}</span>`;
+}
+
+// Desktop counterpart to the meta-top sort chip: the meta line is mobile-only,
+// so when balanced is the active sort we echo the "why it ranked" hint into the
+// detail row (which shows on desktop). CSS hides this copy on mobile to avoid
+// doubling up with the meta-top chip.
+function whyBalancedHTML(d) {
+  if (sortKey !== "agg_score") return "";
+  const top = d.agg_top || [];
+  if (!top.length) return "";
+  return `<span class="why-balanced" title="Balanced rank — strongest signals for this entry">balanced: ${top.map(esc).join(" · ")}</span>`;
 }
 
 function hnThreadsHTML(d) {
@@ -436,7 +456,7 @@ function rowHTML(d) {
     <td class="num">${date}</td>
     ${hnMetricHTML(d)}${num(d.wayback_captures)}
   </tr>
-  <tr class="r-detail"><td class="detail-cell" colspan="6">${summary}${mirrors}</td></tr>`;
+  <tr class="r-detail"><td class="detail-cell" colspan="6">${whyBalancedHTML(d)}${summary}${mirrors}</td></tr>`;
 }
 
 document.querySelectorAll("th.sortable").forEach(th => {
