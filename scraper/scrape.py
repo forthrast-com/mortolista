@@ -830,44 +830,94 @@ REDDIT_URL_QUERIES = [
 ]
 
 
-def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES):
-    """Every Reddit post linking to Gamasutra/GameDeveloper, via Arctic Shift."""
+def reddit_api_posts_for_url(url, timeout=120):
+    params = {"url": url, "limit": "auto", "fields": REDDIT_FIELDS}
+    r = SESSION.get(REDDIT_API, params=params, timeout=timeout)
+    r.raise_for_status()
+    payload = r.json()
+    return payload.get("data", payload) if isinstance(payload, dict) else payload
+
+
+def add_reddit_api_rows(by_id, items):
+    for it in items or []:
+        rid = str(it.get("id") or "")
+        if not rid:
+            continue
+        row = {
+            "id": rid,
+            "subreddit": it.get("subreddit") or "",
+            "author": it.get("author") or "",
+            "title": clean(it.get("title") or ""),
+            "score": int(it.get("score") or 0),
+            "num_comments": int(it.get("num_comments") or 0),
+            "created_utc": int(it.get("created_utc") or 0),
+            "url": it.get("url") or "",
+        }
+        old = by_id.get(rid)
+        # The same post can surface under several URL variants; keep the
+        # highest-scored copy (scores drift between captures).
+        if not old or row["score"] > old["score"]:
+            by_id[rid] = row
+
+
+def reddit_article_url_queries(article):
+    """Exact article URL forms worth probing in Arctic Shift.
+
+    Arctic Shift's broad host search is shallow: exact URL queries find older
+    postmortem submissions that never appear in the host-wide result set.
+    """
+    urls = []
+    original = article.get("original_url") or ""
+    if original:
+        parsed = urllib.parse.urlparse(original)
+        host = parsed.netloc.lower()
+        path = parsed.path
+        base = urllib.parse.urlunparse((parsed.scheme or "http", host, path, "", "", ""))
+        urls.append(base)
+    live = article.get("live_url") or ""
+    if live:
+        urls.append(live)
+        parsed = urllib.parse.urlparse(live)
+        if parsed.netloc.startswith("www."):
+            urls.append(urllib.parse.urlunparse((parsed.scheme, parsed.netloc[4:], parsed.path, "", parsed.query, "")))
+    seen = set()
+    out = []
+    for url in urls:
+        if url and url not in seen:
+            seen.add(url)
+            out.append(url)
+    return out
+
+
+def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES, articles=None):
+    """Reddit posts linking to Gamasutra/GameDeveloper, via Arctic Shift."""
     by_id = {}
     for base in url_queries:
-        params = {"url": base, "limit": "auto", "fields": REDDIT_FIELDS}
         try:
-            r = SESSION.get(REDDIT_API, params=params, timeout=120)
-            r.raise_for_status()
+            add_reddit_api_rows(by_id, reddit_api_posts_for_url(base))
         except requests.RequestException as exc:
             log(f"  [!] arctic-shift query failed for {base}: {exc}")
             continue
-        payload = r.json()
-        items = payload.get("data", payload) if isinstance(payload, dict) else payload
-        for it in items or []:
-            rid = str(it.get("id") or "")
-            if not rid:
-                continue
-            row = {
-                "id": rid,
-                "subreddit": it.get("subreddit") or "",
-                "author": it.get("author") or "",
-                "title": clean(it.get("title") or ""),
-                "score": int(it.get("score") or 0),
-                "num_comments": int(it.get("num_comments") or 0),
-                "created_utc": int(it.get("created_utc") or 0),
-                "url": it.get("url") or "",
-            }
-            old = by_id.get(rid)
-            # The same post can surface under several host variants; keep the
-            # highest-scored copy (scores drift between captures).
-            if not old or row["score"] > old["score"]:
-                by_id[rid] = row
         time.sleep(0.5)
+
+    articles = articles or []
+    total = sum(len(reddit_article_url_queries(article)) for article in articles)
+    done = 0
+    for i, article in enumerate(articles, 1):
+        for url in reddit_article_url_queries(article):
+            done += 1
+            try:
+                add_reddit_api_rows(by_id, reddit_api_posts_for_url(url, timeout=45))
+            except requests.RequestException as exc:
+                log(f"  [!] arctic-shift article query failed for {url}: {exc}")
+            time.sleep(0.12)
+        if articles and (i % 25 == 0 or i == len(articles)):
+            log(f"[*] reddit exact URL probes {i}/{len(articles)} articles ({done}/{total} URLs)")
     return sorted(by_id.values(), key=lambda p: p["score"], reverse=True)
 
 
-def write_reddit_posts(path=REDDIT_POSTS):
-    posts = fetch_reddit_gamasutra_posts()
+def write_reddit_posts(path=REDDIT_POSTS, articles=None):
+    posts = fetch_reddit_gamasutra_posts(articles=articles)
     if not posts:
         raise RuntimeError("arctic-shift returned no gamasutra posts; not writing an empty cache")
     Path(path).write_bytes(tomli_w.dumps({"reddit_post": posts}).encode())
@@ -875,9 +925,9 @@ def write_reddit_posts(path=REDDIT_POSTS):
     return posts
 
 
-def load_reddit_posts(path=REDDIT_POSTS, refresh=False):
+def load_reddit_posts(path=REDDIT_POSTS, refresh=False, articles=None):
     if refresh or not Path(path).exists():
-        return write_reddit_posts(path)
+        return write_reddit_posts(path, articles=articles)
     return load_toml(path).get("reddit_post", [])
 
 
@@ -991,7 +1041,7 @@ def refresh_reddit_metrics(data_path, out_path=REDDIT_METRICS, limit=0, refresh_
     articles = merge_sidecar_rows(articles, GAMEDEV_LIVE, "gamedeveloper_live")
     if limit:
         articles = articles[:limit]
-    reddit_posts = load_reddit_posts(refresh=refresh_posts)
+    reddit_posts = load_reddit_posts(refresh=refresh_posts, articles=articles)
     rows = reddit_metric_rows(articles, reddit_posts)
     matched = sum(1 for r in rows if r["reddit_submissions"])
     log(f"[*] reddit: {len(reddit_posts)} cached posts, {matched}/{len(rows)} articles matched")
