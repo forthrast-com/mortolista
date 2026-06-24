@@ -727,9 +727,9 @@ def hn_stats(article, hn_posts):
 # ------------------------------------------------------------- Reddit enrich
 # Reddit submissions are harvested in bulk from the Arctic Shift archive
 # (https://arctic-shift.photon-reddit.com), which indexes historical Reddit
-# posts by linked URL.  One query per gamasutra.com host variant returns every
-# post that linked to the site; those are cached and matched to articles by
-# Gamasutra feature id/path, mirroring the Hacker News pipeline.
+# posts by linked URL.  One query per Gamasutra/GameDeveloper host variant
+# returns posts that linked to either home for these articles; those are cached
+# and matched by feature id, canonical path, or migrated live URL.
 REDDIT_API = "https://arctic-shift.photon-reddit.com/api/posts/search"
 REDDIT_FIELDS = "id,subreddit,author,title,score,num_comments,created_utc,url"
 # Posts link to the site under both schemes and with/without www; Arctic Shift
@@ -739,11 +739,15 @@ REDDIT_URL_QUERIES = [
     "http://www.gamasutra.com",
     "https://gamasutra.com",
     "http://gamasutra.com",
+    "https://www.gamedeveloper.com",
+    "http://www.gamedeveloper.com",
+    "https://gamedeveloper.com",
+    "http://gamedeveloper.com",
 ]
 
 
 def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES):
-    """Every Reddit post linking to gamasutra.com, via the Arctic Shift API."""
+    """Every Reddit post linking to Gamasutra/GameDeveloper, via Arctic Shift."""
     by_id = {}
     for base in url_queries:
         params = {"url": base, "limit": "auto", "fields": REDDIT_FIELDS}
@@ -783,7 +787,7 @@ def write_reddit_posts(path=REDDIT_POSTS):
     if not posts:
         raise RuntimeError("arctic-shift returned no gamasutra posts; not writing an empty cache")
     Path(path).write_bytes(tomli_w.dumps({"reddit_post": posts}).encode())
-    log(f"[*] cached {len(posts)} reddit gamasutra posts -> {path}")
+    log(f"[*] cached {len(posts)} reddit article-link posts -> {path}")
     return posts
 
 
@@ -793,19 +797,68 @@ def load_reddit_posts(path=REDDIT_POSTS, refresh=False):
     return load_toml(path).get("reddit_post", [])
 
 
+def strip_wayback_url(url):
+    """Return the wrapped target for Wayback URLs, otherwise the original URL."""
+    parsed = urllib.parse.urlparse(url or "")
+    if parsed.netloc.lower() not in {"web.archive.org", "archive.org"}:
+        return url or ""
+    m = re.match(r"^/web/\d+(?:[a-z_]+)?/(https?://.+)$", parsed.path, re.I)
+    return urllib.parse.unquote(m.group(1)) if m else (url or "")
+
+
+def canonical_discussion_url(url):
+    """Stable matching key for submitted article URLs."""
+    url = strip_wayback_url(url or "").strip()
+    if not url:
+        return ""
+    parsed = urllib.parse.urlparse(url)
+    host = parsed.netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    path = re.sub(r"/+", "/", parsed.path).rstrip("/").lower()
+    if path.endswith(".php"):
+        path = path[:-4]
+    return f"{host}{path}"
+
+
+def reddit_match_keys(article):
+    """IDs and canonical URL paths that identify an article on Reddit.
+
+    Redditors linked both old Gamasutra feature URLs and migrated
+    GameDeveloper URLs.  The primary catalogue does not embed live URLs, so we
+    merge the live sidecar before matching and key on every known article URL.
+    """
+    ids, paths = article_hn_keys(article)
+    url_fields = (
+        "original_url", "wayback", "wayback_print", "live_url",
+        "archive_today", "archive_today_print",
+    )
+    url_keys = {canonical_discussion_url(article.get(k, "")) for k in url_fields}
+    url_keys.discard("")
+    return ids, paths, url_keys
+
+
+def reddit_post_matches_article(post_url, ids, paths, url_keys):
+    url = (post_url or "").lower()
+    canonical = canonical_discussion_url(post_url)
+    return (
+        bool(ids & hn_feature_ids(url))
+        or any(p in url for p in paths)
+        or (canonical and canonical in url_keys)
+    )
+
+
 def reddit_stats(article, reddit_posts):
     """Reddit attention across cached posts that link to this article.
 
-    Matches the Hacker News logic: a post counts when its linked URL carries
-    one of the article's Gamasutra feature ids or canonical paths.  The `*_sum`
-    fields total attention across duplicate submissions; the bare fields are
-    the single strongest thread.
+    A post counts when its linked URL carries one of the article's old
+    Gamasutra feature ids/paths or exactly matches a known canonical URL form,
+    including migrated GameDeveloper URLs from the live sidecar.
     """
-    ids, paths = article_hn_keys(article)
+    ids, paths, url_keys = reddit_match_keys(article)
     matched, seen = [], set()
     for post in reddit_posts:
-        url = (post.get("url") or "").lower()
-        if not (ids & hn_feature_ids(url) or any(p in url for p in paths)):
+        if not reddit_post_matches_article(post.get("url") or "", ids, paths, url_keys):
             continue
         rid = str(post.get("id") or "")
         if not rid or rid in seen:
@@ -834,6 +887,15 @@ def reddit_stats(article, reddit_posts):
     }
 
 
+def merge_sidecar_rows(articles, path, table):
+    """Overlay article sidecar rows by id for enrichment/matching passes."""
+    path = Path(path)
+    if not path.exists():
+        return articles
+    by_id = {row.get("id"): row for row in load_toml(path).get(table, [])}
+    return [{**article, **(by_id.get(article.get("id")) or {})} for article in articles]
+
+
 def reddit_metric_rows(articles, reddit_posts):
     return [reddit_stats(a, reddit_posts) for a in articles]
 
@@ -841,6 +903,8 @@ def reddit_metric_rows(articles, reddit_posts):
 def refresh_reddit_metrics(data_path, out_path=REDDIT_METRICS, limit=0, refresh_posts=True):
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
+    articles = merge_sidecar_rows(articles, ARCHIVE_MIRRORS, "archive_mirror")
+    articles = merge_sidecar_rows(articles, GAMEDEV_LIVE, "gamedeveloper_live")
     if limit:
         articles = articles[:limit]
     reddit_posts = load_reddit_posts(refresh=refresh_posts)

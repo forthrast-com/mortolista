@@ -286,9 +286,9 @@ reddit_threads = []
 id = "131533"
 reddit_score = 18
 reddit_comments = 7
-reddit_score_sum = 33
+reddit_score_sum = 38
 reddit_comments_sum = 10
-reddit_submissions = 2
+reddit_submissions = 3
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "m116s1"
@@ -311,6 +311,17 @@ permalink = "https://www.reddit.com/comments/jw05bg/"
 score = 15
 comments = 3
 created_utc = 1605643184
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1r9i2wq"
+subreddit = "diablo2"
+author = "julictus"
+title = "Postmortem: Blizzard's Diablo II (2000) by Eric Schaefer (Blizzard North/Condor Games) - October, 2000"
+url = "https://www.gamedeveloper.com/design/postmortem-blizzard-s-i-diablo-ii-i-"
+permalink = "https://www.reddit.com/comments/1r9i2wq/"
+score = 5
+comments = 0
+created_utc = 1771551542
 
 [[reddit_postmortem]]
 id = "131523"
@@ -495,12 +506,22 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "131402"
-reddit_score = 0
+reddit_score = 9
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 9
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1ilinko"
+subreddit = "Gamecube"
+author = "ExtremeConnection26"
+title = "Postmortem: Factor 5's Star Wars Rogue Leader: Rogue Squadron II"
+url = "https://www.gamedeveloper.com/design/postmortem-factor-5-s-i-star-wars-rogue-leader-rogue-squadron-ii-i-"
+permalink = "https://www.reddit.com/comments/1ilinko/"
+score = 9
+comments = 0
+created_utc = 1739118802
 
 [[reddit_postmortem]]
 id = "131396"
