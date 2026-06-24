@@ -376,18 +376,6 @@ function redditThreadsHTML(d) {
   return `<span class="discussions reddit"><span class="line-label">Reddit:</span> ${shown.join(" · ")}</span>`;
 }
 
-function salesHTML(d) {
-  const copies = d.copies_sold || 0;
-  if (!copies) return "";
-  const label = copies >= 1_000_000
-    ? `${(copies / 1_000_000).toLocaleString(undefined, { maximumFractionDigits: 1 })}m sold`
-    : `${copies.toLocaleString()} sold`;
-  const title = d.sales_note || `Wikipedia sales signal${d.wiki_title ? `: ${d.wiki_title}` : ""}`;
-  const body = `<span class="sales-chip" title="${esc(title)}">${esc(label)}</span>`;
-  return d.wiki_url
-    ? `<a class="sales-link" href="${esc(d.wiki_url)}" target="_blank" rel="noopener">${body}</a>`
-    : body;
-}
 
 function usableLink(ok, url) {
   return ok !== false && !!url;
@@ -416,16 +404,20 @@ function printArchiveUrl(d) {
   return usableLink(d.archive_today_print_ok, archiveToday) ? archiveToday : "";
 }
 
+function cleanTitle(title) {
+  return (title || "")
+    .replace(/^\s*(?:(?:classic|indie|audio|faculty|game|game design|middleware|mobile|student|tool)\s+)*post\s*-?\s*mortem\s*(?::|[-–—])\s*/i, "")
+    .replace(/^\s*(?:postmortem|post-mortem)\s+/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function displayGame(d) {
   const game = (d.game || "").trim();
   if (!game) return "";
-  const title = (d.title || "").trim();
+  const title = cleanTitle(d.title);
   if (!title) return game;
-  const canonical = s => s
-    .toLowerCase()
-    .replace(/^(?:indie |audio |middleware )?postmortem\s*[:–—-]?\s*/, "")
-    .replace(/\s+/g, " ")
-    .trim();
+  const canonical = s => cleanTitle(s).toLowerCase();
   return canonical(game) === canonical(title) ? "" : game;
 }
 
@@ -438,7 +430,6 @@ function authorHTML(name) {
 
 function rowHTML(d) {
   const authors = (d.authors || []).map(authorHTML).join(", ") || "<span class=zero>—</span>";
-  const star = d.author_notable ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : "";
   const date = d.date
     ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
     : '<span class=zero>—</span>';
@@ -476,9 +467,8 @@ function rowHTML(d) {
     ? `<span class="mirror-links"><span class="line-label">links:</span> ${mirrorParts.join(" · ")}</span>`
     : "";
   const discussions = hnThreadsHTML(d) + redditThreadsHTML(d);
-  const sales = salesHTML(d);
-  const mirrors = mirrorLine || discussions || sales
-    ? `<span class="mirrors">${mirrorLine}${discussions}${sales}</span>`
+  const mirrors = mirrorLine || discussions
+    ? `<span class="mirrors">${mirrorLine}${discussions}</span>`
     : "";
   // vintage dateline + byline: shown above the headline on the mobile card
   // (hidden on desktop, where the columns carry this metadata instead)
@@ -488,12 +478,12 @@ function rowHTML(d) {
     + sortSignalHTML(d)
     + `</span>`;
   const byline = d.authors && d.authors.length
-    ? `<span class="byline">by ${d.authors.map(authorHTML).join(", ")}${d.author_notable
-        ? ' <span class="notable" title="Notable author (Wikipedia)">★</span>' : ""}</span>`
+    ? `<span class="byline">by ${d.authors.map(authorHTML).join(", ")}</span>`
     : "";
+  const shownTitle = cleanTitle(d.title) || d.title;
   const title = primary
-    ? `<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(d.title)}</a>`
-    : `<span class="title-cell">${esc(d.title)}</span>`;
+    ? `<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(shownTitle)}</a>`
+    : `<span class="title-cell">${esc(shownTitle)}</span>`;
   const thumb = d.thumbnail && primary
     ? `<a href="${esc(primary)}" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="${esc(d.thumbnail)}" alt="" onerror="this.closest('td').classList.add('no-thumb');this.remove()"></a>`
     : "";
@@ -503,7 +493,7 @@ function rowHTML(d) {
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
     <td class="main-cell">${metaTop}${title}${gameLine}${byline}</td>
-    <td>${authors}${star}</td>
+    <td>${authors}</td>
     <td>${catBadge(d.category)}</td>
     <td class="num">${date}</td>
     ${hnMetricHTML(d)}${num(d.wayback_captures)}
