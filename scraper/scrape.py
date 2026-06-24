@@ -7,8 +7,8 @@ Pipeline:
     contains 'postmortem'. Collapse to one record per article id.
  2. For each article, fetch one archived snapshot (raw, via the `id_` modifier)
     and extract: title, game, authors, publish date, description, category.
- 3. Enrich with Hacker News points/comments (Algolia API) and a Wikipedia
-    'notable author?' flag.
+ 3. Enrich with Hacker News points/comments (Algolia API), Reddit link
+    scores, Wikipedia-derived sales signals, and a Wikipedia 'notable author?' flag.
  4. Emit data/postmortems.toml
 
 Usage:
@@ -27,6 +27,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 HN_POSTS = DATA / "hn_gamasutra_posts.toml"
 HN_METRICS = DATA / "hn_postmortem_threads.toml"
+REDDIT_METRICS = DATA / "reddit_postmortem_threads.toml"
+WIKI_SALES = DATA / "wikipedia_game_sales.toml"
 ARCHIVE_MIRRORS = DATA / "archive_is_mirrors.toml"
 GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
@@ -720,6 +722,144 @@ def hn_stats(article, hn_posts):
 
 
 
+# ------------------------------------------------------------- Reddit enrich
+REDDIT_SEARCH_API = "https://www.reddit.com/search.json"
+REDDIT_PAGE_SIZE = 100
+
+
+def reddit_url_candidates(article):
+    """URLs worth searching Reddit for.
+
+    Reddit's public search is fuzzy and incomplete, so keep this deliberately
+    conservative: canonical Gamasutra paths, migrated alt ids, and archived
+    variants.  The matcher below still verifies feature ids/paths before taking
+    a hit seriously.
+    """
+    urls = []
+    original = article.get("original_url", "")
+    if original:
+        urls.append(original)
+        urls.append(print_url(original))
+        urls.append(original.replace("http://", "https://"))
+    for aid in article.get("alt_ids", []) or []:
+        if original:
+            alt = re.sub(r"/view/feature/\d+/", f"/view/feature/{aid}/", original)
+            urls.extend([alt, print_url(alt), alt.replace("http://", "https://")])
+    if article.get("wayback"):
+        urls.append(article["wayback"])
+    if article.get("wayback_print"):
+        urls.append(article["wayback_print"])
+    out, seen = [], set()
+    for url in urls:
+        if url and url not in seen:
+            seen.add(url)
+            out.append(url)
+    return out
+
+
+def reddit_search_url(url, after=None):
+    params = {
+        "q": f'url:"{url}"',
+        "type": "link",
+        "sort": "top",
+        "limit": str(REDDIT_PAGE_SIZE),
+        "raw_json": "1",
+    }
+    if after:
+        params["after"] = after
+    r = SESSION.get(REDDIT_SEARCH_API, params=params, timeout=30)
+    if r.status_code == 429:
+        time.sleep(2)
+    r.raise_for_status()
+    return r.json()
+
+
+def reddit_hit_matches_article(article, hit):
+    submitted = (hit.get("url") or "").lower()
+    permalink = (hit.get("permalink") or "").lower()
+    hay = submitted + " " + permalink
+    ids, paths = article_hn_keys(article)
+    return bool(ids & hn_feature_ids(hay)) or any(path in hay for path in paths)
+
+
+def fetch_reddit_article_threads(article, max_pages=2):
+    """Best-effort Reddit submissions for one article.
+
+    Public Reddit search has limited historical recall and score fuzzing.  These
+    rows are an attention signal, not a canonical traffic/accounting source.
+    """
+    by_id = {}
+    failures = 0
+    for url in reddit_url_candidates(article):
+        after = None
+        for _ in range(max_pages):
+            try:
+                data = reddit_search_url(url, after)
+            except requests.RequestException as exc:
+                failures += 1
+                log(f"  [!] reddit search failed for {article.get('id')}: {exc}")
+                break
+            listing = data.get("data", {})
+            for child in listing.get("children", []) or []:
+                hit = child.get("data", {}) or {}
+                if not reddit_hit_matches_article(article, hit):
+                    continue
+                rid = str(hit.get("id") or hit.get("name") or hit.get("permalink") or "")
+                if not rid:
+                    continue
+                row = {
+                    "reddit_id": rid,
+                    "subreddit": hit.get("subreddit") or "",
+                    "title": clean(hit.get("title") or ""),
+                    "url": hit.get("url") or "",
+                    "permalink": "https://www.reddit.com" + (hit.get("permalink") or ""),
+                    "score": int(hit.get("score") or 0),
+                    "comments": int(hit.get("num_comments") or 0),
+                    "created_utc": int(hit.get("created_utc") or 0),
+                }
+                old = by_id.get(rid)
+                if not old or (row["score"], row["comments"]) > (old["score"], old["comments"]):
+                    by_id[rid] = row
+            after = listing.get("after")
+            if not after:
+                break
+            time.sleep(0.2)
+        time.sleep(0.2)
+    return sorted(by_id.values(), key=lambda r: (r["score"], r["comments"]), reverse=True), failures
+
+
+def reddit_stats(article):
+    threads, failures = fetch_reddit_article_threads(article)
+    return {
+        "id": article["id"],
+        "reddit_score": max((t["score"] for t in threads), default=0),
+        "reddit_comments": max((t["comments"] for t in threads), default=0),
+        "reddit_score_sum": sum(t["score"] for t in threads),
+        "reddit_comments_sum": sum(t["comments"] for t in threads),
+        "reddit_submissions": len(threads),
+        "reddit_threads": threads,
+        "reddit_search_failures": failures,
+    }
+
+
+def refresh_reddit_metrics(data_path, out_path=REDDIT_METRICS, limit=0):
+    payload = load_toml(data_path)
+    articles = payload.get("postmortem", [])
+    if limit:
+        articles = articles[:limit]
+    rows = []
+    total_failures = 0
+    for i, article in enumerate(articles, 1):
+        log(f"[*] reddit {i}/{len(articles)} {article.get('id')} {article.get('game') or article.get('title')}")
+        row = reddit_stats(article)
+        total_failures += row.get("reddit_search_failures", 0)
+        rows.append(row)
+    if rows and total_failures and total_failures >= sum(len(reddit_url_candidates(a)) for a in articles):
+        raise RuntimeError("reddit search failed for every URL; not writing an all-zero sidecar")
+    Path(out_path).write_bytes(tomli_w.dumps({"reddit_postmortem": rows}).encode())
+    return len(rows)
+
+
 
 # --------------------------------------------------------------- local HN audit
 def postmortem_ids_from_cdx_cache():
@@ -831,6 +971,178 @@ def author_notable(name):
         pass
     _wiki_cache[name] = notable
     return notable
+
+# --------------------------------------------------------- Wikipedia sales data
+SALES_PATTERNS = [
+    re.compile(r"(?P<num>\d+(?:\.\d+)?)\s*(?P<unit>million|billion)\s+(?:copies|units)\b", re.I),
+    re.compile(r"(?P<num>\d+(?:\.\d+)?)\s*(?P<unit>million|billion)\s+sales\b", re.I),
+    re.compile(r"sold\s+(?:over|more than|at least|approximately|around|about)?\s*(?P<num>\d+(?:\.\d+)?)\s*(?P<unit>million|billion)\b", re.I),
+    re.compile(r"(?P<num>\d{1,3}(?:,\d{3})+)\s+(?:copies|units)\b", re.I),
+]
+
+
+def wiki_search_titles(query, limit=5):
+    try:
+        r = SESSION.get("https://en.wikipedia.org/w/api.php", params={
+            "action": "query",
+            "format": "json",
+            "list": "search",
+            "srsearch": query,
+            "srlimit": limit,
+        }, timeout=20)
+        r.raise_for_status()
+        return [row.get("title", "") for row in r.json().get("query", {}).get("search", []) if row.get("title")]
+    except requests.RequestException:
+        return []
+
+
+def wiki_page(title):
+    try:
+        r = SESSION.get("https://en.wikipedia.org/w/api.php", params={
+            "action": "query",
+            "format": "json",
+            "titles": title,
+            "prop": "extracts|pageprops|categories",
+            "explaintext": 1,
+            "redirects": 1,
+            "cllimit": 50,
+        }, timeout=20)
+        r.raise_for_status()
+        pages = r.json().get("query", {}).get("pages", {})
+        for page in pages.values():
+            if "missing" not in page:
+                return page
+    except requests.RequestException:
+        return None
+    return None
+
+
+def game_title_candidates(game):
+    game = clean(game)
+    if not game:
+        return []
+    parts = [game]
+    # The catalogue intentionally preserves publisher/studio possessives in the
+    # headline; Wikipedia page titles usually don't.
+    parts.append(re.sub(r"^.+?'s\s+", "", game))
+    parts.append(re.sub(r"^.+?:\s*", "", game))
+    out, seen = [], set()
+    for part in parts:
+        part = part.strip()
+        if part and part.lower() not in seen:
+            seen.add(part.lower())
+            out.append(part)
+    return out
+
+
+def page_looks_like_game(page):
+    text = ((page or {}).get("extract") or "").lower()[:3000]
+    cats = " ".join(c.get("title", "") for c in (page or {}).get("categories", [])).lower()
+    return "video game" in text or "video games" in cats or "video game" in cats
+
+
+def comparable_game_title(title):
+    title = ascii_fold(title or "").lower()
+    title = re.sub(r"\([^)]*\)", " ", title)
+    title = re.sub(r"^(?:.+?'s\s+)", "", title)
+    title = re.sub(r"\b(?:video game|game|postmortem|mobile|student|tool|faculty)\b", " ", title)
+    title = re.sub(r"[^a-z0-9]+", " ", title).strip()
+    return title
+
+
+def wiki_title_match_score(candidate, page_title):
+    cand = comparable_game_title(candidate)
+    page = comparable_game_title(page_title)
+    if not cand or not page:
+        return 0.0
+    ratio = SequenceMatcher(None, cand, page).ratio()
+    cand_tokens = [t for t in cand.split() if len(t) > 2]
+    page_tokens = set(page.split())
+    if cand_tokens:
+        overlap = sum(1 for t in cand_tokens if t in page_tokens) / len(cand_tokens)
+        ratio = max(ratio, overlap)
+    if cand in page or page in cand:
+        ratio = max(ratio, 0.9)
+    return ratio
+
+
+def find_wiki_game_page(article):
+    best = (0.0, None)
+    for candidate in game_title_candidates(article.get("game") or article.get("title") or ""):
+        titles = [candidate] + wiki_search_titles(candidate + " video game", limit=5)
+        seen = set()
+        for title in titles:
+            if not title or title.lower() in seen:
+                continue
+            seen.add(title.lower())
+            page = wiki_page(title)
+            if not page or not page_looks_like_game(page):
+                continue
+            score = wiki_title_match_score(candidate, page.get("title", ""))
+            if score > best[0]:
+                best = (score, page)
+    return best[1] if best[0] >= 0.58 else None
+
+
+def parse_sales_number(match):
+    raw = match.group("num").replace(",", "")
+    value = float(raw)
+    unit = (match.groupdict().get("unit") or "").lower()
+    if unit == "million":
+        value *= 1_000_000
+    elif unit == "billion":
+        value *= 1_000_000_000
+    return int(value)
+
+
+def extract_sales_signal(extract):
+    if not extract:
+        return 0, ""
+    best = (0, "")
+    # Sentence-ish chunks are enough and avoid dumping paragraphs into data.
+    for sentence in re.split(r"(?<=[.!?])\s+", extract):
+        if not re.search(r"\b(sold|sales|copies|units)\b", sentence, re.I):
+            continue
+        for rx in SALES_PATTERNS:
+            m = rx.search(sentence)
+            if not m:
+                continue
+            copies = parse_sales_number(m)
+            if copies > best[0]:
+                best = (copies, clean(sentence)[:260])
+    return best
+
+
+def refresh_wiki_sales(data_path, out_path=WIKI_SALES, limit=0, offset=0):
+    payload = load_toml(data_path)
+    all_articles = payload.get("postmortem", [])
+    articles = all_articles[offset:]
+    if limit:
+        articles = articles[:limit]
+
+    out_path = Path(out_path)
+    existing = {}
+    if out_path.exists():
+        existing = {row["id"]: row for row in load_toml(out_path).get("wiki_game_sales", [])}
+
+    rows = []
+    for i, article in enumerate(articles, 1):
+        log(f"[*] wiki sales {offset + i}/{len(all_articles)} {article.get('id')} {article.get('game')}")
+        page = find_wiki_game_page(article)
+        copies, sentence = extract_sales_signal((page or {}).get("extract") or "")
+        rows.append({
+            "id": article["id"],
+            "wiki_title": (page or {}).get("title", ""),
+            "wiki_url": "https://en.wikipedia.org/wiki/" + urllib.parse.quote(((page or {}).get("title") or "").replace(" ", "_")) if page else "",
+            "copies_sold": copies,
+            "sales_note": sentence,
+        })
+
+    existing.update({row["id"]: row for row in rows})
+    ordered = [existing[a["id"]] for a in all_articles if a["id"] in existing]
+    out_path.write_bytes(tomli_w.dumps({"wiki_game_sales": ordered}).encode())
+    return len(rows)
+
 
 
 # --------------------------------------------------------------- de-duplication
@@ -1038,6 +1350,7 @@ def refresh_gamedev_live(data_path, out_path=GAMEDEV_LIVE):
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
     rows = []
+    total_failures = 0
     for i, article in enumerate(articles, 1):
         rows.append(gamedev_live_row(article))
         if i % 25 == 0:
@@ -1057,6 +1370,10 @@ def main():
     ap.add_argument("--check-links", action="store_true", help="slow: refresh core Wayback/original link availability fields")
     ap.add_argument("--archive-mirrors-only", action="store_true", help="write archive.is mirror sidecar and exit")
     ap.add_argument("--gamedev-live-only", action="store_true", help="slow: discover live gamedeveloper.com URLs sidecar and exit")
+    ap.add_argument("--reddit-only", action="store_true", help="slow/best-effort: refresh Reddit submission metrics sidecar and exit")
+    ap.add_argument("--wiki-sales-only", action="store_true", help="slow/best-effort: refresh Wikipedia sales sidecar and exit")
+    ap.add_argument("--limit", type=int, default=0, help="limit sidecar refresh rows for smoke tests")
+    ap.add_argument("--offset", type=int, default=0, help="start sidecar refresh at this row offset")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
     ap.add_argument("--hn-metrics", default=str(HN_METRICS), help="article HN metrics sidecar TOML")
     ap.add_argument("--no-enrich", action="store_true", help="skip HN+Wikipedia")
@@ -1083,6 +1400,14 @@ def main():
     if args.gamedev_live_only:
         n = refresh_gamedev_live(args.out)
         log(f"[*] refreshed GameDeveloper live URLs for {n} entries -> {GAMEDEV_LIVE}")
+        return
+    if args.reddit_only:
+        n = refresh_reddit_metrics(args.out, REDDIT_METRICS, args.limit)
+        log(f"[*] refreshed Reddit metrics for {n} entries -> {REDDIT_METRICS}")
+        return
+    if args.wiki_sales_only:
+        n = refresh_wiki_sales(args.out, WIKI_SALES, args.limit, args.offset)
+        log(f"[*] refreshed Wikipedia sales signals for {n} entries -> {WIKI_SALES}")
         return
     if args.check_links and args.no_enrich:
         n = refresh_link_checks(args.out)
@@ -1112,9 +1437,6 @@ def main():
         if not art:
             continue
         art["author_notable"] = False
-        # phase-2 placeholders
-        art["reddit_points"] = 0
-        art["copies_sold"] = ""
         out.append(art)
         time.sleep(0.2)
 

@@ -22,6 +22,10 @@ const SORT_LABELS = {
   hn_points_sum: "Total HN points",
   hn_comments_sum: "Total HN comments",
   hn_submissions: "HN submissions",
+  reddit_score_sum: "Total Reddit score",
+  reddit_comments_sum: "Total Reddit comments",
+  reddit_submissions: "Reddit submissions",
+  copies_sold: "Copies sold",
   wayback_captures: "Wayback captures",
   author_notable: "Notable author",
 };
@@ -50,6 +54,37 @@ async function loadHnMetrics() {
   await loadSidecar("data/hn_postmortem_threads.toml", "hn_postmortem", BLANK_HN);
 }
 
+const BLANK_REDDIT = {
+  reddit_score: 0,
+  reddit_comments: 0,
+  reddit_score_sum: 0,
+  reddit_comments_sum: 0,
+  reddit_submissions: 0,
+  reddit_threads: [],
+};
+
+const BLANK_SALES = {
+  copies_sold: 0,
+  sales_note: "",
+  wiki_title: "",
+  wiki_url: "",
+};
+
+async function loadOptionalSidecar(path, table, defaults = {}) {
+  try {
+    await loadSidecar(path, table, defaults);
+  } catch (e) {
+    // Optional, best-effort signals; absence should not brick the catalogue.
+    DATA = DATA.map(d => ({ ...defaults, ...d }));
+
+  }
+}
+
+async function loadPhaseTwoMetrics() {
+  await loadOptionalSidecar("data/reddit_postmortem_threads.toml", "reddit_postmortem", BLANK_REDDIT);
+  await loadOptionalSidecar("data/wikipedia_game_sales.toml", "wiki_game_sales", BLANK_SALES);
+}
+
 async function loadMirrorSidecars() {
   await loadSidecar("data/archive_is_mirrors.toml", "archive_mirror");
   await loadSidecar("data/gamedeveloper_live_urls.toml", "gamedeveloper_live");
@@ -61,6 +96,7 @@ async function load() {
     if (!res.ok) throw new Error(res.status);
     DATA = (parse(await res.text()).postmortem) || [];
     await loadHnMetrics();
+    await loadPhaseTwoMetrics();
     await loadMirrorSidecars();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
@@ -162,6 +198,10 @@ const SORT_SIGNAL_LABELS = {
   hn_points_sum: "HN points",
   hn_comments_sum: "HN comments",
   hn_submissions: "HN submissions",
+  reddit_score_sum: "Total Reddit score",
+  reddit_comments_sum: "Total Reddit comments",
+  reddit_submissions: "Reddit submissions",
+  copies_sold: "Copies sold",
   wayback_captures: "Wayback captures",
 };
 
@@ -186,6 +226,31 @@ function hnThreadsHTML(d) {
   });
   if (threads.length > shown.length) shown.push(`<span title="${threads.length} matching HN submissions total">+${threads.length - shown.length} more</span>`);
   return `<span class="discussions"><span class="line-label">HN:</span> ${shown.join(" · ")}</span>`;
+}
+
+function redditThreadsHTML(d) {
+  const threads = d.reddit_threads || [];
+  if (!threads.length) return "";
+  const shown = threads.slice(0, 3).map((t, i) => {
+    const label = threads.length === 1 ? (t.subreddit ? `r/${t.subreddit}` : "thread") : `#${i + 1}`;
+    const detail = `${t.score || 0} pts/${t.comments || 0} c`;
+    return `<a href="${esc(t.permalink)}" target="_blank" rel="noopener" title="${esc(t.title || 'Reddit discussion')}">${label} (${detail})</a>`;
+  });
+  if (threads.length > shown.length) shown.push(`<span title="${threads.length} matching Reddit submissions total">+${threads.length - shown.length} more</span>`);
+  return `<span class="discussions reddit"><span class="line-label">Reddit:</span> ${shown.join(" · ")}</span>`;
+}
+
+function salesHTML(d) {
+  const copies = d.copies_sold || 0;
+  if (!copies) return "";
+  const label = copies >= 1_000_000
+    ? `${(copies / 1_000_000).toLocaleString(undefined, { maximumFractionDigits: 1 })}m sold`
+    : `${copies.toLocaleString()} sold`;
+  const title = d.sales_note || `Wikipedia sales signal${d.wiki_title ? `: ${d.wiki_title}` : ""}`;
+  const body = `<span class="sales-chip" title="${esc(title)}">${esc(label)}</span>`;
+  return d.wiki_url
+    ? `<a class="sales-link" href="${esc(d.wiki_url)}" target="_blank" rel="noopener">${body}</a>`
+    : body;
 }
 
 function usableLink(ok, url) {
@@ -267,9 +332,10 @@ function rowHTML(d) {
   const mirrorLine = mirrorParts.length
     ? `<span class="mirror-links"><span class="line-label">links:</span> ${mirrorParts.join(" · ")}</span>`
     : "";
-  const discussions = hnThreadsHTML(d);
-  const mirrors = mirrorLine || discussions
-    ? `<span class="mirrors">${mirrorLine}${discussions}</span>`
+  const discussions = hnThreadsHTML(d) + redditThreadsHTML(d);
+  const sales = salesHTML(d);
+  const mirrors = mirrorLine || discussions || sales
+    ? `<span class="mirrors">${mirrorLine}${discussions}${sales}</span>`
     : "";
   // vintage dateline + byline: shown above the headline on the mobile card
   // (hidden on desktop, where the columns carry this metadata instead)

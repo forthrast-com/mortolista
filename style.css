@@ -141,8 +141,9 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong)}
 .summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:90ch}
 .game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
-.mirror-links,.discussions{display:block}
+.mirror-links,.discussions,.sales-link{display:block}
 .discussions{margin-top:1px}
+.sales-chip{display:inline-block; margin-top:2px; padding:1px 5px; border:1px solid var(--rule); border-radius:2px; color:var(--strong); background:var(--row-alt)}
 .line-label{color:var(--label); font-size:10px; text-transform:uppercase; letter-spacing:.4px}
 .mirrors a{color:var(--muted); text-decoration:none}
 .mirrors a:hover{color:var(--link); text-decoration:underline}
