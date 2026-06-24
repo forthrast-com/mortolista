@@ -10,6 +10,12 @@ links rotted. This project indexes the postmortems and points each entry at a
 good Internet Archive snapshot.
 
 ## Sort axes
+- **Balanced (default)** — a blended score across the signals below. Each
+  metric only covers a slice of the catalogue (HN points ~16%, copies sold
+  ~37%, captures ~98%), so any single sort leaves most entries tied at zero.
+  The balanced score maps each entry to its percentile *among entries with a
+  signal* on each axis, then takes a weighted average — so an entry rises when
+  it stands out on any axis, and further when it stands out on several.
 - Date (real publish date, or earliest Wayback capture as a proxy)
 - Title / Game / Author / Category
 - Hacker News points & comments

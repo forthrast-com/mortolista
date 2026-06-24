@@ -9,10 +9,11 @@ const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
 
 let DATA = [];
-let sortKey = "hn_points_sum";
+let sortKey = "agg_score";
 let sortDir = -1; // -1 desc, 1 asc
 
 const SORT_LABELS = {
+  agg_score: "Balanced",
   title: "Title",
   authors: "Author",
   category: "Type",
@@ -90,6 +91,71 @@ async function loadMirrorSidecars() {
   await loadSidecar("data/gamedeveloper_live_urls.toml", "gamedeveloper_live");
 }
 
+// ---- Balanced aggregate sort ------------------------------------------------
+// Each metric surfaces a different, often small slice of the catalogue (HN
+// points cover ~16% of entries, copies-sold ~37%, captures ~98%). Sorting by
+// any single one leaves most articles tied at zero. The balanced score blends
+// the axes so an entry rises when it stands out on *any* of them, and rises
+// further when it stands out on several — giving the whole catalogue a
+// meaningful default order instead of an alphabetical blob.
+//
+// Axes are on wildly different scales (captures 0–15 vs copies-sold up to tens
+// of millions), so we can't sum raw values. Instead each entry's value is
+// mapped to its percentile *among the entries that have any signal on that
+// axis*; zeros stay at zero, so an entry only earns credit where it actually
+// shows up. The per-axis scores are then combined as a weighted average.
+const AGG_AXES = [
+  { key: "hn_points_sum", weight: 1.0, label: "HN points" },
+  { key: "copies_sold", weight: 0.9, label: "copies sold" },
+  { key: "wayback_captures", weight: 0.7, label: "captures" },
+  { key: "hn_comments_sum", weight: 0.5, label: "HN discussion" },
+  { key: "reddit_score_sum", weight: 0.5, label: "Reddit score" },
+  { key: "author_notable", weight: 0.5, label: "notable author", binary: true },
+];
+
+// Map each distinct value to its plotting-position percentile in (0,1), with
+// tied values sharing the average rank. Input is the nonzero values only.
+function percentileMap(values) {
+  const sorted = [...values].sort((a, b) => a - b);
+  const n = sorted.length;
+  const map = new Map();
+  for (let i = 0; i < n;) {
+    let j = i;
+    while (j < n && sorted[j] === sorted[i]) j++;
+    const midRank = (i + j - 1) / 2;        // average 0-based rank of the tie
+    map.set(sorted[i], (midRank + 0.5) / n); // Hazen position, always in (0,1)
+    i = j;
+  }
+  return map;
+}
+
+function computeAggregate() {
+  const maps = {};
+  let totalWeight = 0;
+  for (const ax of AGG_AXES) {
+    totalWeight += ax.weight;
+    if (ax.binary) continue;
+    const nonzero = DATA.map(d => Number(d[ax.key]) || 0).filter(v => v > 0);
+    maps[ax.key] = percentileMap(nonzero);
+  }
+  for (const d of DATA) {
+    let score = 0;
+    const contrib = [];
+    for (const ax of AGG_AXES) {
+      const v = Number(d[ax.key]) || 0;
+      const norm = ax.binary ? (v ? 1 : 0) : (v > 0 ? (maps[ax.key].get(v) || 0) : 0);
+      const part = norm * ax.weight;
+      score += part;
+      if (part > 0) contrib.push({ label: ax.label, part });
+    }
+    d.agg_score = totalWeight ? score / totalWeight : 0;
+    // Remember the axes that pushed this entry up, strongest first, so the card
+    // can explain why it landed where it did under the balanced sort.
+    contrib.sort((a, b) => b.part - a.part);
+    d.agg_top = contrib.slice(0, 2).map(c => c.label);
+  }
+}
+
 async function load() {
   try {
     const res = await fetch("data/postmortems.toml", { cache: "no-cache" });
@@ -102,6 +168,7 @@ async function load() {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
   }
+  computeAggregate();
   const cats = [...new Set(DATA.map(d => d.category))].sort();
   for (const c of cats) {
     const o = document.createElement("option"); o.value = o.textContent = c;
@@ -208,6 +275,11 @@ const SORT_SIGNAL_LABELS = {
 // A small chip naming why this entry sorted where it did — only when the
 // active sort isn't already shown on the card and the value is meaningful.
 function sortSignalHTML(d) {
+  if (sortKey === "agg_score") {
+    const top = d.agg_top || [];
+    if (!top.length) return "";
+    return ` <span class="m-sort" title="Balanced rank — strongest signals for this entry">balanced: ${top.map(esc).join(" · ")}</span>`;
+  }
   if (SHOWN_SORTS.has(sortKey)) return "";
   const v = d[sortKey];
   if (!v) return "";

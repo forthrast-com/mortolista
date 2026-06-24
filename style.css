@@ -158,7 +158,10 @@ td.num{text-align:right; font-variant-numeric:tabular-nums; color:var(--strong)}
 /* vintage dateline above the headline — desktop uses the table columns,
    so it's hidden there and revealed in the mobile card layout */
 .meta-top{display:none}
-#sortSel{display:none}
+/* On desktop the column headers are the primary sort UI, but the dropdown stays
+   visible too so the balanced default — and the metric sorts without their own
+   column (Reddit, copies sold, submissions) — remain reachable. */
+#sortSel{flex:0 1 auto}
 
 .empty{padding:30px 12px; text-align:center; color:var(--muted); font-style:italic}
 .status{color:var(--muted); padding:14px 0; font-style:italic}
