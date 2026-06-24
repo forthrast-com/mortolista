@@ -187,9 +187,8 @@ footer .wrap{line-height:1.6}
 @media(max-width:720px){
   .wrap{padding:0 12px}
   #masthead{padding:18px 0 20px}
-  /* keep the title clear of the toggle, and the kicker on its own tidy line */
+  /* keep the title clear of the toggle; the wordmark wraps as one unit */
   #masthead h1{font-size:32px; line-height:1.08; padding-right:44px; text-wrap:balance}
-  #masthead .sub{display:block; margin-top:2px; letter-spacing:-.5px}
   .tagline{font-size:13px; line-height:1.45; max-width:34em; text-wrap:pretty}
   .theme-toggle{top:2px; right:12px}
 
@@ -199,6 +198,17 @@ footer .wrap{line-height:1.6}
      full-width, so the desktop label + detail-row echo are redundant */
   .sort-label,.why-balanced{display:none}
   #search,#category,#sortSel{width:100%; min-width:0; font-size:16px; min-height:40px}
+  /* leading icons on the mobile controls (data-URI SVGs, tinted per theme) */
+  #search,#category,#sortSel{
+    background-repeat:no-repeat; background-position:11px center; background-size:16px;
+    padding-left:36px;
+  }
+  #search{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>")}
+  #category{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 4 21 4 14 12 14 20 10 18 10 12'/></svg>")}
+  #sortSel{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='14' y2='12'/><line x1='4' y1='18' x2='9' y2='18'/></svg>")}
+  :root[data-theme="dark"] #search{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>")}
+  :root[data-theme="dark"] #category{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 4 21 4 14 12 14 20 10 18 10 12'/></svg>")}
+  :root[data-theme="dark"] #sortSel{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='14' y2='12'/><line x1='4' y1='18' x2='9' y2='18'/></svg>")}
   #sortSel{display:block; flex:1 1 100%}
   #search{flex:1 1 100%}
   #category{flex:1 1 100%}
