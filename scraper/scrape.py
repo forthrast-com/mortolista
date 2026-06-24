@@ -28,6 +28,7 @@ DATA = ROOT / "data"
 HN_POSTS = DATA / "hn_gamasutra_posts.toml"
 HN_METRICS = DATA / "hn_postmortem_threads.toml"
 REDDIT_METRICS = DATA / "reddit_postmortem_threads.toml"
+REDDIT_POSTS = DATA / "reddit_gamasutra_posts.toml"
 WIKI_SALES = DATA / "wikipedia_game_sales.toml"
 ARCHIVE_MIRRORS = DATA / "archive_is_mirrors.toml"
 GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
@@ -723,145 +724,132 @@ def hn_stats(article, hn_posts):
 
 
 # ------------------------------------------------------------- Reddit enrich
-REDDIT_SEARCH_API = "https://www.reddit.com/search.json"
-REDDIT_PAGE_SIZE = 100
+# Reddit submissions are harvested in bulk from the Arctic Shift archive
+# (https://arctic-shift.photon-reddit.com), which indexes historical Reddit
+# posts by linked URL.  One query per gamasutra.com host variant returns every
+# post that linked to the site; those are cached and matched to articles by
+# Gamasutra feature id/path, mirroring the Hacker News pipeline.
+REDDIT_API = "https://arctic-shift.photon-reddit.com/api/posts/search"
+REDDIT_FIELDS = "id,subreddit,author,title,score,num_comments,created_utc,url"
+# Posts link to the site under both schemes and with/without www; Arctic Shift
+# matches on the supplied URL, so query each variant and dedupe by post id.
+REDDIT_URL_QUERIES = [
+    "https://www.gamasutra.com",
+    "http://www.gamasutra.com",
+    "https://gamasutra.com",
+    "http://gamasutra.com",
+]
 
 
-def reddit_url_candidates(article):
-    """URLs worth searching Reddit for.
-
-    Reddit's public search is fuzzy and incomplete, so keep this deliberately
-    conservative: canonical Gamasutra paths, migrated alt ids, and archived
-    variants.  The matcher below still verifies feature ids/paths before taking
-    a hit seriously.
-    """
-    urls = []
-    original = article.get("original_url", "")
-    if original:
-        urls.append(original)
-        urls.append(print_url(original))
-        urls.append(original.replace("http://", "https://"))
-    for aid in article.get("alt_ids", []) or []:
-        if original:
-            alt = re.sub(r"/view/feature/\d+/", f"/view/feature/{aid}/", original)
-            urls.extend([alt, print_url(alt), alt.replace("http://", "https://")])
-    if article.get("wayback"):
-        urls.append(article["wayback"])
-    if article.get("wayback_print"):
-        urls.append(article["wayback_print"])
-    out, seen = [], set()
-    for url in urls:
-        if url and url not in seen:
-            seen.add(url)
-            out.append(url)
-    return out
-
-
-def reddit_search_url(url, after=None):
-    params = {
-        "q": f'url:"{url}"',
-        "type": "link",
-        "sort": "top",
-        "limit": str(REDDIT_PAGE_SIZE),
-        "raw_json": "1",
-    }
-    if after:
-        params["after"] = after
-    r = SESSION.get(REDDIT_SEARCH_API, params=params, timeout=30)
-    if r.status_code == 429:
-        time.sleep(2)
-    r.raise_for_status()
-    return r.json()
-
-
-def reddit_hit_matches_article(article, hit):
-    submitted = (hit.get("url") or "").lower()
-    permalink = (hit.get("permalink") or "").lower()
-    hay = submitted + " " + permalink
-    ids, paths = article_hn_keys(article)
-    return bool(ids & hn_feature_ids(hay)) or any(path in hay for path in paths)
-
-
-def fetch_reddit_article_threads(article, max_pages=2):
-    """Best-effort Reddit submissions for one article.
-
-    Public Reddit search has limited historical recall and score fuzzing.  These
-    rows are an attention signal, not a canonical traffic/accounting source.
-    """
+def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES):
+    """Every Reddit post linking to gamasutra.com, via the Arctic Shift API."""
     by_id = {}
-    failures = 0
-    for url in reddit_url_candidates(article):
-        after = None
-        for _ in range(max_pages):
-            try:
-                data = reddit_search_url(url, after)
-            except requests.RequestException as exc:
-                failures += 1
-                log(f"  [!] reddit search failed for {article.get('id')}: {exc}")
-                break
-            listing = data.get("data", {})
-            for child in listing.get("children", []) or []:
-                hit = child.get("data", {}) or {}
-                if not reddit_hit_matches_article(article, hit):
-                    continue
-                rid = str(hit.get("id") or hit.get("name") or hit.get("permalink") or "")
-                if not rid:
-                    continue
-                row = {
-                    "reddit_id": rid,
-                    "subreddit": hit.get("subreddit") or "",
-                    "title": clean(hit.get("title") or ""),
-                    "url": hit.get("url") or "",
-                    "permalink": "https://www.reddit.com" + (hit.get("permalink") or ""),
-                    "score": int(hit.get("score") or 0),
-                    "comments": int(hit.get("num_comments") or 0),
-                    "created_utc": int(hit.get("created_utc") or 0),
-                }
-                old = by_id.get(rid)
-                if not old or (row["score"], row["comments"]) > (old["score"], old["comments"]):
-                    by_id[rid] = row
-            after = listing.get("after")
-            if not after:
-                break
-            time.sleep(0.2)
-        time.sleep(0.2)
-    return sorted(by_id.values(), key=lambda r: (r["score"], r["comments"]), reverse=True), failures
+    for base in url_queries:
+        params = {"url": base, "limit": "auto", "fields": REDDIT_FIELDS}
+        try:
+            r = SESSION.get(REDDIT_API, params=params, timeout=120)
+            r.raise_for_status()
+        except requests.RequestException as exc:
+            log(f"  [!] arctic-shift query failed for {base}: {exc}")
+            continue
+        payload = r.json()
+        items = payload.get("data", payload) if isinstance(payload, dict) else payload
+        for it in items or []:
+            rid = str(it.get("id") or "")
+            if not rid:
+                continue
+            row = {
+                "id": rid,
+                "subreddit": it.get("subreddit") or "",
+                "author": it.get("author") or "",
+                "title": clean(it.get("title") or ""),
+                "score": int(it.get("score") or 0),
+                "num_comments": int(it.get("num_comments") or 0),
+                "created_utc": int(it.get("created_utc") or 0),
+                "url": it.get("url") or "",
+            }
+            old = by_id.get(rid)
+            # The same post can surface under several host variants; keep the
+            # highest-scored copy (scores drift between captures).
+            if not old or row["score"] > old["score"]:
+                by_id[rid] = row
+        time.sleep(0.5)
+    return sorted(by_id.values(), key=lambda p: p["score"], reverse=True)
 
 
-def reddit_stats(article):
-    threads, failures = fetch_reddit_article_threads(article)
+def write_reddit_posts(path=REDDIT_POSTS):
+    posts = fetch_reddit_gamasutra_posts()
+    if not posts:
+        raise RuntimeError("arctic-shift returned no gamasutra posts; not writing an empty cache")
+    Path(path).write_bytes(tomli_w.dumps({"reddit_post": posts}).encode())
+    log(f"[*] cached {len(posts)} reddit gamasutra posts -> {path}")
+    return posts
+
+
+def load_reddit_posts(path=REDDIT_POSTS, refresh=False):
+    if refresh or not Path(path).exists():
+        return write_reddit_posts(path)
+    return load_toml(path).get("reddit_post", [])
+
+
+def reddit_stats(article, reddit_posts):
+    """Reddit attention across cached posts that link to this article.
+
+    Matches the Hacker News logic: a post counts when its linked URL carries
+    one of the article's Gamasutra feature ids or canonical paths.  The `*_sum`
+    fields total attention across duplicate submissions; the bare fields are
+    the single strongest thread.
+    """
+    ids, paths = article_hn_keys(article)
+    matched, seen = [], set()
+    for post in reddit_posts:
+        url = (post.get("url") or "").lower()
+        if not (ids & hn_feature_ids(url) or any(p in url for p in paths)):
+            continue
+        rid = str(post.get("id") or "")
+        if not rid or rid in seen:
+            continue
+        seen.add(rid)
+        matched.append({
+            "reddit_id": rid,
+            "subreddit": post.get("subreddit") or "",
+            "author": post.get("author") or "",
+            "title": clean(post.get("title") or ""),
+            "url": post.get("url") or "",
+            "permalink": f"https://www.reddit.com/comments/{rid}/",
+            "score": int(post.get("score") or 0),
+            "comments": int(post.get("num_comments") or 0),
+            "created_utc": int(post.get("created_utc") or 0),
+        })
+    matched.sort(key=lambda t: (t["score"], t["comments"]), reverse=True)
     return {
         "id": article["id"],
-        "reddit_score": max((t["score"] for t in threads), default=0),
-        "reddit_comments": max((t["comments"] for t in threads), default=0),
-        "reddit_score_sum": sum(t["score"] for t in threads),
-        "reddit_comments_sum": sum(t["comments"] for t in threads),
-        "reddit_submissions": len(threads),
-        "reddit_threads": threads,
-        "reddit_search_failures": failures,
+        "reddit_score": max((t["score"] for t in matched), default=0),
+        "reddit_comments": max((t["comments"] for t in matched), default=0),
+        "reddit_score_sum": sum(t["score"] for t in matched),
+        "reddit_comments_sum": sum(t["comments"] for t in matched),
+        "reddit_submissions": len(matched),
+        "reddit_threads": matched,
     }
 
 
-def refresh_reddit_metrics(data_path, out_path=REDDIT_METRICS, limit=0):
+def reddit_metric_rows(articles, reddit_posts):
+    return [reddit_stats(a, reddit_posts) for a in articles]
+
+
+def refresh_reddit_metrics(data_path, out_path=REDDIT_METRICS, limit=0, refresh_posts=True):
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
     if limit:
         articles = articles[:limit]
-    rows = []
-    total_failures = 0
-    for i, article in enumerate(articles, 1):
-        log(f"[*] reddit {i}/{len(articles)} {article.get('id')} {article.get('game') or article.get('title')}")
-        row = reddit_stats(article)
-        total_failures += row.get("reddit_search_failures", 0)
-        rows.append(row)
-    if rows and total_failures and total_failures >= sum(len(reddit_url_candidates(a)) for a in articles):
-        raise RuntimeError("reddit search failed for every URL; not writing an all-zero sidecar")
+    reddit_posts = load_reddit_posts(refresh=refresh_posts)
+    rows = reddit_metric_rows(articles, reddit_posts)
+    matched = sum(1 for r in rows if r["reddit_submissions"])
+    log(f"[*] reddit: {len(reddit_posts)} cached posts, {matched}/{len(rows)} articles matched")
     Path(out_path).write_bytes(tomli_w.dumps({"reddit_postmortem": rows}).encode())
     return len(rows)
 
 
-
-# --------------------------------------------------------------- local HN audit
 def postmortem_ids_from_cdx_cache():
     """Feature ids from the local CDX postmortem URL cache. No network."""
     cache = CACHE / "cdx_postmortems.txt"

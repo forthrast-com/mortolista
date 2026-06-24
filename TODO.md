@@ -18,8 +18,12 @@ postmortem features, linking out via the Wayback Machine.
       https://postmortem.forthrast.com)
 
 ## Phase 2 — curated / manual (deferred, columns present but empty)
-- [ ] **Reddit upvotes** — best-effort via reddit search-by-URL; historical
-      coverage is spotty (Pushshift dead). Field: `reddit_points`.
+- [x] **Reddit upvotes** — bulk-harvested from the Arctic Shift archive
+      (`api/posts/search?url=…gamasutra.com`), cached to
+      `data/reddit_gamasutra_posts.toml`, matched to articles by feature
+      id/path, and written to `data/reddit_postmortem_threads.toml`
+      (`reddit_score_sum`, `reddit_comments_sum`, `reddit_submissions`,
+      `reddit_threads`). Run `just reddit`.
 - [ ] **Game copies sold** — no reliable free API; curate manually for notable
       titles. Field: `copies_sold`.
 - [ ] **Real backlink counts** — needs paid SEO API (Ahrefs/Moz). Currently

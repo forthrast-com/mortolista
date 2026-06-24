@@ -24,7 +24,8 @@ good Internet Archive snapshot.
 - Hacker News points & comments
 - Wayback capture count (a rough "how linked / re-crawled" proxy)
 - Notable author (Wikipedia presence)
-- *(Phase 2, curated:* Reddit upvotes, copies sold *)*
+- Reddit score & comments (via the Arctic Shift archive)
+- *(Phase 2, curated:* copies sold *)*
 
 ## Layout
 ```
@@ -32,6 +33,8 @@ scraper/scrape.py      # Wayback CDX + per-article parse + HN/Wikipedia enrich
 data/postmortems.toml          # the dataset (hand-editable TOML)
 data/postmortem_url_includes.toml  # curated postmortem-canon URLs missed by slug search
 data/hn_gamasutra_posts.toml   # cached HN stories whose URLs mention gamasutra.com
+data/reddit_gamasutra_posts.toml   # cached Reddit posts linking to gamasutra.com (Arctic Shift)
+data/reddit_postmortem_threads.toml # per-article Reddit score/comments sidecar
 data/hn_postmortem_audit.toml  # local HN/postmortem URL audit + review candidates
 index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
@@ -56,6 +59,7 @@ Useful commands:
 ```bash
 just serve    # static site at http://localhost:8000
 just hn         # refresh data/hn_gamasutra_posts.toml
+just reddit     # harvest Reddit posts (Arctic Shift) -> reddit_postmortem_threads.toml
 just hn-audit   # local audit of HN links vs known postmortem URLs
 just hn-metrics # local-only recompute of HN sums/thread links in data/postmortems.toml
 just check-links # slow network pass for link availability fields
