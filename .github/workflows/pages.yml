@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+# No-build static site: assemble the published files and deploy them with the
+# official Pages actions. Runs on pushes to main; can also be triggered by hand.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions the deploy actions need to publish to Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let an in-progress deploy finish, but only keep the latest queued run.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Pages
+        # enablement turns on Pages (source = GitHub Actions) on the first run
+        # so this works without flipping the repo setting by hand.
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Assemble static site
+        run: |
+          mkdir -p _site
+          cp index.html style.css app.js CNAME _site/
+          cp -r data _site/
+      - uses: actions/upload-pages-artifact@v3
+      - id: deployment
+        uses: actions/deploy-pages@v4

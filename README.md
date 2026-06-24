@@ -1,5 +1,8 @@
 # Gamasutra Postmortem Archive
 
+**Live at [postmortem.forthrast.com](https://postmortem.forthrast.com)**
+(deployed to GitHub Pages via `.github/workflows/pages.yml`).
+
 A sortable index of classic **Gamasutra postmortem features**, preserved and
 linked via the **Wayback Machine**. Styled after the late-90s/00s Gamasutra
 and Longreads — dense, readable, restrained — with modern client-side

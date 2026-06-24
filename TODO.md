@@ -13,7 +13,9 @@ postmortem features, linking out via the Wayback Machine.
 - [x] Wayback capture count (backlinks proxy)
 - [x] Full scrape run -> data/postmortems.toml
 - [x] Static site (00s Gamasutra / Longreads aesthetic, dynamic sort/filter)
-- [ ] Push to github.com/forthrast-com, enable GitHub Pages
+- [x] Push to github.com/forthrast-com, enable GitHub Pages
+      (deployed via `.github/workflows/pages.yml` to
+      https://postmortem.forthrast.com)
 
 ## Phase 2 — curated / manual (deferred, columns present but empty)
 - [ ] **Reddit upvotes** — best-effort via reddit search-by-URL; historical
