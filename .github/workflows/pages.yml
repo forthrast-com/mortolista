@@ -27,11 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Configure Pages
-        # enablement turns on Pages (source = GitHub Actions) on the first run
-        # so this works without flipping the repo setting by hand.
+        # Pages must be enabled once by hand (Settings → Pages → Source:
+        # GitHub Actions); the org token can't create the Pages site itself.
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - name: Assemble static site
         run: |
           mkdir -p _site
