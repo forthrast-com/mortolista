@@ -398,6 +398,28 @@ function cleanTitle(title) {
     .trim();
 }
 
+// True for developer-blog entries (curated /blogs/ postmortems), which read
+// differently from the magazine features and earn a "contributor blog" tag.
+function isContribBlog(d) {
+  return /\/blogs\//.test(d.original_url || "");
+}
+
+// The game name as a subhead — only worth showing when the title doesn't already
+// name the game (common for blogs titled "How I wasted $4k…" rather than the game).
+function displayGame(d) {
+  const game = (d.game || "").trim();
+  if (!game) return "";
+  const title = cleanTitle(d.title);
+  if (!title) return game;
+  const canonical = s => cleanTitle(s).toLowerCase();
+  return canonical(game) === canonical(title) ? "" : game;
+}
+
+function blogBadge(d) {
+  if (!isContribBlog(d)) return "";
+  return `<span class="blog-badge" title="Curated developer/contributor blog post (not a magazine feature)">contributor blog</span>`;
+}
+
 function authorHTML(name) {
   const url = NOTABLE_AUTHORS.get(name);
   if (url) {
@@ -586,6 +608,10 @@ function rowHTML(d) {
       ? (d.date_estimated ? `<span class="est" title="Estimated from earliest Wayback capture">~${d.date}</span>` : d.date)
       : '<span class=zero>—</span>';
   const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
+  // Blogs often don't name their game in the title, so carry the game subhead for
+  // them; features keep it hidden (it just echoed the title there).
+  const game = isContribBlog(d) ? displayGame(d) : "";
+  const gameLine = game ? `<span class="game">${esc(game)}</span>` : "";
   // A series card's headline points at part 1 and lists every part in the detail
   // row; a standalone entry shows its own "links:" line of mirrors.
   const { primary, mirrorLine } = d.is_series
@@ -601,14 +627,15 @@ function rowHTML(d) {
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
     + catBadge(d.category)
+    + blogBadge(d)
     + partBadge(d)
     + seriesBadge(d)
     + sortSignalHTML(d)
     + `</span>`;
   // Type + series badges above the title; shown on desktop, hidden on mobile
   // where the meta line carries the type.
-  const topBadges = (catBadge(d.category) || partBadge(d) || seriesBadge(d))
-    ? `<span class="top-badges">${catBadge(d.category)}${partBadge(d)}${seriesBadge(d)}</span>`
+  const topBadges = (catBadge(d.category) || blogBadge(d) || partBadge(d) || seriesBadge(d))
+    ? `<span class="top-badges">${catBadge(d.category)}${blogBadge(d)}${partBadge(d)}${seriesBadge(d)}</span>`
     : "";
   const byline = d.authors && d.authors.length
     ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`
@@ -636,7 +663,7 @@ function rowHTML(d) {
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell">${topBadges}${metaTop}${title}${byline}</td>
+    <td class="main-cell">${topBadges}${metaTop}${title}${gameLine}${byline}</td>
     <td class="num date-cell">${date}</td>
     ${hnCell}
     ${redditCell}

@@ -207,6 +207,15 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
   color:var(--accent); background:transparent; border:1px solid var(--accent);
   padding:0 5px; border-radius:2px; white-space:nowrap;
 }
+/* developer/contributor blog marker — a muted, dashed meta-tag, deliberately
+   quieter than the solid category chips since it's provenance, not type. */
+.blog-badge{
+  display:inline-block; font-size:10px; letter-spacing:.3px; font-style:italic;
+  color:var(--muted); background:transparent; border:1px dashed var(--rule);
+  padding:0 5px; border-radius:2px; white-space:nowrap;
+}
+.blog-badge::before{content:"["}
+.blog-badge::after{content:"]"}
 .series-parts{display:block; margin-top:2px}
 .series-parts ol{margin:2px 0 0; padding-left:0; list-style:none}
 .series-parts li{display:block; line-height:1.5}
@@ -218,6 +227,7 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .byline{display:block; margin-top:3px; font-size:12px; color:var(--muted); line-height:1.45; overflow-wrap:anywhere}
 .byline .author-name{color:var(--muted)}
 .summary{display:block; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:740px}
+.game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
 .mirror-links,.discussions{display:block}
 .discussions{margin-top:1px}
