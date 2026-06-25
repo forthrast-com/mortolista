@@ -119,8 +119,8 @@ sales_note = "The Elite Edition received a \"Silver\" sales award from the Enter
 
 [[wiki_game_sales]]
 id = "131844"
-wiki_title = "Age of Empires: The Age of Kings"
-wiki_url = "https://en.wikipedia.org/wiki/Age_of_Empires%3A_The_Age_of_Kings"
+wiki_title = "Age of Kings"
+wiki_url = "https://en.wikipedia.org/wiki/Age_of_Kings"
 copies_sold = 0
 sales_note = ""
 
@@ -896,10 +896,10 @@ sales_note = ""
 
 [[wiki_game_sales]]
 id = "132511"
-wiki_title = "Ultima Underworld: The Stygian Abyss"
-wiki_url = "https://en.wikipedia.org/wiki/Ultima_Underworld%3A_The_Stygian_Abyss"
-copies_sold = 500000
-sales_note = "Ultima Underworld sold nearly 500,000 units, and was placed on numerous hall of fame lists."
+wiki_title = "Tomb Raider: Underworld"
+wiki_url = "https://en.wikipedia.org/wiki/Tomb_Raider%3A_Underworld"
+copies_sold = 3800000
+sales_note = "As of September 2021, the game has sold an estimated 3.8 million copies."
 
 [[wiki_game_sales]]
 id = "132515"
@@ -1022,8 +1022,15 @@ sales_note = "Sales moved up to 14,876 units by the end of 2011."
 
 [[wiki_game_sales]]
 id = "5902"
-wiki_title = "The Bard's Tale (2004 video game)"
-wiki_url = "https://en.wikipedia.org/wiki/The_Bard%27s_Tale_%282004_video_game%29"
+wiki_title = "The Path (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/The_Path_%28video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "87650"
+wiki_title = ""
+wiki_url = ""
 copies_sold = 0
 sales_note = ""
 
@@ -1175,6 +1182,13 @@ copies_sold = 100000
 sales_note = "The iPad version sold 100,000 copies in its first six months of release, a rate 17 times faster than the board game version."
 
 [[wiki_game_sales]]
+id = "168330"
+wiki_title = "Waves"
+wiki_url = "https://en.wikipedia.org/wiki/Waves"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "168921"
 wiki_title = ""
 wiki_url = ""
@@ -1213,6 +1227,13 @@ sales_note = ""
 id = "173453"
 wiki_title = "Zack Zero"
 wiki_url = "https://en.wikipedia.org/wiki/Zack_Zero"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "175583"
+wiki_title = ""
+wiki_url = ""
 copies_sold = 0
 sales_note = ""
 
@@ -1301,7 +1322,21 @@ copies_sold = 0
 sales_note = ""
 
 [[wiki_game_sales]]
+id = "191049"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "191265"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "193811"
 wiki_title = ""
 wiki_url = ""
 copies_sold = 0
@@ -1350,11 +1385,39 @@ copies_sold = 1300000
 sales_note = "By July 2012, the game had sold 1.3 million copies worldwide; this surpassed Electronic Arts' sales projections, and was highlighted a contributor to the company's profits in the first half of 2012."
 
 [[wiki_game_sales]]
+id = "199358"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "200658"
 wiki_title = "Guacamelee!"
 wiki_url = "https://en.wikipedia.org/wiki/Guacamelee%21"
 copies_sold = 3800
 sales_note = "This release was limited to 3,800 copies."
+
+[[wiki_game_sales]]
+id = "207899"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "211326"
+wiki_title = "Darkest Dungeon"
+wiki_url = "https://en.wikipedia.org/wiki/Darkest_Dungeon"
+copies_sold = 2000000
+sales_note = "By December 2017, all versions combined had worldwide sales of 2 million copies."
+
+[[wiki_game_sales]]
+id = "216965"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
 
 [[wiki_game_sales]]
 id = "218372"
@@ -1364,7 +1427,147 @@ copies_sold = 120000
 sales_note = "=== Sales === Amnesia: A Machine for Pigs sold 120,000 units in its first week."
 
 [[wiki_game_sales]]
+id = "224920"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "233340"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "233818"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "234086"
+wiki_title = "Z (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Z_%28video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "234421"
+wiki_title = "Middle-earth: Shadow of Mordor"
+wiki_url = "https://en.wikipedia.org/wiki/Middle-earth%3A_Shadow_of_Mordor"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "235408"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "235823"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "235951"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "236427"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "248567"
+wiki_title = "Technobabylon"
+wiki_url = "https://en.wikipedia.org/wiki/Technobabylon"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "254610"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "255364"
+wiki_title = "Far Cry 2"
+wiki_url = "https://en.wikipedia.org/wiki/Far_Cry_2"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "258315"
+wiki_title = "Call of Duty: Modern Warfare II (2022 video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Call_of_Duty%3A_Modern_Warfare_II_%282022_video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "258820"
+wiki_title = "Guitar Hero"
+wiki_url = "https://en.wikipedia.org/wiki/Guitar_Hero"
+copies_sold = 25000000
+sales_note = "The series has sold more than 25 million units worldwide, earning US$2 billion at retail."
+
+[[wiki_game_sales]]
+id = "260239"
+wiki_title = "Swing Racers"
+wiki_url = "https://en.wikipedia.org/wiki/Swing_Racers"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "260265"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "264127"
+wiki_title = "Race the Sun (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Race_the_Sun_%28video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-postmortem-verdun-steam-early-access"
+wiki_title = "Verdun (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Verdun_%28video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "266261"
+wiki_title = "Bulletstorm"
+wiki_url = "https://en.wikipedia.org/wiki/Bulletstorm"
+copies_sold = 300000
+sales_note = "It sold around 300,000 units in February; the Xbox 360 was the platform of choice for most players."
+
+[[wiki_game_sales]]
+id = "267827"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "269575"
 wiki_title = ""
 wiki_url = ""
 copies_sold = 0
@@ -1376,3 +1579,269 @@ wiki_title = "Kickstarter"
 wiki_url = "https://en.wikipedia.org/wiki/Kickstarter"
 copies_sold = 0
 sales_note = ""
+
+[[wiki_game_sales]]
+id = "273917"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "274240"
+wiki_title = "Early access"
+wiki_url = "https://en.wikipedia.org/wiki/Early_access"
+copies_sold = 3000000
+sales_note = "DayZ, a multiplayer zombie-based survival game, gained more than 400,000 sales within one week of being on Early Access, and within a year, had over 3 million sales."
+
+[[wiki_game_sales]]
+id = "294276"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-postmortem-leaving-lyndow"
+wiki_title = "Leaving Lyndow"
+wiki_url = "https://en.wikipedia.org/wiki/Leaving_Lyndow"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "300409"
+wiki_title = "TumbleSeed"
+wiki_url = "https://en.wikipedia.org/wiki/TumbleSeed"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "305424"
+wiki_title = "The Sims 2"
+wiki_url = "https://en.wikipedia.org/wiki/The_Sims_2"
+copies_sold = 200000000
+sales_note = "The 2016 World Video Game Hall of Fame Inductees announced that 200 million copies of The Sims series had been sold, becoming one of the top best-selling video game franchises of all time."
+
+[[wiki_game_sales]]
+id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
+wiki_title = "No One Lives Forever 2: A Spy in H.A.R.M.'s Way"
+wiki_url = "https://en.wikipedia.org/wiki/No_One_Lives_Forever_2%3A_A_Spy_in_H.A.R.M.%27s_Way"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "307191"
+wiki_title = "XCOM: Enemy Unknown"
+wiki_url = "https://en.wikipedia.org/wiki/XCOM%3A_Enemy_Unknown"
+copies_sold = 114000
+sales_note = "In the United States, it sold 114,000 copies and failed to enter the US monthly sales chart."
+
+[[wiki_game_sales]]
+id = "308654"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "310012"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "311143"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "311570"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "314554"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "314649"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "316489"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "326190"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "330427"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "337113"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "337931"
+wiki_title = "Post Mortem (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Post_Mortem_%28video_game%29"
+copies_sold = 500000
+sales_note = "The publisher reported combined global sales for the series above 500,000 units by September 2008."
+
+[[wiki_game_sales]]
+id = "339782"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "340065"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "340291"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "341148"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "360226"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "360682"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "360846"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "368294"
+wiki_title = "Eastshade"
+wiki_url = "https://en.wikipedia.org/wiki/Eastshade"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "369617"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "372977"
+wiki_title = "Children of Morta"
+wiki_url = "https://en.wikipedia.org/wiki/Children_of_Morta"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "374142"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "375680"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "375873"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "384419"
+wiki_title = "Post Mortem (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Post_Mortem_%28video_game%29"
+copies_sold = 500000
+sales_note = "The publisher reported combined global sales for the series above 500,000 units by September 2008."
+
+[[wiki_game_sales]]
+id = "386822"
+wiki_title = "Post Mortem (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Post_Mortem_%28video_game%29"
+copies_sold = 500000
+sales_note = "The publisher reported combined global sales for the series above 500,000 units by September 2008."
+
+[[wiki_game_sales]]
+id = "gd-classic-postmortem-nanaonhas-haunt-2012"
+wiki_title = "Haunt (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Haunt_%28video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
+wiki_title = "The Walking Dead (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/The_Walking_Dead_%28video_game%29"
+copies_sold = 8500000
+sales_note = "By the end of 2012, it had sold over 8.5 million episodes, with total sales reaching 28 million episodes by July 2014."
+
+[[wiki_game_sales]]
+id = "gd-postmortem-harmonix-s-dance-central-2010-"
+wiki_title = "Dance Central (2010 video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Dance_Central_%282010_video_game%29"
+copies_sold = 2500000
+sales_note = "== Sales == Dance Central sold 2.5 million copies."

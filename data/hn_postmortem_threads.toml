@@ -2292,6 +2292,15 @@ comments = 12
 submitted_url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
 
 [[hn_postmortem]]
+id = "234421"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "235408"
 hn_points = 0
 hn_comments = 0
@@ -2335,6 +2344,15 @@ comments = 85
 submitted_url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
 
 [[hn_postmortem]]
+id = "248567"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "254610"
 hn_points = 47
 hn_comments = 8
@@ -2357,6 +2375,33 @@ url = "https://news.ycombinator.com/item?id=10284528"
 points = 1
 comments = 0
 submitted_url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+
+[[hn_postmortem]]
+id = "255364"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "258315"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "258820"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
 
 [[hn_postmortem]]
 id = "260239"
@@ -2389,6 +2434,33 @@ url = "https://news.ycombinator.com/item?id=10788746"
 points = 1
 comments = 0
 submitted_url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+
+[[hn_postmortem]]
+id = "264127"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "gd-postmortem-verdun-steam-early-access"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "266261"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
 
 [[hn_postmortem]]
 id = "267827"
@@ -2427,6 +2499,15 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "274240"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "294276"
 hn_points = 3
 hn_comments = 0
@@ -2443,6 +2524,15 @@ comments = 0
 submitted_url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
 
 [[hn_postmortem]]
+id = "gd-postmortem-leaving-lyndow"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "300409"
 hn_points = 2
 hn_comments = 0
@@ -2457,6 +2547,42 @@ url = "https://news.ycombinator.com/item?id=14640358"
 points = 2
 comments = 0
 submitted_url = "http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php"
+
+[[hn_postmortem]]
+id = "305424"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "307191"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "308654"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
 
 [[hn_postmortem]]
 id = "310012"
@@ -2650,6 +2776,15 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "360226"
 hn_points = 0
 hn_comments = 0
@@ -2770,6 +2905,33 @@ hn_threads = []
 
 [[hn_postmortem]]
 id = "386822"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "gd-classic-postmortem-nanaonhas-haunt-2012"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "gd-postmortem-harmonix-s-dance-central-2010-"
 hn_points = 0
 hn_comments = 0
 hn_points_sum = 0

@@ -4944,6 +4944,24 @@ alt_ids = []
 author_notable = false
 
 [[postmortem]]
+id = "234421"
+title = "Postmortem: Monolith Productions' Middle-earth: Shadow of Mordor"
+game = "Monolith Productions' Middle-earth: Shadow of Mordor"
+authors = []
+date = "2015-01-20"
+date_estimated = true
+category = "Postmortem"
+summary = "What went right and wrong during development of the award-winning open-world game Middle-earth: Shadow of Mordor, an \"enormously educational experience\" for Monolith."
+thumbnail = "https://web.archive.org/web/20150120232417im_/http://www.gamasutra.com/db_area/images/news/2015/Jan/234421/mordor2.jpg"
+original_url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php"
+wayback = "https://web.archive.org/web/20150120232417/http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php"
+wayback_print = "https://web.archive.org/web/20150120232417/http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "235408"
 title = "Octodad: Dadliest Catch Post-Mortem Pt. 1: Summary"
 game = "Octodad: Dadliest Catch Post-Mortem Pt. 1: Summary"
@@ -5039,6 +5057,24 @@ alt_ids = []
 author_notable = false
 
 [[postmortem]]
+id = "248567"
+title = "Postmortem: Technocrat's cyberpunk adventure game Technobabylon"
+game = "Technocrat's cyberpunk adventure game Technobabylon"
+authors = []
+date = "2015-07-15"
+date_estimated = true
+category = "Postmortem"
+summary = "James Dearden of Technocrat Games talks about the highs and lows developing Technobabylon, a classic 1990s-style cyberpunk adventure game that was five years in the making."
+thumbnail = "https://web.archive.org/web/20150715174352im_/http://gamasutra.com/db_area/images/news/2015/Jul/248567/Techno200.jpg"
+original_url = "http://www.gamasutra.com/view/news/248567/Postmortem_Technocrats_cyberpunk_adventure_game_Technobabylon.php"
+wayback = "https://web.archive.org/web/20150715174352/http://www.gamasutra.com/view/news/248567/Postmortem_Technocrats_cyberpunk_adventure_game_Technobabylon.php"
+wayback_print = "https://web.archive.org/web/20150715174352/http://www.gamasutra.com/view/news/248567/Postmortem_Technocrats_cyberpunk_adventure_game_Technobabylon.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "254610"
 title = "Wordsum Postmortem - The 10 year journey of a solo game developer"
 game = "Wordsum Postmortem - The 10 year journey of a solo game developer"
@@ -5053,6 +5089,60 @@ thumbnail = "https://web.archive.org/web/20150928200510im_/http://gamasutra.com/
 original_url = "http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
 wayback = "https://web.archive.org/web/20150928200510/http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
 wayback_print = "https://web.archive.org/web/20150928200510/http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "255364"
+title = "The making of Far Cry 2"
+game = "The making of Far Cry 2"
+authors = []
+date = "2015-10-22"
+date_estimated = true
+category = "Postmortem"
+summary = "'Far Cry 2 is not a typical title,' writes Clint Hocking in this postmortem from Game Developer magazine. In honor of the game's release 7 years ago today, we're republishing the article in full."
+thumbnail = "https://web.archive.org/web/20151022204138im_/http://www.gamasutra.com/db_area/images/news/2015/Oct/255364/FC2PM200.jpg"
+original_url = "http://www.gamasutra.com/view/news/255364/The_making_of_Far_Cry_2.php"
+wayback = "https://web.archive.org/web/20151022204138/http://www.gamasutra.com/view/news/255364/The_making_of_Far_Cry_2.php"
+wayback_print = "https://web.archive.org/web/20151022204138/http://www.gamasutra.com/view/news/255364/The_making_of_Far_Cry_2.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "258315"
+title = "The making of Call of Duty 4: Modern Warfare"
+game = "The making of Call of Duty 4: Modern Warfare"
+authors = []
+date = "2015-11-06"
+date_estimated = true
+category = "Postmortem"
+summary = "Infinity Ward's influential shooter debuted 8 years ago today. The lead designer and technical art director wrote this postmortem of it for Game Developer magazine."
+thumbnail = "https://web.archive.org/web/20151106005732im_/http://www.gamasutra.com/db_area/images/news/2015/Nov/258315/CODMW200.jpg"
+original_url = "http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php"
+wayback = "https://web.archive.org/web/20151106005732/http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php"
+wayback_print = "https://web.archive.org/web/20151106005732/http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "258820"
+title = "Classic Postmortem: Guitar Hero"
+game = "Classic Postmortem: Guitar Hero"
+authors = []
+date = "2015-11-13"
+date_estimated = true
+category = "Postmortem"
+summary = "The genre defining rhythm game turns 10 today. Here's a classic postmortem of the game that first ran in Game Developer magazine."
+thumbnail = "https://web.archive.org/web/20151113015613im_/http://gamasutra.com/db_area/images/news/2015/Nov/258820/GuitH200.jpg"
+original_url = "http://www.gamasutra.com/view/news/258820/Classic_Postmortem_Guitar_Hero.php"
+wayback = "https://web.archive.org/web/20151113015613/http://www.gamasutra.com/view/news/258820/Classic_Postmortem_Guitar_Hero.php"
+wayback_print = "https://web.archive.org/web/20151113015613/http://www.gamasutra.com/view/news/258820/Classic_Postmortem_Guitar_Hero.php?print=1"
 pages = 1
 wayback_captures = 0
 alt_ids = []
@@ -5093,6 +5183,62 @@ thumbnail = "https://web.archive.org/web/20151224140623im_/http://i.imgur.com/zT
 original_url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
 wayback = "https://web.archive.org/web/20151224140623/http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
 wayback_print = "https://web.archive.org/web/20151224140623/http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "264127"
+title = "Postmortem: Flippfly's Race the Sun"
+game = "Flippfly's Race the Sun"
+authors = []
+date = "2016-02-01"
+date_estimated = true
+category = "Postmortem"
+summary = "What went right and wrong during development of the endless runner Race the Sun, from Kickstarter to multi-platform release."
+thumbnail = "https://web.archive.org/web/20160201221034im_/http://www.gamasutra.com/db_area/images/news/2016/Jan/264127/Race the Sun large.jpg"
+original_url = "http://www.gamasutra.com/view/news/264127/Postmortem_Flippflys_Race_the_Sun.php"
+wayback = "https://web.archive.org/web/20160201221034/http://www.gamasutra.com/view/news/264127/Postmortem_Flippflys_Race_the_Sun.php"
+wayback_print = "https://web.archive.org/web/20160201221034/http://www.gamasutra.com/view/news/264127/Postmortem_Flippflys_Race_the_Sun.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "gd-postmortem-verdun-steam-early-access"
+title = "Postmortem Verdun Steam Early Access"
+game = "Verdun Steam Early Access"
+authors = [
+    "Mike Hergaarden",
+]
+date = "2016-02-17"
+date_estimated = false
+category = "Postmortem"
+summary = "Verdun is the first multiplayer FPS set in a realistic First World War setting. The merciless trench warfare offers a unique battlefield experience. This Postmo"
+thumbnail = ""
+original_url = "https://www.gamedeveloper.com/business/postmortem-verdun-steam-early-access"
+wayback = "https://web.archive.org/web/20210827195125/https://www.gamedeveloper.com/business/postmortem-verdun-steam-early-access"
+wayback_print = "https://web.archive.org/web/20210827195125/https://www.gamedeveloper.com/business/postmortem-verdun-steam-early-access?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "266261"
+title = "Classic Postmortem: People Can Fly's Bulletstorm"
+game = "Classic Postmortem: People Can Fly's Bulletstorm"
+authors = []
+date = "2016-02-22"
+date_estimated = true
+category = "Postmortem"
+summary = "This distinctive and underappreciated shooter was released five years ago today. Here's an in-depth postmortem of the game's development by Adrian Chmielarz that first ran in Game Developer magazine."
+thumbnail = "https://web.archive.org/web/20160222235807im_/http://www.gamasutra.com/db_area/images/news/2016/Feb/266261/BStorm200.jpg"
+original_url = "http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php"
+wayback = "https://web.archive.org/web/20160222235807/http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php"
+wayback_print = "https://web.archive.org/web/20160222235807/http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php?print=1"
 pages = 1
 wayback_captures = 0
 alt_ids = []
@@ -5181,6 +5327,24 @@ alt_ids = []
 author_notable = false
 
 [[postmortem]]
+id = "274240"
+title = "Postmortem: Offworld Trading Company 's Early Access campaign"
+game = "Offworld Trading Company 's Early Access campaign"
+authors = []
+date = "2016-06-08"
+date_estimated = true
+category = "Postmortem"
+summary = "Soren Johnson examines Offworld Trading Company's Early Access campaign. He notes what went right and what went wrong... and he also has a few suggestions for Steam."
+thumbnail = "https://web.archive.org/web/20160608140435im_/http://www.gamasutra.com/db_area/images/news/2016/Jun/274240/Offworld200.jpg"
+original_url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+wayback = "https://web.archive.org/web/20160608140435/http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+wayback_print = "https://web.archive.org/web/20160608140435/http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "294276"
 title = "Post-Mortem: Gorescript Classic"
 game = "Post-Mortem: Gorescript Classic"
@@ -5195,6 +5359,26 @@ thumbnail = "https://web.archive.org/web/20170323113743im_/http://www.gamasutra.
 original_url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
 wayback = "https://web.archive.org/web/20170323113743/http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
 wayback_print = "https://web.archive.org/web/20170323113743/http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "gd-postmortem-leaving-lyndow"
+title = "Postmortem: Leaving Lyndow"
+game = "Leaving Lyndow"
+authors = [
+    "Danny Weinbaum",
+]
+date = "2017-05-08"
+date_estimated = false
+category = "Postmortem"
+summary = "Is a small game a better fundraising tool than a crowdfunding campaign? This postmortem takes a look at the six-month development of a very short first-person a"
+thumbnail = ""
+original_url = "https://www.gamedeveloper.com/business/postmortem-leaving-lyndow"
+wayback = "https://web.archive.org/web/20210827180624/https://www.gamedeveloper.com/business/postmortem-leaving-lyndow"
+wayback_print = "https://web.archive.org/web/20210827180624/https://www.gamedeveloper.com/business/postmortem-leaving-lyndow?print=1"
 pages = 1
 wayback_captures = 0
 alt_ids = []
@@ -5219,6 +5403,80 @@ pages = 1
 wayback_captures = 0
 alt_ids = []
 author_notable = true
+
+[[postmortem]]
+id = "305424"
+title = "Classic Postmortem: How Maxis avoided sequel-itis on The Sims 2"
+game = "Classic Postmortem: How Maxis avoided sequel-itis on The Sims 2"
+authors = []
+date = "2017-09-14"
+date_estimated = true
+category = "Postmortem"
+summary = "On this day in 2004, EA released The Sims 2. In this classic postmortem from Game Developer magazine, Lucy Bradshaw and the Maxis team recount what we"
+thumbnail = "https://web.archive.org/web/20170914105132im_/http://www.gamasutra.com/db_area/images/news/2017/Sep/305424/Sims2200.jpg"
+original_url = "http://www.gamasutra.com/view/news/305424/Classic_Postmortem_How_Maxis_avoided_sequelitis_on_The_Sims_2.php"
+wayback = "https://web.archive.org/web/20170914105132/http://www.gamasutra.com/view/news/305424/Classic_Postmortem_How_Maxis_avoided_sequelitis_on_The_Sims_2.php"
+wayback_print = "https://web.archive.org/web/20170914105132/http://www.gamasutra.com/view/news/305424/Classic_Postmortem_How_Maxis_avoided_sequelitis_on_The_Sims_2.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
+title = "Classic Postmortem: <i>No One Lives Forever 2: A Spy in HARM's Way</i>"
+game = "Classic Postmortem: No One Lives Forever 2: A Spy in HARM's Way"
+authors = [
+    "Simon Carless",
+]
+date = "2017-09-29"
+date_estimated = false
+category = "Postmortem"
+summary = "Fifteen years ago today, the campy shooter No One Lives Forever 2: A Spy in H.A.R.M.’S Way was released. To celebrate its anniversary, we present this cl"
+thumbnail = "https://web.archive.org/web/20210827102636im_/http://www.gamasutra.com/db_area/images/news/306736/NOLF8.PNG"
+original_url = "https://www.gamedeveloper.com/design/classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-"
+wayback = "https://web.archive.org/web/20210827102636/https://www.gamedeveloper.com/design/classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-"
+wayback_print = "https://web.archive.org/web/20210827102636/https://www.gamedeveloper.com/design/classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "307191"
+title = "Classic Postmortem: XCOM: Enemy Unknown , which turns 5 today"
+game = "Classic Postmortem: XCOM: Enemy Unknown , which turns 5 today"
+authors = []
+date = "2017-10-09"
+date_estimated = true
+category = "Postmortem"
+summary = "5 years ago today, Firaxis released XCOM: Enemy Unknown, a reimagining of the 1994 strategy classic. To celebrate its anniversary, we present this cla"
+thumbnail = "https://web.archive.org/web/20171009133430im_/https://www.gamasutra.com/db_area/images/news/307191/XCOMEU3.jpg"
+original_url = "http://www.gamasutra.com/view/news/307191/Classic_Postmortem_XCOM_Enemy_Unknown_which_turns_5_today.php"
+wayback = "https://web.archive.org/web/20171009133430/http://www.gamasutra.com/view/news/307191/Classic_Postmortem_XCOM_Enemy_Unknown_which_turns_5_today.php"
+wayback_print = "https://web.archive.org/web/20171009133430/http://www.gamasutra.com/view/news/307191/Classic_Postmortem_XCOM_Enemy_Unknown_which_turns_5_today.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "308654"
+title = "Postmortem: Building The Turing Test around a secret mechanic"
+game = "Building The Turing Test around a secret mechanic"
+authors = []
+date = "2017-11-03"
+date_estimated = true
+category = "Postmortem"
+summary = "Our most unique central mechanic could not be shown in marketing, reviews or previews because the mechanic is tightly integrated with the story. - Dav"
+thumbnail = "https://web.archive.org/web/20171103122742im_/https://www.gamasutra.com/db_area/images/news/308654/Turing%20Test%204.jpg"
+original_url = "http://www.gamasutra.com/view/news/308654/Postmortem_Building_The_Turing_Test_around_a_secret_mechanic.php"
+wayback = "https://web.archive.org/web/20171103122742/http://www.gamasutra.com/view/news/308654/Postmortem_Building_The_Turing_Test_around_a_secret_mechanic.php"
+wayback_print = "https://web.archive.org/web/20171103122742/http://www.gamasutra.com/view/news/308654/Postmortem_Building_The_Turing_Test_around_a_secret_mechanic.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
 
 [[postmortem]]
 id = "310012"
@@ -5526,6 +5784,26 @@ alt_ids = []
 author_notable = false
 
 [[postmortem]]
+id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
+title = "Indie Postmortem: Sydney Hunter and the Curse of the Mayan (2019)"
+game = "Sydney Hunter and the Curse of the Mayan (2019)"
+authors = [
+    "John Lester",
+]
+date = "2019-10-21"
+date_estimated = false
+category = "Postmortem"
+summary = "Sydney Hunter was released on the Switch and Steam, and our first game released for modern platforms. As co-owner and head of marketing, I share my experience"
+thumbnail = ""
+original_url = "https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-"
+wayback = "https://web.archive.org/web/20210827180452/https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-"
+wayback_print = "https://web.archive.org/web/20210827180452/https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "360226"
 title = "Postmortem: A Rationally Designed Funny Game - The making of 'biped', in hindsight"
 game = "A Rationally Designed Funny Game - The making of 'biped', in hindsight"
@@ -5740,6 +6018,60 @@ thumbnail = "https://web.archive.org/web/20210817152549im_/http://www.gamasutra.
 original_url = "http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php"
 wayback = "https://web.archive.org/web/20210817152549/http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php"
 wayback_print = "https://web.archive.org/web/20210817152549/http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "gd-classic-postmortem-nanaonhas-haunt-2012"
+title = "Classic Postmortem: NanaOnSha's Haunt (2012)"
+game = "Classic Postmortem: NanaOnSha's Haunt (2012)"
+authors = []
+date = "2024-10-24"
+date_estimated = false
+category = "Postmortem"
+summary = "In this postmortem from Game Developer Magazine's June/July 2012 issue, get the autopsy on this spooky, little-known Kinect title."
+thumbnail = "https://web.archive.org/web/20241024205815im_/https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt7f262a13ece88e9c/671a82b921e24d7c4973c134/Game_Developer_Magazine_Cover_June_July_2012.png?disable=upscale&width=1200&height=630&fit=crop"
+original_url = "https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012"
+wayback = "https://web.archive.org/web/20241024205815/https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012"
+wayback_print = "https://web.archive.org/web/20241024205815/https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
+title = "Classic Postmortem: Telltale Games' The Walking Dead (2012)"
+game = "Classic Postmortem: Telltale Games' The Walking Dead (2012)"
+authors = []
+date = "2024-10-25"
+date_estimated = false
+category = "Postmortem"
+summary = "In this postmortem from Game Developer Magazine's March 2013 issue, get an insightful, behind-the-scenes look its design process."
+thumbnail = "https://web.archive.org/web/20241026193332im_/https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt704e3b63b6ab4acf/6710031906302a0ea593bae5/Game_Developer_Magazine_Cover_March_2013.png?disable=upscale&width=1200&height=630&fit=crop"
+original_url = "https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012"
+wayback = "https://web.archive.org/web/20241026193332/https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012"
+wayback_print = "https://web.archive.org/web/20241026193332/https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "gd-postmortem-harmonix-s-dance-central-2010-"
+title = "Postmortem: Harmonix's Dance Central (2010)"
+game = "Harmonix's Dance Central (2010)"
+authors = []
+date = "2024-11-21"
+date_estimated = false
+category = "Postmortem"
+summary = "This Dance Central postmortem was first published in Game Developer Magazine in January 2011."
+thumbnail = "https://web.archive.org/web/20241121170356im_/https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltc65a6c2903d51499/673ce42a198dc8431a7c963a/Game_Developer_Magazine_Cover_January_2011.png?disable=upscale&width=1200&height=630&fit=crop"
+original_url = "https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-"
+wayback = "https://web.archive.org/web/20241121170356/https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-"
+wayback_print = "https://web.archive.org/web/20241121170356/https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-?print=1"
 pages = 1
 wayback_captures = 0
 alt_ids = []

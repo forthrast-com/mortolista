@@ -1305,11 +1305,22 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "130440"
-reddit_score = 11
+reddit_score = 18
 reddit_comments = 2
-reddit_score_sum = 11
-reddit_comments_sum = 2
-reddit_submissions = 1
+reddit_score_sum = 29
+reddit_comments_sum = 3
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "eugahn"
+subreddit = "Toontown"
+author = "Flippy_Doggenpop"
+title = "Since i've been sharing old Toontown Online stuff, here is an article talking about the behind the scenes of the game."
+url = "https://www.gamasutra.com/view/feature/130440/postmortem_disney_onlines_.php?print=1"
+permalink = "https://www.reddit.com/comments/eugahn/"
+score = 18
+comments = 1
+created_utc = 1580086936
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "1nt9e4"
@@ -2921,12 +2932,33 @@ created_utc = 1329941087
 
 [[reddit_postmortem]]
 id = "168330"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 165
+reddit_comments = 76
+reddit_score_sum = 178
+reddit_comments_sum = 80
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "s6vr9"
+subreddit = "Games"
+author = "nightless_night"
+title = "Indie developer Robert Hale walks through his sales on Steam"
+url = "http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+permalink = "https://www.reddit.com/comments/s6vr9/"
+score = 165
+comments = 76
+created_utc = 1334267801
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "s7f0b"
+subreddit = "gamedev"
+author = "MrValdez"
+title = "Indie developer Robert Hale walks through his sales on Steam (crosspost from /r/Games)"
+url = "http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+permalink = "https://www.reddit.com/comments/s7f0b/"
+score = 13
+comments = 4
+created_utc = 1334289207
 
 [[reddit_postmortem]]
 id = "168921"
@@ -3004,12 +3036,66 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "175583"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 6
+reddit_comments = 1
+reddit_score_sum = 10
+reddit_comments_sum = 1
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "y6rcb"
+subreddit = "IndieGaming"
+author = "brews"
+title = "\"Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem\""
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+permalink = "https://www.reddit.com/comments/y6rcb/"
+score = 6
+comments = 1
+created_utc = 1344920334
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "y6ra3"
+subreddit = "IndieGaming"
+author = "[deleted]"
+title = "Gamasutra: Linh Ngo's Blog - Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+permalink = "https://www.reddit.com/comments/y6ra3/"
+score = 1
+comments = 0
+created_utc = 1344920277
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "xzm0a"
+subreddit = "technology"
+author = "nextparadigms"
+title = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+permalink = "https://www.reddit.com/comments/xzm0a/"
+score = 1
+comments = 0
+created_utc = 1344589131
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "xzm07"
+subreddit = "androiddev"
+author = "nextparadigms"
+title = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+permalink = "https://www.reddit.com/comments/xzm07/"
+score = 1
+comments = 0
+created_utc = 1344589125
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "xzlzt"
+subreddit = "Android"
+author = "nextparadigms"
+title = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+permalink = "https://www.reddit.com/comments/xzlzt/"
+score = 1
+comments = 0
+created_utc = 1344589104
 
 [[reddit_postmortem]]
 id = "179030"
@@ -3309,12 +3395,22 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "193811"
-reddit_score = 0
+reddit_score = 3
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 3
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1ftq3o"
+subreddit = "Minecraft"
+author = "vonguard"
+title = "Minecraft Oakland: An in-depth look at the entire project. /r/minecraft made it happen! Here's the Post Mortem."
+url = "http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php"
+permalink = "https://www.reddit.com/comments/1ftq3o/"
+score = 3
+comments = 0
+created_utc = 1370560138
 
 [[reddit_postmortem]]
 id = "193695"
@@ -3474,21 +3570,63 @@ created_utc = 1547848274
 
 [[reddit_postmortem]]
 id = "207899"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 93
+reddit_comments = 17
+reddit_score_sum = 93
+reddit_comments_sum = 17
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1u8gh1"
+subreddit = "Games"
+author = "danwin"
+title = "A painful postmortem: How Indoor Sports World (for PS Vita) drove its devs to the edge"
+url = "http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php"
+permalink = "https://www.reddit.com/comments/1u8gh1/"
+score = 93
+comments = 17
+created_utc = 1388677681
 
 [[reddit_postmortem]]
 id = "211326"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 11
+reddit_comments = 1
+reddit_score_sum = 23
+reddit_comments_sum = 1
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1zu6ad"
+subreddit = "IndieGaming"
+author = "Paludosa2"
+title = "A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+permalink = "https://www.reddit.com/comments/1zu6ad/"
+score = 11
+comments = 1
+created_utc = 1394225248
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2vbw1c"
+subreddit = "SRSGaming"
+author = "jmarquiso"
+title = "Gamasutra: Tyler Sigman's Blog - A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+permalink = "https://www.reddit.com/comments/2vbw1c/"
+score = 9
+comments = 0
+created_utc = 1423509785
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2fmlft"
+subreddit = "darkestdungeon"
+author = "Myrandall"
+title = "A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+permalink = "https://www.reddit.com/comments/2fmlft/"
+score = 3
+comments = 0
+created_utc = 1409997406
 
 [[reddit_postmortem]]
 id = "216965"
@@ -3558,12 +3696,96 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "234086"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 182
+reddit_comments = 213
+reddit_score_sum = 182
+reddit_comments_sum = 216
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2seb8s"
+subreddit = "Games"
+author = "SeaOfSaere"
+title = "The War Z developer has written a postmortem"
+url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+permalink = "https://www.reddit.com/comments/2seb8s/"
+score = 182
+comments = 213
+created_utc = 1421241392
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2siale"
+subreddit = "Cynicalbrit"
+author = "AoyagiAichou"
+title = "Postmortem: Launching The War Z"
+url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+permalink = "https://www.reddit.com/comments/2siale/"
+score = 0
+comments = 3
+created_utc = 1421323513
+
+[[reddit_postmortem]]
+id = "234421"
+reddit_score = 18
+reddit_comments = 9
+reddit_score_sum = 36
+reddit_comments_sum = 11
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2t1e4b"
+subreddit = "gamedesign"
+author = "cryptokeirency"
+title = "Gamasutra - Postmortem: Monolith Productions' Middle-Earth: Shadow of Mordor"
+url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_MiddleEarth_Shadow_of_Mordor.php"
+permalink = "https://www.reddit.com/comments/2t1e4b/"
+score = 18
+comments = 2
+created_utc = 1421749042
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "5cwrbv"
+subreddit = "TheMakingOfGames"
+author = "Emperor-Octavian"
+title = "Middle-earth: Shadow of Mordor, Monolith Productions' Post-Mortem [text]"
+url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php"
+permalink = "https://www.reddit.com/comments/5cwrbv/"
+score = 10
+comments = 0
+created_utc = 1479140416
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2t2apk"
+subreddit = "Games"
+author = "[deleted]"
+title = "Postmortem: Monolith Productions' Middle-earth: Shadow of Mordor - Gamasutra"
+url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_MiddleEarth_Shadow_of_Mordor.php"
+permalink = "https://www.reddit.com/comments/2t2apk/"
+score = 7
+comments = 0
+created_utc = 1421771774
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2t79yt"
+subreddit = "cahiersduludica"
+author = "jmarquiso"
+title = "Postmortem: Monolith Productions' Middle-earth: Shadow of Mordor"
+url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php?elq=d0b584cdc58c4ae7b893448fa3bd1ada&elqCampaignId=12148"
+permalink = "https://www.reddit.com/comments/2t79yt/"
+score = 1
+comments = 0
+created_utc = 1421868426
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2t2qlz"
+subreddit = "pcgaming"
+author = "bws201"
+title = "Postmortem: Monolith Productions' Middle-earth: Shadow of Mordor"
+url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php"
+permalink = "https://www.reddit.com/comments/2t2qlz/"
+score = 0
+comments = 9
+created_utc = 1421778925
 
 [[reddit_postmortem]]
 id = "235408"
@@ -3585,6 +3807,25 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "235951"
+reddit_score = 38
+reddit_comments = 10
+reddit_score_sum = 38
+reddit_comments_sum = 10
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2vgah8"
+subreddit = "Games"
+author = "Forestl"
+title = "Octodad: Dadliest Catch Post-Mortem From Director of Game"
+url = "http://www.gamasutra.com/blogs/KevinZuhn/20150210/235951/Octodad_Dadliest_Catch_PostMortem_Pt_3_Design.php"
+permalink = "https://www.reddit.com/comments/2vgah8/"
+score = 38
+comments = 10
+created_utc = 1423598932
+
+[[reddit_postmortem]]
+id = "236427"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3593,7 +3834,7 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
-id = "236427"
+id = "248567"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3611,7 +3852,209 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
+id = "255364"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4g27iu"
+subreddit = "farcry2"
+author = "PrefersDigg"
+title = "Gamasutra - The making of Far Cry 2"
+url = "http://www.gamasutra.com/view/news/255364/The_making_of_Far_Cry_2.php"
+permalink = "https://www.reddit.com/comments/4g27iu/"
+score = 1
+comments = 0
+created_utc = 1461388274
+
+[[reddit_postmortem]]
+id = "258315"
+reddit_score = 44
+reddit_comments = 4
+reddit_score_sum = 76
+reddit_comments_sum = 5
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3rn5jw"
+subreddit = "TheMakingOfGames"
+author = "jmarquiso"
+title = "The making of Call of Duty 4: Modern Warfare"
+url = "http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraNews+%28Gamasutra+News%29"
+permalink = "https://www.reddit.com/comments/3rn5jw/"
+score = 44
+comments = 4
+created_utc = 1446739924
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "67qo6m"
+subreddit = "TheMakingOfGames"
+author = "kika-tok"
+title = "The making of Call of Duty 4: Modern Warfare"
+url = "http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php"
+permalink = "https://www.reddit.com/comments/67qo6m/"
+score = 30
+comments = 1
+created_utc = 1493237119
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4hj2u3"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Don't Miss: How Call of Duty 4: Modern Warfare was made"
+url = "http://gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php"
+permalink = "https://www.reddit.com/comments/4hj2u3/"
+score = 1
+comments = 0
+created_utc = 1462214371
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "5b5drf"
+subreddit = "news_etc"
+author = "ell_computer"
+title = "Don't Miss: The making of Call of Duty 4: Modern Warfare"
+url = "http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php"
+permalink = "https://www.reddit.com/comments/5b5drf/"
+score = 1
+comments = 0
+created_utc = 1478285087
+
+[[reddit_postmortem]]
+id = "258820"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3s1skk"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: Guitar Hero"
+url = "http://www.gamasutra.com/view/news/258820/Classic_Postmortem_Guitar_Hero.php"
+permalink = "https://www.reddit.com/comments/3s1skk/"
+score = 1
+comments = 0
+created_utc = 1447017022
+
+[[reddit_postmortem]]
 id = "260239"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3ucbef"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Solo iOS dev by an AAA vet: Lessons learned along the way"
+url = "http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php"
+permalink = "https://www.reddit.com/comments/3ucbef/"
+score = 1
+comments = 0
+created_utc = 1448541688
+
+[[reddit_postmortem]]
+id = "260265"
+reddit_score = 238
+reddit_comments = 30
+reddit_score_sum = 342
+reddit_comments_sum = 31
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3yigng"
+subreddit = "vita"
+author = "InYourHands"
+title = "Postmortem: Porting Bastion to PSVita"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+permalink = "https://www.reddit.com/comments/3yigng/"
+score = 238
+comments = 30
+created_utc = 1451301686
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3yina2"
+subreddit = "programming"
+author = "ChrisRR"
+title = "Postmortem: Porting Bastion to PSVita"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+permalink = "https://www.reddit.com/comments/3yina2/"
+score = 74
+comments = 0
+created_utc = 1451306469
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3ywy8x"
+subreddit = "TheMakingOfGames"
+author = "archarus"
+title = "Bastion - Postmortem: Porting Bastion to PSVita [text]"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+permalink = "https://www.reddit.com/comments/3ywy8x/"
+score = 27
+comments = 1
+created_utc = 1451572989
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3yi8ir"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Facing the challenge of getting Bastion to PlayStation Vita"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+permalink = "https://www.reddit.com/comments/3yi8ir/"
+score = 2
+comments = 0
+created_utc = 1451295312
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3z1ka0"
+subreddit = "hungryroy"
+author = "hungryroy"
+title = "Gamasutra: Miguel Angel Horna's Blog - Postmortem: Porting Bastion to PSVita"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+permalink = "https://www.reddit.com/comments/3z1ka0/"
+score = 1
+comments = 0
+created_utc = 1451674103
+
+[[reddit_postmortem]]
+id = "264127"
+reddit_score = 2
+reddit_comments = 0
+reddit_score_sum = 4
+reddit_comments_sum = 0
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "43nqr4"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Postmortem: Flippfly's Race the Sun"
+url = "http://www.gamasutra.com/view/news/264127/Postmortem_Flippflys_Race_the_Sun.php"
+permalink = "https://www.reddit.com/comments/43nqr4/"
+score = 2
+comments = 0
+created_utc = 1454318778
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "43npx6"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Postmortem: Flippfly's Race the Sun"
+url = "http://www.gamasutra.com/view/news/264127/Postmortem_Flippflys_Race_the_Sun.php"
+permalink = "https://www.reddit.com/comments/43npx6/"
+score = 2
+comments = 0
+created_utc = 1454318192
+
+[[reddit_postmortem]]
+id = "gd-postmortem-verdun-steam-early-access"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3620,13 +4063,34 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
-id = "260265"
-reddit_score = 0
+id = "266261"
+reddit_score = 1
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 2
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "47122p"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: People Can Fly's Bulletstorm"
+url = "http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php"
+permalink = "https://www.reddit.com/comments/47122p/"
+score = 1
+comments = 0
+created_utc = 1456151607
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4710i8"
+subreddit = "GeekyCulture"
+author = "sixalarm"
+title = "Classic Postmortem: People Can Fly's Bulletstorm"
+url = "http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php"
+permalink = "https://www.reddit.com/comments/4710i8/"
+score = 1
+comments = 0
+created_utc = 1456150964
 
 [[reddit_postmortem]]
 id = "267827"
@@ -3649,11 +4113,33 @@ created_utc = 1457978724
 
 [[reddit_postmortem]]
 id = "269575"
-reddit_score = 1
-reddit_comments = 0
-reddit_score_sum = 1
-reddit_comments_sum = 0
-reddit_submissions = 1
+reddit_score = 8
+reddit_comments = 1
+reddit_score_sum = 11
+reddit_comments_sum = 1
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4dg4gd"
+subreddit = "IndieGaming"
+author = "gghani"
+title = "Greenlit in 16 days Post mortem: What worked well, what didnt."
+url = "http://www.gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php"
+permalink = "https://www.reddit.com/comments/4dg4gd/"
+score = 8
+comments = 1
+created_utc = 1459858267
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4dfzwr"
+subreddit = "greenlightquality"
+author = "gghani"
+title = "Greenlit in 16 days Post mortem: What worked well, what didnt."
+url = "http://www.gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php"
+permalink = "https://www.reddit.com/comments/4dfzwr/"
+score = 2
+comments = 0
+created_utc = 1459855916
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "4dxbh5"
@@ -3665,6 +4151,17 @@ permalink = "https://www.reddit.com/comments/4dxbh5/"
 score = 1
 comments = 0
 created_utc = 1460134915
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4dlyjj"
+subreddit = "Games"
+author = "gghani"
+title = "Greenlit in 16 days Post mortem: What worked well, what didnt."
+url = "http://www.gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php#comment282765"
+permalink = "https://www.reddit.com/comments/4dlyjj/"
+score = 0
+comments = 0
+created_utc = 1459952808
 
 [[reddit_postmortem]]
 id = "176187"
@@ -3720,11 +4217,22 @@ created_utc = 1345554145
 
 [[reddit_postmortem]]
 id = "273917"
-reddit_score = 2
+reddit_score = 3
 reddit_comments = 1
-reddit_score_sum = 2
-reddit_comments_sum = 1
-reddit_submissions = 1
+reddit_score_sum = 6
+reddit_comments_sum = 2
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4m4aoy"
+subreddit = "Crowdfunding"
+author = "MADSOFTGames"
+title = "Gamasutra – Me, My Dinosaur, And Our Failed Kickstarter: A Crowdfunding Post-Mortem"
+url = "http://www.gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php"
+permalink = "https://www.reddit.com/comments/4m4aoy/"
+score = 3
+comments = 1
+created_utc = 1464824709
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "4m4865"
@@ -3737,8 +4245,101 @@ score = 2
 comments = 1
 created_utc = 1464823717
 
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4m8hqp"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Me, My Dinosaur, and our failed Kickstarter"
+url = "http://www.gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php"
+permalink = "https://www.reddit.com/comments/4m8hqp/"
+score = 1
+comments = 0
+created_utc = 1464890825
+
+[[reddit_postmortem]]
+id = "274240"
+reddit_score = 51
+reddit_comments = 11
+reddit_score_sum = 93
+reddit_comments_sum = 14
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4n8dlo"
+subreddit = "Gaming4Gamers"
+author = "Wazanator_"
+title = "Postmortem of Offworld Trading Company's Steam Early Access campaign"
+url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+permalink = "https://www.reddit.com/comments/4n8dlo/"
+score = 51
+comments = 3
+created_utc = 1465433176
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4mzd55"
+subreddit = "Offworld"
+author = "SorenJohnsonMohawk"
+title = "Offworld Trading Company Early Access Post-Mortem"
+url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+permalink = "https://www.reddit.com/comments/4mzd55/"
+score = 40
+comments = 11
+created_utc = 1465310632
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4my71k"
+subreddit = "news_etc"
+author = "ell_computer"
+title = "Postmortem: Offworld Trading Company's Early Access campaign"
+url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+permalink = "https://www.reddit.com/comments/4my71k/"
+score = 1
+comments = 0
+created_utc = 1465291173
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4my44l"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Postmortem: Offworld Trading Company's Early Access campaign"
+url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+permalink = "https://www.reddit.com/comments/4my44l/"
+score = 1
+comments = 0
+created_utc = 1465289176
+
 [[reddit_postmortem]]
 id = "294276"
+reddit_score = 9
+reddit_comments = 2
+reddit_score_sum = 13
+reddit_comments_sum = 2
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "61c8qi"
+subreddit = "videogamescience"
+author = "Torvusil"
+title = "Post-Mortem: Gorescript Classic"
+url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+permalink = "https://www.reddit.com/comments/61c8qi/"
+score = 9
+comments = 0
+created_utc = 1490395612
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "60v88p"
+subreddit = "gamedev"
+author = "gorescript"
+title = "Post-Mortem: Gorescript Classic, a JS/WebGL 3D Webgame"
+url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+permalink = "https://www.reddit.com/comments/60v88p/"
+score = 4
+comments = 2
+created_utc = 1490195886
+
+[[reddit_postmortem]]
+id = "gd-postmortem-leaving-lyndow"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3748,6 +4349,42 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "300409"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "305424"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "307191"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "308654"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3851,20 +4488,41 @@ created_utc = 1536868978
 
 [[reddit_postmortem]]
 id = "330427"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 86
+reddit_comments = 22
+reddit_score_sum = 88
+reddit_comments_sum = 22
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "9x23iq"
+subreddit = "gamedev"
+author = "Sky_HDMI"
+title = "I managed to ship 6000 copies to stay in business"
+url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/9x23iq/"
+score = 86
+comments = 22
+created_utc = 1542216195
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "9wrf6e"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Blog: How I managed to ship 6000 copies and stay in business"
+url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/9wrf6e/"
+score = 2
+comments = 0
+created_utc = 1542132262
 
 [[reddit_postmortem]]
 id = "337113"
 reddit_score = 8
 reddit_comments = 0
-reddit_score_sum = 9
+reddit_score_sum = 10
 reddit_comments_sum = 0
-reddit_submissions = 2
+reddit_submissions = 3
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "axn3gj"
@@ -3887,6 +4545,17 @@ permalink = "https://www.reddit.com/comments/axn398/"
 score = 1
 comments = 0
 created_utc = 1551803657
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "av1omc"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Blog: A postmortem of Robothorium"
+url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/av1omc/"
+score = 1
+comments = 0
+created_utc = 1551200348
 
 [[reddit_postmortem]]
 id = "337931"
@@ -3993,6 +4662,15 @@ permalink = "https://www.reddit.com/comments/bfzjh4/"
 score = 8
 comments = 0
 created_utc = 1555920763
+
+[[reddit_postmortem]]
+id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
 
 [[reddit_postmortem]]
 id = "360226"
@@ -4312,3 +4990,30 @@ permalink = "https://www.reddit.com/comments/p68pwn/"
 score = 11
 comments = 1
 created_utc = 1629222921
+
+[[reddit_postmortem]]
+id = "gd-classic-postmortem-nanaonhas-haunt-2012"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "gd-postmortem-harmonix-s-dance-central-2010-"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []

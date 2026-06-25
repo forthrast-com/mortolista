@@ -318,3 +318,101 @@ reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog
 id = "267827"
 url = "http://gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php"
 reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+
+# ---- Tier B: classic magazine postmortems via gamedeveloper->gamasutra (2026-06) ----
+
+[[include]]
+id = "258820"
+url = "http://www.gamasutra.com/view/news/258820/Classic_Postmortem_Guitar_Hero.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/classic-postmortem-guitar-hero"
+
+[[include]]
+id = "258315"
+url = "http://www.gamasutra.com/view/news/258315/The_making_of_Call_of_Duty_4_Modern_Warfare.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/the-making-of-i-call-of-duty-4-modern-warfare-i-"
+
+[[include]]
+id = "255364"
+url = "http://www.gamasutra.com/view/news/255364/The_making_of_Far_Cry_2.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/the-making-of-i-far-cry-2-i-"
+
+[[include]]
+id = "305424"
+url = "http://www.gamasutra.com/view/news/305424/Classic_Postmortem_How_Maxis_avoided_sequelitis_on_The_Sims_2.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/classic-postmortem-how-maxis-avoided-sequel-itis-on-i-the-sims-2-i-"
+
+[[include]]
+id = "307191"
+url = "http://www.gamasutra.com/view/news/307191/Classic_Postmortem_XCOM_Enemy_Unknown_which_turns_5_today.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-i-xcom-enemy-unknown-i-which-turns-5-today"
+
+[[include]]
+id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
+url = "https://www.gamedeveloper.com/design/classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-"
+
+[[include]]
+id = "266261"
+url = "http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/classic-postmortem-people-can-fly-s-i-bulletstorm-i-"
+
+[[include]]
+id = "gd-postmortem-harmonix-s-dance-central-2010-"
+url = "https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-"
+
+[[include]]
+id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
+url = "https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012"
+
+[[include]]
+id = "gd-classic-postmortem-nanaonhas-haunt-2012"
+url = "https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012"
+
+[[include]]
+id = "237657"
+url = "http://www.gamasutra.com/view/news/237657/Postmortem_Failbetter_Games_Sunless_Sea.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/postmortem-failbetter-games-i-sunless-sea-i-"
+
+[[include]]
+id = "234421"
+url = "http://www.gamasutra.com/view/news/234421/Postmortem_Monolith_Productions_Middleearth_Shadow_of_Mordor.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/postmortem-monolith-productions-i-middle-earth-shadow-of-mordor-i-"
+
+[[include]]
+id = "248567"
+url = "http://gamasutra.com/view/news/248567/Postmortem_Technocrats_cyberpunk_adventure_game_Technobabylon.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/postmortem-technocrat-s-cyberpunk-adventure-game-i-technobabylon-i-"
+
+[[include]]
+id = "264127"
+url = "http://www.gamasutra.com/view/news/264127/Postmortem_Flippflys_Race_the_Sun.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/postmortem-flippfly-s-i-race-the-sun-i-"
+
+[[include]]
+id = "gd-postmortem-leaving-lyndow"
+url = "https://www.gamedeveloper.com/business/postmortem-leaving-lyndow"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/postmortem-leaving-lyndow"
+
+[[include]]
+id = "308654"
+url = "http://www.gamasutra.com/view/news/308654/Postmortem_Building_The_Turing_Test_around_a_secret_mechanic.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/postmortem-building-i-the-turing-test-i-around-a-secret-mechanic"
+
+[[include]]
+id = "gd-postmortem-verdun-steam-early-access"
+url = "https://www.gamedeveloper.com/business/postmortem-verdun-steam-early-access"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/postmortem-verdun-steam-early-access"
+
+[[include]]
+id = "274240"
+url = "http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/postmortem-i-offworld-trading-company-i-s-early-access-campaign"
+
+[[include]]
+id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
+url = "https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-"
