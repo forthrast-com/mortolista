@@ -25,6 +25,10 @@ archive-mirrors:
 gamedev-live:
     python scraper/scrape.py --gamedev-live-only
 
+# Wayback liveness sidecar: canonical capture + print variant checked separately.
+wayback-links:
+    python scraper/scrape.py --wayback-links-only
+
 # Liveness probe over the curated /blogs/ (Tier A) includes. Append `--limit N`
 # for a quick sample; bare run sweeps them all (slow when the Archive flaks).
 tier-a-live *ARGS:
@@ -35,10 +39,11 @@ tier-a-live *ARGS:
 # Both steps are idempotent (resolve skips ids already present; ingest skips
 # entries already in the dataset), and re-running is exactly how entries that
 # flaked on a sick Archive get picked up next time.
-# Phase B fans out — reddit (Arctic Shift), HN (Algolia), archive.is mirrors, wiki
-# sales (Wikipedia), and the Tier A liveness sweep each hit a different service and
-# write a different sidecar, so they run in parallel. Caching is per-request inside
-# each step (archive.is reuses resolved-mirror verdicts; reddit skips already-probed
+# Phase B fans out — reddit (Arctic Shift), HN (Algolia), archive.is mirrors,
+# wayback liveness (canonical + print, checked separately), wiki sales (Wikipedia),
+# and the Tier A liveness sweep each hit a different service and write a different
+# sidecar, so they run in parallel. Caching is per-request inside each step
+# (archive.is and wayback reuse confirmed-live verdicts; reddit skips already-probed
 # URLs), so re-runs don't re-hit the touchy archive providers. Per-step logs land in
 # scraper/logs/.
 refresh-all:
@@ -50,7 +55,7 @@ refresh-all:
     python scraper/resolve_gamedev_originals.py --append 2>&1 | tee scraper/logs/tier-b-resolve.log
     python scraper/add_curated_blogs.py 2>&1 | tee scraper/logs/ingest.log
 
-    echo ">> phase B: enrichment fan-out (reddit | hn | archive.is | wiki | tier-a)"
+    echo ">> phase B: enrichment fan-out (reddit | hn | archive.is | wayback | wiki | tier-a)"
     pids=""; names=""
     launch() {  # launch <name> <cmd...>
         local name="$1"; shift
@@ -61,6 +66,7 @@ refresh-all:
     launch reddit     python scraper/scrape.py --reddit-only
     launch hn         python scraper/scrape.py --refresh-hn-metrics
     launch archive-is python scraper/scrape.py --archive-mirrors-only
+    launch wayback    python scraper/scrape.py --wayback-links-only
     launch wiki       python scraper/scrape.py --wiki-sales-only
     launch tier-a     python scraper/tier_a_liveness.py
 

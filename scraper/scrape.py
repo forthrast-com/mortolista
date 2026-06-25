@@ -32,6 +32,7 @@ REDDIT_POSTS = DATA / "reddit_gamasutra_posts.toml"
 WIKI_SALES = DATA / "wikipedia_game_sales.toml"
 NOTABLE_AUTHORS = DATA / "notable_authors.toml"
 ARCHIVE_MIRRORS = DATA / "archive_is_mirrors.toml"
+WAYBACK_LINKS = DATA / "wayback_links.toml"
 GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
 AUTHOR_BIOS = DATA / "author_bios.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
@@ -432,7 +433,10 @@ def parse_article(aid, rec):
         "thumbnail": thumb,
         "original_url": rec["original"],
         "wayback": f"https://web.archive.org/web/{ts}/{rec['original']}",
-        "wayback_print": f"https://web.archive.org/web/{ts}/{rec['original']}?print=1",
+        # The print link is NOT fabricated from the base ts here: it's verified on
+        # its own terms in the wayback_links sidecar (refresh_wayback_links), which
+        # the frontend overlays. Baking a base-ts ?print=1 URL read as live even
+        # when the print page was never archived.
         "pages": pages,
         "wayback_captures": rec["captures"],
     }
@@ -751,6 +755,28 @@ def print_url(original_url):
     return original_url if re.search(r"[?&]print=1(?:[#&]|$)", original_url) else original_url + sep + "print=1"
 
 
+def wayback_print_capture(original_url, tries=2):
+    """Earliest real 200 capture of the *print* variant, found by its own CDX
+    lookup. The catalogue used to fabricate the print link from the base
+    capture's timestamp, which read as live even when the ?print=1 page was never
+    archived; this verifies the print page on its own terms. Returns a capture
+    timestamp, or None when the print variant genuinely isn't archived.
+
+    A flaky CDX returns empty just like a genuine absence, so retry a couple of
+    times -- callers never cache a None, but this keeps a sick Archive from
+    spuriously dropping print links that do exist."""
+    pu = print_url(original_url)
+    if not pu:
+        return None
+    for attempt in range(tries):
+        ts = earliest_good_ts(pu)
+        if ts:
+            return ts
+        if attempt + 1 < tries:
+            time.sleep(1.5)
+    return None
+
+
 ARCHIVE_TODAY_HOSTS = ("archive.ph", "archive.today", "archive.is", "archive.vn")
 
 
@@ -873,7 +899,13 @@ def find_live_gamedeveloper_url(article):
 
 def check_article_links(article):
     article["wayback_ok"] = wayback_available(article.get("wayback", ""))
-    article["wayback_print_ok"] = wayback_available(article.get("wayback_print", ""))
+    # Verify the print capture on its own terms (the wayback_links sidecar is the
+    # canonical home for this; kept consistent here so --check-links doesn't
+    # diverge or lean on a fabricated base-ts print URL).
+    ts = wayback_print_capture(article.get("original_url", ""))
+    article["wayback_print"] = (
+        f"https://web.archive.org/web/{ts}/{print_url(article.get('original_url',''))}" if ts else "")
+    article["wayback_print_ok"] = bool(ts)
     article["original_ok"] = original_available(article.get("original_url", ""))
     return article
 
@@ -935,6 +967,47 @@ def archive_mirror_row(article, prior=None, recheck=False):
 def gamedev_live_row(article):
     live = find_live_gamedeveloper_url(article)
     return {"id": article["id"], "live_url": live, "live_ok": bool(live)}
+
+
+def wayback_link_row(article, prior=None, recheck=False):
+    """Wayback liveness sidecar row: the canonical capture and the print variant
+    checked *independently*, so the frontend reflects each on its own terms.
+
+    The Internet Archive is touchy/flaky, and a capture that exists doesn't
+    vanish, so a confirmed-live verdict is sticky -- reused from the prior sidecar
+    instead of re-requested. We never cache a negative (a flaked lookup or a
+    not-yet-archived print page should retry next run). recheck busts the cache.
+    The row carries a transient "_probed" flag so the caller throttles only on
+    requests it actually made.
+    """
+    prior = prior or {}
+    original = article.get("original_url", "")
+    base_wb = article.get("wayback", "")
+    probed = False
+
+    # Canonical capture liveness (sticky once confirmed live).
+    if not recheck and prior.get("wayback_ok"):
+        wb_ok = True
+    else:
+        wb_ok = wayback_available(base_wb) if base_wb else False
+        probed = True
+
+    # Print variant, verified by its own CDX lookup (sticky once confirmed live).
+    if not recheck and prior.get("wayback_print_ok") and prior.get("wayback_print"):
+        wp, wp_ok = prior["wayback_print"], True
+    else:
+        ts = wayback_print_capture(original)
+        wp = f"https://web.archive.org/web/{ts}/{print_url(original)}" if ts else ""
+        wp_ok = bool(ts)
+        probed = True
+
+    return {
+        "id": article["id"],
+        "wayback_ok": wb_ok,
+        "wayback_print": wp,
+        "wayback_print_ok": wp_ok,
+        "_probed": probed,
+    }
 
 
 # ------------------------------------------------------------------- HN enrich
@@ -2070,6 +2143,36 @@ def refresh_archive_mirrors(data_path, out_path=ARCHIVE_MIRRORS, limit=0, delay=
     return len(rows)
 
 
+def refresh_wayback_links(data_path, out_path=WAYBACK_LINKS, limit=0, delay=0.2,
+                          recheck=False):
+    """Wayback liveness sidecar: canonical + print capture checked separately."""
+    payload = load_toml(data_path)
+    articles = payload.get("postmortem", [])
+    if limit:
+        articles = articles[:limit]
+    prior = {}
+    if Path(out_path).exists():  # absent on a first-ever run
+        prior = {r.get("id"): r for r in load_toml(out_path).get("wayback_link", [])}
+    rows, base_live, print_live, probed = [], 0, 0, 0
+    for i, article in enumerate(articles, 1):
+        row = wayback_link_row(article, prior=prior.get(article["id"]), recheck=recheck)
+        hit = row.pop("_probed", True)  # transient; never persist it
+        rows.append(row)
+        base_live += int(row["wayback_ok"])
+        print_live += int(row["wayback_print_ok"])
+        if hit:
+            probed += 1
+            time.sleep(delay)  # IA is touchy; stay gentle on the requests we make
+        if i % 25 == 0:
+            log(f"[*] wayback {i}/{len(articles)} ({base_live} canonical, "
+                f"{print_live} print, {probed} probed)")
+    Path(out_path).write_bytes(tomli_w.dumps({"wayback_link": rows}).encode())
+    log(f"[*] wayback: {base_live}/{len(rows)} canonical live, "
+        f"{print_live}/{len(rows)} print live ({probed} probed, "
+        f"{len(rows) - probed} reused from cache)")
+    return len(rows)
+
+
 def refresh_gamedev_live(data_path, out_path=GAMEDEV_LIVE):
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
@@ -2118,6 +2221,8 @@ def main():
     ap.add_argument("--check-links", action="store_true", help="slow: refresh core Wayback/original link availability fields")
     ap.add_argument("--archive-mirrors-only", action="store_true", help="write archive.is mirror sidecar and exit")
     ap.add_argument("--archive-recheck", action="store_true", help="re-probe archive.is mirrors already resolved ok/absent (bust the sticky cache)")
+    ap.add_argument("--wayback-links-only", action="store_true", help="write wayback liveness sidecar (canonical + print, checked separately) and exit")
+    ap.add_argument("--wayback-recheck", action="store_true", help="re-check wayback links already confirmed live (bust the sticky cache)")
     ap.add_argument("--gamedev-live-only", action="store_true", help="slow: discover live gamedeveloper.com URLs sidecar and exit")
     ap.add_argument("--reddit-only", action="store_true", help="harvest Reddit posts (Arctic Shift) and refresh the metrics sidecar, then exit")
     ap.add_argument("--reddit-recompute", action="store_true", help="re-match Reddit metrics from the cached posts without refetching, then exit")
@@ -2148,6 +2253,10 @@ def main():
     if args.archive_mirrors_only:
         n = refresh_archive_mirrors(args.out, limit=args.limit, recheck=args.archive_recheck)
         log(f"[*] refreshed archive.is mirrors for {n} entries -> {ARCHIVE_MIRRORS}")
+        return
+    if args.wayback_links_only:
+        n = refresh_wayback_links(args.out, limit=args.limit, recheck=args.wayback_recheck)
+        log(f"[*] refreshed wayback links for {n} entries -> {WAYBACK_LINKS}")
         return
     if args.gamedev_live_only:
         n = refresh_gamedev_live(args.out)

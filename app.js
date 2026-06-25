@@ -106,6 +106,11 @@ async function loadPhaseTwoMetrics() {
 async function loadMirrorSidecars() {
   await loadSidecar("data/archive_is_mirrors.toml", "archive_mirror");
   await loadSidecar("data/gamedeveloper_live_urls.toml", "gamedeveloper_live");
+  // Wayback liveness: the canonical capture and the print variant verified
+  // separately. Overlays the catalogue so a print link only shows when a real
+  // ?print=1 capture exists; default to no print link when the sidecar is absent.
+  await loadOptionalSidecar("data/wayback_links.toml", "wayback_link",
+    { wayback_print: "", wayback_print_ok: false });
 }
 
 // ---- Balanced aggregate sort ------------------------------------------------
