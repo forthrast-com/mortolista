@@ -25,6 +25,11 @@ archive-mirrors:
 gamedev-live:
     python scraper/scrape.py --gamedev-live-only
 
+# Liveness probe over the curated /blogs/ (Tier A) includes. Append `--limit N`
+# for a quick sample; bare run sweeps them all (slow when the Archive flaks).
+tier-a-live *ARGS:
+    python scraper/tier_a_liveness.py {{ARGS}}
+
 reddit:
     python scraper/scrape.py --reddit-only
 
