@@ -84,7 +84,11 @@ def resolve(url):
     m = ORIG_RE.search(html)
     if m:
         aid, slug = m.group(1), m.group(2)
-        return f"http://www.gamasutra.com/view/news/{aid}/{slug}.php"
+        gama = f"http://www.gamasutra.com/view/news/{aid}/{slug}.php"
+        # Only prefer the original if the Archive actually has it; otherwise the
+        # gamedeveloper page is the only surviving copy.
+        if scrape.cdx_captures(gama, limit=1):
+            return gama
     return url  # fall back to the gamedeveloper page itself
 
 
