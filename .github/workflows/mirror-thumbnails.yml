@@ -1,0 +1,40 @@
+name: Mirror thumbnails
+
+# Mirror remote (Wayback) thumbnails into data/thumbs/ so Pages serves them
+# itself. The script is a permanent cache — it only fetches images not already
+# mirrored — so re-runs are cheap and idempotent. Run on demand, or weekly to
+# pick up thumbnails added to the dataset since the last run.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 1"   # Mondays 04:00 UTC
+
+permissions:
+  contents: write
+
+# Don't stack runs; a later run supersedes an in-flight one.
+concurrency:
+  group: mirror-thumbnails
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow tomli-w
+      - run: python scraper/cache_thumbnails.py
+      - name: Commit newly mirrored thumbnails
+        run: |
+          if [ -n "$(git status --porcelain data/thumbs data/postmortems.toml data/blog_curation.toml)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/thumbs data/postmortems.toml data/blog_curation.toml
+            git commit -m "Mirror thumbnails into the repo (automated)"
+            git push
+          else
+            echo "No new thumbnails to mirror."
+          fi

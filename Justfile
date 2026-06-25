@@ -29,6 +29,12 @@ gamedev-live:
 wayback-links:
     python scraper/scrape.py --wayback-links-only
 
+# Mirror remote (Wayback) thumbnails into data/thumbs/ and rewrite the tomls to
+# the local paths. Permanent cache: only fetches images not already mirrored.
+# Append --limit N for a sample or --dry-run to validate without writing.
+mirror-thumbnails *ARGS:
+    python scraper/cache_thumbnails.py {{ARGS}}
+
 # Liveness probe over the curated /blogs/ (Tier A) includes. Append `--limit N`
 # for a quick sample; bare run sweeps them all (slow when the Archive flaks).
 tier-a-live *ARGS:
