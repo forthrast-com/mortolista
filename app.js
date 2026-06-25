@@ -368,7 +368,7 @@ function sortSignalHTML(d) {
   if (sortKey === "agg_score") {
     const top = d.agg_top || [];
     if (!top.length) return "";
-    return ` <span class="m-sort" title="Balanced rank — strongest signals for this entry">ranked on: ${top.map(esc).join(" · ")}</span>`;
+    return ` <span class="m-sort" title="Balanced rank — strongest signals for this entry">strong on ${top.map(esc).join(" · ")}</span>`;
   }
   if (SHOWN_SORTS.has(sortKey)) return "";
   const v = d[sortKey];
@@ -386,7 +386,7 @@ function whyBalancedHTML(d) {
   if (sortKey !== "agg_score") return "";
   const top = d.agg_top || [];
   if (!top.length) return "";
-  return `<span class="why-balanced" title="Balanced rank — strongest signals for this entry">ranked on: ${top.map(esc).join(" · ")}</span>`;
+  return `<span class="why-balanced" title="Balanced rank — strongest signals for this entry"><span class="wb-label">strong on</span> ${top.map(esc).join(" · ")}</span>`;
 }
 
 function hnThreadsHTML(d) {
