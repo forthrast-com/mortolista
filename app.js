@@ -683,9 +683,10 @@ function rowHTML(d) {
   const byline = d.authors && d.authors.length
     ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`
     : "";
-  // Desktop right-hand column of the headline cell: the game label sits at the
-  // top (opposite the title) and the "ranked on" hint at the bottom (opposite
-  // the byline). On mobile this stacks below and the chip is hidden (CSS).
+  // Right-aligned block that floats opposite the title: the game label on top,
+  // the "strong on …" balanced-rank hint beneath it. The title wraps around it
+  // (only for the float's height, then reclaims full width). On mobile it drops
+  // below the title via flex order, and the hint is hidden (CSS).
   const rankedOn = whyBalancedHTML(d);
   const headlineAside = (gameLine || rankedOn)
     ? `<div class="headline-aside">${gameLine}${rankedOn}</div>` : "";
@@ -712,7 +713,7 @@ function rowHTML(d) {
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell"><div class="headline-main">${topBadges}${metaTop}${title}${byline}</div>${headlineAside}</td>
+    <td class="main-cell">${topBadges}${metaTop}${headlineAside}${title}${byline}</td>
     <td class="num date-cell">${date}</td>
     ${hnCell}
     ${redditCell}

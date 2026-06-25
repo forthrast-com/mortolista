@@ -177,12 +177,11 @@ img.thumb{width:96px; height:96px; object-fit:cover; display:block; background:v
 .thumb-cell.no-thumb{background:none}
 
 /* an entry spans two rows: a headline row + a wide detail row beneath it */
-.main-cell{padding-right:16px; display:flex; align-items:stretch; justify-content:space-between; gap:16px}
-.headline-main{min-width:0; flex:1 1 auto}
-/* right-hand column of the headline: game label opposite the title (top),
-   "ranked on" hint opposite the byline (bottom, pushed down by margin-top:auto) */
-.headline-aside{flex:0 0 auto; display:flex; flex-direction:column; align-items:flex-end; text-align:right; max-width:42%; padding-top:1px}
-.headline-aside .game{margin:0}
+.main-cell{padding-right:16px}
+/* right-floated block opposite the title: game label above the "strong on" hint,
+   both right-aligned. Title and byline wrap around it for the float's height,
+   then reclaim full width; with neither, no float and no wrapping at all. */
+.headline-aside{float:right; clear:right; max-width:42%; margin:1px 0 6px 16px; text-align:right}
 .detail-cell{padding:0 9px 9px; border-bottom:1px solid var(--rule)}
 tbody tr{transition:background-color .12s ease}
 tbody tr:nth-child(4n+3),tbody tr:nth-child(4n+4){background:var(--row-alt)}
@@ -256,7 +255,7 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 /* Desktop echo of the balanced "why it ranked" hint (the meta line that hosts
    the mobile version is hidden on desktop). */
 .why-balanced{
-  margin-top:auto; padding-top:8px; font-size:11px; font-weight:normal;
+  display:block; margin-top:5px; font-size:11px; font-weight:normal;
   color:var(--muted); cursor:help; text-align:right; line-height:1.4;
 }
 .why-balanced .wb-label{
@@ -331,10 +330,13 @@ footer .wrap{line-height:1.6}
   .thumb-cell.no-thumb{display:none}
   .thumb-cell a{position:static; width:64px; height:64px; border:none}
   img.thumb{width:64px; height:64px; min-height:0}
-  /* the headline aside (game label / ranked-on) is a desktop right column;
-     on the card it stacks back into normal flow, left-aligned */
-  .main-cell{padding:0; display:block}
-  .headline-aside{display:block; text-align:left; max-width:none; padding-top:0}
+  /* the desktop float puts the aside before the title in source; on the card,
+     flex-order restores reading order: meta, title, game, byline */
+  .main-cell{padding:0; display:flex; flex-direction:column}
+  .meta-top{order:0}
+  .title-cell{order:1}
+  .headline-aside{order:2; float:none; max-width:none; text-align:left; margin:3px 0 0}
+  .byline{order:3}
   /* the desktop badge stack is redundant on the card — the meta line carries
      type + part there */
   .top-badges{display:none}
@@ -347,7 +349,6 @@ footer .wrap{line-height:1.6}
   .meta-top .m-date{font-weight:bold; color:var(--strong)}
   .m-sort{font-size:11.5px; font-weight:normal; color:var(--muted)}
   .title-cell{display:block; font-size:20px; line-height:1.18}
-  .game{margin-top:3px}
   .byline{display:block; margin-top:5px; font-size:13px; font-style:italic; color:var(--muted)}
   .summary{display:block; max-width:none; margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--ink)}
   .mirrors{margin-top:10px; padding-top:8px; border-top:1px solid var(--rule); font-size:12px; line-height:1.5}
