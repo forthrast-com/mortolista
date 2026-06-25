@@ -379,9 +379,9 @@ function sortSignalHTML(d) {
 }
 
 // Desktop counterpart to the meta-top sort chip: the meta line is mobile-only,
-// so when balanced is the active sort we echo the "why it ranked" hint into the
-// detail row (which shows on desktop). CSS hides this copy on mobile to avoid
-// doubling up with the meta-top chip.
+// so when balanced is the active sort we show the "why it ranked" hint at the
+// right of the headline cell (across from the byline). CSS hides this copy on
+// mobile to avoid doubling up with the meta-top chip.
 function whyBalancedHTML(d) {
   if (sortKey !== "agg_score") return "";
   const top = d.agg_top || [];
@@ -652,7 +652,8 @@ function rowHTML(d) {
       : '<span class=zero>—</span>';
   const summary = d.summary ? `<span class="summary">${esc(d.summary)}</span>` : "";
   // Blogs often don't name their game in the title, so carry the game subhead for
-  // them; features keep it hidden (it just echoed the title there).
+  // them; features keep it hidden (it just echoed the title there). On desktop it
+  // sits in the right-hand aside, opposite the title (see headlineAside below).
   const game = isContribBlog(d) ? displayGame(d) : "";
   const gameLine = game ? `<span class="game">${esc(game)}</span>` : "";
   // A series card's headline points at part 1 and lists every part in the detail
@@ -682,6 +683,12 @@ function rowHTML(d) {
   const byline = d.authors && d.authors.length
     ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`
     : "";
+  // Desktop right-hand column of the headline cell: the game label sits at the
+  // top (opposite the title) and the "ranked on" hint at the bottom (opposite
+  // the byline). On mobile this stacks below and the chip is hidden (CSS).
+  const rankedOn = whyBalancedHTML(d);
+  const headlineAside = (gameLine || rankedOn)
+    ? `<div class="headline-aside">${gameLine}${rankedOn}</div>` : "";
   const shownTitle = cleanTitle(d.title) || d.title;
   const title = primary
     ? `<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(shownTitle)}</a>`
@@ -705,14 +712,14 @@ function rowHTML(d) {
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell">${topBadges}${metaTop}${title}${gameLine}${byline}</td>
+    <td class="main-cell"><div class="headline-main">${topBadges}${metaTop}${title}${byline}</div>${headlineAside}</td>
     <td class="num date-cell">${date}</td>
     ${hnCell}
     ${redditCell}
     ${salesCell}
     ${capsCell}
   </tr>
-  <tr class="r-detail"><td class="detail-cell" colspan="6">${whyBalancedHTML(d)}${summary}${mirrors}</td></tr>`;
+  <tr class="r-detail"><td class="detail-cell" colspan="6">${summary}${mirrors}</td></tr>`;
 }
 
 document.querySelectorAll("th.sortable").forEach(th => {
