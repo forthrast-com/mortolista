@@ -73,6 +73,34 @@ def wayback_ts(url, tries=3):
     return None
 
 
+def original_archived(aid, slug, tries=3):
+    """Robustly decide whether the gamasutra original survives in the Archive.
+
+    A single CDX call flakes when IA is 503-ing, which previously sent confirmed
+    originals (e.g. HL2 259479) to the gamedeveloper fallback. Treat the original
+    as present if *any* signal across retries says so: CDX on either host variant
+    (www. and bare), or the retry-wrapped availability API. Only when all of them
+    robustly come back empty do we concede the original is gone.
+
+    Returns the gamasutra URL to prefer, or None if it genuinely isn't archived.
+    """
+    hosts = [
+        f"http://www.gamasutra.com/view/news/{aid}/{slug}.php",
+        f"http://gamasutra.com/view/news/{aid}/{slug}.php",
+    ]
+    for _ in range(tries):
+        for gama in hosts:
+            if scrape.cdx_captures(gama, limit=1):
+                return gama
+        # CDX came up empty on this pass — could be flak. Cross-check the
+        # availability API (itself retried) before trusting the empties.
+        for gama in hosts:
+            if wayback_ts(gama, tries=1):
+                return gama
+        time.sleep(2)
+    return None
+
+
 def resolve(url):
     """Return (gamasutra_url | gamedeveloper_url) for one candidate, or None."""
     ts = wayback_ts(url)
@@ -84,10 +112,8 @@ def resolve(url):
     m = ORIG_RE.search(html)
     if m:
         aid, slug = m.group(1), m.group(2)
-        gama = f"http://www.gamasutra.com/view/news/{aid}/{slug}.php"
-        # Only prefer the original if the Archive actually has it; otherwise the
-        # gamedeveloper page is the only surviving copy.
-        if scrape.cdx_captures(gama, limit=1):
+        gama = original_archived(aid, slug)
+        if gama:
             return gama
     return url  # fall back to the gamedeveloper page itself
 
