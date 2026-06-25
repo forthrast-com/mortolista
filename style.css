@@ -125,10 +125,10 @@ a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-r
 /* desktop: rather than squeeze the columns, keep a comfortable min width and
    let the table scroll sideways, with edge fades hinting there's more. */
 .table-scroll{position:relative}
-/* overflow-y:clip (not visible/auto) lets the table scroll horizontally without
-   making this a vertical scroll container — so the sticky thead pins to the page
-   viewport on scroll-down, while the sticky desc still pins to this x-scrollport. */
-.table-wrap{overflow-x:auto; overflow-y:clip}
+/* the table is its own scroll region (the desktop app-shell below gives it a
+   bounded height): scrolling it pins the thead to its top and the desc to its
+   left, since both sticky targets share this one scroll container. */
+.table-wrap{overflow:auto}
 #grid{min-width:1280px; table-layout:fixed}
 .table-scroll::before,.table-scroll::after{
   content:""; position:absolute; top:0; bottom:0; width:48px; z-index:3;
@@ -274,6 +274,22 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .status{color:var(--muted); padding:14px 0; font-style:italic}
 footer{margin-top:24px; padding:16px 0 40px; border-top:1px solid var(--rule); color:var(--muted); font-size:11px}
 footer .wrap{line-height:1.6}
+
+/* Desktop app-shell: the page is a fixed-height column (masthead, intro and
+   toolbar stay put) and the table is the one scroll region that fills the rest.
+   That makes .table-wrap the single scroll container both the sticky header
+   (top) and sticky desc (left) anchor to. Mobile keeps normal document flow. */
+@media(min-width:721px){
+  html,body{height:100%}
+  body{display:flex; flex-direction:column; overflow:hidden}
+  body > .wrap{flex:1 1 auto; min-height:0; display:flex; flex-direction:column}
+  body > .wrap > .intro,
+  body > .wrap > #toolbar,
+  body > .wrap > #status,
+  body > .wrap > .livenote{flex:0 0 auto}
+  .table-scroll{flex:1 1 auto; min-height:0}
+  .table-wrap{height:100%}
+}
 
 @media(max-width:720px){
   .wrap{padding:0 12px}
