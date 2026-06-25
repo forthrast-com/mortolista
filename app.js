@@ -445,14 +445,19 @@ function isContribBlog(d) {
 }
 
 // The game name as a subhead — only worth showing when the title doesn't already
-// name the game (common for blogs titled "How I wasted $4k…" rather than the game).
+// name the game. Suppress whenever the game appears *within* the title as a
+// phrase ("Goat Simulator Post Mortem" needs no "Goat Simulator" subhead); show
+// it only when the game lives in the body, not the title ("How I wasted $4k…"
+// -> Drunk Shotgun). Comparison ignores case and punctuation, and is word-
+// bounded so a short name can't match inside an unrelated word.
 function displayGame(d) {
   const game = (d.game || "").trim();
   if (!game) return "";
   const title = cleanTitle(d.title);
   if (!title) return game;
-  const canonical = s => cleanTitle(s).toLowerCase();
-  return canonical(game) === canonical(title) ? "" : game;
+  const norm = s => " " + cleanTitle(s).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim() + " ";
+  const g = norm(game);
+  return g.trim() && norm(title).includes(g) ? "" : game;
 }
 
 function authorHTML(name) {
