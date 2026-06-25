@@ -1707,7 +1707,12 @@ def author_wiki(name):
                                 "inprop": "url", "exintro": 1,
                                 "explaintext": 1, "redirects": 1},
                         timeout=20)
-        pages = r.json().get("query", {}).get("pages", {})
+        query = r.json().get("query", {})
+        # A name that only resolves *through* a redirect (e.g. a maiden name or
+        # a studio that redirects to a person) is a weaker notability signal than
+        # one with its own article; flag it so the catalogue can half-weight it.
+        via_redirect = bool(query.get("redirects"))
+        pages = query.get("pages", {})
         for _, p in pages.items():
             if "missing" in p:
                 continue
@@ -1720,6 +1725,7 @@ def author_wiki(name):
                     "wiki_title": title,
                     "wiki_url": p.get("fullurl")
                     or "https://en.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_")),
+                    "via_redirect": via_redirect,
                 }
                 break
     except Exception:

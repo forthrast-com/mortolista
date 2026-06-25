@@ -91,8 +91,11 @@ async function loadNotableAuthors() {
     const res = await fetch("data/notable_authors.toml", { cache: "no-cache" });
     if (!res.ok) return;
     const rows = parse(await res.text()).notable_author || [];
+    // name -> { url, half }: a redirect-only match is worth half a notability
+    // point (see computeAggregate), and still links to its canonical page.
     NOTABLE_AUTHORS = new Map(
-      rows.filter(r => r.name && r.wiki_url).map(r => [r.name, r.wiki_url]));
+      rows.filter(r => r.name && r.wiki_url)
+          .map(r => [r.name, { url: r.wiki_url, half: !!r.via_redirect }]));
   } catch (e) {
     // best-effort; the catalogue works fine without author links.
   }
@@ -135,7 +138,7 @@ const AGG_AXES = [
   { key: "archive_reach", weight: 0.7, label: "archival reach" },
   { key: "hn_comments_sum", weight: 0.5, label: "HN discussion" },
   { key: "reddit_score_sum", weight: 0.5, label: "Reddit score" },
-  { key: "author_notable", weight: 0.5, label: "notable author", binary: true },
+  { key: "author_notable", weight: 0.5, label: "notable author", unit: true },
   { key: "hn_points", weight: 0.35, label: "top HN thread" },
   { key: "reddit_comments_sum", weight: 0.3, label: "Reddit discussion" },
   { key: "hn_comments", weight: 0.2, label: "top HN thread" },
@@ -170,7 +173,10 @@ function computeAggregate() {
     // you little about why a given entry ranked; a rare one (HN points) tells
     // you a lot. Floor keeps a near-universal axis usable as a last resort.
     rarity[ax.key] = Math.max(1 - have.length / (DATA.length || 1), 0.02);
-    if (ax.binary) continue;
+    // binary axes contribute a flat 0/1; unit axes carry a ready 0..1 score
+    // (e.g. author_notable: 1 for an own-article author, 0.5 via redirect) and
+    // are used as-is — neither gets percentile-mapped.
+    if (ax.binary || ax.unit) continue;
     maps[ax.key] = percentileMap(have.map(d => Number(d[ax.key]) || 0));
   }
   for (const d of DATA) {
@@ -178,7 +184,9 @@ function computeAggregate() {
     const contrib = [];
     for (const ax of AGG_AXES) {
       const v = Number(d[ax.key]) || 0;
-      const norm = ax.binary ? (v ? 1 : 0) : (v > 0 ? (maps[ax.key].get(v) || 0) : 0);
+      const norm = ax.binary ? (v ? 1 : 0)
+        : ax.unit ? Math.min(Math.max(v, 0), 1)
+        : (v > 0 ? (maps[ax.key].get(v) || 0) : 0);
       const part = norm * ax.weight;
       score += part;
       if (part > 0) contrib.push({ label: ax.label, part, show: part * rarity[ax.key] });
@@ -214,6 +222,21 @@ async function load() {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
     return;
   }
+  // Re-derive notability as a 0..1 score from the sidecar: an author with their
+  // own Wikipedia article scores 1, one that only resolves through a redirect
+  // (a name variant, or a person who redirects to their studio/game) scores 0.5.
+  // Computed on the ungrouped entries so a series then takes the max of its
+  // parts. Falls back to the baked flag if the sidecar didn't load.
+  if (NOTABLE_AUTHORS.size) {
+    for (const d of DATA) {
+      let best = 0;
+      for (const name of d.authors || []) {
+        const e = NOTABLE_AUTHORS.get(name);
+        if (e) best = Math.max(best, e.half ? 0.5 : 1);
+      }
+      d.author_notable = best;
+    }
+  }
   // Collapse multi-part series into one card before ranking, so a series
   // competes in the balanced sort as a single unit.
   DATA = groupSeries(DATA);
@@ -236,7 +259,7 @@ async function load() {
 
 function sortVal(d, k) {
   if (k === "authors") return (d.authors?.[0] || "").toLowerCase();
-  if (k === "author_notable") return d.author_notable ? 1 : 0;
+  if (k === "author_notable") return Number(d.author_notable) || 0;
   const v = d[k];
   if (typeof v === "number") return v;
   if (typeof v === "boolean") return v ? 1 : 0;
@@ -316,7 +339,7 @@ function metricValue(d, k) {
   const v = d[k];
   if (k === "date") return d.date ? (d.date_estimated ? `~${d.date}` : d.date) : "—";
   if (k === "authors") return (d.authors || []).join(", ") || "—";
-  if (k === "author_notable") return d.author_notable ? "yes" : "no";
+  if (k === "author_notable") return d.author_notable >= 1 ? "yes" : d.author_notable > 0 ? "half" : "no";
   if (typeof v === "number") return v ? v.toLocaleString() : "0";
   if (typeof v === "boolean") return v ? "yes" : "no";
   return (v ?? "—").toString();
@@ -433,9 +456,10 @@ function displayGame(d) {
 }
 
 function authorHTML(name) {
-  const url = NOTABLE_AUTHORS.get(name);
-  if (url) {
-    return `<a class="author-link wiki-link" href="${esc(url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}">${esc(name)}</a>`;
+  const e = NOTABLE_AUTHORS.get(name);
+  if (e) {
+    const note = e.half ? " (via Wikipedia redirect)" : "";
+    return `<a class="author-link wiki-link" href="${esc(e.url)}" target="_blank" rel="noopener" title="Wikipedia: ${esc(name)}${note}">${esc(name)}</a>`;
   }
   return `<span class="author-name no-wiki">${esc(name)}</span>`;
 }
@@ -554,7 +578,7 @@ function mergeSeries(parts) {
     // first part that does, so a series is never needlessly thumbnail-less.
     thumbnail: (sorted.find(p => p.thumbnail) || first).thumbnail || "",
     authors: [...new Set(sorted.flatMap(p => p.authors || []))],
-    author_notable: sorted.some(p => p.author_notable),
+    author_notable: Math.max(...sorted.map(p => Number(p.author_notable) || 0)),
     date: dates[0] || first.date,                 // earliest, for sorting
     date_estimated: earliest.date_estimated,
     date_label: startY && endY && startY !== endY ? `${startY}–${endY}` : startY,
