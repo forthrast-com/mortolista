@@ -5,6 +5,7 @@ __pycache__/
 data/sample.toml
 
 scraper/run.log
+scraper/logs/
 
 # macOS / direnv cruft
 .DS_Store
