@@ -126,10 +126,13 @@ async function loadMirrorSidecars() {
 // mapped to its percentile *among the entries that have any signal on that
 // axis*; zeros stay at zero, so an entry only earns credit where it actually
 // shows up. The per-axis scores are then combined as a weighted average.
+// A live archive.is mirror is a deliberate preservation the Wayback capture
+// count misses, so it nudges archival reach — worth a few captures, not a flood.
+const AIS_REACH_BONUS = 3;
 const AGG_AXES = [
   { key: "hn_points_sum", weight: 1.0, label: "HN points" },
   { key: "copies_sold", weight: 0.9, label: "copies sold" },
-  { key: "wayback_captures", weight: 0.7, label: "captures" },
+  { key: "archive_reach", weight: 0.7, label: "archival reach" },
   { key: "hn_comments_sum", weight: 0.5, label: "HN discussion" },
   { key: "reddit_score_sum", weight: 0.5, label: "Reddit score" },
   { key: "author_notable", weight: 0.5, label: "notable author", binary: true },
@@ -214,6 +217,13 @@ async function load() {
   // Collapse multi-part series into one card before ranking, so a series
   // competes in the balanced sort as a single unit.
   DATA = groupSeries(DATA);
+  // Archival reach drives the captures axis: canonical Wayback captures (now
+  // populated for curated entries too, via the wayback_links sidecar — without
+  // it they'd sit at zero) nudged when a live archive.is mirror also preserves
+  // the page. The raw capture count is still shown in its own column.
+  for (const d of DATA) {
+    d.archive_reach = (Number(d.wayback_captures) || 0) + (d.archive_today_ok ? AIS_REACH_BONUS : 0);
+  }
   computeAggregate();
   const cats = [...new Set(DATA.map(d => d.category))].sort();
   for (const c of cats) {

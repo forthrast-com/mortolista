@@ -982,27 +982,36 @@ def wayback_link_row(article, prior=None, recheck=False):
     """
     prior = prior or {}
     original = article.get("original_url", "")
-    base_wb = article.get("wayback", "")
     probed = False
 
-    # Canonical capture liveness (sticky once confirmed live).
-    if not recheck and prior.get("wayback_ok"):
-        wb_ok = True
+    # Canonical capture count + liveness. Features already carry a count from the
+    # bulk CDX sweep; the curated entries (blogs/Tier B) were never swept and sit
+    # at zero, leaving them invisible on the captures axis. Reuse an existing or
+    # cached count and only hit CDX to fill a genuine zero. captures>0 == live.
+    cached_caps = prior.get("wayback_captures") if not recheck else None
+    if cached_caps is None:
+        cached_caps = article.get("wayback_captures", 0) or 0
+    if cached_caps > 0:
+        wb_caps = cached_caps
     else:
-        wb_ok = wayback_available(base_wb) if base_wb else False
+        wb_caps = len(cdx_captures(original)) if original else 0
         probed = True
+    wb_ok = wb_caps > 0
 
-    # Print variant, verified by its own CDX lookup (sticky once confirmed live).
+    # Print variant, counted by its own CDX (sticky once confirmed live).
     if not recheck and prior.get("wayback_print_ok") and prior.get("wayback_print"):
-        wp, wp_ok = prior["wayback_print"], True
+        wp, wp_ok, wp_caps = prior["wayback_print"], True, prior.get("wayback_print_captures", 0)
     else:
-        ts = wayback_print_capture(original)
-        wp = f"https://web.archive.org/web/{ts}/{print_url(original)}" if ts else ""
-        wp_ok = bool(ts)
+        pcaps = cdx_captures(print_url(original)) if original else []
+        wp = f"https://web.archive.org/web/{pcaps[0]}/{print_url(original)}" if pcaps else ""
+        wp_ok = bool(pcaps)
+        wp_caps = len(pcaps)
         probed = True
 
     return {
         "id": article["id"],
+        "wayback_captures": wb_caps,
+        "wayback_print_captures": wp_caps,
         "wayback_ok": wb_ok,
         "wayback_print": wp,
         "wayback_print_ok": wp_ok,
