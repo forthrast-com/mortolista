@@ -313,10 +313,64 @@ function render() {
   const val = `${sortKey}:${sortDir}`;
   if ([...sortSel.options].some(o => o.value === val)) sortSel.value = val;
   updateScrollFades();
+  stickyHead.refresh();
 }
 
 if (tableWrap) tableWrap.addEventListener("scroll", updateScrollFades, { passive: true });
 window.addEventListener("resize", updateScrollFades);
+
+// ---- Frozen header ---------------------------------------------------------
+// The horizontal-scroll wrapper stops a CSS-sticky <thead> from anchoring to
+// the page, so pin a cloned header in a position:fixed strip that mirrors the
+// table's horizontal scroll and column widths. Table-layout:fixed + the shared
+// colgroup keep the columns aligned. Degrades to nothing if anything's missing.
+const stickyHead = (() => {
+  const table = document.getElementById("grid");
+  if (!table || !tableWrap) return { refresh() {} };
+  const overlay = document.createElement("div");
+  overlay.className = "sticky-head";
+  overlay.hidden = true;
+  overlay.setAttribute("aria-hidden", "true");
+  const clone = document.createElement("table");
+  overlay.appendChild(clone);
+  document.body.appendChild(overlay);
+
+  // a click on the pinned header re-uses the real header's sort handler
+  overlay.addEventListener("click", e => {
+    const th = e.target.closest("th[data-key]");
+    const real = th && table.querySelector(`thead th[data-key="${th.dataset.key}"]`);
+    if (real) real.click();
+  });
+
+  function rebuild() {
+    const cg = table.querySelector("colgroup");
+    const head = table.tHead;
+    clone.replaceChildren(...[cg, head].filter(Boolean).map(n => n.cloneNode(true)));
+  }
+  function sync() {
+    const head = table.tHead;
+    const h = head ? head.offsetHeight : 0;
+    const r = table.getBoundingClientRect();
+    // pin only once the real header has scrolled above the top while the body is
+    // still on screen; never in the mobile card layout (the table goes block)
+    if (h === 0 || r.top >= 0 || r.bottom <= h || getComputedStyle(table).display === "block") {
+      overlay.hidden = true;
+      return;
+    }
+    const wrap = tableWrap.getBoundingClientRect();
+    overlay.hidden = false;
+    overlay.style.left = wrap.left + "px";
+    overlay.style.width = tableWrap.clientWidth + "px";
+    clone.style.width = table.offsetWidth + "px";
+    clone.style.transform = `translateX(${-tableWrap.scrollLeft}px)`;
+  }
+  function refresh() { rebuild(); sync(); }
+  window.addEventListener("scroll", sync, { passive: true });
+  window.addEventListener("resize", refresh, { passive: true });
+  tableWrap.addEventListener("scroll", sync, { passive: true });
+  rebuild();
+  return { refresh, sync, rebuild };
+})();
 
 function catClass(c) {
   c = (c || "").toLowerCase();
