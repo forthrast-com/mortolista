@@ -4092,6 +4092,26 @@ alt_ids = [
 ]
 
 [[postmortem]]
+id = "168330"
+title = "Post-Mortem: Waves"
+game = "Post-Mortem: Waves"
+authors = [
+    "Robert Hale",
+]
+date = "2012-04-11"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20120413175720im_/http://www.squidinabox.com/wp-content/gallery/cache/61__700x525_waves-2011-10-17-00-25-22-03.jpg"
+original_url = "http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+wayback = "https://web.archive.org/web/20120413175720/http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+wayback_print = "https://web.archive.org/web/20120413175720/http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "168921"
 title = "Postmortem: HandCircus' Okabu"
 game = "HandCircus' Okabu"
@@ -4225,6 +4245,26 @@ author_notable = true
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
+
+[[postmortem]]
+id = "175583"
+title = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+game = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+authors = [
+    "Linh Ngo",
+]
+date = "2012-08-08"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = ""
+original_url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+wayback = "https://web.archive.org/web/20120812000533/http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+wayback_print = "https://web.archive.org/web/20120812000533/http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
 
 [[postmortem]]
 id = "179030"
@@ -4500,6 +4540,26 @@ copies_sold = ""
 alt_ids = []
 
 [[postmortem]]
+id = "191049"
+title = "Mech Force Post Mortem"
+game = "Mech Force Post Mortem"
+authors = [
+    "Jacob Van Rooyen",
+]
+date = "2013-04-23"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = ""
+original_url = "http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php"
+wayback = "https://web.archive.org/web/20130428150711/http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php"
+wayback_print = "https://web.archive.org/web/20130428150711/http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = true
+
+[[postmortem]]
 id = "191265"
 title = "A Mini-Postmortem Roundup"
 game = "A Mini-Postmortem Roundup"
@@ -4520,6 +4580,26 @@ author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
+
+[[postmortem]]
+id = "193811"
+title = "Post Mortem: Minecraft Oakland"
+game = "Post Mortem: Minecraft Oakland"
+authors = [
+    "Alex Handy",
+]
+date = "2013-06-06"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20130609015619im_/http://farm9.staticflickr.com/8415/8708332182_c939536dce.jpg"
+original_url = "http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php"
+wayback = "https://web.archive.org/web/20130609015619/http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php"
+wayback_print = "https://web.archive.org/web/20130609015619/http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
 
 [[postmortem]]
 id = "193695"
@@ -4655,6 +4735,26 @@ copies_sold = ""
 alt_ids = []
 
 [[postmortem]]
+id = "199358"
+title = "DwarfCorp's Kickstarter Postmortem"
+game = "DwarfCorp's Kickstarter Postmortem"
+authors = [
+    "Matthew Klingensmith",
+]
+date = "2013-09-12"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20130916060444im_/http://www.dwarfcorp.com/site/wp-content/uploads/2013/07/resources3.png"
+original_url = "http://www.gamasutra.com/blogs/MatthewKlingensmith/20130912/199358/DwarfCorps_Kickstarter_Postmortem.php"
+wayback = "https://web.archive.org/web/20130916060444/http://www.gamasutra.com/blogs/MatthewKlingensmith/20130912/199358/DwarfCorps_Kickstarter_Postmortem.php"
+wayback_print = "https://web.archive.org/web/20130916060444/http://www.gamasutra.com/blogs/MatthewKlingensmith/20130912/199358/DwarfCorps_Kickstarter_Postmortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "200658"
 title = "Postmortem: DrinkBox Studios' Guacamelee!"
 game = "DrinkBox Studios' Guacamelee!"
@@ -4677,6 +4777,66 @@ copies_sold = ""
 alt_ids = []
 
 [[postmortem]]
+id = "207899"
+title = "The Indoor Pub Games Sports World PlayStation®Vita Post-Mortem"
+game = "The Indoor Pub Games Sports World PlayStation®Vita Post-Mortem"
+authors = [
+    "Richard Hill-Whittall",
+]
+date = "2013-12-31"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20140102115945im_/http://www.supericon.co.uk/wp-content/uploads/2013/12/IndoorSportsWorld14.png"
+original_url = "http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php"
+wayback = "https://web.archive.org/web/20140102115945/http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php"
+wayback_print = "https://web.archive.org/web/20140102115945/http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "211326"
+title = "A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+game = "A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+authors = [
+    "Tyler Sigman",
+]
+date = "2014-03-05"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20140307104646im_/http://gamasutra.com/db_area/images/blog/211326/dd_ks.jpg"
+original_url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+wayback = "https://web.archive.org/web/20140307104646/http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+wayback_print = "https://web.archive.org/web/20140307104646/http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "216965"
+title = "9.03m - From University project to Steam released game."
+game = "9.03m - From University project to Steam released game."
+authors = [
+    "Karl Inglott",
+]
+date = "2014-05-06"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20140510213100im_/http://www.gamasutra.com/db_area/images/blog/216965/9_03m%20Promo.jpg"
+original_url = "http://www.gamasutra.com/blogs/KarlInglott/20140506/216965/903m__From_University_project_to_Steam_released_game.php"
+wayback = "https://web.archive.org/web/20140510213100/http://www.gamasutra.com/blogs/KarlInglott/20140506/216965/903m__From_University_project_to_Steam_released_game.php"
+wayback_print = "https://web.archive.org/web/20140510213100/http://www.gamasutra.com/blogs/KarlInglott/20140506/216965/903m__From_University_project_to_Steam_released_game.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "218372"
 title = "Postmortem: The Chinese Room's Amnesia: A Machine for Pigs"
 game = "The Chinese Room's Amnesia: A Machine for Pigs"
@@ -4697,6 +4857,26 @@ author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
+
+[[postmortem]]
+id = "224920"
+title = "Post-Kickstarter Finance By The Numbers; A One-Man Studio Postmortem"
+game = "Post-Kickstarter Finance By The Numbers; A One-Man Studio Postmortem"
+authors = [
+    "Kee-Won Hong",
+]
+date = "2014-09-04"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20140909093125im_/http://www.iterativegames.com/reiterated/wp-content/uploads/2013/07/DivX-Plus-Player-2013-07-20-12-44-55-51.jpg"
+original_url = "http://www.gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php"
+wayback = "https://web.archive.org/web/20140909093125/http://www.gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php"
+wayback_print = "https://web.archive.org/web/20140909093125/http://www.gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
 
 [[postmortem]]
 id = "233340"
@@ -4722,6 +4902,46 @@ author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
+
+[[postmortem]]
+id = "233818"
+title = "Aegis Defenders Crowdfunding Post-Mortem, Pt. 1: So, you wanna crowdfund?"
+game = "Aegis Defenders Crowdfunding Post-Mortem, Pt. 1: So, you wanna crowdfund?"
+authors = [
+    "Scott Stephan",
+]
+date = "2015-01-09"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150112162446im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/AU166.jpg"
+original_url = "http://www.gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php"
+wayback = "https://web.archive.org/web/20150112162446/http://www.gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php"
+wayback_print = "https://web.archive.org/web/20150112162446/http://www.gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "234086"
+title = "Postmortem: Launching The War Z"
+game = "Launching The War Z"
+authors = [
+    "Sergey Titov",
+]
+date = "2015-01-13"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150114021258im_/http://gamasutra.com/db_area/images/I_SS%20screen2.jpg"
+original_url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+wayback = "https://web.archive.org/web/20150114021258/http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+wayback_print = "https://web.archive.org/web/20150114021258/http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
 
 [[postmortem]]
 id = "235408"
@@ -4799,6 +5019,126 @@ alt_ids = []
 author_notable = false
 
 [[postmortem]]
+id = "236427"
+title = "Goat Simulator Post Mortem"
+game = "Goat Simulator Post Mortem"
+authors = [
+    "Armin Ibrisagic",
+]
+date = "2015-02-20"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150223230954im_/http://gamasutra.com/db_area/images/blog/236427/jetpack.jpg"
+original_url = "http://www.gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+wayback = "https://web.archive.org/web/20150223230954/http://www.gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+wayback_print = "https://web.archive.org/web/20150223230954/http://www.gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "254610"
+title = "Wordsum Postmortem - The 10 year journey of a solo game developer"
+game = "Wordsum Postmortem - The 10 year journey of a solo game developer"
+authors = [
+    "Carleton DiLeo",
+]
+date = "2015-09-25"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20150928200510im_/http://gamasutra.com/db_area/images/blog/254610/early_prototype.png"
+original_url = "http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+wayback = "https://web.archive.org/web/20150928200510/http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+wayback_print = "https://web.archive.org/web/20150928200510/http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "260239"
+title = "Postmortem - Swing Racers"
+game = "- Swing Racers"
+authors = [
+    "Cory Spooner",
+]
+date = "2015-11-24"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20151126144112im_/http://www.gamasutra.com/ajax-loader.gif"
+original_url = "http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php"
+wayback = "https://web.archive.org/web/20151126144112/http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php"
+wayback_print = "https://web.archive.org/web/20151126144112/http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "260265"
+title = "Postmortem: Porting Bastion to PSVita"
+game = "Porting Bastion to PSVita"
+authors = [
+    "Miguel Angel Horna",
+]
+date = "2015-12-21"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20151224140623im_/http://i.imgur.com/zTYAonq.png"
+original_url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+wayback = "https://web.archive.org/web/20151224140623/http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+wayback_print = "https://web.archive.org/web/20151224140623/http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "267827"
+title = "Language and Mobile Development - A Postmortem on Terminology and Teams"
+game = "Language and Mobile Development - A Postmortem on Terminology and Teams"
+authors = [
+    "Mark Slemko",
+]
+date = "2016-03-11"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20160312091806im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/scarme%40turbine.com.jpeg"
+original_url = "http://www.gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php"
+wayback = "https://web.archive.org/web/20160312091806/http://www.gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php"
+wayback_print = "https://web.archive.org/web/20160312091806/http://www.gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "269575"
+title = "Greenlit in 16 days Post mortem: What worked well, what didnt."
+game = "Greenlit in 16 days Post mortem: What worked well, what didnt."
+authors = [
+    "Javier Bargueno",
+]
+date = "2016-04-04"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20160406043051im_/http://www.wincarsracer.com/system/files/system/files/styles/large/private/racing-greenlight.gif"
+original_url = "http://www.gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php"
+wayback = "https://web.archive.org/web/20160406043051/http://www.gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php"
+wayback_print = "https://web.archive.org/web/20160406043051/http://www.gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
 id = "176187"
 title = "How Camouflaj saved République 's Kickstarter"
 game = "How Camouflaj saved République 's Kickstarter"
@@ -4819,6 +5159,201 @@ author_notable = false
 reddit_points = 0
 copies_sold = ""
 alt_ids = []
+
+[[postmortem]]
+id = "273917"
+title = "Me, My Dinosaur, And Our Failed Kickstarter: A Crowdfunding Post-Mortem"
+game = "Me, My Dinosaur, And Our Failed Kickstarter: A Crowdfunding Post-Mortem"
+authors = [
+    "Andrew-David Jahchan",
+]
+date = "2016-05-31"
+date_estimated = false
+category = "Postmortem"
+summary = ""
+thumbnail = "https://web.archive.org/web/20160602025659im_/https://66.media.tumblr.com/ee98e888e4165a403f85d7066adda041/tumblr_inline_o825gpdbQY1qzyynh_540.png"
+original_url = "http://www.gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php"
+wayback = "https://web.archive.org/web/20160602025659/http://www.gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php"
+wayback_print = "https://web.archive.org/web/20160602025659/http://www.gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "294276"
+title = "Post-Mortem: Gorescript Classic"
+game = "Post-Mortem: Gorescript Classic"
+authors = [
+    "Sergiu Bucur",
+]
+date = "2017-03-22"
+date_estimated = false
+category = "Postmortem"
+summary = "This article aims to explore the full history of Gorescript Classic, from the development stages to its initial release, to getting played by John Carmack himself, then headlined on HackerNews, and finally achieving lasting popularity on Chrome Web Store."
+thumbnail = "https://web.archive.org/web/20170323113743im_/http://www.gamasutra.com/blogs/edit/img/portrait/1016410/portrait.png"
+original_url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+wayback = "https://web.archive.org/web/20170323113743/http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+wayback_print = "https://web.archive.org/web/20170323113743/http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "300409"
+title = "TumbleSeed Postmortem"
+game = "TumbleSeed Postmortem"
+authors = [
+    "Greg Wohlwend",
+]
+date = "2017-06-23"
+date_estimated = false
+category = "Postmortem"
+summary = "The Art & Business of Making Games. Video game industry news, developer blogs, and features delivered daily"
+thumbnail = "https://web.archive.org/web/20170623180346im_/http://www.gamasutra.com/blogs/edit/img/portrait/705727/portrait.png"
+original_url = "http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php"
+wayback = "https://web.archive.org/web/20170623180346/http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php"
+wayback_print = "https://web.archive.org/web/20170623180346/http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = true
+
+[[postmortem]]
+id = "310012"
+title = "[Post Mortem]: I thought I could ship at least 700 units to stay in business"
+game = "[Post Mortem]: I thought I could ship at least 700 units to stay in business"
+authors = [
+    "Constantin Bacioiu",
+]
+date = "2017-11-21"
+date_estimated = false
+category = "Postmortem"
+summary = "I should have been able to move at least 700 copies of a niche game at a low price and stay in business. I did not - this is a warning to other develo"
+thumbnail = "https://web.archive.org/web/20171121212758im_/https://www.gamasutra.com/db_area/images/blog/310012/new_and_trending.png"
+original_url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+wayback = "https://web.archive.org/web/20171121212758/http://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+wayback_print = "https://web.archive.org/web/20171121212758/http://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "An indie dev's race to stay in business"
+series_id = "bacioiu-stay-in-business"
+part_no = 1
+part_total = 2
+part_label = "700 units"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "311143"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 1/2)"
+game = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 1/2)"
+authors = [
+    "Doctor Ludos",
+]
+date = "2017-12-07"
+date_estimated = false
+category = "Postmortem"
+summary = "What does it take to release a new game cartridge for the Game Boy in 2017? Heres my experience, with a lot of details on the tools I used and the"
+thumbnail = "https://web.archive.org/web/20171207194820im_/https://www.gamasutra.com/db_area/images/blog/311143/sheepitup.gif"
+original_url = "http://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+wayback = "https://web.archive.org/web/20171207194820/http://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+wayback_print = "https://web.archive.org/web/20171207194820/http://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "Making a Game Boy game in 2017 — A “Sheep It Up” Post-Mortem"
+series_id = "sheep-it-up-game-boy"
+part_no = 1
+part_total = 2
+part_label = "Part 1"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "311570"
+title = "Post Mortem: The Death of Flash and Rewriting 1.4 Million Lines of Code"
+game = "Post Mortem: The Death of Flash and Rewriting 1.4 Million Lines of Code"
+authors = [
+    "Doug Pearson",
+]
+date = "2017-12-12"
+date_estimated = false
+category = "Postmortem"
+summary = "Following nearly eighteen months of engineering work, FlowPlay CTO Doug Pearson details the transition of 1.4 million lines of code from a Flash-base"
+thumbnail = "https://web.archive.org/web/20171213231139im_/https://www.gamasutra.com/db_area/images/blog/311570/CasinoMap.png"
+original_url = "http://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+wayback = "https://web.archive.org/web/20171213231139/http://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+wayback_print = "https://web.archive.org/web/20171213231139/http://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "314554"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 2/2)"
+game = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 2/2)"
+authors = [
+    "Doctor Ludos",
+]
+date = "2018-02-13"
+date_estimated = false
+category = "Postmortem"
+summary = "What does it take to release a new game cartridge for the Game Boy in 2017? Heres my experience (Part 2/2), with a lot of details on the tools I used"
+thumbnail = "https://web.archive.org/web/20180213200733im_/https://www.gamasutra.com/db_area/images/blog/311143/sheepitup.gif"
+original_url = "http://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php"
+wayback = "https://web.archive.org/web/20180213200733/http://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php"
+wayback_print = "https://web.archive.org/web/20180213200733/http://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "Making a Game Boy game in 2017 — A “Sheep It Up” Post-Mortem"
+series_id = "sheep-it-up-game-boy"
+part_no = 2
+part_total = 2
+part_label = "Part 2"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "314649"
+title = "How we messed up and how we succeeded: Malta Global Game Jam"
+game = "How we messed up and how we succeeded: Malta Global Game Jam"
+authors = [
+    "Jasper Schellekens",
+]
+date = "2018-02-14"
+date_estimated = false
+category = "Postmortem"
+summary = "Lessons learned from organising the Malta Global Game Jam. An organiser's post-mortem describing the things we thought went well and things that went"
+thumbnail = "https://web.archive.org/web/20180214151639im_/http://www.gamasutra.com/ajax-loader.gif"
+original_url = "http://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php"
+wayback = "https://web.archive.org/web/20180214151639/http://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php"
+wayback_print = "https://web.archive.org/web/20180214151639/http://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "316489"
+title = "Postmortem of Anime Matsuri Expo"
+game = "of Anime Matsuri Expo"
+authors = [
+    "An Lieu",
+]
+date = "2018-04-13"
+date_estimated = false
+category = "Postmortem"
+summary = "As an indie developer with your first commercial project, it is difficult to know what to expect and what to prepare for. This postmortem was a way fo"
+thumbnail = "https://web.archive.org/web/20180413233751im_/https://d12x8khlfb4osh.cloudfront.net/assets/blogs/anime_matsuri_post_mortem/booth_completed-min.jpg"
+original_url = "http://www.gamasutra.com/blogs/AnLieu/20180413/316489/Postmortem_of_Anime_Matsuri_Expo.php"
+wayback = "https://web.archive.org/web/20180413233751/http://www.gamasutra.com/blogs/AnLieu/20180413/316489/Postmortem_of_Anime_Matsuri_Expo.php"
+wayback_print = "https://web.archive.org/web/20180413233751/http://www.gamasutra.com/blogs/AnLieu/20180413/316489/Postmortem_of_Anime_Matsuri_Expo.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
 
 [[postmortem]]
 id = "326190"
@@ -4842,5 +5377,370 @@ series_id = "indie-pc-devs-make"
 part_no = 8
 part_total = 8
 part_label = "Part 8"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "330427"
+title = "[Post Mortem - 1 year later]: I managed to ship 6000 copies to stay in business"
+game = "[Post Mortem - 1 year later]: I managed to ship 6000 copies to stay in business"
+authors = [
+    "Constantin Bacioiu",
+]
+date = "2018-11-12"
+date_estimated = false
+category = "Postmortem"
+summary = "One year ago I failed to ship 700 units to stay in business. Now I'm working on my next game after releasing a major update to the original one. A fai"
+thumbnail = "https://web.archive.org/web/20181112185041im_/https://www.gamasutra.com/db_area/images/blog/amos_hn_tweet.png"
+original_url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+wayback = "https://web.archive.org/web/20181112185041/http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+wayback_print = "https://web.archive.org/web/20181112185041/http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php?print=1"
+pages = 1
+wayback_captures = 0
+series = "An indie dev's race to stay in business"
+series_id = "bacioiu-stay-in-business"
+part_no = 2
+part_total = 2
+part_label = "6000 copies, a year on"
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "337113"
+title = "Robothorium Post Mortem"
+game = "Robothorium Post Mortem"
+authors = [
+    "Yannick Elahee",
+]
+date = "2019-02-21"
+date_estimated = false
+category = "Postmortem"
+summary = "After 2 years of development, we released our game Robothorium on Switch & PC! It's now to take a look at how the production went, how much it sol"
+thumbnail = "https://web.archive.org/web/20190221221603im_/https://cdn-images-1.medium.com/max/800/1*n2oYwYEcuZ6BD9cDyvwkeQ.png"
+original_url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+wayback = "https://web.archive.org/web/20190221221603/http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+wayback_print = "https://web.archive.org/web/20190221221603/http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "337931"
+title = "Localising Kenshi: A Post Mortem"
+game = "Localising Kenshi: A Post Mortem"
+authors = [
+    "Natalie Mikkelson",
+]
+date = "2019-03-06"
+date_estimated = false
+category = "Postmortem"
+summary = "Did Kenshi's localisation pay for itself? Was the investment worth it? In this blog post I explore how Kenshi's regional sales were affected (or not a"
+thumbnail = "https://web.archive.org/web/20190311064506im_/https://lofigames.com/wp-content/uploads/Sold-After-Release-and-Sold-Before-Release.png"
+original_url = "http://www.gamasutra.com/blogs/NatalieMikkelson/20190306/337931/Localising_Kenshi_A_Post_Mortem.php"
+wayback = "https://web.archive.org/web/20190311064506/http://www.gamasutra.com/blogs/NatalieMikkelson/20190306/337931/Localising_Kenshi_A_Post_Mortem.php"
+wayback_print = "https://web.archive.org/web/20190311064506/http://www.gamasutra.com/blogs/NatalieMikkelson/20190306/337931/Localising_Kenshi_A_Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "339782"
+title = "El Taco Diablo - Post Mortem"
+game = "El Taco Diablo - Post Mortem"
+authors = [
+    "Manne Cederskoog",
+]
+date = "2019-04-01"
+date_estimated = false
+category = "Postmortem"
+summary = "It's about 1 year since I left my home in Sweden, I'm in the middle of a grand adventure doing what I consider the opportunity of a lifetime. Doing th"
+thumbnail = "https://web.archive.org/web/20190402182832im_/https://goldenmoosestudios.com/Portfolio/Style_V1.png"
+original_url = "http://www.gamasutra.com/blogs/ManneCederskoog/20190401/339782/El_Taco_Diablo__Post_Mortem.php"
+wayback = "https://web.archive.org/web/20190402182832/http://www.gamasutra.com/blogs/ManneCederskoog/20190401/339782/El_Taco_Diablo__Post_Mortem.php"
+wayback_print = "https://web.archive.org/web/20190402182832/http://www.gamasutra.com/blogs/ManneCederskoog/20190401/339782/El_Taco_Diablo__Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "340065"
+title = "Hero-U: Rogue to Redemption Postmortem"
+game = "Hero-U: Rogue to Redemption Postmortem"
+authors = [
+    "Roberta Vaughan",
+]
+date = "2019-04-04"
+date_estimated = false
+category = "Postmortem"
+summary = "This is our official post-mortem for our latest game, Hero-U: Rogue to Redemption. It took us 6 years to make this game, and we learned a lot from the"
+thumbnail = "https://web.archive.org/web/20190404183611im_/https://gamasutra.com/ckfinder/userfiles/27524733/herou1.jpg"
+original_url = "http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php"
+wayback = "https://web.archive.org/web/20190404183611/http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php"
+wayback_print = "https://web.archive.org/web/20190404183611/http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "340291"
+title = "Das Geisterschiff Postmortem"
+game = "Das Geisterschiff Postmortem"
+authors = [
+    "Romanus Surt",
+]
+date = "2019-04-12"
+date_estimated = false
+category = "Postmortem"
+summary = "Official Postmortem for Das Geisterschiff, a survival horror adventure dungeon crawler and the first game by Graverobber Foundation."
+thumbnail = "https://web.archive.org/web/20190413020138im_/https://steamcdn-a.akamaihd.net/steam/apps/975230/ss_05e843539745d42b40e8d36d301fb4d06b33adff.600x338.jpg"
+original_url = "http://www.gamasutra.com/blogs/RomanusSurt/20190412/340291/Das_Geisterschiff_Postmortem.php"
+wayback = "https://web.archive.org/web/20190413020138/http://www.gamasutra.com/blogs/RomanusSurt/20190412/340291/Das_Geisterschiff_Postmortem.php"
+wayback_print = "https://web.archive.org/web/20190413020138/http://www.gamasutra.com/blogs/RomanusSurt/20190412/340291/Das_Geisterschiff_Postmortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "341148"
+title = "Postmortem: Skirmish Line"
+game = "Skirmish Line"
+authors = [
+    "Tony Hua",
+]
+date = "2019-04-21"
+date_estimated = false
+category = "Postmortem"
+summary = "Roughly 3 years in the making, Skirmish Line was a first project, indie success story. Here's what I've learned making my first game, and how new and"
+thumbnail = "https://web.archive.org/web/20190422060549im_/https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/remedy.gif"
+original_url = "http://www.gamasutra.com/blogs/TonyHua/20190421/341148/Postmortem_Skirmish_Line.php"
+wayback = "https://web.archive.org/web/20190422060549/http://www.gamasutra.com/blogs/TonyHua/20190421/341148/Postmortem_Skirmish_Line.php"
+wayback_print = "https://web.archive.org/web/20190422060549/http://www.gamasutra.com/blogs/TonyHua/20190421/341148/Postmortem_Skirmish_Line.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "360226"
+title = "Postmortem: A Rationally Designed Funny Game - The making of 'biped', in hindsight"
+game = "A Rationally Designed Funny Game - The making of 'biped', in hindsight"
+authors = [
+    "Ding Dong",
+]
+date = "2020-03-27"
+date_estimated = false
+category = "Postmortem"
+summary = "The making of biped, in hindsight."
+thumbnail = "https://web.archive.org/web/20201005184429im_/https://i.imgur.com/tO98MEf.jpg"
+original_url = "http://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php"
+wayback = "https://web.archive.org/web/20201005184429/http://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php"
+wayback_print = "https://web.archive.org/web/20201005184429/http://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "360682"
+title = "Hang Line Postmortem Part 1 - How pirates made my game successful"
+game = "Hang Line Postmortem Part 1 - How pirates made my game successful"
+authors = [
+    "Ed Kay",
+]
+date = "2020-04-07"
+date_estimated = false
+category = "Postmortem"
+summary = "The story of how indie game Hang Line was created, from concept to launch. How I learnt new skills, cut corners, struggled with anxiety and ignored ad"
+thumbnail = "https://web.archive.org/web/20200410122950im_/https://www.gamasutra.com/ckfinder/userfiles/32574623/360682/image31.png"
+original_url = "http://www.gamasutra.com/blogs/EdKay/20200407/360682/Hang_Line_Postmortem_Part_1__How_pirates_made_my_game_successful.php"
+wayback = "https://web.archive.org/web/20200410122950/http://www.gamasutra.com/blogs/EdKay/20200407/360682/Hang_Line_Postmortem_Part_1__How_pirates_made_my_game_successful.php"
+wayback_print = "https://web.archive.org/web/20200410122950/http://www.gamasutra.com/blogs/EdKay/20200407/360682/Hang_Line_Postmortem_Part_1__How_pirates_made_my_game_successful.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "360846"
+title = "Starcom: Nexus Postmortem, an Indie Dev Journey"
+game = "Starcom: Nexus Postmortem, an Indie Dev Journey"
+authors = [
+    "Kevin Lin",
+]
+date = "2020-06-11"
+date_estimated = false
+category = "Postmortem"
+summary = "The story of a web dev who decided to become an indie dev and create his dream game."
+thumbnail = "https://web.archive.org/web/20200613033704im_/https://i1.wp.com/www.starcomnexus.com/wordpress/wp-content/uploads/2020/03/PlanetDefender-1.jpg"
+original_url = "http://www.gamasutra.com/blogs/KevinLin/20200611/360846/Starcom_Nexus_Postmortem_an_Indie_Dev_Journey.php"
+wayback = "https://web.archive.org/web/20200613033704/http://www.gamasutra.com/blogs/KevinLin/20200611/360846/Starcom_Nexus_Postmortem_an_Indie_Dev_Journey.php"
+wayback_print = "https://web.archive.org/web/20200613033704/http://www.gamasutra.com/blogs/KevinLin/20200611/360846/Starcom_Nexus_Postmortem_an_Indie_Dev_Journey.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "368294"
+title = "Postmortem: Eastshade"
+game = "Eastshade"
+authors = [
+    "Danny Weinbaum",
+]
+date = "2020-08-17"
+date_estimated = false
+category = "Postmortem"
+summary = "A look back at the 5-year development of Eastshade, the open-world adventure where you play as a traveling painter."
+thumbnail = "https://web.archive.org/web/20200819053609im_/https://www.gamasutra.com/ckfinder/userfiles/38773093/marketing%20art.jpg"
+original_url = "http://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+wayback = "https://web.archive.org/web/20200819053609/http://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+wayback_print = "https://web.archive.org/web/20200819053609/http://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "369617"
+title = "Post Mortem on our Launch of Dungeons of Edera, an endlessly replayable Dark Souls roguelike"
+game = "Post Mortem on our Launch of Dungeons of Edera, an endlessly replayable Dark Souls roguelike"
+authors = [
+    "Mathew Petermeyer",
+]
+date = "2020-09-08"
+date_estimated = false
+category = "Postmortem"
+summary = "On August 28th I released my second game on Steam into early access, Dungeons of Edera, a roguelite action RPG, and I wanted to once again to share m"
+thumbnail = "https://web.archive.org/web/20200923072650im_/https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/remedy.gif"
+original_url = "http://www.gamasutra.com/blogs/MathewPetermeyer/20200908/369617/Post_Mortem_on_our_Launch_of_Dungeons_of_Edera_an_endlessly_replayable_Dark_Souls_roguelike.php"
+wayback = "https://web.archive.org/web/20200923072650/http://www.gamasutra.com/blogs/MathewPetermeyer/20200908/369617/Post_Mortem_on_our_Launch_of_Dungeons_of_Edera_an_endlessly_replayable_Dark_Souls_roguelike.php"
+wayback_print = "https://web.archive.org/web/20200923072650/http://www.gamasutra.com/blogs/MathewPetermeyer/20200908/369617/Post_Mortem_on_our_Launch_of_Dungeons_of_Edera_an_endlessly_replayable_Dark_Souls_roguelike.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "372977"
+title = "Postmortem: Children of Morta"
+game = "Children of Morta"
+authors = [
+    "Amir H Fassihi",
+]
+date = "2020-11-02"
+date_estimated = false
+category = "Postmortem"
+summary = "Children of Morta is a narrative-driven, roguelike action game about a family of guardians. A year has passed since the launch of the game. This artic"
+thumbnail = ""
+original_url = "http://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php"
+wayback = "https://web.archive.org/web/20201103054439/http://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php"
+wayback_print = "https://web.archive.org/web/20201103054439/http://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "374142"
+title = "A Pre-Post-Mortem About Marketing (5 Lessons Learned)"
+game = "A Pre-Post-Mortem About Marketing (5 Lessons Learned)"
+authors = [
+    "Drew Mc Intosh",
+]
+date = "2020-11-24"
+date_estimated = false
+category = "Postmortem"
+summary = "Five hard earned lessons I learned about marketing while making Spaceslingers for $0 as a small time indie developer."
+thumbnail = "https://web.archive.org/web/20201126140115im_/https://refreshertowelgames.files.wordpress.com/2020/11/2020-11-08.png"
+original_url = "http://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php"
+wayback = "https://web.archive.org/web/20201126140115/http://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php"
+wayback_print = "https://web.archive.org/web/20201126140115/http://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "375680"
+title = "How I wasted $4k+ and half a year of my life to develop a game that earned only $30"
+game = "How I wasted $4k+ and half a year of my life to develop a game that earned only $30"
+authors = [
+    "Alexey Strelkov",
+]
+date = "2021-01-04"
+date_estimated = false
+category = "Postmortem"
+summary = "Postmortem analysis of Drunk Shotgun: an hardcore indie game you probably never heard of."
+thumbnail = "https://web.archive.org/web/20210104181639im_/https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/remedy.gif"
+original_url = "http://www.gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+wayback = "https://web.archive.org/web/20210104181639/http://www.gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+wayback_print = "https://web.archive.org/web/20210104181639/http://www.gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "375873"
+title = "COVID-19, Unity and I - The post mortem of Chestnut Grove"
+game = "COVID-19, Unity and I - The post mortem of Chestnut Grove"
+authors = [
+    "Philip Drobar",
+]
+date = "2021-01-07"
+date_estimated = false
+category = "Postmortem"
+summary = "I’m Philip, a hobby indie game dev (@PhilipDrobar), and this is my story of how I got started with Unity, created my first game in roughly 6 months"
+thumbnail = "https://web.archive.org/web/20210107182437im_/https://www.gamasutra.com/ckfinder/userfiles/46317703/375873/CNG_boxart02.png"
+original_url = "http://www.gamasutra.com/blogs/PhilipDrobar/20210107/375873/COVID19_Unity_and_I__The_post_mortem_of_Chestnut_Grove.php"
+wayback = "https://web.archive.org/web/20210107182437/http://www.gamasutra.com/blogs/PhilipDrobar/20210107/375873/COVID19_Unity_and_I__The_post_mortem_of_Chestnut_Grove.php"
+wayback_print = "https://web.archive.org/web/20210107182437/http://www.gamasutra.com/blogs/PhilipDrobar/20210107/375873/COVID19_Unity_and_I__The_post_mortem_of_Chestnut_Grove.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "384419"
+title = "Steam NextFest: Post-Mortem"
+game = "Steam NextFest: Post-Mortem"
+authors = [
+    "Laura Tallardy",
+]
+date = "2021-07-01"
+date_estimated = false
+category = "Postmortem"
+summary = "We made it through our first Steam festival- here’s what we learned."
+thumbnail = "https://web.archive.org/web/20210701142837im_/http://www.gamasutra.com/ajax-loader.gif"
+original_url = "http://www.gamasutra.com/blogs/LauraTallardy/20210701/384419/Steam_NextFest_PostMortem.php"
+wayback = "https://web.archive.org/web/20210701142837/http://www.gamasutra.com/blogs/LauraTallardy/20210701/384419/Steam_NextFest_PostMortem.php"
+wayback_print = "https://web.archive.org/web/20210701142837/http://www.gamasutra.com/blogs/LauraTallardy/20210701/384419/Steam_NextFest_PostMortem.php?print=1"
+pages = 1
+wayback_captures = 0
+alt_ids = []
+author_notable = false
+
+[[postmortem]]
+id = "386822"
+title = "Raptor Boyfriend: A Post Mortem"
+game = "Raptor Boyfriend: A Post Mortem"
+authors = [
+    "Lindsay Rollins",
+]
+date = "2021-08-16"
+date_estimated = false
+category = "Postmortem"
+summary = "This postmortem is about trying to identify what happened during the development of Raptor Boyfriend. What were the challenges? What were the decision"
+thumbnail = "https://web.archive.org/web/20210817152549im_/http://www.gamasutra.com/ajax-loader.gif"
+original_url = "http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php"
+wayback = "https://web.archive.org/web/20210817152549/http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php"
+wayback_print = "https://web.archive.org/web/20210817152549/http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php?print=1"
+pages = 1
+wayback_captures = 0
 alt_ids = []
 author_notable = false

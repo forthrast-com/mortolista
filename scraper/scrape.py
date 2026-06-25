@@ -64,7 +64,7 @@ GENERIC_TITLES = {"news", "gamasutra", "features",
 # article hero images: new layout /db_area/images/feature/<id>/x.jpg,
 # old layout /features/<yyyymmdd>/x.jpg
 IMG_RE = re.compile(
-    r'src="([^"]*?(?:/db_area/images/feature/\d+/|/features/\d{6,8}/)'
+    r'src="([^"]*?(?:/db_area/images/(?:feature|news)/\d+/|/features/\d{6,8}/)'
     r'[^"]+?\.(?:jpe?g|png|gif))"', re.I)
 IMG_CHROME = re.compile(
     r'(arrowright|spacer|btn_|icon_|header\.gif|_off\.|_on\.|sitelogo|logo|masthead|nav_)',
@@ -121,7 +121,11 @@ CURATED_META_KEYS = SERIES_META_KEYS + ("thumbnail",)
 
 
 def parse_feature_url(url):
-    m = re.match(r"https?://[^/]+(/view/feature/(\d+)/([^/?#]+?)(?:\.php)?)(?:[?#].*)?$", url, re.I)
+    # /view/feature/ and /view/news/ share a shape; the "Classic Postmortem"
+    # magazine reprints live under /view/news/ (with non-postmortem slugs), which
+    # is why the feature sweep never found them — their heroes sit in
+    # db_area/images/news/<id>/.
+    m = re.match(r"https?://[^/]+(/view/(?:feature|news)/(\d+)/([^/?#]+?)(?:\.php)?)(?:[?#].*)?$", url, re.I)
     if m:
         path, aid, slug = m.group(1), m.group(2), m.group(3)
         if not path.endswith(".php"):
@@ -138,6 +142,17 @@ def parse_feature_url(url):
         if not path.endswith(".php"):
             path += ".php"
         return aid, slug, "http://www.gamasutra.com" + path
+    # gamedeveloper.com classics: the post-migration site that the magazine
+    # "Classic Postmortem" reprints live on. No numeric feature id in the URL and
+    # the live page 403s scrapers, so we ingest the Wayback capture and derive a
+    # stable id from the slug (prefixed to stay clear of gamasutra ids).
+    m = re.match(
+        r"https?://(?:www\.)?gamedeveloper\.com/([^?#]+?)/?(?:[?#].*)?$", url, re.I)
+    if m:
+        path = m.group(1)                      # "<section>/<slug>"
+        slug = path.rsplit("/", 1)[-1]
+        aid = "gd-" + slug[:60]
+        return aid, slug, "https://www.gamedeveloper.com/" + path
     return None
 
 
@@ -347,7 +362,7 @@ def parse_article(aid, rec):
         title = slug_title(rec["slug"])
 
     # description
-    desc = extract_meta_content(html, name="description") or extract_meta_content(html, prop="og:description")
+    desc = strip_tags(extract_meta_content(html, name="description") or extract_meta_content(html, prop="og:description"))
 
     # authors: only from the byline span (avoids sidebar contributor lists)
     byline = BYLINE_RE.search(html)
@@ -365,6 +380,15 @@ def parse_article(aid, rec):
         owner = blog_owner_from_title(raw_title) or split_camel_name(blog_author_camel)
         if owner and "gamasutra" not in owner.lower():
             authors.append(owner)
+
+    # gamedeveloper.com carries no scrapeable byline span, but its JSON-LD names
+    # the author (often "Game Developer" for magazine reprints).
+    if not authors:
+        m = re.search(r'"author"\s*:\s*\{[^}]*?"name"\s*:\s*"([^"]+)"', html)
+        if m:
+            name = clean(strip_tags(m.group(1)))
+            if name and "gamasutra" not in name.lower():
+                authors.append(name)
 
     date = extract_date(html)
     date_estimated = False
@@ -432,8 +456,14 @@ def slug_title(slug):
     return t[:1].upper() + t[1:] if t else slug
 
 
+def strip_tags(s):
+    """Drop inline HTML tags (gamedeveloper.com og:titles/summaries carry literal
+    <i>…</i> around game names); gamasutra titles have none, so this is a no-op there."""
+    return re.sub(r"<[^>]+>", "", s or "")
+
+
 def strip_title(s):
-    s = clean(s)
+    s = clean(strip_tags(s))
     # drop leading site/section breadcrumbs: "Gamasutra - Features - Foo" -> "Foo"
     s = re.sub(r"^\s*Gamasutra\s*-\s*(Features\s*-\s*)?", "", s, flags=re.I)
     # developer-blog breadcrumb: "Gamasutra: Jane Doe's Blog - Real Title" -> "Real Title"
@@ -474,6 +504,11 @@ def extract_date(html):
         m = rx.search(html)
         if m:
             return _norm_date(m.group(1))
+    # gamedeveloper.com (Contentstack) exposes the real republish date in JSON-LD
+    # — the only reliable date on those pages, which otherwise look ~2021 (capture).
+    m = re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})', html)
+    if m:
+        return m.group(1)
     return ""
 
 

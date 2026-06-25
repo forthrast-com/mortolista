@@ -75,3 +75,246 @@ series_id = "indie-pc-devs-make"
 part_no = 8
 part_total = 8
 part_label = "Part 8"
+
+
+# ---- Tier A: /blogs/ postmortems from the HN/Reddit sweep (curated 2026-06) ----
+
+[[include]]
+id = "375680"
+url = "https://gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "310012"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+series = "An indie dev's race to stay in business"
+series_id = "bacioiu-stay-in-business"
+part_no = 1
+part_total = 2
+part_label = "700 units"
+
+[[include]]
+id = "311143"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+series = "Making a Game Boy game in 2017 — A “Sheep It Up” Post-Mortem"
+series_id = "sheep-it-up-game-boy"
+part_no = 1
+part_total = 2
+part_label = "Part 1"
+
+[[include]]
+id = "236427"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "311570"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "372977"
+url = "https://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "316489"
+url = "http://gamasutra.com/blogs/AnLieu/20180413/316489/Postmortem_of_Anime_Matsuri_Expo.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "254610"
+url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "234086"
+url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "368294"
+url = "https://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "369617"
+url = "https://www.gamasutra.com/blogs/MathewPetermeyer/20200908/369617/Post_Mortem_on_our_Launch_of_Dungeons_of_Edera_an_endlessly_replayable_Dark_Souls_roguelike.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "386822"
+url = "https://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "341148"
+url = "http://www.gamasutra.com/blogs/TonyHua/20190421/341148/Postmortem_Skirmish_Line.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "337113"
+url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "340065"
+url = "http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "175583"
+url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "330427"
+url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+series = "An indie dev's race to stay in business"
+series_id = "bacioiu-stay-in-business"
+part_no = 2
+part_total = 2
+part_label = "6000 copies, a year on"
+
+[[include]]
+id = "314554"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+series = "Making a Game Boy game in 2017 — A “Sheep It Up” Post-Mortem"
+series_id = "sheep-it-up-game-boy"
+part_no = 2
+part_total = 2
+part_label = "Part 2"
+
+[[include]]
+id = "360226"
+url = "https://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "360846"
+url = "https://www.gamasutra.com/blogs/KevinLin/20200611/360846/Starcom_Nexus_Postmortem_an_Indie_Dev_Journey.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "193811"
+url = "http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "294276"
+url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "360682"
+url = "https://www.gamasutra.com/blogs/EdKay/20200407/360682/Hang_Line_Postmortem_Part_1__How_pirates_made_my_game_successful.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "273917"
+url = "http://gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "199358"
+url = "http://gamasutra.com/blogs/MatthewKlingensmith/20130912/199358/DwarfCorps_Kickstarter_Postmortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "207899"
+url = "http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "233818"
+url = "http://gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "300409"
+url = "http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "384419"
+url = "https://www.gamasutra.com/blogs/LauraTallardy/20210701/384419/Steam_NextFest_PostMortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "375873"
+url = "https://www.gamasutra.com/blogs/PhilipDrobar/20210107/375873/COVID19_Unity_and_I__The_post_mortem_of_Chestnut_Grove.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "374142"
+url = "https://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "168330"
+url = "http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "191049"
+url = "http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "216965"
+url = "http://www.gamasutra.com/blogs/KarlInglott/20140506/216965/903m__From_University_project_to_Steam_released_game.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "224920"
+url = "http://gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "211326"
+url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "260239"
+url = "http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "260265"
+url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "314649"
+url = "https://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "340291"
+url = "http://www.gamasutra.com/blogs/RomanusSurt/20190412/340291/Das_Geisterschiff_Postmortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "339782"
+url = "http://www.gamasutra.com/blogs/ManneCederskoog/20190401/339782/El_Taco_Diablo__Post_Mortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "337931"
+url = "http://gamasutra.com/blogs/NatalieMikkelson/20190306/337931/Localising_Kenshi_A_Post_Mortem.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "269575"
+url = "http://gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."
+
+[[include]]
+id = "267827"
+url = "http://gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php"
+reason = "Tier A blog postmortem surfaced by the HN/Reddit sweep; developer-blog URL invisible to the /view/feature/ slug sweep."

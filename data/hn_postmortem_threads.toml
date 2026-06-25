@@ -1800,6 +1800,22 @@ comments = 0
 submitted_url = "http://www.gamasutra.com/view/feature/135109/postmortem_days_of_wonders_.php"
 
 [[hn_postmortem]]
+id = "168330"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "3833632"
+title = "Sales post-mortem for an indie game"
+url = "https://news.ycombinator.com/item?id=3833632"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/RobertHale/20120411/168330/PostMortem_Waves.php"
+
+[[hn_postmortem]]
 id = "168921"
 hn_points = 0
 hn_comments = 0
@@ -1859,6 +1875,22 @@ hn_points_sum = 0
 hn_comments_sum = 0
 hn_submissions = 0
 hn_threads = []
+
+[[hn_postmortem]]
+id = "175583"
+hn_points = 6
+hn_comments = 0
+hn_points_sum = 6
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "4365418"
+title = "Google Play Is Better Than The iOS Store (In Our Case): A Dangerous Post-Mortem"
+url = "https://news.ycombinator.com/item?id=4365418"
+points = 6
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php"
 
 [[hn_postmortem]]
 id = "179030"
@@ -1998,6 +2030,22 @@ comments = 0
 submitted_url = "http://www.gamasutra.com/view/feature/190432/Postmortem_Overhaul_Games_Baldurs_Gate_Enhanced_Edition.php"
 
 [[hn_postmortem]]
+id = "191049"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "5596944"
+title = "Mech Force (HTML5 Game) Post Mortem"
+url = "https://news.ycombinator.com/item?id=5596944"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php"
+
+[[hn_postmortem]]
 id = "191265"
 hn_points = 1
 hn_comments = 0
@@ -2012,6 +2060,22 @@ url = "https://news.ycombinator.com/item?id=5626341"
 points = 1
 comments = 0
 submitted_url = "http://www.gamasutra.com/view/feature/191265/A_MiniPostmortem_Roundup.php"
+
+[[hn_postmortem]]
+id = "193811"
+hn_points = 3
+hn_comments = 0
+hn_points_sum = 3
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "5845448"
+title = "Post Mortem: Minecraft Oakland"
+url = "https://news.ycombinator.com/item?id=5845448"
+points = 3
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/AlexHandy/20130606/193811/Post_Mortem_Minecraft_Oakland.php"
 
 [[hn_postmortem]]
 id = "193695"
@@ -2082,6 +2146,22 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "199358"
+hn_points = 2
+hn_comments = 0
+hn_points_sum = 2
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "6384602"
+title = "DwarfCorp's Kickstarter Postmortem"
+url = "https://news.ycombinator.com/item?id=6384602"
+points = 2
+comments = 0
+submitted_url = "http://gamasutra.com/blogs/MatthewKlingensmith/20130912/199358/DwarfCorps_Kickstarter_Postmortem.php"
+
+[[hn_postmortem]]
 id = "200658"
 hn_points = 2
 hn_comments = 0
@@ -2098,6 +2178,54 @@ comments = 0
 submitted_url = "http://www.gamasutra.com/view/feature/200658/postmortem_drinkbox_studios_.php"
 
 [[hn_postmortem]]
+id = "207899"
+hn_points = 2
+hn_comments = 0
+hn_points_sum = 2
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "7000098"
+title = "A painful postmortem: How Indoor Sports World drove its devs to the edge"
+url = "https://news.ycombinator.com/item?id=7000098"
+points = 2
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/RichardHillWhittall/20131231/207899/The_Indoor_Pub_Games_Sports_World_PlayStationVita_PostMortem.php"
+
+[[hn_postmortem]]
+id = "211326"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "9023076"
+title = "A Darkest Dungeon Kickstarter Post-Mortem (Part 1)"
+url = "https://news.ycombinator.com/item?id=9023076"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/TylerSigman/20140305/211326/A_Darkest_Dungeon_Kickstarter_PostMortem_Part_1.php"
+
+[[hn_postmortem]]
+id = "216965"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "7704054"
+title = "Post-mortem on 9.03m – from University project to Steam-released game"
+url = "https://news.ycombinator.com/item?id=7704054"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/KarlInglott/20140506/216965/903m__From_University_project_to_Steam_released_game.php"
+
+[[hn_postmortem]]
 id = "218372"
 hn_points = 0
 hn_comments = 0
@@ -2107,6 +2235,22 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "224920"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "8293309"
+title = "Post-Kickstarter Finance by the Numbers; a One-Man Studio Postmortem"
+url = "https://news.ycombinator.com/item?id=8293309"
+points = 1
+comments = 0
+submitted_url = "http://gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php"
+
+[[hn_postmortem]]
 id = "233340"
 hn_points = 0
 hn_comments = 0
@@ -2114,6 +2258,38 @@ hn_points_sum = 0
 hn_comments_sum = 0
 hn_submissions = 0
 hn_threads = []
+
+[[hn_postmortem]]
+id = "233818"
+hn_points = 2
+hn_comments = 0
+hn_points_sum = 2
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "8874412"
+title = "Aegis Defenders Crowdfunding Post-Mortem, Pt. 1: So, You Wanna Crowdfund?"
+url = "https://news.ycombinator.com/item?id=8874412"
+points = 2
+comments = 0
+submitted_url = "http://gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php"
+
+[[hn_postmortem]]
+id = "234086"
+hn_points = 34
+hn_comments = 12
+hn_points_sum = 34
+hn_comments_sum = 12
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "8890692"
+title = "Postmortem: Launching the War Z"
+url = "https://news.ycombinator.com/item?id=8890692"
+points = 34
+comments = 12
+submitted_url = "http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php"
 
 [[hn_postmortem]]
 id = "235408"
@@ -2143,7 +2319,243 @@ hn_submissions = 0
 hn_threads = []
 
 [[hn_postmortem]]
+id = "236427"
+hn_points = 304
+hn_comments = 85
+hn_points_sum = 304
+hn_comments_sum = 85
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "9244034"
+title = "Goat Simulator Post Mortem"
+url = "https://news.ycombinator.com/item?id=9244034"
+points = 304
+comments = 85
+submitted_url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+
+[[hn_postmortem]]
+id = "254610"
+hn_points = 47
+hn_comments = 8
+hn_points_sum = 48
+hn_comments_sum = 8
+hn_submissions = 2
+
+[[hn_postmortem.hn_threads]]
+object_id = "10285612"
+title = "The 10 year journey of a solo game developer"
+url = "https://news.ycombinator.com/item?id=10285612"
+points = 47
+comments = 8
+submitted_url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+
+[[hn_postmortem.hn_threads]]
+object_id = "10284528"
+title = "The 10 year journey of a solo game developer"
+url = "https://news.ycombinator.com/item?id=10284528"
+points = 1
+comments = 0
+submitted_url = "http://gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php"
+
+[[hn_postmortem]]
+id = "260239"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "10638908"
+title = "Solo iOS game dev by a AAA vet: Lessons learned along the way"
+url = "https://news.ycombinator.com/item?id=10638908"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php"
+
+[[hn_postmortem]]
+id = "260265"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "10788746"
+title = "Postmortem: Porting Bastion to PSVita"
+url = "https://news.ycombinator.com/item?id=10788746"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php"
+
+[[hn_postmortem]]
+id = "267827"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "269575"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
 id = "176187"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "273917"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "294276"
+hn_points = 3
+hn_comments = 0
+hn_points_sum = 3
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "13931494"
+title = "Post-Mortem: Gorescript Classic, a JS/WebGL 3D Webgame"
+url = "https://news.ycombinator.com/item?id=13931494"
+points = 3
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/SergiuBucur/20170322/294276/PostMortem_Gorescript_Classic.php"
+
+[[hn_postmortem]]
+id = "300409"
+hn_points = 2
+hn_comments = 0
+hn_points_sum = 2
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "14640358"
+title = "Tumble Seed Postmortem"
+url = "https://news.ycombinator.com/item?id=14640358"
+points = 2
+comments = 0
+submitted_url = "http://www.gamasutra.com/blogs/GregWohlwend/20170623/300409/TumbleSeed_Postmortem.php"
+
+[[hn_postmortem]]
+id = "310012"
+hn_points = 585
+hn_comments = 335
+hn_points_sum = 593
+hn_comments_sum = 335
+hn_submissions = 2
+
+[[hn_postmortem.hn_threads]]
+object_id = "15763013"
+title = "“I thought I could ship at least 700 units to stay in business”"
+url = "https://news.ycombinator.com/item?id=15763013"
+points = 585
+comments = 335
+submitted_url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+
+[[hn_postmortem.hn_threads]]
+object_id = "15752743"
+title = "Indie Game Development: I only had to sell 700 copies to stay in business"
+url = "https://news.ycombinator.com/item?id=15752743"
+points = 8
+comments = 0
+submitted_url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+
+[[hn_postmortem]]
+id = "311143"
+hn_points = 496
+hn_comments = 82
+hn_points_sum = 862
+hn_comments_sum = 147
+hn_submissions = 2
+
+[[hn_postmortem.hn_threads]]
+object_id = "15884051"
+title = "Making a Game Boy game in 2017"
+url = "https://news.ycombinator.com/item?id=15884051"
+points = 496
+comments = 65
+submitted_url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+
+[[hn_postmortem.hn_threads]]
+object_id = "20001151"
+title = "Making a Game Boy Game in 2017"
+url = "https://news.ycombinator.com/item?id=20001151"
+points = 366
+comments = 82
+submitted_url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+
+[[hn_postmortem]]
+id = "311570"
+hn_points = 291
+hn_comments = 198
+hn_points_sum = 291
+hn_comments_sum = 198
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "15961317"
+title = "The Death of Flash and Rewriting 1.4M Lines of Code"
+url = "https://news.ycombinator.com/item?id=15961317"
+points = 291
+comments = 198
+submitted_url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+
+[[hn_postmortem]]
+id = "314554"
+hn_points = 4
+hn_comments = 0
+hn_points_sum = 4
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "16382942"
+title = "Making a Game Boy Game in 2017: A “Sheep It Up” Post-Mortem - Part II"
+url = "https://news.ycombinator.com/item?id=16382942"
+points = 4
+comments = 0
+submitted_url = "https://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraNews+%28Gamasutra+News%29"
+
+[[hn_postmortem]]
+id = "314649"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "16376199"
+title = "An Organiser’s Postmortem: Malta Global Game Jam"
+url = "https://news.ycombinator.com/item?id=16376199"
+points = 1
+comments = 0
+submitted_url = "https://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php"
+
+[[hn_postmortem]]
+id = "316489"
 hn_points = 0
 hn_comments = 0
 hn_points_sum = 0
@@ -2166,3 +2578,201 @@ url = "https://news.ycombinator.com/item?id=17997112"
 points = 2
 comments = 0
 submitted_url = "http://gamasutra.com/blogs/DavidGalindo/20180911/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php"
+
+[[hn_postmortem]]
+id = "330427"
+hn_points = 4
+hn_comments = 1
+hn_points_sum = 4
+hn_comments_sum = 1
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "18439679"
+title = "[Post Mortem – 1 year later]: I managed to ship 6000 copies to stay in business"
+url = "https://news.ycombinator.com/item?id=18439679"
+points = 4
+comments = 1
+submitted_url = "http://www.gamasutra.com/blogs/ConstantinBacioiu/20181112/330427/Post_Mortem__1_year_later_I_managed_to_ship_6000_copies_to_stay_in_business.php"
+
+[[hn_postmortem]]
+id = "337113"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "337931"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "339782"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "340065"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "340291"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "341148"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "360226"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "360682"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "360846"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "368294"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "369617"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "372977"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "25014221"
+title = "Postmortem: Children of Morta"
+url = "https://news.ycombinator.com/item?id=25014221"
+points = 1
+comments = 0
+submitted_url = "https://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php"
+
+[[hn_postmortem]]
+id = "374142"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "25240853"
+title = "A Pre-Post-Mortem About Marketing (5 Lessons Learned)"
+url = "https://news.ycombinator.com/item?id=25240853"
+points = 1
+comments = 0
+submitted_url = "https://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php"
+
+[[hn_postmortem]]
+id = "375680"
+hn_points = 49
+hn_comments = 22
+hn_points_sum = 59
+hn_comments_sum = 22
+hn_submissions = 2
+
+[[hn_postmortem.hn_threads]]
+object_id = "26620080"
+title = "Failure Story of the Drunken Shotgun"
+url = "https://news.ycombinator.com/item?id=26620080"
+points = 49
+comments = 22
+submitted_url = "https://www.gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+
+[[hn_postmortem.hn_threads]]
+object_id = "25635700"
+title = "I wasted $4k+ and half a year of my life to develop a game that earned $30"
+url = "https://news.ycombinator.com/item?id=25635700"
+points = 10
+comments = 0
+submitted_url = "https://gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+
+[[hn_postmortem]]
+id = "375873"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "384419"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []
+
+[[hn_postmortem]]
+id = "386822"
+hn_points = 0
+hn_comments = 0
+hn_points_sum = 0
+hn_comments_sum = 0
+hn_submissions = 0
+hn_threads = []

@@ -2920,6 +2920,15 @@ comments = 0
 created_utc = 1329941087
 
 [[reddit_postmortem]]
+id = "168330"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "168921"
 reddit_score = 0
 reddit_comments = 0
@@ -2986,6 +2995,15 @@ created_utc = 1339945565
 
 [[reddit_postmortem]]
 id = "173453"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "175583"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3272,7 +3290,25 @@ comments = 0
 created_utc = 1556310252
 
 [[reddit_postmortem]]
+id = "191049"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "191265"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "193811"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3398,6 +3434,15 @@ comments = 0
 created_utc = 1549577496
 
 [[reddit_postmortem]]
+id = "199358"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "200658"
 reddit_score = 2
 reddit_comments = 0
@@ -3426,6 +3471,33 @@ permalink = "https://www.reddit.com/comments/ahfgjp/"
 score = 1
 comments = 0
 created_utc = 1547848274
+
+[[reddit_postmortem]]
+id = "207899"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "211326"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "216965"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
 
 [[reddit_postmortem]]
 id = "218372"
@@ -3458,7 +3530,34 @@ comments = 2
 created_utc = 1400911868
 
 [[reddit_postmortem]]
+id = "224920"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "233340"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "233818"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "234086"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3492,6 +3591,80 @@ reddit_score_sum = 0
 reddit_comments_sum = 0
 reddit_submissions = 0
 reddit_threads = []
+
+[[reddit_postmortem]]
+id = "236427"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "254610"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "260239"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "260265"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "267827"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4ae947"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Language and mobile development: A postmortem on terminology and teams"
+url = "http://gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php"
+permalink = "https://www.reddit.com/comments/4ae947/"
+score = 1
+comments = 0
+created_utc = 1457978724
+
+[[reddit_postmortem]]
+id = "269575"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4dxbh5"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Greenlit on Steam in 16 days: What worked well what didnat"
+url = "http://gamasutra.com/blogs/JavierBargueno/20160404/269575/Greenlit_in_16_days_Post_mortem_What_worked_well_what_didnt.php"
+permalink = "https://www.reddit.com/comments/4dxbh5/"
+score = 1
+comments = 0
+created_utc = 1460134915
 
 [[reddit_postmortem]]
 id = "176187"
@@ -3546,6 +3719,107 @@ comments = 0
 created_utc = 1345554145
 
 [[reddit_postmortem]]
+id = "273917"
+reddit_score = 2
+reddit_comments = 1
+reddit_score_sum = 2
+reddit_comments_sum = 1
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4m4865"
+subreddit = "kickstarter"
+author = "MADSOFTGames"
+title = "Gamasutra – Me, My Dinosaur, And Our Failed Kickstarter: A Crowdfunding Post-Mortem"
+url = "http://gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php"
+permalink = "https://www.reddit.com/comments/4m4865/"
+score = 2
+comments = 1
+created_utc = 1464823717
+
+[[reddit_postmortem]]
+id = "294276"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "300409"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "310012"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "311143"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "311570"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "314554"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "314649"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "316489"
+reddit_score = 52
+reddit_comments = 2
+reddit_score_sum = 52
+reddit_comments_sum = 2
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8ccco4"
+subreddit = "gamedev"
+author = "dicky_rengen"
+title = "Postmortem: Introvert Indie Dev Exhibits His Game For The First Time"
+url = "http://gamasutra.com/blogs/AnLieu/20180413/316489/Postmortem_of_Anime_Matsuri_Expo.php"
+permalink = "https://www.reddit.com/comments/8ccco4/"
+score = 52
+comments = 2
+created_utc = 1523758957
+
+[[reddit_postmortem]]
 id = "326190"
 reddit_score = 1
 reddit_comments = 0
@@ -3574,3 +3848,467 @@ permalink = "https://www.reddit.com/comments/9flc19/"
 score = 0
 comments = 0
 created_utc = 1536868978
+
+[[reddit_postmortem]]
+id = "330427"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "337113"
+reddit_score = 8
+reddit_comments = 0
+reddit_score_sum = 9
+reddit_comments_sum = 0
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "axn3gj"
+subreddit = "gamedev"
+author = "GamedevPhilo"
+title = "Robothorium Post Mortem"
+url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/axn3gj/"
+score = 8
+comments = 0
+created_utc = 1551803682
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "axn398"
+subreddit = "IndieDev"
+author = "[deleted]"
+title = "Robothorium Post Mortem"
+url = "http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/axn398/"
+score = 1
+comments = 0
+created_utc = 1551803657
+
+[[reddit_postmortem]]
+id = "337931"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ayofbv"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Translating Steam hit Kenshi's 300K words into 6 languages"
+url = "http://gamasutra.com/blogs/NatalieMikkelson/20190306/337931/Localising_Kenshi_A_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/ayofbv/"
+score = 1
+comments = 0
+created_utc = 1552037951
+
+[[reddit_postmortem]]
+id = "339782"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "b90sfg"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Blog: A postmortem of hardcore arena shooter El Taco Diablo"
+url = "http://www.gamasutra.com/blogs/ManneCederskoog/20190401/339782/El_Taco_Diablo__Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/b90sfg/"
+score = 1
+comments = 0
+created_utc = 1554311776
+
+[[reddit_postmortem]]
+id = "340065"
+reddit_score = 7
+reddit_comments = 0
+reddit_score_sum = 9
+reddit_comments_sum = 0
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "b9i032"
+subreddit = "TurnBasedTactical"
+author = "Danceman2"
+title = "Hero-U: Rogue to Redemption Postmortem"
+url = "http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php"
+permalink = "https://www.reddit.com/comments/b9i032/"
+score = 7
+comments = 0
+created_utc = 1554410068
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bcd312"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Postmortem: Throwback roleplaying adventure Hero-U: Rogue to Redemption"
+url = "http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php"
+permalink = "https://www.reddit.com/comments/bcd312/"
+score = 2
+comments = 0
+created_utc = 1555072780
+
+[[reddit_postmortem]]
+id = "340291"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bdksfu"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Blog: A postmortem for Das Geisterschiff"
+url = "http://www.gamasutra.com/blogs/RomanusSurt/20190412/340291/Das_Geisterschiff_Postmortem.php"
+permalink = "https://www.reddit.com/comments/bdksfu/"
+score = 1
+comments = 0
+created_utc = 1555358900
+
+[[reddit_postmortem]]
+id = "341148"
+reddit_score = 8
+reddit_comments = 0
+reddit_score_sum = 8
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bfzjh4"
+subreddit = "gamedev"
+author = "Snarkstopus"
+title = "Postmortem for my first commercial game: Skirmish Line"
+url = "http://www.gamasutra.com/blogs/TonyHua/20190421/341148/Postmortem_Skirmish_Line.php"
+permalink = "https://www.reddit.com/comments/bfzjh4/"
+score = 8
+comments = 0
+created_utc = 1555920763
+
+[[reddit_postmortem]]
+id = "360226"
+reddit_score = 4
+reddit_comments = 0
+reddit_score_sum = 6
+reddit_comments_sum = 0
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "fquegy"
+subreddit = "IndieGaming"
+author = "NEXTStudiosDev"
+title = "If you are interested to learn how and why we developed 'Biped' do check out our \"making of 'biped', in hindsight\" article."
+url = "https://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php"
+permalink = "https://www.reddit.com/comments/fquegy/"
+score = 4
+comments = 0
+created_utc = 1585435484
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "fquclm"
+subreddit = "gamedev"
+author = "NEXTStudiosDev"
+title = "A retrospective look at how we developed Biped and the reasoning behind our decisions"
+url = "https://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php"
+permalink = "https://www.reddit.com/comments/fquclm/"
+score = 1
+comments = 0
+created_utc = 1585435302
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ga53rk"
+subreddit = "NEXTStudios"
+author = "NEXTStudiosDev"
+title = "Postmortem: A Rationally Designed Funny Game - The making of 'biped', in hindsight!"
+url = "https://gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php"
+permalink = "https://www.reddit.com/comments/ga53rk/"
+score = 1
+comments = 0
+created_utc = 1588145961
+
+[[reddit_postmortem]]
+id = "360682"
+reddit_score = 2
+reddit_comments = 3
+reddit_score_sum = 4
+reddit_comments_sum = 4
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "fwnbvq"
+subreddit = "gamedev"
+author = "edform"
+title = "How my game getting pirated was the best thing that ever happened - a complete postmortem for Hang Line explaining the crazy story of how it got half a million illegal downloads before it was even launched"
+url = "https://www.gamasutra.com/blogs/EdKay/20200407/360682/Hang_Line_Postmortem_Part_1__How_pirates_made_my_game_successful.php"
+permalink = "https://www.reddit.com/comments/fwnbvq/"
+score = 2
+comments = 3
+created_utc = 1586276274
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "fwotvo"
+subreddit = "pcgaming"
+author = "Blacky-Noir"
+title = "Hang Line Postmortem Part 1 - How pirates made my game successful (Gamasutra)"
+url = "https://www.gamasutra.com/blogs/EdKay/20200407/360682/Hang_Line_Postmortem_Part_1__How_pirates_made_my_game_successful.php"
+permalink = "https://www.reddit.com/comments/fwotvo/"
+score = 2
+comments = 1
+created_utc = 1586281121
+
+[[reddit_postmortem]]
+id = "360846"
+reddit_score = 3
+reddit_comments = 1
+reddit_score_sum = 4
+reddit_comments_sum = 1
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "h9bs6h"
+subreddit = "IndieDev"
+author = "Sersch"
+title = "Starcom: Nexus Postmortem, an Indie Dev Journey"
+url = "https://www.gamasutra.com/blogs/KevinLin/20200611/360846/Starcom_Nexus_Postmortem_an_Indie_Dev_Journey.php"
+permalink = "https://www.reddit.com/comments/h9bs6h/"
+score = 3
+comments = 1
+created_utc = 1592208172
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "h13crz"
+subreddit = "gamedev"
+author = "RichardEast"
+title = "Starcom: Nexus - Postmortem"
+url = "https://www.gamasutra.com/blogs/KevinLin/20200611/360846/Starcom_Nexus_Postmortem_an_Indie_Dev_Journey.php"
+permalink = "https://www.reddit.com/comments/h13crz/"
+score = 1
+comments = 0
+created_utc = 1591895252
+
+[[reddit_postmortem]]
+id = "368294"
+reddit_score = 32
+reddit_comments = 18
+reddit_score_sum = 61
+reddit_comments_sum = 27
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ieaql3"
+subreddit = "Eastshade"
+author = "DannyWeinbaum"
+title = "Postmortem: A look back at the 5 year development of Eastshade"
+url = "https://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+permalink = "https://www.reddit.com/comments/ieaql3/"
+score = 32
+comments = 5
+created_utc = 1598064174
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ibje4u"
+subreddit = "gamedev"
+author = "leafdj"
+title = "Postmortem: Eastshade"
+url = "https://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+permalink = "https://www.reddit.com/comments/ibje4u/"
+score = 18
+comments = 18
+created_utc = 1597687693
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ic1u8b"
+subreddit = "VideoGamesArt"
+author = "VideoGamesArt"
+title = "Postmortem: Eastshade"
+url = "https://gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GamasutraNews+%28Gamasutra+News%29"
+permalink = "https://www.reddit.com/comments/ic1u8b/"
+score = 7
+comments = 0
+created_utc = 1597760326
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ibmbch"
+subreddit = "Unity3D"
+author = "DannyWeinbaum"
+title = "Postmortem: A look back at the 5 year development and successful release of Eastshade"
+url = "https://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+permalink = "https://www.reddit.com/comments/ibmbch/"
+score = 3
+comments = 4
+created_utc = 1597696478
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ibkeg6"
+subreddit = "gamedev"
+author = "[deleted]"
+title = "Postmortem: A look back at the 5 year development of Eastshade, the open-world adventure where you play as a traveling artist"
+url = "https://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php"
+permalink = "https://www.reddit.com/comments/ibkeg6/"
+score = 1
+comments = 0
+created_utc = 1597690659
+
+[[reddit_postmortem]]
+id = "369617"
+reddit_score = 20
+reddit_comments = 6
+reddit_score_sum = 20
+reddit_comments_sum = 6
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ix2an9"
+subreddit = "gamedev"
+author = "MonsterToothStudios"
+title = "Post Mortem on our Launch of Dungeons of Edera and comprehensive guide to social marketing with no budget"
+url = "https://www.gamasutra.com/blogs/MathewPetermeyer/20200908/369617/Post_Mortem_on_our_Launch_of_Dungeons_of_Edera_an_endlessly_replayable_Dark_Souls_roguelike.php"
+permalink = "https://www.reddit.com/comments/ix2an9/"
+score = 20
+comments = 6
+created_utc = 1600701154
+
+[[reddit_postmortem]]
+id = "372977"
+reddit_score = 54
+reddit_comments = 2
+reddit_score_sum = 54
+reddit_comments_sum = 2
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "joihti"
+subreddit = "ChildrenofMorta"
+author = "Torley_"
+title = "Postmortem: Children of Morta - Insightful article into what went right and wrong with developing the game"
+url = "https://www.gamasutra.com/blogs/AmirHFassihi/20201102/372977/Postmortem_Children_of_Morta.php"
+permalink = "https://www.reddit.com/comments/joihti/"
+score = 54
+comments = 2
+created_utc = 1604581831
+
+[[reddit_postmortem]]
+id = "374142"
+reddit_score = 0
+reddit_comments = 2
+reddit_score_sum = 0
+reddit_comments_sum = 2
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "k2rqne"
+subreddit = "gamedev"
+author = "Sersch"
+title = "Drew McIntosh's Blog - A Pre-Post-Mortem About Marketing (5 Lessons Learned)"
+url = "https://www.gamasutra.com/blogs/DrewMcIntosh/20201124/374142/A_PrePostMortem_About_Marketing_5_Lessons_Learned.php"
+permalink = "https://www.reddit.com/comments/k2rqne/"
+score = 0
+comments = 2
+created_utc = 1606584711
+
+[[reddit_postmortem]]
+id = "375680"
+reddit_score = 1032
+reddit_comments = 249
+reddit_score_sum = 1067
+reddit_comments_sum = 250
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "kqfbim"
+subreddit = "gamedev"
+author = "loststylus"
+title = "How I wasted $4k+ and half a year of my life to develop a game that earned only $30 - Post-Mortem Analysis of Drunk Shotgun"
+url = "https://gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+permalink = "https://www.reddit.com/comments/kqfbim/"
+score = 1032
+comments = 249
+created_utc = 1609787018
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "kqegyt"
+subreddit = "IndieGaming"
+author = "loststylus"
+title = "Post-Mortem Analysis of Drunk Shotgun: How I wasted $4k+ and half a year of my life to develop a game that earned only $30"
+url = "https://gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+permalink = "https://www.reddit.com/comments/kqegyt/"
+score = 33
+comments = 1
+created_utc = 1609784621
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "kqv6q7"
+subreddit = "GamesUR"
+author = "GamesUR"
+title = "“How I wasted $4k+ and half a year of my life to develop a game that earned only $30”. On the dangers of testing using only family and friends • #gamesUR via @gamasutra https://t.co/Dm3iEuLV9V"
+url = "https://gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php"
+permalink = "https://www.reddit.com/comments/kqv6q7/"
+score = 2
+comments = 0
+created_utc = 1609839756
+
+[[reddit_postmortem]]
+id = "375873"
+reddit_score = 2
+reddit_comments = 0
+reddit_score_sum = 2
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "lh19uw"
+subreddit = "IndieDev"
+author = "Phazorknight"
+title = "COVID-19, Unity and I - The post mortem of making my first game: Chestnut Grove"
+url = "https://www.gamasutra.com/blogs/PhilipDrobar/20210107/375873/COVID19_Unity_and_I__The_post_mortem_of_Chestnut_Grove.php#comment310619"
+permalink = "https://www.reddit.com/comments/lh19uw/"
+score = 2
+comments = 0
+created_utc = 1612984574
+
+[[reddit_postmortem]]
+id = "384419"
+reddit_score = 2
+reddit_comments = 0
+reddit_score_sum = 2
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "ocmjsi"
+subreddit = "gamedev"
+author = "Tenith"
+title = "Gamasutra: Laura Tallardy's Blog - Steam NextFest- Lessons Learned for Paranormal Detective: Escape from the 90's"
+url = "https://www.gamasutra.com/blogs/LauraTallardy/20210701/384419/Steam_NextFest_PostMortem.php"
+permalink = "https://www.reddit.com/comments/ocmjsi/"
+score = 2
+comments = 0
+created_utc = 1625269569
+
+[[reddit_postmortem]]
+id = "386822"
+reddit_score = 11
+reddit_comments = 1
+reddit_score_sum = 11
+reddit_comments_sum = 1
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "p68pwn"
+subreddit = "vndevs"
+author = "OpinionateThis"
+title = "Rocket Adrift released a Postmortem for Raptor Boyfriend: A High School Romance"
+url = "https://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/p68pwn/"
+score = 11
+comments = 1
+created_utc = 1629222921

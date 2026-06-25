@@ -35,12 +35,23 @@ postmortem features, linking out via the Wayback Machine.
 - [x] Intro "where to start" links: Game Developer's "10 seminal game
       postmortems" + Microsoft Research's "What Went Right and What Went Wrong"
       (an analysis of 155 Gamasutra postmortems — i.e. this very corpus).
-- [ ] Multi-part series: ingest /blogs/-shaped postmortems (Octodad Pt 1–3,
+- [x] Multi-part series: ingest /blogs/-shaped postmortems (Octodad Pt 1–3,
       "How much do indie PC devs make" Pt 1/8) via curated includes; render
-      with series/part_no/part_total/part_label fields. Consider collapsing the
-      parts of one series into a single grouped card.
-- [ ] Widen beyond URL-slug "postmortem" to catch postmortems whose slug
-      lacks the word (e.g. "behind the scenes of ...").
+      with series/part_no/part_total/part_label fields. **Parts of one series now
+      collapse into a single grouped card** (`groupSeries`/`mergeSeries` in app.js;
+      a lone curated part stays a normal entry). Blogs are schematically unlike
+      features — og:image-less, body heroes on third-party hosts — so the scraper
+      grows them their own path (verified oldest capture + im_-wrapped body image
+      + curated thumbnail override).
+- [~] Widen beyond URL-slug "postmortem": Tier A (44 /blogs/ from the HN/Reddit
+      sweep) curated in. Tier B classic magazine reprints live under gamasutra
+      `/view/news/<id>/` (non-postmortem slugs) — resolve them by tracking the old
+      gamasutra path embedded in the migrated gamedeveloper.com page
+      (`scraper/resolve_gamedev_originals.py`); heroes sit in db_area/images/news/<id>/.
+- [ ] **Video / GDC postmortems (Tier C): deferred on purpose.** This is where the
+      existing `category`/type field earns its keep — add a `format` (article|video)
+      or a `video` category and render it distinctly, rather than pretending a GDC
+      talk is a written article. Candidates listed in the candidate_missing md.
 - [ ] Pick the *best-rendered* snapshot per article for the Wayback link
       (some early captures are partial).
 - [ ] Periodic refresh via GitHub Action (like the reference project).
