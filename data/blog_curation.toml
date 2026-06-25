@@ -1,0 +1,230 @@
+# Curated game name + summary overrides for /blogs/ postmortems whose
+# essay-style titles don't name the game (or whose scraped meta-description
+# was truncated mid-word). Applied by id in load_curated_postmortems and
+# merged over the derived fields. game="" means no single game (essay/event).
+
+[[entry]]
+id = "87650"
+game = "The Oil Blue"
+summary = "David Galindo shares real sales figures for his indie PC game The Oil Blue, making the case for sales transparency among small developers."
+
+[[entry]]
+id = "168330"
+game = "Waves"
+
+[[entry]]
+id = "175583"
+game = ""
+summary = "A mobile team compares six months of sales across Google Play, iOS and other stores, puncturing a few myths about Android revenue along the way."
+# note: cross-store sales essay; the team's mobile title is never named in the post
+
+[[entry]]
+id = "191049"
+game = "Mech Force"
+
+[[entry]]
+id = "193811"
+game = "Minecraft Oakland"
+
+[[entry]]
+id = "199358"
+game = "DwarfCorp"
+
+[[entry]]
+id = "207899"
+game = "Indoor Pub Games: Sports World"
+
+[[entry]]
+id = "211326"
+game = "Darkest Dungeon"
+
+[[entry]]
+id = "216965"
+game = "9.03m"
+
+[[entry]]
+id = "224920"
+game = "Contract Work"
+summary = "Kee-Won Hong of Iterative Games lays out the full post-Kickstarter finances of his one-man cyberpunk shooter Contract Work, line by line."
+
+[[entry]]
+id = "233818"
+game = "Aegis Defenders"
+
+[[entry]]
+id = "234086"
+game = "The War Z"
+
+[[entry]]
+id = "235408"
+game = "Octodad: Dadliest Catch"
+
+[[entry]]
+id = "235823"
+game = "Octodad: Dadliest Catch"
+
+[[entry]]
+id = "235951"
+game = "Octodad: Dadliest Catch"
+
+[[entry]]
+id = "236427"
+game = "Goat Simulator"
+
+[[entry]]
+id = "254610"
+game = "Wordsum"
+
+[[entry]]
+id = "260239"
+game = "Swing Racers"
+
+[[entry]]
+id = "260265"
+game = "Bastion"
+
+[[entry]]
+id = "267827"
+game = ""
+summary = "Mark Slemko's postmortem on the terminology and team structures of mobile development, and how loose language quietly derails projects."
+# note: essay on terminology and team structure; no single game
+
+[[entry]]
+id = "269575"
+game = "Wincars Racer"
+summary = "How the eight-person team behind arcade racer Wincars Racer ran a Steam Greenlight campaign that got greenlit in just sixteen days."
+
+[[entry]]
+id = "273917"
+game = "Me And My Dinosaur"
+summary = "A candid postmortem of the failed Kickstarter for puzzle-platformer Me And My Dinosaur, which finished at only 15% of its funding goal."
+
+[[entry]]
+id = "294276"
+game = "Gorescript Classic"
+
+[[entry]]
+id = "300409"
+game = "TumbleSeed"
+summary = "Greg Wohlwend's postmortem of TumbleSeed, the roguelike about balancing a seed up a mountain, and its difficult commercial launch."
+
+[[entry]]
+id = "310012"
+game = "Ebony Spire: Heresy"
+summary = "Constantin Bacioiu's hard-luck account of going full-time indie and failing to sell even 700 copies of his roguelike Ebony Spire: Heresy on Steam."
+
+[[entry]]
+id = "311143"
+game = "Sheep It Up!"
+summary = "What does it take to release a new game cartridge for the Game Boy in 2017? Heres my experience, with a lot of details on the tools I used and…"
+
+[[entry]]
+id = "311570"
+game = ""
+summary = "FlowPlay CTO Doug Pearson details eighteen months spent migrating 1.4 million lines of code off Adobe Flash before its end-of-life shutdown."
+# note: FlowPlay's Flash-to-HTML5 engine migration across its platform; no single game
+
+[[entry]]
+id = "314554"
+game = "Sheep It Up!"
+summary = "What does it take to release a new game cartridge for the Game Boy in 2017? Heres my experience (Part 2/2), with a lot of details on the tools I…"
+
+[[entry]]
+id = "314649"
+game = ""
+summary = "Lessons from organising the Malta Global Game Jam — what the organisers thought went well, and what they would do differently next time."
+# note: organiser's postmortem of the Malta Global Game Jam; no single game
+
+[[entry]]
+id = "316489"
+game = "Rabbit Hole"
+summary = "An Lieu's postmortem of showing their debut game Rabbit Hole at the Anime Matsuri convention — what to bring, what it cost, and what worked."
+
+[[entry]]
+id = "326190"
+game = "Cook, Serve, Delicious! 2"
+
+[[entry]]
+id = "330427"
+game = "Ebony Spire: Heresy"
+summary = "One year on from failing to ship 700 copies, Constantin Bacioiu reports back on selling 6,000 copies of Ebony Spire: Heresy and what changed."
+
+[[entry]]
+id = "337113"
+game = "Robothorium"
+summary = "After 2 years of development, we released our game Robothorium on Switch & PC! It's now to take a look at how the production went, how much it…"
+
+[[entry]]
+id = "337931"
+game = "Kenshi"
+summary = "Did Kenshi's localisation pay for itself? Was the investment worth it? In this blog post I explore how Kenshi's regional sales were affected (or not…"
+
+[[entry]]
+id = "339782"
+game = "El Taco Diablo"
+summary = "It's about 1 year since I left my home in Sweden, I'm in the middle of a grand adventure doing what I consider the opportunity of a lifetime. Doing…"
+
+[[entry]]
+id = "340065"
+game = "Hero-U: Rogue to Redemption"
+summary = "This is our official post-mortem for our latest game, Hero-U: Rogue to Redemption. It took us 6 years to make this game, and we learned a lot from…"
+
+[[entry]]
+id = "340291"
+game = "Das Geisterschiff"
+
+[[entry]]
+id = "341148"
+game = "Skirmish Line"
+summary = "Roughly 3 years in the making, Skirmish Line was a first project, indie success story. Here's what I've learned making my first game, and how new…"
+
+[[entry]]
+id = "360226"
+game = "Biped"
+
+[[entry]]
+id = "360682"
+game = "Hang Line"
+summary = "The story of how indie game Hang Line was created, from concept to launch. How I learnt new skills, cut corners, struggled with anxiety and ignored…"
+
+[[entry]]
+id = "360846"
+game = "Starcom: Nexus"
+
+[[entry]]
+id = "368294"
+game = "Eastshade"
+
+[[entry]]
+id = "369617"
+game = "Dungeons of Edera"
+summary = "On August 28th I released my second game on Steam into early access, Dungeons of Edera, a roguelite action RPG, and I wanted to once again to share…"
+
+[[entry]]
+id = "372977"
+game = "Children of Morta"
+summary = "Children of Morta is a narrative-driven, roguelike action game about a family of guardians. A year has passed since the launch of the game. This…"
+
+[[entry]]
+id = "374142"
+game = "Spaceslingers"
+
+[[entry]]
+id = "375680"
+game = "Drunk Shotgun"
+
+[[entry]]
+id = "375873"
+game = "Chestnut Grove"
+summary = "I’m Philip, a hobby indie game dev (@PhilipDrobar), and this is my story of how I got started with Unity, created my first game in roughly 6…"
+
+[[entry]]
+id = "384419"
+game = ""
+summary = "A small studio's account of taking part in their first Steam Next Fest, and what the festival did and didn't do for their game's visibility."
+# note: Steam Next Fest participation postmortem; their game is not named in the post
+
+[[entry]]
+id = "386822"
+game = "Raptor Boyfriend"
+summary = "This postmortem is about trying to identify what happened during the development of Raptor Boyfriend. What were the challenges? What were the…"

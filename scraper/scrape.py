@@ -36,6 +36,7 @@ WAYBACK_LINKS = DATA / "wayback_links.toml"
 GAMEDEV_LIVE = DATA / "gamedeveloper_live_urls.toml"
 AUTHOR_BIOS = DATA / "author_bios.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
+BLOG_CURATION = DATA / "blog_curation.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
 # URLs we've already queried against Arctic Shift. Historical reddit submissions
@@ -126,7 +127,9 @@ def article_record(aid, slug, original, ts=None, status=None, first_ts=None, cap
 # Curated fields an include may carry: series metadata copied verbatim to the
 # frontend, plus an optional thumbnail pin (handled specially, with im_ wrapping).
 SERIES_META_KEYS = ("series", "series_id", "part_no", "part_total", "part_label")
-CURATED_META_KEYS = SERIES_META_KEYS + ("thumbnail",)
+# game/summary let the blog-curation overrides (data/blog_curation.toml) win over
+# the values derived from the title/meta-description — see load_curated_postmortems.
+CURATED_META_KEYS = SERIES_META_KEYS + ("thumbnail", "game", "summary")
 
 
 def parse_feature_url(url):
@@ -169,6 +172,7 @@ def load_curated_postmortems(path=CURATED_POSTMORTEMS):
     path = Path(path)
     if not path.exists():
         return {}
+    curation = load_blog_curation()
     out = {}
     for item in load_toml(path).get("include", []):
         parsed = parse_feature_url(item.get("url", ""))
@@ -177,7 +181,26 @@ def load_curated_postmortems(path=CURATED_POSTMORTEMS):
             continue
         aid, slug, original = parsed
         meta = {k: item[k] for k in CURATED_META_KEYS if k in item and item[k] != ""}
+        # Blog-curation overrides win over both the include and the derived fields.
+        # An empty game (essay/event) is dropped here so the derived title still
+        # shows — but the frontend hides a subhead that just echoes the title.
+        meta.update(curation.get(aid, {}))
         out[aid] = article_record(aid, slug, original, meta=meta)
+    return out
+
+
+def load_blog_curation(path=BLOG_CURATION):
+    """id -> {game?, summary?} overrides for /blogs/ entries (data/blog_curation.toml).
+    Empty values are dropped so they never blank out a derived field."""
+    path = Path(path)
+    if not path.exists():
+        return {}
+    out = {}
+    for e in load_toml(path).get("entry", []):
+        aid = e.get("id")
+        if not aid:
+            continue
+        out[aid] = {k: e[k] for k in ("game", "summary") if e.get(k)}
     return out
 
 
