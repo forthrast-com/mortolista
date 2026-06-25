@@ -458,8 +458,10 @@ function resolveLinks(d) {
     && /[?&]print=1(?:[#&]|$)/.test(d.wayback_print || "") ? d.wayback_print : "";
   const wbAny = usableLink(d.wayback_ok, d.wayback) ? d.wayback : "";
   const azFull = usableLink(d.archive_today_print_ok, d.archive_today_print) ? d.archive_today_print : "";
-  const azAny = usableLink(d.archive_today_ok, d.archive_today) ? d.archive_today
-    : (d.original_url ? `https://archive.is/newest/${encodeURIComponent(d.original_url)}` : "");
+  // Only surface archive.is when we've actually confirmed a live capture; a
+  // speculative /newest/ link is worse than no archive.is at all (it lands on
+  // archive.is's "save this page?" form, not a real mirror).
+  const azAny = usableLink(d.archive_today_ok, d.archive_today) ? d.archive_today : "";
   const liveUrl = usableLink(d.live_ok, d.live_url) ? d.live_url : "";
   const origUrl = d.original_url || "";
   const archiveUrl = azFull || azAny;

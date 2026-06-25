@@ -743,12 +743,54 @@ def print_url(original_url):
     return original_url if re.search(r"[?&]print=1(?:[#&]|$)", original_url) else original_url + sep + "print=1"
 
 
+ARCHIVE_TODAY_HOSTS = ("archive.ph", "archive.today", "archive.is", "archive.vn")
+
+
+def is_archive_today_host(netloc):
+    return any(h in netloc.lower() for h in ARCHIVE_TODAY_HOSTS)
+
+
+def archive_today_status(url, timeout=25):
+    """Three-state liveness for an archive.is /newest/ mirror URL.
+
+    archive.is 429s automated checks, so a plain boolean can't tell "no snapshot"
+    from "we got rate-limited". Distinguish:
+      - "ok":      /newest/ redirected to a real snapshot permalink (dated path,
+                   no longer /newest/) on an archive.* host -> a capture exists.
+      - "absent":  archive.is answered but kept us on the /newest/ submission page
+                   -> it has nothing archived for this URL.
+      - "unknown": 429 / timeout / network flak -> we genuinely can't tell; the
+                   caller should preserve whatever it knew before rather than
+                   flipping a known-good mirror to dead.
+    """
+    if not url:
+        return "absent"
+    try:
+        r = SESSION.get(url, headers=CHECK_HEAD, timeout=timeout,
+                        allow_redirects=True, stream=True)
+        status, final = r.status_code, r.url
+        r.close()
+    except requests.RequestException:
+        return "unknown"
+    parsed = urllib.parse.urlparse(final)
+    # URL *shape* is the reliable signal, not the final status code: when a
+    # capture exists archive.is redirects /newest/ to a dated permalink
+    # (/20351231.../ or a shortcode) -- even if that final hop then 429s us, the
+    # redirect already proved the mirror exists. Only a still-on-/newest/ landing
+    # or a 404 means there's genuinely nothing archived.
+    if is_archive_today_host(parsed.netloc) and parsed.path.strip("/") and "/newest/" not in parsed.path:
+        return "ok"
+    if status == 404:
+        return "absent"
+    if status == 429 or status >= 500:
+        return "unknown"
+    if 200 <= status < 400:
+        return "absent"  # answered, but never left the /newest/ submission form
+    return "unknown"
+
+
 def archive_today_available(url):
-    ok, final = http_exists(url, allow_redirect=True, timeout=25)
-    if not ok:
-        return False
-    host = urllib.parse.urlparse(final).netloc.lower()
-    return any(h in host for h in ("archive.ph", "archive.today", "archive.is", "archive.vn"))
+    return archive_today_status(url) == "ok"
 
 
 def original_available(url):
@@ -828,16 +870,38 @@ def check_article_links(article):
     return article
 
 
-def archive_mirror_row(article):
+def _mirror_ok(status, prior, key):
+    """Resolve a three-state archive.is probe to a stored boolean. On "unknown"
+    (429/flak) keep the prior value if we had one; otherwise stay False — the
+    frontend still offers the bare /newest/ link, so we lose no fallback, we just
+    don't *claim* a capture we never confirmed."""
+    if status == "ok":
+        return True
+    if status == "absent":
+        return False
+    return bool(prior.get(key, False)) if prior else False
+
+
+def archive_mirror_row(article, prior=None, check=True):
+    """One archive.is mirror row. When check=True, actually probe /newest/ (slow,
+    rate-limited); prior is the previously-stored row, preserved on "unknown"."""
+    prior = prior or {}
     original = article.get("original_url", "")
+    az = archive_today_url(original)
+    az_print = archive_today_url(print_url(original))
+    if check:
+        st = archive_today_status(az)
+        st_print = archive_today_status(az_print) if az_print != az else st
+    else:
+        st = st_print = "unknown"
     return {
         "id": article["id"],
-        "archive_today": archive_today_url(original),
-        # archive.is aggressively rate-limits automated checks; /newest/ remains
-        # a valid human-facing fallback even when this VM gets a 429.
-        "archive_today_ok": True,
-        "archive_today_print": archive_today_url(print_url(original)),
-        "archive_today_print_ok": True,
+        "archive_today": az,
+        "archive_today_ok": _mirror_ok(st, prior, "archive_today_ok"),
+        "archive_today_state": st,
+        "archive_today_print": az_print,
+        "archive_today_print_ok": _mirror_ok(st_print, prior, "archive_today_print_ok"),
+        "archive_today_print_state": st_print,
     }
 
 
@@ -1916,10 +1980,22 @@ def refresh_link_checks(data_path):
     return len(articles)
 
 
-def refresh_archive_mirrors(data_path, out_path=ARCHIVE_MIRRORS):
+def refresh_archive_mirrors(data_path, out_path=ARCHIVE_MIRRORS, limit=0, delay=4.0):
     payload = load_toml(data_path)
-    rows = [archive_mirror_row(article) for article in payload.get("postmortem", [])]
+    articles = payload.get("postmortem", [])
+    if limit:
+        articles = articles[:limit]
+    prior = {r.get("id"): r for r in load_toml(out_path).get("archive_mirror", [])}
+    rows, live = [], 0
+    for i, article in enumerate(articles, 1):
+        row = archive_mirror_row(article, prior=prior.get(article["id"]))
+        rows.append(row)
+        live += int(row["archive_today_ok"])
+        if i % 25 == 0:
+            log(f"[*] archive.is checked {i}/{len(articles)} ({live} live)")
+        time.sleep(delay)  # archive.is 429s fast scrapers; stay polite
     Path(out_path).write_bytes(tomli_w.dumps({"archive_mirror": rows}).encode())
+    log(f"[*] archive.is: {live}/{len(rows)} confirmed-live mirrors")
     return len(rows)
 
 
@@ -1998,7 +2074,7 @@ def main():
         log(f"[*] refreshed HN metrics for {n} entries -> {args.hn_metrics}")
         return
     if args.archive_mirrors_only:
-        n = refresh_archive_mirrors(args.out)
+        n = refresh_archive_mirrors(args.out, limit=args.limit)
         log(f"[*] refreshed archive.is mirrors for {n} entries -> {ARCHIVE_MIRRORS}")
         return
     if args.gamedev_live_only:
