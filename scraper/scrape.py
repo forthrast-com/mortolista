@@ -234,10 +234,17 @@ CATEGORY_HINTS = {
     "audio_postmortem": "Audio Postmortem",
     "indie_postmortem": "Indie Postmortem",
     "middleware_postmortem": "Middleware Postmortem",
+    # Pre-wired for Tier C: GDC/video reprints (e.g. "video-postmortem-…",
+    # "video-i-pitfall-i-…") sort into their own category when curated in.
+    "video_postmortem": "Video Postmortem",
+    "video-postmortem": "Video Postmortem",
+    "video-i-": "Video Postmortem",
 }
 
 
-def categorize(slug):
+def categorize(slug, *, is_blog=False):
+    if is_blog:
+        return "Contributor Blog"   # provenance is the category for /blogs/ posts
     for k, v in CATEGORY_HINTS.items():
         if k in slug:
             return v
@@ -412,7 +419,7 @@ def parse_article(aid, rec):
         "authors": authors,
         "date": date,
         "date_estimated": date_estimated,
-        "category": categorize(rec["slug"]),
+        "category": categorize(rec["slug"], is_blog=is_blog),
         "summary": desc,
         "thumbnail": thumb,
         "original_url": rec["original"],

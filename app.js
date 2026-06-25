@@ -282,6 +282,8 @@ window.addEventListener("resize", updateScrollFades);
 
 function catClass(c) {
   c = (c || "").toLowerCase();
+  if (c.includes("blog")) return "blog";
+  if (c.includes("video")) return "video";
   if (c.includes("indie")) return "indie";
   if (c.includes("audio")) return "audio";
   if (c.includes("middleware")) return "middleware";
@@ -413,11 +415,6 @@ function displayGame(d) {
   if (!title) return game;
   const canonical = s => cleanTitle(s).toLowerCase();
   return canonical(game) === canonical(title) ? "" : game;
-}
-
-function blogBadge(d) {
-  if (!isContribBlog(d)) return "";
-  return `<span class="blog-badge" title="Curated developer/contributor blog post (not a magazine feature)">contributor blog</span>`;
 }
 
 function authorHTML(name) {
@@ -627,15 +624,14 @@ function rowHTML(d) {
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
     + catBadge(d.category)
-    + blogBadge(d)
     + partBadge(d)
     + seriesBadge(d)
     + sortSignalHTML(d)
     + `</span>`;
   // Type + series badges above the title; shown on desktop, hidden on mobile
   // where the meta line carries the type.
-  const topBadges = (catBadge(d.category) || blogBadge(d) || partBadge(d) || seriesBadge(d))
-    ? `<span class="top-badges">${catBadge(d.category)}${blogBadge(d)}${partBadge(d)}${seriesBadge(d)}</span>`
+  const topBadges = (catBadge(d.category) || partBadge(d) || seriesBadge(d))
+    ? `<span class="top-badges">${catBadge(d.category)}${partBadge(d)}${seriesBadge(d)}</span>`
     : "";
   const byline = d.authors && d.authors.length
     ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`

@@ -28,6 +28,7 @@
 
   /* category badges */
   --badge-ink:#fff; --cat-indie:#2a8a4d; --cat-audio:#7a5a2a; --cat-middleware:#2f5f6e;
+  --cat-blog:#6a4a8a; --cat-video:#b14a32;
 }
 
 /* ---- Dark theme: deep green-charcoal, brand emerald preserved ---- */
@@ -51,6 +52,7 @@
   --head-hover-from:#2c6347; --head-hover-to:#214f38; --head-focus:#bfe6cf;
 
   --cat-indie:#2f9d57; --cat-audio:#8a6a32; --cat-middleware:#37728a;
+  --cat-blog:#9a78c4; --cat-video:#e0795e;
 }
 
 *{box-sizing:border-box}
@@ -207,15 +209,6 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
   color:var(--accent); background:transparent; border:1px solid var(--accent);
   padding:0 5px; border-radius:2px; white-space:nowrap;
 }
-/* developer/contributor blog marker — a muted, dashed meta-tag, deliberately
-   quieter than the solid category chips since it's provenance, not type. */
-.blog-badge{
-  display:inline-block; font-size:10px; letter-spacing:.3px; font-style:italic;
-  color:var(--muted); background:transparent; border:1px dashed var(--rule);
-  padding:0 5px; border-radius:2px; white-space:nowrap;
-}
-.blog-badge::before{content:"["}
-.blog-badge::after{content:"]"}
 .series-parts{display:block; margin-top:2px}
 .series-parts ol{margin:2px 0 0; padding-left:0; list-style:none}
 .series-parts li{display:block; line-height:1.5}
@@ -239,6 +232,8 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .cat.indie{background:var(--cat-indie)}
 .cat.audio{background:var(--cat-audio)}
 .cat.middleware{background:var(--cat-middleware)}
+.cat.blog{background:var(--cat-blog)}
+.cat.video{background:var(--cat-video)}
 .notable{color:var(--accent); font-weight:bold; cursor:help}
 .author-link{color:var(--wiki-link); text-decoration:none}
 .author-link:hover{text-decoration:underline}
