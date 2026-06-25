@@ -34,6 +34,12 @@ wayback-links:
 tier-a-live *ARGS:
     python scraper/tier_a_liveness.py {{ARGS}}
 
+# Re-probe the Tier A entries the liveness sweep flagged STUB/DEAD: try host and
+# protocol variants and walk the full capture list both ways, then report a
+# proposed fix per id (it never edits the includes itself).
+tier-a-rediscover:
+    python scraper/rediscover_tier_a.py
+
 # Full data refresh. Phase A (sequential, Internet Archive): resolve the Tier B
 # reprints back to their gamasutra originals, then ingest every curated include.
 # Both steps are idempotent (resolve skips ids already present; ingest skips

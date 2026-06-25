@@ -20,9 +20,16 @@ def probe(aid, rec):
     is_blog = bool(scrape.blog_url_parts(url)[0])
     t0 = time.time()
     # Inline verified_good_ts's walk so we only hit the slow CDX endpoint once.
+    # Walk oldest->newest then the newest few in reverse: a renderable capture
+    # often sits past the first handful (or only survives at the recent end), and
+    # capping at 6 was flagging live entries as STUB (see rediscover_tier_a.py).
     tss = scrape.cdx_captures(url)
     ts, html = (tss[0] if tss else None), None
-    for cand in tss[:6]:
+    walk, seen = tss[:12] + list(reversed(tss[-3:])), set()
+    for cand in walk:
+        if cand in seen:
+            continue
+        seen.add(cand)
         h = scrape.fetch_snapshot(cand, url)
         if scrape.capture_renders(h, is_blog):
             ts, html = cand, h
