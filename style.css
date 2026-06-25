@@ -178,10 +178,10 @@ img.thumb{width:96px; height:96px; object-fit:cover; display:block; background:v
 
 /* an entry spans two rows: a headline row + a wide detail row beneath it */
 .main-cell{padding-right:16px}
-/* right-floated block opposite the title: game label above the "strong on" hint,
-   both right-aligned. Title and byline wrap around it for the float's height,
-   then reclaim full width; with neither, no float and no wrapping at all. */
-.headline-aside{float:right; clear:right; max-width:42%; margin:1px 0 6px 16px; text-align:right}
+/* byline (left) + balanced-rank hint (right) share a line below the title, so
+   the hint sits opposite the author without ever affecting the title. */
+.headline-foot{display:flex; justify-content:space-between; align-items:baseline; gap:16px; clear:right; margin-top:3px}
+.headline-foot .byline{flex:1 1 auto; min-width:0; margin-top:0}
 .detail-cell{padding:0 9px 9px; border-bottom:1px solid var(--rule)}
 tbody tr{transition:background-color .12s ease}
 tbody tr:nth-child(4n+3),tbody tr:nth-child(4n+4){background:var(--row-alt)}
@@ -224,7 +224,8 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .byline{display:block; margin-top:3px; font-size:12px; color:var(--muted); line-height:1.45; overflow-wrap:anywhere}
 .byline .author-name{color:var(--muted)}
 .summary{display:block; margin:8px 0 10px; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:740px}
-.game{color:var(--accent); font-size:11px; font-style:italic; font-weight:normal; display:block}
+/* opposite the title: a short right-floated label the title text wraps around */
+.game{float:right; clear:right; max-width:42%; margin:1px 0 4px 16px; text-align:right; color:var(--accent); font-size:11px; font-style:italic; font-weight:normal}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
 .mirror-links,.discussions{display:block}
 .discussions{margin-top:1px}
@@ -255,7 +256,7 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 /* Desktop echo of the balanced "why it ranked" hint (the meta line that hosts
    the mobile version is hidden on desktop). */
 .why-balanced{
-  display:block; margin-top:5px; font-size:11px; font-weight:normal;
+  flex:0 1 auto; margin-left:auto; font-size:11px; font-weight:normal;
   color:var(--muted); cursor:help; text-align:right; line-height:1.4;
 }
 .why-balanced .wb-label{
@@ -335,8 +336,8 @@ footer .wrap{line-height:1.6}
   .main-cell{padding:0; display:flex; flex-direction:column}
   .meta-top{order:0}
   .title-cell{order:1}
-  .headline-aside{order:2; float:none; max-width:none; text-align:left; margin:3px 0 0}
-  .byline{order:3}
+  .game{order:2; float:none; clear:none; max-width:none; text-align:left; margin:3px 0 0}
+  .headline-foot{order:3; display:block; margin-top:5px}
   /* the desktop badge stack is redundant on the card — the meta line carries
      type + part there */
   .top-badges{display:none}

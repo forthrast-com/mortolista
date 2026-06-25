@@ -683,13 +683,13 @@ function rowHTML(d) {
   const byline = d.authors && d.authors.length
     ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`
     : "";
-  // Right-aligned block that floats opposite the title: the game label on top,
-  // the "strong on …" balanced-rank hint beneath it. The title wraps around it
-  // (only for the float's height, then reclaims full width). On mobile it drops
-  // below the title via flex order, and the hint is hidden (CSS).
+  // The game label floats opposite the title, so only a game makes the title
+  // wrap (no game -> no float -> full-width title). The byline and the muted
+  // "strong on …" hint share the line below, so the hint sits opposite the
+  // author and never touches the title. On mobile the hint is hidden (CSS).
   const rankedOn = whyBalancedHTML(d);
-  const headlineAside = (gameLine || rankedOn)
-    ? `<div class="headline-aside">${gameLine}${rankedOn}</div>` : "";
+  const headlineFoot = (byline || rankedOn)
+    ? `<div class="headline-foot">${byline}${rankedOn}</div>` : "";
   const shownTitle = cleanTitle(d.title) || d.title;
   const title = primary
     ? `<a class="title-cell" href="${esc(primary)}" target="_blank" rel="noopener">${esc(shownTitle)}</a>`
@@ -713,7 +713,7 @@ function rowHTML(d) {
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell">${topBadges}${metaTop}${headlineAside}${title}${byline}</td>
+    <td class="main-cell">${topBadges}${metaTop}${gameLine}${title}${headlineFoot}</td>
     <td class="num date-cell">${date}</td>
     ${hnCell}
     ${redditCell}
