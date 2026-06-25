@@ -200,7 +200,9 @@ def load_blog_curation(path=BLOG_CURATION):
         aid = e.get("id")
         if not aid:
             continue
-        out[aid] = {k: e[k] for k in ("game", "summary") if e.get(k)}
+        # thumbnail is a ready Wayback im_ URL; parse_article runs it through
+        # wrap_im, which passes archived URLs through unchanged.
+        out[aid] = {k: e[k] for k in ("game", "summary", "thumbnail") if e.get(k)}
     return out
 
 
