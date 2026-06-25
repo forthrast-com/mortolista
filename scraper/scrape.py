@@ -37,6 +37,14 @@ AUTHOR_BIOS = DATA / "author_bios.toml"
 CURATED_POSTMORTEMS = DATA / "postmortem_url_includes.toml"
 CACHE = ROOT / "scraper" / ".cache"
 CACHE.mkdir(exist_ok=True)
+# URLs we've already queried against Arctic Shift. Historical reddit submissions
+# for an old article URL don't change, so we never re-request a URL once probed
+# (rm this file to force a full re-probe). The cache is tagged with a strategy
+# version: bump REDDIT_PROBE_STRATEGY whenever reddit_article_url_queries or the
+# Arctic Shift query params change, and the stale cache invalidates itself rather
+# than silently skipping URLs the new strategy would have queried differently.
+REDDIT_PROBED = CACHE / "reddit_probed_urls.txt"
+REDDIT_PROBE_STRATEGY = "v1"
 
 UA = "Mozilla/5.0 (compatible; GamasutraPostmortemArchive/0.1; +https://github.com/forthrast-com)"
 HEAD = {"User-Agent": UA}
@@ -882,26 +890,45 @@ def _mirror_ok(status, prior, key):
     return bool(prior.get(key, False)) if prior else False
 
 
-def archive_mirror_row(article, prior=None, check=True):
-    """One archive.is mirror row. When check=True, actually probe /newest/ (slow,
-    rate-limited); prior is the previously-stored row, preserved on "unknown"."""
+def archive_mirror_row(article, prior=None, recheck=False):
+    """One archive.is mirror row, with a sticky per-URL cache.
+
+    archive.is is the touchiest provider here (it 429s automated checks), and a
+    mirror's existence doesn't change between runs -- so once a URL resolves to a
+    definitive "ok"/"absent" we reuse that verdict instead of re-requesting it.
+    We only (re)probe when forced (recheck), when there's no prior verdict, or
+    when the prior was inconclusive ("unknown", i.e. a 429/flak last time). The
+    returned row carries a transient "_probed" flag so the caller throttles only
+    on requests it actually made.
+    """
     prior = prior or {}
     original = article.get("original_url", "")
     az = archive_today_url(original)
     az_print = archive_today_url(print_url(original))
-    if check:
-        st = archive_today_status(az)
-        st_print = archive_today_status(az_print) if az_print != az else st
+
+    def resolve(target, url_key, st_key, ok_key):
+        cached = (not recheck and prior.get(url_key) == target
+                  and prior.get(st_key) in ("ok", "absent"))
+        if cached:
+            return prior[st_key], bool(prior.get(ok_key, False)), False
+        st = archive_today_status(target)
+        return st, _mirror_ok(st, prior, ok_key), True
+
+    st, ok, probed = resolve(az, "archive_today", "archive_today_state", "archive_today_ok")
+    if az_print == az:
+        st_print, ok_print, probed_print = st, ok, False
     else:
-        st = st_print = "unknown"
+        st_print, ok_print, probed_print = resolve(
+            az_print, "archive_today_print", "archive_today_print_state", "archive_today_print_ok")
     return {
         "id": article["id"],
         "archive_today": az,
-        "archive_today_ok": _mirror_ok(st, prior, "archive_today_ok"),
+        "archive_today_ok": ok,
         "archive_today_state": st,
         "archive_today_print": az_print,
-        "archive_today_print_ok": _mirror_ok(st_print, prior, "archive_today_print_ok"),
+        "archive_today_print_ok": ok_print,
         "archive_today_print_state": st_print,
+        "_probed": probed or probed_print,
     }
 
 
@@ -1186,9 +1213,39 @@ def reddit_article_url_queries(article):
     return out
 
 
-def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES, articles=None):
-    """Reddit posts linking to Gamasutra/GameDeveloper, via Arctic Shift."""
+def load_probed_urls(path=REDDIT_PROBED, strategy=REDDIT_PROBE_STRATEGY):
+    """Probed-URL set, but only if it was written under the current probe strategy.
+    A version mismatch (someone changed how we build/query URLs) discards the cache
+    so every URL is re-probed under the new strategy instead of wrongly skipped."""
+    try:
+        lines = Path(path).read_text().split("\n")
+    except FileNotFoundError:
+        return set()
+    if not lines or lines[0] != f"# strategy: {strategy}":
+        log("[*] reddit probe cache strategy changed -> re-probing all URLs")
+        return set()
+    return {u for u in lines[1:] if u.strip()}
+
+
+def save_probed_urls(urls, path=REDDIT_PROBED, strategy=REDDIT_PROBE_STRATEGY):
+    Path(path).write_text(f"# strategy: {strategy}\n" + "\n".join(sorted(urls)) + "\n")
+
+
+def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES, articles=None, reprobe=False):
+    """Reddit posts linking to Gamasutra/GameDeveloper, via Arctic Shift.
+
+    The per-article exact-URL probes are the expensive part and Arctic Shift's
+    answer for an old URL doesn't change, so we cache which URLs we've probed and
+    skip them on later runs. To make skipping safe (not lose posts we already
+    found) we seed from the existing post cache first -- the probed-URL cache only
+    avoids re-*requesting*, never drops data. Pass reprobe=True to ignore it.
+    """
     by_id = {}
+    # Seed with everything we cached before so skipped URLs keep their posts.
+    for row in load_toml(REDDIT_POSTS).get("reddit_post", []):
+        rid = str(row.get("id") or "")
+        if rid:
+            by_id[rid] = row
     for base in url_queries:
         try:
             add_reddit_api_rows(by_id, reddit_api_posts_for_url(base))
@@ -1198,18 +1255,24 @@ def fetch_reddit_gamasutra_posts(url_queries=REDDIT_URL_QUERIES, articles=None):
         time.sleep(0.5)
 
     articles = articles or []
-    total = sum(len(reddit_article_url_queries(article)) for article in articles)
-    done = 0
+    probed = set() if reprobe else load_probed_urls()
+    newly, done, skipped = set(), 0, 0
     for i, article in enumerate(articles, 1):
         for url in reddit_article_url_queries(article):
+            if url in probed:
+                skipped += 1
+                continue
             done += 1
             try:
                 add_reddit_api_rows(by_id, reddit_api_posts_for_url(url, timeout=45))
+                newly.add(url)  # mark probed only on success, so flak retries next run
             except requests.RequestException as exc:
                 log(f"  [!] arctic-shift article query failed for {url}: {exc}")
             time.sleep(0.12)
         if articles and (i % 25 == 0 or i == len(articles)):
-            log(f"[*] reddit exact URL probes {i}/{len(articles)} articles ({done}/{total} URLs)")
+            log(f"[*] reddit exact URL probes {i}/{len(articles)} articles "
+                f"({done} probed, {skipped} cached-skip)")
+    save_probed_urls(probed | newly)
     return sorted(by_id.values(), key=lambda p: p["score"], reverse=True)
 
 
@@ -1980,22 +2043,30 @@ def refresh_link_checks(data_path):
     return len(articles)
 
 
-def refresh_archive_mirrors(data_path, out_path=ARCHIVE_MIRRORS, limit=0, delay=4.0):
+def refresh_archive_mirrors(data_path, out_path=ARCHIVE_MIRRORS, limit=0, delay=4.0,
+                            recheck=False):
     payload = load_toml(data_path)
     articles = payload.get("postmortem", [])
     if limit:
         articles = articles[:limit]
-    prior = {r.get("id"): r for r in load_toml(out_path).get("archive_mirror", [])}
-    rows, live = [], 0
+    prior = {}
+    if Path(out_path).exists():  # absent on a first-ever run
+        prior = {r.get("id"): r for r in load_toml(out_path).get("archive_mirror", [])}
+    rows, live, probed = [], 0, 0
     for i, article in enumerate(articles, 1):
-        row = archive_mirror_row(article, prior=prior.get(article["id"]))
+        row = archive_mirror_row(article, prior=prior.get(article["id"]), recheck=recheck)
+        hit = row.pop("_probed", True)  # transient; never persist it
         rows.append(row)
         live += int(row["archive_today_ok"])
+        if hit:
+            probed += 1
+            time.sleep(delay)  # only throttle on requests we actually made
         if i % 25 == 0:
-            log(f"[*] archive.is checked {i}/{len(articles)} ({live} live)")
-        time.sleep(delay)  # archive.is 429s fast scrapers; stay polite
+            log(f"[*] archive.is {i}/{len(articles)} ({live} live, {probed} probed, "
+                f"{i - probed} reused)")
     Path(out_path).write_bytes(tomli_w.dumps({"archive_mirror": rows}).encode())
-    log(f"[*] archive.is: {live}/{len(rows)} confirmed-live mirrors")
+    log(f"[*] archive.is: {live}/{len(rows)} confirmed-live mirrors "
+        f"({probed} probed, {len(rows) - probed} reused from cache)")
     return len(rows)
 
 
@@ -2046,6 +2117,7 @@ def main():
     ap.add_argument("--refresh-hn-metrics", action="store_true", help="recompute HN fields in --out from local cache and exit")
     ap.add_argument("--check-links", action="store_true", help="slow: refresh core Wayback/original link availability fields")
     ap.add_argument("--archive-mirrors-only", action="store_true", help="write archive.is mirror sidecar and exit")
+    ap.add_argument("--archive-recheck", action="store_true", help="re-probe archive.is mirrors already resolved ok/absent (bust the sticky cache)")
     ap.add_argument("--gamedev-live-only", action="store_true", help="slow: discover live gamedeveloper.com URLs sidecar and exit")
     ap.add_argument("--reddit-only", action="store_true", help="harvest Reddit posts (Arctic Shift) and refresh the metrics sidecar, then exit")
     ap.add_argument("--reddit-recompute", action="store_true", help="re-match Reddit metrics from the cached posts without refetching, then exit")
@@ -2074,7 +2146,7 @@ def main():
         log(f"[*] refreshed HN metrics for {n} entries -> {args.hn_metrics}")
         return
     if args.archive_mirrors_only:
-        n = refresh_archive_mirrors(args.out, limit=args.limit)
+        n = refresh_archive_mirrors(args.out, limit=args.limit, recheck=args.archive_recheck)
         log(f"[*] refreshed archive.is mirrors for {n} entries -> {ARCHIVE_MIRRORS}")
         return
     if args.gamedev_live_only:
