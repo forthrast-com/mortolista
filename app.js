@@ -720,7 +720,7 @@ function rowHTML(d) {
     ${salesCell}
     ${capsCell}
   </tr>
-  <tr class="r-detail"><td class="detail-cell" colspan="6">${summary}${mirrors}</td></tr>`;
+  <tr class="r-detail"><td class="detail-cell" colspan="6"><div class="detail-pin">${summary}${mirrors}</div></td></tr>`;
 }
 
 document.querySelectorAll("th.sortable").forEach(th => {
