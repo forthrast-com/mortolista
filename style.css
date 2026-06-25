@@ -223,7 +223,9 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .title-cell{font-weight:bold; font-family:Georgia,serif; font-size:15px; line-height:1.25}
 .byline{display:block; margin-top:3px; font-size:12px; color:var(--muted); line-height:1.45; overflow-wrap:anywhere}
 .byline .author-name{color:var(--muted)}
-.summary{display:block; margin:8px 0 10px; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:740px}
+/* the desc stays put while the wide table scrolls around it (early-web jank,
+   on purpose): sticky to the scrollport's left edge, normal at rest */
+.summary{display:block; position:sticky; left:0; z-index:1; width:fit-content; margin:8px 0 10px; font-family:"Lucida Grande",sans-serif; font-weight:normal; font-size:12.5px; line-height:1.5; color:var(--muted); max-width:740px}
 /* opposite the title: a short right-floated label the title text wraps around */
 .game{float:right; clear:right; max-width:42%; margin:1px 0 4px 16px; text-align:right; color:var(--accent); font-size:11px; font-style:italic; font-weight:normal}
 .mirrors{display:block; margin-top:3px; font-size:10.5px; font-weight:normal; font-family:"Lucida Grande",sans-serif; color:var(--muted)}
@@ -351,7 +353,7 @@ footer .wrap{line-height:1.6}
   .m-sort{font-size:11.5px; font-weight:normal; color:var(--muted)}
   .title-cell{display:block; font-size:20px; line-height:1.18}
   .byline{display:block; margin-top:5px; font-size:13px; font-style:italic; color:var(--muted)}
-  .summary{display:block; max-width:none; margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--ink)}
+  .summary{display:block; position:static; width:auto; max-width:none; margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--ink)}
   .mirrors{margin-top:10px; padding-top:8px; border-top:1px solid var(--rule); font-size:12px; line-height:1.5}
 }
 
