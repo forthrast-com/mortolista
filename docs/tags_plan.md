@@ -42,9 +42,15 @@ outcome = "llm-local"
 
 Tiers 1–2 **shipped** (2026-06-26): `scraper/tags.py` + `just tags` /
 `--tags-only` write `data/tags.toml`; the frontend renders colour-coded chips
-(era/platform/studio/business) with click-to-filter (AND) and an active-filter
-bar. 289/289 entries tagged, 203 wiki-matched. Tier 3 (local-LLM editorial
-tags) remains the open follow-up below.
+(era/platform/studio/business) and folds every tag into the one **Type
+dropdown** (grouped: Type / Era / Platform / Studio / Business — single-select;
+a chip click drives the same control). 289/289 tagged, 203 wiki-matched.
+
+Platform is **distinctive-only**: a single-platform game keeps its one platform
+(Half-Life → `pc`, an arcade/mobile-only title → that), but a port-everywhere
+game (Super Meat Boy) earns no platform tag — being multiplatform says nothing.
+
+Tier 3 (local-LLM editorial tags) remains the open follow-up below.
 
 ## Sourcing tiers
 

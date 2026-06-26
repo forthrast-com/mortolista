@@ -290,17 +290,6 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .tag-studio.on{background:var(--cat-indie)}
 .tag-biz.on{background:var(--accent)}
 
-/* Active-tag filter bar above the table */
-.tagbar{display:flex; flex-wrap:wrap; gap:5px; align-items:center; margin:10px 0 2px}
-.tagbar[hidden]{display:none}
-.tagbar-label{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px}
-.tag-clear{
-  font:inherit; font-size:10px; text-transform:uppercase; letter-spacing:.4px;
-  color:var(--muted); background:transparent; border:0; border-bottom:1px dotted var(--muted);
-  cursor:pointer; padding:1px 2px; margin-left:4px;
-}
-.tag-clear:hover{color:var(--accent); border-color:var(--accent)}
-
 .notable{color:var(--accent); font-weight:bold; cursor:help}
 .author-link{color:var(--wiki-link); text-decoration:none}
 .author-link:hover{text-decoration:underline}

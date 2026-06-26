@@ -16,8 +16,6 @@ tags = [
 id = "131706"
 tags = [
     "90s",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -45,8 +43,6 @@ tags = [
 id = "131788"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -67,8 +63,6 @@ tags = [
 id = "131813"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -82,8 +76,6 @@ tags = [
 id = "131815"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -104,8 +96,6 @@ tags = [
 id = "131829"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -119,8 +109,6 @@ tags = [
 id = "131843"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -153,24 +141,18 @@ tags = [
 id = "131569"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
 id = "131563"
 tags = [
     "90s",
-    "console",
-    "handheld",
 ]
 
 [[tag]]
 id = "131556"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -184,8 +166,6 @@ tags = [
 id = "131541"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -198,8 +178,6 @@ tags = [
 id = "131533"
 tags = [
     "20s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -212,8 +190,6 @@ tags = [
 id = "131520"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -279,19 +255,12 @@ tags = [
 id = "131456"
 tags = [
     "00s",
-    "arcade",
-    "console",
-    "pc",
 ]
 
 [[tag]]
 id = "131881"
 tags = [
     "80s",
-    "arcade",
-    "console",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -337,8 +306,6 @@ tags = [
 id = "131416"
 tags = [
     "00s",
-    "console",
-    "handheld",
 ]
 
 [[tag]]
@@ -398,8 +365,6 @@ tags = [
 id = "131333"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -425,8 +390,6 @@ tags = [
 id = "131287"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -457,8 +420,6 @@ tags = [
 id = "131219"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -471,9 +432,6 @@ tags = [
 id = "131177"
 tags = [
     "00s",
-    "console",
-    "handheld",
-    "pc",
 ]
 
 [[tag]]
@@ -487,8 +445,6 @@ tags = [
 id = "130523"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -523,8 +479,6 @@ id = "130589"
 tags = [
     "00s",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -538,17 +492,13 @@ tags = [
 id = "130612"
 tags = [
     "00s",
-    "arcade",
     "indie",
-    "pc",
 ]
 
 [[tag]]
 id = "130699"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -563,17 +513,13 @@ id = "130737"
 tags = [
     "00s",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "130746"
 tags = [
     "00s",
-    "arcade",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -608,9 +554,7 @@ tags = [
 id = "131096"
 tags = [
     "00s",
-    "arcade",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -697,17 +641,13 @@ tags = [
 id = "130154"
 tags = [
     "00s",
-    "arcade",
     "indie",
-    "pc",
 ]
 
 [[tag]]
 id = "130109"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -754,9 +694,6 @@ tags = [
 id = "130732"
 tags = [
     "90s",
-    "arcade",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -769,18 +706,12 @@ tags = [
 id = "132007"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
 id = "132031"
 tags = [
     "00s",
-    "arcade",
-    "handheld",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -800,8 +731,6 @@ tags = [
 id = "132168"
 tags = [
     "10s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -823,8 +752,6 @@ tags = [
 id = "132198"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -844,8 +771,6 @@ tags = [
 id = "132258"
 tags = [
     "00s",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -879,17 +804,12 @@ tags = [
 id = "132305"
 tags = [
     "00s",
-    "arcade",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "132314"
 tags = [
     "00s",
-    "arcade",
-    "pc",
 ]
 
 [[tag]]
@@ -897,8 +817,6 @@ id = "132331"
 tags = [
     "00s",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -912,9 +830,6 @@ tags = [
 id = "132401"
 tags = [
     "00s",
-    "console",
-    "handheld",
-    "mobile",
 ]
 
 [[tag]]
@@ -934,18 +849,12 @@ tags = [
 id = "115711"
 tags = [
     "90s",
-    "console",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "132511"
 tags = [
     "00s",
-    "console",
-    "handheld",
-    "pc",
 ]
 
 [[tag]]
@@ -959,9 +868,7 @@ tags = [
 id = "132544"
 tags = [
     "00s",
-    "arcade",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -969,8 +876,6 @@ id = "132576"
 tags = [
     "00s",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1005,18 +910,12 @@ tags = [
 id = "132623"
 tags = [
     "00s",
-    "arcade",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "132630"
 tags = [
     "00s",
-    "console",
-    "handheld",
-    "pc",
 ]
 
 [[tag]]
@@ -1037,26 +936,18 @@ tags = [
 id = "4271"
 tags = [
     "00s",
-    "console",
-    "handheld",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "4288"
 tags = [
     "00s",
-    "arcade",
-    "console",
 ]
 
 [[tag]]
 id = "4308"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -1075,17 +966,12 @@ tags = [
 id = "5826"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
 id = "5831"
 tags = [
     "10s",
-    "arcade",
-    "console",
-    "mobile",
 ]
 
 [[tag]]
@@ -1108,16 +994,12 @@ id = "6144"
 tags = [
     "00s",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "6184"
 tags = [
     "10s",
-    "arcade",
-    "pc",
 ]
 
 [[tag]]
@@ -1158,11 +1040,7 @@ tags = [
 id = "134717"
 tags = [
     "10s",
-    "arcade",
-    "console",
-    "handheld",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -1215,16 +1093,12 @@ tags = [
 id = "6481"
 tags = [
     "10s",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "6498"
 tags = [
     "10s",
-    "arcade",
-    "pc",
 ]
 
 [[tag]]
@@ -1232,8 +1106,6 @@ id = "6617"
 tags = [
     "10s",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1252,10 +1124,7 @@ tags = [
 id = "6742"
 tags = [
     "00s",
-    "arcade",
     "indie",
-    "pc",
-    "web",
 ]
 
 [[tag]]
@@ -1274,8 +1143,6 @@ tags = [
 id = "169282"
 tags = [
     "10s",
-    "arcade",
-    "pc",
 ]
 
 [[tag]]
@@ -1288,8 +1155,6 @@ tags = [
 id = "171897"
 tags = [
     "10s",
-    "arcade",
-    "pc",
 ]
 
 [[tag]]
@@ -1324,11 +1189,7 @@ tags = [
 id = "180520"
 tags = [
     "10s",
-    "arcade",
-    "console",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1348,10 +1209,7 @@ tags = [
 id = "182380"
 tags = [
     "10s",
-    "flash",
-    "handheld",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -1395,9 +1253,6 @@ tags = [
 id = "190432"
 tags = [
     "10s",
-    "console",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1428,11 +1283,8 @@ tags = [
 id = "gd-two-guys-made-an-mmo-the-growtopia-postmortem"
 tags = [
     "10s",
-    "console",
     "early-access",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1445,16 +1297,12 @@ tags = [
 id = "194852"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
 id = "195143"
 tags = [
     "00s",
-    "console",
-    "mobile",
 ]
 
 [[tag]]
@@ -1467,8 +1315,6 @@ tags = [
 id = "197269"
 tags = [
     "10s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -1482,11 +1328,7 @@ tags = [
 id = "200658"
 tags = [
     "10s",
-    "arcade",
-    "console",
-    "handheld",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -1499,13 +1341,9 @@ tags = [
 id = "211326"
 tags = [
     "10s",
-    "console",
     "early-access",
-    "handheld",
     "indie",
     "kickstarter",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1532,10 +1370,7 @@ tags = [
 id = "gd-xeodrifter-postmortem"
 tags = [
     "10s",
-    "console",
-    "handheld",
     "indie",
-    "pc",
 ]
 
 [[tag]]
@@ -1554,9 +1389,6 @@ tags = [
 id = "234086"
 tags = [
     "90s",
-    "console",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1594,21 +1426,15 @@ tags = [
 id = "237657"
 tags = [
     "10s",
-    "console",
     "early-access",
     "indie",
     "kickstarter",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
 id = "gd-out-there-a-postmortem"
 tags = [
     "80s",
-    "arcade",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -1623,17 +1449,13 @@ tags = [
 id = "251220"
 tags = [
     "00s",
-    "console",
     "indie",
-    "pc",
 ]
 
 [[tag]]
 id = "252418"
 tags = [
     "10s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -1653,17 +1475,12 @@ tags = [
 id = "258015"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
 id = "257659"
 tags = [
     "00s",
-    "arcade",
-    "handheld",
-    "pc",
 ]
 
 [[tag]]
@@ -1689,8 +1506,6 @@ tags = [
 id = "259479"
 tags = [
     "90s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -1710,12 +1525,8 @@ tags = [
 id = "264127"
 tags = [
     "10s",
-    "console",
-    "handheld",
     "indie",
     "kickstarter",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1730,9 +1541,6 @@ tags = [
 id = "266261"
 tags = [
     "10s",
-    "console",
-    "pc",
-    "vr",
 ]
 
 [[tag]]
@@ -1786,19 +1594,13 @@ tags = [
 id = "300409"
 tags = [
     "10s",
-    "console",
     "indie",
-    "pc",
 ]
 
 [[tag]]
 id = "305424"
 tags = [
     "00s",
-    "console",
-    "handheld",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1818,9 +1620,6 @@ tags = [
 id = "307191"
 tags = [
     "10s",
-    "handheld",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1846,11 +1645,7 @@ tags = [
 id = "309412"
 tags = [
     "00s",
-    "arcade",
-    "console",
     "indie",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -1863,9 +1658,6 @@ tags = [
 id = "310658"
 tags = [
     "00s",
-    "console",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -2000,8 +1792,6 @@ tags = [
 id = "372977"
 tags = [
     "10s",
-    "console",
-    "pc",
 ]
 
 [[tag]]
@@ -2067,11 +1857,6 @@ tags = [
 id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
 tags = [
     "10s",
-    "arcade",
-    "console",
-    "handheld",
-    "mobile",
-    "pc",
 ]
 
 [[tag]]
@@ -2091,6 +1876,4 @@ tags = [
 id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
 tags = [
     "00s",
-    "console",
-    "pc",
 ]

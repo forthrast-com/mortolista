@@ -85,6 +85,7 @@ PLATFORM_RULES = [  # ordered; first match per category wins
     ("handheld", _HANDHELD), ("console", _CONSOLE), ("pc", _PC), ("mobile", _MOBILE),
     ("arcade", _ARCADE), ("flash", _FLASH), ("web", _WEB), ("vr", _VR),
 ]
+PLATFORM_TAGS = {tag for tag, _rx in PLATFORM_RULES}
 # Independent (non-platform) category rules — all that match are collected.
 _YEAR = re.compile(r"\b((?:19|20)\d{2}) video games\b", re.I)
 OTHER_RULES = [
@@ -147,6 +148,13 @@ def refresh_tags(data_path, out_path=TAGS, limit=0):
         era = era_tag(str(years[0])) if years else era_tag(art.get("date", ""))
         if era:
             tags.add(era)
+        # Platform is only interesting when it's *distinctive*: a single-platform
+        # game (Half-Life on PC, an arcade or mobile-only title) earns its one
+        # platform tag, but a port-everywhere game (Super Meat Boy: pc + console +
+        # handheld + …) earns none — being multiplatform says nothing.
+        plats = tags & PLATFORM_TAGS
+        if len(plats) > 1:
+            tags -= plats
         if tags:
             rows.append({"id": art["id"], "tags": sorted(tags)})
         if i % 25 == 0:

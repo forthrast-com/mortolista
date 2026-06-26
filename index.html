@@ -36,7 +36,7 @@
   <p class="intro"><span class="ln">New here? This website collects hundreds of postmortems from twenty years of video games, originally published in <a class="ref" href="https://gdcvault.com/gdmag" target="_blank" rel="noopener" title="Game Developer magazine archive at the GDC Vault"><em>Game Developer</em> magazine</a> and later on <a class="ref" href="https://web.archive.org/web/20041116092750/http://www.gamasutra.com/" target="_blank" rel="noopener" title="gamasutra.com on 16 November 2004 — the day Half-Life 2 shipped">gamasutra.com</a>.</span><span class="ln">Each was written by the team behind the game itself, from struggling indie developers to genre-defining titans. Read together, they trace the medium through the decisions, compromises, accidents and convictions which made it possible.</span><span class="ln">Gamasutra&rsquo;s <a href="https://web.archive.org/web/20210825031727/https://gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php" target="_blank" rel="noopener">10 seminal game postmortems every developer should read</a> is a fine on-ramp. For the view from above, Microsoft Research analysed 155 of these very postmortems in <a href="https://www.microsoft.com/en-us/research/publication/what-went-right-and-what-went-wrong-an-analysis-of-155-postmortems-from-game-development/" target="_blank" rel="noopener">&ldquo;What Went Right and What Went Wrong&rdquo;</a>.</span></p>
   <div id="toolbar">
     <input id="search" type="search" placeholder="Search title, game, or author…" autocomplete="off">
-    <select id="category"><option value="">All categories</option></select>
+    <select id="category" aria-label="Filter by type or tag"><option value="">Everything</option></select>
     <label class="sort-label" for="sortSel">Sort</label>
     <select id="sortSel" aria-label="Sort by">
       <option value="agg_score:-1">Balanced (default)</option>
@@ -59,8 +59,6 @@
     <label class="chk"><input type="checkbox" id="notableOnly"> Notable authors only</label>
     <span id="count" class="count" aria-live="polite"></span>
   </div>
-
-  <div id="tagbar" class="tagbar" hidden></div>
 
   <div class="table-scroll">
    <div class="table-wrap">

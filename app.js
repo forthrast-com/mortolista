@@ -7,13 +7,11 @@ const catEl = document.getElementById("category");
 const notableEl = document.getElementById("notableOnly");
 const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
-const tagbarEl = document.getElementById("tagbar");
 const tableScroll = document.querySelector(".table-scroll");
 const tableWrap = document.querySelector(".table-wrap");
 
 let DATA = [];
 let NOTABLE_AUTHORS = new Map(); // author name -> Wikipedia URL
-let activeTags = new Set();      // tags the reader has clicked to filter by (AND)
 let sortKey = "agg_score";
 let sortDir = -1; // -1 desc, 1 asc
 
@@ -257,13 +255,34 @@ async function load() {
     d.archive_reach = (Number(d.wayback_captures) || 0) + (d.archive_today_ok ? AIS_REACH_BONUS : 0);
   }
   computeAggregate();
-  const cats = [...new Set(DATA.map(d => d.category))].sort();
-  for (const c of cats) {
-    const o = document.createElement("option"); o.value = o.textContent = c;
-    catEl.appendChild(o);
-  }
+  buildFilterOptions();
   statusEl.textContent = "";
   render();
+}
+
+// One unified filter dropdown: the big "Type" categories plus the tag axes
+// (era / platform / studio / business), grouped. Values are prefixed so render()
+// knows whether a pick filters the category field ("cat:…") or a tag ("tag:…").
+const AXIS_GROUPS = [["era", "Era"], ["platform", "Platform"], ["studio", "Studio"], ["biz", "Business"]];
+function buildFilterOptions() {
+  const cats = [...new Set(DATA.map(d => d.category).filter(Boolean))].sort();
+  const byAxis = { era: new Set(), platform: new Set(), studio: new Set(), biz: new Set() };
+  for (const d of DATA) for (const t of d.tags || []) byAxis[tagAxis(t)].add(t);
+
+  catEl.innerHTML = `<option value="">Everything</option>`;
+  const addGroup = (label, opts) => {
+    if (!opts.length) return;
+    const og = document.createElement("optgroup"); og.label = label;
+    for (const [val, text] of opts) {
+      const o = document.createElement("option"); o.value = val; o.textContent = text;
+      og.appendChild(o);
+    }
+    catEl.appendChild(og);
+  };
+  addGroup("Type", cats.map(c => ["cat:" + c, c]));
+  for (const [axis, label] of AXIS_GROUPS) {
+    addGroup(label, [...byAxis[axis]].sort().map(t => ["tag:" + t, t]));
+  }
 }
 
 function sortVal(d, k) {
@@ -289,16 +308,14 @@ function updateScrollFades() {
 
 function render() {
   const q = searchEl.value.trim().toLowerCase();
-  const cat = catEl.value;
+  const sel = catEl.value;                 // "", "cat:<category>" or "tag:<tag>"
+  const selKind = sel.slice(0, 3), selVal = sel.slice(4);
   const notable = notableEl.checked;
 
   let list = DATA.filter(d => {
-    if (cat && d.category !== cat) return false;
+    if (selKind === "cat" && d.category !== selVal) return false;
+    if (selKind === "tag" && !(d.tags || []).includes(selVal)) return false;
     if (notable && !d.author_notable) return false;
-    if (activeTags.size) {
-      const dt = d.tags || [];
-      if (![...activeTags].every(t => dt.includes(t))) return false;
-    }
     if (q) {
       const hay = (d.title + " " + d.game + " " + (d.authors || []).join(" ") + " " + (d._search || "")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -418,33 +435,17 @@ function tagAxis(t) {
 }
 
 // Browse tags (era/platform/studio/business) from data/tags.toml, rendered as
-// small toggle chips. Clicking one filters the table to entries carrying it;
-// multiple active tags combine with AND. Same vintage idiom as the type badge.
+// small colour-coded chips under the headline. Clicking one drives the unified
+// filter dropdown (and re-clicking the active one clears it) — same control as
+// the big Type categories. Same vintage idiom as the type badge.
 function tagsHTML(d) {
   const tags = d.tags || [];
   if (!tags.length) return "";
+  const sel = catEl.value;
   return `<span class="tags">` + tags.map(t =>
-    `<button type="button" class="tag tag-${tagAxis(t)}${activeTags.has(t) ? " on" : ""}"`
-    + ` data-tag="${esc(t)}" aria-pressed="${activeTags.has(t)}">${esc(t)}</button>`
+    `<button type="button" class="tag tag-${tagAxis(t)}${sel === "tag:" + t ? " on" : ""}"`
+    + ` data-val="tag:${esc(t)}" aria-pressed="${sel === "tag:" + t}">${esc(t)}</button>`
   ).join("") + `</span>`;
-}
-
-// The active-tag filter bar above the table: a removable chip per active tag
-// plus clear-all; hidden when nothing's selected.
-function renderTagBar() {
-  if (!tagbarEl) return;
-  if (!activeTags.size) { tagbarEl.hidden = true; tagbarEl.innerHTML = ""; return; }
-  tagbarEl.hidden = false;
-  tagbarEl.innerHTML = `<span class="tagbar-label">Filtering by</span>`
-    + [...activeTags].sort().map(t =>
-        `<button type="button" class="tag tag-${tagAxis(t)} on" data-tag="${esc(t)}">${esc(t)} ✕</button>`).join("")
-    + `<button type="button" class="tag-clear" data-clear="1">clear</button>`;
-}
-
-function toggleTag(t) {
-  if (activeTags.has(t)) activeTags.delete(t); else activeTags.add(t);
-  renderTagBar();
-  render();
 }
 
 function metricValue(d, k) {
@@ -855,17 +856,14 @@ searchEl.addEventListener("input", render);
 catEl.addEventListener("change", render);
 notableEl.addEventListener("change", render);
 
-// Tag chips live inside re-rendered rows and the filter bar, so delegate.
+// Tag chips live inside re-rendered rows, so delegate. A chip drives the unified
+// filter dropdown; clicking the already-active chip clears the filter.
 rowsEl.addEventListener("click", e => {
   const b = e.target.closest(".tag");
   if (!b) return;
   e.preventDefault();
-  toggleTag(b.dataset.tag);
-});
-tagbarEl.addEventListener("click", e => {
-  if (e.target.closest(".tag-clear")) { activeTags.clear(); renderTagBar(); render(); return; }
-  const b = e.target.closest(".tag");
-  if (b) toggleTag(b.dataset.tag);
+  catEl.value = catEl.value === b.dataset.val ? "" : b.dataset.val;
+  render();
 });
 
 // ---- Theme toggle (light / dark), persisted in localStorage ----
