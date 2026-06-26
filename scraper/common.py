@@ -123,25 +123,36 @@ def is_dead_page(html):
     generic = (not title) or title in GENERIC_TITLES or title.endswith("- features")
     has_byline = bool(BYLINE_RE.search(html))
     return generic and not has_byline
+WAYBACK_TS_RE = re.compile(r"^\d{14}$")
+def _cdx_timestamps(url, extra=""):
+    """Run a CDX timestamp query and return only well-formed 14-digit captures.
+
+    The CDX endpoint serves an HTML error page (`<html><body><h1>503 ...`) when
+    it's overloaded, with a normal 200/4xx/5xx status that callers used to ignore
+    -- the first line of that error page then masqueraded as a capture timestamp
+    and got baked straight into a `web/<ts>/<url>` link. Gate on the HTTP status
+    *and* validate every line against the 14-digit timestamp shape so a sick
+    Archive yields an empty result (a recoverable "unknown"), never garbage."""
+    q = ("http://web.archive.org/cdx/search/cdx?url="
+         + urllib.parse.quote(url, safe="")
+         + "&output=text&fl=timestamp&filter=statuscode:200" + extra)
+    r = SESSION.get(q, timeout=60)
+    if r.status_code != 200:
+        return []
+    tokens = (ln.split()[0] for ln in r.text.splitlines() if ln.split())
+    return [t for t in tokens if WAYBACK_TS_RE.match(t)]
 def earliest_good_ts(url):
     """Targeted CDX lookup: earliest 200 capture for an exact URL."""
     try:
-        q = ("http://web.archive.org/cdx/search/cdx?url="
-             + urllib.parse.quote(url, safe="")
-             + "&output=text&fl=timestamp&filter=statuscode:200&limit=1")
-        out = SESSION.get(q, timeout=60).text.strip()
-        return out.splitlines()[0] if out else None
+        tss = _cdx_timestamps(url, "&limit=1")
+        return tss[0] if tss else None
     except Exception:
         return None
 def cdx_captures(url, limit=40):
     """Distinct 200/text-html capture timestamps for an exact URL, oldest first."""
     try:
-        q = ("http://web.archive.org/cdx/search/cdx?url="
-             + urllib.parse.quote(url, safe="")
-             + "&output=text&fl=timestamp&filter=statuscode:200"
-             + "&filter=mimetype:text/html&collapse=digest&limit=" + str(limit))
-        out = SESSION.get(q, timeout=60).text.strip()
-        return [ln.split()[0] for ln in out.splitlines() if ln.strip()]
+        return _cdx_timestamps(
+            url, "&filter=mimetype:text/html&collapse=digest&limit=" + str(limit))
     except Exception:
         return []
 def capture_renders(html, is_blog=False):

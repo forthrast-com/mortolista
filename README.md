@@ -45,7 +45,7 @@ data/notable_authors.toml      # author name -> Wikipedia URL (byline links)
 data/hn_postmortem_audit.toml  # local HN/postmortem URL audit + review candidates
 index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
-docs/                  # process/method records (Tier B status, candidate shortlists)
+docs/                  # design/process notes (candidate shortlists, tags plan)
 ```
 
 ## Development
