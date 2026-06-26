@@ -296,6 +296,15 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "131493"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F131493%2Fbaldurs_gate_ii_the_anatomy_of_a_.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F131493%2Fbaldurs_gate_ii_the_anatomy_of_a_.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "131490"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F131490%2Fpostmortem_cutler_creatives_last_.php"
 archive_today_ok = true
@@ -1070,6 +1079,15 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "132292"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F132292%2Fpostmortem_mommys_best_games_.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F132292%2Fpostmortem_mommys_best_games_.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "132296"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F132296%2Fpostmortem_riverman_medias_.php"
 archive_today_ok = false
@@ -1147,6 +1165,15 @@ archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview
 archive_today_ok = false
 archive_today_state = "absent"
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F132490%2Fpostmortem_ngmocodemiurge_.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "115711"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F115711%2FThe_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F115711%2FThe_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"
 
@@ -1282,6 +1309,15 @@ archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview
 archive_today_ok = true
 archive_today_state = "ok"
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F4308%2Fpostmortem_double_fines_brutal_.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "118990"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F118990%2FClassic_Postmortem_Atari_Games_San_Francisco_Rush_Extreme_Racing.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F118990%2FClassic_Postmortem_Atari_Games_San_Francisco_Rush_Extreme_Racing.php%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"
 
@@ -1736,6 +1772,15 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "gd-two-guys-made-an-mmo-the-growtopia-postmortem"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fbusiness%2Ftwo-guys-made-an-mmo-the-growtopia-postmortem"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fbusiness%2Ftwo-guys-made-an-mmo-the-growtopia-postmortem%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "194432"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F194432%2Fpostmortem_pangalores_knightly_.php"
 archive_today_ok = false
@@ -1844,6 +1889,15 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "gd-xeodrifter-postmortem"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Faudio%2Fxeodrifter-postmortem"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Faudio%2Fxeodrifter-postmortem%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "233340"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Ffeature%2F233340%2Fpostmortem_pinballrpg_hybrid_.php"
 archive_today_ok = true
@@ -1916,11 +1970,47 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "237657"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F237657%2FPostmortem_Failbetter_Games_Sunless_Sea.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F237657%2FPostmortem_Failbetter_Games_Sunless_Sea.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "gd-out-there-a-postmortem"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fbusiness%2Fout-there-a-postmortem"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fbusiness%2Fout-there-a-postmortem%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "248567"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F248567%2FPostmortem_Technocrats_cyberpunk_adventure_game_Technobabylon.php"
 archive_today_ok = true
 archive_today_state = "ok"
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F248567%2FPostmortem_Technocrats_cyberpunk_adventure_game_Technobabylon.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "251220"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F251220%2FClassic_Postmortem_Double_Fines_Psychonauts.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F251220%2FClassic_Postmortem_Double_Fines_Psychonauts.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "252418"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F252418%2FClassic_Postmortem_Deadly_Premonition.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F252418%2FClassic_Postmortem_Deadly_Premonition.php%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"
 
@@ -1943,6 +2033,24 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "258015"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258015%2FClassic_Postmortem_Silent_Hill_4_The_Room.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258015%2FClassic_Postmortem_Silent_Hill_4_The_Room.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "257659"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F257659%2FClassic_Postmortem_Asherons_Call.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F257659%2FClassic_Postmortem_Asherons_Call.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "258315"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258315%2FThe_making_of_Call_of_Duty_4_Modern_Warfare.php"
 archive_today_ok = true
@@ -1952,11 +2060,29 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "258603"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258603%2FThe_making_of_Prince_of_Persia_The_Sands_of_Time.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258603%2FThe_making_of_Prince_of_Persia_The_Sands_of_Time.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "258820"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258820%2FClassic_Postmortem_Guitar_Hero.php"
 archive_today_ok = true
 archive_today_state = "ok"
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F258820%2FClassic_Postmortem_Guitar_Hero.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "259479"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F259479%2FClassic_Postmortem_The_making_of_HalfLife_2.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F259479%2FClassic_Postmortem_The_making_of_HalfLife_2.php%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"
 
@@ -2087,6 +2213,15 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "306040"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F306040%2FClassic_Postmortem_Firaxis_Civilization_V.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F306040%2FClassic_Postmortem_Firaxis_Civilization_V.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
 archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fclassic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-"
 archive_today_ok = true
@@ -2105,6 +2240,15 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "308555"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F308555%2FClassic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F308555%2FClassic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "308654"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F308654%2FPostmortem_Building_The_Turing_Test_around_a_secret_mechanic.php"
 archive_today_ok = false
@@ -2114,11 +2258,38 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "307674"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F307674%2FPostmortem_The_totalitarian_puzzleplatformer_Black_The_Fall.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F307674%2FPostmortem_The_totalitarian_puzzleplatformer_Black_The_Fall.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "309412"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F309412%2FClassic_Postmortem_The_Behemoths_Alien_Hominid.php"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F309412%2FClassic_Postmortem_The_Behemoths_Alien_Hominid.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "310012"
 archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FConstantinBacioiu%2F20171121%2F310012%2FPost_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
 archive_today_ok = true
 archive_today_state = "ok"
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FConstantinBacioiu%2F20171121%2F310012%2FPost_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "310658"
+archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F310658%2FClassic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fview%2Fnews%2F310658%2FClassic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"
 
@@ -2164,6 +2335,15 @@ archive_today = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblog
 archive_today_ok = false
 archive_today_state = "absent"
 archive_today_print = "https://archive.is/newest/http%3A%2F%2Fwww.gamasutra.com%2Fblogs%2FAnLieu%2F20180413%2F316489%2FPostmortem_of_Anime_Matsuri_Expo.php%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "gd-postmortem---arbitrary-metric-s-paratopic"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fbusiness%2Fpostmortem---arbitrary-metric-s-paratopic"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fbusiness%2Fpostmortem---arbitrary-metric-s-paratopic%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"
 
@@ -2348,6 +2528,33 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "gd-postmortem-i-the-ramp-i-"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fpostmortem-i-the-ramp-i-"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fpostmortem-i-the-ramp-i-%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "gd-postmortem-inkbound-s-journey-in-early-access"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fproduction%2Fpostmortem-inkbound-s-journey-in-early-access"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fproduction%2Fpostmortem-inkbound-s-journey-in-early-access%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fproduction%2Fpostmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fproduction%2Fpostmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "gd-classic-postmortem-nanaonhas-haunt-2012"
 archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fclassic-postmortem-nanaonhas-haunt-2012"
 archive_today_ok = false
@@ -2366,10 +2573,28 @@ archive_today_print_ok = false
 archive_today_print_state = "absent"
 
 [[archive_mirror]]
+id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fpostmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access"
+archive_today_ok = false
+archive_today_state = "absent"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fpostmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
 id = "gd-postmortem-harmonix-s-dance-central-2010-"
 archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fproduction%2Fpostmortem-harmonix-s-dance-central-2010-"
 archive_today_ok = false
 archive_today_state = "absent"
 archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fproduction%2Fpostmortem-harmonix-s-dance-central-2010-%3Fprint%3D1"
+archive_today_print_ok = false
+archive_today_print_state = "absent"
+
+[[archive_mirror]]
+id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
+archive_today = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fpostmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+archive_today_ok = true
+archive_today_state = "ok"
+archive_today_print = "https://archive.is/newest/https%3A%2F%2Fwww.gamedeveloper.com%2Fdesign%2Fpostmortem-the-singular-design-of-namco-s-katamari-damacy-2004-%3Fprint%3D1"
 archive_today_print_ok = false
 archive_today_print_state = "absent"

@@ -17,12 +17,6 @@ wiki_url = "https://en.wikipedia.org/wiki/Andrew_Leker"
 via_redirect = false
 
 [[notable_author]]
-name = "Auriea Harvey"
-wiki_title = "Auriea Harvey & Michaël Samyn"
-wiki_url = "https://en.wikipedia.org/wiki/Auriea_Harvey_%26_Micha%C3%ABl_Samyn"
-via_redirect = true
-
-[[notable_author]]
 name = "Ben Judd"
 wiki_title = "Ben Judd"
 wiki_url = "https://en.wikipedia.org/wiki/Ben_Judd"
@@ -107,6 +101,12 @@ wiki_url = "https://en.wikipedia.org/wiki/Jason_Regier"
 via_redirect = false
 
 [[notable_author]]
+name = "Jools Watsham"
+wiki_title = "Renegade Kid"
+wiki_url = "https://en.wikipedia.org/wiki/Renegade_Kid"
+via_redirect = true
+
+[[notable_author]]
 name = "Matt Firor"
 wiki_title = "ZeniMax Online Studios"
 wiki_url = "https://en.wikipedia.org/wiki/ZeniMax_Online_Studios"
@@ -114,12 +114,6 @@ via_redirect = true
 
 [[notable_author]]
 name = "Michael Samyn"
-wiki_title = "Auriea Harvey & Michaël Samyn"
-wiki_url = "https://en.wikipedia.org/wiki/Auriea_Harvey_%26_Micha%C3%ABl_Samyn"
-via_redirect = true
-
-[[notable_author]]
-name = "Michaël Samyn"
 wiki_title = "Auriea Harvey & Michaël Samyn"
 wiki_url = "https://en.wikipedia.org/wiki/Auriea_Harvey_%26_Micha%C3%ABl_Samyn"
 via_redirect = true
@@ -143,6 +137,12 @@ wiki_url = "https://en.wikipedia.org/wiki/Neil_Druckmann"
 via_redirect = false
 
 [[notable_author]]
+name = "Paul Croft"
+wiki_title = "Paul Croft"
+wiki_url = "https://en.wikipedia.org/wiki/Paul_Croft"
+via_redirect = false
+
+[[notable_author]]
 name = "Peter Molyneux"
 wiki_title = "Peter Molyneux"
 wiki_url = "https://en.wikipedia.org/wiki/Peter_Molyneux"
@@ -152,6 +152,12 @@ via_redirect = false
 name = "Rami Ismail"
 wiki_title = "Rami Ismail"
 wiki_url = "https://en.wikipedia.org/wiki/Rami_Ismail"
+via_redirect = false
+
+[[notable_author]]
+name = "Ray Muzyka"
+wiki_title = "Ray Muzyka"
+wiki_url = "https://en.wikipedia.org/wiki/Ray_Muzyka"
 via_redirect = false
 
 [[notable_author]]
@@ -165,6 +171,12 @@ name = "Richard Rouse III"
 wiki_title = "Richard Rouse III"
 wiki_url = "https://en.wikipedia.org/wiki/Richard_Rouse_III"
 via_redirect = false
+
+[[notable_author]]
+name = "Seth Robinson"
+wiki_title = "Robinson Technologies"
+wiki_url = "https://en.wikipedia.org/wiki/Robinson_Technologies"
+via_redirect = true
 
 [[notable_author]]
 name = "Shawn Hargreaves"

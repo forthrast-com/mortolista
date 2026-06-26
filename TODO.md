@@ -43,11 +43,11 @@ postmortem features, linking out via the Wayback Machine.
       features — og:image-less, body heroes on third-party hosts — so the scraper
       grows them their own path (verified oldest capture + im_-wrapped body image
       + curated thumbnail override).
-- [~] Widen beyond URL-slug "postmortem": Tier A (44 /blogs/ from the HN/Reddit
-      sweep) curated in. Tier B classic magazine reprints live under gamasutra
-      `/view/news/<id>/` (non-postmortem slugs) — resolve them by tracking the old
-      gamasutra path embedded in the migrated gamedeveloper.com page
-      (`scraper/resolve_gamedev_originals.py`); heroes sit in db_area/images/news/<id>/.
+- [x] Widen beyond URL-slug "postmortem": Tier A (44 /blogs/ from the HN/Reddit
+      sweep) curated in. **Tier B** classic magazine reprints (29) + the **Round 2**
+      gamedeveloper.com canon batch resolved via the migrated gamedeveloper.com page
+      (`scraper/resolve_gamedev_originals.py`, now with a `--round2` mode and
+      news/feature path handling); heroes sit in db_area/images/news/<id>/. Dataset 289.
 - [ ] **Video / GDC postmortems (Tier C): deferred on purpose.** This is where the
       existing `category`/type field earns its keep — add a `format` (article|video)
       or a `video` category and render it distinctly, rather than pretending a GDC

@@ -1,8 +1,25 @@
-# Tier B (classic magazine postmortems) — PARKED 2026-06
+# Tier B (classic magazine postmortems) — DONE 2026-06-26
 
-Status: **method proven, code landed, ingestion not run.** The resolver output had
-a verification bug (below), so Tier B includes were **not** committed to the
-dataset. Resume by fixing the bug, re-resolving, then ingesting.
+Status: **complete.** All 29 Tier B candidates are ingested, and the Round 2 batch
+(`ROUND2_gamedev_postmortem_candidate_additions.md`) followed via the resolver's new
+`--round2` mode. Dataset is 289 entries. The verification bug below is fixed; what
+remains is the irreducible IA flakiness, handled by re-running the idempotent steps.
+
+The notes below are kept as the method record.
+
+## How it actually went
+
+- The resolver's `original_archived` now retries across `www.`/bare hosts **and**
+  `/view/news/` **+** `/view/feature/` path kinds (older classics like Baldur's Gate II
+  131493 and Weapon of Choice 132292 are features, not news).
+- IA still flakes non-deterministically, so the loop is: run
+  `resolve_gamedev_originals.py [--round2] --append` a few times (idempotent), hand-fix
+  any marquee stragglers, then `add_curated_blogs.py` until everything parses.
+- HL2 (259479) and Psychonauts (251220) were hand-written when the resolver fell back
+  to the gd page under flak — both originals are confirmed archived.
+- Weapon of Choice (132292) had been wrongly merged as an alt_id of Explosionade
+  (6250) via the shared truncated slug `postmortem_mommys_best_games_`; un-merged so it
+  stands as its own entry.
 
 ## What these are
 

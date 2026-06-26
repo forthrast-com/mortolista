@@ -16352,6 +16352,249 @@ points = 4
 num_comments = 1
 
 [[hn_post]]
+object_id = "28319967"
+title = "Land speculators will kill your game's growth"
+url = "https://www.gamedeveloper.com/business/digital-real-estate-and-the-digital-housing-crisis"
+created_at = "2021-08-26T20:07:51Z"
+created_at_i = 1630008471
+points = 5
+num_comments = 3
+
+[[hn_post]]
+object_id = "28354334"
+title = "The usefulness of land taxes to limit speculation in online games"
+url = "https://www.gamedeveloper.com/business/digital-real-estate-and-the-digital-housing-crisis"
+created_at = "2021-08-30T10:35:28Z"
+created_at_i = 1630319728
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "28360069"
+title = "Playdate Pulp: Zero to video game in 60 Seconds"
+url = "https://www.gamedeveloper.com/console/playdate-pulp-zero-to-video-game-in-60-seconds"
+created_at = "2021-08-30T19:47:03Z"
+created_at_i = 1630352823
+points = 224
+num_comments = 70
+
+[[hn_post]]
+object_id = "28373722"
+title = "A History and Analysis of Level Design in 3D Computer Games (2006)"
+url = "https://www.gamedeveloper.com/disciplines/educational-feature-a-history-and-analysis-of-level-design-in-3d-computer-games---pt-1"
+created_at = "2021-08-31T21:12:19Z"
+created_at_i = 1630444339
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "28394818"
+title = "Game Engines on Steam: The Definitive Breakdown"
+url = "https://www.gamedeveloper.com/business/game-engines-on-steam-the-definitive-breakdown"
+created_at = "2021-09-02T17:25:19Z"
+created_at_i = 1630603519
+points = 126
+num_comments = 66
+
+[[hn_post]]
+object_id = "28475077"
+title = "Houseparty shut down by Epic, 2 years after acquisition"
+url = "https://www.gamedeveloper.com/business/epic-shuts-down-video-chatting-app-houseparty"
+created_at = "2021-09-09T21:50:59Z"
+created_at_i = 1631224259
+points = 30
+num_comments = 1
+
+[[hn_post]]
+object_id = "28626853"
+title = "Optimizing CD-ROM Performance Under DOS/4GW (1997)"
+url = "https://www.gamedeveloper.com/programming/optimizing-cd-rom-performance-under-dos-4gw"
+created_at = "2021-09-23T09:09:37Z"
+created_at_i = 1632388177
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "28632571"
+title = "Adapting Divinity: Original Sin 2 Definitive Edition for iOS"
+url = "https://www.gamedeveloper.com/mobile/in-depth-adapting-divinity-original-sin-2-definitive-edition-for-ios"
+created_at = "2021-09-23T17:47:44Z"
+created_at_i = 1632419264
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "28884837"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond (2001)"
+url = "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond"
+created_at = "2021-10-16T01:22:42Z"
+created_at_i = 1634347362
+points = 196
+num_comments = 72
+
+[[hn_post]]
+object_id = "28937980"
+title = "A Maze of Murderscapes: Metroid II (2015)"
+url = "https://www.gamedeveloper.com/audio/a-maze-of-murderscapes-metroid-ii"
+created_at = "2021-10-20T23:02:11Z"
+created_at_i = 1634770931
+points = 78
+num_comments = 40
+
+[[hn_post]]
+object_id = "28951745"
+title = "Plf:colony – a C++ data container designed (initially) for games"
+url = "https://www.gamedeveloper.com/programming/introducing-plf-colony---a-c-data-container-designed-initially-for-games-"
+created_at = "2021-10-21T22:46:33Z"
+created_at_i = 1634856393
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "29206457"
+title = "Functional Programming in C++ (2012)"
+url = "https://www.gamedeveloper.com/programming/in-depth-functional-programming-in-c-"
+created_at = "2021-11-13T01:23:43Z"
+created_at_i = 1636766623
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "29235904"
+title = "Functional Programming in C++"
+url = "https://www.gamedeveloper.com/programming/in-depth-functional-programming-in-c-"
+created_at = "2021-11-16T02:17:47Z"
+created_at_i = 1637029067
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "29239019"
+title = "ZX Spectrum developer Bernie Drummond has died"
+url = "https://www.gamedeveloper.com/design/obituary-zx-spectrum-developer-Bernie-Drummond-has-died"
+created_at = "2021-11-16T10:40:51Z"
+created_at_i = 1637059251
+points = 198
+num_comments = 29
+
+[[hn_post]]
+object_id = "29479161"
+title = "Gamasutra Rebranding to “Game Developer”"
+url = "https://www.gamedeveloper.com/"
+created_at = "2021-12-07T22:41:18Z"
+created_at_i = 1638916878
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "29602887"
+title = "Cold Code (2011)"
+url = "https://www.gamedeveloper.com/programming/in-depth-cold-code"
+created_at = "2021-12-18T08:35:28Z"
+created_at_i = 1639816528
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "29618665"
+title = "Play-to-earn feels like a disaster waiting to happen"
+url = "https://www.gamedeveloper.com/culture/opinion-play-to-earn-feels-like-a-disaster-waiting-to-happen"
+created_at = "2021-12-19T21:36:42Z"
+created_at_i = 1639949802
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "29718902"
+title = "Opinion: Play-to-earn feels like a disaster waiting to happen"
+url = "https://www.gamedeveloper.com/culture/opinion-play-to-earn-feels-like-a-disaster-waiting-to-happen"
+created_at = "2021-12-28T22:12:40Z"
+created_at_i = 1640729560
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "29744845"
+title = "Building a 'homebrew' video game console"
+url = "https://www.gamedeveloper.com/design/building-a-homebrew-video-game-console"
+created_at = "2021-12-31T04:17:59Z"
+created_at_i = 1640924279
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "29763823"
+title = "Making a Sega Mega Drive / Genesis game in 2019 (2019)"
+url = "https://www.gamedeveloper.com/design/making-a-sega-mega-drive-genesis-game-in-2019"
+created_at = "2022-01-01T23:05:59Z"
+created_at_i = 1641078359
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "29767865"
+title = "Digital real estate and the digital housing crisis"
+url = "https://www.gamedeveloper.com/business/digital-real-estate-and-the-digital-housing-crisis"
+created_at = "2022-01-02T11:28:14Z"
+created_at_i = 1641122894
+points = 114
+num_comments = 81
+
+[[hn_post]]
+object_id = "29862496"
+title = "Making a Sega Mega Drive / Genesis game in 2019 (2019)"
+url = "https://www.gamedeveloper.com/design/making-a-sega-mega-drive-genesis-game-in-2019"
+created_at = "2022-01-09T11:57:17Z"
+created_at_i = 1641729437
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "29958995"
+title = "Making a Sega Mega Drive / Genesis game in 2019 (2019)"
+url = "https://www.gamedeveloper.com/design/making-a-sega-mega-drive-genesis-game-in-2019"
+created_at = "2022-01-16T19:21:36Z"
+created_at_i = 1642360896
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30089296"
+title = "Designing and Developing Sports Games"
+url = "https://www.gamedeveloper.com/design/the-designer-s-notebook-designing-and-developing-sports-games"
+created_at = "2022-01-26T18:11:04Z"
+created_at_i = 1643220664
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "30231752"
+title = "Keeping the pirates at bay (2001)"
+url = "https://www.gamedeveloper.com/business/keeping-the-pirates-at-bay"
+created_at = "2022-02-06T12:01:25Z"
+created_at_i = 1644148885
+points = 23
+num_comments = 5
+
+[[hn_post]]
+object_id = "30248260"
+title = "Inside Space Warlord Organ Trading Simulator’s deliberately designed friction"
+url = "https://www.gamedeveloper.com/design/inside-space-warlord-organ-trading-simulator-s-deliberately-designed-friction"
+created_at = "2022-02-07T17:45:33Z"
+created_at_i = 1644255933
+points = 101
+num_comments = 61
+
+[[hn_post]]
+object_id = "30255484"
+title = "The Theory of The Place: A level design philosophy"
+url = "https://www.gamedeveloper.com/blogs/the-theory-of-the-place-a-level-design-philosophy-for-unexplored-2"
+created_at = "2022-02-08T06:23:37Z"
+created_at_i = 1644301417
+points = 2
+num_comments = 0
+
+[[hn_post]]
 object_id = "30273679"
 title = "A Technical Introduction to Programmatic User Acquisition"
 url = "https://www.gamasutra.com/blogs/BenWeber/20220208/393510/A_Technical_Introduction_to_Programmatic_User_Acquisition.php"
@@ -16361,11 +16604,650 @@ points = 2
 num_comments = 0
 
 [[hn_post]]
+object_id = "30427437"
+title = "The Fundamental Obstacle to Netflix’s Games Strategy Is One of Its Own Making"
+url = "https://www.gamedeveloper.com/blogs/the-fundamental-obstacle-to-netflix-s-games-strategy-is-one-of-its-own-making"
+created_at = "2022-02-22T13:08:05Z"
+created_at_i = 1645535285
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "30541267"
+title = "Analysing the AI of Super Mario 64"
+url = "https://www.gamedeveloper.com/blogs/analysing-the-ai-of-super-mario-64"
+created_at = "2022-03-03T14:14:34Z"
+created_at_i = 1646316874
+points = 76
+num_comments = 83
+
+[[hn_post]]
+object_id = "30542377"
+title = "Why Tournaments Support Better Communities Than Ladders"
+url = "https://www.gamedeveloper.com/blogs/keep-your-numbers-off-of-me-why-tournaments-support-better-communities-than-ladders"
+created_at = "2022-03-03T15:40:23Z"
+created_at_i = 1646322023
+points = 3
+num_comments = 1
+
+[[hn_post]]
+object_id = "30562067"
+title = "Blockchain tech–not the metaverse–was the talk of this year's DICE"
+url = "https://www.gamedeveloper.com/culture/blockchain-tech-not-the-metaverse-was-the-talk-of-this-year-s-dice"
+created_at = "2022-03-04T23:35:01Z"
+created_at_i = 1646436901
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30562608"
+title = "Microsoft to halt new sales of products and services in Russia"
+url = "https://www.gamedeveloper.com/business/microsoft-to-halt-new-sales-of-products-and-services-in-russia"
+created_at = "2022-03-05T00:41:09Z"
+created_at_i = 1646440869
+points = 5
+num_comments = 2
+
+[[hn_post]]
+object_id = "30587641"
+title = "Microsoft Flight Simulator's cloud debut comes with upsides for devs"
+url = "https://www.gamedeveloper.com/the-cloud/-i-microsoft-flight-simulator-s-i-cloud-debut-comes-with-upsides-for-devs"
+created_at = "2022-03-07T13:45:28Z"
+created_at_i = 1646660728
+points = 79
+num_comments = 71
+
+[[hn_post]]
 object_id = "30591053"
 title = "Postmortem: Freeverse's Marathon 2: Durandal for XBLA (2007)"
 url = "https://www.gamasutra.com/view/feature/2320/postmortem_freeverses_marathon_.php?print=1"
 created_at = "2022-03-07T17:55:54Z"
 created_at_i = 1646675754
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30603093"
+title = "A God of War series might be headed to Amazon Prime"
+url = "https://www.gamedeveloper.com/business/a-god-of-war-series-might-be-headed-to-amazon-prime"
+created_at = "2022-03-08T17:52:21Z"
+created_at_i = 1646761941
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "30603144"
+title = "There are 44,000 game developers on Steam. Who are they?"
+url = "https://www.gamedeveloper.com/blogs/there-are-44-000-game-developers-on-steam-who-are-they-"
+created_at = "2022-03-08T17:55:10Z"
+created_at_i = 1646762110
+points = 6
+num_comments = 0
+
+[[hn_post]]
+object_id = "30616397"
+title = "Atari buys MobyGames database for $1.5M"
+url = "https://www.gamedeveloper.com/business/atari-buys-mobygames-database-for-1-5-million"
+created_at = "2022-03-09T16:29:43Z"
+created_at_i = 1646843383
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30627414"
+title = "Only 10% of UK games industry workers want to return to the office full-time"
+url = "https://www.gamedeveloper.com/culture/only-10-percent-of-uk-games-industry-workers-want-to-return-to-the-office-full-time"
+created_at = "2022-03-10T14:40:34Z"
+created_at_i = 1646923234
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30627427"
+title = "How does a VC see game discovery?"
+url = "https://www.gamedeveloper.com/blogs/how-does-a-vc-see-game-discovery-"
+created_at = "2022-03-10T14:41:11Z"
+created_at_i = 1646923271
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "30687898"
+title = "Google targets discoverability and porting improvement with new Stadia dev tools"
+url = "https://www.gamedeveloper.com/business/google-targets-discoverability-and-porting-improvements-with-new-stadia-dev-tools"
+created_at = "2022-03-15T17:07:57Z"
+created_at_i = 1647364077
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "30702515"
+title = "Online Multiplayer the Hard Way"
+url = "https://www.gamedeveloper.com/blogs/online-multiplayer-the-hard-way"
+created_at = "2022-03-16T18:51:35Z"
+created_at_i = 1647456695
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "30770927"
+title = "How the developers of Unpacking told a story with 1k items"
+url = "https://www.gamedeveloper.com/gdc2022/unpacking-a-narrative-through-1-000-household-items"
+created_at = "2022-03-22T20:15:43Z"
+created_at_i = 1647980143
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30836365"
+title = "Game Outcomes Project"
+url = "https://www.gamedeveloper.com/business/the-game-outcomes-project-part-1-the-best-and-the-rest"
+created_at = "2022-03-28T22:28:28Z"
+created_at_i = 1648506508
+points = 1
+num_comments = 1
+
+[[hn_post]]
+object_id = "30878278"
+title = "Elden Ring Succeeds by Ignoring 20 Years of Open-World Design"
+url = "https://www.gamedeveloper.com/blogs/how-elden-ring-succeeds-by-ignoring-20-years-of-open-world-design"
+created_at = "2022-04-01T14:16:14Z"
+created_at_i = 1648822574
+points = 180
+num_comments = 160
+
+[[hn_post]]
+object_id = "30892053"
+title = "Behavior Trees for AI – How They Work"
+url = "https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work"
+created_at = "2022-04-02T22:01:56Z"
+created_at_i = 1648936916
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30893655"
+title = "Wolfenstein 3D's winding journey from pitch to release"
+url = "https://www.gamedeveloper.com/gdc2022/wolfenstein-3d-postmortem"
+created_at = "2022-04-03T02:07:52Z"
+created_at_i = 1648951672
+points = 31
+num_comments = 12
+
+[[hn_post]]
+object_id = "30893848"
+title = "GameStop's stock price is skyrocketing again"
+url = "https://www.gamedeveloper.com/business/gamestop-s-stock-price-is-skyrocketing-again"
+created_at = "2022-04-03T02:39:43Z"
+created_at_i = 1648953583
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "30967072"
+title = "Capcom to increase base salary of staff in Japan by 30 percent"
+url = "https://www.gamedeveloper.com/business/capcom-to-increase-base-salary-of-japanese-workers-by-30-percent"
+created_at = "2022-04-09T11:21:07Z"
+created_at_i = 1649503267
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "30987791"
+title = "Sega indicates NFTs could be used to realize “SuperGame” ambitions"
+url = "https://www.gamedeveloper.com/business/sega-indicates-nfts-could-be-used-to-realize-supergame-ambitions"
+created_at = "2022-04-11T12:30:49Z"
+created_at_i = 1649680249
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "31112306"
+title = "How to become a Graphics Programmer in the games industry"
+url = "https://www.gamedeveloper.com/programming/how-to-become-a-graphics-programmer-in-the-games-industry"
+created_at = "2022-04-21T17:16:06Z"
+created_at_i = 1650561366
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "31182006"
+title = "Land Value Tax in Online Games and Virtual Worlds"
+url = "https://www.gamedeveloper.com/design/land-value-tax-in-online-games-and-virtual-worlds-a-how-to-guide"
+created_at = "2022-04-27T16:22:56Z"
+created_at_i = 1651076576
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "31252391"
+title = "The A.I. Of Doom"
+url = "https://www.gamedeveloper.com/blogs/the-ai-of-doom-1993"
+created_at = "2022-05-03T19:24:41Z"
+created_at_i = 1651605881
+points = 86
+num_comments = 19
+
+[[hn_post]]
+object_id = "31327814"
+title = "Developing to 120 beats-per-minute: Q&A about music and rhythm-action"
+url = "https://www.gamedeveloper.com/design/programming-to-120-beats-per-minute-a-highland-song-q-a"
+created_at = "2022-05-10T14:51:36Z"
+created_at_i = 1652194296
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "31337126"
+title = "FIFA will be rebranded as EA Sports FC in 2023"
+url = "https://www.gamedeveloper.com/business/fifa-will-be-rebranded-as-ea-sports-fc-in-2023"
+created_at = "2022-05-11T08:04:59Z"
+created_at_i = 1652256299
+points = 50
+num_comments = 70
+
+[[hn_post]]
+object_id = "31339642"
+title = "Tuning Canabalt"
+url = "https://www.gamedeveloper.com/design/tuning-canabalt"
+created_at = "2022-05-11T13:28:39Z"
+created_at_i = 1652275719
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "31365368"
+title = "The road to unionization for employees at Croatian studio Gamechuck"
+url = "https://www.gamedeveloper.com/culture/employees-at-croatian-studio-gamechuck-have-unionized"
+created_at = "2022-05-13T10:07:16Z"
+created_at_i = 1652436436
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "31405775"
+title = "In-Depth: Concurrent World Editing, on the Cheap (2011)"
+url = "https://www.gamedeveloper.com/design/in-depth-concurrent-world-editing-on-the-cheap"
+created_at = "2022-05-17T03:34:31Z"
+created_at_i = 1652758471
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "31527906"
+title = "New Unity offices in Moscow aim to support Russian devs"
+url = "https://www.gamedeveloper.com/business/new-unity-offices-in-moscow-aim-to-support-russian-devs"
+created_at = "2022-05-27T10:20:54Z"
+created_at_i = 1653646854
+points = 3
+num_comments = 1
+
+[[hn_post]]
+object_id = "31749887"
+title = "Embracer CEO: decision to accept $1B from Saudi state “not taken lightly”"
+url = "https://www.gamedeveloper.com/business/embracer-ceo-says-decision-to-accept-1-billion-from-saudi-state-not-taken-lightly-"
+created_at = "2022-06-15T06:48:11Z"
+created_at_i = 1655275691
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "31799818"
+title = "How Townscaper Works: A Story Four Games in the Making"
+url = "https://www.gamedeveloper.com/blogs/how-townscaper-works-a-story-four-games-in-the-making"
+created_at = "2022-06-19T14:39:19Z"
+created_at_i = 1655649559
+points = 158
+num_comments = 31
+
+[[hn_post]]
+object_id = "31849860"
+title = "Developers share their most memorable dirty coding tricks (2017)"
+url = "https://www.gamedeveloper.com/programming/developers-share-their-most-memorable-dirty-coding-tricks"
+created_at = "2022-06-23T14:48:30Z"
+created_at_i = 1655995710
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "32167234"
+title = "QA workers at Blizzard Albany are unionizing"
+url = "https://www.gamedeveloper.com/culture/qa-workers-at-blizzard-albany-are-unionizing"
+created_at = "2022-07-20T15:32:02Z"
+created_at_i = 1658331122
+points = 172
+num_comments = 153
+
+[[hn_post]]
+object_id = "32222435"
+title = "Devs protest Activision Blizzard's soft response to abortion rights reversal"
+url = "https://www.gamedeveloper.com/culture/blizzard-devs-protest-activision-response-to-abortion-rights-reversal"
+created_at = "2022-07-25T09:59:33Z"
+created_at_i = 1658743173
+points = 5
+num_comments = 0
+
+[[hn_post]]
+object_id = "32247848"
+title = "Aspyr's Star Wars: Knights of the Old Republic Remake Is on Pause"
+url = "https://www.gamedeveloper.com/business/report-aspyr-s-star-wars-knights-of-the-old-republic-remake-is-on-pause"
+created_at = "2022-07-27T07:37:29Z"
+created_at_i = 1658907449
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "32342960"
+title = "How Forza's Drivatar Works (2021)"
+url = "https://www.gamedeveloper.com/design/how-forza-s-drivatar-actually-works"
+created_at = "2022-08-04T13:56:47Z"
+created_at_i = 1659621407
+points = 15
+num_comments = 2
+
+[[hn_post]]
+object_id = "32365838"
+title = "Gamasutra Is Now Game Developer"
+url = "https://www.gamedeveloper.com/"
+created_at = "2022-08-06T07:30:14Z"
+created_at_i = 1659771014
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "32434911"
+title = "Unity signs “multi-million dollar” contract to help U.S. government with defense"
+url = "https://www.gamedeveloper.com/business/unity-signs-multi-million-dollar-contract-to-help-u-s-government-with-defense"
+created_at = "2022-08-12T05:10:14Z"
+created_at_i = 1660281014
+points = 113
+num_comments = 122
+
+[[hn_post]]
+object_id = "32482536"
+title = "Scroll Back: The Theory and Practice of Cameras in Side-Scrollers"
+url = "https://www.gamedeveloper.com/design/scroll-back-the-theory-and-practice-of-cameras-in-side-scrollers"
+created_at = "2022-08-16T13:38:07Z"
+created_at_i = 1660657087
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "32613891"
+title = "Crash Bandicoot Quantum Corruption (2013)"
+url = "https://www.gamedeveloper.com/programming/my-hardest-bug-ever"
+created_at = "2022-08-26T23:22:09Z"
+created_at_i = 1661556129
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "32729781"
+title = "Building a Million-Particle System (2004)"
+url = "https://www.gamedeveloper.com/programming/building-a-million-particle-system"
+created_at = "2022-09-05T21:36:24Z"
+created_at_i = 1662413784
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "32896656"
+title = "How to write sports commentary (2009)"
+url = "https://www.gamedeveloper.com/audio/the-designer-s-notebook-how-to-write-sports-commentary"
+created_at = "2022-09-19T10:54:24Z"
+created_at_i = 1663584864
+points = 21
+num_comments = 3
+
+[[hn_post]]
+object_id = "32975151"
+title = "Building the Level Design of a procedurally generated Metroidvania (2017)"
+url = "https://www.gamedeveloper.com/design/building-the-level-design-of-a-procedurally-generated-metroidvania-a-hybrid-approach-"
+created_at = "2022-09-25T19:36:29Z"
+created_at_i = 1664134589
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "32984536"
+title = "Netflix forms new Helsinki studio to create original games"
+url = "https://www.gamedeveloper.com/business/netflix-hires-former-zynga-helsinki-general-manager-to-lead-new-internal-game-studio"
+created_at = "2022-09-26T15:40:37Z"
+created_at_i = 1664206837
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "33049837"
+title = "More Dirty Coding Tricks from Game Developers (2010)"
+url = "https://www.gamedeveloper.com/design/more-dirty-coding-tricks-from-game-developers"
+created_at = "2022-10-01T20:32:52Z"
+created_at_i = 1664656372
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "33073691"
+title = "The death of Google Stadia was not inevitable"
+url = "https://www.gamedeveloper.com/blogs/the-death-of-google-stadia-was-not-inevitable"
+created_at = "2022-10-03T21:04:45Z"
+created_at_i = 1664831085
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "33134947"
+title = "Valve's latest Steam Deck trailer briefly plugs a Nintendo Switch emulator"
+url = "https://www.gamedeveloper.com/business/valves-latest-steam-deck-trailer-briefly-plugs-a-nintendo-switch-emulator"
+created_at = "2022-10-08T18:58:22Z"
+created_at_i = 1665255502
+points = 187
+num_comments = 202
+
+[[hn_post]]
+object_id = "33177722"
+title = "FIFA 23 passes 10.3M players to set launch week record"
+url = "https://www.gamedeveloper.com/business/fifa-23-delivers-record-launch-week-with-over-10-3-million-players"
+created_at = "2022-10-12T14:43:26Z"
+created_at_i = 1665585806
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "33292614"
+title = "Crunch Makes Games Worse"
+url = "https://www.gamedeveloper.com/business/the-game-outcomes-project-part-4-crunch-makes-games-worse"
+created_at = "2022-10-21T20:21:50Z"
+created_at_i = 1666383710
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "33321695"
+title = "How to make a roguelike"
+url = "https://www.gamedeveloper.com/design/how-to-make-a-roguelike"
+created_at = "2022-10-24T19:54:09Z"
+created_at_i = 1666641249
+points = 237
+num_comments = 146
+
+[[hn_post]]
+object_id = "33359835"
+title = "CD Projekt is remaking the first Witcher game in Unreal Engine 5"
+url = "https://www.gamedeveloper.com/business/cd-projekt-is-remaking-the-first-i-witcher-i-game-in-unreal-engine-5"
+created_at = "2022-10-27T16:17:52Z"
+created_at_i = 1666887472
+points = 261
+num_comments = 222
+
+[[hn_post]]
+object_id = "33467632"
+title = "Rewriting the horrors of mental health representation in games"
+url = "https://www.gamedeveloper.com/design/rewriting-the-horrors-of-mental-health-representation-in-games"
+created_at = "2022-11-04T14:48:22Z"
+created_at_i = 1667573302
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "33526813"
+title = "Gambling sites 'thriving' due to use of Steam's Marketplace"
+url = "https://www.gamedeveloper.com/pc/report-valve-s-steam-marketplace-in-deep-relationship-with-third-party-gambling-sites"
+created_at = "2022-11-09T02:09:36Z"
+created_at_i = 1667959776
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "33989728"
+title = "A brief history of murder in Ultima Online"
+url = "https://www.gamedeveloper.com/design/a-brief-history-of-murder-in-ultima-online"
+created_at = "2022-12-14T20:16:16Z"
+created_at_i = 1671048976
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "34006147"
+title = "Atari: The Golden Years – A History, 1978-1981"
+url = "https://www.gamedeveloper.com/business/atari-the-golden-years----a-history-1978-1981"
+created_at = "2022-12-15T21:39:34Z"
+created_at_i = 1671140374
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "34154113"
+title = "Archer Maclean, Commodore 64 developer, has passed away at 60 years old"
+url = "https://www.gamedeveloper.com/culture/archer-maclean-commodore-64-developer-has-passed-away-at-60-years-old"
+created_at = "2022-12-27T21:30:07Z"
+created_at_i = 1672176607
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "34314940"
+title = "Why is games development so expensive?"
+url = "https://www.gamedeveloper.com/blogs/why-is-game-development-so-expensive-"
+created_at = "2023-01-09T19:40:02Z"
+created_at_i = 1673293202
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "34395153"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond (2001)"
+url = "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond"
+created_at = "2023-01-16T00:14:13Z"
+created_at_i = 1673828053
+points = 398
+num_comments = 180
+
+[[hn_post]]
+object_id = "34401644"
+title = "Tencent fired over 100 workers on suspicion of corruption in 2022"
+url = "https://www.gamedeveloper.com/business/tencent-fired-over-100-workers-on-suspicion-of-corruption-in-2022"
+created_at = "2023-01-16T15:36:26Z"
+created_at_i = 1673883386
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "34671958"
+title = "Scumm Diary: Stories behind one of the greatest game engines ever made (2013)"
+url = "https://www.gamedeveloper.com/design/the-scumm-diary-stories-behind-one-of-the-greatest-game-engines-ever-made"
+created_at = "2023-02-06T01:14:26Z"
+created_at_i = 1675646066
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "34816886"
+title = "Signs that the era of remote work is coming to an end"
+url = "https://www.gamedeveloper.com/business/activision-blizzard-reportedly-planning-to-end-remote-work"
+created_at = "2023-02-16T10:04:13Z"
+created_at_i = 1676541853
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "34925455"
+title = "Neal Stephenson doesn't seem keen on crypto anymore"
+url = "https://www.gamedeveloper.com/culture/even-neal-stephenson-doesn-t-seem-keen-on-crypto-anymore"
+created_at = "2023-02-24T15:31:42Z"
+created_at_i = 1677252702
+points = 84
+num_comments = 173
+
+[[hn_post]]
+object_id = "34979989"
+title = "Proactive voice moderation can solve gaming's toxicity crisis"
+url = "https://www.gamedeveloper.com/audio/how-proactive-voice-moderation-can-solve-gaming-s-toxicity-crisis"
+created_at = "2023-03-01T08:22:28Z"
+created_at_i = 1677658948
+points = 4
+num_comments = 1
+
+[[hn_post]]
+object_id = "35060273"
+title = "My Hardest Bug Ever (2013)"
+url = "https://www.gamedeveloper.com/programming/my-hardest-bug-ever"
+created_at = "2023-03-07T19:52:17Z"
+created_at_i = 1678218737
+points = 289
+num_comments = 128
+
+[[hn_post]]
+object_id = "35180794"
+title = "Playstation veteran Shuhei Yoshida to be honored with BAFTA Fellowship"
+url = "https://www.gamedeveloper.com/business/playstation-veteran-shuhei-yoshida-to-be-honored-with-bafta-fellowship"
+created_at = "2023-03-16T11:56:48Z"
+created_at_i = 1678967808
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "35412505"
+title = "Key takeaways from the quest design of Cyberpunk 2077 and The Witcher 3"
+url = "https://www.gamedeveloper.com/gdc2023/10-key-takeaways-from-the-quest-design-of-cyberpunk-2077-and-the-witcher-3"
+created_at = "2023-04-02T16:49:35Z"
+created_at_i = 1680454175
+points = 46
+num_comments = 61
+
+[[hn_post]]
+object_id = "35452987"
+title = "How (and why) we ported SHENZHEN SOLITAIRE to MS-DOS (2017)"
+url = "https://www.gamedeveloper.com/programming/how-and-why-we-ported-shenzhen-solitaire-to-ms-dos"
+created_at = "2023-04-05T12:31:03Z"
+created_at_i = 1680697863
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "35563142"
+title = "The Right Kind of Beauty"
+url = "https://www.gamedeveloper.com/design/the-right-kind-of-beauty"
+created_at = "2023-04-13T22:40:49Z"
+created_at_i = 1681425649
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "35594222"
+title = "Robotron: 2084 – Running Away While Defending Humanoids"
+url = "https://www.gamedeveloper.com/design/the-history-of-robotron-2084---running-away-while-defending-humanoids"
+created_at = "2023-04-16T20:59:04Z"
+created_at_i = 1681678744
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "35635590"
+title = "Most Programmers Can't Read Code (2012)"
+url = "https://www.gamedeveloper.com/programming/most-programmers-can-t-read-code"
+created_at = "2023-04-20T02:17:17Z"
+created_at_i = 1681957037
 points = 2
 num_comments = 0
 
@@ -16379,6 +17261,573 @@ points = 2
 num_comments = 0
 
 [[hn_post]]
+object_id = "36056622"
+title = "Ensemble Studios: From Beginning to End, an Excerpt from Gamers at Work (2012)"
+url = "https://www.gamedeveloper.com/business/ensemble-studios-from-beginning-to-end-an-excerpt-from-gamers-at-work"
+created_at = "2023-05-24T11:40:34Z"
+created_at_i = 1684928434
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "36061994"
+title = "The Cabal: Valve’s Design Process for Creating Half-Life"
+url = "https://www.gamedeveloper.com/design/the-cabal-valve-s-design-process-for-creating-i-half-life-i-"
+created_at = "2023-05-24T18:14:10Z"
+created_at_i = 1684952050
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "36286143"
+title = "Building Effective Teams"
+url = "https://www.gamedeveloper.com/business/the-game-outcomes-project-part-2-building-effective-teams"
+created_at = "2023-06-11T21:56:02Z"
+created_at_i = 1686520562
+points = 29
+num_comments = 0
+
+[[hn_post]]
+object_id = "36320213"
+title = "Embracer's M&A era is ending with job cuts and game cancellations"
+url = "https://www.gamedeveloper.com/business/embracer-s-m-a-era-is-ending-with-job-cuts-and-game-cancellations"
+created_at = "2023-06-14T01:33:49Z"
+created_at_i = 1686706429
+points = 1
+num_comments = 1
+
+[[hn_post]]
+object_id = "36485289"
+title = "Delphine Software founder Paul de Senneville died at age 89"
+url = "https://www.gamedeveloper.com/culture/obituary-delphine-software-founder-paul-de-senneville-died-at-age-89"
+created_at = "2023-06-26T20:21:51Z"
+created_at_i = 1687810911
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "36693069"
+title = "John Carmack – Parallel Implementations (2011)"
+url = "https://www.gamedeveloper.com/programming/opinion-parallel-implementations"
+created_at = "2023-07-12T11:39:33Z"
+created_at_i = 1689161973
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "36706686"
+title = "John Carmack – Static Code Analysis (2011)"
+url = "https://www.gamedeveloper.com/programming/in-depth-static-code-analysis"
+created_at = "2023-07-13T09:18:08Z"
+created_at_i = 1689239888
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "36742333"
+title = "Tinybuild is using AI tools to monitor and identify “problematic” workers"
+url = "https://www.gamedeveloper.com/business/tinybuild-is-using-ai-tools-to-monitor-staff-and-identify-problematic-workers-"
+created_at = "2023-07-16T00:46:18Z"
+created_at_i = 1689468378
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "36998139"
+title = "Classic Postmortem: Asheron's Call"
+url = "https://www.gamedeveloper.com/design/classic-postmortem-i-asheron-s-call-i-"
+created_at = "2023-08-04T10:53:57Z"
+created_at_i = 1691146437
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "37035750"
+title = "Zero Initialisation for Classes"
+url = "https://www.gamedeveloper.com/programming/zero-initialisation-for-classes"
+created_at = "2023-08-07T15:24:53Z"
+created_at_i = 1691421893
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "37284350"
+title = "Prince of Packaging: A tale of 1990s box art"
+url = "https://www.gamedeveloper.com/art/prince-of-packaging-a-tale-of-1990s-box-art"
+created_at = "2023-08-27T16:46:37Z"
+created_at_i = 1693154797
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "37343735"
+title = "Saints Row developer Volition has been shut down"
+url = "https://www.gamedeveloper.com/business/saints-row-developer-volition-has-been-shut-down"
+created_at = "2023-08-31T21:11:36Z"
+created_at_i = 1693516296
+points = 4
+num_comments = 3
+
+[[hn_post]]
+object_id = "37484654"
+title = "Unity introducing new fee attached to game installs"
+url = "https://www.gamedeveloper.com/business/unity-to-start-charging-fee-pegged-to-game-installs"
+created_at = "2023-09-12T17:34:42Z"
+created_at_i = 1694540082
+points = 5
+num_comments = 1
+
+[[hn_post]]
+object_id = "37486431"
+title = "The Death of Unity"
+url = "https://www.gamedeveloper.com/business/the-death-of-unity"
+created_at = "2023-09-12T19:18:34Z"
+created_at_i = 1694546314
+points = 290
+num_comments = 236
+
+[[hn_post]]
+object_id = "37518399"
+title = "The Generous Space of Alternative Game Engines"
+url = "https://www.gamedeveloper.com/blogs/the-generous-space-of-alternative-game-engines-a-curation-"
+created_at = "2023-09-15T04:24:02Z"
+created_at_i = 1694751842
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "37526495"
+title = "The Generous Space of Alternative Game Engines (A Curation)"
+url = "https://www.gamedeveloper.com/blogs/the-generous-space-of-alternative-game-engines-a-curation-"
+created_at = "2023-09-15T17:33:32Z"
+created_at_i = 1694799212
+points = 3
+num_comments = 1
+
+[[hn_post]]
+object_id = "37545328"
+title = "Unity's Just Not into You, Indie Developer"
+url = "https://www.gamedeveloper.com/blogs/unity-s-just-not-into-you-indie-developer"
+created_at = "2023-09-17T14:20:17Z"
+created_at_i = 1694960417
+points = 67
+num_comments = 80
+
+[[hn_post]]
+object_id = "37553972"
+title = "In-depth: Functional programming in C++ (2012)"
+url = "https://www.gamedeveloper.com/programming/in-depth-functional-programming-in-c-"
+created_at = "2023-09-18T09:18:03Z"
+created_at_i = 1695028683
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "37665946"
+title = "Warren Spector – 40 years and I'm still here"
+url = "https://www.gamedeveloper.com/blogs/my-40-years-in-the-game-industry"
+created_at = "2023-09-26T21:18:48Z"
+created_at_i = 1695763128
+points = 172
+num_comments = 44
+
+[[hn_post]]
+object_id = "37698717"
+title = "Epic Games lays off 900, partially due to Fortnite's “creator-driven” shift"
+url = "https://www.gamedeveloper.com/business/epic-games-lays-off-nearly-900-staff"
+created_at = "2023-09-29T02:44:58Z"
+created_at_i = 1695955498
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "37781724"
+title = "Epic Games to update Unreal Engine pricing for devs outside game industry"
+url = "https://www.gamedeveloper.com/business/epic-games-to-update-unreal-engine-pricing-for-devs-outside-game-industry"
+created_at = "2023-10-05T17:52:49Z"
+created_at_i = 1696528369
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "37818647"
+title = "CRT Simulation in Super Win the Game (2015)"
+url = "https://www.gamedeveloper.com/programming/crt-simulation-in-super-win-the-game"
+created_at = "2023-10-09T09:38:42Z"
+created_at_i = 1696844322
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "37895630"
+title = "Peter Molyneux wants Project MOAT to represent his life's work"
+url = "https://www.gamedeveloper.com/business/peter-molyneux-wants-i-project-moat-i-to-represent-his-life-s-work"
+created_at = "2023-10-16T03:25:23Z"
+created_at_i = 1697426723
+points = 36
+num_comments = 46
+
+[[hn_post]]
+object_id = "38024056"
+title = "Reality Labs has lost $11.4B during 2023 (there's still one quarter left)"
+url = "https://www.gamedeveloper.com/business/reality-labs-has-lost-11-4-billion-during-2023-and-there-s-still-one-quarter-left-"
+created_at = "2023-10-26T11:11:46Z"
+created_at_i = 1698318706
+points = 55
+num_comments = 134
+
+[[hn_post]]
+object_id = "38502206"
+title = "EA open sources Mirror's Edge and EA Sports FC accessibility tech"
+url = "https://www.gamedeveloper.com/design/ea-open-sources-accessibility-tech-from-mirrors-edge-catalyst-and-ea-sports-fc-24"
+created_at = "2023-12-02T21:28:01Z"
+created_at_i = 1701552481
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "38523354"
+title = "The Generous Space of Alternative Game Engines"
+url = "https://www.gamedeveloper.com/blogs/the-generous-space-of-alternative-game-engines-a-curation-"
+created_at = "2023-12-04T21:27:03Z"
+created_at_i = 1701725223
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "39072490"
+title = "Oil It or Spoil It!"
+url = "https://www.gamedeveloper.com/design/oil-it-or-spoil-it-"
+created_at = "2024-01-20T21:22:25Z"
+created_at_i = 1705785745
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "39091197"
+title = "Palworld tops 5M sales after shifting 86,000 copies per hour over the weekend"
+url = "https://www.gamedeveloper.com/business/palworld-tops-5m-sales-after-shifting-86-000-copies-per-hour-over-the-weekend"
+created_at = "2024-01-22T16:17:18Z"
+created_at_i = 1705940238
+points = 20
+num_comments = 8
+
+[[hn_post]]
+object_id = "39135876"
+title = "Former Bungie general counsel says the game industry must unionize"
+url = "https://www.gamedeveloper.com/business/former-bungie-chief-legal-officer-the-game-industry-must-unionize-"
+created_at = "2024-01-25T21:51:14Z"
+created_at_i = 1706219474
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "39161915"
+title = "Layoffs are not the solution – Nintendo's Iwata (2013)"
+url = "https://www.gamedeveloper.com/business/layoffs-are-not-the-solution-nintendo-s-iwata"
+created_at = "2024-01-28T02:18:15Z"
+created_at_i = 1706408295
+points = 5
+num_comments = 1
+
+[[hn_post]]
+object_id = "39164809"
+title = "Deep Dive: Designing the dynamic irrigation and water systems in Timberborn"
+url = "https://www.gamedeveloper.com/design/deep-dive-timberborn-s-water-mechanics"
+created_at = "2024-01-28T11:54:39Z"
+created_at_i = 1706442879
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "39598382"
+title = "Switch emulator Yuzu reaches $2.4M settlement with Nintendo"
+url = "https://www.gamedeveloper.com/business/switch-emulator-yuzu-reaches-2-4-million-settlement-with-nintendo"
+created_at = "2024-03-05T01:34:02Z"
+created_at_i = 1709602442
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "39710414"
+title = "Keywords Studios tried to make a GenAI game found tech unable to replace talent"
+url = "https://www.gamedeveloper.com/production/keywords-tried-to-make-a-game-using-genai-but-said-the-tech-was-unable-to-replace-talent-"
+created_at = "2024-03-14T23:48:52Z"
+created_at_i = 1710460132
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "39771754"
+title = "Jim Ward has died"
+url = "https://www.gamedeveloper.com/business/obituary-jim-ward-dungeons-dragons-designer-died-at-age-72"
+created_at = "2024-03-20T20:40:11Z"
+created_at_i = 1710967211
+points = 163
+num_comments = 20
+
+[[hn_post]]
+object_id = "39788474"
+title = "The secret to using Steam as a developer is to make Valve earn their 30 percent"
+url = "https://www.gamedeveloper.com/marketing/the-secret-to-using-steam-as-a-developer-is-to-make-valve-earn-their-30-percent"
+created_at = "2024-03-22T08:23:29Z"
+created_at_i = 1711095809
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "39818524"
+title = "Rovio integrated AI into its customer service pipeline"
+url = "https://www.gamedeveloper.com/mobile/here-s-what-happened-when-rovio-integrated-ai-into-its-customer-service-pipeline"
+created_at = "2024-03-25T16:48:32Z"
+created_at_i = 1711385312
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "39909456"
+title = "Unity executives see a bright future for WebGPU in game development"
+url = "https://www.gamedeveloper.com/programming/unity-sees-webgpu-is-a-growing-market-for-game-development"
+created_at = "2024-04-02T18:48:51Z"
+created_at_i = 1712083731
+points = 32
+num_comments = 7
+
+[[hn_post]]
+object_id = "39923997"
+title = "FTC blocks facial recognition plans for game purposes"
+url = "https://www.gamedeveloper.com/business/ftc-blocks-facial-recognition-plans-for-game-purchases"
+created_at = "2024-04-03T22:20:05Z"
+created_at_i = 1712182805
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "40011047"
+title = "Slay the Spire devs followed through on abandoning Unity"
+url = "https://www.gamedeveloper.com/business/slay-the-spire-devs-followed-through-on-abandoning-unity"
+created_at = "2024-04-12T10:21:53Z"
+created_at_i = 1712917313
+points = 3
+num_comments = 1
+
+[[hn_post]]
+object_id = "40326129"
+title = "Deep Dive: Player Choice in Space Warlord Organ Trading Simulator"
+url = "https://www.gamedeveloper.com/design/deep-dive-player-choice-in-space-warlord-organ-trading-simulator-s-ruthlessly-greedy-world"
+created_at = "2024-05-11T05:19:34Z"
+created_at_i = 1715404774
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "40457600"
+title = "The cozy descendants of Lucas Pope's games"
+url = "https://www.gamedeveloper.com/design/the-cozy-descendants-of-lucas-pope-s-games"
+created_at = "2024-05-23T17:37:10Z"
+created_at_i = 1716485830
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "40665776"
+title = "The Invisible Hand of Super Metroid"
+url = "https://www.gamedeveloper.com/keyword/blogs"
+created_at = "2024-06-13T03:53:38Z"
+created_at_i = 1718250818
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "40737134"
+title = "Embracer rolls out AI policy to enhance game development"
+url = "https://www.gamedeveloper.com/production/embracer-rolls-out-new-ai-policy-to-massively-enhance-game-development-"
+created_at = "2024-06-20T10:43:23Z"
+created_at_i = 1718880203
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "40885263"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond (2001)"
+url = "https://www.gamedeveloper.com/programming"
+created_at = "2024-07-05T19:17:14Z"
+created_at_i = 1720207034
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "41069949"
+title = "World of Warcraft developers form wall-to-wall union at Blizzard Entertainment"
+url = "https://www.gamedeveloper.com/production/over-500-blizzard-entertainment-workers-form-wall-to-wall-union"
+created_at = "2024-07-25T15:41:18Z"
+created_at_i = 1721922078
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "41102966"
+title = "Why is it so expensive to make games in the United States?"
+url = "https://www.gamedeveloper.com/business/why-is-it-so-expensive-to-make-games-in-the-united-states-"
+created_at = "2024-07-29T19:22:02Z"
+created_at_i = 1722280922
+points = 45
+num_comments = 80
+
+[[hn_post]]
+object_id = "41185035"
+title = "Meta shuts down Quest developer Ready at Dawn"
+url = "https://www.gamedeveloper.com/business/meta-shuts-down-quest-developer-ready-at-dawn"
+created_at = "2024-08-07T20:22:43Z"
+created_at_i = 1723062163
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "41264941"
+title = "Supporting game design with evolutionary algorithms"
+url = "https://www.gamedeveloper.com/design/supporting-game-design-with-evolutionary-algorithms"
+created_at = "2024-08-16T10:11:28Z"
+created_at_i = 1723803088
+points = 75
+num_comments = 57
+
+[[hn_post]]
+object_id = "41366997"
+title = "What game devs can learn from Japan's most interesting puzzle magazine"
+url = "https://www.gamedeveloper.com/design/what-game-devs-can-learn-from-japan-s-most-interesting-puzzle-magazine"
+created_at = "2024-08-27T12:53:07Z"
+created_at_i = 1724763187
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "41468667"
+title = "Godot founders had desperately hoped Unity wouldn't 'blow up'"
+url = "https://www.gamedeveloper.com/programming/godot-founders-had-desperately-hoped-unity-wouldn-t-blow-up-"
+created_at = "2024-09-06T18:41:06Z"
+created_at_i = 1725648066
+points = 160
+num_comments = 140
+
+[[hn_post]]
+object_id = "41495426"
+title = "Game UI Database slowdown caused by relentless OpenAI scraping"
+url = "https://www.gamedeveloper.com/business/-this-was-essentially-a-two-week-long-ddos-attack-game-ui-database-slowdown-caused-by-openai-scraping"
+created_at = "2024-09-09T23:27:57Z"
+created_at_i = 1725924477
+points = 13
+num_comments = 3
+
+[[hn_post]]
+object_id = "41534195"
+title = "Designing the mind-bending puzzles in Patrick's Parabox"
+url = "https://www.gamedeveloper.com/design/patrick-s-parabox-"
+created_at = "2024-09-13T19:14:21Z"
+created_at_i = 1726254861
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "41537616"
+title = "Patch Notes #3: The game industry is becoming an innovation wasteland"
+url = "https://www.gamedeveloper.com/business/patch-notes-3-the-game-industry-is-becoming-an-innovation-wasteland"
+created_at = "2024-09-14T05:10:07Z"
+created_at_i = 1726290607
+points = 8
+num_comments = 5
+
+[[hn_post]]
+object_id = "41765639"
+title = "Game UI Database slowdown caused by relentless OpenAI scraping"
+url = "https://www.gamedeveloper.com/business/-this-was-essentially-a-two-week-long-ddos-attack-game-ui-database-slowdown-caused-by-openai-scraping"
+created_at = "2024-10-07T13:10:18Z"
+created_at_i = 1728306618
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "42161781"
+title = "Why Animal Well's home-brewed engine was key to its success"
+url = "https://www.gamedeveloper.com/design/why-animal-well-s-home-brewed-engine-was-key-to-its-success"
+created_at = "2024-11-17T03:31:54Z"
+created_at_i = 1731814314
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "42437916"
+title = "Miyamoto explains how Nintendo is countering rising development costs"
+url = "https://www.gamedeveloper.com/production/-polish-something-that-has-never-existed-before-miyamoto-explains-how-nintendo-is-countering-rising-development-costs"
+created_at = "2024-12-17T02:59:35Z"
+created_at_i = 1734404375
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "42592074"
+title = "Deep Dive: Crafting detailed and dynamic water in Planet Coaster 2"
+url = "https://www.gamedeveloper.com/programming/deep-dive-crafting-detailed-and-dynamic-water-in-planet-coaster-2"
+created_at = "2025-01-04T03:23:33Z"
+created_at_i = 1735961013
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "42624478"
+title = "Activision spent almost $1.8B developing three Call of Duty titles"
+url = "https://www.gamedeveloper.com/business/activision-spent-almost-1-8-billion-developing-three-call-of-duty-titles"
+created_at = "2025-01-07T16:49:58Z"
+created_at_i = 1736268598
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "42793217"
+title = "GDC 2025 State of the Game Industry"
+url = "https://www.gamedeveloper.com/business/gdc-2025-state-of-the-game-industry-devs-weigh-in-on-layoffs-ai-and-more"
+created_at = "2025-01-22T14:31:18Z"
+created_at_i = 1737556278
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "42801838"
+title = "Roche Limit: A dark, surrealist pixel art game that runs in PowerPoint"
+url = "https://www.gamedeveloper.com/design/roche-limit-is-a-dark-surrealist-pixel-art-game-made-entirely-in-powerpoint"
+created_at = "2025-01-23T08:08:51Z"
+created_at_i = 1737619731
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "42884492"
+title = "Forza Horizon 5 switches tracks to Playstation 5 in the spring"
+url = "https://www.gamedeveloper.com/business/forza-horizon-5-switches-tracks-to-playstation-5-in-the-spring"
+created_at = "2025-01-31T03:34:23Z"
+created_at_i = 1738294463
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "43015585"
+title = "Postmortem: The singular design of Namco's Katamari Damacy (2004)"
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+created_at = "2025-02-11T17:34:31Z"
+created_at_i = 1739295271
+points = 180
+num_comments = 53
+
+[[hn_post]]
+object_id = "43018487"
+title = "Unity continues mass layoffs with 'abrupt' communications and 5am emails"
+url = "https://www.gamedeveloper.com/business/report-unity-continues-layoffs-with-abrupt-communications-and-5am-emails"
+created_at = "2025-02-11T21:17:14Z"
+created_at_i = 1739308634
+points = 27
+num_comments = 1
+
+[[hn_post]]
 object_id = "43200135"
 title = "Postmortem: Big Games' Rise of Nations"
 url = "https://web.archive.org/web/20120511073512/http://www.gamasutra.com/view/feature/131242/postmortem_big_huge_games_rise_.php?print=1"
@@ -16386,3 +17835,408 @@ created_at = "2025-02-28T00:15:33Z"
 created_at_i = 1740701733
 points = 2
 num_comments = 0
+
+[[hn_post]]
+object_id = "43263365"
+title = "A Maze of Murderscapes: Metroid II (2015)"
+url = "https://www.gamedeveloper.com/audio/a-maze-of-murderscapes-metroid-ii"
+created_at = "2025-03-05T05:57:51Z"
+created_at_i = 1741154271
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "43406123"
+title = "Unity claims 79 percent of developers are 'feeling positive' about generative AI"
+url = "https://www.gamedeveloper.com/production/unity-claims-79-percent-of-developers-are-feeling-positive-about-generative-ai"
+created_at = "2025-03-18T22:51:04Z"
+created_at_i = 1742338264
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "43465665"
+title = "It's okay to make a small game"
+url = "https://www.gamedeveloper.com/design/-it-s-okay-to-make-a-small-game-astro-bot-director-nicolas-doucet-says-tiny-ideas-contain-huge-potential"
+created_at = "2025-03-24T21:38:58Z"
+created_at_i = 1742852338
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "43690991"
+title = "Balatro publisher Playstack delivered a marketing masterclass"
+url = "https://www.gamedeveloper.com/marketing/the-methodical-marketing-beats-behind-overnight-success-balatro"
+created_at = "2025-04-15T10:27:10Z"
+created_at_i = 1744712830
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "43824664"
+title = "The Cabal: Valve's Design Process for Creating Half-Life"
+url = "https://www.gamedeveloper.com/design/the-cabal-valve-s-design-process-for-creating-i-half-life-i-"
+created_at = "2025-04-28T18:51:10Z"
+created_at_i = 1745866270
+points = 3
+num_comments = 2
+
+[[hn_post]]
+object_id = "43896556"
+title = "Tuning Canabalt (2010)"
+url = "https://www.gamedeveloper.com/design/tuning-canabalt"
+created_at = "2025-05-05T16:08:19Z"
+created_at_i = 1746461299
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "44014037"
+title = "The 'deprofessionalization of video games' was on full display at PAX East"
+url = "https://www.gamedeveloper.com/business/-deprofessionalization-is-bad-for-video-games"
+created_at = "2025-05-17T13:07:19Z"
+created_at_i = 1747487239
+points = 7
+num_comments = 2
+
+[[hn_post]]
+object_id = "44035233"
+title = "Trump administration cuts funding for the Strong Museum of Play"
+url = "https://www.gamedeveloper.com/business/trump-administration-cuts-funding-for-the-strong-museum-of-play"
+created_at = "2025-05-19T21:45:52Z"
+created_at_i = 1747691152
+points = 5
+num_comments = 0
+
+[[hn_post]]
+object_id = "44130517"
+title = "The 'deprofessionalization of video games' was on full display at PAX East"
+url = "https://www.gamedeveloper.com/business/-deprofessionalization-is-bad-for-video-games"
+created_at = "2025-05-29T21:21:53Z"
+created_at_i = 1748553713
+points = 4
+num_comments = 3
+
+[[hn_post]]
+object_id = "44466867"
+title = "Unity promises strong AI copyright 'guardrails' after employee conjures Mickey"
+url = "https://www.gamedeveloper.com/art/unity-promises-stronger-ai-copyright-guardrails-after-employee-conjures-mickey-mouse-on-stream"
+created_at = "2025-07-04T18:38:22Z"
+created_at_i = 1751654302
+points = 3
+num_comments = 2
+
+[[hn_post]]
+object_id = "44573512"
+title = "Santa Ragione says Apple is delisting Wheels of Aurelia 'without justification'"
+url = "https://www.gamedeveloper.com/business/santa-ragione-says-apple-is-delisting-wheels-of-aurelia-without-justification-"
+created_at = "2025-07-15T17:15:06Z"
+created_at_i = 1752599706
+points = 36
+num_comments = 26
+
+[[hn_post]]
+object_id = "44662544"
+title = "The soft body physics of JellyCar"
+url = "https://www.gamedeveloper.com/programming/deep-dive-the-soft-body-physics-of-jelly-car-explained"
+created_at = "2025-07-23T18:41:39Z"
+created_at_i = 1753296099
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "44789871"
+title = "Speedy implementation fed the fast-paced platforming of Pizza Tower (2023)"
+url = "https://www.gamedeveloper.com/design/how-speedy-implementation-high-paced-platformer-pizza-tower"
+created_at = "2025-08-04T18:45:29Z"
+created_at_i = 1754333129
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "44867777"
+title = "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
+url = "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond"
+created_at = "2025-08-11T18:36:46Z"
+created_at_i = 1754937406
+points = 4
+num_comments = 1
+
+[[hn_post]]
+object_id = "45055190"
+title = "450 Blizzard Diablo developers vote to unionize under CWA"
+url = "https://www.gamedeveloper.com/business/450-diablo-developers-vote-to-unionize-under-cwa"
+created_at = "2025-08-28T18:11:21Z"
+created_at_i = 1756404681
+points = 5
+num_comments = 0
+
+[[hn_post]]
+object_id = "45131723"
+title = "2K confirms layoffs at Civilization developer Firaxis"
+url = "https://www.gamedeveloper.com/business/2k-confirms-layoffs-at-civilization-developer-firaxis"
+created_at = "2025-09-04T20:12:20Z"
+created_at_i = 1757016740
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "45186486"
+title = "Tencent claims its new AI tool will reduce art production timeframes to minutes"
+url = "https://www.gamedeveloper.com/art/tencent-claims-its-new-ai-tool-will-reduce-art-production-timeframes-from-days-to-minutes"
+created_at = "2025-09-09T18:34:53Z"
+created_at_i = 1757442893
+points = 1
+num_comments = 1
+
+[[hn_post]]
+object_id = "45203464"
+title = "What's the real reason games are taking longer to make?"
+url = "https://www.gamedeveloper.com/production/what-s-the-real-reason-games-are-taking-longer-to-make-"
+created_at = "2025-09-10T20:49:13Z"
+created_at_i = 1757537353
+points = 6
+num_comments = 0
+
+[[hn_post]]
+object_id = "45258941"
+title = "What's the real reason games are taking longer to make?"
+url = "https://www.gamedeveloper.com/production/what-s-the-real-reason-games-are-taking-longer-to-make-"
+created_at = "2025-09-16T06:58:49Z"
+created_at_i = 1758005929
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "45263573"
+title = "Devs more worried than ever that generative AI will lower the quality of games"
+url = "https://www.gamedeveloper.com/business/devs-are-more-worried-than-ever-that-generative-ai-will-lower-the-quality-of-games"
+created_at = "2025-09-16T15:25:06Z"
+created_at_i = 1758036306
+points = 3
+num_comments = 2
+
+[[hn_post]]
+object_id = "45382675"
+title = "Nintendo of America president Doug Bowser retires"
+url = "https://www.gamedeveloper.com/business/nintendo-of-america-president-doug-bowser-retires"
+created_at = "2025-09-26T04:35:11Z"
+created_at_i = 1758861311
+points = 6
+num_comments = 1
+
+[[hn_post]]
+object_id = "45610069"
+title = "Dead or Alive, Ninja Gaiden creator Itagaki passed away at 58"
+url = "https://www.gamedeveloper.com/design/dead-or-alive-creator-tomonobu-itagaki-has-passed-away-at-58"
+created_at = "2025-10-16T20:07:25Z"
+created_at_i = 1760645245
+points = 15
+num_comments = 4
+
+[[hn_post]]
+object_id = "45617986"
+title = "Dead or Alive creator Tomonobu Itagaki, 58 passes away"
+url = "https://www.gamedeveloper.com/design/dead-or-alive-creator-tomonobu-itagaki-has-passed-away-at-58"
+created_at = "2025-10-17T15:36:48Z"
+created_at_i = 1760715408
+points = 124
+num_comments = 20
+
+[[hn_post]]
+object_id = "45823044"
+title = "Poor leadership slows down game development"
+url = "https://www.gamedeveloper.com/production/how-poor-leadership-slows-down-game-development"
+created_at = "2025-11-05T14:12:35Z"
+created_at_i = 1762351955
+points = 19
+num_comments = 4
+
+[[hn_post]]
+object_id = "46084492"
+title = "Rocketwerkz CEO says frameworks, not engines, are the future of game development"
+url = "https://www.gamedeveloper.com/programming/rocketwerkz-ceo-predicts-frameworks-not-engines-will-be-future-of-game-development"
+created_at = "2025-11-29T01:30:16Z"
+created_at_i = 1764379816
+points = 5
+num_comments = 0
+
+[[hn_post]]
+object_id = "46127213"
+title = "Monotype accused of overcharging Japanese devs for Japanese language fonts"
+url = "https://www.gamedeveloper.com/business/american-company-is-overcharging-japanese-devs-for-japanese-language-fonts"
+created_at = "2025-12-02T21:37:59Z"
+created_at_i = 1764711479
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "46345006"
+title = "Fun Grid Facts (Hex Grids) (2014)"
+url = "https://www.gamedeveloper.com/design/20-fun-grid-facts-hex-grids-"
+created_at = "2025-12-21T14:16:17Z"
+created_at_i = 1766326577
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "46476919"
+title = "Steve Jobs, Atari Employee Number 40 (2011)"
+url = "https://www.gamedeveloper.com/business/steve-jobs-atari-employee-number-40"
+created_at = "2026-01-03T14:15:31Z"
+created_at_i = 1767449731
+points = 6
+num_comments = 0
+
+[[hn_post]]
+object_id = "46528100"
+title = "Ubisoft closes Halifax studio weeks after workers vote to unionize"
+url = "https://www.gamedeveloper.com/business/ubisoft-closes-halifax-studio-weeks-after-workers-vote-to-unionize"
+created_at = "2026-01-07T16:12:39Z"
+created_at_i = 1767802359
+points = 13
+num_comments = 3
+
+[[hn_post]]
+object_id = "46797901"
+title = "Valve faces lawsuit over developer commissions on Steam"
+url = "https://www.gamedeveloper.com/business/valve-faces-lawsuit-over-developer-commissions-on-steam"
+created_at = "2026-01-28T16:51:24Z"
+created_at_i = 1769619084
+points = 3
+num_comments = 1
+
+[[hn_post]]
+object_id = "46880025"
+title = "One in four video game developers laid off over the past two years"
+url = "https://www.gamedeveloper.com/business/survey-one-in-four-developers-laid-off-over-the-past-two-years"
+created_at = "2026-02-04T01:12:29Z"
+created_at_i = 1770167549
+points = 8
+num_comments = 1
+
+[[hn_post]]
+object_id = "46881860"
+title = "My Hardest Bug Ever (2013)"
+url = "https://www.gamedeveloper.com/programming/my-hardest-bug-ever"
+created_at = "2026-02-04T05:34:10Z"
+created_at_i = 1770183250
+points = 5
+num_comments = 1
+
+[[hn_post]]
+object_id = "47043940"
+title = "Unity says its AI tech will be able to prompt full casual games into existence"
+url = "https://www.gamedeveloper.com/programming/unity-says-its-ai-tech-will-soon-be-able-to-prompt-full-casual-games-into-existence-"
+created_at = "2026-02-17T05:14:54Z"
+created_at_i = 1771305294
+points = 4
+num_comments = 3
+
+[[hn_post]]
+object_id = "47054389"
+title = "Godot veteran says 'AI slop' pull requests have become overwhelming"
+url = "https://www.gamedeveloper.com/programming/godot-co-founder-says-ai-slop-pull-requests-have-become-overwhelming"
+created_at = "2026-02-17T22:32:17Z"
+created_at_i = 1771367537
+points = 10
+num_comments = 1
+
+[[hn_post]]
+object_id = "47118158"
+title = "Keeping the Pirates at Bay"
+url = "https://www.gamedeveloper.com/business/keeping-the-pirates-at-bay"
+created_at = "2026-02-23T04:31:01Z"
+created_at_i = 1771821061
+points = 5
+num_comments = 0
+
+[[hn_post]]
+object_id = "47365484"
+title = "Microsoft retires 'This is an Xbox' marketing campaign"
+url = "https://www.gamedeveloper.com/marketing/microsoft-quietly-retires-this-is-an-xbox-marketing-campaign"
+created_at = "2026-03-13T15:06:50Z"
+created_at_i = 1773414410
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "47734384"
+title = "The Making of Dark Castle"
+url = "https://www.gamedeveloper.com/business/the-making-of-i-dark-castle-i-an-excerpt-from-the-secret-history-of-mac-gaming"
+created_at = "2026-04-11T21:57:24Z"
+created_at_i = 1775944644
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "47808497"
+title = "Playdate won't have games using AI-generated assets"
+url = "https://www.gamedeveloper.com/production/panic-won-t-release-playdate-titles-that-use-some-forms-of-generative-ai"
+created_at = "2026-04-17T17:41:05Z"
+created_at_i = 1776447665
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "47812021"
+title = "Ludum Dare will officially end in October 2028"
+url = "https://www.gamedeveloper.com/production/ludum-dare-will-officially-end-in-october-2028"
+created_at = "2026-04-18T00:22:14Z"
+created_at_i = 1776471734
+points = 4
+num_comments = 0
+
+[[hn_post]]
+object_id = "47874160"
+title = "The Subnautica 2 legal dispute is far from over"
+url = "https://www.gamedeveloper.com/business/the-subnautica-2-early-access-dispute-is-far-from-over"
+created_at = "2026-04-23T10:47:08Z"
+created_at_i = 1776941228
+points = 1
+num_comments = 0
+
+[[hn_post]]
+object_id = "48046586"
+title = "EVE Online studio CCP Games turns independent and rebrands as Fenris Creations"
+url = "https://www.gamedeveloper.com/business/eve-online-studio-ccp-games-turns-independent-and-rebrands-as-fenris-creations"
+created_at = "2026-05-07T07:43:42Z"
+created_at_i = 1778139822
+points = 2
+num_comments = 1
+
+[[hn_post]]
+object_id = "48139551"
+title = "Video codecs are a nightmare for game developers"
+url = "https://www.gamedeveloper.com/programming/video-codecs-are-a-nightmare-for-game-developers-but-there-s-no-solution-in-sight"
+created_at = "2026-05-14T18:50:25Z"
+created_at_i = 1778784625
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "48445979"
+title = "Ludum Dare will officially end in October 2028"
+url = "https://www.gamedeveloper.com/production/ludum-dare-will-officially-end-in-october-2028"
+created_at = "2026-06-08T14:35:33Z"
+created_at_i = 1780929333
+points = 3
+num_comments = 0
+
+[[hn_post]]
+object_id = "48562144"
+title = "An Interview with Eugene Jarvis of Robotron, Defender and Stargate Fame"
+url = "https://www.gamedeveloper.com/production/eugeneology-an-interview-with-eugene-jarvis"
+created_at = "2026-06-16T21:10:05Z"
+created_at_i = 1781644205
+points = 2
+num_comments = 0
+
+[[hn_post]]
+object_id = "48632617"
+title = "Godot confirms it tolerates 'some AI assistance' but rejects 'vibe coded' tag"
+url = "https://www.gamedeveloper.com/business/godot-confirms-it-tolerates-some-ai-assistance-but-rejects-vibe-coded-accusations"
+created_at = "2026-06-22T16:46:05Z"
+created_at_i = 1782146765
+points = 4
+num_comments = 1

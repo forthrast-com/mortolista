@@ -1,11 +1,21 @@
 [[reddit_postmortem]]
 id = "131643"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 17
+reddit_comments = 1
+reddit_score_sum = 17
+reddit_comments_sum = 1
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8sgr8f"
+subreddit = "DarkSun"
+author = "ChipPhoenix"
+title = "Postmortem: SSI's Dark Sun Online: Crimson Sands"
+url = "https://www.gamasutra.com/view/feature/131643/postmortem_ssis_dark_sun_online_.php?page=1"
+permalink = "https://www.reddit.com/comments/8sgr8f/"
+score = 17
+comments = 1
+created_utc = 1529484462
 
 [[reddit_postmortem]]
 id = "131691"
@@ -523,21 +533,107 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "131577"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 52
+reddit_comments = 9
+reddit_score_sum = 56
+reddit_comments_sum = 10
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7foroh"
+subreddit = "programming"
+author = "b0red"
+title = "Gamasutra - Half-Life and Team Fortress Networking"
+url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
+permalink = "https://www.reddit.com/comments/7foroh/"
+score = 52
+comments = 9
+created_utc = 1511721548
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7fl5rh"
+subreddit = "hackernews"
+author = "qznc_bot"
+title = "Half-Life and Team Fortress Networking"
+url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
+permalink = "https://www.reddit.com/comments/7fl5rh/"
+score = 2
+comments = 1
+created_utc = 1511677028
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7fmb5o"
+subreddit = "thenewsrightnow"
+author = "personaontherun"
+title = "Half-Life and Team Fortress Networking: Closing the Loop on Scalable Network Gaming Backend Services"
+url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
+permalink = "https://www.reddit.com/comments/7fmb5o/"
+score = 1
+comments = 0
+created_utc = 1511694606
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7fhrq1"
+subreddit = "sidj2025blog"
+author = "rollupdatrollup"
+title = "Hacker News: Half-Life and Team Fortress Networking"
+url = "https://www.gamasutra.com/view/feature/131577/halflife_and_team_fortress_.php?page=1"
+permalink = "https://www.reddit.com/comments/7fhrq1/"
+score = 1
+comments = 0
+created_utc = 1511641834
 
 [[reddit_postmortem]]
 id = "131569"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 29
+reddit_comments = 4
+reddit_score_sum = 41
+reddit_comments_sum = 4
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "d0earq"
+subreddit = "unrealtournament"
+author = "atomlib_com"
+title = "Postmortem: Epic Games' Unreal Tournament"
+url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php"
+permalink = "https://www.reddit.com/comments/d0earq/"
+score = 29
+comments = 4
+created_utc = 1567761866
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "d0eani"
+subreddit = "gamedev"
+author = "atomlib_com"
+title = "Postmortem: Epic Games' Unreal Tournament"
+url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php"
+permalink = "https://www.reddit.com/comments/d0eani/"
+score = 9
+comments = 0
+created_utc = 1567761834
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "d134gg"
+subreddit = "unrealseries"
+author = "wailing"
+title = "Unreal Tournament - PostMortem (20 year Anniversary)"
+url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php"
+permalink = "https://www.reddit.com/comments/d134gg/"
+score = 3
+comments = 0
+created_utc = 1567897589
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "d0ec7p"
+subreddit = "Games"
+author = "atomlib_com"
+title = "Gamasutra - Postmortem: Epic Games' Unreal Tournament"
+url = "https://www.gamasutra.com/view/feature/131569/postmortem_epic_games_unreal_.php"
+permalink = "https://www.reddit.com/comments/d0ec7p/"
+score = 0
+comments = 0
+created_utc = 1567762181
 
 [[reddit_postmortem]]
 id = "131563"
@@ -593,11 +689,22 @@ created_utc = 1463511773
 
 [[reddit_postmortem]]
 id = "131556"
-reddit_score = 31
+reddit_score = 32
 reddit_comments = 3
-reddit_score_sum = 34
-reddit_comments_sum = 4
-reddit_submissions = 3
+reddit_score_sum = 66
+reddit_comments_sum = 6
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8vpkks"
+subreddit = "TheMakingOfGames"
+author = "kika-tok"
+title = "Postmortem of Resident Evil 2 for N64"
+url = "https://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php?page=1"
+permalink = "https://www.reddit.com/comments/8vpkks/"
+score = 32
+comments = 2
+created_utc = 1530594624
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "fr0i02"
@@ -843,6 +950,69 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
+id = "131493"
+reddit_score = 38
+reddit_comments = 8
+reddit_score_sum = 77
+reddit_comments_sum = 19
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bv5d6q"
+subreddit = "rpg_gamers"
+author = "Andreas_Pires"
+title = "Baldur's Gate II: The Anatomy of a Sequel"
+url = "https://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php"
+permalink = "https://www.reddit.com/comments/bv5d6q/"
+score = 38
+comments = 8
+created_utc = 1559294726
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "6vtfk7"
+subreddit = "baldursgate"
+author = "P1x1es"
+title = "An article by Ray Muzyka on the design philosophy and development process of BG2. Likely been posted before, but always an insightful read."
+url = "https://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php"
+permalink = "https://www.reddit.com/comments/6vtfk7/"
+score = 28
+comments = 2
+created_utc = 1503604871
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bv5cyu"
+subreddit = "baldursgate"
+author = "Andreas_Pires"
+title = "Gamasutra - Baldur's Gate II: The Anatomy of a Sequel"
+url = "https://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php"
+permalink = "https://www.reddit.com/comments/bv5cyu/"
+score = 9
+comments = 7
+created_utc = 1559294680
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bv5dbf"
+subreddit = "gaming"
+author = "Andreas_Pires"
+title = "Baldur's Gate II: The Anatomy of a Sequel"
+url = "https://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php"
+permalink = "https://www.reddit.com/comments/bv5dbf/"
+score = 2
+comments = 1
+created_utc = 1559294759
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bv5d13"
+subreddit = "pcgaming"
+author = "Andreas_Pires"
+title = "Gamasutra - Baldur's Gate II: The Anatomy of a Sequel"
+url = "https://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php"
+permalink = "https://www.reddit.com/comments/bv5d13/"
+score = 0
+comments = 1
+created_utc = 1559294696
+
+[[reddit_postmortem]]
 id = "131490"
 reddit_score = 0
 reddit_comments = 0
@@ -1003,12 +1173,22 @@ created_utc = 1453308604
 
 [[reddit_postmortem]]
 id = "131418"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 22
+reddit_comments = 2
+reddit_score_sum = 22
+reddit_comments_sum = 2
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "971o40"
+subreddit = "daoc"
+author = "bro-away-"
+title = "Nostalgic DAoC development retrospective [2002]"
+url = "https://www.gamasutra.com/view/feature/131418/postmortem_mythic_entertainments_.php"
+permalink = "https://www.reddit.com/comments/971o40/"
+score = 22
+comments = 2
+created_utc = 1534190796
 
 [[reddit_postmortem]]
 id = "131416"
@@ -1180,12 +1360,22 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "131287"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 8
+reddit_comments = 3
+reddit_score_sum = 8
+reddit_comments_sum = 3
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8ttr83"
+subreddit = "jurassicparkog"
+author = "ch4rl1e97"
+title = "Interesting post-mortem from one of the devs at Blue Tongue back in the day"
+url = "https://www.gamasutra.com/view/feature/131287/postmortem_blue_tongue_softwares_.php"
+permalink = "https://www.reddit.com/comments/8ttr83/"
+score = 8
+comments = 3
+created_utc = 1529957722
 
 [[reddit_postmortem]]
 id = "131251"
@@ -1973,6 +2163,15 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
+id = "132292"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "132296"
 reddit_score = 0
 reddit_comments = 0
@@ -2083,6 +2282,69 @@ reddit_score_sum = 0
 reddit_comments_sum = 0
 reddit_submissions = 0
 reddit_threads = []
+
+[[reddit_postmortem]]
+id = "115711"
+reddit_score = 2178
+reddit_comments = 200
+reddit_score_sum = 2212
+reddit_comments_sum = 205
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8zhwuo"
+subreddit = "pcgaming"
+author = "LeoEB"
+title = "\"The general argument is that if you know you are going to need to release a patch, then you shouldn’t be shipping the game in the first place. \""
+url = "https://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+permalink = "https://www.reddit.com/comments/8zhwuo/"
+score = 2178
+comments = 200
+created_utc = 1531799904
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "6iff1l"
+subreddit = "TheMakingOfGames"
+author = "kika-tok"
+title = "Postmortem: Ensemble's Age of Empires"
+url = "http://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+permalink = "https://www.reddit.com/comments/6iff1l/"
+score = 18
+comments = 2
+created_utc = 1497978558
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8zhvu6"
+subreddit = "gaming"
+author = "LeoEB"
+title = "\"The general argument is that if you know you are going to need to release a patch, then you shouldn’t be shipping the game in the first place.\""
+url = "https://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+permalink = "https://www.reddit.com/comments/8zhvu6/"
+score = 13
+comments = 3
+created_utc = 1531799628
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8zmszq"
+subreddit = "u_karlshiffer"
+author = "karlshiffer"
+title = "\"The general argument is that if you know you are going to need to release a patch, then you shouldn’t be shipping the game in the first place. \""
+url = "https://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+permalink = "https://www.reddit.com/comments/8zmszq/"
+score = 2
+comments = 0
+created_utc = 1531846191
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3ow80a"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: Ensemble Studios' Age of Empires"
+url = "http://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+permalink = "https://www.reddit.com/comments/3ow80a/"
+score = 1
+comments = 0
+created_utc = 1444937070
 
 [[reddit_postmortem]]
 id = "132511"
@@ -2314,6 +2576,15 @@ comments = 0
 created_utc = 1539721332
 
 [[reddit_postmortem]]
+id = "118990"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "4336"
 reddit_score = 0
 reddit_comments = 0
@@ -2415,12 +2686,22 @@ created_utc = 1279849691
 
 [[reddit_postmortem]]
 id = "87650"
-reddit_score = 0
+reddit_score = 1
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 1
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2c04rh"
+subreddit = "gamemarketing"
+author = "steaksteak"
+title = "Gamasutra: How much do indie PC devs make, anyways?"
+url = "http://gamasutra.com/blogs/DavidGalindo/20100724/87650/How_much_do_indie_PC_devs_make_anyways.php"
+permalink = "https://www.reddit.com/comments/2c04rh/"
+score = 1
+comments = 0
+created_utc = 1406598317
 
 [[reddit_postmortem]]
 id = "6144"
@@ -2573,9 +2854,9 @@ reddit_threads = []
 id = "134717"
 reddit_score = 246
 reddit_comments = 130
-reddit_score_sum = 301
+reddit_score_sum = 313
 reddit_comments_sum = 135
-reddit_submissions = 6
+reddit_submissions = 7
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "gpwfd"
@@ -2609,6 +2890,17 @@ permalink = "https://www.reddit.com/comments/hnz8h/"
 score = 19
 comments = 2
 created_utc = 1306815932
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2kh3in"
+subreddit = "TheMakingOfGames"
+author = "Idoiocracy"
+title = "Super Meat Boy - Postmortem article by creators Edmund McMillen and Tommy Refenes for this Xbox Live Arcade platforming hit"
+url = "http://gamasutra.com/view/feature/6348/postmortem_team_meats_super_meat_.php"
+permalink = "https://www.reddit.com/comments/2kh3in/"
+score = 12
+comments = 0
+created_utc = 1414426482
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "wrbsc"
@@ -2962,12 +3254,22 @@ created_utc = 1334289207
 
 [[reddit_postmortem]]
 id = "168921"
-reddit_score = 0
+reddit_score = 2
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 2
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "spqdb"
+subreddit = "Games"
+author = "FoldedTwice"
+title = "Gamasutra - Postmortem: HandCircus' Okabu"
+url = "http://gamasutra.com/view/feature/168921/postmortem_handcircus_okabu.php"
+permalink = "https://www.reddit.com/comments/spqdb/"
+score = 2
+comments = 0
+created_utc = 1335260167
 
 [[reddit_postmortem]]
 id = "169282"
@@ -3211,9 +3513,9 @@ created_utc = 1352914084
 id = "182380"
 reddit_score = 42
 reddit_comments = 19
-reddit_score_sum = 76
+reddit_score_sum = 77
 reddit_comments_sum = 27
-reddit_submissions = 3
+reddit_submissions = 4
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "2ftx8a"
@@ -3247,6 +3549,17 @@ permalink = "https://www.reddit.com/comments/13z2k3/"
 score = 2
 comments = 0
 created_utc = 1354159674
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "146pcy"
+subreddit = "ludology"
+author = "Durrok"
+title = "Postmortem: Binding of Isaac"
+url = "http://gamasutra.com/view/feature/182380/postmortem_mcmillen_and_himsls_.php?print=1"
+permalink = "https://www.reddit.com/comments/146pcy/"
+score = 1
+comments = 0
+created_utc = 1354511255
 
 [[reddit_postmortem]]
 id = "185085"
@@ -3430,6 +3743,15 @@ permalink = "https://www.reddit.com/comments/8d3dtf/"
 score = 4
 comments = 0
 created_utc = 1524030644
+
+[[reddit_postmortem]]
+id = "gd-two-guys-made-an-mmo-the-growtopia-postmortem"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
 
 [[reddit_postmortem]]
 id = "194432"
@@ -3677,6 +3999,15 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
+id = "gd-xeodrifter-postmortem"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "233340"
 reddit_score = 0
 reddit_comments = 0
@@ -3826,6 +4157,154 @@ created_utc = 1423598932
 
 [[reddit_postmortem]]
 id = "236427"
+reddit_score = 230
+reddit_comments = 80
+reddit_score_sum = 501
+reddit_comments_sum = 114
+reddit_submissions = 8
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2wv7mv"
+subreddit = "Games"
+author = "Dared00"
+title = "Goat Simulator's wild ride to success: A 'strange' postmortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2wv7mv/"
+score = 230
+comments = 80
+created_utc = 1424696241
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2zwmah"
+subreddit = "linux_gaming"
+author = "uoou"
+title = "Goat Simulator Post Mortem (\"I would strongly recommend having a Mac and Linux port on day one\")"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2zwmah/"
+score = 193
+comments = 30
+created_utc = 1427034922
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2zuq9a"
+subreddit = "TheMakingOfGames"
+author = "rpi-user"
+title = "Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2zuq9a/"
+score = 36
+comments = 0
+created_utc = 1426980374
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2x08t9"
+subreddit = "GoatSimulator"
+author = "milkkore"
+title = "Goat Simulator Post Mortem - What went right, what went wrong"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2x08t9/"
+score = 21
+comments = 2
+created_utc = 1424797599
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2zwdcj"
+subreddit = "gaming"
+author = "omegaender"
+title = "“It could turn out great, it could also turn out terrible, but in either case, it’ll be really, really interesting.” - Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2zwdcj/"
+score = 14
+comments = 1
+created_utc = 1427028044
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2wyvji"
+subreddit = "Gaming4Gamers"
+author = "Torvusil"
+title = "Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2wyvji/"
+score = 3
+comments = 0
+created_utc = 1424763342
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2wv0dw"
+subreddit = "cahiersduludica"
+author = "jmarquiso"
+title = "Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2wv0dw/"
+score = 3
+comments = 0
+created_utc = 1424689645
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2zuhjj"
+subreddit = "hackernews"
+author = "qznc_bot"
+title = "Goat Simulator Post Mortem"
+url = "http://gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php"
+permalink = "https://www.reddit.com/comments/2zuhjj/"
+score = 1
+comments = 1
+created_utc = 1426975646
+
+[[reddit_postmortem]]
+id = "237657"
+reddit_score = 40
+reddit_comments = 7
+reddit_score_sum = 89
+reddit_comments_sum = 11
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2y1qli"
+subreddit = "sunlesssea"
+author = "SpretumPathos"
+title = "Sunless Sea postmortem with Alexis Kennedy"
+url = "http://www.gamasutra.com/view/news/237657/Postmortem_Failbetter_Games_Sunless_Sea.php"
+permalink = "https://www.reddit.com/comments/2y1qli/"
+score = 40
+comments = 2
+created_utc = 1425580649
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "33gsjk"
+subreddit = "TheMakingOfGames"
+author = "Idoiocracy"
+title = "Sunless Sea - Gamasutra postmortem of this successful Kickstarter moody game where you assemble a ship crew, customize your boat, and explore the ocean [text]"
+url = "http://gamasutra.com/view/news/237657/Postmortem_Failbetter_Games_Sunless_Sea.php"
+permalink = "https://www.reddit.com/comments/33gsjk/"
+score = 26
+comments = 1
+created_utc = 1429704722
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2y00td"
+subreddit = "IndieGaming"
+author = "Antipode2"
+title = "Failbetter Games on the creation of the Sunless Sea -- a postmortem"
+url = "http://www.gamasutra.com/view/news/237657/Postmortem_Failbetter_Games_Sunless_Sea.php"
+permalink = "https://www.reddit.com/comments/2y00td/"
+score = 19
+comments = 7
+created_utc = 1425539116
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2xxgbw"
+subreddit = "GameWritingLab"
+author = "Galejade"
+title = "Gamasutra - Postmortem: Failbetter Games' Sunless Sea"
+url = "http://gamasutra.com/view/news/237657/Postmortem_Failbetter_Games_Sunless_Sea.php"
+permalink = "https://www.reddit.com/comments/2xxgbw/"
+score = 4
+comments = 1
+created_utc = 1425491859
+
+[[reddit_postmortem]]
+id = "gd-out-there-a-postmortem"
 reddit_score = 0
 reddit_comments = 0
 reddit_score_sum = 0
@@ -3841,6 +4320,66 @@ reddit_score_sum = 0
 reddit_comments_sum = 0
 reddit_submissions = 0
 reddit_threads = []
+
+[[reddit_postmortem]]
+id = "251220"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3hcnde"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: Double Fine's Psychonauts"
+url = "http://www.gamasutra.com/view/news/251220/Classic_Postmortem_Double_Fines_Psychonauts.php"
+permalink = "https://www.reddit.com/comments/3hcnde/"
+score = 1
+comments = 0
+created_utc = 1439839484
+
+[[reddit_postmortem]]
+id = "252418"
+reddit_score = 4
+reddit_comments = 0
+reddit_score_sum = 6
+reddit_comments_sum = 0
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3j8zdg"
+subreddit = "DeadlyPremonition"
+author = "delacct"
+title = "Classic Postmortem: Deadly Premonition"
+url = "http://www.gamasutra.com/view/news/252418/Classic_Postmortem_Deadly_Premonition.php"
+permalink = "https://www.reddit.com/comments/3j8zdg/"
+score = 4
+comments = 0
+created_utc = 1441131342
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "hf95z2"
+subreddit = "DeadlyPremonition"
+author = "wootootee"
+title = "Classic Postmortem: Deadly Premonition"
+url = "https://gamasutra.com/view/news/252418/Classic_Postmortem_Deadly_Premonition.php"
+permalink = "https://www.reddit.com/comments/hf95z2/"
+score = 2
+comments = 0
+created_utc = 1593031700
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3j2865"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: Deadly Premonition"
+url = "http://www.gamasutra.com/view/news/252418/Classic_Postmortem_Deadly_Premonition.php"
+permalink = "https://www.reddit.com/comments/3j2865/"
+score = 0
+comments = 0
+created_utc = 1441009110
 
 [[reddit_postmortem]]
 id = "254610"
@@ -3869,6 +4408,77 @@ permalink = "https://www.reddit.com/comments/4g27iu/"
 score = 1
 comments = 0
 created_utc = 1461388274
+
+[[reddit_postmortem]]
+id = "258015"
+reddit_score = 12
+reddit_comments = 3
+reddit_score_sum = 23
+reddit_comments_sum = 3
+reddit_submissions = 4
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3qv8dn"
+subreddit = "TheMakingOfGames"
+author = "jmarquiso"
+title = "Classic Postmortem: Silent Hill 4: The Room"
+url = "http://gamasutra.com/view/news/258015/Classic_Postmortem_Silent_Hill_4_The_Room.php"
+permalink = "https://www.reddit.com/comments/3qv8dn/"
+score = 12
+comments = 0
+created_utc = 1446227819
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3qy3r2"
+subreddit = "silenthill"
+author = "fogfactor"
+title = "Gamasutra - Classic Postmortem: Silent Hill 4: The Room"
+url = "http://www.gamasutra.com/view/news/258015/Classic_Postmortem_Silent_Hill_4_The_Room.php#.VjSAHq8k4Vg.reddit"
+permalink = "https://www.reddit.com/comments/3qy3r2/"
+score = 8
+comments = 3
+created_utc = 1446281275
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3rtqze"
+subreddit = "gamedesign"
+author = "grand0011"
+title = "Gamasutra - Classic Postmortem: Silent Hill 4: The Room"
+url = "http://gamasutra.com/view/news/258015/Classic_Postmortem_Silent_Hill_4_The_Room.php"
+permalink = "https://www.reddit.com/comments/3rtqze/"
+score = 2
+comments = 0
+created_utc = 1446852334
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3quzva"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: Silent Hill 4: The Room"
+url = "http://www.gamasutra.com/view/news/258015/Classic_Postmortem_Silent_Hill_4_The_Room.php"
+permalink = "https://www.reddit.com/comments/3quzva/"
+score = 1
+comments = 0
+created_utc = 1446224670
+
+[[reddit_postmortem]]
+id = "257659"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3r8pjp"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Classic Postmortem: Asheron's Call"
+url = "http://www.gamasutra.com/view/news/257659/Classic_Postmortem_Asherons_Call.php"
+permalink = "https://www.reddit.com/comments/3r8pjp/"
+score = 1
+comments = 0
+created_utc = 1446489071
 
 [[reddit_postmortem]]
 id = "258315"
@@ -3923,6 +4533,25 @@ comments = 0
 created_utc = 1478285087
 
 [[reddit_postmortem]]
+id = "258603"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3rrnfp"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] The making of Prince of Persia: The Sands of Time"
+url = "http://www.gamasutra.com/view/news/258603/The_making_of_Prince_of_Persia_The_Sands_of_Time.php"
+permalink = "https://www.reddit.com/comments/3rrnfp/"
+score = 1
+comments = 0
+created_utc = 1446821168
+
+[[reddit_postmortem]]
 id = "258820"
 reddit_score = 1
 reddit_comments = 0
@@ -3940,6 +4569,47 @@ permalink = "https://www.reddit.com/comments/3s1skk/"
 score = 1
 comments = 0
 created_utc = 1447017022
+
+[[reddit_postmortem]]
+id = "259479"
+reddit_score = 64
+reddit_comments = 11
+reddit_score_sum = 103
+reddit_comments_sum = 13
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3t61is"
+subreddit = "Games"
+author = "AmirMoosavi"
+title = "Gamasutra - Classic Postmortem: The Making of Half-Life 2"
+url = "http://gamasutra.com/view/news/259479/Classic_Postmortem_The_making_of_HalfLife_2.php"
+permalink = "https://www.reddit.com/comments/3t61is/"
+score = 64
+comments = 11
+created_utc = 1447774890
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3t7ysq"
+subreddit = "TheMakingOfGames"
+author = "corysama"
+title = "Half-Life 2 - Postmortem reprint from GameDevMag November 2005"
+url = "http://gamasutra.com/view/news/259479/Classic_Postmortem_The_making_of_HalfLife_2.php"
+permalink = "https://www.reddit.com/comments/3t7ysq/"
+score = 38
+comments = 2
+created_utc = 1447801387
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "9ykxyo"
+subreddit = "gamerlives"
+author = "texascowboy123"
+title = "Don't Miss: The making of Half-Life 2"
+url = "http://www.gamasutra.com/view/news/259479/Classic_Postmortem_The_making_of_HalfLife_2.php"
+permalink = "https://www.reddit.com/comments/9ykxyo/"
+score = 1
+comments = 0
+created_utc = 1542661464
 
 [[reddit_postmortem]]
 id = "260239"
@@ -4358,12 +5028,41 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "305424"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 50
+reddit_comments = 2
+reddit_score_sum = 50
+reddit_comments_sum = 2
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "706qqa"
+subreddit = "thesims"
+author = "FlammableBacon"
+title = "How Maxis Avoided Sequelitis on The Sims 2"
+url = "https://www.gamasutra.com/view/news/305424/Classic_Postmortem_How_Maxis_avoided_sequelitis_on_The_Sims_2.php"
+permalink = "https://www.reddit.com/comments/706qqa/"
+score = 50
+comments = 2
+created_utc = 1505439121
+
+[[reddit_postmortem]]
+id = "306040"
+reddit_score = 19
+reddit_comments = 13
+reddit_score_sum = 19
+reddit_comments_sum = 13
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "71oik3"
+subreddit = "gamedev"
+author = "joo0328"
+title = "Classic Postmortem: Firaxis' Civilization V"
+url = "https://www.gamasutra.com/view/news/306040/Classic_Postmortem_Firaxis_Civilization_V.php"
+permalink = "https://www.reddit.com/comments/71oik3/"
+score = 19
+comments = 13
+created_utc = 1506051991
 
 [[reddit_postmortem]]
 id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
@@ -4376,12 +5075,63 @@ reddit_threads = []
 
 [[reddit_postmortem]]
 id = "307191"
-reddit_score = 0
+reddit_score = 5
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 5
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "75encb"
+subreddit = "TheMakingOfGames"
+author = "kika-tok"
+title = "Classic Postmortem: XCOM: Enemy Unknown"
+url = "https://www.gamasutra.com/view/news/307191/Classic_Postmortem_XCOM_Enemy_Unknown_which_turns_5_today.php"
+permalink = "https://www.reddit.com/comments/75encb/"
+score = 5
+comments = 0
+created_utc = 1507608718
+
+[[reddit_postmortem]]
+id = "308555"
+reddit_score = 29
+reddit_comments = 2
+reddit_score_sum = 75
+reddit_comments_sum = 3
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "79ml85"
+subreddit = "gamedev"
+author = "theyre_not_their"
+title = "Classic Postmortem: Ensemble Studio's classic RTS Age of Mythology"
+url = "https://www.gamasutra.com/view/news/308555/Classic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php"
+permalink = "https://www.reddit.com/comments/79ml85/"
+score = 29
+comments = 2
+created_utc = 1509355110
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "79oqq5"
+subreddit = "AgeofMythology"
+author = "_Nakamura"
+title = "Classic Postmortem: Ensemble Studio's Age of Mythology"
+url = "https://www.gamasutra.com/view/news/308555/Classic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php"
+permalink = "https://www.reddit.com/comments/79oqq5/"
+score = 27
+comments = 1
+created_utc = 1509380052
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "79oaz4"
+subreddit = "RealTimeStrategy"
+author = "Andrettin"
+title = "Classic Postmortem: Ensemble Studio's classic RTS Age of Mythology"
+url = "https://www.gamasutra.com/view/news/308555/Classic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php"
+permalink = "https://www.reddit.com/comments/79oaz4/"
+score = 19
+comments = 0
+created_utc = 1509376072
 
 [[reddit_postmortem]]
 id = "308654"
@@ -4393,49 +5143,508 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
-id = "310012"
-reddit_score = 0
+id = "307674"
+reddit_score = 12
+reddit_comments = 4
+reddit_score_sum = 18
+reddit_comments_sum = 4
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7c002o"
+subreddit = "gamedev"
+author = "mariuz"
+title = "Postmortem: The totalitarian puzzle-platformer Black The Fall"
+url = "https://www.gamasutra.com/view/news/307674/Postmortem_The_totalitarian_puzzleplatformer_Black_The_Fall.php#.WgPmrlocKPU.twitter"
+permalink = "https://www.reddit.com/comments/7c002o/"
+score = 12
+comments = 4
+created_utc = 1510304414
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7bmpyi"
+subreddit = "TheMakingOfGames"
+author = "kika-tok"
+title = "Postmortem: The totalitarian puzzle-platformer Black The Fall"
+url = "https://www.gamasutra.com/view/news/307674/Postmortem_The_totalitarian_puzzleplatformer_Black_The_Fall.php"
+permalink = "https://www.reddit.com/comments/7bmpyi/"
+score = 6
+comments = 0
+created_utc = 1510161135
+
+[[reddit_postmortem]]
+id = "309412"
+reddit_score = 9
 reddit_comments = 0
-reddit_score_sum = 0
+reddit_score_sum = 9
 reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7cwak5"
+subreddit = "gamedev"
+author = "Sersch"
+title = "Classic Postmortem: The Behemoth's Alien Hominid"
+url = "https://www.gamasutra.com/view/news/309412/Classic_Postmortem_The_Behemoths_Alien_Hominid.php"
+permalink = "https://www.reddit.com/comments/7cwak5/"
+score = 9
+comments = 0
+created_utc = 1510673113
+
+[[reddit_postmortem]]
+id = "310012"
+reddit_score = 295
+reddit_comments = 208
+reddit_score_sum = 339
+reddit_comments_sum = 241
+reddit_submissions = 8
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7emiym"
+subreddit = "Games"
+author = "johnmountain"
+title = "[Post Mortem]: I thought I could ship at least 700 units to stay in business"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7emiym/"
+score = 295
+comments = 208
+created_utc = 1511309443
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ercgb"
+subreddit = "gamedev"
+author = "shoutout_to_burritos"
+title = "Post Mortem: I thought I could ship at least 700 units to stay in business (x-post from r/games)"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7ercgb/"
+score = 25
+comments = 26
+created_utc = 1511361350
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7emjmw"
+subreddit = "programming"
+author = "johnmountain"
+title = "[Post Mortem]: I thought I could ship at least 700 units to stay in business"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7emjmw/"
+score = 14
+comments = 3
+created_utc = 1511309594
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7eygd3"
+subreddit = "hackernews"
+author = "qznc_bot"
+title = "I thought I could ship at least 700 units to stay in business"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7eygd3/"
+score = 1
+comments = 1
+created_utc = 1511428629
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7eydxt"
+subreddit = "gaming"
+author = "taspeotis"
+title = "I thought I could ship at least 700 units to stay in business"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7eydxt/"
+score = 1
+comments = 1
+created_utc = 1511427718
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7erc19"
+subreddit = "gamedev"
+author = "shoutout_to_burritos"
+title = "[Post Mortem]: I thought I could ship at least 700 units to stay in business (x-post from r/games)"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7erc19/"
+score = 1
+comments = 1
+created_utc = 1511361240
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7epv7e"
+subreddit = "gamedev"
+author = "[deleted]"
+title = "[Post Mortem]: I thought I could ship at least 700 units to stay in business (xpost r/Games)"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7epv7e/"
+score = 1
+comments = 1
+created_utc = 1511344824
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ey28g"
+subreddit = "sidj2025blog"
+author = "rollupdatrollup"
+title = "Hacker News: Post Mortem]: I thought I could ship at least 700 units to stay in business"
+url = "https://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php"
+permalink = "https://www.reddit.com/comments/7ey28g/"
+score = 1
+comments = 0
+created_utc = 1511423295
+
+[[reddit_postmortem]]
+id = "310658"
+reddit_score = 20
+reddit_comments = 2
+reddit_score_sum = 25
+reddit_comments_sum = 3
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7hs90d"
+subreddit = "TheMakingOfGames"
+author = "kika-tok"
+title = "Postmortem: Obsidian's Knights of the Old Republic II: The Sith Lords"
+url = "https://www.gamasutra.com/view/news/310658/Classic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php"
+permalink = "https://www.reddit.com/comments/7hs90d/"
+score = 20
+comments = 2
+created_utc = 1512503339
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "8fivn5"
+subreddit = "gamedev"
+author = "JuniorOtaku"
+title = "Classic Postmortem: Obsidian's Knights of the Old Republic II: The Sith Lords"
+url = "https://www.gamasutra.com/view/news/310658/Classic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php"
+permalink = "https://www.reddit.com/comments/8fivn5/"
+score = 4
+comments = 1
+created_utc = 1524907988
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7hrvso"
+subreddit = "cahiersduludica"
+author = "jmarquiso"
+title = "Classic Postmortem: Obsidian's Knights of the Old Republic II"
+url = "https://www.gamasutra.com/view/news/310658/Classic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php?elq_mid=81855&elq_cid=12455171&elqTrackId=88184b1fb2b74a17b18e2b13819f1e31&elq=5cd398de781b4159bfa970db5ce4a5e4&elqaid=81855&elqat=1&elqCampaignId=28941"
+permalink = "https://www.reddit.com/comments/7hrvso/"
+score = 1
+comments = 0
+created_utc = 1512500343
 
 [[reddit_postmortem]]
 id = "311143"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 612
+reddit_comments = 41
+reddit_score_sum = 975
+reddit_comments_sum = 81
+reddit_submissions = 17
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7iev0t"
+subreddit = "gamedev"
+author = "drludos"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7iev0t/"
+score = 612
+comments = 41
+created_utc = 1512738671
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7imfcb"
+subreddit = "programming"
+author = "Sinjo"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 1/2)"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7imfcb/"
+score = 282
+comments = 23
+created_utc = 1512821520
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7itdcq"
+subreddit = "coding"
+author = "javinpaul"
+title = "Gamasutra:Doctor's Blog -Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7itdcq/"
+score = 31
+comments = 2
+created_utc = 1512903799
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7imexo"
+subreddit = "retrogaming"
+author = "Doener23"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7imexo/"
+score = 29
+comments = 8
+created_utc = 1512821344
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ispgv"
+subreddit = "gaming"
+author = "modelop"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7ispgv/"
+score = 6
+comments = 0
+created_utc = 1512892180
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ilmpk"
+subreddit = "hackernews"
+author = "qznc_bot"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7ilmpk/"
+score = 4
+comments = 2
+created_utc = 1512807429
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7iodpc"
+subreddit = "thenewsrightnow"
+author = "personaontherun"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 1/2)"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7iodpc/"
+score = 2
+comments = 1
+created_utc = 1512843637
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bshydx"
+subreddit = "bprogramming"
+author = "bprogramming"
+title = "Making a Game Boy Game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/bshydx/"
+score = 2
+comments = 0
+created_utc = 1558710044
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7itgw7"
+subreddit = "RCBRedditBot"
+author = "totally_100_human"
+title = "Gamasutra:Doctor's Blog -Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7itgw7/"
+score = 1
+comments = 1
+created_utc = 1512905589
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ikoy0"
+subreddit = "sidj2025blog"
+author = "rollupdatrollup"
+title = "Hacker News: Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7ikoy0/"
+score = 1
+comments = 1
+created_utc = 1512794256
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ij2ag"
+subreddit = "Games"
+author = "[deleted]"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 1/2)"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7ij2ag/"
+score = 1
+comments = 1
+created_utc = 1512777128
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7kfpa3"
+subreddit = "shou"
+author = "shouya"
+title = "Gamasutra:Doctor's Blog -Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7kfpa3/"
+score = 1
+comments = 0
+created_utc = 1513538149
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7j39q7"
+subreddit = "technology"
+author = "UnashamedWhiteMale"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7j39q7/"
+score = 1
+comments = 0
+created_utc = 1513009745
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7isnpn"
+subreddit = "gaming"
+author = "[deleted]"
+title = "Gamasutra:Doctor's Blog -Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7isnpn/"
+score = 1
+comments = 0
+created_utc = 1512891274
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ij28j"
+subreddit = "Games"
+author = "[deleted]"
+title = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7ij28j/"
+score = 1
+comments = 0
+created_utc = 1512777113
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7j2jsx"
+subreddit = "technology"
+author = "sergiodalmata"
+title = "How to make a ganeboy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7j2jsx/"
+score = 0
+comments = 1
+created_utc = 1513003022
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7ij25u"
+subreddit = "nintendo"
+author = "[deleted]"
+title = "Making a Game Boy game in 2017: A \"Sheep It Up!\" Post-Mortem (part 1/2)"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php"
+permalink = "https://www.reddit.com/comments/7ij25u/"
+score = 0
+comments = 0
+created_utc = 1512777089
 
 [[reddit_postmortem]]
 id = "311570"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 104
+reddit_comments = 31
+reddit_score_sum = 120
+reddit_comments_sum = 44
+reddit_submissions = 6
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7l7z9x"
+subreddit = "gamedev"
+author = "theyre_not_their"
+title = "Post Mortem: The Death of Flash and Rewriting 1.4 Million Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+permalink = "https://www.reddit.com/comments/7l7z9x/"
+score = 104
+comments = 31
+created_utc = 1513841860
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7laxki"
+subreddit = "Prismata"
+author = "ciawal"
+title = "Post Mortem: The Death of Flash and Rewriting 1.4 Million Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+permalink = "https://www.reddit.com/comments/7laxki/"
+score = 10
+comments = 12
+created_utc = 1513877277
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7kv31o"
+subreddit = "hackernews"
+author = "qznc_bot"
+title = "Post Mortem: The Death of Flash and Rewriting 1.4M Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+permalink = "https://www.reddit.com/comments/7kv31o/"
+score = 3
+comments = 1
+created_utc = 1513707429
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7kwpfj"
+subreddit = "thenewsrightnow"
+author = "personaontherun"
+title = "Post Mortem: The Death of Flash and Rewriting 1.4 Million Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+permalink = "https://www.reddit.com/comments/7kwpfj/"
+score = 1
+comments = 0
+created_utc = 1513721456
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7kukyb"
+subreddit = "bprogramming"
+author = "bprogramming"
+title = "Post Mortem: The Death of Flash and Rewriting 1.4M Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+permalink = "https://www.reddit.com/comments/7kukyb/"
+score = 1
+comments = 0
+created_utc = 1513703101
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7kuh3y"
+subreddit = "sidj2025blog"
+author = "rollupdatrollup"
+title = "Hacker News: Post Mortem: The Death of Flash and Rewriting 1.4M Lines of Code"
+url = "https://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php"
+permalink = "https://www.reddit.com/comments/7kuh3y/"
+score = 1
+comments = 0
+created_utc = 1513702158
 
 [[reddit_postmortem]]
 id = "314554"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 100
+reddit_comments = 11
+reddit_score_sum = 113
+reddit_comments_sum = 13
+reddit_submissions = 2
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7x9xx1"
+subreddit = "gamedev"
+author = "drludos"
+title = "Making a Game Boy game in 2017 (part 2)"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php"
+permalink = "https://www.reddit.com/comments/7x9xx1/"
+score = 100
+comments = 11
+created_utc = 1518534067
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7xb130"
+subreddit = "IndieDev"
+author = "Sersch"
+title = "Making a Game Boy game in 2017"
+url = "https://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php"
+permalink = "https://www.reddit.com/comments/7xb130/"
+score = 13
+comments = 2
+created_utc = 1518543066
 
 [[reddit_postmortem]]
 id = "314649"
-reddit_score = 0
-reddit_comments = 0
-reddit_score_sum = 0
-reddit_comments_sum = 0
-reddit_submissions = 0
-reddit_threads = []
+reddit_score = 2
+reddit_comments = 4
+reddit_score_sum = 2
+reddit_comments_sum = 4
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "7xiop0"
+subreddit = "gamejams"
+author = "musical_mandarin"
+title = "How we messed up and how we succeeded: Malta Global Game Jam"
+url = "https://www.gamasutra.com/blogs/JasperSchellekens/20180214/314649/How_we_messed_up_and_how_we_succeeded_Malta_Global_Game_Jam.php"
+permalink = "https://www.reddit.com/comments/7xiop0/"
+score = 2
+comments = 4
+created_utc = 1518621418
 
 [[reddit_postmortem]]
 id = "316489"
@@ -4455,6 +5664,15 @@ permalink = "https://www.reddit.com/comments/8ccco4/"
 score = 52
 comments = 2
 created_utc = 1523758957
+
+[[reddit_postmortem]]
+id = "gd-postmortem---arbitrary-metric-s-paratopic"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
 
 [[reddit_postmortem]]
 id = "326190"
@@ -4597,11 +5815,22 @@ created_utc = 1554311776
 
 [[reddit_postmortem]]
 id = "340065"
-reddit_score = 7
-reddit_comments = 0
-reddit_score_sum = 9
-reddit_comments_sum = 0
-reddit_submissions = 2
+reddit_score = 8
+reddit_comments = 3
+reddit_score_sum = 17
+reddit_comments_sum = 3
+reddit_submissions = 3
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "bbm1er"
+subreddit = "pcgaming"
+author = "Revisor007"
+title = "Hero-U: Rogue to Redemption Postmortem"
+url = "https://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php"
+permalink = "https://www.reddit.com/comments/bbm1er/"
+score = 8
+comments = 3
+created_utc = 1554903027
 
 [[reddit_postmortem.reddit_threads]]
 reddit_id = "b9i032"
@@ -4992,6 +6221,43 @@ comments = 1
 created_utc = 1629222921
 
 [[reddit_postmortem]]
+id = "gd-postmortem-i-the-ramp-i-"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
+id = "gd-postmortem-inkbound-s-journey-in-early-access"
+reddit_score = 1
+reddit_comments = 0
+reddit_score_sum = 1
+reddit_comments_sum = 0
+reddit_submissions = 1
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1de6lqo"
+subreddit = "TurnBasedTactical"
+author = "Danceman2"
+title = "Postmortem: The journey of Inkbound through Early Access"
+url = "https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access"
+permalink = "https://www.reddit.com/comments/1de6lqo/"
+score = 1
+comments = 0
+created_utc = 1718198741
+
+[[reddit_postmortem]]
+id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "gd-classic-postmortem-nanaonhas-haunt-2012"
 reddit_score = 0
 reddit_comments = 0
@@ -5010,6 +6276,15 @@ reddit_submissions = 0
 reddit_threads = []
 
 [[reddit_postmortem]]
+id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
+reddit_score = 0
+reddit_comments = 0
+reddit_score_sum = 0
+reddit_comments_sum = 0
+reddit_submissions = 0
+reddit_threads = []
+
+[[reddit_postmortem]]
 id = "gd-postmortem-harmonix-s-dance-central-2010-"
 reddit_score = 0
 reddit_comments = 0
@@ -5017,3 +6292,66 @@ reddit_score_sum = 0
 reddit_comments_sum = 0
 reddit_submissions = 0
 reddit_threads = []
+
+[[reddit_postmortem]]
+id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
+reddit_score = 154
+reddit_comments = 4
+reddit_score_sum = 207
+reddit_comments_sum = 8
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1i38h9z"
+subreddit = "katamari"
+author = "KataMod"
+title = "\"We recently received a request to publish the Katamari Damacy postmortem from the December 2004 issue of Game Developer. It has been posted here in full for the first time in 2024 to celebrate the game's 20 year anniversary. Please enjoy.\""
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+permalink = "https://www.reddit.com/comments/1i38h9z/"
+score = 154
+comments = 4
+created_utc = 1737088455
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1iosti0"
+subreddit = "Games"
+author = "aazxv"
+title = "Postmortem: The singular design of Namco's Katamari Damacy (2004)"
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+permalink = "https://www.reddit.com/comments/1iosti0/"
+score = 44
+comments = 3
+created_utc = 1739478836
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1intllq"
+subreddit = "web_design"
+author = "namanyayg"
+title = "Postmortem: The singular design of Namco's Katamari Damacy (2004)"
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+permalink = "https://www.reddit.com/comments/1intllq/"
+score = 7
+comments = 0
+created_utc = 1739374511
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1inmtro"
+subreddit = "hackernews"
+author = "qznc_bot2"
+title = "Postmortem: The singular design of Namco's Katamari Damacy (2004)"
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+permalink = "https://www.reddit.com/comments/1inmtro/"
+score = 1
+comments = 1
+created_utc = 1739350810
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "1incb9a"
+subreddit = "hypeurls"
+author = "TheStartupChime"
+title = "Postmortem: The singular design of Namco's Katamari Damacy (2004)"
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+permalink = "https://www.reddit.com/comments/1incb9a/"
+score = 1
+comments = 0
+created_utc = 1739315249

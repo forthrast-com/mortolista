@@ -46,7 +46,7 @@ CACHE.mkdir(exist_ok=True)
 # Arctic Shift query params change, and the stale cache invalidates itself rather
 # than silently skipping URLs the new strategy would have queried differently.
 REDDIT_PROBED = CACHE / "reddit_probed_urls.txt"
-REDDIT_PROBE_STRATEGY = "v1"
+REDDIT_PROBE_STRATEGY = "v2-host-scheme-variants"
 
 UA = "Mozilla/5.0 (compatible; GamasutraPostmortemArchive/0.1; +https://github.com/forthrast-com)"
 HEAD = {"User-Agent": UA}
@@ -1059,9 +1059,15 @@ def hn_search(params):
     return r.json()
 
 
-def hn_query_params(start, end, page=0):
+# Hosts whose HN submissions we harvest. gamedeveloper.com is the live home of the
+# migrated classics/Deep Dives (Katamari, Inkbound…), discussed on HN under that URL
+# rather than any gamasutra path, so it needs its own search term.
+HN_HOSTS = ("gamasutra.com", "gamedeveloper.com")
+
+
+def hn_query_params(start, end, page=0, host="gamasutra.com"):
     return {
-        "query": "gamasutra.com",
+        "query": host,
         "restrictSearchableAttributes": "url",
         "tags": "story",
         "hitsPerPage": HN_PAGE_SIZE,
@@ -1070,27 +1076,28 @@ def hn_query_params(start, end, page=0):
     }
 
 
-def fetch_hn_gamasutra_posts(start=HN_EARLIEST, end=None):
-    """Return all HN stories whose URL matches gamasutra.com.
+def fetch_hn_gamasutra_posts(start=HN_EARLIEST, end=None, host="gamasutra.com"):
+    """Return all HN stories whose URL matches `host`.
 
     A plain Algolia search silently tops out around the first 1000 hits, which
     made per-article enrichment miss most older/low-ranked submissions.  This
     harvests the whole corpus by recursively partitioning on created_at_i.
     """
     end = end or int(time.time()) + 1
-    first = hn_search(hn_query_params(start, end, 0))
+    first = hn_search(hn_query_params(start, end, 0, host))
     total = first.get("nbHits", 0) or 0
     if total > HN_SAFE_HIT_LIMIT and end - start > 1:
         mid = start + ((end - start) // 2)
-        return fetch_hn_gamasutra_posts(start, mid) + fetch_hn_gamasutra_posts(mid, end)
+        return (fetch_hn_gamasutra_posts(start, mid, host)
+                + fetch_hn_gamasutra_posts(mid, end, host))
 
     posts = []
     pages = min(first.get("nbPages", 0) or 0, 10)
     for page in range(pages):
-        data = first if page == 0 else hn_search(hn_query_params(start, end, page))
+        data = first if page == 0 else hn_search(hn_query_params(start, end, page, host))
         for hit in data.get("hits", []):
             url = hit.get("url") or ""
-            if "gamasutra.com" not in url.lower():
+            if host not in url.lower():
                 continue
             posts.append({
                 "object_id": str(hit.get("objectID") or ""),
@@ -1107,7 +1114,9 @@ def fetch_hn_gamasutra_posts(start=HN_EARLIEST, end=None):
 
 
 def write_hn_posts(path=HN_POSTS):
-    posts = fetch_hn_gamasutra_posts()
+    posts = []
+    for host in HN_HOSTS:
+        posts += fetch_hn_gamasutra_posts(host=host)
     by_id = {}
     for post in posts:
         key = post["object_id"] or post["url"]
@@ -1145,9 +1154,16 @@ def article_hn_keys(article):
     for url in urls:
         m = re.search(r"(/view/feature/\d+/[a-z0-9_]+\.php)", url, re.I)
         if not m:
+            m = re.search(r"(/view/news/\d+/[a-z0-9_]+\.php)", url, re.I)
+        if not m:
             m = re.search(r"(/blogs/[^/]+/\d{8}/\d+/[a-z0-9_]+\.php)", url, re.I)
         if m:
             paths.add(m.group(1).lower())
+        # gamedeveloper.com reprints carry no feature id; key off their slug path so
+        # an HN/Reddit post linking the same gd URL attaches via the substring match.
+        gm = re.search(r"gamedeveloper\.com(/[a-z0-9-]+/[a-z0-9-]+)", url, re.I)
+        if gm:
+            paths.add(gm.group(1).lower())
     return ids, paths
 
 
@@ -1160,6 +1176,8 @@ def hn_feature_ids(url):
     capture the old/new mapping.
     """
     ids = set(re.findall(r"/view/feature/(\d+)(?:/|$)", url, re.I))
+    # Tier B / Round 2 classics live under /view/news/<id>/, not /view/feature/.
+    ids.update(re.findall(r"/view/news/(\d+)(?:/|$)", url, re.I))
     # /blogs/<author>/<YYYYMMDD>/<id>/... — the id is the segment after the date.
     ids.update(re.findall(r"/blogs/[^/]+/\d{8}/(\d+)(?:/|$)", url, re.I))
     return ids
@@ -1303,8 +1321,14 @@ def reddit_article_url_queries(article):
             parsed = urllib.parse.urlparse(rewritten)
             host = parsed.netloc.lower()
             path = parsed.path
-            base = urllib.parse.urlunparse((parsed.scheme or "http", host, path, "", "", ""))
-            urls.append(base)
+            # Arctic Shift matches the supplied URL *exactly*, and the same thread
+            # often links the bare host or the other scheme (e.g. the HL2 r/Games
+            # thread is only under http://gamasutra.com, not http://www.). Probe both
+            # schemes × www/bare so we don't miss host-specific submissions.
+            bare = host[4:] if host.startswith("www.") else host
+            for h in {host, bare, "www." + bare}:
+                for scheme in ("http", "https"):
+                    urls.append(urllib.parse.urlunparse((scheme, h, path, "", "", "")))
     live = article.get("live_url") or ""
     if live:
         urls.append(live)
@@ -1941,7 +1965,14 @@ def refresh_wiki_sales(data_path, out_path=WIKI_SALES, limit=0, offset=0):
         existing = {row["id"]: row for row in load_toml(out_path).get("wiki_game_sales", [])}
 
     rows = []
+    skipped = 0
     for i, article in enumerate(articles, 1):
+        # Wikipedia lookups are the slow pole; an id already in the sidecar keeps its
+        # cached row instead of being re-queried every run. Delete the row (or the
+        # whole sidecar) to force a re-resolve.
+        if article["id"] in existing:
+            skipped += 1
+            continue
         log(f"[*] wiki sales {offset + i}/{len(all_articles)} {article.get('id')} {article.get('game')}")
         page = find_wiki_game_page(article)
         copies, sentence = extract_sales_signal((page or {}).get("extract") or "")
@@ -1952,6 +1983,8 @@ def refresh_wiki_sales(data_path, out_path=WIKI_SALES, limit=0, offset=0):
             "copies_sold": copies,
             "sales_note": sentence,
         })
+    if skipped:
+        log(f"[*] wiki sales: {skipped} cached-skip, {len(rows)} freshly resolved")
 
     existing.update({row["id"]: row for row in rows})
     ordered = [existing[a["id"]] for a in all_articles if a["id"] in existing]

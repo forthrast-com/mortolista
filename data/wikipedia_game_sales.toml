@@ -230,6 +230,13 @@ copies_sold = 0
 sales_note = ""
 
 [[wiki_game_sales]]
+id = "131493"
+wiki_title = "Baldur's Gate (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Baldur%27s_Gate_%28video_game%29"
+copies_sold = 2800000
+sales_note = "The game sold about 2.8 million copies by 2015."
+
+[[wiki_game_sales]]
 id = "131490"
 wiki_title = "Last Call (video game)"
 wiki_url = "https://en.wikipedia.org/wiki/Last_Call_%28video_game%29"
@@ -832,6 +839,13 @@ copies_sold = 75000
 sales_note = "=== Sales === Tools of Destruction sold nearly 75,000 units during October 2007."
 
 [[wiki_game_sales]]
+id = "132292"
+wiki_title = "Weapon of Choice (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Weapon_of_Choice_%28video_game%29"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "132296"
 wiki_title = "MadStone"
 wiki_url = "https://en.wikipedia.org/wiki/MadStone"
@@ -893,6 +907,13 @@ wiki_title = ""
 wiki_url = ""
 copies_sold = 0
 sales_note = ""
+
+[[wiki_game_sales]]
+id = "115711"
+wiki_title = "Age of Empires II"
+wiki_url = "https://en.wikipedia.org/wiki/Age_of_Empires_II"
+copies_sold = 478557
+sales_note = "Age of Empires II's domestic success continued in 2001: with sales of 478,557 units ($19.4 million), it claimed tenth place for the year."
 
 [[wiki_game_sales]]
 id = "132511"
@@ -998,6 +1019,13 @@ wiki_title = "Brütal Legend"
 wiki_url = "https://en.wikipedia.org/wiki/Br%C3%BCtal_Legend"
 copies_sold = 1400000
 sales_note = "In an interview in February 2011, Schafer claimed that the game had sold over 1.4 million copies."
+
+[[wiki_game_sales]]
+id = "118990"
+wiki_title = "Atari Games"
+wiki_url = "https://en.wikipedia.org/wiki/Atari_Games"
+copies_sold = 0
+sales_note = ""
 
 [[wiki_game_sales]]
 id = "4336"
@@ -1350,6 +1378,13 @@ copies_sold = 3000000
 sales_note = "Ascension sold less than its predecessor, with over 3 million units shipped and received no awards, but it did, however, receive several nominations, including \"Outstanding Achievement in Videogame Writing\" at the Writers Guild of America Videogame Awards and "
 
 [[wiki_game_sales]]
+id = "gd-two-guys-made-an-mmo-the-growtopia-postmortem"
+wiki_title = "Growtopia"
+wiki_url = "https://en.wikipedia.org/wiki/Growtopia"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "194432"
 wiki_title = ""
 wiki_url = ""
@@ -1434,6 +1469,13 @@ copies_sold = 0
 sales_note = ""
 
 [[wiki_game_sales]]
+id = "gd-xeodrifter-postmortem"
+wiki_title = "Xeodrifter"
+wiki_url = "https://en.wikipedia.org/wiki/Xeodrifter"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "233340"
 wiki_title = ""
 wiki_url = ""
@@ -1490,11 +1532,39 @@ copies_sold = 0
 sales_note = ""
 
 [[wiki_game_sales]]
+id = "237657"
+wiki_title = "Sunless Sea"
+wiki_url = "https://en.wikipedia.org/wiki/Sunless_Sea"
+copies_sold = 350000
+sales_note = "According to director Alexis Kennedy, sales had risen to 350,000 units by June 2018."
+
+[[wiki_game_sales]]
+id = "gd-out-there-a-postmortem"
+wiki_title = "Gauntlet (1985 video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Gauntlet_%281985_video_game%29"
+copies_sold = 200000
+sales_note = "It went on to sell more than 200,000 copies in the UK by 1987, and over 300,000 copies as of 1988."
+
+[[wiki_game_sales]]
 id = "248567"
 wiki_title = "Technobabylon"
 wiki_url = "https://en.wikipedia.org/wiki/Technobabylon"
 copies_sold = 0
 sales_note = ""
+
+[[wiki_game_sales]]
+id = "251220"
+wiki_title = "Psychonauts"
+wiki_url = "https://en.wikipedia.org/wiki/Psychonauts"
+copies_sold = 1700000
+sales_note = "In the announcement for Psychonauts 2 in December 2015, Schafer indicated that Psychonauts sold nearly 1.7 million copies, with more than 1.2 million occurring after Double Fine's acquisition of the rights."
+
+[[wiki_game_sales]]
+id = "252418"
+wiki_title = "Deadly Premonition"
+wiki_url = "https://en.wikipedia.org/wiki/Deadly_Premonition"
+copies_sold = 50000
+sales_note = "50,000 copies of Deadly Premonition were sold in North America during the first three months after its debut."
 
 [[wiki_game_sales]]
 id = "254610"
@@ -1511,6 +1581,20 @@ copies_sold = 0
 sales_note = ""
 
 [[wiki_game_sales]]
+id = "258015"
+wiki_title = "Silent Hill 4: The Room"
+wiki_url = "https://en.wikipedia.org/wiki/Silent_Hill_4%3A_The_Room"
+copies_sold = 41000
+sales_note = "Silent Hill 4 topped game sales charts in Japan during a video game sales slump with 41,000 copies sold, but dropped to tenth place one week later."
+
+[[wiki_game_sales]]
+id = "257659"
+wiki_title = "Call of Duty (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Call_of_Duty_%28video_game%29"
+copies_sold = 4500000
+sales_note = "Call of Duty ultimately sold 4.5 million copies worldwide by 2013."
+
+[[wiki_game_sales]]
 id = "258315"
 wiki_title = "Call of Duty: Modern Warfare II (2022 video game)"
 wiki_url = "https://en.wikipedia.org/wiki/Call_of_Duty%3A_Modern_Warfare_II_%282022_video_game%29"
@@ -1518,11 +1602,25 @@ copies_sold = 0
 sales_note = ""
 
 [[wiki_game_sales]]
+id = "258603"
+wiki_title = "Prince of Persia: The Sands of Time (film)"
+wiki_url = "https://en.wikipedia.org/wiki/Prince_of_Persia%3A_The_Sands_of_Time_%28film%29"
+copies_sold = 664041
+sales_note = "The DVD landed in the number one spot on the US DVD sales chart, with 664,041 units sold within the first week and 1,623,361 units in total (equal to $33,941,976) as of March 2011."
+
+[[wiki_game_sales]]
 id = "258820"
 wiki_title = "Guitar Hero"
 wiki_url = "https://en.wikipedia.org/wiki/Guitar_Hero"
 copies_sold = 25000000
 sales_note = "The series has sold more than 25 million units worldwide, earning US$2 billion at retail."
+
+[[wiki_game_sales]]
+id = "259479"
+wiki_title = "Half-Life (video game)"
+wiki_url = "https://en.wikipedia.org/wiki/Half-Life_%28video_game%29"
+copies_sold = 9300000
+sales_note = "As of November 16, 2004, eight million copies of the game had been sold, and by 2008, 9.3 million copies had been sold at retail."
 
 [[wiki_game_sales]]
 id = "260239"
@@ -1623,6 +1721,13 @@ copies_sold = 200000000
 sales_note = "The 2016 World Video Game Hall of Fame Inductees announced that 200 million copies of The Sims series had been sold, becoming one of the top best-selling video game franchises of all time."
 
 [[wiki_game_sales]]
+id = "306040"
+wiki_title = "Civilization V"
+wiki_url = "https://en.wikipedia.org/wiki/Civilization_V"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
 wiki_title = "No One Lives Forever 2: A Spy in H.A.R.M.'s Way"
 wiki_url = "https://en.wikipedia.org/wiki/No_One_Lives_Forever_2%3A_A_Spy_in_H.A.R.M.%27s_Way"
@@ -1637,9 +1742,30 @@ copies_sold = 114000
 sales_note = "In the United States, it sold 114,000 copies and failed to enter the US monthly sales chart."
 
 [[wiki_game_sales]]
+id = "308555"
+wiki_title = "Age of Mythology: Retold"
+wiki_url = "https://en.wikipedia.org/wiki/Age_of_Mythology%3A_Retold"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "308654"
 wiki_title = ""
 wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "307674"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "309412"
+wiki_title = "Alien Hominid"
+wiki_url = "https://en.wikipedia.org/wiki/Alien_Hominid"
 copies_sold = 0
 sales_note = ""
 
@@ -1649,6 +1775,13 @@ wiki_title = ""
 wiki_url = ""
 copies_sold = 0
 sales_note = ""
+
+[[wiki_game_sales]]
+id = "310658"
+wiki_title = "Star Wars Knights of the Old Republic II: The Sith Lords"
+wiki_url = "https://en.wikipedia.org/wiki/Star_Wars_Knights_of_the_Old_Republic_II%3A_The_Sith_Lords"
+copies_sold = 1500000
+sales_note = "By early 2006, Knights of the Old Republic II had sold almost 1.5 million copies."
 
 [[wiki_game_sales]]
 id = "311143"
@@ -1682,6 +1815,13 @@ sales_note = ""
 id = "316489"
 wiki_title = ""
 wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-postmortem---arbitrary-metric-s-paratopic"
+wiki_title = "Paratopic"
+wiki_url = "https://en.wikipedia.org/wiki/Paratopic"
 copies_sold = 0
 sales_note = ""
 
@@ -1826,6 +1966,27 @@ copies_sold = 500000
 sales_note = "The publisher reported combined global sales for the series above 500,000 units by September 2008."
 
 [[wiki_game_sales]]
+id = "gd-postmortem-i-the-ramp-i-"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-postmortem-inkbound-s-journey-in-early-access"
+wiki_title = "Inkbound"
+wiki_url = "https://en.wikipedia.org/wiki/Inkbound"
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
+id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "gd-classic-postmortem-nanaonhas-haunt-2012"
 wiki_title = "Haunt (video game)"
 wiki_url = "https://en.wikipedia.org/wiki/Haunt_%28video_game%29"
@@ -1840,8 +2001,22 @@ copies_sold = 8500000
 sales_note = "By the end of 2012, it had sold over 8.5 million episodes, with total sales reaching 28 million episodes by July 2014."
 
 [[wiki_game_sales]]
+id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
+wiki_title = ""
+wiki_url = ""
+copies_sold = 0
+sales_note = ""
+
+[[wiki_game_sales]]
 id = "gd-postmortem-harmonix-s-dance-central-2010-"
 wiki_title = "Dance Central (2010 video game)"
 wiki_url = "https://en.wikipedia.org/wiki/Dance_Central_%282010_video_game%29"
 copies_sold = 2500000
 sales_note = "== Sales == Dance Central sold 2.5 million copies."
+
+[[wiki_game_sales]]
+id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
+wiki_title = "Katamari Damacy"
+wiki_url = "https://en.wikipedia.org/wiki/Katamari_Damacy"
+copies_sold = 500000
+sales_note = "Namco had estimated that the game would sell over 500,000 units in Japan during its first year, and while the game did not make that metric, it had stayed as one of the top ten games sold in Japan through its first nine weeks on the market, with more than 100,"

@@ -416,3 +416,135 @@ reason = "Tier B classic magazine postmortem; gamasutra /view/news original trac
 id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
 url = "https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-"
 reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-"
+
+
+# ---- Tier B: classic magazine postmortems via gamedeveloper->gamasutra (2026-06) ----
+
+[[include]]
+id = "259479"
+url = "http://gamasutra.com/view/news/259479/Classic_Postmortem_The_making_of_HalfLife_2.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-the-making-of-i-half-life-2-i- (resolver fell back to gd under IA flak; original 259479 confirmed archived)"
+
+[[include]]
+id = "251220"
+url = "http://www.gamasutra.com/view/news/251220/Classic_Postmortem_Double_Fines_Psychonauts.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/classic-postmortem-double-fine-s-i-psychonauts-i- (added by hand; resolver flaked on IA this pass)"
+
+[[include]]
+id = "258015"
+url = "http://www.gamasutra.com/view/news/258015/Classic_Postmortem_Silent_Hill_4_The_Room.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/audio/classic-postmortem-i-silent-hill-4-the-room-i-"
+
+[[include]]
+id = "306040"
+url = "http://www.gamasutra.com/view/news/306040/Classic_Postmortem_Firaxis_Civilization_V.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-firaxis-i-civilization-v-i-"
+
+[[include]]
+id = "310658"
+url = "http://www.gamasutra.com/view/news/310658/Classic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-obsidian-s-i-knights-of-the-old-republic-ii-the-sith-lords-i-"
+
+[[include]]
+id = "257659"
+url = "http://www.gamasutra.com/view/news/257659/Classic_Postmortem_Asherons_Call.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-i-asheron-s-call-i-"
+
+[[include]]
+id = "252418"
+url = "http://www.gamasutra.com/view/news/252418/Classic_Postmortem_Deadly_Premonition.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-i-deadly-premonition-i-"
+
+[[include]]
+id = "gd-xeodrifter-postmortem"
+url = "https://www.gamedeveloper.com/audio/xeodrifter-postmortem"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/audio/xeodrifter-postmortem"
+
+[[include]]
+id = "gd-out-there-a-postmortem"
+url = "https://www.gamedeveloper.com/business/out-there-a-postmortem"
+reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/out-there-a-postmortem"
+
+[[include]]
+id = "307674"
+url = "http://www.gamasutra.com/view/news/307674/Postmortem_The_totalitarian_puzzleplatformer_Black_The_Fall.php"
+reason = "Tier B classic magazine postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/postmortem-the-totalitarian-puzzle-platformer-i-black-the-fall-i-"
+
+
+# ---- Round 2: gamedeveloper.com canon postmortems via gamedeveloper->gamasutra (2026-06) ----
+
+[[include]]
+id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
+url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+
+[[include]]
+id = "258603"
+url = "http://www.gamasutra.com/view/news/258603/The_making_of_Prince_of_Persia_The_Sands_of_Time.php"
+reason = "Round 2 canon postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/the-making-of-i-prince-of-persia-the-sands-of-time-i-"
+
+[[include]]
+id = "309412"
+url = "http://www.gamasutra.com/view/news/309412/Classic_Postmortem_The_Behemoths_Alien_Hominid.php"
+reason = "Round 2 canon postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/business/classic-postmortem-the-behemoth-s-i-alien-hominid-i-"
+
+[[include]]
+id = "115711"
+url = "http://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+reason = "Round 2 canon postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/game-platforms/the-game-developer-archives-postmortem-ensemble-s-age-of-empires-"
+
+[[include]]
+id = "308555"
+url = "http://www.gamasutra.com/view/news/308555/Classic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php"
+reason = "Round 2 canon postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/design/classic-postmortem-ensemble-studio-s-classic-rts-i-age-of-mythology-i-"
+
+[[include]]
+id = "118990"
+url = "http://www.gamasutra.com/view/news/118990/Classic_Postmortem_Atari_Games_San_Francisco_Rush_Extreme_Racing.php"
+reason = "Round 2 canon postmortem; gamasutra /view/news original tracked from https://www.gamedeveloper.com/game-platforms/classic-postmortem-atari-games-i-san-francisco-rush-extreme-racing-i-"
+
+[[include]]
+id = "132292"
+url = "http://www.gamasutra.com/view/feature/132292/postmortem_mommys_best_games_.php"
+reason = "Round 2 canon postmortem (Weapon of Choice, 2009); gamasutra /view/feature original tracked from https://www.gamedeveloper.com/design/postmortem-mommy-s-best-games-weapon-of-choice. Distinct from Explosionade (6250); shared truncated slug had merged 132292 in as an alt_id."
+
+[[include]]
+id = "gd-two-guys-made-an-mmo-the-growtopia-postmortem"
+url = "https://www.gamedeveloper.com/business/two-guys-made-an-mmo-the-growtopia-postmortem"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/two-guys-made-an-mmo-the-growtopia-postmortem"
+
+[[include]]
+id = "gd-postmortem-i-the-ramp-i-"
+url = "https://www.gamedeveloper.com/design/postmortem-i-the-ramp-i-"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/postmortem-i-the-ramp-i-"
+
+[[include]]
+id = "gd-postmortem-inkbound-s-journey-in-early-access"
+url = "https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access"
+
+[[include]]
+id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
+url = "https://www.gamedeveloper.com/design/postmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/postmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access"
+
+
+# ---- Round 2: gamedeveloper.com canon postmortems via gamedeveloper->gamasutra (2026-06) ----
+
+[[include]]
+id = "131493"
+url = "http://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php"
+reason = "Round 2 canon postmortem; gamasutra /view/feature original tracked from https://www.gamedeveloper.com/design/-i-baldur-s-gate-ii-i-the-anatomy-of-a-sequel"
+
+
+# ---- Round 2: gamedeveloper.com canon postmortems via gamedeveloper->gamasutra (2026-06) ----
+
+[[include]]
+id = "gd-postmortem---arbitrary-metric-s-paratopic"
+url = "https://www.gamedeveloper.com/business/postmortem---arbitrary-metric-s-paratopic"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/business/postmortem---arbitrary-metric-s-paratopic"
+
+[[include]]
+id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
+url = "https://www.gamedeveloper.com/production/postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite"
+reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/production/postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite"

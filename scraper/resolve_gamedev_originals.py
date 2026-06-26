@@ -8,8 +8,9 @@ and hosts its heroes at db_area/images/news/<id>/. We track that reference,
 prefer the gamasutra original (proper old-layout byline/date/hero), and fall back
 to ingesting the gamedeveloper URL itself only when no original is found.
 
-Usage:  python scraper/resolve_gamedev_originals.py        # prints include TOML
-        python scraper/resolve_gamedev_originals.py --append   # appends to includes
+Usage:  python scraper/resolve_gamedev_originals.py            # Tier B, prints TOML
+        python scraper/resolve_gamedev_originals.py --append   # Tier B, appends
+        python scraper/resolve_gamedev_originals.py --round2 --append  # Round 2 batch
 """
 import re
 import sys
@@ -55,6 +56,29 @@ GAMEDEV_URLS = [
     "https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-",
 ]
 
+# Round 2 candidates (from ROUND2_gamedev_postmortem_candidate_additions.md). The
+# eight overlaps with Tier B (HL2, Psychonauts, Silent Hill 4, Deadly Premonition,
+# KOTOR II, Civ V, Out There, Xeodrifter) are already includes, so they're skipped
+# by the `have` dedupe — only the genuinely new URLs live here.
+ROUND2_URLS = [
+    # Core: canonical Game Developer Magazine classics
+    "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-",
+    "https://www.gamedeveloper.com/design/-i-baldur-s-gate-ii-i-the-anatomy-of-a-sequel",
+    "https://www.gamedeveloper.com/business/the-making-of-i-prince-of-persia-the-sands-of-time-i-",
+    "https://www.gamedeveloper.com/business/classic-postmortem-the-behemoth-s-i-alien-hominid-i-",
+    "https://www.gamedeveloper.com/game-platforms/the-game-developer-archives-postmortem-ensemble-s-age-of-empires-",
+    "https://www.gamedeveloper.com/design/classic-postmortem-ensemble-studio-s-classic-rts-i-age-of-mythology-i-",
+    "https://www.gamedeveloper.com/game-platforms/classic-postmortem-atari-games-i-san-francisco-rush-extreme-racing-i-",
+    "https://www.gamedeveloper.com/design/postmortem-mommy-s-best-games-weapon-of-choice",
+    # Scope-dependent: later contributor / Deep Dive postmortems
+    "https://www.gamedeveloper.com/business/two-guys-made-an-mmo-the-growtopia-postmortem",
+    "https://www.gamedeveloper.com/business/postmortem---arbitrary-metric-s-paratopic",
+    "https://www.gamedeveloper.com/design/postmortem-i-the-ramp-i-",
+    "https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access",
+    "https://www.gamedeveloper.com/design/postmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access",
+    "https://www.gamedeveloper.com/production/postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite",
+]
+
 
 def wayback_ts(url, tries=3):
     """A capture timestamp for a URL via the availability API (retries IA flak)."""
@@ -84,9 +108,12 @@ def original_archived(aid, slug, tries=3):
 
     Returns the gamasutra URL to prefer, or None if it genuinely isn't archived.
     """
+    # The embedded id can live under /view/news/ OR /view/feature/ (older classics
+    # like Baldur's Gate II are features). Try both path kinds and both host forms.
     hosts = [
-        f"http://www.gamasutra.com/view/news/{aid}/{slug}.php",
-        f"http://gamasutra.com/view/news/{aid}/{slug}.php",
+        f"http://{host}gamasutra.com/view/{kind}/{aid}/{slug}.php"
+        for host in ("www.", "")
+        for kind in ("news", "feature")
     ]
     for _ in range(tries):
         for gama in hosts:
@@ -119,10 +146,19 @@ def resolve(url):
 
 
 def main():
+    round2 = "--round2" in sys.argv
+    urls = ROUND2_URLS if round2 else GAMEDEV_URLS
+    label = "Round 2 canon postmortem" if round2 else "Tier B classic magazine postmortem"
+    header = (
+        "\n\n# ---- Round 2: gamedeveloper.com canon postmortems via gamedeveloper->gamasutra (2026-06) ----\n\n"
+        if round2 else
+        "\n\n# ---- Tier B: classic magazine postmortems via gamedeveloper->gamasutra (2026-06) ----\n\n"
+    )
+
     have = re.findall(r'id = "([^"]+)"', INC.read_text())
     have = set(have)
     blocks = []
-    for url in GAMEDEV_URLS:
+    for url in urls:
         target = resolve(url)
         if not target:
             scrape.log(f"  [!] unresolved: {url}")
@@ -141,16 +177,15 @@ def main():
             "[[include]]\n"
             f'id = "{aid}"\n'
             f'url = "{target}"\n'
-            f'reason = "Tier B classic magazine postmortem; {origin} tracked from {url}"'
+            f'reason = "{label}; {origin} tracked from {url}"'
         )
         scrape.log(f"  [+] {aid} <- {url}  ({origin})")
         time.sleep(0.3)
 
     out = "\n\n".join(blocks)
     if "--append" in sys.argv and blocks:
-        header = "\n\n# ---- Tier B: classic magazine postmortems via gamedeveloper->gamasutra (2026-06) ----\n\n"
         INC.write_text(INC.read_text().rstrip() + "\n" + header + out + "\n")
-        scrape.log(f"[*] appended {len(blocks)} Tier B includes -> {INC}")
+        scrape.log(f"[*] appended {len(blocks)} {'Round 2' if round2 else 'Tier B'} includes -> {INC}")
     else:
         print(out)
 
