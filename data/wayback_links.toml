@@ -41,9 +41,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131775"
 wayback_captures = 7
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131775/postmortem_lucaslearnings_star_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511074955/http://www.gamasutra.com/view/feature/131775/postmortem_lucaslearnings_star_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -107,7 +107,7 @@ id = "131824"
 wayback_captures = 8
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131824/postmortem_shiny_entertainments_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511074743/http://www.gamasutra.com/view/feature/131824/postmortem_shiny_entertainments_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -177,17 +177,17 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131563"
 wayback_captures = 9
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131563/postmortem_treyarchs_tony_hawks_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511072814/http://www.gamasutra.com/view/feature/131563/postmortem_treyarchs_tony_hawks_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "131556"
 wayback_captures = 8
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511074518/http://www.gamasutra.com/view/feature/131556/postmortem_angel_studios_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -203,7 +203,7 @@ id = "131541"
 wayback_captures = 12
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131541/postmortem_raven_softwares_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511074424/http://www.gamasutra.com/view/feature/131541/postmortem_raven_softwares_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -249,10 +249,10 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131500"
 wayback_captures = 2
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131500/postmortem_minds_eyes_sheep.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "131497"
@@ -265,9 +265,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131493"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511074044/http://www.gamasutra.com/view/feature/131493/baldurs_gate_ii_the_anatomy_of_a_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -465,17 +465,17 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131321"
 wayback_captures = 8
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131321/postmortem_gas_powered_games_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511073645/http://www.gamasutra.com/view/feature/131321/postmortem_gas_powered_games_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "131302"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131302/postmortem_pixels_pasts_scsicide.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511073620/http://www.gamasutra.com/view/feature/131302/postmortem_pixels_pasts_scsicide.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -601,10 +601,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "130607"
 wayback_captures = 2
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/130607/student_postmortem_6msofts_romeo_.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "130612"
@@ -665,10 +665,10 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131012"
 wayback_captures = 2
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131012/schadenfreudian_slips_postmortem_.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "131062"
@@ -689,26 +689,26 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "131107"
 wayback_captures = 2
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131107/student_postmortem_digipen_.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "131112"
 wayback_captures = 2
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131112/indie_postmortem_gibbage.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "131137"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/131137/indie_postmortem_armadillo_run.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "131140"
@@ -907,23 +907,23 @@ id = "132183"
 wayback_captures = 6
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132183/postmortem_little_boy_games_go_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510045559/http://www.gamasutra.com/view/feature/132183/postmortem_little_boy_games_go_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "132190"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132190/postmortem_torpex_games_schizoid.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510045351/http://www.gamasutra.com/view/feature/132190/postmortem_torpex_games_schizoid.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "132198"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132198/postmortem_brothers_in_arms_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510045341/http://www.gamasutra.com/view/feature/132198/postmortem_brothers_in_arms_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -937,9 +937,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "132227"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132227/postmortem_fizz_factors_the_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510045313/http://www.gamasutra.com/view/feature/132227/postmortem_fizz_factors_the_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -947,7 +947,7 @@ id = "132258"
 wayback_captures = 6
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132258/postmortem_tale_of_tales_the_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510001318/http://www.gamasutra.com/view/feature/132258/postmortem_tale_of_tales_the_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -963,15 +963,15 @@ id = "132292"
 wayback_captures = 3
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132292/postmortem_mommys_best_games_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120509114202/http://www.gamasutra.com/view/feature/132292/postmortem_mommys_best_games_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "132296"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132296/postmortem_riverman_medias_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120509232953/http://www.gamasutra.com/view/feature/132296/postmortem_riverman_medias_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -993,9 +993,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "132314"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132314/postmortem_ninjabees_a_kingdom_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510040828/http://www.gamasutra.com/view/feature/132314/postmortem_ninjabees_a_kingdom_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1009,17 +1009,17 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "3966"
 wayback_captures = 15
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/3966/postmortem_defedef_of_the_ancients.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "132401"
 wayback_captures = 7
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132401/postmortem_square_enixs_the_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510023833/http://www.gamasutra.com/view/feature/132401/postmortem_square_enixs_the_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1033,18 +1033,18 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "132490"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132490/postmortem_ngmocodemiurge_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120510045010/http://www.gamasutra.com/view/feature/132490/postmortem_ngmocodemiurge_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "115711"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "132511"
@@ -1107,15 +1107,15 @@ id = "4230"
 wayback_captures = 7
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/4230/postmortem_ronimo_games_swords__.php?print=1"
+wayback_print = "https://web.archive.org/web/20100106040604/http://www.gamasutra.com/view/feature/4230/postmortem_ronimo_games_swords__.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "132623"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 2
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/132623/postmortem_blitz_games_droplitz.php?print=1"
+wayback_print = "https://web.archive.org/web/20120509230603/http://www.gamasutra.com/view/feature/132623/postmortem_blitz_games_droplitz.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1257,9 +1257,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "6310"
 wayback_captures = 7
-wayback_print_captures = 3
+wayback_print_captures = 4
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/6310/postmortem_mediatonics_monsters_.php?print=1"
+wayback_print = "https://web.archive.org/web/20110321192814/http://www.gamasutra.com/view/feature/6310/postmortem_mediatonics_monsters_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1337,9 +1337,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "6481"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 1
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/6481/postmortem_vector_units_riptide_.php?print=1"
+wayback_print = "https://web.archive.org/web/20111108211713/http://www.gamasutra.com/view/feature/6481/postmortem_vector_units_riptide_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1353,9 +1353,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "6617"
 wayback_captures = 7
-wayback_print_captures = 3
+wayback_print_captures = 1
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/6617/postmortem_mode_7_games_frozen_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120130061127/http://www.gamasutra.com/view/feature/6617/postmortem_mode_7_games_frozen_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1377,10 +1377,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "6742"
 wayback_captures = 4
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/6742/postmortem_days_of_wonders_.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "168330"
@@ -1409,9 +1409,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "169969"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 6
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/169969/postmortem_vlambeers_gun_godz.php?print=1"
+wayback_print = "https://web.archive.org/web/20120511165129/http://www.gamasutra.com/view/feature/169969/postmortem_vlambeers_gun_godz.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1425,9 +1425,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "172250"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 6
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/172250/postmortem_zachtronics_.php?print=1"
+wayback_print = "https://web.archive.org/web/20120618062245/http://www.gamasutra.com/view/feature/172250/postmortem_zachtronics_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1441,9 +1441,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "175583"
 wayback_captures = 17
-wayback_print_captures = 3
+wayback_print_captures = 1
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php?print=1"
+wayback_print = "https://web.archive.org/web/20131112011417/http://www.gamasutra.com/blogs/LinhNgo/20120808/175583/Google_Play_Is_Better_Than_The_iOS_Store_In_Our_Case_A_Dangerous_PostMortem.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1457,17 +1457,17 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "180520"
 wayback_captures = 4
-wayback_print_captures = 3
+wayback_print_captures = 7
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/180520/postmortem_humble_hearts_dust_.php?print=1"
+wayback_print = "https://web.archive.org/web/20121104001911/http://www.gamasutra.com/view/feature/180520/postmortem_humble_hearts_dust_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "181082"
 wayback_captures = 4
-wayback_print_captures = 3
+wayback_print_captures = 8
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/181082/postmortem_sony_bend_studios_.php?print=1"
+wayback_print = "https://web.archive.org/web/20121108194348/http://www.gamasutra.com/view/feature/181082/postmortem_sony_bend_studios_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1481,9 +1481,9 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "182380"
 wayback_captures = 9
-wayback_print_captures = 3
+wayback_print_captures = 8
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/182380/postmortem_mcmillen_and_himsls_.php?print=1"
+wayback_print = "https://web.archive.org/web/20130120113940/http://www.gamasutra.com/view/feature/182380/postmortem_mcmillen_and_himsls_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1491,7 +1491,7 @@ id = "185085"
 wayback_captures = 4
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/185085/postmortem_vivid_games_real_.php?print=1"
+wayback_print = "https://web.archive.org/web/20130126094208/http://www.gamasutra.com/view/feature/185085/postmortem_vivid_games_real_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1507,15 +1507,15 @@ id = "186088"
 wayback_captures = 4
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/186088/postmortem_intelligence_engine_.php?print=1"
+wayback_print = "https://web.archive.org/web/20130211041137/http://www.gamasutra.com/view/feature/186088/postmortem_intelligence_engine_.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
 id = "186358"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 4
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/186358/postmortem_zgames_pong_world.php?print=1"
+wayback_print = "https://web.archive.org/web/20130510152945/http://www.gamasutra.com/view/feature/186358/postmortem_zgames_pong_world.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1545,17 +1545,17 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "191049"
 wayback_captures = 2
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/JacobVanRooyen/20130423/191049/Mech_Force_Post_Mortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "191265"
 wayback_captures = 5
 wayback_print_captures = 3
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/191265/a_minipostmortem_roundup.php?print=1"
+wayback_print = "https://web.archive.org/web/20130503114820/http://www.gamasutra.com/view/feature/191265/a_minipostmortem_roundup.php?print=1"
 wayback_print_ok = true
 
 [[wayback_link]]
@@ -1673,42 +1673,42 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "224920"
 wayback_captures = 11
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/KeeWonHong/20140904/224920/PostKickstarter_Finance_By_The_Numbers_A_OneMan_Studio_Postmortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-xeodrifter-postmortem"
 wayback_captures = 10
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/audio/xeodrifter-postmortem?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "233340"
 wayback_captures = 8
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/feature/233340/postmortem_pinballrpg_hybrid_.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "233818"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/ScottStephan/20150109/233818/Aegis_Defenders_Crowdfunding_PostMortem_Pt_1_So_you_wanna_crowdfund.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "234086"
 wayback_captures = 34
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/SergeyTitov/20150113/234086/Postmortem_Launching_The_War_Z.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "234421"
@@ -1721,34 +1721,34 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "235408"
 wayback_captures = 12
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/PhilTibitoski/20150202/235408/Octodad_Dadliest_Catch_PostMortem_Pt_1_Summary.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "235823"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/KevinGeisler/20150205/235823/Octodad_Dadliest_Catch_PostMortem_Pt_2_Production.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "235951"
 wayback_captures = 24
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/KevinZuhn/20150210/235951/Octodad_Dadliest_Catch_PostMortem_Pt_3_Design.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "236427"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/ArminIbrisagic/20150220/236427/Goat_Simulator_Post_Mortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "237657"
@@ -1761,10 +1761,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "gd-out-there-a-postmortem"
 wayback_captures = 8
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/business/out-there-a-postmortem?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "248567"
@@ -1777,10 +1777,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "251220"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/251220/Classic_Postmortem_Double_Fines_Psychonauts.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "252418"
@@ -1793,18 +1793,18 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "254610"
 wayback_captures = 22
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/CarletonDiLeo/20150925/254610/Wordsum_Postmortem__The_10_year_journey_of_a_solo_game_developer.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "255364"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/255364/The_making_of_Far_Cry_2.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "258015"
@@ -1817,10 +1817,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "257659"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/257659/Classic_Postmortem_Asherons_Call.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "258315"
@@ -1833,42 +1833,42 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "258603"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/258603/The_making_of_Prince_of_Persia_The_Sands_of_Time.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "258820"
 wayback_captures = 31
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/258820/Classic_Postmortem_Guitar_Hero.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "259479"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/259479/Classic_Postmortem_The_making_of_HalfLife_2.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "260239"
 wayback_captures = 20
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/CorySpooner/20151124/260239/Postmortem__Swing_Racers.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "260265"
 wayback_captures = 36
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/MiguelAngelHorna/20151221/260265/Postmortem_Porting_Bastion_to_PSVita.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "264127"
@@ -1881,26 +1881,26 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "gd-postmortem-verdun-steam-early-access"
 wayback_captures = 4
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/business/postmortem-verdun-steam-early-access?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "266261"
 wayback_captures = 37
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/266261/Classic_Postmortem_People_Can_Flys_Bulletstorm.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "267827"
 wayback_captures = 12
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/MarkSlemko/20160311/267827/Language_and_Mobile_Development__A_Postmortem_on_Terminology_and_Teams.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "269575"
@@ -1921,18 +1921,18 @@ wayback_print_ok = true
 [[wayback_link]]
 id = "273917"
 wayback_captures = 16
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/AndrewDavidJahchan/20160531/273917/Me_My_Dinosaur_And_Our_Failed_Kickstarter_A_Crowdfunding_PostMortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "274240"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/274240/Postmortem_Offworld_Trading_Companys_Early_Access_campaign.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "294276"
@@ -1961,50 +1961,50 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "305424"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/305424/Classic_Postmortem_How_Maxis_avoided_sequelitis_on_The_Sims_2.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "306040"
 wayback_captures = 8
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/306040/Classic_Postmortem_Firaxis_Civilization_V.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/design/classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-way-i-?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "307191"
 wayback_captures = 15
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/307191/Classic_Postmortem_XCOM_Enemy_Unknown_which_turns_5_today.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "308555"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/308555/Classic_Postmortem_Ensemble_Studios_classic_RTS_Age_of_Mythology.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "308654"
 wayback_captures = 8
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/308654/Postmortem_Building_The_Turing_Test_around_a_secret_mechanic.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "307674"
@@ -2017,50 +2017,50 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "309412"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/309412/Classic_Postmortem_The_Behemoths_Alien_Hominid.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "310012"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/ConstantinBacioiu/20171121/310012/Post_Mortem_I_thought_I_could_ship_at_least_700_units_to_stay_in_business.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "310658"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/view/news/310658/Classic_Postmortem_Obsidians_Knights_of_the_Old_Republic_II_The_Sith_Lords.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "311143"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/DoctorLudos/20171207/311143/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_12.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "311570"
 wayback_captures = 40
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/DougPearson/20171212/311570/Post_Mortem_The_Death_of_Flash_and_Rewriting_14_Million_Lines_of_Code.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "314554"
 wayback_captures = 12
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/DoctorLudos/20180213/314554/Making_a_Game_Boy_game_in_2017_A_quotSheep_It_Upquot_PostMortem_part_22.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "314649"
@@ -2081,18 +2081,18 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "gd-postmortem---arbitrary-metric-s-paratopic"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/business/postmortem---arbitrary-metric-s-paratopic?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "326190"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/DavidGalindo/20180912/326190/How_much_do_indie_PC_devs_make_anyways_Part_8.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "330427"
@@ -2105,18 +2105,18 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "337113"
 wayback_captures = 11
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/YannickElahee/20190221/337113/Robothorium_Post_Mortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "337931"
 wayback_captures = 16
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/NatalieMikkelson/20190306/337931/Localising_Kenshi_A_Post_Mortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "339782"
@@ -2129,18 +2129,18 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "340065"
 wayback_captures = 14
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/RobertaVaughan/20190404/340065/HeroU_Rogue_to_Redemption_Postmortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "340291"
 wayback_captures = 12
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/RomanusSurt/20190412/340291/Das_Geisterschiff_Postmortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "341148"
@@ -2153,18 +2153,18 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "gd-indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-20"
 wayback_captures = 6
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "360226"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/DingDong/20200327/360226/Postmortem_A_Rationally_Designed_Funny_Game__The_making_of_biped_in_hindsight.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "360682"
@@ -2185,10 +2185,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "368294"
 wayback_captures = 17
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/DannyWeinbaum/20200817/368294/Postmortem_Eastshade.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "369617"
@@ -2217,10 +2217,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "375680"
 wayback_captures = 25
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/AlexeyStrelkov/20210104/375680/How_I_wasted_4k_and_half_a_year_of_my_life_to_develop_a_game_that_earned_only_30.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "375873"
@@ -2233,42 +2233,42 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "384419"
 wayback_captures = 5
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/LauraTallardy/20210701/384419/Steam_NextFest_PostMortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "386822"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/http://www.gamasutra.com/blogs/LindsayRollins/20210816/386822/Raptor_Boyfriend_A_Post_Mortem.php?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-postmortem-i-the-ramp-i-"
 wayback_captures = 13
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/design/postmortem-i-the-ramp-i-?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-postmortem-inkbound-s-journey-in-early-access"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
 wayback_captures = 3
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/production/postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-classic-postmortem-nanaonhas-haunt-2012"
@@ -2281,10 +2281,10 @@ wayback_print_ok = false
 [[wayback_link]]
 id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
 wayback_captures = 16
-wayback_print_captures = 3
+wayback_print_captures = 0
 wayback_ok = true
-wayback_print = "https://web.archive.org/web/<html><body><h1>503/https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012?print=1"
-wayback_print_ok = true
+wayback_print = ""
+wayback_print_ok = false
 
 [[wayback_link]]
 id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
