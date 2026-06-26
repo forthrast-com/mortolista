@@ -119,6 +119,13 @@ wiki-sales-sample:
 tags *ARGS:
     python scraper/scrape.py --tags-only {{ARGS}}
 
+# Editorial tags (outcome / production theme / business, incl. port) via an
+# OpenAI-compatible chat API -> data/tags_llm.toml. Configure the endpoint with
+# TAGS_LLM_BASE_URL / TAGS_LLM_API_KEY / TAGS_LLM_MODEL. Idempotent (skips ids
+# already done); append --tags-llm-dry-run to preview the prompt, or --limit N.
+tags-llm *ARGS:
+    python scraper/scrape.py --tags-llm-only {{ARGS}}
+
 sample:
     python scraper/scrape.py --sample 20
 

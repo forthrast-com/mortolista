@@ -284,11 +284,13 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 .tag-era{color:var(--cat-middleware)}
 .tag-platform{color:var(--gama-leaf)}
 .tag-studio{color:var(--cat-blog)}
-.tag-biz{color:var(--accent)}
+.tag-business{color:var(--accent)}
+.tag-theme{color:var(--cat-audio)}
 .tag-era.on{background:var(--cat-middleware)}
 .tag-platform.on{background:var(--gama-leaf)}
 .tag-studio.on{background:var(--cat-blog)}
-.tag-biz.on{background:var(--accent)}
+.tag-business.on{background:var(--accent)}
+.tag-theme.on{background:var(--cat-audio)}
 
 .notable{color:var(--accent); font-weight:bold; cursor:help}
 .author-link{color:var(--wiki-link); text-decoration:none}

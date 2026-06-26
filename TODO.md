@@ -36,11 +36,11 @@ postmortem features, linking out via the Wayback Machine.
       rendered as colour-coded chips and folded into the one grouped Type
       dropdown (single-select; a chip click drives it). Platform is
       distinctive-only (single-platform games keep their one; ports-everywhere
-      get none). **TODO:** editorial/outcome tags (crunch, scope-creep,
-      breakout-success, `port` — i.e. "we ported X to PS2", …) via a **local**
-      LLM classifier (ollama / llama.cpp,
-      strict controlled vocab) merging into the same sidecar — design +
-      vocab in `docs/tags_plan.md`.
+      get none). Editorial tier (outcome/theme/business incl. `port`) **built**:
+      `scraper/tags_llm.py` (`just tags-llm`) classifies via an OpenAI-compatible
+      API into `data/tags_llm.toml`, unioned client-side. **TODO:** run a full
+      pass with a chosen model + spot-check/tune the vocab — design in
+      `docs/tags_plan.md`.
 
 ## Ideas / niceties
 - [x] Intro "where to start" links: Game Developer's "10 seminal game

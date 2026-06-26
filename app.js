@@ -111,6 +111,21 @@ async function loadTags() {
   await loadOptionalSidecar("data/tags.toml", "tag", { tags: [] });
 }
 
+async function loadEditorialTags() {
+  // Editorial tags (outcome/theme/business) from the LLM pass, in their own
+  // sidecar; union them onto the deterministic/wiki tags. Optional — absent
+  // until `just tags-llm` has been run against an endpoint.
+  try {
+    const res = await fetch("data/tags_llm.toml", { cache: "no-cache" });
+    if (!res.ok) return;
+    const byId = new Map((parse(await res.text()).editorial_tag || []).map(r => [r.id, r.tags || []]));
+    DATA = DATA.map(d => {
+      const extra = byId.get(d.id);
+      return extra ? { ...d, tags: [...new Set([...(d.tags || []), ...extra])] } : d;
+    });
+  } catch (e) { /* best-effort */ }
+}
+
 async function loadMirrorSidecars() {
   await loadSidecar("data/archive_is_mirrors.toml", "archive_mirror");
   await loadSidecar("data/gamedeveloper_live_urls.toml", "gamedeveloper_live");
@@ -223,6 +238,7 @@ async function load() {
     await loadPhaseTwoMetrics();
     await loadMirrorSidecars();
     await loadTags();
+    await loadEditorialTags();
     await loadNotableAuthors();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
@@ -262,11 +278,12 @@ async function load() {
 // One unified filter dropdown: the big "Type" categories plus the tag axes
 // (era / platform / studio / business), grouped. Values are prefixed so render()
 // knows whether a pick filters the category field ("cat:…") or a tag ("tag:…").
-const AXIS_GROUPS = [["era", "Era"], ["platform", "Platform"], ["studio", "Studio"], ["biz", "Business"]];
+const AXIS_GROUPS = [["era", "Era"], ["platform", "Platform"], ["studio", "Studio"],
+  ["business", "Business"], ["theme", "Theme"]];
 function buildFilterOptions() {
   const cats = [...new Set(DATA.map(d => d.category).filter(Boolean))].sort();
-  const byAxis = { era: new Set(), platform: new Set(), studio: new Set(), biz: new Set() };
-  for (const d of DATA) for (const t of d.tags || []) byAxis[tagAxis(t)].add(t);
+  const byAxis = {};
+  for (const d of DATA) for (const t of d.tags || []) (byAxis[tagAxis(t)] ||= new Set()).add(t);
 
   catEl.innerHTML = `<option value="">Everything</option>`
     + `<option value="notable">Notable authors</option>`;
@@ -281,7 +298,7 @@ function buildFilterOptions() {
   };
   addGroup("Type", cats.map(c => ["cat:" + c, c]));
   for (const [axis, label] of AXIS_GROUPS) {
-    addGroup(label, [...byAxis[axis]].sort().map(t => ["tag:" + t, t]));
+    addGroup(label, [...(byAxis[axis] || [])].sort().map(t => ["tag:" + t, t]));
   }
 }
 
@@ -428,11 +445,13 @@ function catBadge(c) {
 }
 
 // Tag axis a tag belongs to, for colour-coding the chips. Eras are NNs.
+const BUSINESS_TAGS = ["kickstarter", "early-access", "self-published", "work-for-hire"];
 function tagAxis(t) {
   if (/^\d0s$/.test(t)) return "era";
   if (["pc", "console", "handheld", "mobile", "arcade", "flash", "web", "vr"].includes(t)) return "platform";
   if (["indie", "student", "aaa", "solo", "hobbyist"].includes(t)) return "studio";
-  return "biz"; // kickstarter, early-access, …
+  if (BUSINESS_TAGS.includes(t)) return "business";
+  return "theme"; // outcome + production themes (crunch, port, breakout-success, …)
 }
 
 // Browse tags (era/platform/studio/business) from data/tags.toml, rendered as
@@ -441,7 +460,7 @@ function tagAxis(t) {
 // the big Type categories. Same vintage idiom as the type badge.
 // Order chips by axis (era, then platform, studio, business), alpha within an
 // axis — reads more sensibly than the raw alphabetical sort from the sidecar.
-const TAG_AXIS_RANK = { era: 0, platform: 1, studio: 2, biz: 3 };
+const TAG_AXIS_RANK = { era: 0, platform: 1, studio: 2, business: 3, theme: 4 };
 function tagsHTML(d) {
   const tags = [...(d.tags || [])].sort((a, b) =>
     (TAG_AXIS_RANK[tagAxis(a)] - TAG_AXIS_RANK[tagAxis(b)]) || a.localeCompare(b));

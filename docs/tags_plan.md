@@ -65,37 +65,45 @@ Tier 3 (local-LLM editorial tags) remains the open follow-up below.
    `scraper/wiki.py`). Extend it to read the infobox `platforms` (and developer,
    for `aaa` vs `indie` heuristics) in the same request — near-zero marginal
    cost, covers the wiki-matched slice.
-3. **LLM, local model (TODO — see below):** the editorial/business tags
-   (`outcome`, `crunch`, `scope-creep`, `kickstarter`, `early-access`, …) that no
-   infobox carries. Classify each entry from its `summary` (+ page-1 body via
-   `fetch_snapshot`) against the fixed vocab above.
+3. **LLM via an OpenAI-compatible API (built — see below):** the
+   editorial/business tags (`outcome`, `crunch`, `scope-creep`, `port`, …) that no
+   infobox carries. Classifies each entry from its `summary` against the fixed
+   vocab above.
 
 ## Pipeline
 
-- New module `scraper/tags.py` + a `--tags-only` CLI mode on `scrape.py`
-  (mirrors the other sidecar refreshers) writing `data/tags.toml`.
-- Tiers 1–2 run there. Tier 3 is a separate, optional pass that merges its
-  output into the same sidecar so deterministic tags don't depend on the model
-  being available.
+- `scraper/tags.py` + `--tags-only` (`just tags`) writes `data/tags.toml` —
+  tiers 1–2.
+- `scraper/tags_llm.py` + `--tags-llm-only` (`just tags-llm`) writes
+  `data/tags_llm.toml` — tier 3. Separate sidecar so either can regenerate
+  without clobbering the other; the frontend unions them.
 
 ## Frontend (`app.js` / `style.css`)
 
-- Load `data/tags.toml` as a sidecar, merge by id (the `app.js:111` pattern).
-- Render tags as small clickable badges near the title (vintage styling, not a
-  second dropdown). Click a tag → filter the table by it; support clearing /
-  combining active tags.
+- Load `data/tags.toml` + `data/tags_llm.toml`, union tags by id.
+- Render tags as colour-coded chips above the title, and fold every tag into the
+  one grouped Type dropdown (single-select; a chip click drives it).
 
-## TODO — local-model editorial classifier
+## Tier 3 — editorial classifier (built)
 
-Implement tier 3 with a **local** instruct model (nix-first: ollama or
-llama.cpp; candidates `qwen2.5:7b-instruct`, `llama3.1:8b`). Requirements:
-- Strict JSON output constrained to the controlled vocab; temperature 0;
-  validate every returned tag against the allowed set and silently drop unknowns.
-- Few-shot prompt with 3–4 hand-tagged exemplars from this corpus.
-- Idempotent + cached per id (like the reddit-probe cache) so re-runs are cheap
-  and don't re-hit the model.
-- Write provenance `source.* = "llm-local"` so these are distinguishable from
-  deterministic/wiki tags and can be re-generated independently.
+`scraper/tags_llm.py` classifies each postmortem's summary against the fixed
+vocab via any **OpenAI-compatible** `/v1/chat/completions` endpoint — local
+(ollama, llama.cpp, LM Studio) or hosted. Run `just tags-llm`; configure with:
+- `TAGS_LLM_BASE_URL` (default `http://localhost:11434/v1`, ollama's OAI endpoint)
+- `TAGS_LLM_API_KEY` (sent as Bearer; local servers usually ignore it)
+- `TAGS_LLM_MODEL` (default `gemma3:12b`)
+
+Properties: strict JSON constrained to the vocab (temperature 0; every returned
+tag validated against the allowed set, unknowns dropped); 3 few-shot exemplars;
+idempotent (skips ids already in the output unless `--tags-llm-refresh`) with
+periodic flush so an interrupted run resumes cheaply. The whole-sidecar *is* the
+provenance (everything in `data/tags_llm.toml` is LLM-sourced). `port` emits the
+target platform too. Preview the prompt with `--tags-llm-dry-run`.
+
+Remaining: run a full pass with your chosen model and spot-check / tune the vocab
+and prompt — a 12B local model gets the obvious cases right but is imperfect on
+subtler ones (e.g. `first-game`). Optionally feed page-1 body text (via
+`fetch_snapshot`) for richer signal than the summary alone.
 - **`port`**: tag when the postmortem's *subject* is porting an existing game to
   a new platform ("we ported X to PS2", "bringing X to Switch") — not a passing
   mention of a later port. This is exactly the judgement deterministic/wiki tiers
