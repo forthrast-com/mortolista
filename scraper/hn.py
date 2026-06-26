@@ -256,7 +256,12 @@ def blog_postmortem_candidates(hn_posts, reddit_posts, known_ids):
     for r in rows:
         part = detect_blog_part(r["slug"], r["title"])
         if part:
-            r["series_stem"], r["part_no"], r["part_total"], r["part_label"] = part
+            stem, part_no, part_total, label = part
+            r["series_stem"], r["part_no"], r["part_label"] = stem, part_no, label
+            # part_total is None when the instalment count is unknown ("Part 1" with
+            # no "of N"); omit rather than write a TOML-illegal null.
+            if part_total is not None:
+                r["part_total"] = part_total
 
     # Cluster instalments of one series together (parts in order), ranking each
     # cluster by its strongest signal so a high-profile series stays near the top.

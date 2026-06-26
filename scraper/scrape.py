@@ -115,7 +115,10 @@ def main():
     if hn_posts:
         log(f"[*] loaded {len(hn_posts)} HN gamasutra posts")
 
-    ids = sorted(arts, key=int)
+    # numeric gamasutra ids sort numerically; curated gamedeveloper.com "gd-<slug>"
+    # ids have no number, so they sort lexically after (the two groups never compare
+    # across types). Final output is re-sorted by date below regardless.
+    ids = sorted(arts, key=lambda a: (0, int(a), "") if a.isdigit() else (1, 0, a))
     if args.sample:
         # spread the sample across the id range for variety
         step = max(1, len(ids) // args.sample)
