@@ -27,6 +27,10 @@ TAGS_LLM = DATA_DIR / "tags_llm.toml"
 BASE_URL = os.environ.get("TAGS_LLM_BASE_URL", "http://localhost:11434/v1").rstrip("/")
 API_KEY = os.environ.get("TAGS_LLM_API_KEY", "")
 MODEL = os.environ.get("TAGS_LLM_MODEL", "gemma3:12b")
+# Reasoning ("thinking") models spend tokens before the JSON, so bump this for
+# them (e.g. 1024); a non-thinking model needs only ~120. The <think> preamble
+# is stripped before parsing regardless.
+MAX_TOKENS = int(os.environ.get("TAGS_LLM_MAX_TOKENS", "512"))
 
 # Controlled vocab with one-line glosses. The model may only return these tags;
 # anything else is dropped. `port` additionally carries a target-platform tag so
@@ -113,24 +117,28 @@ def _user_prompt(article):
 
 
 def _extract_tags(content):
-    """Pull {"tags":[...]} out of a model response, tolerant of stray prose or
-    a <think> preamble; keep only valid-vocab tags."""
+    """Pull {"tags":[...]} out of a model response, tolerant of reasoning
+    preambles (<think>… or harmony <|channel>thought…); keep only vocab tags.
+
+    Reasoning models put the answer *after* their thinking (and may quote example
+    JSON earlier), so scan flat {...} objects and take the LAST one with a "tags"
+    key."""
     content = re.sub(r"<think>.*?</think>", "", content, flags=re.S)
-    m = re.search(r"\{.*\}", content, re.S)
-    if not m:
-        return []
-    try:
-        data = json.loads(m.group(0))
-    except json.JSONDecodeError:
-        return []
-    tags = data.get("tags", []) if isinstance(data, dict) else []
-    seen, out = set(), []
-    for t in tags:
-        t = str(t).strip().lower()
-        if t in VOCAB and t not in seen:
-            seen.add(t)
-            out.append(t)
-    return out
+    for blob in reversed(re.findall(r"\{[^{}]*\}", content, re.S)):
+        try:
+            data = json.loads(blob)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(data, dict) or "tags" not in data:
+            continue
+        seen, out = set(), []
+        for t in data.get("tags") or []:
+            t = str(t).strip().lower()
+            if t in VOCAB and t not in seen:
+                seen.add(t)
+                out.append(t)
+        return out
+    return []
 
 
 def classify(article, timeout=120):
@@ -139,7 +147,7 @@ def classify(article, timeout=120):
         "model": MODEL,
         "messages": _messages(article),
         "temperature": 0,
-        "max_tokens": 120,
+        "max_tokens": MAX_TOKENS,
     }
     headers = {"Content-Type": "application/json"}
     if API_KEY:

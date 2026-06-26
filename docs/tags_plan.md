@@ -92,6 +92,20 @@ vocab via any **OpenAI-compatible** `/v1/chat/completions` endpoint — local
 - `TAGS_LLM_BASE_URL` (default `http://localhost:11434/v1`, ollama's OAI endpoint)
 - `TAGS_LLM_API_KEY` (sent as Bearer; local servers usually ignore it)
 - `TAGS_LLM_MODEL` (default `gemma3:12b`)
+- `TAGS_LLM_MAX_TOKENS` (default 512; bump for verbose reasoning models)
+
+Works with any such endpoint — verified against [cocore.dev](https://cocore.dev)
+(an AT-Proto AI cooperative), e.g.:
+
+    export TAGS_LLM_BASE_URL="https://cocore.dev/v1"
+    export TAGS_LLM_API_KEY="cocore-…"            # keep out of tracked files
+    export TAGS_LLM_MODEL="mlx-community/Qwen2.5-7B-Instruct-4bit"
+    just tags-llm
+
+Prefer a **non-reasoning** instruct model (Qwen2.5-Instruct, gemma-3-it): several
+cocore models emit a `<think>`/`<|channel>thought` preamble that's slower and
+needs a higher `TAGS_LLM_MAX_TOKENS` to reach the JSON (the parser strips the
+preamble and takes the last JSON object regardless).
 
 Properties: strict JSON constrained to the vocab (temperature 0; every returned
 tag validated against the allowed set, unknowns dropped); 3 few-shot exemplars;
