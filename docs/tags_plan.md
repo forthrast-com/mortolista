@@ -38,6 +38,14 @@ outcome = "llm-local"
 - **process/theme**: `crunch` `scope-creep` `pivot` `first-game` `port`
   `engine-switch` `team-conflict` `long-dev` `rushed`
 
+## Status
+
+Tiers 1–2 **shipped** (2026-06-26): `scraper/tags.py` + `just tags` /
+`--tags-only` write `data/tags.toml`; the frontend renders colour-coded chips
+(era/platform/studio/business) with click-to-filter (AND) and an active-filter
+bar. 289/289 entries tagged, 203 wiki-matched. Tier 3 (local-LLM editorial
+tags) remains the open follow-up below.
+
 ## Sourcing tiers
 
 1. **Deterministic (build first, free, reproducible):**

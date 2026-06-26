@@ -113,6 +113,12 @@ wiki-sales:
 wiki-sales-sample:
     python scraper/scrape.py --wiki-sales-only --limit 10
 
+# Derive browse tags (era/platform/studio/business) -> data/tags.toml.
+# Deterministic tier needs no network; the wiki-category tier reuses the
+# game->wiki match from the sales sidecar (one page fetch per matched title).
+tags *ARGS:
+    python scraper/scrape.py --tags-only {{ARGS}}
+
 sample:
     python scraper/scrape.py --sample 20
 

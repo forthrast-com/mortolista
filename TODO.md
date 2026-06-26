@@ -30,12 +30,14 @@ postmortem features, linking out via the Wayback Machine.
       proxied by `wayback_captures`. Consider OpenPageRank or Common Crawl.
 - [ ] **Author significance nuance** — current flag is binary Wikipedia
       presence. Could weight by article length / specific curated list.
-- [ ] **Tags** — richer browse axes beyond the single `category` Type field:
-      platform/era, studio/business, editorial themes. Stored in a
-      `data/tags.toml` sidecar (regenerated `postmortems.toml` can't hold them),
-      rendered as clickable badges. Deterministic + Wikipedia-infobox tiers
-      first; editorial/outcome tags via a **local** LLM classifier (ollama /
-      llama.cpp, strict controlled vocab) — design in `docs/tags_plan.md`.
+- [~] **Tags** — richer browse axes beyond the single `category` Type field.
+      **Done:** deterministic + Wikipedia-category tiers (era/platform/studio/
+      business) in `scraper/tags.py` (`just tags`) -> `data/tags.toml` sidecar,
+      rendered as clickable colour-coded chips with click-to-filter (AND) + an
+      active-filter bar. **TODO:** editorial/outcome tags (crunch, scope-creep,
+      breakout-success, …) via a **local** LLM classifier (ollama / llama.cpp,
+      strict controlled vocab) merging into the same sidecar — design +
+      vocab in `docs/tags_plan.md`.
 
 ## Ideas / niceties
 - [x] Intro "where to start" links: Game Developer's "10 seminal game

@@ -7,11 +7,13 @@ const catEl = document.getElementById("category");
 const notableEl = document.getElementById("notableOnly");
 const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
+const tagbarEl = document.getElementById("tagbar");
 const tableScroll = document.querySelector(".table-scroll");
 const tableWrap = document.querySelector(".table-wrap");
 
 let DATA = [];
 let NOTABLE_AUTHORS = new Map(); // author name -> Wikipedia URL
+let activeTags = new Set();      // tags the reader has clicked to filter by (AND)
 let sortKey = "agg_score";
 let sortDir = -1; // -1 desc, 1 asc
 
@@ -104,6 +106,12 @@ async function loadNotableAuthors() {
 async function loadPhaseTwoMetrics() {
   await loadOptionalSidecar("data/reddit_postmortem_threads.toml", "reddit_postmortem", BLANK_REDDIT);
   await loadOptionalSidecar("data/wikipedia_game_sales.toml", "wiki_game_sales", BLANK_SALES);
+}
+
+async function loadTags() {
+  // Browse tags (era/platform/studio/business) from data/tags.toml; absence
+  // just leaves entries untagged and the tag filter empty.
+  await loadOptionalSidecar("data/tags.toml", "tag", { tags: [] });
 }
 
 async function loadMirrorSidecars() {
@@ -217,6 +225,7 @@ async function load() {
     await loadHnMetrics();
     await loadPhaseTwoMetrics();
     await loadMirrorSidecars();
+    await loadTags();
     await loadNotableAuthors();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
@@ -286,6 +295,10 @@ function render() {
   let list = DATA.filter(d => {
     if (cat && d.category !== cat) return false;
     if (notable && !d.author_notable) return false;
+    if (activeTags.size) {
+      const dt = d.tags || [];
+      if (![...activeTags].every(t => dt.includes(t))) return false;
+    }
     if (q) {
       const hay = (d.title + " " + d.game + " " + (d.authors || []).join(" ") + " " + (d._search || "")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -394,6 +407,44 @@ function catClass(c) {
 function catBadge(c) {
   if (!c || c.trim().toLowerCase() === "postmortem") return "";
   return `<span class="cat ${catClass(c)}">${esc(c)}</span>`;
+}
+
+// Tag axis a tag belongs to, for colour-coding the chips. Eras are NNs.
+function tagAxis(t) {
+  if (/^\d0s$/.test(t)) return "era";
+  if (["pc", "console", "handheld", "mobile", "arcade", "flash", "web", "vr"].includes(t)) return "platform";
+  if (["indie", "student", "aaa", "solo", "hobbyist"].includes(t)) return "studio";
+  return "biz"; // kickstarter, early-access, …
+}
+
+// Browse tags (era/platform/studio/business) from data/tags.toml, rendered as
+// small toggle chips. Clicking one filters the table to entries carrying it;
+// multiple active tags combine with AND. Same vintage idiom as the type badge.
+function tagsHTML(d) {
+  const tags = d.tags || [];
+  if (!tags.length) return "";
+  return `<span class="tags">` + tags.map(t =>
+    `<button type="button" class="tag tag-${tagAxis(t)}${activeTags.has(t) ? " on" : ""}"`
+    + ` data-tag="${esc(t)}" aria-pressed="${activeTags.has(t)}">${esc(t)}</button>`
+  ).join("") + `</span>`;
+}
+
+// The active-tag filter bar above the table: a removable chip per active tag
+// plus clear-all; hidden when nothing's selected.
+function renderTagBar() {
+  if (!tagbarEl) return;
+  if (!activeTags.size) { tagbarEl.hidden = true; tagbarEl.innerHTML = ""; return; }
+  tagbarEl.hidden = false;
+  tagbarEl.innerHTML = `<span class="tagbar-label">Filtering by</span>`
+    + [...activeTags].sort().map(t =>
+        `<button type="button" class="tag tag-${tagAxis(t)} on" data-tag="${esc(t)}">${esc(t)} ✕</button>`).join("")
+    + `<button type="button" class="tag-clear" data-clear="1">clear</button>`;
+}
+
+function toggleTag(t) {
+  if (activeTags.has(t)) activeTags.delete(t); else activeTags.add(t);
+  renderTagBar();
+  render();
 }
 
 function metricValue(d, k) {
@@ -774,7 +825,7 @@ function rowHTML(d) {
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell">${topBadges}${metaTop}${gameLine}${title}${headlineFoot}</td>
+    <td class="main-cell">${topBadges}${metaTop}${gameLine}${title}${headlineFoot}${tagsHTML(d)}</td>
     <td class="num date-cell">${date}</td>
     ${hnCell}
     ${redditCell}
@@ -803,6 +854,19 @@ sortSel.addEventListener("change", () => {
 searchEl.addEventListener("input", render);
 catEl.addEventListener("change", render);
 notableEl.addEventListener("change", render);
+
+// Tag chips live inside re-rendered rows and the filter bar, so delegate.
+rowsEl.addEventListener("click", e => {
+  const b = e.target.closest(".tag");
+  if (!b) return;
+  e.preventDefault();
+  toggleTag(b.dataset.tag);
+});
+tagbarEl.addEventListener("click", e => {
+  if (e.target.closest(".tag-clear")) { activeTags.clear(); renderTagBar(); render(); return; }
+  const b = e.target.closest(".tag");
+  if (b) toggleTag(b.dataset.tag);
+});
 
 // ---- Theme toggle (light / dark), persisted in localStorage ----
 const themeToggle = document.getElementById("themeToggle");
