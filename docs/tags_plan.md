@@ -43,8 +43,9 @@ outcome = "llm-local"
 Tiers 1–2 **shipped** (2026-06-26): `scraper/tags.py` + `just tags` /
 `--tags-only` write `data/tags.toml`; the frontend renders colour-coded chips
 (era/platform/studio/business) and folds every tag into the one **Type
-dropdown** (grouped: Type / Era / Platform / Studio / Business — single-select;
-a chip click drives the same control). 289/289 tagged, 203 wiki-matched.
+dropdown** (grouped: Type / Era / Platform / Studio / Business, plus a Notable-authors
+option — single-select; a chip click drives the same control). Chips sit above
+the title alongside the type badge. 289/289 tagged, 203 wiki-matched.
 
 Platform is **distinctive-only**: a single-platform game keeps its one platform
 (Half-Life → `pc`, an arcade/mobile-only title → that), but a port-everywhere

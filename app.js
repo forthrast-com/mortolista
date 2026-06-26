@@ -4,7 +4,6 @@ const rowsEl = document.getElementById("rows");
 const statusEl = document.getElementById("status");
 const searchEl = document.getElementById("search");
 const catEl = document.getElementById("category");
-const notableEl = document.getElementById("notableOnly");
 const countEl = document.getElementById("count");
 const sortSel = document.getElementById("sortSel");
 const tableScroll = document.querySelector(".table-scroll");
@@ -269,7 +268,8 @@ function buildFilterOptions() {
   const byAxis = { era: new Set(), platform: new Set(), studio: new Set(), biz: new Set() };
   for (const d of DATA) for (const t of d.tags || []) byAxis[tagAxis(t)].add(t);
 
-  catEl.innerHTML = `<option value="">Everything</option>`;
+  catEl.innerHTML = `<option value="">Everything</option>`
+    + `<option value="notable">Notable authors</option>`;
   const addGroup = (label, opts) => {
     if (!opts.length) return;
     const og = document.createElement("optgroup"); og.label = label;
@@ -308,14 +308,15 @@ function updateScrollFades() {
 
 function render() {
   const q = searchEl.value.trim().toLowerCase();
-  const sel = catEl.value;                 // "", "cat:<category>" or "tag:<tag>"
-  const selKind = sel.slice(0, 3), selVal = sel.slice(4);
-  const notable = notableEl.checked;
+  const sel = catEl.value;          // "", "cat:<category>", "tag:<tag>", or "notable"
+  const ci = sel.indexOf(":");
+  const selKind = ci < 0 ? sel : sel.slice(0, ci);
+  const selVal = ci < 0 ? "" : sel.slice(ci + 1);
 
   let list = DATA.filter(d => {
     if (selKind === "cat" && d.category !== selVal) return false;
     if (selKind === "tag" && !(d.tags || []).includes(selVal)) return false;
-    if (notable && !d.author_notable) return false;
+    if (selKind === "notable" && !d.author_notable) return false;
     if (q) {
       const hay = (d.title + " " + d.game + " " + (d.authors || []).join(" ") + " " + (d._search || "")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -779,19 +780,21 @@ function rowHTML(d) {
   const mirrors = seriesParts || mirrorLine || discussions
     ? `<span class="mirrors">${seriesParts}${mirrorLine}${discussions}</span>`
     : "";
+  const tags = tagsHTML(d);
   // Mobile-only meta line above the headline (desktop carries the date in its
-  // own column and the type/part badges sit above the title instead).
+  // own column and the type/tag/part badges sit above the title instead).
   const metaTop = `<span class="meta-top">`
     + `<span class="m-date">${date}</span>`
     + catBadge(d.category)
+    + tags
     + partBadge(d)
     + seriesBadge(d)
     + sortSignalHTML(d)
     + `</span>`;
-  // Type + series badges above the title; shown on desktop, hidden on mobile
-  // where the meta line carries the type.
-  const topBadges = (catBadge(d.category) || partBadge(d) || seriesBadge(d))
-    ? `<span class="top-badges">${catBadge(d.category)}${partBadge(d)}${seriesBadge(d)}</span>`
+  // Type + tag + series badges above the title; shown on desktop, hidden on
+  // mobile where the meta line carries them.
+  const topBadges = (catBadge(d.category) || tags || partBadge(d) || seriesBadge(d))
+    ? `<span class="top-badges">${catBadge(d.category)}${tags}${partBadge(d)}${seriesBadge(d)}</span>`
     : "";
   const byline = d.authors && d.authors.length
     ? `<span class="byline">by ${d.authors.map(name => authorHTML(name)).join(", ")}</span>`
@@ -826,7 +829,7 @@ function rowHTML(d) {
   return `<tr class="r-main">
     <td class="rank-cell" rowspan="2" title="Balanced rank (1–${DATA.length})">${d.balanced_rank}</td>
     <td class="thumb-cell${thumb ? "" : " no-thumb"}" rowspan="2">${thumb}</td>
-    <td class="main-cell">${topBadges}${metaTop}${gameLine}${title}${headlineFoot}${tagsHTML(d)}</td>
+    <td class="main-cell">${topBadges}${metaTop}${gameLine}${title}${headlineFoot}</td>
     <td class="num date-cell">${date}</td>
     ${hnCell}
     ${redditCell}
@@ -854,7 +857,6 @@ sortSel.addEventListener("change", () => {
 });
 searchEl.addEventListener("input", render);
 catEl.addEventListener("change", render);
-notableEl.addEventListener("change", render);
 
 // Tag chips live inside re-rendered rows, so delegate. A chip drives the unified
 // filter dropdown; clicking the already-active chip clears the filter.

@@ -273,7 +273,7 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 
 /* Browse tags: quiet ghost chips under the headline; fill by axis when active.
    Kept lighter than the solid type badge since an entry carries several. */
-.tags{display:flex; flex-wrap:wrap; gap:4px; margin-top:6px}
+.tags{display:inline-flex; flex-wrap:wrap; gap:4px; align-items:center}
 .tag{
   font:inherit; font-size:10px; text-transform:uppercase; letter-spacing:.4px;
   color:var(--muted); background:transparent; border:1px solid var(--rule);
