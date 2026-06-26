@@ -56,7 +56,7 @@ GAMEDEV_URLS = [
     "https://www.gamedeveloper.com/business/indie-postmortem-sydney-hunter-and-the-curse-of-the-mayan-2019-",
 ]
 
-# Round 2 candidates (from ROUND2_gamedev_postmortem_candidate_additions.md). The
+# Round 2 candidates (from docs/ROUND2_gamedev_postmortem_candidate_additions.md). The
 # eight overlaps with Tier B (HL2, Psychonauts, Silent Hill 4, Deadly Premonition,
 # KOTOR II, Civ V, Out There, Xeodrifter) are already includes, so they're skipped
 # by the `have` dedupe — only the genuinely new URLs live here.

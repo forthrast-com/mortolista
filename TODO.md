@@ -51,7 +51,8 @@ postmortem features, linking out via the Wayback Machine.
 - [ ] **Video / GDC postmortems (Tier C): deferred on purpose.** This is where the
       existing `category`/type field earns its keep — add a `format` (article|video)
       or a `video` category and render it distinctly, rather than pretending a GDC
-      talk is a written article. Candidates listed in the candidate_missing md.
+      talk is a written article. Candidates listed in
+      `docs/candidate_missing_gamasutra_gamedev_postmortems.md`.
 - [ ] Pick the *best-rendered* snapshot per article for the Wayback link
       (some early captures are partial).
 - [ ] Periodic refresh via GitHub Action (like the reference project).
