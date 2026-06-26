@@ -439,8 +439,12 @@ function tagAxis(t) {
 // small colour-coded chips under the headline. Clicking one drives the unified
 // filter dropdown (and re-clicking the active one clears it) — same control as
 // the big Type categories. Same vintage idiom as the type badge.
+// Order chips by axis (era, then platform, studio, business), alpha within an
+// axis — reads more sensibly than the raw alphabetical sort from the sidecar.
+const TAG_AXIS_RANK = { era: 0, platform: 1, studio: 2, biz: 3 };
 function tagsHTML(d) {
-  const tags = d.tags || [];
+  const tags = [...(d.tags || [])].sort((a, b) =>
+    (TAG_AXIS_RANK[tagAxis(a)] - TAG_AXIS_RANK[tagAxis(b)]) || a.localeCompare(b));
   if (!tags.length) return "";
   const sel = catEl.value;
   return `<span class="tags">` + tags.map(t =>
