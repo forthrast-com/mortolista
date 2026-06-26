@@ -10,3 +10,6 @@ scraper/logs/
 # macOS / direnv cruft
 .DS_Store
 .direnv/
+
+# Claude Code agent worktrees / scratch
+.claude/
