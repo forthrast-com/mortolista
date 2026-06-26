@@ -135,6 +135,18 @@ a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-r
 .table-scroll::after{right:0; background:linear-gradient(to left, var(--paper), transparent)}
 .table-scroll.can-left::before{opacity:1}
 .table-scroll.can-right::after{opacity:1}
+/* the body fades sit behind the header row (thead z-index 4), so the top row
+   needs its own edge fades — same paper wash, but layered above the header so
+   its green dissolves into the page too. --head-h (set in app.js) confines
+   them to the header band so they don't smear over the body. */
+.head-fade{
+  position:absolute; top:0; height:var(--head-h,0); width:48px; z-index:6;
+  pointer-events:none; opacity:0; transition:opacity .15s ease;
+}
+.head-fade-l{left:0; background:linear-gradient(to right, var(--paper), transparent)}
+.head-fade-r{right:0; background:linear-gradient(to left, var(--paper), transparent)}
+.table-scroll.can-left .head-fade-l{opacity:1}
+.table-scroll.can-right .head-fade-r{opacity:1}
 table{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--rule)}
 thead th{
   position:sticky; top:0; z-index:4;
@@ -155,6 +167,15 @@ thead th.num{text-align:right}
 .sticky-head{position:fixed; top:0; z-index:50; overflow:hidden; pointer-events:auto}
 .sticky-head[hidden]{display:none}
 .sticky-head > table{table-layout:fixed; border-collapse:collapse; margin:0; will-change:transform}
+/* mirror the header's edge fades onto the pinned clone */
+.sticky-head::before,.sticky-head::after{
+  content:""; position:absolute; top:0; bottom:0; width:48px; z-index:6;
+  pointer-events:none; opacity:0; transition:opacity .15s ease;
+}
+.sticky-head::before{left:0; background:linear-gradient(to right, var(--paper), transparent)}
+.sticky-head::after{right:0; background:linear-gradient(to left, var(--paper), transparent)}
+.sticky-head.can-left::before{opacity:1}
+.sticky-head.can-right::after{opacity:1}
 th.sorted-asc::after{content:" ▲"; font-size:9px}
 th.sorted-desc::after{content:" ▼"; font-size:9px}
 
@@ -313,7 +334,7 @@ footer .wrap{line-height:1.6}
   /* cards, not a wide grid: drop the horizontal scroll + fades */
   .table-wrap{overflow-x:visible}
   #grid{min-width:0}
-  .table-scroll::before,.table-scroll::after{display:none}
+  .table-scroll::before,.table-scroll::after,.head-fade{display:none}
   thead{display:none}
   table,tbody,tbody tr{display:block}
   table{border:none; background:transparent}
@@ -377,7 +398,7 @@ footer .wrap{line-height:1.6}
   #toolbar,.rank-col,.rank-cell,.thumb-col,.thumb-cell,#status,.theme-toggle,.livenote{display:none}
   .table-wrap{overflow:visible}
   #grid{min-width:0}
-  .table-scroll::before,.table-scroll::after{display:none}
+  .table-scroll::before,.table-scroll::after,.head-fade{display:none}
   #masthead{background:none; color:#000; border-bottom:2px solid #000; padding:0 0 8px}
   #masthead .sub,.tagline{color:#333}
   table,thead th{border-color:#999}

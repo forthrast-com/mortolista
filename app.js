@@ -273,6 +273,9 @@ function updateScrollFades() {
   const x = tableWrap.scrollLeft;
   tableScroll.classList.toggle("can-left", x > 1);
   tableScroll.classList.toggle("can-right", x < max - 1);
+  // confine the header's edge fades to the header band (see .head-fade in css)
+  const head = tableWrap.querySelector("thead");
+  tableScroll.style.setProperty("--head-h", (head ? head.offsetHeight : 0) + "px");
 }
 
 function render() {
@@ -363,6 +366,10 @@ const stickyHead = (() => {
     overlay.style.width = tableWrap.clientWidth + "px";
     clone.style.width = table.offsetWidth + "px";
     clone.style.transform = `translateX(${-tableWrap.scrollLeft}px)`;
+    // mirror the edge fades so the pinned header reads as scrollable too
+    const max = tableWrap.scrollWidth - tableWrap.clientWidth;
+    overlay.classList.toggle("can-left", tableWrap.scrollLeft > 1);
+    overlay.classList.toggle("can-right", tableWrap.scrollLeft < max - 1);
   }
   function refresh() { rebuild(); sync(); }
   window.addEventListener("scroll", sync, { passive: true });
