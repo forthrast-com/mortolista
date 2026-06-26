@@ -2,14 +2,21 @@ name: Deploy to GitHub Pages
 
 # No-build static site: assemble the published files and deploy them with the
 # official Pages actions. Runs on pushes to main; can also be triggered by hand.
+#
+# It also does incremental thumbnail mirroring: any newly-added Wayback thumbs
+# are fetched into data/thumbs/ before the artifact is assembled, so they ship
+# in this very deploy, then committed back as the permanent cache (best-effort —
+# a failed commit never blocks the deploy). The bulk backfill was done off a
+# non-GitHub host since Wayback blocks Actions IPs harder; this just keeps up
+# with the handful added per push. See scraper/cache_thumbnails.py.
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Permissions the deploy actions need to publish to Pages.
+# contents:write so the mirror can commit newly-cached thumbnails back.
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -21,11 +28,20 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow tomli-w
+      - name: Mirror any newly-added thumbnails
+        # idempotent + best-effort: stops cleanly if Wayback rate-limits us, and
+        # whatever it can't fetch just keeps its remote URL for the next push
+        run: python scraper/cache_thumbnails.py --limit 40 --delay 10
       - name: Configure Pages
         # Pages must be enabled once by hand (Settings → Pages → Source:
         # GitHub Actions); the org token can't create the Pages site itself.
@@ -38,3 +54,23 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Commit newly mirrored thumbnails
+        # after the deploy: persist the cache to the repo. Best-effort, so a push
+        # race can't fail an already-succeeded deploy; the next run retries.
+        continue-on-error: true
+        run: |
+          if [ -z "$(git status --porcelain data/thumbs data/postmortems.toml data/blog_curation.toml)" ]; then
+            echo "No new thumbnails to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/thumbs data/postmortems.toml data/blog_curation.toml
+          git commit -m "Mirror thumbnails into the repo (automated)"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            echo "push attempt $attempt failed; retrying"
+            sleep 5
+          done
+          echo "could not push after retries" >&2
+          exit 1
