@@ -1,8 +1,3 @@
-# Curated game/summary/thumbnail overrides for /blogs/ postmortems whose
-# essay-style titles don't name the game, whose meta-description was truncated,
-# or whose thumbnail the scraper couldn't auto-detect. Applied by id in
-# load_curated_postmortems and merged over the derived fields.
-
 [[entry]]
 id = "87650"
 game = "The Oil Blue"
@@ -32,25 +27,25 @@ summary = "The Museum of Art and Digital Entertainment's postmortem of Minecraft
 id = "199358"
 game = "DwarfCorp"
 summary = "The team behind DwarfCorp — a 3D sim/strategy game about a colony of ruthless capitalist dwarves — share what they learned running its successful Kickstarter."
-thumbnail = "https://web.archive.org/web/20130916060444im_/http://www.dwarfcorp.com/site/wp-content/uploads/2013/07/resources3.png"
+thumbnail = "data/thumbs/199358.webp"
 
 [[entry]]
 id = "207899"
 game = "Indoor Pub Games: Sports World"
 summary = "Richard Hill-Whittall's bruising postmortem of Indoor Sports World, his first PS Vita title, self-funded to the brink of personal ruin."
-thumbnail = "https://web.archive.org/web/20140102115945im_/http://wjm.s3.amazonaws.com/gamasutra/uploads/3484_1384905659.jpg"
+thumbnail = "data/thumbs/207899.webp"
 
 [[entry]]
 id = "211326"
 game = "Darkest Dungeon"
 summary = "Red Hook Studios breaks down the first half of Darkest Dungeon's Kickstarter, which blew past its $75k goal to over $240k from 7,300+ backers."
-thumbnail = "https://web.archive.org/web/20140307104646im_/http://gamasutra.com/db_area/images/blog/211326/dd_ks.jpg"
+thumbnail = "data/thumbs/211326.webp"
 
 [[entry]]
 id = "216965"
 game = "9.03m"
 summary = "Karl Inglott's postmortem of 9.03m, a short first-person art game that grew from an Abertay University project into a Steam-Greenlit release."
-thumbnail = "https://web.archive.org/web/20140510213100im_/http://www.gamasutra.com/db_area/images/blog/216965/9_03m%20Promo.jpg"
+thumbnail = "data/thumbs/216965.webp"
 
 [[entry]]
 id = "224920"
@@ -61,55 +56,55 @@ summary = "Kee-Won Hong of Iterative Games lays out the full post-Kickstarter fi
 id = "233818"
 game = "Aegis Defenders"
 summary = "Guts Department's crowdfunding postmortem for Aegis Defenders, distilling the advice they kept handing other teams after their own runaway Kickstarter."
-thumbnail = "https://web.archive.org/web/20150112162446im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/949735.jpg"
+thumbnail = "data/thumbs/233818.webp"
 
 [[entry]]
 id = "234086"
 game = "The War Z"
 summary = "Sergey Titov's postmortem of The War Z (later Infestation: Survivor Stories), one of 2012's most controversial launches, from inception to aftermath."
-thumbnail = "https://web.archive.org/web/20150114021258im_/http://gamasutra.com/db_area/images/I_SS%20screen2.jpg"
+thumbnail = "data/thumbs/234086.webp"
 
 [[entry]]
 id = "235408"
 game = "Octodad: Dadliest Catch"
 summary = "Part one of Young Horses' postmortem of Octodad: Dadliest Catch — an overview of the studio's story behind the octopus-masquerading-as-a-dad game."
-thumbnail = "https://web.archive.org/web/20150203011652im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/946737.jpg"
+thumbnail = "data/thumbs/235408.webp"
 
 [[entry]]
 id = "235823"
 game = "Octodad: Dadliest Catch"
 summary = "Part two of the Octodad: Dadliest Catch postmortem: production — scheduling, business calls, and the slog of actually shipping the game."
-thumbnail = "https://web.archive.org/web/20150206084448im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/945119.jpg"
+thumbnail = "data/thumbs/235823.webp"
 
 [[entry]]
 id = "235951"
 game = "Octodad: Dadliest Catch"
 summary = "Part three of the Octodad: Dadliest Catch postmortem: creative director Kevin Zuhn on the design behind its deliberately unwieldy controls."
-thumbnail = "https://web.archive.org/web/20150211034606im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/996087.png"
+thumbnail = "data/thumbs/235951.webp"
 
 [[entry]]
 id = "236427"
 game = "Goat Simulator"
 summary = "Armin Ibrisagic's postmortem of Goat Simulator, the joke-physics sandbox that went from a throwaway game-jam build to a runaway hit."
-thumbnail = "https://web.archive.org/web/20150223230954im_/http://gamasutra.com/db_area/images/blog/236427/jetpack.jpg"
+thumbnail = "data/thumbs/236427.webp"
 
 [[entry]]
 id = "254610"
 game = "Wordsum"
 summary = "Carleton DiLeo's postmortem of Wordsum, a mobile word game that capped a ten-year solo journey from tutorials and prototypes to a finished release."
-thumbnail = "https://web.archive.org/web/20150928200510im_/http://gamasutra.com/db_area/images/blog/254610/early_prototype.png"
+thumbnail = "data/thumbs/254610.webp"
 
 [[entry]]
 id = "260239"
 game = "Swing Racers"
 summary = "Cory Spooner of Morepork Games on Swing Racers, an iOS racer where you pull your car around the house with a rubber band."
-thumbnail = "https://web.archive.org/web/20151126144112im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/1928_1383618259.jpg"
+thumbnail = "data/thumbs/260239.webp"
 
 [[entry]]
 id = "260265"
 game = "Bastion"
 summary = "A porting studio's postmortem of bringing Bastion — originally an XNA/C# Xbox 360 title — to the PlayStation Vita, their toughest job yet."
-thumbnail = "https://web.archive.org/web/20151224140623im_/http://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/988853.png"
+thumbnail = "data/thumbs/260265.webp"
 
 [[entry]]
 id = "267827"
@@ -229,7 +224,7 @@ summary = "On August 28th I released my second game on Steam into early access, 
 id = "372977"
 game = "Children of Morta"
 summary = "Children of Morta is a narrative-driven, roguelike action game about a family of guardians. A year has passed since the launch of the game. This…"
-thumbnail = "https://web.archive.org/web/20201103054439im_/https://d1506sp6x4e9z7.cloudfront.net/gamasutra/uploads/1028926.png"
+thumbnail = "data/thumbs/372977.webp"
 
 [[entry]]
 id = "374142"

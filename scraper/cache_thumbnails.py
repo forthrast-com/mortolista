@@ -28,6 +28,7 @@ import os
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -90,6 +91,12 @@ def emit_outputs(**kv):
             f.write(f"{k}={v}\n")
 
 
+def _safe_url(url):
+    """Percent-encode chars urllib rejects (archived filenames carry spaces &c.)
+    without double-encoding escapes already present."""
+    return urllib.parse.quote(url, safe="/:?#[]@!$&'()*+,;=~%")
+
+
 def _retry_after(headers):
     raw = headers.get("Retry-After") if headers else None
     try:
@@ -108,7 +115,7 @@ def fetch(url, retries=3, delay=5.0):
     last = None
     for attempt in range(retries + 1):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "mortolista-thumb-mirror"})
+            req = urllib.request.Request(_safe_url(url), headers={"User-Agent": "mortolista-thumb-mirror"})
             with urllib.request.urlopen(req, timeout=45) as r:
                 return r.read(), r.headers.get("Content-Type", "")
         except urllib.error.HTTPError as e:
