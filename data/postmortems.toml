@@ -2311,7 +2311,7 @@ alt_ids = [
 [[postmortem]]
 id = "129981"
 title = "Postmortem - Gangs of GDC: Rumble in the Moscone Center"
-game = "- Gangs of GDC: Rumble in the Moscone Center"
+game = "Gangs of GDC: Rumble in the Moscone Center"
 authors = [
     "Gregory Trefry",
 ]
@@ -3010,7 +3010,9 @@ alt_ids = [
 id = "115711"
 title = "The Game Developer Archives: 'Postmortem: Ensemble's Age of Empires'"
 game = "The Game Developer Archives: 'Postmortem: Ensemble's Age of Empires'"
-authors = []
+authors = [
+    "Matt Pritchard",
+]
 date = "2009-08-12"
 date_estimated = false
 category = "Postmortem"
@@ -3374,7 +3376,9 @@ alt_ids = [
 id = "118990"
 title = "Classic Postmortem: Atari Games' San Francisco Rush: Extreme Racing"
 game = "Classic Postmortem: Atari Games' San Francisco Rush: Extreme Racing"
-authors = []
+authors = [
+    "Cameron Petty",
+]
 date = "2010-04-22"
 date_estimated = false
 category = "Postmortem"
@@ -3976,7 +3980,9 @@ alt_ids = [
 id = "6742"
 title = "Postmortem: Days of Wonder's Ticket to Ride Pocket"
 game = "Days of Wonder's Ticket to Ride Pocket"
-authors = []
+authors = [
+    "Gerald Guyomard",
+]
 date = "2012-02-22"
 date_estimated = false
 category = "Postmortem"
@@ -4483,7 +4489,7 @@ author_notable = false
 [[postmortem]]
 id = "193695"
 title = "Postmortem - Sony Santa Monica's God of War: Ascension"
-game = "- Sony Santa Monica's God of War: Ascension"
+game = "Sony Santa Monica's God of War: Ascension"
 authors = [
     "Whitney Wade",
     "Chacko Sonny",
@@ -4848,7 +4854,9 @@ author_notable = false
 id = "234421"
 title = "Postmortem: Monolith Productions' Middle-earth: Shadow of Mordor"
 game = "Monolith Productions' Middle-earth: Shadow of Mordor"
-authors = []
+authors = [
+    "Michael de Plater",
+]
 date = "2015-01-20"
 date_estimated = true
 category = "Postmortem"
@@ -4956,7 +4964,9 @@ author_notable = false
 id = "237657"
 title = "Postmortem: Failbetter Games' Sunless Sea"
 game = "Failbetter Games' Sunless Sea"
-authors = []
+authors = [
+    "Alexis Kennedy",
+]
 date = "2015-03-04"
 date_estimated = true
 category = "Postmortem"
@@ -4967,7 +4977,7 @@ wayback = "https://web.archive.org/web/20150304112545/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "gd-out-there-a-postmortem"
@@ -4992,7 +5002,9 @@ author_notable = false
 id = "248567"
 title = "Postmortem: Technocrat's cyberpunk adventure game Technobabylon"
 game = "Technocrat's cyberpunk adventure game Technobabylon"
-authors = []
+authors = [
+    "James Dearden",
+]
 date = "2015-07-15"
 date_estimated = true
 category = "Postmortem"
@@ -5009,7 +5021,9 @@ author_notable = false
 id = "251220"
 title = "Classic Postmortem: Double Fine's Psychonauts"
 game = "Classic Postmortem: Double Fine's Psychonauts"
-authors = []
+authors = [
+    "Caroline Esmurdoc",
+]
 date = "2015-08-18"
 date_estimated = true
 category = "Postmortem"
@@ -5026,7 +5040,9 @@ author_notable = false
 id = "252418"
 title = "Classic Postmortem: Deadly Premonition"
 game = "Classic Postmortem: Deadly Premonition"
-authors = []
+authors = [
+    "SWERY",
+]
 date = "2015-09-01"
 date_estimated = true
 category = "Postmortem"
@@ -5037,7 +5053,7 @@ wayback = "https://web.archive.org/web/20150901022511/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "254610"
@@ -5062,7 +5078,9 @@ author_notable = false
 id = "255364"
 title = "The making of Far Cry 2"
 game = "The making of Far Cry 2"
-authors = []
+authors = [
+    "Clint Hocking",
+]
 date = "2015-10-22"
 date_estimated = true
 category = "Postmortem"
@@ -5073,13 +5091,16 @@ wayback = "https://web.archive.org/web/20151022204138/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "258015"
 title = "Classic Postmortem: Silent Hill 4: The Room"
 game = "Classic Postmortem: Silent Hill 4: The Room"
-authors = []
+authors = [
+    "Akihiro Imamura",
+    "Akira Yamaoka",
+]
 date = "2015-10-31"
 date_estimated = true
 category = "Postmortem"
@@ -5090,13 +5111,15 @@ wayback = "https://web.archive.org/web/20151031135811/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "257659"
 title = "Classic Postmortem: Asheron's Call"
 game = "Classic Postmortem: Asheron's Call"
-authors = []
+authors = [
+    "Toby Ragaini",
+]
 date = "2015-11-06"
 date_estimated = true
 category = "Postmortem"
@@ -5113,7 +5136,10 @@ author_notable = false
 id = "258315"
 title = "The making of Call of Duty 4: Modern Warfare"
 game = "The making of Call of Duty 4: Modern Warfare"
-authors = []
+authors = [
+    "Zied Rieke",
+    "Michael Boon",
+]
 date = "2015-11-06"
 date_estimated = true
 category = "Postmortem"
@@ -5130,7 +5156,9 @@ author_notable = false
 id = "258603"
 title = "The making of Prince of Persia: The Sands of Time"
 game = "The making of Prince of Persia: The Sands of Time"
-authors = []
+authors = [
+    "Yannis Mallat",
+]
 date = "2015-11-07"
 date_estimated = true
 category = "Postmortem"
@@ -5147,7 +5175,10 @@ author_notable = false
 id = "258820"
 title = "Classic Postmortem: Guitar Hero"
 game = "Classic Postmortem: Guitar Hero"
-authors = []
+authors = [
+    "Daniel Sussman",
+    "Greg LoPiccolo",
+]
 date = "2015-11-13"
 date_estimated = true
 category = "Postmortem"
@@ -5164,7 +5195,10 @@ author_notable = false
 id = "259479"
 title = "Classic Postmortem: The making of Half-Life 2"
 game = "Classic Postmortem: The making of Half-Life 2"
-authors = []
+authors = [
+    "Brian Jacobson",
+    "David Speyer",
+]
 date = "2015-11-17"
 date_estimated = true
 category = "Postmortem"
@@ -5219,7 +5253,10 @@ author_notable = false
 id = "264127"
 title = "Postmortem: Flippfly's Race the Sun"
 game = "Flippfly's Race the Sun"
-authors = []
+authors = [
+    "Aaron San Filippo",
+    "Forest San Filippo",
+]
 date = "2016-02-01"
 date_estimated = true
 category = "Postmortem"
@@ -5255,7 +5292,9 @@ author_notable = false
 id = "266261"
 title = "Classic Postmortem: People Can Fly's Bulletstorm"
 game = "Classic Postmortem: People Can Fly's Bulletstorm"
-authors = []
+authors = [
+    "Adrian Chmielarz",
+]
 date = "2016-02-22"
 date_estimated = true
 category = "Postmortem"
@@ -5266,7 +5305,7 @@ wayback = "https://web.archive.org/web/20160222235807/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "267827"
@@ -5350,7 +5389,9 @@ author_notable = false
 id = "274240"
 title = "Postmortem: Offworld Trading Company 's Early Access campaign"
 game = "Offworld Trading Company 's Early Access campaign"
-authors = []
+authors = [
+    "Soren Johnson",
+]
 date = "2016-06-08"
 date_estimated = true
 category = "Postmortem"
@@ -5361,7 +5402,7 @@ wayback = "https://web.archive.org/web/20160608140435/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "294276"
@@ -5424,7 +5465,9 @@ author_notable = true
 id = "305424"
 title = "Classic Postmortem: How Maxis avoided sequel-itis on The Sims 2"
 game = "Classic Postmortem: How Maxis avoided sequel-itis on The Sims 2"
-authors = []
+authors = [
+    "Lucy Bradshaw",
+]
 date = "2017-09-14"
 date_estimated = true
 category = "Postmortem"
@@ -5435,13 +5478,15 @@ wayback = "https://web.archive.org/web/20170914105132/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "306040"
 title = "Classic Postmortem: Firaxis' Civilization V"
 game = "Classic Postmortem: Firaxis' Civilization V"
-authors = []
+authors = [
+    "Dennis Shirk",
+]
 date = "2017-09-21"
 date_estimated = true
 category = "Postmortem"
@@ -5477,7 +5522,9 @@ author_notable = false
 id = "307191"
 title = "Classic Postmortem: XCOM: Enemy Unknown , which turns 5 today"
 game = "Classic Postmortem: XCOM: Enemy Unknown , which turns 5 today"
-authors = []
+authors = [
+    "Garth DeAngelis",
+]
 date = "2017-10-09"
 date_estimated = true
 category = "Postmortem"
@@ -5494,7 +5541,10 @@ author_notable = false
 id = "308555"
 title = "Classic Postmortem: Ensemble Studio's classic RTS Age of Mythology"
 game = "Classic Postmortem: Ensemble Studio's classic RTS Age of Mythology"
-authors = []
+authors = [
+    "Ian Fischer",
+    "Greg Street",
+]
 date = "2017-10-30"
 date_estimated = true
 category = "Postmortem"
@@ -5505,13 +5555,15 @@ wayback = "https://web.archive.org/web/20171030093114/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "308654"
 title = "Postmortem: Building The Turing Test around a secret mechanic"
 game = "Building The Turing Test around a secret mechanic"
-authors = []
+authors = [
+    "David Jones",
+]
 date = "2017-11-03"
 date_estimated = true
 category = "Postmortem"
@@ -5528,7 +5580,9 @@ author_notable = false
 id = "307674"
 title = "Postmortem: The totalitarian puzzle-platformer Black The Fall"
 game = "The totalitarian puzzle-platformer Black The Fall"
-authors = []
+authors = [
+    "Cristian Diaconescu",
+]
 date = "2017-11-08"
 date_estimated = true
 category = "Postmortem"
@@ -5545,7 +5599,10 @@ author_notable = false
 id = "309412"
 title = "Classic Postmortem: The Behemoth's Alien Hominid"
 game = "Classic Postmortem: The Behemoth's Alien Hominid"
-authors = []
+authors = [
+    "Tom Fulp",
+    "John Baez",
+]
 date = "2017-11-13"
 date_estimated = true
 category = "Postmortem"
@@ -5556,7 +5613,7 @@ wayback = "https://web.archive.org/web/20171113121349/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "310012"
@@ -5586,7 +5643,9 @@ author_notable = false
 id = "310658"
 title = "Classic Postmortem: Obsidian's Knights of the Old Republic II: The Sith Lords"
 game = "Classic Postmortem: Obsidian's Knights of the Old Republic II: The Sith Lords"
-authors = []
+authors = [
+    "Kevin Saunders",
+]
 date = "2017-12-05"
 date_estimated = true
 category = "Postmortem"
@@ -5597,7 +5656,7 @@ wayback = "https://web.archive.org/web/20171205101126/http://www.gamasutra.com/v
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "311143"
@@ -5707,7 +5766,7 @@ author_notable = false
 [[postmortem]]
 id = "gd-postmortem---arbitrary-metric-s-paratopic"
 title = "Postmortem - Arbitrary Metric's Paratopic"
-game = "- Arbitrary Metric's Paratopic"
+game = "Arbitrary Metric's Paratopic"
 authors = [
     "Doc Burford",
 ]
@@ -6117,7 +6176,9 @@ author_notable = false
 id = "gd-postmortem-i-the-ramp-i-"
 title = "Postmortem: The Ramp"
 game = "The Ramp"
-authors = []
+authors = [
+    "Paul Schnepf",
+]
 date = "2021-09-23"
 date_estimated = false
 category = "Postmortem"
@@ -6134,7 +6195,9 @@ author_notable = false
 id = "gd-postmortem-inkbound-s-journey-in-early-access"
 title = "Postmortem: The journey of Inkbound through Early Access"
 game = "The journey of Inkbound through Early Access"
-authors = []
+authors = [
+    "Mark Cooke",
+]
 date = "2024-06-11"
 date_estimated = false
 category = "Postmortem"
@@ -6151,7 +6214,11 @@ author_notable = false
 id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
 title = "Postmortem: Bringing The Cycle: Frontier to Unreal Editor for Fortnite"
 game = "Bringing The Cycle: Frontier to Unreal Editor for Fortnite"
-authors = []
+authors = [
+    "Alexandra Norman",
+    "Michał Lorczak",
+    "Guillermo Ortega",
+]
 date = "2024-10-22"
 date_estimated = false
 category = "Postmortem"
@@ -6185,7 +6252,9 @@ author_notable = false
 id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
 title = "Classic Postmortem: Telltale Games' The Walking Dead (2012)"
 game = "Classic Postmortem: Telltale Games' The Walking Dead (2012)"
-authors = []
+authors = [
+    "Kevin Bruner",
+]
 date = "2024-10-25"
 date_estimated = false
 category = "Postmortem"
@@ -6202,7 +6271,9 @@ author_notable = false
 id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
 title = "Postmortem: How Empires of the Undergrowth came together in over 7 years of Early Access"
 game = "How Empires of the Undergrowth came together in over 7 years of Early Access"
-authors = []
+authors = [
+    "Mike Connor",
+]
 date = "2024-11-14"
 date_estimated = false
 category = "Postmortem"
@@ -6219,7 +6290,13 @@ author_notable = false
 id = "gd-postmortem-harmonix-s-dance-central-2010-"
 title = "Postmortem: Harmonix's Dance Central (2010)"
 game = "Harmonix's Dance Central (2010)"
-authors = []
+authors = [
+    "Marc Flury",
+    "Kasson Crooker",
+    "Matt Boch",
+    "Dean Tate",
+    "Ryan Challinor",
+]
 date = "2024-11-21"
 date_estimated = false
 category = "Postmortem"
@@ -6230,13 +6307,15 @@ wayback = "https://web.archive.org/web/20241121170356/https://www.gamedeveloper.
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true
 
 [[postmortem]]
 id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
 title = "Postmortem: The singular design of Namco's Katamari Damacy (2004)"
 game = "The singular design of Namco's Katamari Damacy (2004)"
-authors = []
+authors = [
+    "Keita Takahashi",
+]
 date = "2024-12-20"
 date_estimated = false
 category = "Postmortem"
@@ -6247,4 +6326,4 @@ wayback = "https://web.archive.org/web/20241221012910/https://www.gamedeveloper.
 pages = 1
 wayback_captures = 0
 alt_ids = []
-author_notable = false
+author_notable = true

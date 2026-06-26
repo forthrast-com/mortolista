@@ -124,7 +124,13 @@ def fetch_article_list():
 
     curated = load_curated_postmortems()
     for aid, rec in curated.items():
-        arts.setdefault(aid, rec)
+        if aid in arts:
+            # Already found by the CDX sweep: keep the swept capture/slug, but let
+            # the include's curated meta (game/summary/authors overrides) win — a
+            # bare include with no overrides is then a harmless no-op.
+            arts[aid]["meta"] = {**(arts[aid].get("meta") or {}), **(rec.get("meta") or {})}
+        else:
+            arts[aid] = rec
     if curated:
         log(f"[*] loaded {len(curated)} curated postmortem URL includes")
     return arts
@@ -146,6 +152,27 @@ def categorize(slug, *, is_blog=False):
         if k in slug:
             return v
     return "Postmortem"
+# Bylines that name a desk rather than a person; never recorded as authors.
+GENERIC_AUTHORS = {"", "staff", "gamasutra", "game developer", "gamedeveloper",
+                   "game developer staff", "editor", "guest"}
+_ETAL_RE = re.compile(r"\s*,?\s*et\s+al\.?\s*$", re.I)
+def split_author_names(s):
+    """Split a free-text byline ('A & B', 'A and B', 'A, B') into names.
+
+    Drops a trailing 'et al.'. Does NOT try to repair a shared surname
+    ('Aaron & Forest San Filippo' -> ['Aaron', 'Forest San Filippo']); those rare
+    cases get an explicit authors override in the curated includes instead."""
+    s = clean(strip_tags(s or ""))
+    s = _ETAL_RE.sub("", s)
+    return [p.strip() for p in re.split(r"\s*(?:&|,|\band\b)\s*", s) if p.strip()]
+def add_authors(names, authors, seen):
+    """Append valid, non-duplicate, non-desk names; mutates authors/seen in place."""
+    for name in names:
+        name = clean(strip_tags(name))
+        low = name.lower()
+        if name and low not in seen and low not in GENERIC_AUTHORS and "gamasutra" not in low:
+            seen.add(low)
+            authors.append(name)
 def parse_article(aid, rec):
     is_blog = bool(blog_url_parts(rec["original"])[0])
     ts = rec.get("ts")
@@ -199,27 +226,43 @@ def parse_article(aid, rec):
     byline = BYLINE_RE.search(html)
     scope = byline.group(1) if byline else ""
     authors, seen = [], set()
-    for disp in AUTHOR_RE.findall(scope):
-        name = clean(disp)
-        if name and name.lower() not in seen and "gamasutra" not in name.lower():
-            seen.add(name.lower()); authors.append(name)
+    add_authors(AUTHOR_RE.findall(scope), authors, seen)
+
+    # Old/new layouts also carry plain-text bylines with no author link
+    # ('<span class="newsAuth">by Cameron Petty</span>'). Strip the leading
+    # "by" and split, so a linkless byline isn't silently dropped.
+    if not authors and scope:
+        txt = re.sub(r"^\s*by\s+", "", clean(strip_tags(scope)), flags=re.I)
+        add_authors(split_author_names(txt), authors, seen)
 
     # Developer-blog pages use a different byline layout the feature regexes miss.
     # The blog owner is the author: prefer the "<Name>'s Blog" title segment,
     # falling back to the CamelCase URL segment.
     if is_blog and not authors:
         owner = blog_owner_from_title(raw_title) or split_camel_name(blog_author_camel)
-        if owner and "gamasutra" not in owner.lower():
-            authors.append(owner)
+        add_authors([owner], authors, seen)
 
     # gamedeveloper.com carries no scrapeable byline span, but its JSON-LD names
-    # the author (often "Game Developer" for magazine reprints).
+    # the author(s). The block is sometimes an array ("author":[{...},{...}]) and
+    # sometimes a lone object; match either and pull every "name".
     if not authors:
-        m = re.search(r'"author"\s*:\s*\{[^}]*?"name"\s*:\s*"([^"]+)"', html)
+        m = re.search(r'"author"\s*:\s*(\[.*?\]|\{.*?\})', html, re.S)
         if m:
-            name = clean(strip_tags(m.group(1)))
-            if name and "gamasutra" not in name.lower():
-                authors.append(name)
+            add_authors(re.findall(r'"name"\s*:\s*"([^"]+)"', m.group(1)), authors, seen)
+
+    # Classic /view/news reprints expose the original byline only in the page's
+    # <meta name="author">; the visible byline reads "by Staff".
+    if not authors:
+        add_authors(split_author_names(extract_meta_content(html, name="author")), authors, seen)
+
+    # gamedeveloper.com guest postmortems print a metadata block in the body
+    # ("Author: by Paul Schnepf  Game: The Ramp  Developer: …") when the page's
+    # structured byline is just the reposting editor.
+    if not authors and "gamedeveloper.com" in (rec.get("original") or ""):
+        body = " ".join(p for p in article_paragraphs(html) if len(p) > 30)
+        m = re.search(r"Author:\s*(?:by\s+)?(.+?)\s+(?:Game|Developer|Publisher|Release|Platforms):", body, re.I)
+        if m:
+            add_authors(split_author_names(m.group(1)), authors, seen)
 
     date = extract_date(html)
     date_estimated = False
@@ -361,7 +404,10 @@ def extract_thumb(html, ts, is_blog=False):
     return wrap_im(pick, ts) if pick else ""
 def derive_game(title):
     t = strip_title(title)
-    t = re.sub(r"^(Audio |Indie |Middleware )?Postmortem:?\s*", "", t, flags=re.I)
+    # Strip the leading "Postmortem" label whether the title uses a colon
+    # ("Postmortem: Foo") or a hyphen ("Postmortem - Foo"); the latter otherwise
+    # left a stray "- " glued to the front of the game name.
+    t = re.sub(r"^(Audio |Indie |Middleware )?Postmortem\s*[:\-]?\s*", "", t, flags=re.I)
     # strip leading studio possessive: "Team Meat's Super Meat Boy" -> keep as-is is fine,
     # but "Studio's Game" we keep full; just tidy whitespace.
     return clean(t)

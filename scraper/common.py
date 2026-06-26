@@ -46,7 +46,10 @@ DATE_OLD_RE = re.compile(
 DATE_NEWS_RE = re.compile(
     r'class="newsDate".*?<strong>\s*((?:%s)\s+\d{1,2},?\s+(?:19|20)\d{2})\s*</strong>' % _MONTH_ALT,
     re.I | re.S)
-AUTHOR_RE = re.compile(r'href="[^"]*?/view/authors/\d+/[^"]+?\.php"[^>]*>([^<]{2,60})<')
+# author links carry one or more numeric ids before the slug; multi-author
+# bylines comma-join them (/view/authors/339880,915643/Name.php), so accept
+# [\d,]+ rather than a single \d+ run (which silently dropped those bylines).
+AUTHOR_RE = re.compile(r'href="[^"]*?/view/authors/[\d,]+/[^"]+?\.php"[^>]*>([^<]{2,60})<')
 # byline containers: new layout <span class="newsAuth">by ...</span>,
 # old layout <span class="byline">By ...</span>
 BYLINE_RE = re.compile(
@@ -103,9 +106,11 @@ def article_record(aid, slug, original, ts=None, status=None, first_ts=None, cap
 # Curated fields an include may carry: series metadata copied verbatim to the
 # frontend, plus an optional thumbnail pin (handled specially, with im_ wrapping).
 SERIES_META_KEYS = ("series", "series_id", "part_no", "part_total", "part_label")
-# game/summary let the blog-curation overrides (data/blog_curation.toml) win over
-# the values derived from the title/meta-description — see load_curated_postmortems.
-CURATED_META_KEYS = SERIES_META_KEYS + ("thumbnail", "game", "summary")
+# game/summary/authors let a curated include (data/postmortem_url_includes.toml)
+# win over the values derived from the page — see load_curated_postmortems and
+# the meta-copy step in parse_article. authors is the escape hatch for bylines
+# the page either hides (staff-reposted classics) or mangles (shared surnames).
+CURATED_META_KEYS = SERIES_META_KEYS + ("thumbnail", "game", "summary", "authors")
 def _clean_url(u):
     u = u.replace(":80/", "/")
     return u

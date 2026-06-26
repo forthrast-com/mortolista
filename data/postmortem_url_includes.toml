@@ -360,16 +360,24 @@ reason = "Tier B classic magazine postmortem; gamasutra /view/news original trac
 [[include]]
 id = "gd-postmortem-harmonix-s-dance-central-2010-"
 url = "https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-"
+authors = ["Marc Flury", "Kasson Crooker", "Matt Boch", "Dean Tate", "Ryan Challinor"]
 reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/production/postmortem-harmonix-s-dance-central-2010-"
 
 [[include]]
 id = "gd-classic-postmortem-telltale-games-the-walking-dead-2012"
 url = "https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012"
+authors = ["Kevin Bruner"]
 reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/classic-postmortem-telltale-games-the-walking-dead-2012"
 
 [[include]]
 id = "gd-classic-postmortem-nanaonhas-haunt-2012"
 url = "https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012"
+# Original byline unverifiable: the reprint (Game Developer, June/July 2012) credits
+# only the reposting GD editor in its JSON-LD/structured byline (Dewi Tanner, with an
+# empty bio; the header byline rotates among GD staff across captures) and the restored
+# body never names the NanaOn-Sha author. Explicit [] pins it empty so the extractor
+# doesn't record the staff name as the author.
+authors = []
 reason = "Tier B classic magazine postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/classic-postmortem-nanaonhas-haunt-2012"
 
 [[include]]
@@ -476,6 +484,7 @@ reason = "Tier B classic magazine postmortem; gamasutra /view/news original trac
 [[include]]
 id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
 url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+authors = ["Keita Takahashi"]
 reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
 
 [[include]]
@@ -516,16 +525,19 @@ reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://
 [[include]]
 id = "gd-postmortem-i-the-ramp-i-"
 url = "https://www.gamedeveloper.com/design/postmortem-i-the-ramp-i-"
+authors = ["Paul Schnepf"]
 reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/postmortem-i-the-ramp-i-"
 
 [[include]]
 id = "gd-postmortem-inkbound-s-journey-in-early-access"
 url = "https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access"
+authors = ["Mark Cooke"]
 reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/production/postmortem-inkbound-s-journey-in-early-access"
 
 [[include]]
 id = "gd-postmortem-how-empires-of-the-undergrowth-came-together-in-o"
 url = "https://www.gamedeveloper.com/design/postmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access"
+authors = ["Mike Connor"]
 reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/design/postmortem-how-empires-of-the-undergrowth-came-together-in-over-7-years-of-early-access"
 
 
@@ -547,4 +559,23 @@ reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://
 [[include]]
 id = "gd-postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-"
 url = "https://www.gamedeveloper.com/production/postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite"
+authors = ["Alexandra Norman", "Michał Lorczak", "Guillermo Ortega"]
 reason = "Round 2 canon postmortem; gamedeveloper fallback tracked from https://www.gamedeveloper.com/production/postmortem-bringing-the-cycle-frontier-to-unreal-editor-for-fortnite"
+
+
+# ---- Byline overrides for entries the CDX sweep already finds but whose pages
+# hide or mangle the byline. These ids are produced by the postmortem-slug
+# sweep; the include exists only to carry the curated `authors` override (merged
+# onto the swept record in fetch_article_list). ----
+
+[[include]]
+id = "115711"
+url = "http://www.gamasutra.com/view/news/115711/The_Game_Developer_Archives_Postmortem_Ensembles_Age_of_Empires.php"
+authors = ["Matt Pritchard"]
+reason = "Classic Game Developer (March 1998) Age of Empires postmortem; the reprint's visible byline is 'Staff', but the body is Matt Pritchard's first-person account."
+
+[[include]]
+id = "264127"
+url = "http://www.gamasutra.com/view/feature/264127/postmortem_flippflys_race_the_.php"
+authors = ["Aaron San Filippo", "Forest San Filippo"]
+reason = "meta name=author reads 'Aaron & Forest San Filippo' (a shared surname the generic splitter can't reconstruct); the Flippfly co-founders are both San Filippo."
