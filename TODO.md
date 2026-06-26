@@ -33,9 +33,12 @@ postmortem features, linking out via the Wayback Machine.
 - [~] **Tags** — richer browse axes beyond the single `category` Type field.
       **Done:** deterministic + Wikipedia-category tiers (era/platform/studio/
       business) in `scraper/tags.py` (`just tags`) -> `data/tags.toml` sidecar,
-      rendered as clickable colour-coded chips with click-to-filter (AND) + an
-      active-filter bar. **TODO:** editorial/outcome tags (crunch, scope-creep,
-      breakout-success, …) via a **local** LLM classifier (ollama / llama.cpp,
+      rendered as colour-coded chips and folded into the one grouped Type
+      dropdown (single-select; a chip click drives it). Platform is
+      distinctive-only (single-platform games keep their one; ports-everywhere
+      get none). **TODO:** editorial/outcome tags (crunch, scope-creep,
+      breakout-success, `port` — i.e. "we ported X to PS2", …) via a **local**
+      LLM classifier (ollama / llama.cpp,
       strict controlled vocab) merging into the same sidecar — design +
       vocab in `docs/tags_plan.md`.
 

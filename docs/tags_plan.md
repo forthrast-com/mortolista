@@ -95,3 +95,10 @@ llama.cpp; candidates `qwen2.5:7b-instruct`, `llama3.1:8b`). Requirements:
   and don't re-hit the model.
 - Write provenance `source.* = "llm-local"` so these are distinguishable from
   deterministic/wiki tags and can be re-generated independently.
+- **`port`**: tag when the postmortem's *subject* is porting an existing game to
+  a new platform ("we ported X to PS2", "bringing X to Switch") — not a passing
+  mention of a later port. This is exactly the judgement deterministic/wiki tiers
+  can't make (the word "port" is a substring minefield, and Wikipedia platform
+  categories don't say which release the article is about), so it lives here. When
+  `port` fires, prefer the *target* platform tag too (e.g. PS2 → `console`),
+  overriding the distinctive-only platform rule for this entry.
