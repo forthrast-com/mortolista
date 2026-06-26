@@ -29,7 +29,13 @@ good Internet Archive snapshot.
 
 ## Layout
 ```
-scraper/scrape.py      # Wayback CDX + per-article parse + HN/Wikipedia enrich
+scraper/scrape.py      # CLI entry point + pipeline orchestration (re-exports the below)
+scraper/common.py      # shared config, HTTP session, Wayback/text/date helpers
+scraper/parse.py       # CDX listing + per-snapshot parse + canonical/dedupe/score
+scraper/hn.py          # Hacker News harvest, per-article metrics, link audit
+scraper/reddit.py      # Reddit (Arctic Shift) harvest + metric matching
+scraper/links.py       # link liveness: archive.today, Wayback, gamedeveloper.com
+scraper/wiki.py        # Wikipedia enrich: notable authors, sales signals, bios
 data/postmortems.toml          # the dataset (hand-editable TOML)
 data/postmortem_url_includes.toml  # curated postmortem-canon URLs missed by slug search
 data/hn_gamasutra_posts.toml   # cached HN stories whose URLs mention gamasutra.com
@@ -39,6 +45,7 @@ data/notable_authors.toml      # author name -> Wikipedia URL (byline links)
 data/hn_postmortem_audit.toml  # local HN/postmortem URL audit + review candidates
 index.html, style.css, app.js  # static page, loads the TOML
 TODO.md                # roadmap, incl. deferred/manual data axes
+docs/                  # process/method records (Tier B status, candidate shortlists)
 ```
 
 ## Development
@@ -68,6 +75,7 @@ just hn-metrics # local-only recompute of HN sums/thread links in data/postmorte
 just check-links # slow network pass for link availability fields
 just sample     # quick scraper run
 just scrape     # full Wayback scrape -> data/postmortems.toml
+just refresh-all # resolve Tier B + ingest curated, then fan out every sidecar
 just check      # flake checks
 ```
 

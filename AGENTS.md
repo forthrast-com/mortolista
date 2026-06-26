@@ -4,7 +4,7 @@
 
 - Static, old-web-style catalogue of Gamasutra/Game Developer postmortem features.
 - `index.html`, `style.css`, and `app.js` are the shipped page; catalogue data lives in `data/postmortems.toml`; article-scoped HN metrics live separately in `data/hn_postmortem_threads.toml`.
-- `scraper/scrape.py` rebuilds/enriches the TOML from Wayback, HN, Wikipedia, and curated includes.
+- `scraper/scrape.py` rebuilds/enriches the TOML from Wayback, HN, Wikipedia, and curated includes. It's a thin CLI/orchestration facade over sibling modules (`common`, `parse`, `hn`, `reddit`, `links`, `wiki`) and re-exports their public names, so `import scrape; scrape.<name>` keeps working for the helper scripts.
 
 ## Local workflow
 
