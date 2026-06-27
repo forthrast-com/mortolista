@@ -91,11 +91,76 @@ a:focus-visible{outline:2px solid var(--gama-leaf); outline-offset:2px; border-r
 
 #toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:16px 0 10px}
 #search{flex:1 1 260px; min-width:200px; padding:6px 9px; border:1px solid var(--rule); background:var(--card); color:var(--ink)}
-#category,#sortSel{padding:6px; border:1px solid var(--rule); background:var(--card); color:var(--ink)}
-#search:focus,#category:focus,#sortSel:focus{
+.filter-btn{padding:6px; border:1px solid var(--rule); background:var(--card); color:var(--ink)}
+.filter-btn{cursor:pointer; white-space:nowrap; text-align:left; min-width:104px}
+/* green ring when the filter holds active selections */
+.filter-btn.on{border-color:var(--gama-leaf); color:var(--strong); box-shadow:0 0 0 3px var(--focus-ring)}
+#search:focus,.filter-btn:focus-visible{
   outline:none; border-color:var(--gama-leaf);
   box-shadow:0 0 0 3px var(--focus-ring);
 }
+
+/* Leading icons on the controls (data-URI SVGs, tinted per theme) — all widths.
+   Search = magnifier, filter = funnel, sort = lines (replaces the old text label). */
+#search,.filter-btn{
+  background-repeat:no-repeat; background-position:11px center; background-size:16px; padding-left:34px;
+}
+#search{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>")}
+.filter-btn{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 4 21 4 14 12 14 20 10 18 10 12'/></svg>")}
+.sort-btn{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='14' y2='12'/><line x1='4' y1='18' x2='9' y2='18'/></svg>")}
+:root[data-theme="dark"] #search{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>")}
+:root[data-theme="dark"] .filter-btn{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 4 21 4 14 12 14 20 10 18 10 12'/></svg>")}
+:root[data-theme="dark"] .sort-btn{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='14' y2='12'/><line x1='4' y1='18' x2='9' y2='18'/></svg>")}
+
+/* Custom multiselect filter popover */
+.filter{position:relative; flex:0 1 auto}
+/* Panel centred under its button (mobile drops back to left-aligned full width). */
+.filter-panel{
+  position:absolute; z-index:30; top:calc(100% + 6px); left:50%; transform:translateX(-50%);
+  width:min(600px,92vw);
+  background:var(--card); border:1px solid var(--rule); border-radius:4px;
+  box-shadow:0 8px 28px rgba(0,0,0,.20); padding:12px 14px;
+}
+.filter-cols{column-count:3; column-gap:20px}
+.filter-group{break-inside:avoid; margin:0 0 13px}
+.filter-group h4{
+  margin:0 0 5px; font-size:10px; text-transform:uppercase; letter-spacing:.5px;
+  color:var(--label); font-weight:bold;
+}
+.filter-opt{
+  display:flex; gap:6px; align-items:center; white-space:nowrap;
+  font-size:12px; color:var(--strong); padding:2px 0; cursor:pointer;
+}
+.filter-opt input{margin:0; accent-color:var(--gama-leaf); flex:none}
+.filter-opt-name{overflow:hidden; text-overflow:ellipsis}
+.filter-count{margin-left:auto; padding-left:8px; color:var(--muted); font-size:10px; font-variant-numeric:tabular-nums}
+/* options (and whole groups) that would yield nothing drop out entirely */
+.filter-opt.zero{display:none}
+.filter-group.zero{display:none}
+.filter-head{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  margin-bottom:11px; padding-bottom:10px; border-bottom:1px solid var(--rule);
+}
+.filter-summary{font-size:11px; color:var(--muted)}
+.filter-clear{
+  font:inherit; font-size:11px; text-transform:uppercase; letter-spacing:.4px;
+  background:transparent; border:1px solid var(--rule); color:var(--label);
+  padding:4px 11px; border-radius:2px; cursor:pointer;
+}
+.filter-clear:hover:not(:disabled){color:var(--ink); border-color:currentColor}
+.filter-clear:disabled{opacity:.45; cursor:default}
+
+/* Sort popover: narrow, single column, right-aligned to its button */
+.sort-panel{width:max-content; min-width:172px; left:auto; right:0; transform:none; padding:6px}
+.sort-list{display:flex; flex-direction:column}
+.sort-opt{
+  font:inherit; font-size:12px; text-align:left; white-space:nowrap; position:relative;
+  background:transparent; border:0; color:var(--strong);
+  padding:6px 26px 6px 10px; border-radius:3px; cursor:pointer;
+}
+.sort-opt:hover{background:var(--row-hover)}
+.sort-opt.on{color:var(--gama-leaf); font-weight:bold}
+.sort-opt.on::after{content:"✓"; position:absolute; right:9px; top:6px}
 .chk{font-size:12px; color:var(--strong); display:flex; gap:5px; align-items:center; white-space:nowrap}
 .chk input{accent-color:var(--gama-green)}
 .count{margin-left:auto; color:var(--muted); font-size:12px}
@@ -275,7 +340,7 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
    Kept lighter than the solid type badge since an entry carries several. */
 .tags{display:inline-flex; flex-wrap:wrap; gap:4px; align-items:center}
 .tag{
-  font:inherit; font-size:10px; text-transform:uppercase; letter-spacing:.4px;
+  font:inherit; font-size:10px; letter-spacing:.4px;
   color:var(--muted); background:transparent; border:1px solid var(--rule);
   padding:1px 6px; border-radius:2px; cursor:pointer; white-space:nowrap; line-height:1.6;
 }
@@ -303,8 +368,7 @@ td.metric.zero,td.metric.zero .m-main{color:var(--zero); font-weight:normal}
 /* On desktop the column headers are the primary sort UI, but the dropdown stays
    visible too so the balanced default — and the metric sorts without their own
    column (Reddit, copies sold, submissions) — remain reachable. */
-#sortSel{flex:0 1 auto}
-.sort-label{font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:var(--label); align-self:center}
+.sort{flex:0 1 auto}
 
 /* Desktop echo of the balanced "why it ranked" hint (the meta line that hosts
    the mobile version is hidden on desktop). */
@@ -333,22 +397,14 @@ footer .wrap{line-height:1.6}
   #toolbar{gap:9px; margin:14px 0 12px}
   /* the meta-top chip carries the balanced hint here, and the dropdown goes
      full-width, so the desktop label + detail-row echo are redundant */
-  .sort-label,.why-balanced{display:none}
-  #search,#category,#sortSel{width:100%; min-width:0; font-size:16px; min-height:40px}
-  /* leading icons on the mobile controls (data-URI SVGs, tinted per theme) */
-  #search,#category,#sortSel{
-    background-repeat:no-repeat; background-position:11px center; background-size:16px;
-    padding-left:36px;
-  }
-  #search{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>")}
-  #category{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 4 21 4 14 12 14 20 10 18 10 12'/></svg>")}
-  #sortSel{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c7c70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='14' y2='12'/><line x1='4' y1='18' x2='9' y2='18'/></svg>")}
-  :root[data-theme="dark"] #search{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.5' y2='16.5'/></svg>")}
-  :root[data-theme="dark"] #category{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 4 21 4 14 12 14 20 10 18 10 12'/></svg>")}
-  :root[data-theme="dark"] #sortSel{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393a294' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='14' y2='12'/><line x1='4' y1='18' x2='9' y2='18'/></svg>")}
-  #sortSel{display:block; flex:1 1 100%}
+  .why-balanced{display:none}
+  #search,.filter-btn{width:100%; min-width:0; font-size:16px; min-height:40px}
   #search{flex:1 1 100%}
-  #category{flex:1 1 100%}
+  .filter{flex:1 1 100%}
+  .filter-btn{width:100%}
+  /* popovers go left-aligned full width; two columns instead of three */
+  .filter-panel{left:0; right:auto; transform:none; width:100%}
+  .filter-cols{column-count:2}
   .chk{font-size:14px}
   .chk input{width:18px; height:18px}
   .count{margin-left:0; margin-inline-start:auto; font-size:13px; white-space:nowrap}

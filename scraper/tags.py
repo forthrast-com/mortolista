@@ -143,9 +143,18 @@ def refresh_tags(data_path, out_path=TAGS, limit=0):
             cats = page_cache[title]
             tags |= wiki_category_tags(cats)
         # Single era: the game's earliest Wikipedia release year (so a classic
-        # reprinted years later still reads as its own decade), else the article date.
+        # reprinted years later still reads as its own decade), else the article
+        # date. But a wrong wiki match drags the era back to the 80s — no Gamasutra
+        # postmortem covers a pre-1994 game — so distrust years before the corpus
+        # era (or after the article) and fall back to the publish date.
         years = wiki_years(cats)
-        era = era_tag(str(years[0])) if years else era_tag(art.get("date", ""))
+        am = re.match(r"(\d{4})", art.get("date", "") or "")
+        art_year = int(am.group(1)) if am else None
+        yr = years[0] if years else None
+        if yr and yr >= 1994 and (art_year is None or yr <= art_year):
+            era = era_tag(str(yr))
+        else:
+            era = era_tag(art.get("date", ""))
         if era:
             tags.add(era)
         # Platform is only interesting when it's *distinctive*: a single-platform

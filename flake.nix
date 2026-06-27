@@ -22,6 +22,7 @@
           python = pkgs.python312.withPackages (ps: with ps; [
             requests
             tomli-w
+            anthropic
           ]);
         in
         {
@@ -43,6 +44,7 @@
           python = pkgs.python312.withPackages (ps: with ps; [
             requests
             tomli-w
+            anthropic
           ]);
         in
         {

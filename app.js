@@ -3,9 +3,18 @@ import { parse } from "https://cdn.jsdelivr.net/npm/smol-toml@1.3.1/dist/index.j
 const rowsEl = document.getElementById("rows");
 const statusEl = document.getElementById("status");
 const searchEl = document.getElementById("search");
-const catEl = document.getElementById("category");
+const filterBtn = document.getElementById("filterBtn");
+const filterPanel = document.getElementById("filterPanel");
+const filterCols = document.getElementById("filterCols");
+const filterClear = document.getElementById("filterClear");
+const filterSummary = document.getElementById("filterSummary");
+// Active filters as prefixed values: "cat:<type>", "tag:<tag>", "studio:<dev>",
+// or "notable". Faceted: OR within a group (e.g. two decades), AND across groups.
+const selected = new Set();
 const countEl = document.getElementById("count");
-const sortSel = document.getElementById("sortSel");
+const sortBtn = document.getElementById("sortBtn");
+const sortPanel = document.getElementById("sortPanel");
+const sortList = document.getElementById("sortList");
 const tableScroll = document.querySelector(".table-scroll");
 const tableWrap = document.querySelector(".table-wrap");
 
@@ -112,16 +121,37 @@ async function loadTags() {
 }
 
 async function loadEditorialTags() {
-  // Editorial tags (outcome/theme/business) from the LLM pass, in their own
-  // sidecar; union them onto the deterministic/wiki tags. Optional — absent
-  // until `just tags-llm` has been run against an endpoint.
+  // Editorial tags + extracted facts (studio/engine/team_size) from the LLM
+  // pass, in their own sidecar; union tags onto the deterministic/wiki tags.
+  // Optional — absent until `just tags-llm` has run.
   try {
     const res = await fetch("data/tags_llm.toml", { cache: "no-cache" });
     if (!res.ok) return;
-    const byId = new Map((parse(await res.text()).editorial_tag || []).map(r => [r.id, r.tags || []]));
+    const byId = new Map((parse(await res.text()).editorial_tag || []).map(r => [r.id, r]));
     DATA = DATA.map(d => {
-      const extra = byId.get(d.id);
-      return extra ? { ...d, tags: [...new Set([...(d.tags || []), ...extra])] } : d;
+      const r = byId.get(d.id);
+      if (!r) return d;
+      return { ...d, tags: [...new Set([...(d.tags || []), ...(r.tags || [])])],
+               studio: r.studio, engine: r.engine, team_size: r.team_size };
+    });
+  } catch (e) { /* best-effort */ }
+}
+
+let STUDIOS = []; // notable studios (>= threshold), classified once: {name, class, count, ids}
+async function loadStudios() {
+  // Notable recurring developers (pass 2). Attaches a canonical studio_name to
+  // each member entry and folds the studio class into its tags. Optional.
+  try {
+    const res = await fetch("data/tags_studios.toml", { cache: "no-cache" });
+    if (!res.ok) return;
+    STUDIOS = parse(await res.text()).studio || [];
+    const byId = new Map();
+    for (const s of STUDIOS) for (const id of s.ids || []) byId.set(id, s);
+    DATA = DATA.map(d => {
+      const s = byId.get(d.id);
+      if (!s) return d;
+      const cls = s.class && s.class !== "unknown" ? [s.class] : [];
+      return { ...d, studio_name: s.name, tags: [...new Set([...(d.tags || []), ...cls])] };
     });
   } catch (e) { /* best-effort */ }
 }
@@ -239,6 +269,7 @@ async function load() {
     await loadMirrorSidecars();
     await loadTags();
     await loadEditorialTags();
+    await loadStudios();
     await loadNotableAuthors();
   } catch (e) {
     statusEl.textContent = "Could not load data/postmortems.toml — run the scraper first. (" + e + ")";
@@ -271,13 +302,15 @@ async function load() {
   }
   computeAggregate();
   buildFilterOptions();
+  buildSortOptions();
   statusEl.textContent = "";
   render();
 }
 
-// One unified filter dropdown: the big "Type" categories plus the tag axes
-// (era / platform / studio / business), grouped. Values are prefixed so render()
-// knows whether a pick filters the category field ("cat:…") or a tag ("tag:…").
+// One unified filter: the big "Type" categories plus the tag axes
+// (era / platform / studio / business), grouped into a custom 2-column multiselect
+// popover. Values are prefixed so the filter knows whether a pick matches the
+// category field ("cat:…"), a tag ("tag:…"), or a developer ("studio:…").
 const AXIS_GROUPS = [["era", "Era"], ["platform", "Platform"], ["studio", "Studio"],
   ["business", "Business"], ["theme", "Theme"]];
 function buildFilterOptions() {
@@ -285,21 +318,101 @@ function buildFilterOptions() {
   const byAxis = {};
   for (const d of DATA) for (const t of d.tags || []) (byAxis[tagAxis(t)] ||= new Set()).add(t);
 
-  catEl.innerHTML = `<option value="">Everything</option>`
-    + `<option value="notable">Notable authors</option>`;
-  const addGroup = (label, opts) => {
-    if (!opts.length) return;
-    const og = document.createElement("optgroup"); og.label = label;
-    for (const [val, text] of opts) {
-      const o = document.createElement("option"); o.value = val; o.textContent = text;
-      og.appendChild(o);
+  // Authors first so it lands top-left; Type pushed down; Developer (longest) last.
+  const groups = [["Authors", [["notable", "Notable authors"]]]];
+  for (const [axis, label] of AXIS_GROUPS)
+    if (byAxis[axis]) groups.push([label, [...byAxis[axis]].sort().map(t => ["tag:" + t, tagLabel(t)])]);
+  groups.push(["Type", cats.map(c => ["cat:" + c, c])]);
+  if (STUDIOS.length) groups.push(["Developer", STUDIOS.map(s => ["studio:" + s.name, s.name])]);
+
+  filterCols.innerHTML = groups.map(([label, opts]) => opts.length ? `
+    <div class="filter-group"><h4>${esc(label)}</h4>${opts.map(([val, text]) =>
+      `<label class="filter-opt"><input type="checkbox" value="${esc(val)}"`
+      + `${selected.has(val) ? " checked" : ""}><span class="filter-opt-name">${esc(text)}</span>`
+      + `<span class="filter-count"></span></label>`).join("")}</div>`
+    : "").join("");
+  syncFilterUI();
+}
+
+// Reflect the selected set into the button (label + count + active state), the
+// header summary, the Clear button, and the panel checkboxes; then re-narrow.
+function syncFilterUI() {
+  const n = selected.size;
+  filterBtn.querySelector(".filter-btn-label").textContent = n ? `Filter (${n})` : "Filter";
+  filterBtn.classList.toggle("on", n > 0);
+  filterClear.disabled = n === 0;
+  filterSummary.textContent = n ? `${n} active` : "none selected";
+  filterCols.querySelectorAll("input[type=checkbox]").forEach(cb => { cb.checked = selected.has(cb.value); });
+  refreshFilterCounts();
+}
+
+// Dynamic narrowing: for each option, count entries that pass the search plus
+// every active facet *except its own* (within-facet is OR, so an option is judged
+// against the other facets) and also match the option. Zero-count, unselected
+// options are disabled and dimmed; the live count is shown alongside.
+function refreshFilterCounts() {
+  const q = searchEl.value.trim().toLowerCase();
+  const facets = {};
+  for (const val of selected) (facets[filterFacet(val)] ||= []).push(val);
+  const facetEntries = Object.entries(facets);
+  const passSearch = d => !q ||
+    (d.title + " " + d.game + " " + (d.authors || []).join(" ") + " " + (d._search || "")).toLowerCase().includes(q);
+
+  filterCols.querySelectorAll(".filter-opt").forEach(opt => {
+    const cb = opt.querySelector("input");
+    const val = cb.value, own = filterFacet(val);
+    let n = 0;
+    for (const d of DATA) {
+      if (!passSearch(d)) continue;
+      let ok = true;
+      for (const [f, vals] of facetEntries) {
+        if (f === own) continue;
+        if (!vals.some(v => matchesFilter(d, v))) { ok = false; break; }
+      }
+      if (ok && matchesFilter(d, val)) n++;
     }
-    catEl.appendChild(og);
-  };
-  addGroup("Type", cats.map(c => ["cat:" + c, c]));
-  for (const [axis, label] of AXIS_GROUPS) {
-    addGroup(label, [...(byAxis[axis] || [])].sort().map(t => ["tag:" + t, t]));
-  }
+    const sel = selected.has(val);
+    cb.disabled = n === 0 && !sel;
+    opt.classList.toggle("zero", n === 0 && !sel);
+    opt.querySelector(".filter-count").textContent = n;
+  });
+  // hide a group once all its options have dropped out
+  filterCols.querySelectorAll(".filter-group").forEach(g => {
+    const anyLeft = [...g.querySelectorAll(".filter-opt")].some(o => !o.classList.contains("zero"));
+    g.classList.toggle("zero", !anyLeft);
+  });
+}
+
+// Toggle one filter value, then refresh the UI and the table.
+function setFilter(val, on) {
+  if (on) selected.add(val); else selected.delete(val);
+  syncFilterUI();
+  render();
+}
+
+// ---- Sort: custom single-select dropdown in the filter style ----
+const SORT_OPTIONS = [
+  ["agg_score:-1", "Balanced (default)"], ["hn_points_sum:-1", "Most total HN points"],
+  ["hn_points:-1", "Best HN thread"], ["date:-1", "Newest first"], ["date:1", "Oldest first"],
+  ["title:1", "Title A–Z"], ["authors:1", "Author A–Z"], ["author_notable:-1", "Notable authors first"],
+  ["category:1", "Type"], ["hn_comments_sum:-1", "Most total HN comments"],
+  ["hn_comments:-1", "Best HN comments"], ["hn_submissions:-1", "Most HN submissions"],
+  ["reddit_score_sum:-1", "Most Reddit score"], ["reddit_comments_sum:-1", "Most Reddit comments"],
+  ["copies_sold:-1", "Most copies sold"], ["wayback_captures:-1", "Most captures"],
+];
+function buildSortOptions() {
+  sortList.innerHTML = SORT_OPTIONS.map(([val, label]) =>
+    `<button type="button" class="sort-opt" role="option" data-val="${esc(val)}">${esc(label)}</button>`).join("");
+}
+function syncSortUI() {
+  const val = `${sortKey}:${sortDir}`;
+  const found = SORT_OPTIONS.find(([v]) => v === val);
+  sortBtn.querySelector(".sort-btn-label").textContent = found ? found[1] : "Sorted";
+  sortList.querySelectorAll(".sort-opt").forEach(o => {
+    const on = o.dataset.val === val;
+    o.classList.toggle("on", on);
+    o.setAttribute("aria-selected", on);
+  });
 }
 
 function sortVal(d, k) {
@@ -323,17 +436,32 @@ function updateScrollFades() {
   tableScroll.style.setProperty("--head-h", (head ? head.offsetHeight : 0) + "px");
 }
 
+// Which facet an active value belongs to, so we OR within a facet and AND across
+// facets (pick 90s + 00s → either decade; add Indie → also indie).
+function filterFacet(val) {
+  if (val === "notable") return "notable";
+  const ci = val.indexOf(":");
+  const kind = val.slice(0, ci);
+  return kind === "tag" ? "tag:" + tagAxis(val.slice(ci + 1)) : kind;
+}
+function matchesFilter(d, val) {
+  if (val === "notable") return !!d.author_notable;
+  const ci = val.indexOf(":");
+  const kind = val.slice(0, ci), v = val.slice(ci + 1);
+  if (kind === "cat") return d.category === v;
+  if (kind === "tag") return (d.tags || []).includes(v);
+  if (kind === "studio") return d.studio_name === v;
+  return true;
+}
+
 function render() {
   const q = searchEl.value.trim().toLowerCase();
-  const sel = catEl.value;          // "", "cat:<category>", "tag:<tag>", or "notable"
-  const ci = sel.indexOf(":");
-  const selKind = ci < 0 ? sel : sel.slice(0, ci);
-  const selVal = ci < 0 ? "" : sel.slice(ci + 1);
+  const facets = {};
+  for (const val of selected) (facets[filterFacet(val)] ||= []).push(val);
+  const facetVals = Object.values(facets);
 
   let list = DATA.filter(d => {
-    if (selKind === "cat" && d.category !== selVal) return false;
-    if (selKind === "tag" && !(d.tags || []).includes(selVal)) return false;
-    if (selKind === "notable" && !d.author_notable) return false;
+    for (const vals of facetVals) if (!vals.some(v => matchesFilter(d, v))) return false;
     if (q) {
       const hay = (d.title + " " + d.game + " " + (d.authors || []).join(" ") + " " + (d._search || "")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -360,9 +488,8 @@ function render() {
       th.setAttribute("aria-sort", sortDir === 1 ? "ascending" : "descending");
     }
   });
-  // keep the mobile sort dropdown in sync (only if it has a matching option)
-  const val = `${sortKey}:${sortDir}`;
-  if ([...sortSel.options].some(o => o.value === val)) sortSel.value = val;
+  // keep the custom sort control's label/active option in sync
+  syncSortUI();
   updateScrollFades();
   stickyHead.refresh();
 }
@@ -451,7 +578,17 @@ function tagAxis(t) {
   if (["pc", "console", "handheld", "mobile", "arcade", "flash", "web", "vr"].includes(t)) return "platform";
   if (["indie", "student", "aaa", "solo", "hobbyist"].includes(t)) return "studio";
   if (BUSINESS_TAGS.includes(t)) return "business";
-  return "theme"; // outcome + production themes (crunch, port, breakout-success, …)
+  return "theme"; // outcome + production themes (crunch, port, breakout, …)
+}
+
+// Display label for a tag chip / filter option: title-case the multi-word slugs
+// (hyphens become spaces), but keep decade eras lowercase (90s) and known
+// acronyms uppercase (PC / VR / AAA). Filter values still use the raw slug.
+const TAG_ACRONYMS = { pc: "PC", vr: "VR", aaa: "AAA" };
+function tagLabel(t) {
+  if (/^\d0s$/.test(t)) return t;                 // eras: keep the lowercase s
+  if (t in TAG_ACRONYMS) return TAG_ACRONYMS[t];
+  return t.split("-").map(w => w ? w[0].toUpperCase() + w.slice(1) : w).join(" ");
 }
 
 // Browse tags (era/platform/studio/business) from data/tags.toml, rendered as
@@ -464,12 +601,18 @@ const TAG_AXIS_RANK = { era: 0, platform: 1, studio: 2, business: 3, theme: 4 };
 function tagsHTML(d) {
   const tags = [...(d.tags || [])].sort((a, b) =>
     (TAG_AXIS_RANK[tagAxis(a)] - TAG_AXIS_RANK[tagAxis(b)]) || a.localeCompare(b));
-  if (!tags.length) return "";
-  const sel = catEl.value;
-  return `<span class="tags">` + tags.map(t =>
-    `<button type="button" class="tag tag-${tagAxis(t)}${sel === "tag:" + t ? " on" : ""}"`
-    + ` data-val="tag:${esc(t)}" aria-pressed="${sel === "tag:" + t}">${esc(t)}</button>`
-  ).join("") + `</span>`;
+  const chips = tags.map(t => {
+    const v = "tag:" + t, on = selected.has(v);
+    return `<button type="button" class="tag tag-${tagAxis(t)}${on ? " on" : ""}"`
+      + ` data-val="${esc(v)}" aria-pressed="${on}">${esc(tagLabel(t))}</button>`;
+  });
+  // a chip for the canonical developer when the entry belongs to a notable studio
+  if (d.studio_name) {
+    const v = "studio:" + d.studio_name, on = selected.has(v);
+    chips.push(`<button type="button" class="tag tag-studio${on ? " on" : ""}"`
+      + ` data-val="${esc(v)}" aria-pressed="${on}">${esc(d.studio_name)}</button>`);
+  }
+  return chips.length ? `<span class="tags">${chips.join("")}</span>` : "";
 }
 
 function metricValue(d, k) {
@@ -873,22 +1016,53 @@ document.querySelectorAll("th.sortable").forEach(th => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
   });
 });
-sortSel.addEventListener("change", () => {
-  const [k, dir] = sortSel.value.split(":");
+searchEl.addEventListener("input", () => { render(); refreshFilterCounts(); });
+
+// ---- Popovers: custom multiselect filter + custom single-select sort ----
+// Only one panel open at a time; opening one closes the other.
+function openPanel(panel, btn, open) {
+  const show = open === undefined ? panel.hidden : open;
+  if (show) {
+    filterPanel.hidden = sortPanel.hidden = true;
+    filterBtn.setAttribute("aria-expanded", "false");
+    sortBtn.setAttribute("aria-expanded", "false");
+  }
+  panel.hidden = !show;
+  btn.setAttribute("aria-expanded", String(show));
+}
+filterBtn.addEventListener("click", e => { e.stopPropagation(); openPanel(filterPanel, filterBtn); });
+sortBtn.addEventListener("click", e => { e.stopPropagation(); openPanel(sortPanel, sortBtn); });
+filterCols.addEventListener("change", e => {
+  const cb = e.target.closest("input[type=checkbox]");
+  if (cb) setFilter(cb.value, cb.checked);
+});
+filterClear.addEventListener("click", () => { selected.clear(); syncFilterUI(); render(); });
+sortList.addEventListener("click", e => {
+  const o = e.target.closest(".sort-opt");
+  if (!o) return;
+  const [k, dir] = o.dataset.val.split(":");
   sortKey = k; sortDir = parseInt(dir, 10);
+  openPanel(sortPanel, sortBtn, false);
   render();
 });
-searchEl.addEventListener("input", render);
-catEl.addEventListener("change", render);
+// click-away closes whichever panel is open
+document.addEventListener("click", e => {
+  if (!filterPanel.hidden && !e.target.closest("#filter")) openPanel(filterPanel, filterBtn, false);
+  if (!sortPanel.hidden && !e.target.closest("#sort")) openPanel(sortPanel, sortBtn, false);
+});
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if (!filterPanel.hidden) { openPanel(filterPanel, filterBtn, false); filterBtn.focus(); }
+  if (!sortPanel.hidden) { openPanel(sortPanel, sortBtn, false); sortBtn.focus(); }
+});
 
-// Tag chips live inside re-rendered rows, so delegate. A chip drives the unified
-// filter dropdown; clicking the already-active chip clears the filter.
+// Tag chips live inside re-rendered rows, so delegate. A chip toggles its value in
+// the multiselect filter (and reflects the active state back via syncFilterUI).
 rowsEl.addEventListener("click", e => {
   const b = e.target.closest(".tag");
   if (!b) return;
   e.preventDefault();
-  catEl.value = catEl.value === b.dataset.val ? "" : b.dataset.val;
-  render();
+  setFilter(b.dataset.val, !selected.has(b.dataset.val));
 });
 
 // ---- Theme toggle (light / dark), persisted in localStorage ----

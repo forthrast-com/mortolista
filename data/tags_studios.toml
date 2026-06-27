@@ -1,0 +1,237 @@
+[[studio]]
+name = "Monolith"
+count = 4
+class = "aaa"
+ids = [
+    "131219",
+    "131478",
+    "234421",
+    "gd-classic-postmortem-i-no-one-lives-forever-2-a-spy-in-harm-s-",
+]
+
+[[studio]]
+name = "Stardock"
+count = 4
+class = "aaa"
+ids = [
+    "130560",
+    "131062",
+    "179030",
+    "274240",
+]
+
+[[studio]]
+name = "Ubisoft"
+count = 4
+class = "aaa"
+ids = [
+    "131239",
+    "131474",
+    "255364",
+    "258603",
+]
+
+[[studio]]
+name = "Valve"
+count = 4
+class = "aaa"
+ids = [
+    "131577",
+    "131815",
+    "259479",
+    "6471",
+]
+
+[[studio]]
+name = "Capcom"
+count = 3
+class = "aaa"
+ids = [
+    "132305",
+    "195143",
+    "6315",
+]
+
+[[studio]]
+name = "Ensemble Studios"
+count = 3
+class = "aaa"
+ids = [
+    "115711",
+    "131844",
+    "308555",
+]
+
+[[studio]]
+name = "Sierra"
+count = 3
+class = "aaa"
+ids = [
+    "130109",
+    "131536",
+    "131843",
+]
+
+[[studio]]
+name = "Treyarch"
+count = 3
+class = "aaa"
+ids = [
+    "131547",
+    "131563",
+    "194852",
+]
+
+[[studio]]
+name = "Young Horses"
+count = 3
+class = "indie"
+ids = [
+    "235408",
+    "235823",
+    "235951",
+]
+
+[[studio]]
+name = "Big Huge Games"
+count = 2
+class = "aaa"
+ids = [
+    "131242",
+    "197269",
+]
+
+[[studio]]
+name = "Bioware"
+count = 2
+class = "aaa"
+ids = [
+    "131327",
+    "131493",
+]
+
+[[studio]]
+name = "Demiurge"
+count = 2
+class = "aaa"
+ids = [
+    "132198",
+    "132490",
+]
+
+[[studio]]
+name = "Double Fine"
+count = 2
+class = "aaa"
+ids = [
+    "251220",
+    "4308",
+]
+
+[[studio]]
+name = "Firaxis"
+count = 2
+class = "aaa"
+ids = [
+    "306040",
+    "307191",
+]
+
+[[studio]]
+name = "Freeverse"
+count = 2
+class = "indie"
+ids = [
+    "130732",
+    "132604",
+]
+
+[[studio]]
+name = "Insomniac Games"
+count = 2
+class = "aaa"
+ids = [
+    "131251",
+    "132282",
+]
+
+[[studio]]
+name = "Mommy's Best Games"
+count = 2
+class = "indie"
+ids = [
+    "132292",
+    "6250",
+]
+
+[[studio]]
+name = "Naughty Dog"
+count = 2
+class = "aaa"
+ids = [
+    "131394",
+    "132203",
+]
+
+[[studio]]
+name = "Presto Studio"
+count = 2
+class = "unknown"
+ids = [
+    "131337",
+    "131809",
+]
+
+[[studio]]
+name = "Quantic Dream"
+count = 2
+class = "aaa"
+ids = [
+    "131140",
+    "3744",
+]
+
+[[studio]]
+name = "Raven Software"
+count = 2
+class = "aaa"
+ids = [
+    "131512",
+    "131541",
+]
+
+[[studio]]
+name = "Surreal"
+count = 2
+class = "unknown"
+ids = [
+    "130523",
+    "131586",
+]
+
+[[studio]]
+name = "Tale of Tales"
+count = 2
+class = "indie"
+ids = [
+    "132258",
+    "5902",
+]
+
+[[studio]]
+name = "Vector Unit"
+count = 2
+class = "indie"
+ids = [
+    "6184",
+    "6481",
+]
+
+[[studio]]
+name = "Vicious Cycle Software"
+count = 2
+class = "indie"
+ids = [
+    "130422",
+    "132650",
+]
