@@ -3198,3 +3198,19 @@ url = "https://news.ycombinator.com/item?id=43015585"
 points = 180
 comments = 53
 submitted_url = "https://www.gamedeveloper.com/design/postmortem-the-singular-design-of-namco-s-katamari-damacy-2004-"
+
+[[hn_postmortem]]
+id = "238773"
+hn_points = 1
+hn_comments = 0
+hn_points_sum = 1
+hn_comments_sum = 0
+hn_submissions = 1
+
+[[hn_postmortem.hn_threads]]
+object_id = "9216837"
+title = "10 seminal game postmortems every developer should read"
+url = "https://news.ycombinator.com/item?id=9216837"
+points = 1
+comments = 0
+submitted_url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"

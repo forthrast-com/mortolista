@@ -6327,3 +6327,19 @@ pages = 1
 wayback_captures = 0
 alt_ids = []
 author_notable = true
+
+[[postmortem]]
+id = "238773"
+title = "10 seminal game postmortems every developer should read"
+game = ""
+authors = []
+date = "2014-08-29"
+date_estimated = true
+category = "Postmortem"
+summary = "A roundup of ten classic Gamasutra postmortems the editors consider essential reading — an article about the postmortem form itself rather than the development of any one game."
+original_url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+wayback = "https://web.archive.org/web/20210825031727/https://gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+wayback_captures = 1
+author_notable = false
+reddit_points = 0
+copies_sold = ""

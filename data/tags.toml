@@ -177,7 +177,7 @@ tags = [
 [[tag]]
 id = "131533"
 tags = [
-    "20s",
+    "00s",
 ]
 
 [[tag]]
@@ -260,7 +260,7 @@ tags = [
 [[tag]]
 id = "131881"
 tags = [
-    "80s",
+    "00s",
 ]
 
 [[tag]]
@@ -633,7 +633,7 @@ tags = [
 [[tag]]
 id = "130160"
 tags = [
-    "10s",
+    "00s",
     "pc",
 ]
 
@@ -730,7 +730,7 @@ tags = [
 [[tag]]
 id = "132168"
 tags = [
-    "10s",
+    "00s",
 ]
 
 [[tag]]
@@ -1073,7 +1073,7 @@ tags = [
 [[tag]]
 id = "6469"
 tags = [
-    "20s",
+    "10s",
     "console",
 ]
 
@@ -1434,7 +1434,7 @@ tags = [
 [[tag]]
 id = "gd-out-there-a-postmortem"
 tags = [
-    "80s",
+    "10s",
 ]
 
 [[tag]]
@@ -1486,7 +1486,7 @@ tags = [
 [[tag]]
 id = "258315"
 tags = [
-    "20s",
+    "10s",
     "pc",
 ]
 
@@ -1625,7 +1625,7 @@ tags = [
 [[tag]]
 id = "308555"
 tags = [
-    "20s",
+    "10s",
     "pc",
 ]
 
@@ -1876,4 +1876,10 @@ tags = [
 id = "gd-postmortem-the-singular-design-of-namco-s-katamari-damacy-20"
 tags = [
     "00s",
+]
+
+[[tag]]
+id = "238773"
+tags = [
+    "10s",
 ]

@@ -119,12 +119,19 @@ wiki-sales-sample:
 tags *ARGS:
     python scraper/scrape.py --tags-only {{ARGS}}
 
-# Editorial tags (outcome / production theme / business, incl. port) via an
-# OpenAI-compatible chat API -> data/tags_llm.toml. Configure the endpoint with
-# TAGS_LLM_BASE_URL / TAGS_LLM_API_KEY / TAGS_LLM_MODEL. Idempotent (skips ids
-# already done); append --tags-llm-dry-run to preview the prompt, or --limit N.
+# Editorial tags (outcome / production theme / business, incl. port) via an LLM
+# -> data/tags_llm.toml. Two providers: TAGS_LLM_PROVIDER=openai (default,
+# OpenAI-compatible chat API — set TAGS_LLM_BASE_URL / TAGS_LLM_API_KEY / TAGS_LLM_MODEL)
+# or TAGS_LLM_PROVIDER=anthropic (native Claude Messages API — reads ANTHROPIC_API_KEY,
+# defaults to claude-opus-4-8 with adaptive thinking). Idempotent (skips ids already
+# done); append --tags-llm-dry-run to preview the prompt, or --limit N.
 tags-llm *ARGS:
     python scraper/scrape.py --tags-llm-only {{ARGS}}
+
+# Pass 2: classify the notable studios (>= STUDIO_MIN_COUNT postmortems, from
+# pass 1's studio names) into aaa/indie/solo/... -> data/tags_studios.toml.
+tags-studios *ARGS:
+    python scraper/scrape.py --studios-only {{ARGS}}
 
 sample:
     python scraper/scrape.py --sample 20

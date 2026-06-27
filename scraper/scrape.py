@@ -54,6 +54,7 @@ def main():
     ap.add_argument("--tags-llm-only", action="store_true", help="classify editorial tags via an OpenAI-compatible API -> data/tags_llm.toml and exit")
     ap.add_argument("--tags-llm-refresh", action="store_true", help="with --tags-llm-only: re-classify ids already in the output")
     ap.add_argument("--tags-llm-dry-run", action="store_true", help="with --tags-llm-only: print the prompt + endpoint config without calling the API")
+    ap.add_argument("--studios-only", action="store_true", help="pass 2: classify notable studios (from tags_llm.toml) -> data/tags_studios.toml and exit")
     ap.add_argument("--limit", type=int, default=0, help="limit sidecar refresh rows for smoke tests")
     ap.add_argument("--offset", type=int, default=0, help="start sidecar refresh at this row offset")
     ap.add_argument("--hn-posts", default=str(HN_POSTS), help="cached HN gamasutra posts TOML")
@@ -114,6 +115,9 @@ def main():
     if args.tags_llm_only:
         refresh_llm_tags(args.out, TAGS_LLM, args.limit,
                          refresh=args.tags_llm_refresh, dry_run=args.tags_llm_dry_run)
+        return
+    if args.studios_only:
+        refresh_studio_classes(TAGS_LLM, TAGS_STUDIOS)
         return
     if args.check_links and args.no_enrich:
         n = refresh_link_checks(args.out)

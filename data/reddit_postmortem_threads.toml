@@ -6355,3 +6355,66 @@ permalink = "https://www.reddit.com/comments/1incb9a/"
 score = 1
 comments = 0
 created_utc = 1739315249
+
+[[reddit_postmortem]]
+id = "238773"
+reddit_score = 3
+reddit_comments = 0
+reddit_score_sum = 10
+reddit_comments_sum = 0
+reddit_submissions = 5
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3ry05p"
+subreddit = "Games"
+author = "grand0011"
+title = "Gamasutra - 10 seminal game postmortems every developer should read"
+url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+permalink = "https://www.reddit.com/comments/3ry05p/"
+score = 3
+comments = 0
+created_utc = 1446938281
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "2z93rw"
+subreddit = "cahiersduludica"
+author = "jmarquiso"
+title = "10 seminal game postmortems every developer should read"
+url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+permalink = "https://www.reddit.com/comments/2z93rw/"
+score = 3
+comments = 0
+created_utc = 1426527027
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "304lm1"
+subreddit = "gaming"
+author = "MeatnBones"
+title = "10 seminal game postmortems every developer should read, Gamasutra"
+url = "http://gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php#.VQakpJIHQgw.twitter"
+permalink = "https://www.reddit.com/comments/304lm1/"
+score = 2
+comments = 0
+created_utc = 1427202341
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "4vo6dy"
+subreddit = "news_etc"
+author = "ell_computer"
+title = "Don't Miss: 10 seminal game postmortems every developer should read"
+url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+permalink = "https://www.reddit.com/comments/4vo6dy/"
+score = 1
+comments = 0
+created_utc = 1470078275
+
+[[reddit_postmortem.reddit_threads]]
+reddit_id = "3gvo8v"
+subreddit = "Newsbeard"
+author = "newsbeard"
+title = "[Gamer] Don't Miss: 10 seminal postmortems every developer should read"
+url = "http://www.gamasutra.com/view/news/238773/10_seminal_game_postmortems_every_developer_should_read.php"
+permalink = "https://www.reddit.com/comments/3gvo8v/"
+score = 1
+comments = 0
+created_utc = 1439490746
